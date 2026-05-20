@@ -1,0 +1,113 @@
+﻿AI LOCAL OS — ROADMAP + WORKFLOW (UPDATED)
+
+========================================================
+WORKFLOW GỐC (CANONICAL)
+========================================================
+
+User
+→ WebUI
+→ MASTER AI (qwen2.5-coder)
+
+MASTER:
+- hiểu yêu cầu
+- phân tích
+- chia việc
+- quyết định worker nào xử lý
+- review kết quả
+- quyết định retry
+- quyết định gọi API/websearch fallback
+
+↓
+
+Worker/Agent con (llama hoặc role runtime)
+
+1. SCOUT
+- đọc repo
+- tìm file
+- gom context
+
+2. DEBUG
+- đọc log
+- xác định root cause thật
+- isolate layer lỗi
+
+3. PATCHER
+- sửa code
+- tạo patch
+- update artifact
+
+4. VERIFY
+- chạy test/check/runtime validation
+
+5. REPORT
+- tổng hợp kết quả
+- gửi report về MASTER
+
+↓
+
+MASTER REVIEW
+
+Nếu PASS:
+→ tổng hợp final report
+→ trả về WebUI
+→ User
+
+Nếu FAIL:
+→ MASTER gọi API/websearch fallback (có giới hạn retry)
+→ phân tích hướng xử lý mới
+→ giao lại worker fix
+→ loop retry có giới hạn
+
+========================================================
+LIVE FLOW
+========================================================
+
+WebUI
+→ master_ai_bridge.py
+→ X91 adapter
+→ X90 bridge
+→ X87 dispatcher
+→ X86 runtime bus
+→ worker roles
+→ runtime/reports
+→ normalized response
+→ WebUI
+
+========================================================
+CURRENT STATUS
+========================================================
+
+- X94 stable runtime checkpoint PASS
+- /add_task stable
+- normalized response stable
+- dispatcher stable
+- worker routing stable
+- runtime reports stable
+- DEBUG→PATCHER→VERIFY→REPORT stable
+
+========================================================
+NEXT STEP
+========================================================
+
+X96 = MASTER PLANNER + TASK DECOMPOSITION
+
+Goals:
+- execution plan JSON
+- dynamic worker routing
+- retry decision
+- persistence plan/report
+- controlled API/web fallback
+
+========================================================
+RULES
+========================================================
+
+- Local-first
+- Root-cause-first
+- Verify bằng log thật trước khi fix
+- Không patch mò
+- Script luôn export *.txt log
+- User gửi log txt
+- AI đọc log và quyết định bước tiếp theo
+
+

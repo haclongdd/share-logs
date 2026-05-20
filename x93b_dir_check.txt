@@ -1,0 +1,13 @@
+﻿
+
+    Directory: D:\openwebui\_patch_inbox\x93b_force_webui_response_normalizer
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         5/20/2026   8:42 PM           7121 apply_x93b_force_webui_response_normalizer.ps1                       
+-a----         5/20/2026   8:42 PM            766 cleanup_x93b_force_webui_response_normalizer.ps1                     
+-a----         5/20/2026   8:42 PM           3620 x93b_force_webui_response_normalizer_check.ps1                       
+
+
+

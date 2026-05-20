@@ -1,0 +1,12 @@
+﻿[X96D2 APPLY] 2026-05-21T00:10:27.760366+07:00
+{
+  "ok": true,
+  "stage": "patched",
+  "target": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+  "backup": "D:\\openwebui\\_backups\\x96d2_attach_master_planner_to_x90\\x90_webui_agent_bridge.py.before_x96d2_20260521_001027.bak",
+  "marker": "X96D2_MASTER_PLANNER_ATTACHED",
+  "replaced_span": [
+    6434,
+    6922
+  ]
+}

@@ -1,0 +1,3 @@
+﻿[2026-05-21 00:41:37] [START] X97D2 check
+[2026-05-21 00:41:37] Marker OK: dispatcher.seed(task, x96_plan=x96_plan)
+

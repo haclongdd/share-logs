@@ -1,0 +1,6 @@
+﻿[2026-05-21 00:41:36] [START] X97D2 planner seed hotfix apply
+[2026-05-21 00:41:36] Backup created: x90_webui_agent_bridge.py.20260521_004136.bak
+[2026-05-21 00:41:36] Backup created: x87_worker_dispatcher.py.20260521_004136.bak
+[2026-05-21 00:41:36] Running Python patcher: D:\openwebui\runtime\temp\x97d2_patch_seed.py
+[OK] X90 dispatcher.seed already receives x96_plan
+

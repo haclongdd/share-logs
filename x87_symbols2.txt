@@ -1,0 +1,60 @@
+﻿
+D:\openwebui\core\x87_worker_dispatcher.py:45:ROUTE_NEXT = {
+D:\openwebui\core\x87_worker_dispatcher.py:106:            "cycles": 0,
+D:\openwebui\core\x87_worker_dispatcher.py:107:            "processed_total": 0,
+D:\openwebui\core\x87_worker_dispatcher.py:108:            "last_cycle": None,
+D:\openwebui\core\x87_worker_dispatcher.py:116:        to_role = str(msg.get("to_role", "")).upper()
+D:\openwebui\core\x87_worker_dispatcher.py:121:            "message_id": msg.get("id"),
+D:\openwebui\core\x87_worker_dispatcher.py:122:            "role": to_role,
+D:\openwebui\core\x87_worker_dispatcher.py:128:            "routed_to": None,
+D:\openwebui\core\x87_worker_dispatcher.py:131:        if to_role == "DEBUG":
+D:\openwebui\core\x87_worker_dispatcher.py:138:        elif to_role == "PATCHER":
+D:\openwebui\core\x87_worker_dispatcher.py:145:        elif to_role == "VERIFY":
+D:\openwebui\core\x87_worker_dispatcher.py:151:        elif to_role == "REPORT":
+D:\openwebui\core\x87_worker_dispatcher.py:159:            result["summary"] = f"No worker handler for role {to_role}"
+D:\openwebui\core\x87_worker_dispatcher.py:162:        next_role = ROUTE_NEXT.get(to_role)
+D:\openwebui\core\x87_worker_dispatcher.py:163:        if result["ok"] and next_role:
+D:\openwebui\core\x87_worker_dispatcher.py:164:            sent = self.bus.send(to_role, next_role, task, 
+result["output_payload"])
+D:\openwebui\core\x87_worker_dispatcher.py:165:            result["routed_to"] = next_role
+D:\openwebui\core\x87_worker_dispatcher.py:166:            result["routed_message_id"] = sent.id
+D:\openwebui\core\x87_worker_dispatcher.py:170:    def cycle(self, roles: Optional[List[str]] = None, limit_per_role: 
+int = 10) -> Dict[str, Any]:
+D:\openwebui\core\x87_worker_dispatcher.py:171:        roles = [r.upper() for r in (roles or ["DEBUG", "PATCHER", 
+"VERIFY", "REPORT"])]
+D:\openwebui\core\x87_worker_dispatcher.py:172:        processed: List[Dict[str, Any]] = []
+D:\openwebui\core\x87_worker_dispatcher.py:174:        for role in roles:
+D:\openwebui\core\x87_worker_dispatcher.py:175:            consumed = self.bus.consume(role, limit=limit_per_role)
+D:\openwebui\core\x87_worker_dispatcher.py:177:                processed.append(self.handle_message(msg))
+D:\openwebui\core\x87_worker_dispatcher.py:179:        self.state["cycles"] = int(self.state.get("cycles", 0)) + 1
+D:\openwebui\core\x87_worker_dispatcher.py:180:        self.state["processed_total"] = 
+int(self.state.get("processed_total", 0)) + len(processed)
+D:\openwebui\core\x87_worker_dispatcher.py:181:        self.state["last_cycle"] = {
+D:\openwebui\core\x87_worker_dispatcher.py:183:            "roles": roles,
+D:\openwebui\core\x87_worker_dispatcher.py:184:            "processed": len(processed),
+D:\openwebui\core\x87_worker_dispatcher.py:192:            "processed": processed,
+D:\openwebui\core\x87_worker_dispatcher.py:193:            "processed_count": len(processed),
+D:\openwebui\core\x87_worker_dispatcher.py:201:    def seed(self, task: str) -> Dict[str, Any]:
+D:\openwebui\core\x87_worker_dispatcher.py:203:            "finding": "seeded by X87B dispatcher",
+D:\openwebui\core\x87_worker_dispatcher.py:206:        return {"ok": True, "seed_message": msg.id, "task": task}
+D:\openwebui\core\x87_worker_dispatcher.py:209:        seed = self.seed(task)
+D:\openwebui\core\x87_worker_dispatcher.py:210:        cycles = []
+D:\openwebui\core\x87_worker_dispatcher.py:212:            cycles.append(self.cycle(limit_per_role=20))
+D:\openwebui\core\x87_worker_dispatcher.py:217:            "seed": seed,
+D:\openwebui\core\x87_worker_dispatcher.py:218:            "cycles": cycles,
+D:\openwebui\core\x87_worker_dispatcher.py:242:    p_seed = sub.add_parser("seed")
+D:\openwebui\core\x87_worker_dispatcher.py:243:    p_seed.add_argument("--task", default="x87b seeded task")
+D:\openwebui\core\x87_worker_dispatcher.py:245:    p_cycle = sub.add_parser("cycle")
+D:\openwebui\core\x87_worker_dispatcher.py:246:    p_cycle.add_argument("--roles", 
+default="DEBUG,PATCHER,VERIFY,REPORT")
+D:\openwebui\core\x87_worker_dispatcher.py:247:    p_cycle.add_argument("--limit", type=int, default=10)
+D:\openwebui\core\x87_worker_dispatcher.py:257:    if args.cmd == "seed":
+D:\openwebui\core\x87_worker_dispatcher.py:258:        print(json.dumps(dispatcher.seed(args.task), 
+ensure_ascii=False, indent=2))
+D:\openwebui\core\x87_worker_dispatcher.py:261:    if args.cmd == "cycle":
+D:\openwebui\core\x87_worker_dispatcher.py:262:        roles = [x.strip() for x in args.roles.split(",") if x.strip()]
+D:\openwebui\core\x87_worker_dispatcher.py:263:        print(json.dumps(dispatcher.cycle(roles=roles, 
+limit_per_role=args.limit), ensure_ascii=False, indent=2))
+
+
+

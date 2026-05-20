@@ -1,0 +1,10 @@
+﻿
+docker : template parsing error: template: :1:26: executing "" at <.State.Health.Status>: map has no entry for key 
+"Health"
+At line:1 char:1
++ docker inspect master_ai --format "{{.State.Status}} {{.State.Health. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (template parsin...or key "Health":String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

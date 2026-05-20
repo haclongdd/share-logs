@@ -1,0 +1,201 @@
+﻿{
+  "ok": true,
+  "release": "X90_WEBUI_AGENT_BRIDGE",
+  "state_file": "D:\\openwebui\\runtime\\x90_webui_agent_bridge\\state.json",
+  "requests_dir": "D:\\openwebui\\runtime\\x90_webui_agent_bridge\\requests",
+  "responses_dir": "D:\\openwebui\\runtime\\x90_webui_agent_bridge\\responses",
+  "requests_count": 13,
+  "responses_count": 13,
+  "dependency_status": {
+    "x86": {
+      "path": "D:\\openwebui\\core\\x86_agent_bus.py",
+      "exists": true
+    },
+    "x87": {
+      "path": "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+      "exists": true
+    },
+    "x88": {
+      "path": "D:\\openwebui\\core\\x88_persistent_scheduler.py",
+      "exists": true
+    },
+    "x89": {
+      "path": "D:\\openwebui\\core\\x89_sandbox_workers.py",
+      "exists": true
+    }
+  },
+  "state": {
+    "release": "X90_WEBUI_AGENT_BRIDGE",
+    "created_at": "2026-05-20T10:15:17Z",
+    "requests_total": 13,
+    "requests_ok": 12,
+    "requests_failed": 1,
+    "last_request": {
+      "id": "x90req_1779293197417_9f3ee6f7",
+      "ts": "2026-05-20T16:06:37Z",
+      "task": "x96d planner attach smoke",
+      "mode": "agent",
+      "payload": {},
+      "status": "received"
+    },
+    "last_response": {
+      "ok": true,
+      "release": "X90_WEBUI_AGENT_BRIDGE",
+      "request_id": "x90req_1779293197417_9f3ee6f7",
+      "mode": "agent",
+      "task": "x96d planner attach smoke",
+      "result": {
+        "flow": "agent_dispatcher",
+        "seed": {
+          "ok": true,
+          "seed_message": "x86_1779293197463_4a7f0d49",
+          "task": "x96d planner attach smoke"
+        },
+        "cycles": [
+          {
+            "ok": true,
+            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+            "processed": [
+              {
+                "message_id": "x86_1779293197463_4a7f0d49",
+                "role": "DEBUG",
+                "task": "x96d planner attach smoke",
+                "input_payload": {
+                  "finding": "seeded by X87B dispatcher",
+                  "evidence": "D:\\openwebui\\runtime\\temp"
+                },
+                "handled_at": "2026-05-20T16:06:37Z",
+                "ok": true,
+                "summary": "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+                "routed_to": "PATCHER",
+                "output_payload": {
+                  "root_cause": "pending_real_log_review",
+                  "evidence": "D:\\openwebui\\runtime\\temp",
+                  "source_message": "x86_1779293197463_4a7f0d49"
+                },
+                "routed_message_id": "x86_1779293197833_a3759c67"
+              },
+              {
+                "message_id": "x86_1779293197833_a3759c67",
+                "role": "PATCHER",
+                "task": "x96d planner attach smoke",
+                "input_payload": {
+                  "root_cause": "pending_real_log_review",
+                  "evidence": "D:\\openwebui\\runtime\\temp",
+                  "source_message": "x86_1779293197463_4a7f0d49"
+                },
+                "handled_at": "2026-05-20T16:06:37Z",
+                "ok": true,
+                "summary": "PATCHER worker consumed confirmed cause/artifact context.",
+                "routed_to": "VERIFY",
+                "output_payload": {
+                  "artifact": "D:\\openwebui\\_patch_inbox",
+                  "patch_rule": "target confirmed cause only",
+                  "source_message": "x86_1779293197833_a3759c67"
+                },
+                "routed_message_id": "x86_1779293197863_e7f8a7b2"
+              },
+              {
+                "message_id": "x86_1779293197863_e7f8a7b2",
+                "role": "VERIFY",
+                "task": "x96d planner attach smoke",
+                "input_payload": {
+                  "artifact": "D:\\openwebui\\_patch_inbox",
+                  "patch_rule": "target confirmed cause only",
+                  "source_message": "x86_1779293197833_a3759c67"
+                },
+                "handled_at": "2026-05-20T16:06:37Z",
+                "ok": true,
+                "summary": "VERIFY worker consumed artifact and produced verify handoff.",
+                "routed_to": "REPORT",
+                "output_payload": {
+                  "verify": "pending_x75_check",
+                  "source_message": "x86_1779293197863_e7f8a7b2"
+                },
+                "routed_message_id": "x86_1779293197894_21346274"
+              },
+              {
+                "message_id": "x86_1779293197894_21346274",
+                "role": "REPORT",
+                "task": "x96d planner attach smoke",
+                "input_payload": {
+                  "verify": "pending_x75_check",
+                  "source_message": "x86_1779293197863_e7f8a7b2"
+                },
+                "handled_at": "2026-05-20T16:06:37Z",
+                "ok": true,
+                "summary": "REPORT worker consumed final verification payload.",
+                "routed_to": null,
+                "output_payload": {
+                  "final": {
+                    "verify": "pending_x75_check",
+                    "source_message": "x86_1779293197863_e7f8a7b2"
+                  },
+                  "source_message": "x86_1779293197894_21346274"
+                }
+              }
+            ],
+            "processed_count": 4,
+            "state_file": "D:\\openwebui\\runtime\\x87_worker_dispatcher\\state.json",
+            "report_file": "D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_report_1779293197924.json"
+          },
+          {
+            "ok": true,
+            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+            "processed": [],
+            "processed_count": 0,
+            "state_file": "D:\\openwebui\\runtime\\x87_worker_dispatcher\\state.json",
+            "report_file": "D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_report_1779293197983.json"
+          },
+          {
+            "ok": true,
+            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+            "processed": [],
+            "processed_count": 0,
+            "state_file": "D:\\openwebui\\runtime\\x87_worker_dispatcher\\state.json",
+            "report_file": "D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_report_1779293198035.json"
+          },
+          {
+            "ok": true,
+            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+            "processed": [],
+            "processed_count": 0,
+            "state_file": "D:\\openwebui\\runtime\\x87_worker_dispatcher\\state.json",
+            "report_file": "D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_report_1779293198092.json"
+          }
+        ]
+      },
+      "ts": "2026-05-20T16:06:38Z",
+      "report_file": "D:\\openwebui\\runtime\\reports\\x90_webui_bridge_response_1779293198093.json"
+    },
+    "last_error": {
+      "ok": false,
+      "release": "X90_WEBUI_AGENT_BRIDGE",
+      "request_id": "x90req_1779277719293_4c53fe3d",
+      "mode": "agent",
+      "task": "x92d live webui runtime smoke",
+      "error": "FileNotFoundError('X86 dependency missing: D:\\\\openwebui/core/x86_agent_bus.py')",
+      "dependency_status": {
+        "x86": {
+          "path": "/app/core/x86_agent_bus.py",
+          "exists": true
+        },
+        "x87": {
+          "path": "/app/core/x87_worker_dispatcher.py",
+          "exists": true
+        },
+        "x88": {
+          "path": "/app/core/x88_persistent_scheduler.py",
+          "exists": true
+        },
+        "x89": {
+          "path": "/app/core/x89_sandbox_workers.py",
+          "exists": true
+        }
+      },
+      "ts": "2026-05-20T11:48:39Z",
+      "report_file": "/app/runtime/reports/x90_webui_bridge_response_1779277719366.json"
+    }
+  }
+}
+

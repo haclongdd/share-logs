@@ -1,0 +1,31 @@
+﻿[START] X97E4 check source audit
+===== LINES 232..258 =====
+ 232:         else:
+ 233:             result["ok"] = False
+ 234:             result["summary"] = f"No worker handler for role {to_role}"
+ 235:             result["output_payload"] = {"source_message": msg.get("id")}
+ 236: 
+ 237:         # X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION: carry plan metadata from input payload into routing context
+ 238:         x97e_plan_context = None
+ 239:         try:
+ 240:             x97e_input_payload = msg.get("payload") if isinstance(msg, dict) else None
+ 241:             if isinstance(x97e_input_payload, dict):
+ 242:                 x97e_plan_context = x97e_input_payload.get("x96_plan")
+ 243:             if x97e_plan_context and isinstance(result.get("output_payload"), dict):
+ 244:                 result["output_payload"].setdefault("x96_plan", x97e_plan_context)
+ 245:                 result["output_payload"].setdefault("x97e_plan_propagated", True)
+ 246:         except Exception as exc:
+ 247:             try:
+ 248:                 result.setdefault("x97e_plan_propagation_error", str(exc))
+ 249:             except Exception:
+ 250:                 pass
+ 251:         x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if x97e_plan_context else task
+ 252:         next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, result)
+ 253:         if result["ok"] and next_role:
+ 254:             sent = self.bus.send(to_role, next_role, task, result["output_payload"])
+ 255:             result["routed_to"] = next_role
+ 256:             result["routed_message_id"] = sent.id
+ 257: 
+ 258:         return result
+===== COMPILE LOG =====
+

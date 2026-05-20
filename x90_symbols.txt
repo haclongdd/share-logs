@@ -1,0 +1,41 @@
+﻿
+D:\openwebui\core\x90_webui_agent_bridge.py:29:            if (candidate / "core" / 
+"x87_worker_dispatcher.py").exists():
+D:\openwebui\core\x90_webui_agent_bridge.py:48:    "x87": CORE_DIR / "x87_worker_dispatcher.py",
+D:\openwebui\core\x90_webui_agent_bridge.py:50:    "x89": CORE_DIR / "x89_sandbox_workers.py",
+D:\openwebui\core\x90_webui_agent_bridge.py:120:    def submit(self, task: str, mode: str = "agent", payload: 
+Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+D:\openwebui\core\x90_webui_agent_bridge.py:163:                result = self.run_agent_flow(task=task)
+D:\openwebui\core\x90_webui_agent_bridge.py:165:                result = self.run_scheduler_flow(task=task, 
+payload=payload)
+D:\openwebui\core\x90_webui_agent_bridge.py:167:                result = self.run_sandbox_flow(task=task, 
+payload=payload)
+D:\openwebui\core\x90_webui_agent_bridge.py:197:    def run_agent_flow(self, task: str) -> Dict[str, Any]:
+D:\openwebui\core\x90_webui_agent_bridge.py:198:        WorkerDispatcher = import_class(DEPENDENCIES["x87"], 
+"x87_worker_dispatcher_runtime_x90", "WorkerDispatcher")
+D:\openwebui\core\x90_webui_agent_bridge.py:199:        dispatcher = WorkerDispatcher()
+D:\openwebui\core\x90_webui_agent_bridge.py:200:        seed = dispatcher.seed(task)
+D:\openwebui\core\x90_webui_agent_bridge.py:203:            cycles.append(dispatcher.cycle(limit_per_role=50))
+D:\openwebui\core\x90_webui_agent_bridge.py:205:            "flow": "agent_dispatcher",
+D:\openwebui\core\x90_webui_agent_bridge.py:210:    def run_scheduler_flow(self, task: str, payload: Dict[str, Any]) 
+-> Dict[str, Any]:
+D:\openwebui\core\x90_webui_agent_bridge.py:218:            "flow": "scheduler",
+D:\openwebui\core\x90_webui_agent_bridge.py:223:    def run_sandbox_flow(self, task: str, payload: Dict[str, Any]) -> 
+Dict[str, Any]:
+D:\openwebui\core\x90_webui_agent_bridge.py:224:        SandboxWorker = import_class(DEPENDENCIES["x89"], 
+"x89_sandbox_runtime_x90", "SandboxWorker")
+D:\openwebui\core\x90_webui_agent_bridge.py:225:        worker = SandboxWorker()
+D:\openwebui\core\x90_webui_agent_bridge.py:229:        result = worker.execute(command=command, 
+timeout_seconds=timeout, cwd=cwd)
+D:\openwebui\core\x90_webui_agent_bridge.py:231:            "flow": "sandbox",
+D:\openwebui\core\x90_webui_agent_bridge.py:275:    p_submit = sub.add_parser("submit")
+D:\openwebui\core\x90_webui_agent_bridge.py:276:    p_submit.add_argument("--task", required=True)
+D:\openwebui\core\x90_webui_agent_bridge.py:277:    p_submit.add_argument("--mode", default="agent", choices=["agent", 
+"schedule", "sandbox", "status"])
+D:\openwebui\core\x90_webui_agent_bridge.py:278:    p_submit.add_argument("--payload", default="{}")
+D:\openwebui\core\x90_webui_agent_bridge.py:286:    if args.cmd == "submit":
+D:\openwebui\core\x90_webui_agent_bridge.py:287:        result = bridge.submit(task=args.task, mode=args.mode, 
+payload=parse_payload(args.payload))
+
+
+

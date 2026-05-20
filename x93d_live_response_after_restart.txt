@@ -1,0 +1,298 @@
+﻿{
+    "bridge":  "x90_webui_agent_bridge",
+    "debug":  {
+                  "normalized_at":  "2026-05-20T15:20:23.329974+00:00",
+                  "normalized_by":  "X93_WEBUI_RESPONSE_NORMALIZER",
+                  "raw":  {
+                              "bridge":  "x90_webui_agent_bridge",
+                              "normalized":  {
+                                                 "mode":  "agent",
+                                                 "payload":  {
+
+                                                             },
+                                                 "task":  "x93d final live normalize smoke after restart"
+                                             },
+                              "ok":  true,
+                              "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779290423317.json",
+                              "ts":  "2026-05-20T15:20:23Z",
+                              "x90_response":  {
+                                                   "mode":  "agent",
+                                                   "ok":  true,
+                                                   "release":  "X90_WEBUI_AGENT_BRIDGE",
+                                                   "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779290423269.json",
+                                                   "request_id":  "x90req_1779290416433_661ebbcb",
+                                                   "result":  {
+                                                                  "cycles":  [
+                                                                                 {
+                                                                                     "ok":  true,
+                                                                                     "processed":  [
+                                                                                                       {
+                                                                                                           "handled_at":  "2026-05-20T15:20:17Z",
+                                                                                                           "input_payload":  {
+                                                                                                                                 "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                                                                 "finding":  "seeded by X87B dispatcher"
+                                                                                                                             },
+                                                                                                           "message_id":  "x86_1779290416551_9e2095c9",
+                                                                                                           "ok":  true,
+                                                                                                           "output_payload":  {
+                                                                                                                                  "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                                                                  "root_cause":  "pending_real_log_review",
+                                                                                                                                  "source_message":  "x86_1779290416551_9e2095c9"
+                                                                                                                              },
+                                                                                                           "role":  "DEBUG",
+                                                                                                           "routed_message_id":  "x86_1779290417064_172d6d7e",
+                                                                                                           "routed_to":  "PATCHER",
+                                                                                                           "summary":  "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+                                                                                                           "task":  "x93d final live normalize smoke after restart"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "handled_at":  "2026-05-20T15:20:17Z",
+                                                                                                           "input_payload":  {
+                                                                                                                                 "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                                                                 "root_cause":  "pending_real_log_review",
+                                                                                                                                 "source_message":  "x86_1779290416551_9e2095c9"
+                                                                                                                             },
+                                                                                                           "message_id":  "x86_1779290417064_172d6d7e",
+                                                                                                           "ok":  true,
+                                                                                                           "output_payload":  {
+                                                                                                                                  "artifact":  "D:\\openwebui\\_patch_inbox",
+                                                                                                                                  "patch_rule":  "target confirmed cause only",
+                                                                                                                                  "source_message":  "x86_1779290417064_172d6d7e"
+                                                                                                                              },
+                                                                                                           "role":  "PATCHER",
+                                                                                                           "routed_message_id":  "x86_1779290417459_2d24e3e4",
+                                                                                                           "routed_to":  "VERIFY",
+                                                                                                           "summary":  "PATCHER worker consumed confirmed cause/artifact context.",
+                                                                                                           "task":  "x93d final live normalize smoke after restart"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "handled_at":  "2026-05-20T15:20:17Z",
+                                                                                                           "input_payload":  {
+                                                                                                                                 "artifact":  "D:\\openwebui\\_patch_inbox",
+                                                                                                                                 "patch_rule":  "target confirmed cause only",
+                                                                                                                                 "source_message":  "x86_1779290417064_172d6d7e"
+                                                                                                                             },
+                                                                                                           "message_id":  "x86_1779290417459_2d24e3e4",
+                                                                                                           "ok":  true,
+                                                                                                           "output_payload":  {
+                                                                                                                                  "source_message":  "x86_1779290417459_2d24e3e4",
+                                                                                                                                  "verify":  "pending_x75_check"
+                                                                                                                              },
+                                                                                                           "role":  "VERIFY",
+                                                                                                           "routed_message_id":  "x86_1779290417875_ba7408ec",
+                                                                                                           "routed_to":  "REPORT",
+                                                                                                           "summary":  "VERIFY worker consumed artifact and produced verify handoff.",
+                                                                                                           "task":  "x93d final live normalize smoke after restart"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "handled_at":  "2026-05-20T15:20:18Z",
+                                                                                                           "input_payload":  {
+                                                                                                                                 "source_message":  "x86_1779290417459_2d24e3e4",
+                                                                                                                                 "verify":  "pending_x75_check"
+                                                                                                                             },
+                                                                                                           "message_id":  "x86_1779290417875_ba7408ec",
+                                                                                                           "ok":  true,
+                                                                                                           "output_payload":  {
+                                                                                                                                  "final":  {
+                                                                                                                                                "source_message":  "x86_1779290417459_2d24e3e4",
+                                                                                                                                                "verify":  "pending_x75_check"
+                                                                                                                                            },
+                                                                                                                                  "source_message":  "x86_1779290417875_ba7408ec"
+                                                                                                                              },
+                                                                                                           "role":  "REPORT",
+                                                                                                           "routed_to":  null,
+                                                                                                           "summary":  "REPORT worker consumed final verification payload.",
+                                                                                                           "task":  "x93d final live normalize smoke after restart"
+                                                                                                       }
+                                                                                                   ],
+                                                                                     "processed_count":  4,
+                                                                                     "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                                                                     "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290418344.json",
+                                                                                     "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                                                                 },
+                                                                                 {
+                                                                                     "ok":  true,
+                                                                                     "processed":  [
+
+                                                                                                   ],
+                                                                                     "processed_count":  0,
+                                                                                     "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                                                                     "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290420035.json",
+                                                                                     "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                                                                 },
+                                                                                 {
+                                                                                     "ok":  true,
+                                                                                     "processed":  [
+
+                                                                                                   ],
+                                                                                     "processed_count":  0,
+                                                                                     "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                                                                     "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290421632.json",
+                                                                                     "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                                                                 },
+                                                                                 {
+                                                                                     "ok":  true,
+                                                                                     "processed":  [
+
+                                                                                                   ],
+                                                                                     "processed_count":  0,
+                                                                                     "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                                                                     "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290423257.json",
+                                                                                     "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                                                                 }
+                                                                             ],
+                                                                  "flow":  "agent_dispatcher",
+                                                                  "seed":  {
+                                                                               "ok":  true,
+                                                                               "seed_message":  "x86_1779290416551_9e2095c9",
+                                                                               "task":  "x93d final live normalize smoke after restart"
+                                                                           }
+                                                              },
+                                                   "task":  "x93d final live normalize smoke after restart",
+                                                   "ts":  "2026-05-20T15:20:23Z"
+                                               }
+                          },
+                  "x90":  {
+                              "bridge":  null,
+                              "ok":  true,
+                              "release":  "X90_WEBUI_AGENT_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779290423269.json",
+                              "request_id":  "x90req_1779290416433_661ebbcb"
+                          }
+              },
+    "ok":  true,
+    "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+    "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779290423317.json",
+    "result":  {
+                   "cycles":  [
+                                  {
+                                      "ok":  true,
+                                      "processed":  [
+                                                        {
+                                                            "handled_at":  "2026-05-20T15:20:17Z",
+                                                            "input_payload":  {
+                                                                                  "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                  "finding":  "seeded by X87B dispatcher"
+                                                                              },
+                                                            "message_id":  "x86_1779290416551_9e2095c9",
+                                                            "ok":  true,
+                                                            "output_payload":  {
+                                                                                   "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                   "root_cause":  "pending_real_log_review",
+                                                                                   "source_message":  "x86_1779290416551_9e2095c9"
+                                                                               },
+                                                            "role":  "DEBUG",
+                                                            "routed_message_id":  "x86_1779290417064_172d6d7e",
+                                                            "routed_to":  "PATCHER",
+                                                            "summary":  "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+                                                            "task":  "x93d final live normalize smoke after restart"
+                                                        },
+                                                        {
+                                                            "handled_at":  "2026-05-20T15:20:17Z",
+                                                            "input_payload":  {
+                                                                                  "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                  "root_cause":  "pending_real_log_review",
+                                                                                  "source_message":  "x86_1779290416551_9e2095c9"
+                                                                              },
+                                                            "message_id":  "x86_1779290417064_172d6d7e",
+                                                            "ok":  true,
+                                                            "output_payload":  {
+                                                                                   "artifact":  "D:\\openwebui\\_patch_inbox",
+                                                                                   "patch_rule":  "target confirmed cause only",
+                                                                                   "source_message":  "x86_1779290417064_172d6d7e"
+                                                                               },
+                                                            "role":  "PATCHER",
+                                                            "routed_message_id":  "x86_1779290417459_2d24e3e4",
+                                                            "routed_to":  "VERIFY",
+                                                            "summary":  "PATCHER worker consumed confirmed cause/artifact context.",
+                                                            "task":  "x93d final live normalize smoke after restart"
+                                                        },
+                                                        {
+                                                            "handled_at":  "2026-05-20T15:20:17Z",
+                                                            "input_payload":  {
+                                                                                  "artifact":  "D:\\openwebui\\_patch_inbox",
+                                                                                  "patch_rule":  "target confirmed cause only",
+                                                                                  "source_message":  "x86_1779290417064_172d6d7e"
+                                                                              },
+                                                            "message_id":  "x86_1779290417459_2d24e3e4",
+                                                            "ok":  true,
+                                                            "output_payload":  {
+                                                                                   "source_message":  "x86_1779290417459_2d24e3e4",
+                                                                                   "verify":  "pending_x75_check"
+                                                                               },
+                                                            "role":  "VERIFY",
+                                                            "routed_message_id":  "x86_1779290417875_ba7408ec",
+                                                            "routed_to":  "REPORT",
+                                                            "summary":  "VERIFY worker consumed artifact and produced verify handoff.",
+                                                            "task":  "x93d final live normalize smoke after restart"
+                                                        },
+                                                        {
+                                                            "handled_at":  "2026-05-20T15:20:18Z",
+                                                            "input_payload":  {
+                                                                                  "source_message":  "x86_1779290417459_2d24e3e4",
+                                                                                  "verify":  "pending_x75_check"
+                                                                              },
+                                                            "message_id":  "x86_1779290417875_ba7408ec",
+                                                            "ok":  true,
+                                                            "output_payload":  {
+                                                                                   "final":  {
+                                                                                                 "source_message":  "x86_1779290417459_2d24e3e4",
+                                                                                                 "verify":  "pending_x75_check"
+                                                                                             },
+                                                                                   "source_message":  "x86_1779290417875_ba7408ec"
+                                                                               },
+                                                            "role":  "REPORT",
+                                                            "routed_to":  null,
+                                                            "summary":  "REPORT worker consumed final verification payload.",
+                                                            "task":  "x93d final live normalize smoke after restart"
+                                                        }
+                                                    ],
+                                      "processed_count":  4,
+                                      "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                      "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290418344.json",
+                                      "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                  },
+                                  {
+                                      "ok":  true,
+                                      "processed":  [
+
+                                                    ],
+                                      "processed_count":  0,
+                                      "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                      "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290420035.json",
+                                      "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                  },
+                                  {
+                                      "ok":  true,
+                                      "processed":  [
+
+                                                    ],
+                                      "processed_count":  0,
+                                      "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                      "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290421632.json",
+                                      "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                  },
+                                  {
+                                      "ok":  true,
+                                      "processed":  [
+
+                                                    ],
+                                      "processed_count":  0,
+                                      "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                      "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290423257.json",
+                                      "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                  }
+                              ],
+                   "flow":  "agent_dispatcher",
+                   "seed":  {
+                                "ok":  true,
+                                "seed_message":  "x86_1779290416551_9e2095c9",
+                                "task":  "x93d final live normalize smoke after restart"
+                            }
+               },
+    "summary":  "accepted | task=x93d final live normalize smoke after restart | report=/app/runtime/reports/x91_addtask_bridge_response_1779290423317.json",
+    "task":  "x93d final live normalize smoke after restart",
+    "ts":  "2026-05-20T15:20:23Z"
+}
+

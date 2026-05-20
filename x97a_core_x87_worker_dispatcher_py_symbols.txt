@@ -1,0 +1,89 @@
+﻿D:\openwebui\core\x87_worker_dispatcher.py:3:"""X87B Autonomous Worker Dispatcher import fix for AI Local OS."""
+D:\openwebui\core\x87_worker_dispatcher.py:15:def _resolve_aios_root() -> Path:
+D:\openwebui\core\x87_worker_dispatcher.py:41:REPORT_DIR = RUNTIME_DIR / "reports"
+D:\openwebui\core\x87_worker_dispatcher.py:42:STATE_DIR = RUNTIME_DIR / "x87_worker_dispatcher"
+D:\openwebui\core\x87_worker_dispatcher.py:45:ROUTE_NEXT = {
+D:\openwebui\core\x87_worker_dispatcher.py:46:    "DEBUG": "PATCHER",
+D:\openwebui\core\x87_worker_dispatcher.py:47:    "PATCHER": "VERIFY",
+D:\openwebui\core\x87_worker_dispatcher.py:48:    "VERIFY": "REPORT",
+D:\openwebui\core\x87_worker_dispatcher.py:52:def utc_stamp() -> str:
+D:\openwebui\core\x87_worker_dispatcher.py:56:def now_ms() -> int:
+D:\openwebui\core\x87_worker_dispatcher.py:60:def safe_write_json(path: Path, data: Dict[str, Any]) -> None:
+D:\openwebui\core\x87_worker_dispatcher.py:67:def load_json(path: Path, default: Dict[str, Any]) -> Dict[str, Any]:
+D:\openwebui\core\x87_worker_dispatcher.py:76:def load_x86_bus_class():
+D:\openwebui\core\x87_worker_dispatcher.py:97:class WorkerDispatcher:
+D:\openwebui\core\x87_worker_dispatcher.py:98:    def __init__(self) -> None:
+D:\openwebui\core\x87_worker_dispatcher.py:100:        REPORT_DIR.mkdir(parents=True, exist_ok=True)
+D:\openwebui\core\x87_worker_dispatcher.py:104:            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+D:\openwebui\core\x87_worker_dispatcher.py:106:            "cycles": 0,
+D:\openwebui\core\x87_worker_dispatcher.py:108:            "last_cycle": None,
+D:\openwebui\core\x87_worker_dispatcher.py:112:    def save(self) -> None:
+D:\openwebui\core\x87_worker_dispatcher.py:115:    def handle_message(self, msg: Dict[str, Any]) -> Dict[str, Any]:
+D:\openwebui\core\x87_worker_dispatcher.py:116:        to_role = str(msg.get("to_role", "")).upper()
+D:\openwebui\core\x87_worker_dispatcher.py:122:            "role": to_role,
+D:\openwebui\core\x87_worker_dispatcher.py:128:            "routed_to": None,
+D:\openwebui\core\x87_worker_dispatcher.py:131:        if to_role == "DEBUG":
+D:\openwebui\core\x87_worker_dispatcher.py:132:            result["summary"] = "DEBUG worker consumed evidence and confirmed root-cause-first handoff."
+D:\openwebui\core\x87_worker_dispatcher.py:134:                "root_cause": payload.get("root_cause") or "pending_real_log_review",
+D:\openwebui\core\x87_worker_dispatcher.py:138:        elif to_role == "PATCHER":
+D:\openwebui\core\x87_worker_dispatcher.py:139:            result["summary"] = "PATCHER worker consumed confirmed cause/artifact context."
+D:\openwebui\core\x87_worker_dispatcher.py:145:        elif to_role == "VERIFY":
+D:\openwebui\core\x87_worker_dispatcher.py:146:            result["summary"] = "VERIFY worker consumed artifact and produced verify handoff."
+D:\openwebui\core\x87_worker_dispatcher.py:148:                "verify": payload.get("verify") or "pending_x75_check",
+D:\openwebui\core\x87_worker_dispatcher.py:151:        elif to_role == "REPORT":
+D:\openwebui\core\x87_worker_dispatcher.py:152:            result["summary"] = "REPORT worker consumed final verification payload."
+D:\openwebui\core\x87_worker_dispatcher.py:159:            result["summary"] = f"No worker handler for role {to_role}"
+D:\openwebui\core\x87_worker_dispatcher.py:162:        next_role = ROUTE_NEXT.get(to_role)
+D:\openwebui\core\x87_worker_dispatcher.py:163:        if result["ok"] and next_role:
+D:\openwebui\core\x87_worker_dispatcher.py:164:            sent = self.bus.send(to_role, next_role, task, result["output_payload"])
+D:\openwebui\core\x87_worker_dispatcher.py:165:            result["routed_to"] = next_role
+D:\openwebui\core\x87_worker_dispatcher.py:166:            result["routed_message_id"] = sent.id
+D:\openwebui\core\x87_worker_dispatcher.py:170:    def cycle(self, roles: Optional[List[str]] = None, limit_per_role: int = 10) -> Dict[str, Any]:
+D:\openwebui\core\x87_worker_dispatcher.py:171:        roles = [r.upper() for r in (roles or ["DEBUG", "PATCHER", "VERIFY", "REPORT"])]
+D:\openwebui\core\x87_worker_dispatcher.py:174:        for role in roles:
+D:\openwebui\core\x87_worker_dispatcher.py:175:            consumed = self.bus.consume(role, limit=limit_per_role)
+D:\openwebui\core\x87_worker_dispatcher.py:176:            for msg in consumed:
+D:\openwebui\core\x87_worker_dispatcher.py:179:        self.state["cycles"] = int(self.state.get("cycles", 0)) + 1
+D:\openwebui\core\x87_worker_dispatcher.py:181:        self.state["last_cycle"] = {
+D:\openwebui\core\x87_worker_dispatcher.py:183:            "roles": roles,
+D:\openwebui\core\x87_worker_dispatcher.py:189:        report = {
+D:\openwebui\core\x87_worker_dispatcher.py:191:            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+D:\openwebui\core\x87_worker_dispatcher.py:196:        out = REPORT_DIR / f"x87b_worker_dispatcher_report_{now_ms()}.json"
+D:\openwebui\core\x87_worker_dispatcher.py:197:        safe_write_json(out, report)
+D:\openwebui\core\x87_worker_dispatcher.py:198:        report["report_file"] = str(out)
+D:\openwebui\core\x87_worker_dispatcher.py:199:        return report
+D:\openwebui\core\x87_worker_dispatcher.py:201:    def seed(self, task: str) -> Dict[str, Any]:
+D:\openwebui\core\x87_worker_dispatcher.py:202:        msg = self.bus.send("SCOUT", "DEBUG", task, {
+D:\openwebui\core\x87_worker_dispatcher.py:203:            "finding": "seeded by X87B dispatcher",
+D:\openwebui\core\x87_worker_dispatcher.py:206:        return {"ok": True, "seed_message": msg.id, "task": task}
+D:\openwebui\core\x87_worker_dispatcher.py:208:    def demo(self, task: str) -> Dict[str, Any]:
+D:\openwebui\core\x87_worker_dispatcher.py:209:        seed = self.seed(task)
+D:\openwebui\core\x87_worker_dispatcher.py:210:        cycles = []
+D:\openwebui\core\x87_worker_dispatcher.py:212:            cycles.append(self.cycle(limit_per_role=20))
+D:\openwebui\core\x87_worker_dispatcher.py:213:        report = {
+D:\openwebui\core\x87_worker_dispatcher.py:215:            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+D:\openwebui\core\x87_worker_dispatcher.py:217:            "seed": seed,
+D:\openwebui\core\x87_worker_dispatcher.py:218:            "cycles": cycles,
+D:\openwebui\core\x87_worker_dispatcher.py:221:        out = REPORT_DIR / f"x87b_worker_dispatcher_demo_{now_ms()}.json"
+D:\openwebui\core\x87_worker_dispatcher.py:222:        safe_write_json(out, report)
+D:\openwebui\core\x87_worker_dispatcher.py:223:        report["report_file"] = str(out)
+D:\openwebui\core\x87_worker_dispatcher.py:224:        return report
+D:\openwebui\core\x87_worker_dispatcher.py:226:    def status(self) -> Dict[str, Any]:
+D:\openwebui\core\x87_worker_dispatcher.py:229:            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+D:\openwebui\core\x87_worker_dispatcher.py:238:def cli() -> int:
+D:\openwebui\core\x87_worker_dispatcher.py:239:    parser = argparse.ArgumentParser(description="X87B autonomous worker dispatcher importfix")
+D:\openwebui\core\x87_worker_dispatcher.py:242:    p_seed = sub.add_parser("seed")
+D:\openwebui\core\x87_worker_dispatcher.py:243:    p_seed.add_argument("--task", default="x87b seeded task")
+D:\openwebui\core\x87_worker_dispatcher.py:245:    p_cycle = sub.add_parser("cycle")
+D:\openwebui\core\x87_worker_dispatcher.py:246:    p_cycle.add_argument("--roles", default="DEBUG,PATCHER,VERIFY,REPORT")
+D:\openwebui\core\x87_worker_dispatcher.py:247:    p_cycle.add_argument("--limit", type=int, default=10)
+D:\openwebui\core\x87_worker_dispatcher.py:250:    p_demo.add_argument("--task", default="x87b dispatcher smoke")
+D:\openwebui\core\x87_worker_dispatcher.py:255:    dispatcher = WorkerDispatcher()
+D:\openwebui\core\x87_worker_dispatcher.py:257:    if args.cmd == "seed":
+D:\openwebui\core\x87_worker_dispatcher.py:258:        print(json.dumps(dispatcher.seed(args.task), ensure_ascii=False, indent=2))
+D:\openwebui\core\x87_worker_dispatcher.py:261:    if args.cmd == "cycle":
+D:\openwebui\core\x87_worker_dispatcher.py:262:        roles = [x.strip() for x in args.roles.split(",") if x.strip()]
+D:\openwebui\core\x87_worker_dispatcher.py:263:        print(json.dumps(dispatcher.cycle(roles=roles, limit_per_role=args.limit), ensure_ascii=False, indent=2))
+D:\openwebui\core\x87_worker_dispatcher.py:267:        print(json.dumps(dispatcher.demo(args.task), ensure_ascii=False, indent=2))
+D:\openwebui\core\x87_worker_dispatcher.py:271:        print(json.dumps(dispatcher.status(), ensure_ascii=False, indent=2))
+

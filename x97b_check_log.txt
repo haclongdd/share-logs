@@ -1,0 +1,253 @@
+﻿[X97B CHECK] 2026-05-21T00:18:44.470530
+{
+  "ok": false,
+  "stage": "failed",
+  "target_x87": "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+  "target_x90": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+  "checks": {
+    "process_returncode_zero": true,
+    "response_ok_true": true,
+    "flow_master": true,
+    "has_x96_plan": true,
+    "seed_plan_attached": false,
+    "processed_debug": true,
+    "processed_verify": true,
+    "processed_report": true,
+    "skipped_patcher_for_no_patch_plan": false,
+    "routed_debug_to_verify": false,
+    "has_plan_route_metadata": false
+  },
+  "roles": [
+    "DEBUG",
+    "PATCHER",
+    "VERIFY",
+    "REPORT"
+  ],
+  "routed_to": [
+    "PATCHER",
+    "VERIFY",
+    "REPORT",
+    null
+  ],
+  "response": {
+    "ok": true,
+    "release": "X90_WEBUI_AGENT_BRIDGE",
+    "request_id": "x90req_1779297524090_91284987",
+    "mode": "agent",
+    "task": "x97b planner driven dispatch smoke",
+    "result": {
+      "flow": "master_planner_then_agent_dispatcher",
+      "x96_plan": {
+        "ok": true,
+        "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+        "kind": "master_execution_plan",
+        "task_id": "x96_5d21ad1e5f0c",
+        "task": "x97b planner driven dispatch smoke",
+        "created_at": "2026-05-20T17:18:44Z",
+        "master_model": "qwen2.5-coder",
+        "child_model": "llama",
+        "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+        "classification": {
+          "needs_patch": true,
+          "needs_repo_scan": false,
+          "needs_verify": true,
+          "fallback_allowed": false
+        },
+        "limits": {
+          "retry_limit_per_step": 2,
+          "fallback_api_websearch_limit": 1,
+          "allow_unbounded_loop": false
+        },
+        "fallback_policy": {
+          "local_first": true,
+          "api_websearch_only_if_worker_report_insufficient": true,
+          "max_calls": 1,
+          "after_fallback_return_to_child_worker": true
+        },
+        "steps": [
+          {
+            "step_id": "s01_scout",
+            "role": "SCOUT",
+            "goal": "Read project context, roadmap, and identify relevant files/layers.",
+            "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+            "next_role": "DEBUG",
+            "status": "planned",
+            "max_retries": 2,
+            "requires_master_review": false
+          },
+          {
+            "step_id": "s02_debug",
+            "role": "DEBUG",
+            "goal": "Verify the true failing layer or required change using logs/evidence.",
+            "input_hint": "Do not patch until root cause is confirmed.",
+            "next_role": "PATCHER",
+            "status": "planned",
+            "max_retries": 2,
+            "requires_master_review": false
+          },
+          {
+            "step_id": "s03_patcher",
+            "role": "PATCHER",
+            "goal": "Create a minimal targeted patch for the confirmed cause only.",
+            "input_hint": "Patch must go through _patch_inbox and X75 runner.",
+            "next_role": "VERIFY",
+            "status": "planned",
+            "max_retries": 2,
+            "requires_master_review": false
+          },
+          {
+            "step_id": "s04_verify",
+            "role": "VERIFY",
+            "goal": "Run focused checks and collect pass/fail evidence.",
+            "input_hint": "Export full logs to runtime/temp/*.txt.",
+            "next_role": "REPORT",
+            "status": "planned",
+            "max_retries": 2,
+            "requires_master_review": true
+          },
+          {
+            "step_id": "s05_report",
+            "role": "REPORT",
+            "goal": "Summarize worker results for MASTER review.",
+            "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+            "next_role": null,
+            "status": "planned",
+            "max_retries": 2,
+            "requires_master_review": true
+          }
+        ],
+        "master_review_policy": {
+          "master_must_review_report": true,
+          "pass_condition": "VERIFY ok and REPORT has evidence",
+          "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+          "final_output_owner": "MASTER"
+        },
+        "roadmap_source": "D:\\openwebui\\docs\\ROADMAP.md",
+        "roadmap_excerpt_present": true,
+        "plan_file": "D:\\openwebui\\runtime\\x96_master_plans\\x96_5d21ad1e5f0c_plan.json"
+      },
+      "x96_plan_error": null,
+      "seed": {
+        "ok": true,
+        "seed_message": "x86_1779297524141_002e22f6",
+        "task": "x97b planner driven dispatch smoke"
+      },
+      "cycles": [
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [
+            {
+              "message_id": "x86_1779297524141_002e22f6",
+              "role": "DEBUG",
+              "task": "x97b planner driven dispatch smoke",
+              "input_payload": {
+                "finding": "seeded by X87B dispatcher",
+                "evidence": "D:\\openwebui\\runtime\\temp"
+              },
+              "handled_at": "2026-05-20T17:18:44Z",
+              "ok": true,
+              "summary": "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+              "routed_to": "PATCHER",
+              "output_payload": {
+                "root_cause": "pending_real_log_review",
+                "evidence": "D:\\openwebui\\runtime\\temp",
+                "source_message": "x86_1779297524141_002e22f6"
+              },
+              "routed_message_id": "x86_1779297524168_9b591ba4"
+            },
+            {
+              "message_id": "x86_1779297524168_9b591ba4",
+              "role": "PATCHER",
+              "task": "x97b planner driven dispatch smoke",
+              "input_payload": {
+                "root_cause": "pending_real_log_review",
+                "evidence": "D:\\openwebui\\runtime\\temp",
+                "source_message": "x86_1779297524141_002e22f6"
+              },
+              "handled_at": "2026-05-20T17:18:44Z",
+              "ok": true,
+              "summary": "PATCHER worker consumed confirmed cause/artifact context.",
+              "routed_to": "VERIFY",
+              "output_payload": {
+                "artifact": "D:\\openwebui\\_patch_inbox",
+                "patch_rule": "target confirmed cause only",
+                "source_message": "x86_1779297524168_9b591ba4"
+              },
+              "routed_message_id": "x86_1779297524199_b92a02e5"
+            },
+            {
+              "message_id": "x86_1779297524199_b92a02e5",
+              "role": "VERIFY",
+              "task": "x97b planner driven dispatch smoke",
+              "input_payload": {
+                "artifact": "D:\\openwebui\\_patch_inbox",
+                "patch_rule": "target confirmed cause only",
+                "source_message": "x86_1779297524168_9b591ba4"
+              },
+              "handled_at": "2026-05-20T17:18:44Z",
+              "ok": true,
+              "summary": "VERIFY worker consumed artifact and produced verify handoff.",
+              "routed_to": "REPORT",
+              "output_payload": {
+                "verify": "pending_x75_check",
+                "source_message": "x86_1779297524199_b92a02e5"
+              },
+              "routed_message_id": "x86_1779297524233_44ef9dd4"
+            },
+            {
+              "message_id": "x86_1779297524233_44ef9dd4",
+              "role": "REPORT",
+              "task": "x97b planner driven dispatch smoke",
+              "input_payload": {
+                "verify": "pending_x75_check",
+                "source_message": "x86_1779297524199_b92a02e5"
+              },
+              "handled_at": "2026-05-20T17:18:44Z",
+              "ok": true,
+              "summary": "REPORT worker consumed final verification payload.",
+              "routed_to": null,
+              "output_payload": {
+                "final": {
+                  "verify": "pending_x75_check",
+                  "source_message": "x86_1779297524199_b92a02e5"
+                },
+                "source_message": "x86_1779297524233_44ef9dd4"
+              }
+            }
+          ],
+          "processed_count": 4,
+          "state_file": "D:\\openwebui\\runtime\\x87_worker_dispatcher\\state.json",
+          "report_file": "D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_report_1779297524267.json"
+        },
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "D:\\openwebui\\runtime\\x87_worker_dispatcher\\state.json",
+          "report_file": "D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_report_1779297524333.json"
+        },
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "D:\\openwebui\\runtime\\x87_worker_dispatcher\\state.json",
+          "report_file": "D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_report_1779297524390.json"
+        },
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "D:\\openwebui\\runtime\\x87_worker_dispatcher\\state.json",
+          "report_file": "D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_report_1779297524446.json"
+        }
+      ]
+    },
+    "ts": "2026-05-20T17:18:44Z",
+    "report_file": "D:\\openwebui\\runtime\\reports\\x90_webui_bridge_response_1779297524447.json"
+  },
+  "raw": "nwebui\\\\runtime\\\\temp\",\n              \"source_message\": \"x86_1779297524141_002e22f6\"\n            },\n            \"routed_message_id\": \"x86_1779297524168_9b591ba4\"\n          },\n          {\n            \"message_id\": \"x86_1779297524168_9b591ba4\",\n            \"role\": \"PATCHER\",\n            \"task\": \"x97b planner driven dispatch smoke\",\n            \"input_payload\": {\n              \"root_cause\": \"pending_real_log_review\",\n              \"evidence\": \"D:\\\\openwebui\\\\runtime\\\\temp\",\n              \"source_message\": \"x86_1779297524141_002e22f6\"\n            },\n            \"handled_at\": \"2026-05-20T17:18:44Z\",\n            \"ok\": true,\n            \"summary\": \"PATCHER worker consumed confirmed cause/artifact context.\",\n            \"routed_to\": \"VERIFY\",\n            \"output_payload\": {\n              \"artifact\": \"D:\\\\openwebui\\\\_patch_inbox\",\n              \"patch_rule\": \"target confirmed cause only\",\n              \"source_message\": \"x86_1779297524168_9b591ba4\"\n            },\n            \"routed_message_id\": \"x86_1779297524199_b92a02e5\"\n          },\n          {\n            \"message_id\": \"x86_1779297524199_b92a02e5\",\n            \"role\": \"VERIFY\",\n            \"task\": \"x97b planner driven dispatch smoke\",\n            \"input_payload\": {\n              \"artifact\": \"D:\\\\openwebui\\\\_patch_inbox\",\n              \"patch_rule\": \"target confirmed cause only\",\n              \"source_message\": \"x86_1779297524168_9b591ba4\"\n            },\n            \"handled_at\": \"2026-05-20T17:18:44Z\",\n            \"ok\": true,\n            \"summary\": \"VERIFY worker consumed artifact and produced verify handoff.\",\n            \"routed_to\": \"REPORT\",\n            \"output_payload\": {\n              \"verify\": \"pending_x75_check\",\n              \"source_message\": \"x86_1779297524199_b92a02e5\"\n            },\n            \"routed_message_id\": \"x86_1779297524233_44ef9dd4\"\n          },\n          {\n            \"message_id\": \"x86_1779297524233_44ef9dd4\",\n            \"role\": \"REPORT\",\n            \"task\": \"x97b planner driven dispatch smoke\",\n            \"input_payload\": {\n              \"verify\": \"pending_x75_check\",\n              \"source_message\": \"x86_1779297524199_b92a02e5\"\n            },\n            \"handled_at\": \"2026-05-20T17:18:44Z\",\n            \"ok\": true,\n            \"summary\": \"REPORT worker consumed final verification payload.\",\n            \"routed_to\": null,\n            \"output_payload\": {\n              \"final\": {\n                \"verify\": \"pending_x75_check\",\n                \"source_message\": \"x86_1779297524199_b92a02e5\"\n              },\n              \"source_message\": \"x86_1779297524233_44ef9dd4\"\n            }\n          }\n        ],\n        \"processed_count\": 4,\n        \"state_file\": \"D:\\\\openwebui\\\\runtime\\\\x87_worker_dispatcher\\\\state.json\",\n        \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x87b_worker_dispatcher_report_1779297524267.json\"\n      },\n      {\n        \"ok\": true,\n        \"release\": \"X87B_WORKER_DISPATCHER_IMPORTFIX\",\n        \"processed\": [],\n        \"processed_count\": 0,\n        \"state_file\": \"D:\\\\openwebui\\\\runtime\\\\x87_worker_dispatcher\\\\state.json\",\n        \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x87b_worker_dispatcher_report_1779297524333.json\"\n      },\n      {\n        \"ok\": true,\n        \"release\": \"X87B_WORKER_DISPATCHER_IMPORTFIX\",\n        \"processed\": [],\n        \"processed_count\": 0,\n        \"state_file\": \"D:\\\\openwebui\\\\runtime\\\\x87_worker_dispatcher\\\\state.json\",\n        \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x87b_worker_dispatcher_report_1779297524390.json\"\n      },\n      {\n        \"ok\": true,\n        \"release\": \"X87B_WORKER_DISPATCHER_IMPORTFIX\",\n        \"processed\": [],\n        \"processed_count\": 0,\n        \"state_file\": \"D:\\\\openwebui\\\\runtime\\\\x87_worker_dispatcher\\\\state.json\",\n        \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x87b_worker_dispatcher_report_1779297524446.json\"\n      }\n    ]\n  },\n  \"ts\": \"2026-05-20T17:18:44Z\",\n  \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x90_webui_bridge_response_1779297524447.json\"\n}\n"
+}

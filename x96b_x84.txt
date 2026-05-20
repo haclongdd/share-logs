@@ -1,0 +1,246 @@
+﻿#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import json
+import subprocess
+import sys
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List
+
+ORCHESTRATOR = "X84_TASK_DECOMPOSER"
+ROOT = Path("D:/openwebui")
+RUNTIME = ROOT / "runtime"
+PLAN_DIR = RUNTIME / "plans" / "x84"
+REPORT_DIR = RUNTIME / "reports" / "x84"
+X80 = ROOT / "core" / "x80_queue_patch_executor.py"
+X83_MEMORY = RUNTIME / "memory" / "x83" / "failure_lessons.json"
+
+FALSE_PATTERNS = ["SyntaxError", "Traceback", "[FAIL]", "Exception", "py_compile failed"]
+
+
+def now() -> str:
+    return datetime.now().isoformat(timespec="seconds")
+
+
+def stamp() -> str:
+    return datetime.now().strftime("%Y%m%d_%H%M%S")
+
+
+def ensure_dirs() -> None:
+    PLAN_DIR.mkdir(parents=True, exist_ok=True)
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def safe_name(text: str) -> str:
+    cleaned = "".join(ch.lower() if ch.isalnum() else "_" for ch in text.strip())
+    cleaned = "_".join(part for part in cleaned.split("_") if part)
+    return (cleaned or "task")[:80]
+
+
+def load_lessons(limit: int = 8) -> List[Dict[str, Any]]:
+    if not X83_MEMORY.exists():
+        return []
+    try:
+        data = json.loads(X83_MEMORY.read_text(encoding="utf-8"))
+        records = data.get("records", [])
+        return records[:limit] if isinstance(records, list) else []
+    except Exception as exc:
+        return [{"lesson": f"Could not read X83 memory: {exc}", "patterns": ["memory_read_error"]}]
+
+
+def make_step(step_id: int, title: str, action: str, reason: str, can_enqueue: bool = False, template: str = "python_component") -> Dict[str, Any]:
+    patch_name = "x84_" + safe_name(title)
+    return {
+        "id": step_id,
+        "title": title,
+        "action": action,
+        "reason": reason,
+        "status": "planned",
+        "can_enqueue_x80": can_enqueue,
+        "patch_name": patch_name if can_enqueue else None,
+        "template": template if can_enqueue else None,
+    }
+
+
+def decompose(task: str) -> Dict[str, Any]:
+    text = task.strip()
+    low = text.lower()
+    steps: List[Dict[str, Any]] = []
+    idx = 1
+
+    steps.append(make_step(idx, "read_current_context", "Read current request, runtime status, and recent reports.", "Avoid guessing before changing files.")); idx += 1
+
+    if any(k in low for k in ["fix", "lá»—i", "error", "bug", "fail", "traceback", "syntax"]):
+        steps.append(make_step(idx, "collect_exact_logs", "Collect exact failing command, stdout, stderr, and affected file paths.", "Root cause must be proven by logs first.")); idx += 1
+        steps.append(make_step(idx, "isolate_root_cause", "Identify the smallest confirmed failing layer before patching.", "Avoid symptom patching.")); idx += 1
+
+    if any(k in low for k in ["patch", "code", "script", "runtime", "core", "builder", "generator"]):
+        steps.append(make_step(idx, "create_safe_patch", "Generate a small patch using the local patch generator/builder.", "Changes must go through _patch_inbox and X75D.", True, "python_component")); idx += 1
+        steps.append(make_step(idx, "verify_apply_check", "Run X75D to verify, apply, and check the patch.", "No patch is accepted without syntax and check gate.")); idx += 1
+
+    if any(k in low for k in ["test", "check", "verify", "kiá»ƒm tra", "pass"]):
+        steps.append(make_step(idx, "run_targeted_check", "Run the smallest command that proves the suspected component works.", "Testing must be focused and repeatable.")); idx += 1
+
+    if any(k in low for k in ["agent", "chia viá»‡c", "multi", "swarm", "worker"]):
+        steps.append(make_step(idx, "split_agent_roles", "Split the work into read, code, run, and review responsibilities.", "Multi-agent work needs clear responsibility boundaries.")); idx += 1
+
+    if any(k in low for k in ["memory", "nhá»›", "learn", "bÃ i há»c", "lá»—i cÅ©"]):
+        steps.append(make_step(idx, "consult_failure_memory", "Read X83 lessons before deciding the fix.", "Known mistakes should not repeat.")); idx += 1
+
+    if len(steps) == 1:
+        steps.append(make_step(idx, "make_simple_plan", "Break the request into inspect, change, test, and report.", "Default safe path for unknown work.")); idx += 1
+
+    steps.append(make_step(idx, "write_final_report", "Save a clear report with what changed, what passed, and what remains.", "Keep checkpoint clean for the next step."))
+
+    lessons = load_lessons()
+    return {
+        "ok": True,
+        "orchestrator": ORCHESTRATOR,
+        "stage": "plan_created",
+        "root": str(ROOT),
+        "task": text,
+        "created_at": now(),
+        "steps": steps,
+        "lessons_used": lessons,
+        "summary": {
+            "total_steps": len(steps),
+            "enqueue_candidates": sum(1 for s in steps if s.get("can_enqueue_x80")),
+        },
+    }
+
+
+def write_json(path: Path, data: Dict[str, Any]) -> None:
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def cmd_plan(args: argparse.Namespace) -> Dict[str, Any]:
+    ensure_dirs()
+    task = args.task or " ".join(args.words or [])
+    if not task.strip():
+        return {"ok": False, "stage": "missing_task", "error": "Provide --task or words."}
+    plan = decompose(task)
+    name = args.name or safe_name(task)
+    path = PLAN_DIR / f"{stamp()}_{safe_name(name)}.json"
+    plan["plan_path"] = str(path)
+    write_json(path, plan)
+    return plan
+
+
+def latest_plan() -> Path | None:
+    ensure_dirs()
+    items = sorted(PLAN_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+    return items[0] if items else None
+
+
+def run_cmd(cmd: List[str], timeout: int = 180) -> Dict[str, Any]:
+    proc = subprocess.run(cmd, cwd=str(ROOT), capture_output=True, text=True, timeout=timeout)
+    combined = (proc.stdout or "") + "\n" + (proc.stderr or "")
+    hits = [p for p in FALSE_PATTERNS if p in combined]
+    return {
+        "cmd": cmd,
+        "returncode": proc.returncode,
+        "stdout": proc.stdout,
+        "stderr": proc.stderr,
+        "false_pass_hits": hits,
+        "ok": proc.returncode == 0 and not hits,
+    }
+
+
+def cmd_enqueue(args: argparse.Namespace) -> Dict[str, Any]:
+    ensure_dirs()
+    path = Path(args.plan) if args.plan else latest_plan()
+    if not path or not path.exists():
+        return {"ok": False, "stage": "missing_plan", "error": "No plan found."}
+    plan = json.loads(path.read_text(encoding="utf-8"))
+    if not X80.exists():
+        return {"ok": False, "stage": "missing_x80", "x80": str(X80)}
+    reports = []
+    for step in plan.get("steps", []):
+        if not step.get("can_enqueue_x80"):
+            continue
+        cmd = [sys.executable, str(X80), "enqueue", "--name", step["patch_name"], "--template", step.get("template") or "python_component"]
+        if args.execute:
+            cmd.append("--execute")
+        reports.append(run_cmd(cmd, timeout=args.timeout))
+        if len(reports) >= args.limit:
+            break
+    result = {
+        "ok": all(r.get("ok") for r in reports) if reports else True,
+        "stage": "enqueue_complete",
+        "orchestrator": ORCHESTRATOR,
+        "root": str(ROOT),
+        "plan_path": str(path),
+        "processed": len(reports),
+        "reports": reports,
+        "created_at": now(),
+    }
+    report_path = REPORT_DIR / f"{stamp()}_enqueue.json"
+    result["report_path"] = str(report_path)
+    write_json(report_path, result)
+    return result
+
+
+def cmd_status(args: argparse.Namespace) -> Dict[str, Any]:
+    ensure_dirs()
+    return {
+        "ok": True,
+        "stage": "status",
+        "orchestrator": ORCHESTRATOR,
+        "root": str(ROOT),
+        "plans": len(list(PLAN_DIR.glob("*.json"))),
+        "reports": len(list(REPORT_DIR.glob("*.json"))),
+        "x80_exists": X80.exists(),
+        "x83_memory_exists": X83_MEMORY.exists(),
+        "plan_dir": str(PLAN_DIR),
+        "report_dir": str(REPORT_DIR),
+        "created_at": now(),
+    }
+
+
+def cmd_show(args: argparse.Namespace) -> Dict[str, Any]:
+    path = Path(args.plan) if args.plan else latest_plan()
+    if not path or not path.exists():
+        return {"ok": False, "stage": "missing_plan"}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="X84 task decomposer")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    p = sub.add_parser("plan")
+    p.add_argument("--task", default="")
+    p.add_argument("--name", default="")
+    p.add_argument("words", nargs="*")
+    p.set_defaults(fn=cmd_plan)
+
+    p = sub.add_parser("enqueue")
+    p.add_argument("--plan", default="")
+    p.add_argument("--limit", type=int, default=5)
+    p.add_argument("--timeout", type=int, default=180)
+    p.add_argument("--execute", action="store_true")
+    p.set_defaults(fn=cmd_enqueue)
+
+    p = sub.add_parser("status")
+    p.set_defaults(fn=cmd_status)
+
+    p = sub.add_parser("show")
+    p.add_argument("--plan", default="")
+    p.set_defaults(fn=cmd_show)
+
+    args = parser.parse_args()
+    try:
+        result = args.fn(args)
+    except subprocess.TimeoutExpired as exc:
+        result = {"ok": False, "stage": "timeout", "error": str(exc), "orchestrator": ORCHESTRATOR}
+    except Exception as exc:
+        result = {"ok": False, "stage": "exception", "error": str(exc), "orchestrator": ORCHESTRATOR}
+    print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0 if result.get("ok") else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+

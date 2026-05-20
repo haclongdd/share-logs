@@ -1,0 +1,231 @@
+﻿#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import time
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+RELEASE = "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION"
+
+ROOT = Path(os.environ.get("AI_LOCAL_OS_ROOT", r"D:\openwebui"))
+RUNTIME = ROOT / "runtime"
+DOCS = ROOT / "docs"
+ROADMAP = DOCS / "ROADMAP.md"
+PLAN_DIR = RUNTIME / "x96_master_plans"
+REVIEW_DIR = RUNTIME / "x96_master_reviews"
+REPORT_DIR = RUNTIME / "reports"
+
+DEFAULT_RETRY_LIMIT = 2
+DEFAULT_FALLBACK_LIMIT = 1
+
+ROLE_ORDER = ["SCOUT", "DEBUG", "PATCHER", "VERIFY", "REPORT"]
+
+def utc_now() -> str:
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+def safe_write_json(path: Path, data: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+def read_text(path: Path, limit: int = 20000) -> str:
+    if not path.exists():
+        return ""
+    return path.read_text(encoding="utf-8", errors="ignore")[:limit]
+
+def task_id_for(task: str) -> str:
+    return "x96_" + hashlib.sha1(task.encode("utf-8", errors="ignore")).hexdigest()[:12]
+
+def classify_task(task: str) -> Dict[str, Any]:
+    low = task.lower()
+    needs_patch = any(k in low for k in ["fix", "bug", "error", "error", "patch", "fix", "fail", "traceback"])
+    needs_repo_scan = any(k in low for k in ["file", "repo", "project", "source", "code", "scan", "read"])
+    needs_verify = True
+    needs_fallback = any(k in low for k in ["api", "web", "search", "unknown", "unknown", "blocked"])
+    return {
+        "needs_patch": needs_patch,
+        "needs_repo_scan": needs_repo_scan,
+        "needs_verify": needs_verify,
+        "fallback_allowed": needs_fallback,
+    }
+
+def make_step(step_id: int, role: str, goal: str, input_hint: str, next_role: Optional[str]) -> Dict[str, Any]:
+    return {
+        "step_id": f"s{step_id:02d}_{role.lower()}",
+        "role": role,
+        "goal": goal,
+        "input_hint": input_hint,
+        "next_role": next_role,
+        "status": "planned",
+        "max_retries": DEFAULT_RETRY_LIMIT,
+        "requires_master_review": role in {"VERIFY", "REPORT"},
+    }
+
+def build_plan(task: str, retry_limit: int = DEFAULT_RETRY_LIMIT, fallback_limit: int = DEFAULT_FALLBACK_LIMIT) -> Dict[str, Any]:
+    task = str(task or "").strip()
+    tid = task_id_for(task)
+    meta = classify_task(task)
+    roadmap_excerpt = read_text(ROADMAP, limit=6000)
+
+    steps: List[Dict[str, Any]] = []
+    n = 1
+
+    steps.append(make_step(n, "SCOUT", "Read project context, roadmap, and identify relevant files/layers.", "Use docs/ROADMAP.md and runtime reports first.", "DEBUG")); n += 1
+    steps.append(make_step(n, "DEBUG", "Verify the true failing layer or required change using logs/evidence.", "Do not patch until root cause is confirmed.", "PATCHER" if meta["needs_patch"] else "VERIFY")); n += 1
+
+    if meta["needs_patch"]:
+        steps.append(make_step(n, "PATCHER", "Create a minimal targeted patch for the confirmed cause only.", "Patch must go through _patch_inbox and X75 runner.", "VERIFY")); n += 1
+
+    steps.append(make_step(n, "VERIFY", "Run focused checks and collect pass/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
+    steps.append(make_step(n, "REPORT", "Summarize worker results for MASTER review.", "Report must state pass/fail, evidence, and remaining risk.", None)); n += 1
+
+    for s in steps:
+        s["max_retries"] = retry_limit
+
+    plan = {
+        "ok": True,
+        "release": RELEASE,
+        "kind": "master_execution_plan",
+        "task_id": tid,
+        "task": task,
+        "created_at": utc_now(),
+        "master_model": "qwen2.5-coder",
+        "child_model": "llama",
+        "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+        "classification": meta,
+        "limits": {
+            "retry_limit_per_step": retry_limit,
+            "fallback_api_websearch_limit": fallback_limit,
+            "allow_unbounded_loop": False,
+        },
+        "fallback_policy": {
+            "local_first": True,
+            "api_websearch_only_if_worker_report_insufficient": True,
+            "max_calls": fallback_limit,
+            "after_fallback_return_to_child_worker": True,
+        },
+        "steps": steps,
+        "master_review_policy": {
+            "master_must_review_report": True,
+            "pass_condition": "VERIFY ok and REPORT has evidence",
+            "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+            "final_output_owner": "MASTER",
+        },
+        "roadmap_source": str(ROADMAP),
+        "roadmap_excerpt_present": bool(roadmap_excerpt.strip()),
+    }
+
+    out = PLAN_DIR / f"{tid}_plan.json"
+    plan["plan_file"] = str(out)
+    safe_write_json(out, plan)
+    return plan
+
+def review_worker_report(task_id: str, worker_report: Dict[str, Any]) -> Dict[str, Any]:
+    ok = bool(worker_report.get("ok"))
+    evidence = worker_report.get("evidence") or worker_report.get("report_file") or worker_report.get("summary")
+    needs_retry = not ok
+    fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 0)
+
+    decision = "PASS" if ok and evidence else "RETRY"
+    if needs_retry and fallback_calls_used < DEFAULT_FALLBACK_LIMIT:
+        next_action = "ALLOW_LIMITED_FALLBACK_THEN_RETRY_CHILD"
+    elif needs_retry:
+        next_action = "STOP_RETRY_LIMIT_REACHED"
+    else:
+        next_action = "FINAL_REPORT_TO_WEBUI"
+
+    review = {
+        "ok": decision == "PASS",
+        "release": RELEASE,
+        "kind": "master_review",
+        "task_id": task_id,
+        "reviewed_at": utc_now(),
+        "decision": decision,
+        "next_action": next_action,
+        "worker_report": worker_report,
+        "master_notes": {
+            "master_is_final_decider": True,
+            "child_worker_does_not_report_to_user_directly": True,
+            "fallback_must_be_limited": True,
+        },
+    }
+
+    out = REVIEW_DIR / f"{task_id}_review.json"
+    review["review_file"] = str(out)
+    safe_write_json(out, review)
+    return review
+
+def selftest() -> Dict[str, Any]:
+    PLAN_DIR.mkdir(parents=True, exist_ok=True)
+    REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+
+    task = "x96 selftest fix runtime response with root cause first"
+    plan = build_plan(task)
+    fake_worker_report = {
+        "ok": True,
+        "summary": "VERIFY passed with evidence log.",
+        "evidence": str(RUNTIME / "temp"),
+        "report_file": str(REPORT_DIR / "x96_selftest_report.json"),
+        "fallback_calls_used": 0,
+    }
+    review = review_worker_report(plan["task_id"], fake_worker_report)
+
+    result = {
+        "ok": bool(plan.get("ok") and review.get("ok")),
+        "release": RELEASE,
+        "plan_file": plan.get("plan_file"),
+        "review_file": review.get("review_file"),
+        "checks": {
+            "roadmap_exists": ROADMAP.exists(),
+            "has_scout_step": any(s.get("role") == "SCOUT" for s in plan.get("steps", [])),
+            "has_master_review": bool(plan.get("master_review_policy", {}).get("master_must_review_report")),
+            "fallback_limited": plan.get("limits", {}).get("fallback_api_websearch_limit") == DEFAULT_FALLBACK_LIMIT,
+            "final_owner_master": plan.get("master_review_policy", {}).get("final_output_owner") == "MASTER",
+        },
+    }
+
+    report = REPORT_DIR / "x96c_master_planner_reviewer_selftest.json"
+    result["report_file"] = str(report)
+    safe_write_json(report, result)
+    return result
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="X96 Master planner/reviewer")
+    sub = parser.add_subparsers(dest="cmd", required=True)
+
+    p = sub.add_parser("plan")
+    p.add_argument("--task", required=True)
+    p.add_argument("--retry-limit", type=int, default=DEFAULT_RETRY_LIMIT)
+    p.add_argument("--fallback-limit", type=int, default=DEFAULT_FALLBACK_LIMIT)
+
+    p = sub.add_parser("review")
+    p.add_argument("--task-id", required=True)
+    p.add_argument("--report-json", required=True)
+
+    sub.add_parser("selftest")
+
+    args = parser.parse_args()
+
+    if args.cmd == "plan":
+        out = build_plan(args.task, retry_limit=args.retry_limit, fallback_limit=args.fallback_limit)
+    elif args.cmd == "review":
+        worker_report = json.loads(Path(args.report_json).read_text(encoding="utf-8"))
+        out = review_worker_report(args.task_id, worker_report)
+    elif args.cmd == "selftest":
+        out = selftest()
+    else:
+        out = {"ok": False, "error": "unknown command"}
+
+    print(json.dumps(out, ensure_ascii=False, indent=2))
+    return 0 if out.get("ok") else 1
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+

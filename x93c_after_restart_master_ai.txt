@@ -1,0 +1,139 @@
+﻿docker : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production 
+WSGI server instead.[0m
+At line:1 char:1
++ docker logs --tail 120 master_ai *> D:\openwebui\runtime\temp\x93c_af ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([31m[1mWARNIN...er instead.[0m:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.20.0.1 - - [19/May/2026 19:40:37] "POST /add_task HTTP/1.1" 200 -
+172.20.0.1 - - [19/May/2026 19:40:50] "POST /add_task HTTP/1.1" 200 -
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.2:5000
+[33mPress CTRL+C to quit[0m
+172.20.0.1 - - [19/May/2026 19:43:36] "GET /health HTTP/1.1" 200 -
+172.20.0.1 - - [19/May/2026 19:43:55] "POST /add_task HTTP/1.1" 200 -
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+172.20.0.4 - - [19/May/2026 20:13:45] "POST /add_task HTTP/1.1" 200 -
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+[33mPress CTRL+C to quit[0m
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+[33mPress CTRL+C to quit[0m
+172.20.0.1 - - [20/May/2026 10:54:41] "POST /add_task HTTP/1.1" 200 -
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+[33mPress CTRL+C to quit[0m
+172.20.0.1 - - [20/May/2026 11:16:02] "POST /add_task HTTP/1.1" 200 -
+172.20.0.1 - - [20/May/2026 11:16:15] "POST /add_task HTTP/1.1" 200 -
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+[33mPress CTRL+C to quit[0m
+172.20.0.1 - - [20/May/2026 11:33:02] "POST /add_task HTTP/1.1" 200 -
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+[33mPress CTRL+C to quit[0m
+172.20.0.1 - - [20/May/2026 11:39:50] "POST /add_task HTTP/1.1" 200 -
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+[33mPress CTRL+C to quit[0m
+ * Tip: There are .env files present. Install python-dotenv to use them.
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+[33mPress CTRL+C to quit[0m
+172.20.0.1 - - [20/May/2026 11:48:39] "POST /add_task HTTP/1.1" 200 -
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+[33mPress CTRL+C to quit[0m
+172.20.0.1 - - [20/May/2026 11:51:02] "POST /add_task HTTP/1.1" 200 -
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.3:5000
+[33mPress CTRL+C to quit[0m
+172.20.0.1 - - [20/May/2026 11:52:14] "POST /add_task HTTP/1.1" 200 -
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+172.20.0.1 - - [20/May/2026 12:05:46] "POST /add_task HTTP/1.1" 200 -
+172.20.0.1 - - [20/May/2026 12:06:01] "POST /add_task HTTP/1.1" 200 -
+172.20.0.1 - - [20/May/2026 12:07:23] "POST /add_task HTTP/1.1" 200 -
+ * Tip: There are .env files present. Install python-dotenv to use them.
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server 
+instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.20.0.2:5000
+[33mPress CTRL+C to quit[0m
+

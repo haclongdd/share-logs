@@ -1,0 +1,8 @@
+﻿[2026-05-21 00:57:13] [START] X98 patch packaging pipeline audit apply
+[2026-05-21 00:57:13] Scan-only package. No core files modified.
+[2026-05-21 00:57:14] Root: D:\openwebui
+[2026-05-21 00:57:14] FOUND _patch_inbox
+[2026-05-21 00:57:14] FOUND runtime\temp
+[2026-05-21 00:57:14] FOUND core
+[2026-05-21 00:57:14] [PASS] X98 apply complete
+

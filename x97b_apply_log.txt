@@ -1,0 +1,15 @@
+﻿[X97B APPLY] 2026-05-21T00:18:41.385662
+{
+  "ok": false,
+  "stage": "failed_rolled_back",
+  "targets": [
+    "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+    "D:\\openwebui\\core\\x90_webui_agent_bridge.py"
+  ],
+  "backups": {
+    "D:\\openwebui\\core\\x87_worker_dispatcher.py": "D:\\openwebui\\_backups\\x97b_planner_driven_dispatch\\x87_worker_dispatcher.py.before_x97b_20260521_001841.bak",
+    "D:\\openwebui\\core\\x90_webui_agent_bridge.py": "D:\\openwebui\\_backups\\x97b_planner_driven_dispatch\\x90_webui_agent_bridge.py.before_x97b_20260521_001841.bak"
+  },
+  "error": "RuntimeError('Cannot find X87 seed block to replace')",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\openwebui\\_patch_inbox\\x97b_planner_driven_dispatch\\x97b_apply.py\", line 182, in main\n    x87_new, x87_changes = patch_x87(X87.read_text(encoding='utf-8'))\n                           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\openwebui\\_patch_inbox\\x97b_planner_driven_dispatch\\x97b_apply.py\", line 152, in patch_x87\n    raise RuntimeError('Cannot find X87 seed block to replace')\nRuntimeError: Cannot find X87 seed block to replace\n"
+}

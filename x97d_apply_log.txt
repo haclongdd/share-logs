@@ -1,0 +1,4 @@
+﻿[2026-05-21 00:38:15] [START] X97D planner-aware seed bus propagation apply
+[2026-05-21 00:38:15] Backup created
+[2026-05-21 00:38:15] Running Python patcher: D:\openwebui\runtime\temp\x97d_patch_x87.py
+

@@ -1,0 +1,3143 @@
+﻿[2026-05-21T02:01:01.0236354+07:00] X99B sync loop started. root=D:\openwebui branch=main interval=10
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_runtime_log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:01:02.8222401+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_runtime_log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:01:13.5689146+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:01:24.5969302+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:01:35.4497545+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:01:46.2160763+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:01:56.9013297+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:02:07.6028009+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:02:18.4270332+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:02:29.1738949+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+	x99b_test_sync.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:02:39.9434071+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+	x99b_test_sync.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:02:50.6551713+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+	x99b_test_sync.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:03:01.3934352+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+	x99b_test_sync.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:03:12.1655940+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+	x99b_test_sync.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:03:22.9236479+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+	x99b_test_sync.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:03:33.6766495+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	README.md
+	x85_run_2.txt
+	x85_run_20260520_163219.txt
+	x85_run_20260520_163226.txt
+	x85_run_20260520_164334.txt
+	x87_head.txt
+	x87_symbols2.txt
+	x87_tail.txt
+	x90_head.txt
+	x90_symbols.txt
+	x90_tail.txt
+	x92_live_error_context.txt
+	x93_apply_log.txt
+	x93_live_response.json
+	x93_preflight_20260520_190542.json
+	x93_preflight_20260520_190555.json
+	x93b_apply_log.txt
+	x93b_dir_check.txt
+	x93b_generator_log.txt
+	x93c_after_irm_fail_master_logs.txt
+	x93c_after_restart_apply_log.txt
+	x93c_after_restart_docker_ps.txt
+	x93c_after_restart_master_ai.txt
+	x93c_apply_log.txt
+	x93c_curl_live.txt
+	x93c_docker_events.txt
+	x93c_docker_ps.txt
+	x93c_docker_ps_a.txt
+	x93c_generator_log.txt
+	x93c_inspect_full.txt
+	x93c_master_ai_bridge_after_patch.txt
+	x93c_master_logs.txt
+	x93c_master_state.txt
+	x93c_port5000.txt
+	x93c_preflight_20260520_215319.json
+	x93c_preflight_20260520_215443.json
+	x93c_preflight_20260520_215919.json
+	x93c_preflight_20260520_220158.json
+	x93c_preflight_20260520_220324.json
+	x93c_ps_master.txt
+	x93c_restart_count.txt
+	x93c_route_extract.txt
+	x93d_apply_log.txt
+	x93d_live_response.txt
+	x93d_live_response_after_restart.txt
+	x93e_checkpoint_20260520_222157.txt
+	x93e_live_smoke.txt
+	x94_docker_ps.txt
+	x94_live_smoke.txt
+	x96_docs_dir_log.txt
+	x96_roadmap_save_log.txt
+	x96a_core_files.txt
+	x96a_master_planner_scan.txt
+	x96a_roadmap_confirm.txt
+	x96b_master.txt
+	x96b_x84.txt
+	x96b_x87.txt
+	x96b_x90.txt
+	x96b_x91.txt
+	x96c2_apply_log.txt
+	x96c_apply_log.txt
+	x96c_selftest_log.txt
+	x96d2_attach_apply_log.txt
+	x96d2_attach_check_log.txt
+	x96d2_live_x87.txt
+	x96d2_live_x90.txt
+	x96d2_live_x91.txt
+	x96d_apply_log_retry.txt
+	x96d_attach_apply_log.txt
+	x96d_attach_check_log.txt
+	x96d_compile_check.txt
+	x96d_folder_empty_check.txt
+	x96d_recover_apply_inner_log.txt
+	x96d_recover_apply_log.txt
+	x96d_recover_compile.txt
+	x96d_recover_status.txt
+	x96d_restore_compile.txt
+	x96d_restore_status.txt
+	x96d_x90_smoke.txt
+	x97a_core_x86_agent_bus_py_head.txt
+	x97a_core_x86_agent_bus_py_symbols.txt
+	x97a_core_x86_agent_bus_py_tail.txt
+	x97a_core_x87_worker_dispatcher_py_head.txt
+	x97a_core_x87_worker_dispatcher_py_symbols.txt
+	x97a_core_x87_worker_dispatcher_py_tail.txt
+	x97a_core_x90_webui_agent_bridge_py_head.txt
+	x97a_core_x90_webui_agent_bridge_py_symbols.txt
+	x97a_core_x90_webui_agent_bridge_py_tail.txt
+	x97a_core_x96_master_planner_reviewer_py_head.txt
+	x97a_core_x96_master_planner_reviewer_py_symbols.txt
+	x97a_core_x96_master_planner_reviewer_py_tail.txt
+	x97a_scan_apply_log.txt
+	x97a_scan_check_log.txt
+	x97a_scan_summary.json
+	x97b2_apply_log.txt
+	x97b2_check_log.txt
+	x97b2_live_addtask.txt
+	x97b2_live_reports_list.txt
+	x97b_apply_console.txt
+	x97b_apply_log.txt
+	x97b_check_console.txt
+	x97b_check_log.txt
+	x97c2_apply_log.txt
+	x97c2_check_log.txt
+	x97c2b_apply_log.txt
+	x97c2b_check_log.txt
+	x97c2b_source_audit.txt
+	x97c_scan_apply_log.txt
+	x97c_scan_check_log.txt
+	x97c_scan_latest_report_audit.txt
+	x97c_scan_source_audit.txt
+	x97d2_apply_log.txt
+	x97d2_check_log.txt
+	x97d3_apply_log.txt
+	x97d3_check_log.txt
+	x97d3_source_audit.txt
+	x97d4_apply_log.txt
+	x97d4_check_log.txt
+	x97d4_source_audit.txt
+	x97d5_apply_log.txt
+	x97d5_check_log.txt
+	x97d_apply_log.txt
+	x97d_check_log.txt
+	x97e2_apply_log.txt
+	x97e2_check_log.txt
+	x97e3_apply_log.txt
+	x97e3_check_compile_log.txt
+	x97e3_check_log.txt
+	x97e3_compile_log.txt
+	x97e3_source_audit.txt
+	x97e4_apply_log.txt
+	x97e4_check_compile_log.txt
+	x97e4_check_log.txt
+	x97e4_compile_log.txt
+	x97e4_live_addtask.txt
+	x97e4_patcher_output.txt
+	x97e4_source_audit.txt
+	x97e5_compile_after.txt
+	x97e5_compile_before.txt
+	x97e5_live_addtask.txt
+	x97e5_source_audit.txt
+	x97e5_tempdir_decl_scan.txt
+	x97e5_tempdir_refs.txt
+	x97e5_x87_head.txt
+	x97e6_apply_log.txt
+	x97e6_check_compile_log.txt
+	x97e6_check_log.txt
+	x97e6_check_source_audit.txt
+	x97e6_compile_log.txt
+	x97e6_live_addtask.txt
+	x97e6_role_scan.txt
+	x97e6_source_audit.txt
+	x97e6_x86_bus_role_contract.txt
+	x97e6_x96_roles.txt
+	x97e_apply_log.txt
+	x97e_check_log.txt
+	x97e_live_addtask.txt
+	x98_apply_log.txt
+	x98_check_log.txt
+	x98_package_audit.txt
+	x98b_apply_log.txt
+	x98b_check_log.txt
+	x98b_contract_audit.txt
+	x98b_guard_report.json
+	x98c2_apply_log.txt
+	x98c2_check_log.txt
+	x98c2_contract_audit.txt
+	x98c2_migration_report.txt
+	x99b_logsync_apply_log.txt
+	x99b_logsync_check_log.txt
+	x99b_logsync_runtime_log.txt
+	x99b_test_sync.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+git : error: src refspec main does not match any
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: src refs...s not match any:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
+[2026-05-21T02:03:44.4867625+07:00] pushed changes
+

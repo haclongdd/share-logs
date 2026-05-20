@@ -1,0 +1,11 @@
+﻿
+
+    Directory: D:\openwebui
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         5/18/2026   5:37 PM                docs                                                                 
+
+
+

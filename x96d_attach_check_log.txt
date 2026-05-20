@@ -1,0 +1,9 @@
+﻿[X96D CHECK] 2026-05-20T23:31:50.2190072+07:00
+{
+  "ok": false,
+  "stage": "failed",
+  "target": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+  "error": "RuntimeError('run_agent_flow is not callable at module level')",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\openwebui\\_patch_inbox\\x96d_attach_master_planner_to_x90\\x96d_attach_smoke.py\", line 15, in main\n    if not callable(fn): raise RuntimeError(\"run_agent_flow is not callable at module level\")\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: run_agent_flow is not callable at module level\n"
+}
+

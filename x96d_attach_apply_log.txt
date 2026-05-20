@@ -1,0 +1,10 @@
+﻿[X96D APPLY] 2026-05-20T23:31:48.1464461+07:00
+{
+  "ok": false,
+  "stage": "failed",
+  "target": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+  "backup": "D:\\openwebui\\_backups\\x96d_attach_master_planner_to_x90\\x90_webui_agent_bridge.py.before_x96d_20260520_233148.bak",
+  "error": "RuntimeError('Cannot find def run_agent_flow(...) in target')",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\openwebui\\_patch_inbox\\x96d_attach_master_planner_to_x90\\x96d_attach_apply.py\", line 98, in main\n    if not m: raise RuntimeError('Cannot find def run_agent_flow(...) in target')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Cannot find def run_agent_flow(...) in target\n"
+}
+

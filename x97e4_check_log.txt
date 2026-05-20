@@ -1,0 +1,11 @@
+﻿[START] X97E4 exact indentation repair check
+[2026-05-21 01:20:08] Compiling target
+[2026-05-21 01:20:09] [PASS] compile passed
+[2026-05-21 01:20:09] Marker OK:         x97e_plan_context = None
+[2026-05-21 01:20:09] Marker OK:         x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if x97e_plan_context else task
+[2026-05-21 01:20:09] Marker OK:         next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, result)
+[2026-05-21 01:20:09] Marker OK:         if result["ok"] and next_role:
+[2026-05-21 01:20:09] Over-indent check OK
+[2026-05-21 01:20:09] Audit written: D:\openwebui\runtime\temp\x97e4_source_audit.txt
+[2026-05-21 01:20:09] [PASS] X97E4 check complete
+

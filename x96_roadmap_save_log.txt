@@ -1,0 +1,11 @@
+﻿
+
+    Directory: D:\openwebui\docs
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         5/20/2026  10:52 PM           2293 ROADMAP.md                                                           
+
+
+

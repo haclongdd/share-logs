@@ -1,0 +1,11 @@
+﻿
+  core\x87_worker_dispatcher.py:38:RUNTIME_DIR = ROOT / "runtime"
+> core\x87_worker_dispatcher.py:39:TEMP_DIR = RUNTIME_DIR / "temp"
+  core\x87_worker_dispatcher.py:40:BUS_DIR = RUNTIME_DIR / "x86_agent_bus"
+  core\x87_worker_dispatcher.py:302:        """
+> core\x87_worker_dispatcher.py:303:        payload = {"finding": "seeded by X87B dispatcher", "evidence": 
+str(TEMP_DIR)}
+  core\x87_worker_dispatcher.py:304:        from_role = "SCOUT"
+
+
+

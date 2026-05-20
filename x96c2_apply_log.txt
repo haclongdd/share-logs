@@ -1,0 +1,78 @@
+﻿{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x96c2_master_planner_reviewer_ascii_fix",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x96c2_master_planner_reviewer_ascii_fix\\apply_x96c2_master_planner_reviewer_ascii_fix.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x96c2_master_planner_reviewer_ascii_fix\\cleanup_x96c2_master_planner_reviewer_ascii_fix.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x96c2_master_planner_reviewer_ascii_fix\\x96c2_master_planner_reviewer_ascii_fix_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x96c2_master_planner_reviewer_ascii_fix\\apply_x96c2_master_planner_reviewer_ascii_fix.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X96C installed master planner/reviewer foundation\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x96c2_master_planner_reviewer_ascii_fix\\x96c2_master_planner_reviewer_ascii_fix_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X96C check ok\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}
+

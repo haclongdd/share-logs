@@ -1,0 +1,26 @@
+﻿{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x93b_force_webui_response_normalizer",
+  "stage": "powershell_syntax_fail",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x93b_force_webui_response_normalizer\\apply_x93b_force_webui_response_normalizer.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Exception calling \"Create\" with \"1\" argument(s): \"At line:129 char:43\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                           ~~~~~~~~~~~~~~~~~~~~\nUnexpected token 'summary\\\"|'summary'\"' in expression or statement.\nAt line:129 char:43\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                           ~\nMissing closing ')' in expression.\nAt line:129 char:43\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                           ~\nThe hash literal was incomplete.\nAt line:129 char:63\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                                               ~\nUnexpected token ')' in expression or statement.\nAt line:132 char:1\n+ }\n+ ~\nUnexpected token '}' in expression or statement.\"\nAt line:1 char:36\n+ ...  = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : ParseException\n \n"
+      }
+    }
+  ],
+  "apply": null,
+  "check": null,
+  "false_pass_guard": true
+}
+

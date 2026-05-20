@@ -1,0 +1,180 @@
+﻿[START] X97E3 source audit
+
+===== FILE EXISTS =====
+D:\openwebui\core\x87_worker_dispatcher.py
+
+===== SIZE / LASTWRITE =====
+
+
+FullName      : D:\openwebui\core\x87_worker_dispatcher.py
+Length        : 14968
+LastWriteTime : 5/21/2026 1:06:43 AM
+
+
+
+
+
+===== LINES 200..270 =====
+ 200:             "handled_at": utc_stamp(),
+ 201:             "ok": True,
+ 202:             "summary": "",
+ 203:             "routed_to": None,
+ 204:         }
+ 205: 
+ 206:         if to_role == "DEBUG":
+ 207:             result["summary"] = "DEBUG worker consumed evidence and confirmed root-cause-first handoff."
+ 208:             result["output_payload"] = {
+ 209:                 "root_cause": payload.get("root_cause") or "pending_real_log_review",
+ 210:                 "evidence": payload.get("evidence") or payload,
+ 211:                 "source_message": msg.get("id"),
+ 212:             }
+ 213:         elif to_role == "PATCHER":
+ 214:             result["summary"] = "PATCHER worker consumed confirmed cause/artifact context."
+ 215:             result["output_payload"] = {
+ 216:                 "artifact": payload.get("artifact") or r"D:\openwebui\_patch_inbox",
+ 217:                 "patch_rule": "target confirmed cause only",
+ 218:                 "source_message": msg.get("id"),
+ 219:             }
+ 220:         elif to_role == "VERIFY":
+ 221:             result["summary"] = "VERIFY worker consumed artifact and produced verify handoff."
+ 222:             result["output_payload"] = {
+ 223:                 "verify": payload.get("verify") or "pending_x75_check",
+ 224:                 "source_message": msg.get("id"),
+ 225:             }
+ 226:         elif to_role == "REPORT":
+ 227:             result["summary"] = "REPORT worker consumed final verification payload."
+ 228:             result["output_payload"] = {
+ 229:                 "final": payload,
+ 230:                 "source_message": msg.get("id"),
+ 231:             }
+ 232:         else:
+ 233:             result["ok"] = False
+ 234:             result["summary"] = f"No worker handler for role {to_role}"
+ 235:             result["output_payload"] = {"source_message": msg.get("id")}
+ 236: 
+ 237:         # X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION: carry plan metadata from input payload into routing context
+ 238:                 x97e_plan_context = None
+ 239:                 try:
+ 240:                     x97e_input_payload = msg.get("payload") if isinstance(msg, dict) else None
+ 241:                     if isinstance(x97e_input_payload, dict):
+ 242:                         x97e_plan_context = x97e_input_payload.get("x96_plan")
+ 243:                     if x97e_plan_context and isinstance(result.get("output_payload"), dict):
+ 244:                         result["output_payload"].setdefault("x96_plan", x97e_plan_context)
+ 245:                         result["output_payload"].setdefault("x97e_plan_propagated", True)
+ 246:                 except Exception as exc:
+ 247:                     try:
+ 248:                         result.setdefault("x97e_plan_propagation_error", str(exc))
+ 249:                     except Exception:
+ 250:                         pass
+ 251:                 x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if x97e_plan_context else task
+ 252:                 next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, result)
+ 253:         if result["ok"] and next_role:
+ 254:             sent = self.bus.send(to_role, next_role, task, result["output_payload"])
+ 255:             result["routed_to"] = next_role
+ 256:             result["routed_message_id"] = sent.id
+ 257: 
+ 258:         return result
+ 259: 
+ 260:     def cycle(self, roles: Optional[List[str]] = None, limit_per_role: int = 10) -> Dict[str, Any]:
+ 261:         roles = [r.upper() for r in (roles or ["DEBUG", "PATCHER", "VERIFY", "REPORT"])]
+ 262:         processed: List[Dict[str, Any]] = []
+ 263: 
+ 264:         for role in roles:
+ 265:             consumed = self.bus.consume(role, limit=limit_per_role)
+ 266:             for msg in consumed:
+ 267:                 processed.append(self.handle_message(msg))
+ 268: 
+ 269:         self.state["cycles"] = int(self.state.get("cycles", 0)) + 1
+ 270:         self.state["processed_total"] = int(self.state.get("processed_total", 0)) + len(processed)
+
+===== MARKER SEARCH =====
+
+D:\openwebui\core\x87_worker_dispatcher.py:99:    # X97B2_PLANNER_DRIVEN_RUNTIME_DISPATCH
+D:\openwebui\core\x87_worker_dispatcher.py:100:    def _x97b2_get_x96_plan(self, task_obj):
+D:\openwebui\core\x87_worker_dispatcher.py:101:        """Return x96_plan dict from common task/message shapes without 
+breaking fallback."""
+D:\openwebui\core\x87_worker_dispatcher.py:104:        direct = task_obj.get("x96_plan")
+D:\openwebui\core\x87_worker_dispatcher.py:109:            nested = payload.get("x96_plan")
+D:\openwebui\core\x87_worker_dispatcher.py:114:            nested = meta.get("x96_plan")
+D:\openwebui\core\x87_worker_dispatcher.py:119:    def _x97b2_extract_role(self, step):
+D:\openwebui\core\x87_worker_dispatcher.py:129:    def _x97b2_resolve_next_role(self, task_obj, current_role, result):
+D:\openwebui\core\x87_worker_dispatcher.py:133:            plan = self._x97b2_get_x96_plan(task_obj)
+D:\openwebui\core\x87_worker_dispatcher.py:143:                role = self._x97b2_extract_role(step)
+D:\openwebui\core\x87_worker_dispatcher.py:156:                next_role = self._x97b2_extract_role(next_step)
+D:\openwebui\core\x87_worker_dispatcher.py:157:                if next_role:
+D:\openwebui\core\x87_worker_dispatcher.py:160:                    plan["x97b2_runtime_dispatch"] = "planner_driven"
+D:\openwebui\core\x87_worker_dispatcher.py:161:                    return next_role
+D:\openwebui\core\x87_worker_dispatcher.py:163:            plan["x97b2_runtime_dispatch"] = "planner_complete"
+D:\openwebui\core\x87_worker_dispatcher.py:168:                    task_obj.setdefault("x97b2_dispatch_error", 
+str(exc))
+D:\openwebui\core\x87_worker_dispatcher.py:203:            "routed_to": None,
+D:\openwebui\core\x87_worker_dispatcher.py:237:        # X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION: carry plan 
+metadata from input payload into routing context
+D:\openwebui\core\x87_worker_dispatcher.py:238:                x97e_plan_context = None
+D:\openwebui\core\x87_worker_dispatcher.py:240:                    x97e_input_payload = msg.get("payload") if 
+isinstance(msg, dict) else None
+D:\openwebui\core\x87_worker_dispatcher.py:241:                    if isinstance(x97e_input_payload, dict):
+D:\openwebui\core\x87_worker_dispatcher.py:242:                        x97e_plan_context = 
+x97e_input_payload.get("x96_plan")
+D:\openwebui\core\x87_worker_dispatcher.py:243:                    if x97e_plan_context and 
+isinstance(result.get("output_payload"), dict):
+D:\openwebui\core\x87_worker_dispatcher.py:244:                        result["output_payload"].setdefault("x96_plan", 
+x97e_plan_context)
+D:\openwebui\core\x87_worker_dispatcher.py:245:                        
+result["output_payload"].setdefault("x97e_plan_propagated", True)
+D:\openwebui\core\x87_worker_dispatcher.py:248:                        
+result.setdefault("x97e_plan_propagation_error", str(exc))
+D:\openwebui\core\x87_worker_dispatcher.py:251:                x97e_task_for_route = {"task": task, "x96_plan": 
+x97e_plan_context} if x97e_plan_context else task
+D:\openwebui\core\x87_worker_dispatcher.py:252:                next_role = 
+self._x97b2_resolve_next_role(x97e_task_for_route, to_role, result)
+D:\openwebui\core\x87_worker_dispatcher.py:253:        if result["ok"] and next_role:
+D:\openwebui\core\x87_worker_dispatcher.py:254:            sent = self.bus.send(to_role, next_role, task, 
+result["output_payload"])
+D:\openwebui\core\x87_worker_dispatcher.py:255:            result["routed_to"] = next_role
+D:\openwebui\core\x87_worker_dispatcher.py:291:    # X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION: planner-aware first 
+bus message
+D:\openwebui\core\x87_worker_dispatcher.py:292:    def seed(self, task: str, x96_plan=None) -> Dict[str, Any]:
+D:\openwebui\core\x87_worker_dispatcher.py:296:        - if x96_plan.steps[] is valid, queue the first planned role, 
+normally SCOUT
+D:\openwebui\core\x87_worker_dispatcher.py:297:        - attach x96_plan to the first payload so downstream routing 
+can stay planner-driven
+D:\openwebui\core\x87_worker_dispatcher.py:307:            if isinstance(x96_plan, dict):
+D:\openwebui\core\x87_worker_dispatcher.py:308:                steps = x96_plan.get("steps") or []
+D:\openwebui\core\x87_worker_dispatcher.py:316:                    payload["x96_plan"] = x96_plan
+D:\openwebui\core\x87_worker_dispatcher.py:317:                    payload["x97e_seed_mode"] = "planner_first"
+D:\openwebui\core\x87_worker_dispatcher.py:318:                    payload["x97e_first_role"] = to_role
+D:\openwebui\core\x87_worker_dispatcher.py:320:            payload["x97e_seed_error"] = str(exc)
+D:\openwebui\core\x87_worker_dispatcher.py:322:        sent = self.bus.send(from_role, to_role, task, payload)
+D:\openwebui\core\x87_worker_dispatcher.py:323:        return {"ok": True, "seed_message": sent.get("id"), "task": 
+task, "seeded_to": to_role, "x97e_seed_mode": payload.get("x97e_seed_mode", "fallback_route_next")}
+
+
+
+
+===== COMPILE EXIT CODE =====
+1
+
+===== COMPILE LOG =====
+python : Sorry: IndentationError: unexpected indent (x87_worker_dispatcher.py, line 238)
+At D:\openwebui\_patch_inbox\x97e3_x87_compile_audit_scan\apply_x97e3_x87_compile_audit_scan.ps1:32 char:3
++   python -m py_compile $Target *> $CompileLog
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Sorry: Indentat...r.py, line 238):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+[END] X97E3 source audit
+
+===== CHECK COMPILE EXIT CODE =====
+1
+
+===== CHECK COMPILE LOG =====
+python : Sorry: IndentationError: unexpected indent (x87_worker_dispatcher.py, line 238)
+At D:\openwebui\_patch_inbox\x97e3_x87_compile_audit_scan\x97e3_x87_compile_audit_scan_check.ps1:17 char:3
++   python -m py_compile $Target *> (Join-Path $Temp "x97e3_check_compi ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Sorry: Indentat...r.py, line 238):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

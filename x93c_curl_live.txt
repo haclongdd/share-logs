@@ -1,0 +1,61 @@
+﻿curl.exe : * Host localhost:5000 was resolved.
+At line:1 char:1
++ curl.exe -v --max-time 20 http://localhost:5000/add_task `
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (* Host localhost:5000 was resolved.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+* IPv6: ::1
+* IPv4: 127.0.0.1
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0*   Trying [::1]:5000...
+* Established connection to localhost (::1 port 5000) from ::1 port 49823 
+* using HTTP/1.x
+> POST /add_task HTTP/1.1
+
+> Host: localhost:5000
+
+> User-Agent: curl/8.19.0
+
+> Accept: */*
+
+> Content-Type: application/json
+
+> Content-Length: 2
+
+> 
+
+} [2 bytes data]
+* upload completely sent off: 2 bytes
+
+100      2   0      0 100      2      0    363                              0
+100      2   0      0 100      2      0    340                              0* Empty reply from server
+
+100      2   0      0 100      2      0    324                              0
+* shutting down connection #0
+curl: (52) Empty reply from server
+* URL rejected: Port number was not a decimal number between 0 and 65535
+curl: (3) URL rejected: Port number was not a decimal number between 0 and 65535
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0           00:01              0
+  0      0   0      0   0      0      0      0           00:02              0* Could not resolve host: curl
+* Store negative name resolve for curl:80
+* shutting down connection #1
+curl: (6) Could not resolve host: curl
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+  0      0   0      0   0      0      0      0           00:01              0
+  0      0   0      0   0      0      0      0           00:02              0* Could not resolve host: live
+* Store negative name resolve for live:80
+* shutting down connection #2
+curl: (6) Could not resolve host: live
+* URL rejected: Bad hostname
+curl: (3) URL rejected: Bad hostname
+

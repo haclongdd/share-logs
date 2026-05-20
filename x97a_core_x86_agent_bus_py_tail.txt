@@ -1,0 +1,242 @@
+﻿#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""X86 Inter-Agent Task Bus for AI Local OS."""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import time
+import uuid
+from dataclasses import asdict, dataclass
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+ROOT = Path(os.environ.get("AI_LOCAL_OS_ROOT", r"D:\openwebui"))
+RUNTIME_DIR = ROOT / "runtime"
+BUS_DIR = RUNTIME_DIR / "x86_agent_bus"
+MESSAGES_DIR = BUS_DIR / "messages"
+REPORT_DIR = RUNTIME_DIR / "reports"
+STATE_FILE = BUS_DIR / "state.json"
+
+ROLES = ("SCOUT", "DEBUG", "PATCHER", "VERIFY", "REPORT")
+ALLOWED_TRANSITIONS = {
+    "SCOUT": ["DEBUG", "REPORT"],
+    "DEBUG": ["PATCHER", "VERIFY", "REPORT"],
+    "PATCHER": ["VERIFY", "REPORT"],
+    "VERIFY": ["REPORT"],
+    "REPORT": [],
+}
+
+
+def utc_stamp() -> str:
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+def now_ms() -> int:
+    return int(time.time() * 1000)
+
+
+def safe_write_json(path: Path, data: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+
+def load_json(path: Path, default: Dict[str, Any]) -> Dict[str, Any]:
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return {**default, "load_warning": f"Failed to load {path}: {exc}"}
+
+
+@dataclass
+class BusMessage:
+    id: str
+    ts: str
+    from_role: str
+    to_role: str
+    task: str
+    payload: Dict[str, Any]
+    status: str = "queued"
+
+
+class AgentBus:
+    def __init__(self) -> None:
+        BUS_DIR.mkdir(parents=True, exist_ok=True)
+        MESSAGES_DIR.mkdir(parents=True, exist_ok=True)
+        REPORT_DIR.mkdir(parents=True, exist_ok=True)
+        self.state = load_json(STATE_FILE, {
+            "release": "X86_AGENT_BUS",
+            "created_at": utc_stamp(),
+            "messages_total": 0,
+            "last_message": None,
+            "last_error": None,
+        })
+
+    def save(self) -> None:
+        safe_write_json(STATE_FILE, self.state)
+
+    def message_path(self, message_id: str) -> Path:
+        return MESSAGES_DIR / f"{message_id}.json"
+
+    def validate_role(self, role: str) -> str:
+        role = role.upper().strip()
+        if role not in ROLES:
+            raise ValueError(f"invalid role {role}; allowed={', '.join(ROLES)}")
+        return role
+
+    def validate_transition(self, from_role: str, to_role: str) -> None:
+        allowed = ALLOWED_TRANSITIONS.get(from_role, [])
+        if to_role not in allowed:
+            raise ValueError(f"invalid transition {from_role}->{to_role}; allowed={allowed}")
+
+    def send(self, from_role: str, to_role: str, task: str, payload: Optional[Dict[str, Any]] = None) -> BusMessage:
+        from_role = self.validate_role(from_role)
+        to_role = self.validate_role(to_role)
+        self.validate_transition(from_role, to_role)
+        message = BusMessage(
+            id=f"x86_{now_ms()}_{uuid.uuid4().hex[:8]}",
+            ts=utc_stamp(),
+            from_role=from_role,
+            to_role=to_role,
+            task=task,
+            payload=payload or {},
+        )
+        data = asdict(message)
+        safe_write_json(self.message_path(message.id), data)
+        self.state["messages_total"] = int(self.state.get("messages_total", 0)) + 1
+        self.state["last_message"] = data
+        self.state["last_error"] = None
+        self.save()
+        return message
+
+    def list_messages(self, status: Optional[str] = None) -> List[Dict[str, Any]]:
+        rows = []
+        for path in sorted(MESSAGES_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime):
+            item = load_json(path, {})
+            if status and item.get("status") != status:
+                continue
+            rows.append(item)
+        return rows
+
+    def consume(self, role: str, limit: int = 10) -> List[Dict[str, Any]]:
+        role = self.validate_role(role)
+        consumed = []
+        for item in self.list_messages(status="queued"):
+            if item.get("to_role") != role:
+                continue
+            item["status"] = "consumed"
+            item["consumed_at"] = utc_stamp()
+            safe_write_json(self.message_path(item["id"]), item)
+            consumed.append(item)
+            if len(consumed) >= limit:
+                break
+        self.state["last_consume"] = {"role": role, "count": len(consumed), "ts": utc_stamp()}
+        self.save()
+        return consumed
+
+    def demo_chain(self, task: str) -> Dict[str, Any]:
+        sent = []
+        sent.append(asdict(self.send("SCOUT", "DEBUG", task, {"finding": "project/context collected"})))
+        sent.append(asdict(self.send("DEBUG", "PATCHER", task, {"root_cause": "confirmed by real log", "evidence": "runtime/temp/*.txt"})))
+        sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
+        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "pass"})))
+        report = {
+            "ok": True,
+            "release": "X86_AGENT_BUS",
+            "task": task,
+            "sent": sent,
+            "state_file": str(STATE_FILE),
+            "messages_dir": str(MESSAGES_DIR),
+        }
+        out = REPORT_DIR / f"x86_agent_bus_report_{now_ms()}.json"
+        safe_write_json(out, report)
+        report["report_file"] = str(out)
+        return report
+
+    def status(self) -> Dict[str, Any]:
+        messages = self.list_messages()
+        return {
+            "ok": True,
+            "release": "X86_AGENT_BUS",
+            "state_file": str(STATE_FILE),
+            "messages_dir": str(MESSAGES_DIR),
+            "messages_total_files": len(messages),
+            "state": self.state,
+            "roles": list(ROLES),
+            "transitions": ALLOWED_TRANSITIONS,
+        }
+
+
+def parse_payload(raw: str) -> Dict[str, Any]:
+    if not raw:
+        return {}
+    try:
+        data = json.loads(raw)
+        if not isinstance(data, dict):
+            raise ValueError("payload JSON must be object")
+        return data
+    except Exception as exc:
+        raise SystemExit(f"invalid --payload JSON: {exc}")
+
+
+def cli() -> int:
+    parser = argparse.ArgumentParser(description="X86 inter-agent task bus")
+    sub = parser.add_subparsers(dest="cmd")
+
+    p_send = sub.add_parser("send")
+    p_send.add_argument("--from-role", required=True)
+    p_send.add_argument("--to-role", required=True)
+    p_send.add_argument("--task", required=True)
+    p_send.add_argument("--payload", default="{}")
+
+    p_consume = sub.add_parser("consume")
+    p_consume.add_argument("--role", required=True)
+    p_consume.add_argument("--limit", type=int, default=10)
+
+    p_list = sub.add_parser("list")
+    p_list.add_argument("--status", default=None)
+
+    p_demo = sub.add_parser("demo-chain")
+    p_demo.add_argument("--task", default="x86 bus smoke")
+
+    sub.add_parser("status")
+
+    args = parser.parse_args()
+    bus = AgentBus()
+
+    if args.cmd == "send":
+        msg = bus.send(args.from_role, args.to_role, args.task, parse_payload(args.payload))
+        print(json.dumps({"ok": True, "message": asdict(msg)}, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "consume":
+        rows = bus.consume(args.role, args.limit)
+        print(json.dumps({"ok": True, "role": args.role.upper(), "count": len(rows), "messages": rows}, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "list":
+        rows = bus.list_messages(args.status)
+        print(json.dumps({"ok": True, "count": len(rows), "messages": rows}, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "demo-chain":
+        report = bus.demo_chain(args.task)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "status":
+        print(json.dumps(bus.status(), ensure_ascii=False, indent=2))
+        return 0
+
+    parser.print_help()
+    return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(cli())
+

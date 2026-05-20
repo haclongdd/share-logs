@@ -1,0 +1,212 @@
+﻿#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import shutil
+import time
+from pathlib import Path
+from typing import Any, Dict, List
+
+ROOT = Path(os.environ.get("AI_LOCAL_OS_ROOT", r"D:\openwebui"))
+CORE_DIR = ROOT / "core"
+RUNTIME_DIR = ROOT / "runtime"
+REPORT_DIR = RUNTIME_DIR / "reports"
+STATE_DIR = RUNTIME_DIR / "x91_master_ai_addtask_bridge"
+STATE_FILE = STATE_DIR / "state.json"
+BACKUP_DIR = ROOT / "_backups" / "x91_master_ai_addtask_bridge"
+ADAPTER_FILE = CORE_DIR / "x91_addtask_bridge_adapter.py"
+MARKER_START = "# X91_MASTER_AI_ADDTASK_BRIDGE_START"
+MARKER_END = "# X91_MASTER_AI_ADDTASK_BRIDGE_END"
+
+
+def now_ms() -> int:
+    return int(time.time() * 1000)
+
+
+def utc_stamp() -> str:
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+def safe_write_json(path: Path, data: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+
+def load_json(path: Path, default: Dict[str, Any]) -> Dict[str, Any]:
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return {**default, "load_warning": "failed to load %s: %r" % (path, exc)}
+
+
+def candidate_files() -> List[Path]:
+    found = []
+    ignored = {"_patch_inbox", "_backups", "runtime", ".git", "__pycache__", "node_modules"}
+    for path in ROOT.rglob("*.py"):
+        parts = set(p.lower() for p in path.parts)
+        if parts & ignored:
+            continue
+        try:
+            text = path.read_text(encoding="utf-8", errors="replace")
+        except Exception:
+            continue
+        lowered = text.lower()
+        if "add_task" in lowered or "/add_task" in lowered or "add-task" in lowered:
+            found.append(path)
+    return sorted(set(found), key=lambda p: str(p).lower())
+
+
+def inspect_file(path: Path) -> Dict[str, Any]:
+    text = path.read_text(encoding="utf-8", errors="replace")
+    lines = text.splitlines()
+    hits = []
+    for i, line in enumerate(lines, start=1):
+        lower = line.lower()
+        if "add_task" in lower or "/add_task" in lower or "add-task" in lower:
+            hits.append({"line": i, "text": line[:240]})
+    return {
+        "path": str(path),
+        "hits": hits[:20],
+        "hit_count": len(hits),
+        "has_flask": "@app.route" in text or "Flask(" in text,
+        "has_fastapi": "FastAPI(" in text or "@app.post" in text or "@router.post" in text,
+        "already_attached": MARKER_START in text,
+    }
+
+
+class X91Attach:
+    def __init__(self) -> None:
+        STATE_DIR.mkdir(parents=True, exist_ok=True)
+        REPORT_DIR.mkdir(parents=True, exist_ok=True)
+        BACKUP_DIR.mkdir(parents=True, exist_ok=True)
+        self.state = load_json(STATE_FILE, {
+            "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+            "created_at": utc_stamp(),
+            "last_scan": None,
+            "last_attach": None,
+            "last_error": None,
+        })
+
+    def save(self) -> None:
+        safe_write_json(STATE_FILE, self.state)
+
+    def scan(self) -> Dict[str, Any]:
+        items = [inspect_file(p) for p in candidate_files()]
+        result = {
+            "ok": True,
+            "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+            "candidate_count": len(items),
+            "candidates": items,
+            "adapter_file": str(ADAPTER_FILE),
+            "adapter_exists": ADAPTER_FILE.exists(),
+        }
+        self.state["last_scan"] = result
+        self.save()
+        out = REPORT_DIR / ("x91_master_ai_addtask_scan_%d.json" % now_ms())
+        safe_write_json(out, result)
+        result["report_file"] = str(out)
+        return result
+
+    def attach_marker(self, target: str = "") -> Dict[str, Any]:
+        scan = self.scan()
+        candidates = [Path(x["path"]) for x in scan["candidates"] if not x.get("already_attached")]
+
+        if target:
+            target_path = Path(target)
+            if not target_path.exists():
+                return self.fail("target not found: %s" % target, scan)
+        else:
+            if len(candidates) != 1:
+                return self.fail("need exactly 1 attach candidate, found %d; rerun with --target" % len(candidates), scan)
+            target_path = candidates[0]
+
+        text = target_path.read_text(encoding="utf-8", errors="replace")
+        if MARKER_START in text:
+            return {"ok": True, "release": "X91_MASTER_AI_ADDTASK_BRIDGE", "stage": "already_attached", "target": str(target_path)}
+
+        backup = BACKUP_DIR / ("%s.%d.bak" % (target_path.name, now_ms()))
+        shutil.copy2(target_path, backup)
+
+        injection = (
+            "\n" + MARKER_START + "\n"
+            "# Safe adapter marker only. Route body is NOT rewritten blindly.\n"
+            "# To route /add_task into agent runtime, call:\n"
+            "#   from core.x91_addtask_bridge_adapter import handle_add_task_payload\n"
+            "#   result = handle_add_task_payload(payload)\n"
+            + MARKER_END + "\n"
+        )
+
+        target_path.write_text(text.rstrip() + injection, encoding="utf-8", newline="\n")
+
+        result = {
+            "ok": True,
+            "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+            "stage": "adapter_marker_attached",
+            "target": str(target_path),
+            "backup": str(backup),
+            "note": "Marker only; no route-body rewrite.",
+            "scan": scan,
+        }
+        self.state["last_attach"] = result
+        self.save()
+        out = REPORT_DIR / ("x91_master_ai_addtask_attach_%d.json" % now_ms())
+        safe_write_json(out, result)
+        result["report_file"] = str(out)
+        return result
+
+    def fail(self, message: str, scan: Dict[str, Any]) -> Dict[str, Any]:
+        result = {"ok": False, "release": "X91_MASTER_AI_ADDTASK_BRIDGE", "error": message, "scan": scan}
+        self.state["last_error"] = result
+        self.save()
+        out = REPORT_DIR / ("x91_master_ai_addtask_fail_%d.json" % now_ms())
+        safe_write_json(out, result)
+        result["report_file"] = str(out)
+        return result
+
+    def status(self) -> Dict[str, Any]:
+        return {
+            "ok": True,
+            "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+            "state_file": str(STATE_FILE),
+            "adapter_file": str(ADAPTER_FILE),
+            "adapter_exists": ADAPTER_FILE.exists(),
+            "state": self.state,
+        }
+
+
+def cli() -> int:
+    parser = argparse.ArgumentParser(description="X91 safe master_ai /add_task attach helper")
+    sub = parser.add_subparsers(dest="cmd")
+    sub.add_parser("scan")
+    p_attach = sub.add_parser("attach-marker")
+    p_attach.add_argument("--target", default="")
+    sub.add_parser("status")
+
+    args = parser.parse_args()
+    runtime = X91Attach()
+
+    if args.cmd == "scan":
+        print(json.dumps(runtime.scan(), ensure_ascii=False, indent=2))
+        return 0
+    if args.cmd == "attach-marker":
+        result = runtime.attach_marker(target=args.target)
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0 if result.get("ok") else 1
+    if args.cmd == "status":
+        print(json.dumps(runtime.status(), ensure_ascii=False, indent=2))
+        return 0
+
+    parser.print_help()
+    return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(cli())
+

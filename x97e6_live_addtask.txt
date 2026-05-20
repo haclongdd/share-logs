@@ -1,0 +1,64 @@
+﻿{
+    "bridge":  "x90_webui_agent_bridge",
+    "debug":  {
+                  "normalized_at":  "2026-05-20T18:40:24.163280+00:00",
+                  "normalized_by":  "X93_WEBUI_RESPONSE_NORMALIZER",
+                  "raw":  {
+                              "bridge":  "x90_webui_agent_bridge",
+                              "normalized":  {
+                                                 "mode":  "agent",
+                                                 "payload":  {
+
+                                                             },
+                                                 "task":  "x97e6 live verify after bus contract repair"
+                                             },
+                              "ok":  false,
+                              "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779302424150.json",
+                              "ts":  "2026-05-20T18:40:24Z",
+                              "x90_response":  {
+                                                   "dependency_status":  {
+                                                                             "x86":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x86_agent_bus.py"
+                                                                                     },
+                                                                             "x87":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x87_worker_dispatcher.py"
+                                                                                     },
+                                                                             "x88":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x88_persistent_scheduler.py"
+                                                                                     },
+                                                                             "x89":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x89_sandbox_workers.py"
+                                                                                     }
+                                                                         },
+                                                   "error":  "AttributeError(\"\u0027BusMessage\u0027 object has no attribute \u0027get\u0027\")",
+                                                   "mode":  "agent",
+                                                   "ok":  false,
+                                                   "release":  "X90_WEBUI_AGENT_BRIDGE",
+                                                   "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779302424102.json",
+                                                   "request_id":  "x90req_1779302423910_716913b4",
+                                                   "task":  "x97e6 live verify after bus contract repair",
+                                                   "ts":  "2026-05-20T18:40:24Z"
+                                               }
+                          },
+                  "x90":  {
+                              "bridge":  null,
+                              "ok":  false,
+                              "release":  "X90_WEBUI_AGENT_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779302424102.json",
+                              "request_id":  "x90req_1779302423910_716913b4"
+                          }
+              },
+    "ok":  false,
+    "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+    "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779302424150.json",
+    "result":  null,
+    "summary":  "failed | task=x97e6 live verify after bus contract repair | report=/app/runtime/reports/x91_addtask_bridge_response_1779302424150.json",
+    "task":  "x97e6 live verify after bus contract repair",
+    "ts":  "2026-05-20T18:40:24Z"
+}
+

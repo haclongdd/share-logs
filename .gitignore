@@ -1,0 +1,7 @@
+﻿# X99B sanitized log sync repo
+*
+!README.md
+!*.txt
+!*.log
+!*.json
+!.gitignore

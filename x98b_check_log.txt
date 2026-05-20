@@ -1,0 +1,3 @@
+﻿[START] X98B packaging contract check
+[2026-05-21 01:00:11] Guard exists: D:\openwebui\core\x98b_patch_contract_guard.py
+

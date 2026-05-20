@@ -1,0 +1,6 @@
+﻿[2026-05-21 01:06:45] [START] X97E planner seed and payload propagation check
+[2026-05-21 01:06:45] Marker OK x87: X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION
+[2026-05-21 01:06:45] Marker OK x87: def seed(self, task: str, x96_plan=None)
+[2026-05-21 01:06:45] Marker OK x87: self.bus.send(from_role, to_role, task, payload)
+[2026-05-21 01:06:45] Marker OK x87: x97e_task_for_route
+

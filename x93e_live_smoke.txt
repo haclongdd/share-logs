@@ -1,0 +1,298 @@
+﻿{
+    "bridge":  "x90_webui_agent_bridge",
+    "debug":  {
+                  "normalized_at":  "2026-05-20T15:22:13.707755+00:00",
+                  "normalized_by":  "X93_WEBUI_RESPONSE_NORMALIZER",
+                  "raw":  {
+                              "bridge":  "x90_webui_agent_bridge",
+                              "normalized":  {
+                                                 "mode":  "agent",
+                                                 "payload":  {
+
+                                                             },
+                                                 "task":  "x93e checkpoint freeze smoke"
+                                             },
+                              "ok":  true,
+                              "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779290533692.json",
+                              "ts":  "2026-05-20T15:22:13Z",
+                              "x90_response":  {
+                                                   "mode":  "agent",
+                                                   "ok":  true,
+                                                   "release":  "X90_WEBUI_AGENT_BRIDGE",
+                                                   "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779290533639.json",
+                                                   "request_id":  "x90req_1779290525886_9c392e7b",
+                                                   "result":  {
+                                                                  "cycles":  [
+                                                                                 {
+                                                                                     "ok":  true,
+                                                                                     "processed":  [
+                                                                                                       {
+                                                                                                           "handled_at":  "2026-05-20T15:22:06Z",
+                                                                                                           "input_payload":  {
+                                                                                                                                 "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                                                                 "finding":  "seeded by X87B dispatcher"
+                                                                                                                             },
+                                                                                                           "message_id":  "x86_1779290525992_19a59522",
+                                                                                                           "ok":  true,
+                                                                                                           "output_payload":  {
+                                                                                                                                  "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                                                                  "root_cause":  "pending_real_log_review",
+                                                                                                                                  "source_message":  "x86_1779290525992_19a59522"
+                                                                                                                              },
+                                                                                                           "role":  "DEBUG",
+                                                                                                           "routed_message_id":  "x86_1779290526489_04c30b75",
+                                                                                                           "routed_to":  "PATCHER",
+                                                                                                           "summary":  "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+                                                                                                           "task":  "x93e checkpoint freeze smoke"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "handled_at":  "2026-05-20T15:22:06Z",
+                                                                                                           "input_payload":  {
+                                                                                                                                 "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                                                                 "root_cause":  "pending_real_log_review",
+                                                                                                                                 "source_message":  "x86_1779290525992_19a59522"
+                                                                                                                             },
+                                                                                                           "message_id":  "x86_1779290526489_04c30b75",
+                                                                                                           "ok":  true,
+                                                                                                           "output_payload":  {
+                                                                                                                                  "artifact":  "D:\\openwebui\\_patch_inbox",
+                                                                                                                                  "patch_rule":  "target confirmed cause only",
+                                                                                                                                  "source_message":  "x86_1779290526489_04c30b75"
+                                                                                                                              },
+                                                                                                           "role":  "PATCHER",
+                                                                                                           "routed_message_id":  "x86_1779290526981_c1099d1c",
+                                                                                                           "routed_to":  "VERIFY",
+                                                                                                           "summary":  "PATCHER worker consumed confirmed cause/artifact context.",
+                                                                                                           "task":  "x93e checkpoint freeze smoke"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "handled_at":  "2026-05-20T15:22:07Z",
+                                                                                                           "input_payload":  {
+                                                                                                                                 "artifact":  "D:\\openwebui\\_patch_inbox",
+                                                                                                                                 "patch_rule":  "target confirmed cause only",
+                                                                                                                                 "source_message":  "x86_1779290526489_04c30b75"
+                                                                                                                             },
+                                                                                                           "message_id":  "x86_1779290526981_c1099d1c",
+                                                                                                           "ok":  true,
+                                                                                                           "output_payload":  {
+                                                                                                                                  "source_message":  "x86_1779290526981_c1099d1c",
+                                                                                                                                  "verify":  "pending_x75_check"
+                                                                                                                              },
+                                                                                                           "role":  "VERIFY",
+                                                                                                           "routed_message_id":  "x86_1779290527469_1f374b64",
+                                                                                                           "routed_to":  "REPORT",
+                                                                                                           "summary":  "VERIFY worker consumed artifact and produced verify handoff.",
+                                                                                                           "task":  "x93e checkpoint freeze smoke"
+                                                                                                       },
+                                                                                                       {
+                                                                                                           "handled_at":  "2026-05-20T15:22:07Z",
+                                                                                                           "input_payload":  {
+                                                                                                                                 "source_message":  "x86_1779290526981_c1099d1c",
+                                                                                                                                 "verify":  "pending_x75_check"
+                                                                                                                             },
+                                                                                                           "message_id":  "x86_1779290527469_1f374b64",
+                                                                                                           "ok":  true,
+                                                                                                           "output_payload":  {
+                                                                                                                                  "final":  {
+                                                                                                                                                "source_message":  "x86_1779290526981_c1099d1c",
+                                                                                                                                                "verify":  "pending_x75_check"
+                                                                                                                                            },
+                                                                                                                                  "source_message":  "x86_1779290527469_1f374b64"
+                                                                                                                              },
+                                                                                                           "role":  "REPORT",
+                                                                                                           "routed_to":  null,
+                                                                                                           "summary":  "REPORT worker consumed final verification payload.",
+                                                                                                           "task":  "x93e checkpoint freeze smoke"
+                                                                                                       }
+                                                                                                   ],
+                                                                                     "processed_count":  4,
+                                                                                     "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                                                                     "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290527978.json",
+                                                                                     "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                                                                 },
+                                                                                 {
+                                                                                     "ok":  true,
+                                                                                     "processed":  [
+
+                                                                                                   ],
+                                                                                     "processed_count":  0,
+                                                                                     "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                                                                     "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290529971.json",
+                                                                                     "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                                                                 },
+                                                                                 {
+                                                                                     "ok":  true,
+                                                                                     "processed":  [
+
+                                                                                                   ],
+                                                                                     "processed_count":  0,
+                                                                                     "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                                                                     "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290531776.json",
+                                                                                     "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                                                                 },
+                                                                                 {
+                                                                                     "ok":  true,
+                                                                                     "processed":  [
+
+                                                                                                   ],
+                                                                                     "processed_count":  0,
+                                                                                     "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                                                                     "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290533626.json",
+                                                                                     "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                                                                 }
+                                                                             ],
+                                                                  "flow":  "agent_dispatcher",
+                                                                  "seed":  {
+                                                                               "ok":  true,
+                                                                               "seed_message":  "x86_1779290525992_19a59522",
+                                                                               "task":  "x93e checkpoint freeze smoke"
+                                                                           }
+                                                              },
+                                                   "task":  "x93e checkpoint freeze smoke",
+                                                   "ts":  "2026-05-20T15:22:13Z"
+                                               }
+                          },
+                  "x90":  {
+                              "bridge":  null,
+                              "ok":  true,
+                              "release":  "X90_WEBUI_AGENT_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779290533639.json",
+                              "request_id":  "x90req_1779290525886_9c392e7b"
+                          }
+              },
+    "ok":  true,
+    "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+    "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779290533692.json",
+    "result":  {
+                   "cycles":  [
+                                  {
+                                      "ok":  true,
+                                      "processed":  [
+                                                        {
+                                                            "handled_at":  "2026-05-20T15:22:06Z",
+                                                            "input_payload":  {
+                                                                                  "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                  "finding":  "seeded by X87B dispatcher"
+                                                                              },
+                                                            "message_id":  "x86_1779290525992_19a59522",
+                                                            "ok":  true,
+                                                            "output_payload":  {
+                                                                                   "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                   "root_cause":  "pending_real_log_review",
+                                                                                   "source_message":  "x86_1779290525992_19a59522"
+                                                                               },
+                                                            "role":  "DEBUG",
+                                                            "routed_message_id":  "x86_1779290526489_04c30b75",
+                                                            "routed_to":  "PATCHER",
+                                                            "summary":  "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+                                                            "task":  "x93e checkpoint freeze smoke"
+                                                        },
+                                                        {
+                                                            "handled_at":  "2026-05-20T15:22:06Z",
+                                                            "input_payload":  {
+                                                                                  "evidence":  "D:\\openwebui\\runtime\\temp",
+                                                                                  "root_cause":  "pending_real_log_review",
+                                                                                  "source_message":  "x86_1779290525992_19a59522"
+                                                                              },
+                                                            "message_id":  "x86_1779290526489_04c30b75",
+                                                            "ok":  true,
+                                                            "output_payload":  {
+                                                                                   "artifact":  "D:\\openwebui\\_patch_inbox",
+                                                                                   "patch_rule":  "target confirmed cause only",
+                                                                                   "source_message":  "x86_1779290526489_04c30b75"
+                                                                               },
+                                                            "role":  "PATCHER",
+                                                            "routed_message_id":  "x86_1779290526981_c1099d1c",
+                                                            "routed_to":  "VERIFY",
+                                                            "summary":  "PATCHER worker consumed confirmed cause/artifact context.",
+                                                            "task":  "x93e checkpoint freeze smoke"
+                                                        },
+                                                        {
+                                                            "handled_at":  "2026-05-20T15:22:07Z",
+                                                            "input_payload":  {
+                                                                                  "artifact":  "D:\\openwebui\\_patch_inbox",
+                                                                                  "patch_rule":  "target confirmed cause only",
+                                                                                  "source_message":  "x86_1779290526489_04c30b75"
+                                                                              },
+                                                            "message_id":  "x86_1779290526981_c1099d1c",
+                                                            "ok":  true,
+                                                            "output_payload":  {
+                                                                                   "source_message":  "x86_1779290526981_c1099d1c",
+                                                                                   "verify":  "pending_x75_check"
+                                                                               },
+                                                            "role":  "VERIFY",
+                                                            "routed_message_id":  "x86_1779290527469_1f374b64",
+                                                            "routed_to":  "REPORT",
+                                                            "summary":  "VERIFY worker consumed artifact and produced verify handoff.",
+                                                            "task":  "x93e checkpoint freeze smoke"
+                                                        },
+                                                        {
+                                                            "handled_at":  "2026-05-20T15:22:07Z",
+                                                            "input_payload":  {
+                                                                                  "source_message":  "x86_1779290526981_c1099d1c",
+                                                                                  "verify":  "pending_x75_check"
+                                                                              },
+                                                            "message_id":  "x86_1779290527469_1f374b64",
+                                                            "ok":  true,
+                                                            "output_payload":  {
+                                                                                   "final":  {
+                                                                                                 "source_message":  "x86_1779290526981_c1099d1c",
+                                                                                                 "verify":  "pending_x75_check"
+                                                                                             },
+                                                                                   "source_message":  "x86_1779290527469_1f374b64"
+                                                                               },
+                                                            "role":  "REPORT",
+                                                            "routed_to":  null,
+                                                            "summary":  "REPORT worker consumed final verification payload.",
+                                                            "task":  "x93e checkpoint freeze smoke"
+                                                        }
+                                                    ],
+                                      "processed_count":  4,
+                                      "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                      "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290527978.json",
+                                      "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                  },
+                                  {
+                                      "ok":  true,
+                                      "processed":  [
+
+                                                    ],
+                                      "processed_count":  0,
+                                      "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                      "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290529971.json",
+                                      "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                  },
+                                  {
+                                      "ok":  true,
+                                      "processed":  [
+
+                                                    ],
+                                      "processed_count":  0,
+                                      "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                      "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290531776.json",
+                                      "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                  },
+                                  {
+                                      "ok":  true,
+                                      "processed":  [
+
+                                                    ],
+                                      "processed_count":  0,
+                                      "release":  "X87B_WORKER_DISPATCHER_IMPORTFIX",
+                                      "report_file":  "/app/runtime/reports/x87b_worker_dispatcher_report_1779290533626.json",
+                                      "state_file":  "/app/runtime/x87_worker_dispatcher/state.json"
+                                  }
+                              ],
+                   "flow":  "agent_dispatcher",
+                   "seed":  {
+                                "ok":  true,
+                                "seed_message":  "x86_1779290525992_19a59522",
+                                "task":  "x93e checkpoint freeze smoke"
+                            }
+               },
+    "summary":  "accepted | task=x93e checkpoint freeze smoke | report=/app/runtime/reports/x91_addtask_bridge_response_1779290533692.json",
+    "task":  "x93e checkpoint freeze smoke",
+    "ts":  "2026-05-20T15:22:13Z"
+}
+

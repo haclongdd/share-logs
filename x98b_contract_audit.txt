@@ -1,0 +1,1830 @@
+﻿[
+    {
+        "patch":  "ai_local_os_autonomous_coder_v1_1_fix_pack",
+        "apply":  "apply_ai_local_os_autonomous_coder_v1_1_fix_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_autonomous_coder_v1_pack",
+        "apply":  "apply_ai_local_os_autonomous_coder_v1_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_auto_exec_filter_v104",
+        "apply":  "apply_ai_local_os_auto_exec_filter_v104.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "ai_local_os_pretty_output_filter_v105",
+        "apply":  "apply_ai_local_os_pretty_output_filter_v105.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "ai_local_os_real_use_v1_project_readme_pack",
+        "apply":  "apply_ai_local_os_real_use_v1_project_readme_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_real_use_v2_project_health_audit_pack",
+        "apply":  "apply_ai_local_os_real_use_v2_project_health_audit_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_real_use_v3_safe_repo_tools_pack",
+        "apply":  "apply_ai_local_os_real_use_v3_safe_repo_tools_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_real_use_v4_safe_config_sanitizer_pack",
+        "apply":  "apply_ai_local_os_real_use_v4_safe_config_sanitizer_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_real_use_v5_safe_run_launcher_pack",
+        "apply":  "apply_ai_local_os_real_use_v5_safe_run_launcher_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_real_use_v6_live_status_query_pack",
+        "apply":  "apply_ai_local_os_real_use_v6_live_status_query_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_real_use_v7_webui_command_router_pack",
+        "apply":  "apply_ai_local_os_real_use_v7_webui_command_router_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_real_use_v8_action_router_pack",
+        "apply":  "apply_ai_local_os_real_use_v8_action_router_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "ai_local_os_real_use_v9_natural_command_api_pack",
+        "apply":  "apply_ai_local_os_real_use_v9_natural_command_api_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "webui_add_task_bridge_v1",
+        "apply":  "apply_webui_add_task_bridge_v1.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "webui_add_task_bridge_v1_1",
+        "apply":  "apply_webui_add_task_bridge_v1_1.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "webui_add_task_bridge_v1_2",
+        "apply":  "apply_webui_add_task_bridge_v1_2.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "webui_add_task_bridge_v1_3",
+        "apply":  "apply_webui_add_task_bridge_v1_3.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "webui_execute_master_ai_binding_v1",
+        "apply":  "apply_webui_execute_master_ai_binding_v1.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "webui_flow_audit_and_bind_fix_v1",
+        "apply":  "apply_webui_flow_audit_and_bind_fix_v1.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "webui_flow_audit_and_bind_fix_v1_1",
+        "apply":  "apply_webui_flow_audit_and_bind_fix_v1_1.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "webui_force_execute_master_ai_tool_v1",
+        "apply":  "apply_webui_force_execute_master_ai_tool_v1.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x12p_add_task_payload_parse_fix",
+        "apply":  "apply_x12p_add_task_payload_parse_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x12q_webui_bridge_reconnect",
+        "apply":  "apply_x12q_webui_bridge_reconnect.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x12r_webui_bridge_e2e_smoke",
+        "apply":  "apply_x12r_webui_bridge_e2e_smoke.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x12s_cleanup_patch_test_junk",
+        "apply":  "apply_x12s_cleanup_patch_test_junk.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x12u_stable_checkpoint_pack",
+        "apply":  "apply_x12u_stable_checkpoint_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x12v_hard_audit_state",
+        "apply":  "apply_x12v_hard_audit_state.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x12w_consolidate_patch_inbox",
+        "apply":  "apply_x12w_consolidate_patch_inbox.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x12x1_tools_manifest_marker_hotfix",
+        "apply":  "apply_x12x1_tools_manifest_marker_hotfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x12x_tools_layer_consolidation",
+        "apply":  "apply_x12x_tools_layer_consolidation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x12y_runtime_artifact_hygiene",
+        "apply":  "apply_x12y_runtime_artifact_hygiene.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x13a_planner_check_hotfix",
+        "apply":  "apply_x13a_planner_check_hotfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13b_planner_import_repair",
+        "apply":  "apply_x13b_planner_import_repair.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13c_planner_planfile_check_fix",
+        "apply":  "apply_x13c_planner_planfile_check_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13d_plan_executor",
+        "apply":  "apply_x13d_plan_executor.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13e1_native_binder_writefix",
+        "apply":  "apply_x13e1_native_binder_writefix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13e2_native_binder_final_repair",
+        "apply":  "apply_x13e2_native_binder_final_repair.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13e_native_step_binder",
+        "apply":  "apply_x13e_native_step_binder.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13f_execution_memory_retry_pack",
+        "apply":  "apply_x13f_execution_memory_retry.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13g_execution_report_bridge_pack",
+        "apply":  "apply_x13g_execution_report_bridge.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13h_runtime_status_api_pack",
+        "apply":  "apply_x13h_runtime_status_api.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13i_autonomous_runtime_supervisor_pack",
+        "apply":  "apply_x13i_autonomous_runtime_supervisor.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13j_persistent_queue_resume_pack",
+        "apply":  "apply_x13j_persistent_queue_resume.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x13k_to_x13n_autonomous_runtime_pack",
+        "apply":  "apply_x13k_to_x13n_autonomous_runtime_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13o_autonomous_runtime_hardening_pack",
+        "apply":  "apply_x13o_autonomous_runtime_hardening_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13p_restore_x13i_x13j_dependency_pack",
+        "apply":  "apply_x13p_restore_x13i_x13j_dependency_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13q_integration_smoke_selftest_pack",
+        "apply":  "apply_x13q_integration_smoke_selftest_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x13r_to_x13u_autonomous_expansion_pack",
+        "apply":  "apply_x13r_to_x13u_autonomous_expansion_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x13v_real_execution_test_harness_pack",
+        "apply":  "apply_x13v_real_execution_test_harness_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13w_real_task_runner_bridge_pack",
+        "apply":  "apply_x13w_real_task_runner_bridge_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13x2_webui_api_handoff_quote_safe_pack",
+        "apply":  "apply_x13x2_webui_api_handoff_quote_safe_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13x_webui_api_handoff_validator_pack",
+        "apply":  "apply_x13x_webui_api_handoff_validator_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13y_live_api_endpoint_shim_pack",
+        "apply":  "apply_x13y_live_api_endpoint_shim_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x13_consolidated_planner_agent",
+        "apply":  "apply_x13_consolidated_planner_agent.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x14a1_check_header_fix",
+        "apply":  "apply_x14a1_check_header_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x14a2_install_orchestrator_core",
+        "apply":  "apply_x14a2_install_orchestrator_core.ps1",
+        "uses_PSScriptRoot":  true,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x14b_dynamic_project_resolver",
+        "apply":  "apply_x14b_dynamic_project_resolver.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x14c1_windows_check_fix",
+        "apply":  "apply_x14c1_windows_check_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x14c_attach_orchestrator_to_add_task",
+        "apply":  "apply_x14c_attach_orchestrator_to_add_task.ps1",
+        "uses_PSScriptRoot":  true,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x14d1_clean_orchestrator_fix",
+        "apply":  "apply_x14d1_clean_orchestrator_fix.ps1",
+        "uses_PSScriptRoot":  true,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x14d_real_ollama_model_binding",
+        "apply":  "apply_x14d_real_ollama_model_binding.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x14e_memory_context_recall",
+        "apply":  "apply_x14e_memory_context_recall.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x14f_six_agent_workflow",
+        "apply":  "apply_x14f_six_agent_workflow.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x14g_multi_job_parallel_retry",
+        "apply":  "apply_x14g_multi_job_parallel_retry.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x14h_batch_report_merger",
+        "apply":  "apply_x14h_batch_report_merger.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x14_master_orchestrator_loop",
+        "apply":  "apply_x14_master_orchestrator_loop.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x15ab_realtime_webui_dashboard",
+        "apply":  "apply_x15ab_realtime_webui_dashboard.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x15c1_agentcon_taskfile_fix",
+        "apply":  "apply_x15c1_agentcon_taskfile_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x15c_webui_agentcon_status_bridge",
+        "apply":  "apply_x15c_webui_agentcon_status_bridge.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x15d1_check_script_fix",
+        "apply":  "apply_x15d1_check_script_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x15d_webui_addtask_agentcon_attach",
+        "apply":  "apply_x15d_webui_addtask_agentcon_attach.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x16abcdef_safe_debug_capture_fix",
+        "apply":  "apply_x16abcdef_safe_debug_capture_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x16abcde_agentcon_debug_capture",
+        "apply":  "apply_x16abcde_agentcon_debug_capture.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x16abcd_update_task_state_fix",
+        "apply":  "apply_x16abcd_update_task_state_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x16abc_webui_live_test_pack",
+        "apply":  "apply_x16abc_webui_live_test_pack.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x16_realtime_execution_stream",
+        "apply":  "apply_x16_realtime_execution_stream.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x16_rescue_clean_compile_only",
+        "apply":  "apply_x16_rescue_clean_compile_only.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x17_agentcon_isolated_debug",
+        "apply":  "apply_x17_agentcon_isolated_debug.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x18_agentcon_task_schema_normalize",
+        "apply":  "apply_x18_agentcon_task_schema_normalize.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x19_agentcon_execution_trace_bundle",
+        "apply":  "apply_x19_agentcon_execution_trace_bundle.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x20_agentcon_data_scope_fix",
+        "apply":  "apply_x20_agentcon_data_scope_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x21b_agentcon_ollama_localhost_port_verify",
+        "apply":  "apply_x21b_agentcon_ollama_localhost_port_verify.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x21_agentcon_ollama_host_bom_fix",
+        "apply":  "apply_x21_agentcon_ollama_host_bom_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x22_docker_ollama_agentcon_port_publish",
+        "apply":  "apply_x22_docker_ollama_agentcon_port_publish.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x23b_reconnect_ollama_agentcon_network_fix",
+        "apply":  "apply_x23b_reconnect_ollama_agentcon_network_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x23c_reconnect_network_check_fix",
+        "apply":  "apply_x23c_reconnect_network_check_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x23_reconnect_ollama_agentcon_network",
+        "apply":  "apply_x23_reconnect_ollama_agentcon_network.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x24_reconnect_x19_x16_webui_e2e_smoke",
+        "apply":  "apply_x24_reconnect_x19_x16_webui_e2e_smoke.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x25b_x26b_compose_label_check_fix",
+        "apply":  "apply_x25b_x26b_compose_label_check_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x25_x26_compose_ollama_core_import_fix",
+        "apply":  "apply_x25_x26_compose_ollama_core_import_fix.ps1",
+        "uses_PSScriptRoot":  true,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x27_webui_e2e_real_validation",
+        "apply":  "apply_x27_webui_e2e_real_validation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x28_container_path_resolve_agentcon",
+        "apply":  "apply_x28_container_path_resolve_agentcon.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x29b_fix_x15d_check_quote",
+        "apply":  "apply_x29b_fix_x15d_check_quote.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x29_fix_x15d_runtime_root_path",
+        "apply":  "apply_x29_fix_x15d_runtime_root_path.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x30_force_x15d_container_root_fix",
+        "apply":  "apply_x30_force_x15d_container_root_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x32_fix_ollama_probe_http_e2e",
+        "apply":  "apply_x32_fix_ollama_probe_http_e2e.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x33b_repo_cleanup_audit_regex_fix",
+        "apply":  "apply_x33b_repo_cleanup_audit_regex_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x33_repo_cleanup_audit",
+        "apply":  "apply_x33_repo_cleanup_audit.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x34_stale_artifacts_cleanup",
+        "apply":  "apply_x34_stale_artifacts_cleanup.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x35b_verify_layer_parsefix",
+        "apply":  "apply_x35b_verify_layer_parsefix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x35_stable_checkpoint_verify",
+        "apply":  "apply_x35_stable_checkpoint_verify.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x36_phase3_planner_decomposer_minimal",
+        "apply":  "apply_x36_phase3_planner_decomposer_minimal.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x37_phase3_multijob_queue_bridge",
+        "apply":  "apply_x37_phase3_multijob_queue_bridge.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x38b_multijob_runner_bomfix",
+        "apply":  "apply_x38b_multijob_runner_bomfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x38c_multijob_runner_cli_guardfix",
+        "apply":  "apply_x38c_multijob_runner_cli_guardfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x38d_multijob_runner_inspectpath_checkfix",
+        "apply":  "apply_x38d_multijob_runner_inspectpath_checkfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x38e_multijob_runner_bom_lock",
+        "apply":  "apply_x38e_multijob_runner_bom_lock.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x38_phase3_multijob_runner",
+        "apply":  "apply_x38_phase3_multijob_runner.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x39_phase3_report_aggregator",
+        "apply":  "apply_x39_phase3_report_aggregator.ps1",
+        "uses_PSScriptRoot":  true,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x40_phase3_retry_selector",
+        "apply":  "apply_x40_phase3_retry_selector.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x41b_retry_executor_checkfix",
+        "apply":  "apply_x41b_retry_executor_checkfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x41c_retry_executor_verify_checkfix",
+        "apply":  "apply_x41c_retry_executor_verify_checkfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x41d_retry_queue_schemafix",
+        "apply":  "apply_x41d_retry_queue_schemafix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x41e_retry_executor_check_cli_fix",
+        "apply":  "apply_x41e_retry_executor_check_cli_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x41_phase3_retry_executor_loop",
+        "apply":  "apply_x41_phase3_retry_executor_loop.ps1",
+        "uses_PSScriptRoot":  true,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x42_phase3_helper_chain_audit",
+        "apply":  "apply_x42_phase3_helper_chain_audit.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x43b_controlled_integration_cli_jsonfix",
+        "apply":  "apply_x43b_controlled_integration_cli_jsonfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x43_controlled_runtime_integration",
+        "apply":  "apply_x43_controlled_runtime_integration.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x44b_phase3_execute_chain_integration",
+        "apply":  "apply_x44b_phase3_execute_chain_integration.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x44_e2e_webui_multistep_test",
+        "apply":  "apply_x44_e2e_webui_multistep_test.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x45_phase3_stable_release",
+        "apply":  "apply_x45_phase3_stable_release.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x46b_verify_layer_network_correction_fix",
+        "apply":  "apply_x46b_verify_layer_network_correction_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x46c_verify_layer_network_correction_final",
+        "apply":  "apply_x46c_verify_layer_network_correction_final.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x46_verify_layer_network_correction",
+        "apply":  "apply_x46_verify_layer_network_correction.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x47_phase3_stable_final_snapshot",
+        "apply":  "apply_x47_phase3_stable_final_snapshot.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x48b_release_index_expectation_fix",
+        "apply":  "apply_x48b_release_index_expectation_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x48_phase3_release_integrity_index",
+        "apply":  "apply_x48_phase3_release_integrity_index.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x49_phase3_closure_gate",
+        "apply":  "apply_x49_phase3_closure_gate.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x50_phase3_final_seal",
+        "apply":  "apply_x50_phase3_final_seal.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x51_phase4_memory_foundation_gate",
+        "apply":  "apply_x51_phase4_memory_foundation_gate.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x52_phase4_persistent_memory_store",
+        "apply":  "apply_x52_phase4_persistent_memory_store.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x53b_memory_api_compat_fix",
+        "apply":  "apply_x53b_memory_api_compat_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x53_phase4_memory_helper_chain_integration",
+        "apply":  "apply_x53_phase4_memory_helper_chain_integration.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x54_phase4_memory_e2e_seal",
+        "apply":  "apply_x54_phase4_memory_e2e_seal.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x55_phase5_full_local_ai_os_start_gate",
+        "apply":  "apply_x55_phase5_full_local_ai_os_start_gate.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x56_phase5_runtime_monitor_index",
+        "apply":  "apply_x56_phase5_runtime_monitor_index.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x57_phase5_scheduler_plugin_foundation",
+        "apply":  "apply_x57_phase5_scheduler_plugin_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x58_phase5_minimal_stable_seal",
+        "apply":  "apply_x58_phase5_minimal_stable_seal.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x59_full_local_ai_os_consolidated_release",
+        "apply":  "apply_x59_full_local_ai_os_consolidated_release.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x60_autonomous_worker_loop_foundation",
+        "apply":  "apply_x60_autonomous_worker_loop_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x61_safe_shell_sandbox_foundation",
+        "apply":  "apply_x61_safe_shell_sandbox_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x62_repo_edit_safety_foundation",
+        "apply":  "apply_x62_repo_edit_safety_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x63_autonomous_scheduler_execution_foundation",
+        "apply":  "apply_x63_autonomous_scheduler_execution_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x64_permission_approval_layer_foundation",
+        "apply":  "apply_x64_permission_approval_layer_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x65_rollback_snapshot_engine_foundation",
+        "apply":  "apply_x65_rollback_snapshot_engine_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x66_distributed_agent_coordination_foundation",
+        "apply":  "apply_x66_distributed_agent_coordination_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x67_live_runtime_dashboard_foundation",
+        "apply":  "apply_x67_live_runtime_dashboard_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x68_self_healing_runtime_foundation",
+        "apply":  "apply_x68_self_healing_runtime_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x69_autonomous_long_running_task_engine_foundation",
+        "apply":  "apply_x69_autonomous_long_running_task_engine_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x70_semantic_memory_recall_foundation",
+        "apply":  "apply_x70_semantic_memory_recall_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x71_dynamic_agent_spawn_foundation",
+        "apply":  "apply_x71_dynamic_agent_spawn_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x72_shared_memory_bus_foundation",
+        "apply":  "apply_x72_shared_memory_bus_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x73_concurrent_multi_agent_execution_foundation_repack",
+        "apply":  "apply_x73_concurrent_multi_agent_execution_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x74_autonomous_recovery_orchestrator_foundation",
+        "apply":  "apply_x74_autonomous_recovery_orchestrator_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x75_local_patch_runner_self_verify_gate",
+        "apply":  "apply_x75_local_patch_runner_self_verify_gate.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x76b_real_local_patch_builder",
+        "apply":  "apply_x76b_real_local_patch_builder.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x76c_probe_patch",
+        "apply":  "apply_x76c_probe_patch.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x76_local_patch_builder_generator",
+        "apply":  "apply_x76_local_patch_builder_generator.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x77_patch_template_registry",
+        "apply":  "apply_x77_patch_template_registry.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x78b_probe_python_component",
+        "apply":  "apply_x78b_probe_python_component.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x78b_template_aware_patch_generator",
+        "apply":  "apply_x78b_template_aware_patch_generator.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x79_auto_patch_pipeline_orchestrator",
+        "apply":  "apply_x79_auto_patch_pipeline_orchestrator.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x79_probe_python_component",
+        "apply":  "apply_x79_probe_python_component.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x80_probe_python_component",
+        "apply":  "apply_x80_probe_python_component.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x80_queue_patch_executor",
+        "apply":  "apply_x80_queue_patch_executor.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x81_daemon_worker_loop",
+        "apply":  "apply_x81_daemon_worker_loop.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x82_retry_quarantine_engine",
+        "apply":  "apply_x82_retry_quarantine_engine.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x83_failure_memory_lessons",
+        "apply":  "apply_x83_failure_memory_lessons.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x84_task_decomposer",
+        "apply":  "apply_x84_task_decomposer.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x85_role_agents",
+        "apply":  "apply_x85_role_agents.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x86_agent_bus",
+        "apply":  "apply_x86_agent_bus.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x87b_worker_dispatcher_importfix",
+        "apply":  "apply_x87b_worker_dispatcher_importfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x87_worker_dispatcher",
+        "apply":  "apply_x87_worker_dispatcher.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x88_persistent_scheduler",
+        "apply":  "apply_x88_persistent_scheduler.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x89_sandbox_workers",
+        "apply":  "apply_x89_sandbox_workers.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x90_webui_agent_bridge",
+        "apply":  "apply_x90_webui_agent_bridge.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x91_master_ai_addtask_bridge",
+        "apply":  "apply_x91_master_ai_addtask_bridge.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x92c_adapter_rootdetect_fix",
+        "apply":  "apply_x92c_adapter_rootdetect_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x92d_x90_rootdetect_fix",
+        "apply":  "apply_x92d_x90_rootdetect_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x92e_x87_rootdetect_fix",
+        "apply":  "apply_x92e_x87_rootdetect_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x92_attach_x90_to_master_bridge",
+        "apply":  "apply_x92_attach_x90_to_master_bridge.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x93b_force_webui_response_normalizer",
+        "apply":  "apply_x93b_force_webui_response_normalizer.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x93c_force_webui_response_normalizer_fix",
+        "apply":  "apply_x93c_force_webui_response_normalizer_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x93d_disable_double_after_request_normalizer",
+        "apply":  "apply_x93d_disable_double_after_request_normalizer.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x93_webui_response_normalizer",
+        "apply":  "apply_x93_webui_response_normalizer.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x96c2_master_planner_reviewer_ascii_fix",
+        "apply":  "apply_x96c2_master_planner_reviewer_ascii_fix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x96c_master_planner_reviewer_foundation",
+        "apply":  "apply_x96c_master_planner_reviewer_foundation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x96d2_attach_master_planner_to_x90",
+        "apply":  "apply_x96d2_attach_master_planner_to_x90.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x96d_attach_master_planner_to_x90",
+        "apply":  "apply_x96d_attach_master_planner_to_x90.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x96d_recover_x90_clean",
+        "apply":  "apply_x96d_recover_x90_clean.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x97a_scan_planner_dispatch_surface",
+        "apply":  "apply_x97a_scan_planner_dispatch_surface.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x97b2_planner_driven_runtime_dispatch",
+        "apply":  "apply_x97b2_planner_driven_runtime_dispatch.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x97b_planner_driven_dispatch",
+        "apply":  "apply_x97b_planner_driven_dispatch.ps1",
+        "uses_PSScriptRoot":  true,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x97c2b_seed_plan_hotfix",
+        "apply":  "apply_x97c2b_seed_plan_hotfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x97c2_plan_seed_runtime_propagation",
+        "apply":  "apply_x97c2_plan_seed_runtime_propagation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x97c_plan_seed_lifecycle_scan",
+        "apply":  "apply_x97c_plan_seed_lifecycle_scan.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x97d2_planner_seed_hotfix",
+        "apply":  "apply_x97d2_planner_seed_hotfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x97d3_planner_seed_repair",
+        "apply":  "apply_x97d3_planner_seed_repair.ps1",
+        "uses_PSScriptRoot":  true,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x97d4_planner_seed_exactfix",
+        "apply":  "apply_x97d4_planner_seed_exactfix.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x97d5_planner_seed_exact_repair",
+        "apply":  "apply_x97d5_planner_seed_exact_repair.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  true,
+        "status":  "OK"
+    },
+    {
+        "patch":  "x97d_planner_aware_seed_bus_propagation",
+        "apply":  "apply_x97d_planner_aware_seed_bus_propagation.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x98b_unify_patch_packaging_contract",
+        "apply":  "apply_x98b_unify_patch_packaging_contract.ps1",
+        "uses_PSScriptRoot":  true,
+        "hardcoded_inbox_path":  true,
+        "calls_python":  true,
+        "has_local_py":  false,
+        "status":  "WARN_PY_CALL_NO_LOCAL_PY"
+    },
+    {
+        "patch":  "x98_patch_packaging_pipeline_audit",
+        "apply":  "apply_x98_patch_packaging_pipeline_audit.ps1",
+        "uses_PSScriptRoot":  false,
+        "hardcoded_inbox_path":  false,
+        "calls_python":  false,
+        "has_local_py":  false,
+        "status":  "OK"
+    }
+]
+

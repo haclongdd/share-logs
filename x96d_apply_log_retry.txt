@@ -1,0 +1,10 @@
+﻿{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x96d_attach_master_planner_to_x90",
+  "stage": "missing_apply_or_check",
+  "checks": [],
+  "apply": null,
+  "check": null,
+  "false_pass_guard": true
+}
+
