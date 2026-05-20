@@ -1,0 +1,704 @@
+﻿
+  core\x86_agent_bus.py:11:from dataclasses import asdict, dataclass
+  core\x86_agent_bus.py:12:from pathlib import Path
+  core\x86_agent_bus.py:13:from typing import Any, Dict, List, Optional
+  core\x86_agent_bus.py:14:
+> core\x86_agent_bus.py:15:ROOT = Path(os.environ.get("AI_LOCAL_OS_ROOT", r"D:\openwebui"))
+  core\x86_agent_bus.py:16:RUNTIME_DIR = ROOT / "runtime"
+  core\x86_agent_bus.py:17:BUS_DIR = RUNTIME_DIR / "x86_agent_bus"
+> core\x86_agent_bus.py:18:MESSAGES_DIR = BUS_DIR / "messages"
+  core\x86_agent_bus.py:19:REPORT_DIR = RUNTIME_DIR / "reports"
+  core\x86_agent_bus.py:20:STATE_FILE = BUS_DIR / "state.json"
+  core\x86_agent_bus.py:21:
+  core\x86_agent_bus.py:22:ROLES = ("SCOUT", "DEBUG", "PATCHER", "VERIFY", "REPORT")
+  core\x86_agent_bus.py:53:        return {**default, "load_warning": f"Failed to load {path}: {exc}"}
+  core\x86_agent_bus.py:54:
+  core\x86_agent_bus.py:55:
+  core\x86_agent_bus.py:56:@dataclass
+> core\x86_agent_bus.py:57:class BusMessage:
+  core\x86_agent_bus.py:58:    id: str
+  core\x86_agent_bus.py:59:    ts: str
+  core\x86_agent_bus.py:60:    from_role: str
+  core\x86_agent_bus.py:61:    to_role: str
+  core\x86_agent_bus.py:66:
+  core\x86_agent_bus.py:67:class AgentBus:
+  core\x86_agent_bus.py:68:    def __init__(self) -> None:
+  core\x86_agent_bus.py:69:        BUS_DIR.mkdir(parents=True, exist_ok=True)
+> core\x86_agent_bus.py:70:        MESSAGES_DIR.mkdir(parents=True, exist_ok=True)
+  core\x86_agent_bus.py:71:        REPORT_DIR.mkdir(parents=True, exist_ok=True)
+  core\x86_agent_bus.py:72:        self.state = load_json(STATE_FILE, {
+  core\x86_agent_bus.py:73:            "release": "X86_AGENT_BUS",
+  core\x86_agent_bus.py:74:            "created_at": utc_stamp(),
+> core\x86_agent_bus.py:75:            "messages_total": 0,
+> core\x86_agent_bus.py:76:            "last_message": None,
+  core\x86_agent_bus.py:77:            "last_error": None,
+  core\x86_agent_bus.py:78:        })
+  core\x86_agent_bus.py:79:
+  core\x86_agent_bus.py:80:    def save(self) -> None:
+  core\x86_agent_bus.py:81:        safe_write_json(STATE_FILE, self.state)
+  core\x86_agent_bus.py:82:
+> core\x86_agent_bus.py:83:    def message_path(self, message_id: str) -> Path:
+> core\x86_agent_bus.py:84:        return MESSAGES_DIR / f"{message_id}.json"
+  core\x86_agent_bus.py:85:
+  core\x86_agent_bus.py:86:    def validate_role(self, role: str) -> str:
+  core\x86_agent_bus.py:87:        role = role.upper().strip()
+  core\x86_agent_bus.py:88:        if role not in ROLES:
+  core\x86_agent_bus.py:89:            raise ValueError(f"invalid role {role}; allowed={', '.join(ROLES)}")
+  core\x86_agent_bus.py:90:        return role
+  core\x86_agent_bus.py:91:
+  core\x86_agent_bus.py:92:    def validate_transition(self, from_role: str, to_role: str) -> None:
+> core\x86_agent_bus.py:93:        allowed = ALLOWED_TRANSITIONS.get(from_role, [])
+  core\x86_agent_bus.py:94:        if to_role not in allowed:
+  core\x86_agent_bus.py:95:            raise ValueError(f"invalid transition {from_role}->{to_role}; 
+allowed={allowed}")
+  core\x86_agent_bus.py:96:
+> core\x86_agent_bus.py:97:    def send(self, from_role: str, to_role: str, task: str, payload: Optional[Dict[str, 
+Any]] = None) -> BusMessage:
+  core\x86_agent_bus.py:98:        from_role = self.validate_role(from_role)
+  core\x86_agent_bus.py:99:        to_role = self.validate_role(to_role)
+  core\x86_agent_bus.py:100:        self.validate_transition(from_role, to_role)
+> core\x86_agent_bus.py:101:        message = BusMessage(
+  core\x86_agent_bus.py:102:            id=f"x86_{now_ms()}_{uuid.uuid4().hex[:8]}",
+  core\x86_agent_bus.py:103:            ts=utc_stamp(),
+  core\x86_agent_bus.py:104:            from_role=from_role,
+  core\x86_agent_bus.py:105:            to_role=to_role,
+  core\x86_agent_bus.py:106:            task=task,
+  core\x86_agent_bus.py:107:            payload=payload or {},
+  core\x86_agent_bus.py:108:        )
+> core\x86_agent_bus.py:109:        data = asdict(message)
+> core\x86_agent_bus.py:110:        safe_write_json(self.message_path(message.id), data)
+> core\x86_agent_bus.py:111:        self.state["messages_total"] = int(self.state.get("messages_total", 0)) + 1
+> core\x86_agent_bus.py:112:        self.state["last_message"] = data
+  core\x86_agent_bus.py:113:        self.state["last_error"] = None
+  core\x86_agent_bus.py:114:        self.save()
+> core\x86_agent_bus.py:115:        return message
+  core\x86_agent_bus.py:116:
+> core\x86_agent_bus.py:117:    def list_messages(self, status: Optional[str] = None) -> List[Dict[str, Any]]:
+  core\x86_agent_bus.py:118:        rows = []
+> core\x86_agent_bus.py:119:        for path in sorted(MESSAGES_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime):
+  core\x86_agent_bus.py:120:            item = load_json(path, {})
+> core\x86_agent_bus.py:121:            if status and item.get("status") != status:
+  core\x86_agent_bus.py:122:                continue
+  core\x86_agent_bus.py:123:            rows.append(item)
+  core\x86_agent_bus.py:124:        return rows
+  core\x86_agent_bus.py:125:
+  core\x86_agent_bus.py:126:    def consume(self, role: str, limit: int = 10) -> List[Dict[str, Any]]:
+  core\x86_agent_bus.py:127:        role = self.validate_role(role)
+  core\x86_agent_bus.py:128:        consumed = []
+> core\x86_agent_bus.py:129:        for item in self.list_messages(status="queued"):
+> core\x86_agent_bus.py:130:            if item.get("to_role") != role:
+  core\x86_agent_bus.py:131:                continue
+  core\x86_agent_bus.py:132:            item["status"] = "consumed"
+  core\x86_agent_bus.py:133:            item["consumed_at"] = utc_stamp()
+> core\x86_agent_bus.py:134:            safe_write_json(self.message_path(item["id"]), item)
+  core\x86_agent_bus.py:135:            consumed.append(item)
+  core\x86_agent_bus.py:136:            if len(consumed) >= limit:
+  core\x86_agent_bus.py:137:                break
+  core\x86_agent_bus.py:138:        self.state["last_consume"] = {"role": role, "count": len(consumed), "ts": 
+utc_stamp()}
+  core\x86_agent_bus.py:140:        return consumed
+  core\x86_agent_bus.py:141:
+  core\x86_agent_bus.py:142:    def demo_chain(self, task: str) -> Dict[str, Any]:
+  core\x86_agent_bus.py:143:        sent = []
+> core\x86_agent_bus.py:144:        sent.append(asdict(self.send("SCOUT", "DEBUG", task, {"finding": "project/context 
+collected"})))
+> core\x86_agent_bus.py:145:        sent.append(asdict(self.send("DEBUG", "PATCHER", task, {"root_cause": "confirmed 
+by real log", "evidence": "runtime/temp/*.txt"})))
+> core\x86_agent_bus.py:146:        sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": 
+r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
+> core\x86_agent_bus.py:147:        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "pass"})))
+  core\x86_agent_bus.py:148:        report = {
+  core\x86_agent_bus.py:149:            "ok": True,
+  core\x86_agent_bus.py:150:            "release": "X86_AGENT_BUS",
+  core\x86_agent_bus.py:151:            "task": task,
+  core\x86_agent_bus.py:152:            "sent": sent,
+  core\x86_agent_bus.py:153:            "state_file": str(STATE_FILE),
+> core\x86_agent_bus.py:154:            "messages_dir": str(MESSAGES_DIR),
+  core\x86_agent_bus.py:155:        }
+  core\x86_agent_bus.py:156:        out = REPORT_DIR / f"x86_agent_bus_report_{now_ms()}.json"
+  core\x86_agent_bus.py:157:        safe_write_json(out, report)
+  core\x86_agent_bus.py:158:        report["report_file"] = str(out)
+  core\x86_agent_bus.py:159:        return report
+  core\x86_agent_bus.py:160:
+  core\x86_agent_bus.py:161:    def status(self) -> Dict[str, Any]:
+> core\x86_agent_bus.py:162:        messages = self.list_messages()
+  core\x86_agent_bus.py:163:        return {
+  core\x86_agent_bus.py:164:            "ok": True,
+  core\x86_agent_bus.py:165:            "release": "X86_AGENT_BUS",
+  core\x86_agent_bus.py:166:            "state_file": str(STATE_FILE),
+> core\x86_agent_bus.py:167:            "messages_dir": str(MESSAGES_DIR),
+> core\x86_agent_bus.py:168:            "messages_total_files": len(messages),
+  core\x86_agent_bus.py:169:            "state": self.state,
+  core\x86_agent_bus.py:170:            "roles": list(ROLES),
+  core\x86_agent_bus.py:171:            "transitions": ALLOWED_TRANSITIONS,
+  core\x86_agent_bus.py:172:        }
+  core\x86_agent_bus.py:187:def cli() -> int:
+  core\x86_agent_bus.py:188:    parser = argparse.ArgumentParser(description="X86 inter-agent task bus")
+  core\x86_agent_bus.py:189:    sub = parser.add_subparsers(dest="cmd")
+  core\x86_agent_bus.py:190:
+> core\x86_agent_bus.py:191:    p_send = sub.add_parser("send")
+> core\x86_agent_bus.py:192:    p_send.add_argument("--from-role", required=True)
+> core\x86_agent_bus.py:193:    p_send.add_argument("--to-role", required=True)
+> core\x86_agent_bus.py:194:    p_send.add_argument("--task", required=True)
+> core\x86_agent_bus.py:195:    p_send.add_argument("--payload", default="{}")
+  core\x86_agent_bus.py:196:
+  core\x86_agent_bus.py:197:    p_consume = sub.add_parser("consume")
+  core\x86_agent_bus.py:198:    p_consume.add_argument("--role", required=True)
+  core\x86_agent_bus.py:199:    p_consume.add_argument("--limit", type=int, default=10)
+  core\x86_agent_bus.py:208:
+  core\x86_agent_bus.py:209:    args = parser.parse_args()
+  core\x86_agent_bus.py:210:    bus = AgentBus()
+  core\x86_agent_bus.py:211:
+> core\x86_agent_bus.py:212:    if args.cmd == "send":
+> core\x86_agent_bus.py:213:        msg = bus.send(args.from_role, args.to_role, args.task, 
+parse_payload(args.payload))
+> core\x86_agent_bus.py:214:        print(json.dumps({"ok": True, "message": asdict(msg)}, ensure_ascii=False, 
+indent=2))
+  core\x86_agent_bus.py:215:        return 0
+  core\x86_agent_bus.py:216:
+  core\x86_agent_bus.py:217:    if args.cmd == "consume":
+  core\x86_agent_bus.py:218:        rows = bus.consume(args.role, args.limit)
+> core\x86_agent_bus.py:219:        print(json.dumps({"ok": True, "role": args.role.upper(), "count": len(rows), 
+"messages": rows}, ensure_ascii=False, indent=2))
+  core\x86_agent_bus.py:220:        return 0
+  core\x86_agent_bus.py:221:
+  core\x86_agent_bus.py:222:    if args.cmd == "list":
+> core\x86_agent_bus.py:223:        rows = bus.list_messages(args.status)
+> core\x86_agent_bus.py:224:        print(json.dumps({"ok": True, "count": len(rows), "messages": rows}, 
+ensure_ascii=False, indent=2))
+  core\x86_agent_bus.py:225:        return 0
+  core\x86_agent_bus.py:226:
+  core\x86_agent_bus.py:227:    if args.cmd == "demo-chain":
+  core\x86_agent_bus.py:228:        report = bus.demo_chain(args.task)
+  core\x87_worker_dispatcher.py:1:#!/usr/bin/env python3
+  core\x87_worker_dispatcher.py:2:# -*- coding: utf-8 -*-
+> core\x87_worker_dispatcher.py:3:"""X87B Autonomous Worker Dispatcher import fix for AI Local OS."""
+  core\x87_worker_dispatcher.py:4:from __future__ import annotations
+  core\x87_worker_dispatcher.py:5:
+  core\x87_worker_dispatcher.py:6:import argparse
+  core\x87_worker_dispatcher.py:7:import importlib.util
+  core\x87_worker_dispatcher.py:12:from pathlib import Path
+  core\x87_worker_dispatcher.py:13:from typing import Any, Dict, List, Optional
+  core\x87_worker_dispatcher.py:14:
+  core\x87_worker_dispatcher.py:15:def _resolve_aios_root() -> Path:
+> core\x87_worker_dispatcher.py:16:    explicit = os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")
+  core\x87_worker_dispatcher.py:17:    if explicit:
+  core\x87_worker_dispatcher.py:18:        return Path(explicit)
+  core\x87_worker_dispatcher.py:19:
+  core\x87_worker_dispatcher.py:20:    candidates = [
+  core\x87_worker_dispatcher.py:37:CORE_DIR = ROOT / "core"
+  core\x87_worker_dispatcher.py:38:RUNTIME_DIR = ROOT / "runtime"
+  core\x87_worker_dispatcher.py:39:TEMP_DIR = RUNTIME_DIR / "temp"
+  core\x87_worker_dispatcher.py:40:BUS_DIR = RUNTIME_DIR / "x86_agent_bus"
+> core\x87_worker_dispatcher.py:41:MESSAGES_DIR = BUS_DIR / "messages"
+  core\x87_worker_dispatcher.py:42:REPORT_DIR = RUNTIME_DIR / "reports"
+> core\x87_worker_dispatcher.py:43:STATE_DIR = RUNTIME_DIR / "x87_worker_dispatcher"
+  core\x87_worker_dispatcher.py:44:STATE_FILE = STATE_DIR / "state.json"
+  core\x87_worker_dispatcher.py:45:
+  core\x87_worker_dispatcher.py:46:ROUTE_NEXT = {
+  core\x87_worker_dispatcher.py:47:    "DEBUG": "PATCHER",
+  core\x87_worker_dispatcher.py:94:    spec.loader.exec_module(module)
+  core\x87_worker_dispatcher.py:95:    return module.AgentBus
+  core\x87_worker_dispatcher.py:96:
+  core\x87_worker_dispatcher.py:97:
+> core\x87_worker_dispatcher.py:98:class WorkerDispatcher:
+  core\x87_worker_dispatcher.py:99:
+> core\x87_worker_dispatcher.py:100:    # X97B2_PLANNER_DRIVEN_RUNTIME_DISPATCH
+  core\x87_worker_dispatcher.py:101:    def _x97b2_get_x96_plan(self, task_obj):
+> core\x87_worker_dispatcher.py:102:        """Return x96_plan dict from common task/message shapes without breaking 
+fallback."""
+  core\x87_worker_dispatcher.py:103:        if not isinstance(task_obj, dict):
+  core\x87_worker_dispatcher.py:104:            return None
+> core\x87_worker_dispatcher.py:105:        direct = task_obj.get("x96_plan")
+  core\x87_worker_dispatcher.py:106:        if isinstance(direct, dict):
+  core\x87_worker_dispatcher.py:107:            return direct
+> core\x87_worker_dispatcher.py:108:        payload = task_obj.get("payload")
+  core\x87_worker_dispatcher.py:109:        if isinstance(payload, dict):
+> core\x87_worker_dispatcher.py:110:            nested = payload.get("x96_plan")
+  core\x87_worker_dispatcher.py:111:            if isinstance(nested, dict):
+  core\x87_worker_dispatcher.py:112:                return nested
+> core\x87_worker_dispatcher.py:113:        meta = task_obj.get("metadata")
+  core\x87_worker_dispatcher.py:114:        if isinstance(meta, dict):
+> core\x87_worker_dispatcher.py:115:            nested = meta.get("x96_plan")
+  core\x87_worker_dispatcher.py:116:            if isinstance(nested, dict):
+  core\x87_worker_dispatcher.py:117:                return nested
+  core\x87_worker_dispatcher.py:118:        return None
+  core\x87_worker_dispatcher.py:119:
+  core\x87_worker_dispatcher.py:121:        """Accept role fields used by planner variants."""
+  core\x87_worker_dispatcher.py:122:        if not isinstance(step, dict):
+  core\x87_worker_dispatcher.py:123:            return None
+  core\x87_worker_dispatcher.py:124:        for key in ("role", "to_role", "worker_role", "agent_role", "name"):
+> core\x87_worker_dispatcher.py:125:            val = step.get(key)
+  core\x87_worker_dispatcher.py:126:            if isinstance(val, str) and val.strip():
+  core\x87_worker_dispatcher.py:127:                return val.strip().upper()
+  core\x87_worker_dispatcher.py:128:        return None
+  core\x87_worker_dispatcher.py:129:
+  core\x87_worker_dispatcher.py:130:    def _x97b2_resolve_next_role(self, task_obj, current_role, result):
+  core\x87_worker_dispatcher.py:131:        """Plan-first next-role resolver; ROUTE_NEXT remains safety fallback."""
+> core\x87_worker_dispatcher.py:132:        fallback = ROUTE_NEXT.get(current_role)
+  core\x87_worker_dispatcher.py:133:        try:
+  core\x87_worker_dispatcher.py:134:            plan = self._x97b2_get_x96_plan(task_obj)
+  core\x87_worker_dispatcher.py:135:            if not isinstance(plan, dict):
+  core\x87_worker_dispatcher.py:136:                return fallback
+> core\x87_worker_dispatcher.py:137:            steps = plan.get("steps")
+  core\x87_worker_dispatcher.py:138:            if not isinstance(steps, list) or not steps:
+  core\x87_worker_dispatcher.py:139:                return fallback
+  core\x87_worker_dispatcher.py:140:
+  core\x87_worker_dispatcher.py:141:            cur = current_role.upper() if isinstance(current_role, str) else 
+current_role
+  core\x87_worker_dispatcher.py:144:                role = self._x97b2_extract_role(step)
+  core\x87_worker_dispatcher.py:145:                if role == cur:
+  core\x87_worker_dispatcher.py:146:                    current_index = idx
+  core\x87_worker_dispatcher.py:147:                    if isinstance(step, dict):
+> core\x87_worker_dispatcher.py:148:                        step["status"] = "done" if isinstance(result, dict) and 
+result.get("ok") else "failed"
+> core\x87_worker_dispatcher.py:149:                        step["last_result_ok"] = bool(isinstance(result, dict) and 
+result.get("ok"))
+> core\x87_worker_dispatcher.py:150:                        step["retries"] = int(step.get("retries") or 0)
+  core\x87_worker_dispatcher.py:151:                    break
+  core\x87_worker_dispatcher.py:152:
+  core\x87_worker_dispatcher.py:153:            if current_index is None:
+  core\x87_worker_dispatcher.py:154:                return fallback
+  core\x87_worker_dispatcher.py:155:
+  core\x87_worker_dispatcher.py:156:            for next_step in steps[current_index + 1:]:
+  core\x87_worker_dispatcher.py:157:                next_role = self._x97b2_extract_role(next_step)
+  core\x87_worker_dispatcher.py:158:                if next_role:
+> core\x87_worker_dispatcher.py:159:                    if isinstance(next_step, dict) and not next_step.get("status"):
+  core\x87_worker_dispatcher.py:160:                        next_step["status"] = "queued"
+> core\x87_worker_dispatcher.py:161:                    plan["x97b2_runtime_dispatch"] = "planner_driven"
+  core\x87_worker_dispatcher.py:162:                    return next_role
+  core\x87_worker_dispatcher.py:163:
+> core\x87_worker_dispatcher.py:164:            plan["x97b2_runtime_dispatch"] = "planner_complete"
+  core\x87_worker_dispatcher.py:165:            return None
+  core\x87_worker_dispatcher.py:166:        except Exception as exc:
+  core\x87_worker_dispatcher.py:167:            try:
+  core\x87_worker_dispatcher.py:168:                if isinstance(task_obj, dict):
+> core\x87_worker_dispatcher.py:169:                    task_obj.setdefault("x97b2_dispatch_error", str(exc))
+  core\x87_worker_dispatcher.py:170:            except Exception:
+  core\x87_worker_dispatcher.py:171:                pass
+  core\x87_worker_dispatcher.py:172:            return fallback
+  core\x87_worker_dispatcher.py:173:
+  core\x87_worker_dispatcher.py:176:        REPORT_DIR.mkdir(parents=True, exist_ok=True)
+  core\x87_worker_dispatcher.py:177:        AgentBus = load_x86_bus_class()
+  core\x87_worker_dispatcher.py:178:        self.bus = AgentBus()
+  core\x87_worker_dispatcher.py:179:        self.state = load_json(STATE_FILE, {
+> core\x87_worker_dispatcher.py:180:            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+  core\x87_worker_dispatcher.py:181:            "created_at": utc_stamp(),
+  core\x87_worker_dispatcher.py:182:            "cycles": 0,
+  core\x87_worker_dispatcher.py:183:            "processed_total": 0,
+  core\x87_worker_dispatcher.py:184:            "last_cycle": None,
+  core\x87_worker_dispatcher.py:187:
+  core\x87_worker_dispatcher.py:188:    def save(self) -> None:
+  core\x87_worker_dispatcher.py:189:        safe_write_json(STATE_FILE, self.state)
+  core\x87_worker_dispatcher.py:190:
+> core\x87_worker_dispatcher.py:191:    def handle_message(self, msg: Dict[str, Any]) -> Dict[str, Any]:
+> core\x87_worker_dispatcher.py:192:        to_role = str(msg.get("to_role", "")).upper()
+> core\x87_worker_dispatcher.py:193:        task = str(msg.get("task", ""))
+> core\x87_worker_dispatcher.py:194:        payload = msg.get("payload") if isinstance(msg.get("payload"), dict) else 
+{}
+  core\x87_worker_dispatcher.py:195:
+  core\x87_worker_dispatcher.py:196:        result = {
+> core\x87_worker_dispatcher.py:197:            "message_id": msg.get("id"),
+  core\x87_worker_dispatcher.py:198:            "role": to_role,
+  core\x87_worker_dispatcher.py:199:            "task": task,
+  core\x87_worker_dispatcher.py:200:            "input_payload": payload,
+  core\x87_worker_dispatcher.py:201:            "handled_at": utc_stamp(),
+  core\x87_worker_dispatcher.py:206:
+  core\x87_worker_dispatcher.py:207:        if to_role == "DEBUG":
+  core\x87_worker_dispatcher.py:208:            result["summary"] = "DEBUG worker consumed evidence and confirmed 
+root-cause-first handoff."
+  core\x87_worker_dispatcher.py:209:            result["output_payload"] = {
+> core\x87_worker_dispatcher.py:210:                "root_cause": payload.get("root_cause") or 
+"pending_real_log_review",
+> core\x87_worker_dispatcher.py:211:                "evidence": payload.get("evidence") or payload,
+> core\x87_worker_dispatcher.py:212:                "source_message": msg.get("id"),
+  core\x87_worker_dispatcher.py:213:            }
+  core\x87_worker_dispatcher.py:214:        elif to_role == "PATCHER":
+  core\x87_worker_dispatcher.py:215:            result["summary"] = "PATCHER worker consumed confirmed cause/artifact 
+context."
+  core\x87_worker_dispatcher.py:216:            result["output_payload"] = {
+> core\x87_worker_dispatcher.py:217:                "artifact": payload.get("artifact") or 
+r"D:\openwebui\_patch_inbox",
+  core\x87_worker_dispatcher.py:218:                "patch_rule": "target confirmed cause only",
+> core\x87_worker_dispatcher.py:219:                "source_message": msg.get("id"),
+  core\x87_worker_dispatcher.py:220:            }
+  core\x87_worker_dispatcher.py:221:        elif to_role == "VERIFY":
+  core\x87_worker_dispatcher.py:222:            result["summary"] = "VERIFY worker consumed artifact and produced 
+verify handoff."
+  core\x87_worker_dispatcher.py:223:            result["output_payload"] = {
+> core\x87_worker_dispatcher.py:224:                "verify": payload.get("verify") or "pending_x75_check",
+> core\x87_worker_dispatcher.py:225:                "source_message": msg.get("id"),
+  core\x87_worker_dispatcher.py:226:            }
+  core\x87_worker_dispatcher.py:227:        elif to_role == "REPORT":
+  core\x87_worker_dispatcher.py:228:            result["summary"] = "REPORT worker consumed final verification 
+payload."
+  core\x87_worker_dispatcher.py:229:            result["output_payload"] = {
+  core\x87_worker_dispatcher.py:230:                "final": payload,
+> core\x87_worker_dispatcher.py:231:                "source_message": msg.get("id"),
+  core\x87_worker_dispatcher.py:232:            }
+  core\x87_worker_dispatcher.py:233:        else:
+  core\x87_worker_dispatcher.py:234:            result["ok"] = False
+  core\x87_worker_dispatcher.py:235:            result["summary"] = f"No worker handler for role {to_role}"
+> core\x87_worker_dispatcher.py:236:            result["output_payload"] = {"source_message": msg.get("id")}
+  core\x87_worker_dispatcher.py:237:
+  core\x87_worker_dispatcher.py:238:        # X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION: carry plan metadata from 
+input payload into routing context
+  core\x87_worker_dispatcher.py:239:        x97e_plan_context = None
+  core\x87_worker_dispatcher.py:240:        try:
+> core\x87_worker_dispatcher.py:241:            x97e_input_payload = msg.get("payload") if isinstance(msg, dict) else 
+None
+  core\x87_worker_dispatcher.py:242:            if isinstance(x97e_input_payload, dict):
+> core\x87_worker_dispatcher.py:243:                x97e_plan_context = x97e_input_payload.get("x96_plan")
+> core\x87_worker_dispatcher.py:244:            if x97e_plan_context and isinstance(result.get("output_payload"), 
+dict):
+  core\x87_worker_dispatcher.py:245:                result["output_payload"].setdefault("x96_plan", x97e_plan_context)
+  core\x87_worker_dispatcher.py:246:                result["output_payload"].setdefault("x97e_plan_propagated", True)
+  core\x87_worker_dispatcher.py:247:        except Exception as exc:
+  core\x87_worker_dispatcher.py:248:            try:
+  core\x87_worker_dispatcher.py:251:                pass
+  core\x87_worker_dispatcher.py:252:        x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if 
+x97e_plan_context else task
+  core\x87_worker_dispatcher.py:253:        next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, 
+result)
+  core\x87_worker_dispatcher.py:254:        if result["ok"] and next_role:
+> core\x87_worker_dispatcher.py:255:            sent = self.bus.send(to_role, next_role, task, 
+result["output_payload"])
+  core\x87_worker_dispatcher.py:256:            result["routed_to"] = next_role
+> core\x87_worker_dispatcher.py:257:            result["routed_message_id"] = sent.id
+  core\x87_worker_dispatcher.py:258:
+  core\x87_worker_dispatcher.py:259:        return result
+  core\x87_worker_dispatcher.py:260:
+  core\x87_worker_dispatcher.py:261:    def cycle(self, roles: Optional[List[str]] = None, limit_per_role: int = 10) 
+-> Dict[str, Any]:
+  core\x87_worker_dispatcher.py:264:
+  core\x87_worker_dispatcher.py:265:        for role in roles:
+  core\x87_worker_dispatcher.py:266:            consumed = self.bus.consume(role, limit=limit_per_role)
+  core\x87_worker_dispatcher.py:267:            for msg in consumed:
+> core\x87_worker_dispatcher.py:268:                processed.append(self.handle_message(msg))
+  core\x87_worker_dispatcher.py:269:
+> core\x87_worker_dispatcher.py:270:        self.state["cycles"] = int(self.state.get("cycles", 0)) + 1
+> core\x87_worker_dispatcher.py:271:        self.state["processed_total"] = int(self.state.get("processed_total", 0)) 
++ len(processed)
+  core\x87_worker_dispatcher.py:272:        self.state["last_cycle"] = {
+  core\x87_worker_dispatcher.py:273:            "ts": utc_stamp(),
+  core\x87_worker_dispatcher.py:274:            "roles": roles,
+  core\x87_worker_dispatcher.py:275:            "processed": len(processed),
+  core\x87_worker_dispatcher.py:278:        self.save()
+  core\x87_worker_dispatcher.py:279:
+  core\x87_worker_dispatcher.py:280:        report = {
+  core\x87_worker_dispatcher.py:281:            "ok": True,
+> core\x87_worker_dispatcher.py:282:            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+  core\x87_worker_dispatcher.py:283:            "processed": processed,
+  core\x87_worker_dispatcher.py:284:            "processed_count": len(processed),
+  core\x87_worker_dispatcher.py:285:            "state_file": str(STATE_FILE),
+  core\x87_worker_dispatcher.py:286:        }
+> core\x87_worker_dispatcher.py:287:        out = REPORT_DIR / f"x87b_worker_dispatcher_report_{now_ms()}.json"
+  core\x87_worker_dispatcher.py:288:        safe_write_json(out, report)
+  core\x87_worker_dispatcher.py:289:        report["report_file"] = str(out)
+  core\x87_worker_dispatcher.py:290:        return report
+  core\x87_worker_dispatcher.py:291:
+> core\x87_worker_dispatcher.py:292:    # X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION: planner-aware first bus message
+  core\x87_worker_dispatcher.py:293:    def seed(self, task: str, x96_plan=None) -> Dict[str, Any]:
+> core\x87_worker_dispatcher.py:294:        """Seed the first runtime message.
+  core\x87_worker_dispatcher.py:295:
+  core\x87_worker_dispatcher.py:296:        Plan-first behavior:
+  core\x87_worker_dispatcher.py:297:        - if x96_plan.steps[] is valid, queue the first planned role, normally 
+SCOUT
+  core\x87_worker_dispatcher.py:298:        - attach x96_plan to the first payload so downstream routing can stay 
+planner-driven
+  core\x87_worker_dispatcher.py:299:
+  core\x87_worker_dispatcher.py:300:        Fallback behavior:
+  core\x87_worker_dispatcher.py:301:        - if the plan is missing/invalid, keep the historical SCOUT -> DEBUG seed 
+path
+  core\x87_worker_dispatcher.py:302:        """
+> core\x87_worker_dispatcher.py:303:        payload = {"finding": "seeded by X87B dispatcher", "evidence": 
+str(TEMP_DIR)}
+  core\x87_worker_dispatcher.py:304:        from_role = "SCOUT"
+  core\x87_worker_dispatcher.py:305:        to_role = "DEBUG"
+  core\x87_worker_dispatcher.py:306:        plan_first_role = None
+  core\x87_worker_dispatcher.py:307:        try:
+  core\x87_worker_dispatcher.py:308:            if isinstance(x96_plan, dict):
+> core\x87_worker_dispatcher.py:309:                steps = x96_plan.get("steps") or []
+  core\x87_worker_dispatcher.py:310:                if isinstance(steps, list) and steps:
+  core\x87_worker_dispatcher.py:311:                    first = steps[0]
+  core\x87_worker_dispatcher.py:312:                    if isinstance(first, dict):
+> core\x87_worker_dispatcher.py:313:                        plan_first_role = first.get("role") or 
+first.get("to_role") or first.get("agent_role")
+  core\x87_worker_dispatcher.py:314:                if plan_first_role:
+  core\x87_worker_dispatcher.py:315:                    from_role = "SCOUT"
+  core\x87_worker_dispatcher.py:316:                    to_role = str(plan_first_role).upper()
+  core\x87_worker_dispatcher.py:317:                    payload["x96_plan"] = x96_plan
+  core\x87_worker_dispatcher.py:319:                    payload["x97e_first_role"] = to_role
+  core\x87_worker_dispatcher.py:320:        except Exception as exc:
+  core\x87_worker_dispatcher.py:321:            payload["x97e_seed_error"] = str(exc)
+  core\x87_worker_dispatcher.py:322:
+> core\x87_worker_dispatcher.py:323:        sent = self.bus.send(from_role, to_role, task, payload)
+> core\x87_worker_dispatcher.py:324:        return {"ok": True, "seed_message": sent.get("id"), "task": task, 
+"seeded_to": to_role, "x97e_seed_mode": payload.get("x97e_seed_mode", "fallback_route_next")}
+  core\x87_worker_dispatcher.py:325:
+  core\x87_worker_dispatcher.py:326:    def demo(self, task: str) -> Dict[str, Any]:
+  core\x87_worker_dispatcher.py:327:        seed = self.seed(task)
+  core\x87_worker_dispatcher.py:328:        cycles = []
+  core\x87_worker_dispatcher.py:329:        for _ in range(4):
+  core\x87_worker_dispatcher.py:330:            cycles.append(self.cycle(limit_per_role=20))
+  core\x87_worker_dispatcher.py:331:        report = {
+  core\x87_worker_dispatcher.py:332:            "ok": True,
+> core\x87_worker_dispatcher.py:333:            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+  core\x87_worker_dispatcher.py:334:            "task": task,
+  core\x87_worker_dispatcher.py:335:            "seed": seed,
+  core\x87_worker_dispatcher.py:336:            "cycles": cycles,
+  core\x87_worker_dispatcher.py:337:            "state_file": str(STATE_FILE),
+  core\x87_worker_dispatcher.py:338:        }
+> core\x87_worker_dispatcher.py:339:        out = REPORT_DIR / f"x87b_worker_dispatcher_demo_{now_ms()}.json"
+  core\x87_worker_dispatcher.py:340:        safe_write_json(out, report)
+  core\x87_worker_dispatcher.py:341:        report["report_file"] = str(out)
+  core\x87_worker_dispatcher.py:342:        return report
+  core\x87_worker_dispatcher.py:343:
+  core\x87_worker_dispatcher.py:344:    def status(self) -> Dict[str, Any]:
+  core\x87_worker_dispatcher.py:345:        return {
+  core\x87_worker_dispatcher.py:346:            "ok": True,
+> core\x87_worker_dispatcher.py:347:            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+  core\x87_worker_dispatcher.py:348:            "state_file": str(STATE_FILE),
+  core\x87_worker_dispatcher.py:349:            "state": self.state,
+> core\x87_worker_dispatcher.py:350:            "x86_messages_dir": str(MESSAGES_DIR),
+  core\x87_worker_dispatcher.py:351:            "x86_exists": (CORE_DIR / "x86_agent_bus.py").exists(),
+  core\x87_worker_dispatcher.py:352:            "import_fix": "sys.modules[module_name] registered before exec_module",
+  core\x87_worker_dispatcher.py:353:        }
+  core\x87_worker_dispatcher.py:354:
+  core\x87_worker_dispatcher.py:355:
+  core\x87_worker_dispatcher.py:356:def cli() -> int:
+> core\x87_worker_dispatcher.py:357:    parser = argparse.ArgumentParser(description="X87B autonomous worker 
+dispatcher importfix")
+  core\x87_worker_dispatcher.py:358:    sub = parser.add_subparsers(dest="cmd")
+  core\x87_worker_dispatcher.py:359:
+  core\x87_worker_dispatcher.py:360:    p_seed = sub.add_parser("seed")
+  core\x87_worker_dispatcher.py:361:    p_seed.add_argument("--task", default="x87b seeded task")
+  core\x87_worker_dispatcher.py:364:    p_cycle.add_argument("--roles", default="DEBUG,PATCHER,VERIFY,REPORT")
+  core\x87_worker_dispatcher.py:365:    p_cycle.add_argument("--limit", type=int, default=10)
+  core\x87_worker_dispatcher.py:366:
+  core\x87_worker_dispatcher.py:367:    p_demo = sub.add_parser("demo")
+> core\x87_worker_dispatcher.py:368:    p_demo.add_argument("--task", default="x87b dispatcher smoke")
+  core\x87_worker_dispatcher.py:369:
+  core\x87_worker_dispatcher.py:370:    sub.add_parser("status")
+  core\x87_worker_dispatcher.py:371:
+  core\x87_worker_dispatcher.py:372:    args = parser.parse_args()
+> core\x87_worker_dispatcher.py:373:    dispatcher = WorkerDispatcher()
+  core\x87_worker_dispatcher.py:374:
+  core\x87_worker_dispatcher.py:375:    if args.cmd == "seed":
+> core\x87_worker_dispatcher.py:376:        print(json.dumps(dispatcher.seed(args.task), ensure_ascii=False, indent=2))
+  core\x87_worker_dispatcher.py:377:        return 0
+  core\x87_worker_dispatcher.py:378:
+  core\x87_worker_dispatcher.py:379:    if args.cmd == "cycle":
+  core\x87_worker_dispatcher.py:380:        roles = [x.strip() for x in args.roles.split(",") if x.strip()]
+> core\x87_worker_dispatcher.py:381:        print(json.dumps(dispatcher.cycle(roles=roles, limit_per_role=args.limit), 
+ensure_ascii=False, indent=2))
+  core\x87_worker_dispatcher.py:382:        return 0
+  core\x87_worker_dispatcher.py:383:
+  core\x87_worker_dispatcher.py:384:    if args.cmd == "demo":
+> core\x87_worker_dispatcher.py:385:        print(json.dumps(dispatcher.demo(args.task), ensure_ascii=False, indent=2))
+  core\x87_worker_dispatcher.py:386:        return 0
+  core\x87_worker_dispatcher.py:387:
+  core\x87_worker_dispatcher.py:388:    if args.cmd == "status":
+> core\x87_worker_dispatcher.py:389:        print(json.dumps(dispatcher.status(), ensure_ascii=False, indent=2))
+  core\x87_worker_dispatcher.py:390:        return 0
+  core\x87_worker_dispatcher.py:391:
+  core\x87_worker_dispatcher.py:392:    parser.print_help()
+  core\x87_worker_dispatcher.py:393:    return 2
+  core\x90_webui_agent_bridge.py:13:from pathlib import Path
+  core\x90_webui_agent_bridge.py:14:from typing import Any, Dict, Optional
+  core\x90_webui_agent_bridge.py:15:
+  core\x90_webui_agent_bridge.py:16:def _resolve_aios_root() -> Path:
+> core\x90_webui_agent_bridge.py:17:    explicit = os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")
+  core\x90_webui_agent_bridge.py:18:    if explicit:
+  core\x90_webui_agent_bridge.py:19:        return Path(explicit)
+  core\x90_webui_agent_bridge.py:20:
+  core\x90_webui_agent_bridge.py:21:    candidates = [
+  core\x90_webui_agent_bridge.py:25:    ]
+  core\x90_webui_agent_bridge.py:26:
+  core\x90_webui_agent_bridge.py:27:    for candidate in candidates:
+  core\x90_webui_agent_bridge.py:28:        try:
+> core\x90_webui_agent_bridge.py:29:            if (candidate / "core" / "x87_worker_dispatcher.py").exists():
+  core\x90_webui_agent_bridge.py:30:                return candidate
+  core\x90_webui_agent_bridge.py:31:        except Exception:
+  core\x90_webui_agent_bridge.py:32:            pass
+  core\x90_webui_agent_bridge.py:33:
+  core\x90_webui_agent_bridge.py:44:STATE_FILE = BRIDGE_DIR / "state.json"
+  core\x90_webui_agent_bridge.py:45:
+  core\x90_webui_agent_bridge.py:46:DEPENDENCIES = {
+  core\x90_webui_agent_bridge.py:47:    "x86": CORE_DIR / "x86_agent_bus.py",
+> core\x90_webui_agent_bridge.py:48:    "x87": CORE_DIR / "x87_worker_dispatcher.py",
+  core\x90_webui_agent_bridge.py:49:    "x88": CORE_DIR / "x88_persistent_scheduler.py",
+  core\x90_webui_agent_bridge.py:50:    "x89": CORE_DIR / "x89_sandbox_workers.py",
+  core\x90_webui_agent_bridge.py:51:}
+  core\x90_webui_agent_bridge.py:52:
+  core\x90_webui_agent_bridge.py:128:            "ts": utc_stamp(),
+  core\x90_webui_agent_bridge.py:129:            "task": task,
+  core\x90_webui_agent_bridge.py:130:            "mode": mode,
+  core\x90_webui_agent_bridge.py:131:            "payload": payload or {},
+> core\x90_webui_agent_bridge.py:132:            "status": "received",
+  core\x90_webui_agent_bridge.py:133:        }
+  core\x90_webui_agent_bridge.py:134:        safe_write_json(self.request_path(request_id), request)
+  core\x90_webui_agent_bridge.py:135:
+> core\x90_webui_agent_bridge.py:136:        self.state["requests_total"] = int(self.state.get("requests_total", 0)) + 
+1
+  core\x90_webui_agent_bridge.py:137:        self.state["last_request"] = request
+  core\x90_webui_agent_bridge.py:138:        self.save()
+  core\x90_webui_agent_bridge.py:139:
+  core\x90_webui_agent_bridge.py:140:        response = self.process_request(request)
+  core\x90_webui_agent_bridge.py:141:        safe_write_json(self.response_path(request_id), response)
+  core\x90_webui_agent_bridge.py:142:
+  core\x90_webui_agent_bridge.py:143:        self.state["last_response"] = response
+> core\x90_webui_agent_bridge.py:144:        if response.get("ok"):
+> core\x90_webui_agent_bridge.py:145:            self.state["requests_ok"] = int(self.state.get("requests_ok", 0)) + 1
+  core\x90_webui_agent_bridge.py:146:        else:
+> core\x90_webui_agent_bridge.py:147:            self.state["requests_failed"] = int(self.state.get("requests_failed", 
+0)) + 1
+  core\x90_webui_agent_bridge.py:148:            self.state["last_error"] = response
+  core\x90_webui_agent_bridge.py:149:        self.save()
+  core\x90_webui_agent_bridge.py:150:
+  core\x90_webui_agent_bridge.py:151:        return response
+  core\x90_webui_agent_bridge.py:152:
+  core\x90_webui_agent_bridge.py:153:    def process_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
+  core\x90_webui_agent_bridge.py:154:        mode = request["mode"]
+  core\x90_webui_agent_bridge.py:155:        task = request["task"]
+> core\x90_webui_agent_bridge.py:156:        payload = request.get("payload") or {}
+  core\x90_webui_agent_bridge.py:157:        request_id = request["id"]
+  core\x90_webui_agent_bridge.py:158:
+  core\x90_webui_agent_bridge.py:159:        try:
+  core\x90_webui_agent_bridge.py:160:            if mode == "status":
+  core\x90_webui_agent_bridge.py:194:        response["report_file"] = str(out)
+  core\x90_webui_agent_bridge.py:195:        return response
+  core\x90_webui_agent_bridge.py:196:
+  core\x90_webui_agent_bridge.py:197:    def run_agent_flow(self, task: str) -> Dict[str, Any]:
+> core\x90_webui_agent_bridge.py:198:        """X96D2_MASTER_PLANNER_ATTACHED: MASTER planner first, X87 dispatcher 
+execution second."""
+  core\x90_webui_agent_bridge.py:199:        x96_plan = None
+  core\x90_webui_agent_bridge.py:200:        x96_plan_error = None
+  core\x90_webui_agent_bridge.py:201:
+  core\x90_webui_agent_bridge.py:202:        try:
+  core\x90_webui_agent_bridge.py:217:                x96_plan = planner.build_plan(task)
+  core\x90_webui_agent_bridge.py:218:        except Exception as exc:
+  core\x90_webui_agent_bridge.py:219:            x96_plan_error = repr(exc)
+  core\x90_webui_agent_bridge.py:220:
+> core\x90_webui_agent_bridge.py:221:        WorkerDispatcher = import_class(DEPENDENCIES["x87"], 
+"x87_worker_dispatcher_runtime_x90", "WorkerDispatcher")
+> core\x90_webui_agent_bridge.py:222:        dispatcher = WorkerDispatcher()
+> core\x90_webui_agent_bridge.py:223:        seed = dispatcher.seed(task, x96_plan=x96_plan)  # 
+X97C2_PLAN_SEED_RUNTIME_PROPAGATION
+  core\x90_webui_agent_bridge.py:224:        cycles = []
+  core\x90_webui_agent_bridge.py:225:        for _ in range(4):
+> core\x90_webui_agent_bridge.py:226:            cycles.append(dispatcher.cycle(limit_per_role=50))
+  core\x90_webui_agent_bridge.py:227:
+  core\x90_webui_agent_bridge.py:228:        if x96_plan_error is None:
+> core\x90_webui_agent_bridge.py:229:            flow = "master_planner_then_agent_dispatcher"
+  core\x90_webui_agent_bridge.py:230:        else:
+> core\x90_webui_agent_bridge.py:231:            flow = "agent_dispatcher"
+  core\x90_webui_agent_bridge.py:232:
+  core\x90_webui_agent_bridge.py:233:        return {
+  core\x90_webui_agent_bridge.py:234:            "flow": flow,
+  core\x90_webui_agent_bridge.py:235:            "x96_plan": x96_plan,
+  core\x90_webui_agent_bridge.py:240:
+  core\x90_webui_agent_bridge.py:241:    def run_scheduler_flow(self, task: str, payload: Dict[str, Any]) -> Dict[str, 
+Any]:
+  core\x90_webui_agent_bridge.py:242:        PersistentScheduler = import_class(DEPENDENCIES["x88"], 
+"x88_scheduler_runtime_x90", "PersistentScheduler")
+  core\x90_webui_agent_bridge.py:243:        scheduler = PersistentScheduler()
+> core\x90_webui_agent_bridge.py:244:        every_seconds = int(payload.get("every_seconds", 0))
+> core\x90_webui_agent_bridge.py:245:        max_runs = int(payload.get("max_runs", 1))
+  core\x90_webui_agent_bridge.py:246:        job = scheduler.add_job(task=task, every_seconds=every_seconds, 
+max_runs=max_runs)
+> core\x90_webui_agent_bridge.py:247:        tick = scheduler.tick(limit_jobs=int(payload.get("limit_jobs", 10)))
+  core\x90_webui_agent_bridge.py:248:        return {
+  core\x90_webui_agent_bridge.py:249:            "flow": "scheduler",
+  core\x90_webui_agent_bridge.py:250:            "job": job,
+  core\x90_webui_agent_bridge.py:251:            "tick": tick,
+  core\x90_webui_agent_bridge.py:253:
+  core\x90_webui_agent_bridge.py:254:    def run_sandbox_flow(self, task: str, payload: Dict[str, Any]) -> Dict[str, 
+Any]:
+  core\x90_webui_agent_bridge.py:255:        SandboxWorker = import_class(DEPENDENCIES["x89"], 
+"x89_sandbox_runtime_x90", "SandboxWorker")
+  core\x90_webui_agent_bridge.py:256:        worker = SandboxWorker()
+> core\x90_webui_agent_bridge.py:257:        command = payload.get("command") or task
+> core\x90_webui_agent_bridge.py:258:        timeout = int(payload.get("timeout", 20))
+> core\x90_webui_agent_bridge.py:259:        cwd = str(payload.get("cwd", ""))
+  core\x90_webui_agent_bridge.py:260:        result = worker.execute(command=command, timeout_seconds=timeout, cwd=cwd)
+  core\x90_webui_agent_bridge.py:261:        return {
+  core\x90_webui_agent_bridge.py:262:            "flow": "sandbox",
+  core\x90_webui_agent_bridge.py:263:            "sandbox_result": result,
+  core\x90_webui_agent_bridge.py:316:
+  core\x90_webui_agent_bridge.py:317:    if args.cmd == "submit":
+  core\x90_webui_agent_bridge.py:318:        result = bridge.submit(task=args.task, mode=args.mode, 
+payload=parse_payload(args.payload))
+  core\x90_webui_agent_bridge.py:319:        print(json.dumps(result, ensure_ascii=False, indent=2))
+> core\x90_webui_agent_bridge.py:320:        return 0 if result.get("ok") else 1
+  core\x90_webui_agent_bridge.py:321:
+  core\x90_webui_agent_bridge.py:322:    if args.cmd == "status":
+  core\x90_webui_agent_bridge.py:323:        print(json.dumps(bridge.status(), ensure_ascii=False, indent=2))
+  core\x90_webui_agent_bridge.py:324:        return 0
+  core\x96_master_planner_reviewer.py:11:from typing import Any, Dict, List, Optional
+  core\x96_master_planner_reviewer.py:12:
+  core\x96_master_planner_reviewer.py:13:RELEASE = "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION"
+  core\x96_master_planner_reviewer.py:14:
+> core\x96_master_planner_reviewer.py:15:ROOT = Path(os.environ.get("AI_LOCAL_OS_ROOT", r"D:\openwebui"))
+  core\x96_master_planner_reviewer.py:16:RUNTIME = ROOT / "runtime"
+  core\x96_master_planner_reviewer.py:17:DOCS = ROOT / "docs"
+  core\x96_master_planner_reviewer.py:18:ROADMAP = DOCS / "ROADMAP.md"
+  core\x96_master_planner_reviewer.py:19:PLAN_DIR = RUNTIME / "x96_master_plans"
+  core\x96_master_planner_reviewer.py:113:        "steps": steps,
+  core\x96_master_planner_reviewer.py:114:        "master_review_policy": {
+  core\x96_master_planner_reviewer.py:115:            "master_must_review_report": True,
+  core\x96_master_planner_reviewer.py:116:            "pass_condition": "VERIFY ok and REPORT has evidence",
+> core\x96_master_planner_reviewer.py:117:            "fail_action": "retry step or use limited fallback then send 
+updated instruction to child worker",
+  core\x96_master_planner_reviewer.py:118:            "final_output_owner": "MASTER",
+  core\x96_master_planner_reviewer.py:119:        },
+  core\x96_master_planner_reviewer.py:120:        "roadmap_source": str(ROADMAP),
+  core\x96_master_planner_reviewer.py:121:        "roadmap_excerpt_present": bool(roadmap_excerpt.strip()),
+  core\x96_master_planner_reviewer.py:126:    safe_write_json(out, plan)
+  core\x96_master_planner_reviewer.py:127:    return plan
+  core\x96_master_planner_reviewer.py:128:
+  core\x96_master_planner_reviewer.py:129:def review_worker_report(task_id: str, worker_report: Dict[str, Any]) -> 
+Dict[str, Any]:
+> core\x96_master_planner_reviewer.py:130:    ok = bool(worker_report.get("ok"))
+> core\x96_master_planner_reviewer.py:131:    evidence = worker_report.get("evidence") or 
+worker_report.get("report_file") or worker_report.get("summary")
+  core\x96_master_planner_reviewer.py:132:    needs_retry = not ok
+> core\x96_master_planner_reviewer.py:133:    fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 
+0)
+  core\x96_master_planner_reviewer.py:134:
+  core\x96_master_planner_reviewer.py:135:    decision = "PASS" if ok and evidence else "RETRY"
+  core\x96_master_planner_reviewer.py:136:    if needs_retry and fallback_calls_used < DEFAULT_FALLBACK_LIMIT:
+  core\x96_master_planner_reviewer.py:137:        next_action = "ALLOW_LIMITED_FALLBACK_THEN_RETRY_CHILD"
+  core\x96_master_planner_reviewer.py:177:    }
+  core\x96_master_planner_reviewer.py:178:    review = review_worker_report(plan["task_id"], fake_worker_report)
+  core\x96_master_planner_reviewer.py:179:
+  core\x96_master_planner_reviewer.py:180:    result = {
+> core\x96_master_planner_reviewer.py:181:        "ok": bool(plan.get("ok") and review.get("ok")),
+  core\x96_master_planner_reviewer.py:182:        "release": RELEASE,
+> core\x96_master_planner_reviewer.py:183:        "plan_file": plan.get("plan_file"),
+> core\x96_master_planner_reviewer.py:184:        "review_file": review.get("review_file"),
+  core\x96_master_planner_reviewer.py:185:        "checks": {
+  core\x96_master_planner_reviewer.py:186:            "roadmap_exists": ROADMAP.exists(),
+> core\x96_master_planner_reviewer.py:187:            "has_scout_step": any(s.get("role") == "SCOUT" for s in 
+plan.get("steps", [])),
+> core\x96_master_planner_reviewer.py:188:            "has_master_review": bool(plan.get("master_review_policy", 
+{}).get("master_must_review_report")),
+> core\x96_master_planner_reviewer.py:189:            "fallback_limited": plan.get("limits", 
+{}).get("fallback_api_websearch_limit") == DEFAULT_FALLBACK_LIMIT,
+> core\x96_master_planner_reviewer.py:190:            "final_owner_master": plan.get("master_review_policy", 
+{}).get("final_output_owner") == "MASTER",
+  core\x96_master_planner_reviewer.py:191:        },
+  core\x96_master_planner_reviewer.py:192:    }
+  core\x96_master_planner_reviewer.py:193:
+  core\x96_master_planner_reviewer.py:194:    report = REPORT_DIR / "x96c_master_planner_reviewer_selftest.json"
+  core\x96_master_planner_reviewer.py:223:    else:
+  core\x96_master_planner_reviewer.py:224:        out = {"ok": False, "error": "unknown command"}
+  core\x96_master_planner_reviewer.py:225:
+  core\x96_master_planner_reviewer.py:226:    print(json.dumps(out, ensure_ascii=False, indent=2))
+> core\x96_master_planner_reviewer.py:227:    return 0 if out.get("ok") else 1
+  core\x96_master_planner_reviewer.py:228:
+  core\x96_master_planner_reviewer.py:229:if __name__ == "__main__":
+  core\x96_master_planner_reviewer.py:230:    raise SystemExit(main())
+
+
+

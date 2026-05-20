@@ -1,0 +1,30 @@
+﻿[2026-05-21T02:20:39.0799067+07:00] manifest runner start ShareDir=D:\openwebui\runtime\share_logs TempDir=D:\openwebui\runtime\temp
+[2026-05-21T02:20:39.2658922+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:20:44.3273604+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:20:49.3559297+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:20:54.3849952+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:20:59.4224547+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:04.4571815+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:09.5104470+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:14.5420956+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:19.5679305+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:24.5999249+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:29.6284623+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:34.6485473+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:39.6952100+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:44.7222531+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:49.7521932+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:54.7896713+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:21:59.8257398+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:04.8528549+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:09.8986072+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:14.9358948+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:19.9683982+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:24.9951865+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:30.0208647+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:35.0506137+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:40.0932801+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:45.1218850+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:50.1559068+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T02:22:55.1846259+07:00] manifest updated latest=x98b_guard_report.json recent=15
+
