@@ -5671,4 +5671,922 @@ At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
  
 branch 'main' set up to track 'origin/main'.
 [2026-05-21T02:22:49.7605311+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   x99b_logsync_check_log.txt
+	modified:   x99b_logsync_runtime_log.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	latest_manifest.json
+	x97e7_busmessage_contract_scan.txt
+	x99c_logsync_manifest_apply_log.txt
+	x99c_logsync_manifest_check_log.txt
+	x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:23:02.3515275+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:23:15.1601395+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:23:27.7549797+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:23:40.4475654+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:23:53.0339523+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:24:05.8323501+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:24:18.4908982+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:24:31.0423472+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:24:43.6607085+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:24:56.1070170+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:25:08.9260745+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:25:21.6461345+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:25:34.2263416+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:25:46.7325929+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:25:59.4326172+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:26:11.9818910+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:26:24.5526806+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:26:37.0828666+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:26:49.6934069+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:27:02.1375276+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:27:14.6406283+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:27:27.3135915+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:27:39.7278789+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:27:52.2358606+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:28:04.7941632+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:28:17.5128702+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:28:30.2844982+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:28:42.9217392+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:28:55.3863890+07:00] pushed changes
+[2026-05-21T02:29:01.8361355+07:00] X99B sync loop started. root=D:\openwebui branch=main interval=10
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_apply_log.txt
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	x99b_logsync_cleanup_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:29:04.6382485+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_apply_log.txt
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	x99b_logsync_cleanup_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:29:17.3852177+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_apply_log.txt
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	x99b_logsync_cleanup_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:29:29.9428135+07:00] pushed changes
+git : fatal: pathspec '*.log' did not match any files
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:57 char:5
++     git -C $ShareDir add README.md .gitignore *.txt *.log *.json 2>&1 ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (fatal: pathspec...match any files:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   latest_manifest.json
+	modified:   x99b_logsync_apply_log.txt
+	modified:   x99b_logsync_runtime_log.txt
+	modified:   x99c_manifest_runtime_log.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	x99b_logsync_cleanup_log.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git : Everything up-to-date
+At D:\openwebui\runtime\logsync_state\x99b_logsync_runner.ps1:61 char:7
++       git -C $ShareDir push -u origin $Branch 2>&1 | Out-File $SyncLo ...
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Everything up-to-date:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+branch 'main' set up to track 'origin/main'.
+[2026-05-21T02:29:42.7312132+07:00] pushed changes
 

@@ -1,115 +1,115 @@
 ﻿{
     "schema":  "ai-local-os-log-manifest-v1",
-    "generated_at_utc":  "2026-05-20T19:23:05.2382333Z",
-    "generated_at_local":  "2026-05-21T02:23:05.2392197+07:00",
+    "generated_at_utc":  "2026-05-20T19:29:52.8709011Z",
+    "generated_at_local":  "2026-05-21T02:29:52.8709011+07:00",
     "share_dir":  "D:\\openwebui\\runtime\\share_logs",
-    "latest":  "x98b_guard_report.json",
+    "latest":  "x93c_inspect_full.txt",
     "recent_count":  15,
     "recent":  [
                    {
-                       "path":  "x98b_guard_report.json",
-                       "name":  "x98b_guard_report.json",
+                       "path":  "x93c_inspect_full.txt",
+                       "name":  "x93c_inspect_full.txt",
                        "kind":  "log",
-                       "size_bytes":  5,
-                       "modified_utc":  "2026-05-20T19:23:00.1704519Z"
+                       "size_bytes":  0,
+                       "modified_utc":  "2026-05-20T19:29:52.8508319Z"
                    },
                    {
-                       "path":  "x97a_scan_summary.json",
-                       "name":  "x97a_scan_summary.json",
-                       "kind":  "scan",
-                       "size_bytes":  3602,
-                       "modified_utc":  "2026-05-20T19:23:00.1704519Z"
-                   },
-                   {
-                       "path":  "x93_preflight_20260520_190555.json",
-                       "name":  "x93_preflight_20260520_190555.json",
+                       "path":  "x93c_generator_log.txt",
+                       "name":  "x93c_generator_log.txt",
                        "kind":  "log",
-                       "size_bytes":  202,
-                       "modified_utc":  "2026-05-20T19:23:00.1684590Z"
+                       "size_bytes":  104,
+                       "modified_utc":  "2026-05-20T19:29:52.8488426Z"
                    },
                    {
-                       "path":  "x93_preflight_20260520_190542.json",
-                       "name":  "x93_preflight_20260520_190542.json",
+                       "path":  "x93c_docker_ps_a.txt",
+                       "name":  "x93c_docker_ps_a.txt",
                        "kind":  "log",
-                       "size_bytes":  203,
-                       "modified_utc":  "2026-05-20T19:23:00.1674522Z"
+                       "size_bytes":  3252,
+                       "modified_utc":  "2026-05-20T19:29:52.8468405Z"
                    },
                    {
-                       "path":  "x93_live_response.json",
-                       "name":  "x93_live_response.json",
+                       "path":  "x93c_docker_ps.txt",
+                       "name":  "x93c_docker_ps.txt",
+                       "kind":  "log",
+                       "size_bytes":  2641,
+                       "modified_utc":  "2026-05-20T19:29:52.8438426Z"
+                   },
+                   {
+                       "path":  "x93c_docker_events.txt",
+                       "name":  "x93c_docker_events.txt",
+                       "kind":  "log",
+                       "size_bytes":  529185,
+                       "modified_utc":  "2026-05-20T19:29:52.8408387Z"
+                   },
+                   {
+                       "path":  "x93c_curl_live.txt",
+                       "name":  "x93c_curl_live.txt",
                        "kind":  "runtime",
-                       "size_bytes":  14281,
-                       "modified_utc":  "2026-05-20T19:23:00.1654563Z"
+                       "size_bytes":  2609,
+                       "modified_utc":  "2026-05-20T19:29:52.8064540Z"
                    },
                    {
-                       "path":  "x93c_preflight_20260520_220324.json",
-                       "name":  "x93c_preflight_20260520_220324.json",
-                       "kind":  "log",
-                       "size_bytes":  133,
-                       "modified_utc":  "2026-05-20T19:23:00.1634615Z"
-                   },
-                   {
-                       "path":  "x93c_preflight_20260520_220158.json",
-                       "name":  "x93c_preflight_20260520_220158.json",
-                       "kind":  "log",
-                       "size_bytes":  133,
-                       "modified_utc":  "2026-05-20T19:23:00.1618544Z"
-                   },
-                   {
-                       "path":  "x93c_preflight_20260520_215919.json",
-                       "name":  "x93c_preflight_20260520_215919.json",
-                       "kind":  "log",
-                       "size_bytes":  133,
-                       "modified_utc":  "2026-05-20T19:23:00.1582634Z"
-                   },
-                   {
-                       "path":  "x93c_preflight_20260520_215443.json",
-                       "name":  "x93c_preflight_20260520_215443.json",
-                       "kind":  "log",
-                       "size_bytes":  133,
-                       "modified_utc":  "2026-05-20T19:23:00.1562616Z"
-                   },
-                   {
-                       "path":  "x93c_preflight_20260520_215319.json",
-                       "name":  "x93c_preflight_20260520_215319.json",
-                       "kind":  "log",
-                       "size_bytes":  135,
-                       "modified_utc":  "2026-05-20T19:23:00.1552709Z"
-                   },
-                   {
-                       "path":  "x99c_manifest_runtime_log.txt",
-                       "name":  "x99c_manifest_runtime_log.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  2771,
-                       "modified_utc":  "2026-05-20T19:23:00.1521807Z"
-                   },
-                   {
-                       "path":  "x99c_logsync_manifest_check_log.txt",
-                       "name":  "x99c_logsync_manifest_check_log.txt",
-                       "kind":  "check",
-                       "size_bytes":  5768,
-                       "modified_utc":  "2026-05-20T19:23:00.1496197Z"
-                   },
-                   {
-                       "path":  "x99c_logsync_manifest_apply_log.txt",
-                       "name":  "x99c_logsync_manifest_apply_log.txt",
+                       "path":  "x93c_apply_log.txt",
+                       "name":  "x93c_apply_log.txt",
                        "kind":  "apply",
-                       "size_bytes":  251,
-                       "modified_utc":  "2026-05-20T19:23:00.1473749Z"
+                       "size_bytes":  2426,
+                       "modified_utc":  "2026-05-20T19:29:52.8048459Z"
                    },
                    {
-                       "path":  "x99b_test_sync.txt",
-                       "name":  "x99b_test_sync.txt",
+                       "path":  "x93c_after_restart_master_ai.txt",
+                       "name":  "x93c_after_restart_master_ai.txt",
                        "kind":  "log",
-                       "size_bytes":  17,
-                       "modified_utc":  "2026-05-20T19:23:00.1463708Z"
+                       "size_bytes":  7201,
+                       "modified_utc":  "2026-05-20T19:29:52.8024581Z"
                    },
                    {
-                       "path":  "x99b_logsync_runtime_log.txt",
-                       "name":  "x99b_logsync_runtime_log.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  213999,
-                       "modified_utc":  "2026-05-20T19:23:00.1453755Z"
+                       "path":  "x93c_after_restart_docker_ps.txt",
+                       "name":  "x93c_after_restart_docker_ps.txt",
+                       "kind":  "log",
+                       "size_bytes":  2641,
+                       "modified_utc":  "2026-05-20T19:29:52.7994070Z"
+                   },
+                   {
+                       "path":  "x93c_after_restart_apply_log.txt",
+                       "name":  "x93c_after_restart_apply_log.txt",
+                       "kind":  "apply",
+                       "size_bytes":  2426,
+                       "modified_utc":  "2026-05-20T19:29:52.7971982Z"
+                   },
+                   {
+                       "path":  "x93c_after_irm_fail_master_logs.txt",
+                       "name":  "x93c_after_irm_fail_master_logs.txt",
+                       "kind":  "error",
+                       "size_bytes":  7201,
+                       "modified_utc":  "2026-05-20T19:29:52.7938364Z"
+                   },
+                   {
+                       "path":  "x93b_generator_log.txt",
+                       "name":  "x93b_generator_log.txt",
+                       "kind":  "log",
+                       "size_bytes":  224,
+                       "modified_utc":  "2026-05-20T19:29:52.7918140Z"
+                   },
+                   {
+                       "path":  "x93b_dir_check.txt",
+                       "name":  "x93b_dir_check.txt",
+                       "kind":  "check",
+                       "size_bytes":  701,
+                       "modified_utc":  "2026-05-20T19:29:52.7897881Z"
+                   },
+                   {
+                       "path":  "x93b_apply_log.txt",
+                       "name":  "x93b_apply_log.txt",
+                       "kind":  "apply",
+                       "size_bytes":  1928,
+                       "modified_utc":  "2026-05-20T19:29:52.7867306Z"
+                   },
+                   {
+                       "path":  "x92_live_error_context.txt",
+                       "name":  "x92_live_error_context.txt",
+                       "kind":  "error",
+                       "size_bytes":  11287,
+                       "modified_utc":  "2026-05-20T19:29:52.7847563Z"
                    }
                ],
     "raw_base":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/"
