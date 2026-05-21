@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x76_local_patch_builder_generator",
-  "stage": "apply_check_[REDACTED]",
+  "stage": "apply_check_pass",
   "checks": [
     {
       "type": "ps_syntax",
@@ -38,24 +38,24 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x76_local_patch_builder_generator\\apply_x76_local_patch_builder_generator.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] X76 apply placeholder\n",
+    "stdout": "[PASS] X76 apply placeholder\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x76_local_patch_builder_generator\\x76_local_patch_builder_generator_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] X76 check placeholder\n",
+    "stdout": "[PASS] X76 check placeholder\n",
     "stderr": ""
   }
 }

@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x74_autonomous_recovery_orchestrator_foundation",
-  "stage": "verify_only_[REDACTED]",
+  "stage": "verify_only_pass",
   "checks": [
     {
       "type": "ps_syntax",

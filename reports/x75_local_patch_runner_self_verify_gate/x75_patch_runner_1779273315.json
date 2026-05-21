@@ -83,19 +83,19 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\apply_x91_master_ai_addtask_bridge.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] X91 master_ai add_task bridge files applied.\n[INFO] Runtime: D:\\openwebui\\core\\x91_master_ai_addtask_bridge.py\n[INFO] Adapter: D:\\openwebui\\core\\x91_addtask_bridge_adapter.py\n",
+    "stdout": "[PASS] X91 master_ai add_task bridge files applied.\n[INFO] Runtime: D:\\openwebui\\core\\x91_master_ai_addtask_bridge.py\n[INFO] Adapter: D:\\openwebui\\core\\x91_addtask_bridge_adapter.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\x91_master_ai_addtask_bridge_check.ps1"
     ],
@@ -103,5 +103,5 @@
     "stdout": "",
     "stderr": "Traceback (most recent call last):\n  File \"D:\\openwebui\\core\\x91_addtask_bridge_adapter.py\", line 111, in <module>\n    data = json.loads(args.payload)\n  File \"C:\\Users\\khach\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"C:\\Users\\khach\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\khach\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\njson.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n[FAIL] adapter submit failed\nAt D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\x91_master_ai_addtask_bridge_check.ps1:29 char:3\n+   throw \"[FAIL] adapter submit failed\"\n+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: ([FAIL] adapter submit failed:String) [], RuntimeException\n    + FullyQualifiedErrorId : [FAIL] adapter submit failed\n \n"
   },
-  "false_[REDACTED]_guard": true
+  "false_pass_guard": true
 }
