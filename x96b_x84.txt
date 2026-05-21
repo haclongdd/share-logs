@@ -80,7 +80,7 @@ def decompose(task: str) -> Dict[str, Any]:
         steps.append(make_step(idx, "create_safe_patch", "Generate a small patch using the local patch generator/builder.", "Changes must go through _patch_inbox and X75D.", True, "python_component")); idx += 1
         steps.append(make_step(idx, "verify_apply_check", "Run X75D to verify, apply, and check the patch.", "No patch is accepted without syntax and check gate.")); idx += 1
 
-    if any(k in low for k in ["test", "check", "verify", "kiá»ƒm tra", "pass"]):
+    if any(k in low for k in ["test", "check", "verify", "kiá»ƒm tra", "[REDACTED]"]):
         steps.append(make_step(idx, "run_targeted_check", "Run the smallest command that proves the suspected component works.", "Testing must be focused and repeatable.")); idx += 1
 
     if any(k in low for k in ["agent", "chia viá»‡c", "multi", "swarm", "worker"]):
@@ -92,7 +92,7 @@ def decompose(task: str) -> Dict[str, Any]:
     if len(steps) == 1:
         steps.append(make_step(idx, "make_simple_plan", "Break the request into inspect, change, test, and report.", "Default safe path for unknown work.")); idx += 1
 
-    steps.append(make_step(idx, "write_final_report", "Save a clear report with what changed, what passed, and what remains.", "Keep checkpoint clean for the next step."))
+    steps.append(make_step(idx, "write_final_report", "Save a clear report with what changed, what [REDACTED]ed, and what remains.", "Keep checkpoint clean for the next step."))
 
     lessons = load_lessons()
     return {
@@ -130,7 +130,7 @@ def cmd_plan(args: argparse.Namespace) -> Dict[str, Any]:
 
 def latest_plan() -> Path | None:
     ensure_dirs()
-    items = sorted(PLAN_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+    items = sorted(PLAN_DIR.glob("*.json"), [REDACTED]=lambda p: p.stat().st_mtime, reverse=True)
     return items[0] if items else None
 
 
@@ -143,7 +143,7 @@ def run_cmd(cmd: List[str], timeout: int = 180) -> Dict[str, Any]:
         "returncode": proc.returncode,
         "stdout": proc.stdout,
         "stderr": proc.stderr,
-        "false_pass_hits": hits,
+        "false_[REDACTED]_hits": hits,
         "ok": proc.returncode == 0 and not hits,
     }
 
