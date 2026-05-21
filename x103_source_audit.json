@@ -1,0 +1,14 @@
+﻿{
+  "release": "X103_MASTER_REVIEW_RUNTIME_HANDOFF",
+  "root": "D:\\openwebui",
+  "dispatcher": "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+  "x96": "D:\\openwebui\\core\\x96_master_planner_reviewer.py",
+  "actions": [],
+  "ok": true,
+  "checks": {
+    "x103_import_present": true,
+    "x96_review_target_present": true,
+    "master_review_result_present": true,
+    "x96_review_worker_report_present": true
+  }
+}
