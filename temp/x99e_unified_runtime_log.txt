@@ -8,3 +8,9 @@
 [2026-05-21T13:17:00.569952Z] PUSH OK changed=4 latest_commit=x99e debug sync 2026-05-21 20:16:57
 [2026-05-21T13:17:31.707743Z] MANIFEST latest=temp/x99c_manifest_runtime_log.txt total=603 changed=4
 [2026-05-21T13:17:35.262754Z] PUSH OK changed=4 latest_commit=x99e debug sync 2026-05-21 20:17:31
+[2026-05-21T13:18:06.375748Z] MANIFEST latest=temp/x99c_manifest_runtime_log.txt total=603 changed=4
+[2026-05-21T13:18:09.717418Z] PUSH OK changed=4 latest_commit=x99e debug sync 2026-05-21 20:18:06
+[2026-05-21T13:18:56.199805Z] START X99E_UNIFIED_DEBUG_SYNC_AUTOPUSH root=D:\openwebui share=D:\openwebui\runtime\share_logs interval=30 once=True
+[2026-05-21T13:18:57.131117Z] MANIFEST latest=temp/x99d_logsync_runtime_log.txt total=603 changed=7
+[2026-05-21T13:18:57.131809Z] DRY RUN: changed=7
+[2026-05-21T13:19:52.451504Z] START X99E_UNIFIED_DEBUG_SYNC_AUTOPUSH root=D:\openwebui share=D:\openwebui\runtime\share_logs interval=30 once=False
