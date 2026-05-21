@@ -1,0 +1,697 @@
+{
+  "ok": true,
+  "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+  "candidate_count": 32,
+  "candidates": [
+    {
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\_phase2_control\\openwebui_tool_run_task_auto_result.py",
+      "hits": [
+        {
+          "line": 34,
+          "text": "            BRIDGE + \"/add_task\","
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\core\\master_ai_bridge.py",
+      "hits": [
+        {
+          "line": 183,
+          "text": "@app.route(\"/add_task\", methods=[\"GET\", \"POST\"])"
+        },
+        {
+          "line": 184,
+          "text": "def add_task():"
+        },
+        {
+          "line": 194,
+          "text": "        write_json(DIAG / \"phaseX1g_add_task_error.json\", err)"
+        }
+      ],
+      "hit_count": 3,
+      "has_flask": true,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\_phase2_control\\openwebui_tool_run_task_auto_result.py",
+      "hits": [
+        {
+          "line": 34,
+          "text": "            BRIDGE + \"/add_task\","
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\core\\master_ai_bridge.py",
+      "hits": [
+        {
+          "line": 183,
+          "text": "@app.route(\"/add_task\", methods=[\"GET\", \"POST\"])"
+        },
+        {
+          "line": 184,
+          "text": "def add_task():"
+        },
+        {
+          "line": 194,
+          "text": "        write_json(DIAG / \"phaseX1g_add_task_error.json\", err)"
+        }
+      ],
+      "hit_count": 3,
+      "has_flask": true,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\_cleanup_archive\\x12s_20260519_085753\\_patch_inbox_folders\\x12o_tool_execute_master_ai_alias\\x12o_tool_execute_master_ai_alias_apply.py",
+      "hits": [
+        {
+          "line": 26,
+          "text": "TOOL_CODE = 'import requests\\nimport time\\nimport json\\nfrom typing import Any\\n\\n\\nclass Tools:\\n    def __init__(self):\\n        # Runs inside the OpenWebUI container. master_ai is Docker DNS alias.\\n        self.bridge_url = \"http://mast"
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\_cleanup_archive\\x12s_20260519_085753\\runtime_smoke_tests\\x12r_webui_bridge_e2e_smoke.py",
+      "hits": [
+        {
+          "line": 60,
+          "text": "        (\"add_task(task=...) \", lambda: tool.add_task(task=TASK)),"
+        },
+        {
+          "line": 62,
+          "text": "        (\"add_task(text=...) \", lambda: tool.add_task(text=TASK)),"
+        },
+        {
+          "line": 63,
+          "text": "        (\"add_task(query=...) \", lambda: tool.add_task(query=TASK)),"
+        }
+      ],
+      "hit_count": 3,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\_cleanup_archive\\x12s_20260519_085753\\x12k_master_controller_list_files_fix_check.py",
+      "hits": [
+        {
+          "line": 26,
+          "text": "out1 = t.add_task({\"type\":\"list_files\", \"project_id\":\"v4_1\"})"
+        },
+        {
+          "line": 31,
+          "text": "out2 = t.add_task(\"liá»‡t kÃª cÃ¡c file trong project v4_1\")"
+        }
+      ],
+      "hit_count": 2,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\_cleanup_archive\\x12s_20260519_085753\\x12o_tool_execute_master_ai_alias_apply.py",
+      "hits": [
+        {
+          "line": 26,
+          "text": "TOOL_CODE = 'import requests\\nimport time\\nimport json\\nfrom typing import Any\\n\\n\\nclass Tools:\\n    def __init__(self):\\n        # Runs inside the OpenWebUI container. master_ai is Docker DNS alias.\\n        self.bridge_url = \"http://mast"
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\_phase2_control\\openwebui_tool_run_task_auto_result.py",
+      "hits": [
+        {
+          "line": 16,
+          "text": "            BRIDGE + \"/add_task\","
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\backups\\phase2a_20260516_222203\\core__master_ai_bridge.py",
+      "hits": [
+        {
+          "line": 38,
+          "text": "@app.route('/add_task', methods=['POST'])"
+        },
+        {
+          "line": 39,
+          "text": "def add_task():"
+        }
+      ],
+      "hit_count": 2,
+      "has_flask": true,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\backups\\phase2a_full_20260516_222736\\core__master_ai_bridge.py",
+      "hits": [
+        {
+          "line": 38,
+          "text": "@app.route('/add_task', methods=['POST'])"
+        },
+        {
+          "line": 39,
+          "text": "def add_task():"
+        }
+      ],
+      "hit_count": 2,
+      "has_flask": true,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\master_ai_bridge.py",
+      "hits": [
+        {
+          "line": 28,
+          "text": "import sys as _webui_bridge_sys  # WEBUI_ADD_TASK_BRIDGE_V1_1_PATCHED"
+        },
+        {
+          "line": 31,
+          "text": "from webui_add_task_bridge_v1 import handle_add_task_payload"
+        },
+        {
+          "line": 196,
+          "text": "@app.route(\"/add_task\", methods=[\"GET\", \"POST\"])"
+        },
+        {
+          "line": 197,
+          "text": "def add_task():"
+        },
+        {
+          "line": 200,
+          "text": "        from core.x15d_webui_addtask_agentcon_attach import webui_add_task_bridge"
+        },
+        {
+          "line": 208,
+          "text": "        _x15d_result = webui_add_task_bridge(payload)"
+        },
+        {
+          "line": 231,
+          "text": "    # WEBUI_ADD_TASK_BRIDGE_V1_1_PATCHED"
+        },
+        {
+          "line": 250,
+          "text": "    return jsonify(handle_add_task_payload(data))"
+        },
+        {
+          "line": 293,
+          "text": "    @app.route('/x16/add_task', methods=['POST'])"
+        },
+        {
+          "line": 294,
+          "text": "    def x16_add_task():"
+        },
+        {
+          "line": 307,
+          "text": "# Safe helper for Flask add_task routes to call, without breaking old code."
+        }
+      ],
+      "hit_count": 11,
+      "has_flask": true,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\webui_add_task_bridge_v1.py",
+      "hits": [
+        {
+          "line": 1,
+          "text": "﻿# WEBUI_ADD_TASK_BRIDGE_V1_3"
+        },
+        {
+          "line": 2,
+          "text": "# Smart /add_task bridge for OpenWebUI old tool path."
+        },
+        {
+          "line": 17,
+          "text": "BRIDGE = \"WEBUI_ADD_TASK_BRIDGE_V1\""
+        },
+        {
+          "line": 18,
+          "text": "BRIDGE_PATCH = \"WEBUI_ADD_TASK_BRIDGE_V1_3\""
+        },
+        {
+          "line": 228,
+          "text": "def handle_add_task_payload(payload: Any) -> Dict[str, Any]:"
+        },
+        {
+          "line": 231,
+          "text": "        return _json_response(False, action=\"empty_command\", error=\"No command text found in add_task payload\")"
+        }
+      ],
+      "hit_count": 6,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x13_consolidated_planner_agent.py",
+      "hits": [
+        {
+          "line": 2,
+          "text": "# Purpose: stable external planner/decomposer on top of already-working /add_task runtime."
+        },
+        {
+          "line": 69,
+          "text": "        add(\"Execute through stable runtime\", \"Use the existing master_ai /add_task flow for execution.\")"
+        },
+        {
+          "line": 87,
+          "text": "            \"Execution remains delegated to the stable /add_task runtime after planning.\","
+        }
+      ],
+      "hit_count": 3,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x13d_plan_executor.py",
+      "hits": [
+        {
+          "line": 13,
+          "text": "BRIDGE_URL = \"http://localhost:5000/add_task\""
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x13e_native_step_binder.py",
+      "hits": [
+        {
+          "line": 3,
+          "text": "# otherwise delegates to stable master_ai /add_task runtime."
+        },
+        {
+          "line": 20,
+          "text": "BRIDGE_URL = \"http://localhost:5000/add_task\""
+        },
+        {
+          "line": 75,
+          "text": "def post_add_task(task_text: str, timeout=120):"
+        },
+        {
+          "line": 128,
+          "text": "            step_result[\"execution_mode\"] = \"bridge_add_task\""
+        },
+        {
+          "line": 133,
+          "text": "                bridge = post_add_task(task_sent)"
+        }
+      ],
+      "hit_count": 5,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x13y_live_api_endpoint_shim.py",
+      "hits": [
+        {
+          "line": 103,
+          "text": "        \"routes\": [\"/health\", \"/add_task\", \"/run_task\"]"
+        },
+        {
+          "line": 125,
+          "text": "            self._send(404, {\"ok\": False, \"error\": \"not found\", \"routes\": [\"/health\", \"/add_task\", \"/run_task\"]})"
+        },
+        {
+          "line": 129,
+          "text": "        if path not in [\"/add_task\", \"/run_task\"]:"
+        },
+        {
+          "line": 159,
+          "text": "        print(json.dumps({\"ok\": True, \"release\": RELEASE, \"entrypoint\": __file__, \"routes\": [\"/health\", \"/add_task\", \"/run_task\"]}, ensure_ascii=False, indent=2))"
+        }
+      ],
+      "hit_count": 4,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x14_bridge_adapter.py",
+      "hits": [
+        {
+          "line": 2,
+          "text": "# Converts /add_task task text into X14 orchestrator result dict."
+        },
+        {
+          "line": 25,
+          "text": "        \"bridge\": \"WEBUI_ADD_TASK_BRIDGE_V1\","
+        }
+      ],
+      "hit_count": 2,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x15c_agentcon_status_bridge.py",
+      "hits": [
+        {
+          "line": 153,
+          "text": "        \"flow\": [\"WebUI/add_task\", \"x15c bridge\", \"agent_con --task-file\", \"ollama\", \"report\"],"
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x15d_webui_addtask_agentcon_attach.py",
+      "hits": [
+        {
+          "line": 3,
+          "text": "# Safe adapter: WebUI /add_task -> agent_con task-file flow -> status/report files."
+        },
+        {
+          "line": 89,
+          "text": "def run_agentcon_task(task: str, source: str = \"webui_add_task\", wait: bool = True) -> Dict[str, Any]:"
+        },
+        {
+          "line": 105,
+          "text": "        \"flow\": [\"WebUI/add_task\", \"X15D adapter\", \"agent_con --task-file\", \"ollama\", \"report\"],"
+        },
+        {
+          "line": 148,
+          "text": "def webui_add_task_bridge(data: Any = None, task: str | None = None) -> Dict[str, Any]:"
+        },
+        {
+          "line": 157,
+          "text": "    return run_agentcon_task(task, source=\"webui_add_task\", wait=True)"
+        },
+        {
+          "line": 185,
+          "text": "        print(json.dumps(webui_add_task_bridge(task=args.task), ensure_ascii=False, indent=2))"
+        }
+      ],
+      "hit_count": 6,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x16_realtime_execution_stream.py",
+      "hits": [
+        {
+          "line": 3,
+          "text": "# Safe standalone bridge: WebUI/add_task -> x16 -> agent_con --task-file -> ollama/report"
+        },
+        {
+          "line": 112,
+          "text": "    append_log(task_id, \"Master received task from WebUI/add_task\")"
+        },
+        {
+          "line": 169,
+          "text": "<h2>X16 AI Local OS Live Status</h2><p>Flow: WebUI/add_task → x16 → agent_con → ollama → report</p>"
+        }
+      ],
+      "hit_count": 3,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x16_realtime_execution_stream.x16abcdef.tmp.py",
+      "hits": [
+        {
+          "line": 3,
+          "text": "# Safe standalone bridge: WebUI/add_task -> x16 -> agent_con --task-file -> ollama/report"
+        },
+        {
+          "line": 131,
+          "text": "    append_log(task_id, \"Master received task from WebUI/add_task\")"
+        },
+        {
+          "line": 188,
+          "text": "<h2>X16 AI Local OS Live Status</h2><p>Flow: WebUI/add_task → x16 → agent_con → ollama → report</p>"
+        }
+      ],
+      "hit_count": 3,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x16_realtime_runner.py",
+      "hits": [
+        {
+          "line": 95,
+          "text": "        'flow': ['WebUI/add_task', 'master_ai_bridge', 'x16 realtime runner', 'agent_con --task-file', 'ollama', 'final report'],"
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x16_status_server.py",
+      "hits": [
+        {
+          "line": 25,
+          "text": "<p>Flow: WebUI/add_task → master_ai_bridge → x16 → agent_con → ollama → report</p>"
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x44_e2e_webui_multistep_test.py",
+      "hits": [
+        {
+          "line": 4,
+          "text": "and optionally probes the local /add_task bridge without mutating agent_con.py."
+        },
+        {
+          "line": 55,
+          "text": "def post_add_task(url: str, task_text: str, timeout: int = 15) -> Dict[str, Any]:"
+        },
+        {
+          "line": 67,
+          "text": "        return {\"ok\": False, \"warning\": \"add_task_probe_unavailable\", \"error\": str(e)}"
+        },
+        {
+          "line": 72,
+          "text": "    ap.add_argument(\"--add-task-url\", default=\"http://localhost:5000/add_task\")"
+        },
+        {
+          "line": 73,
+          "text": "    ap.add_argument(\"--strict-add-task\", action=\"store_true\")"
+        },
+        {
+          "line": 116,
+          "text": "    add_task_probe = post_add_task(args.add_task_url, \"x44 smoke: legacy add_task path should remain available\")"
+        },
+        {
+          "line": 117,
+          "text": "    final[\"tests\"][\"add_task_probe\"] = add_task_probe"
+        },
+        {
+          "line": 118,
+          "text": "    if args.strict_add_task and not add_task_probe.get(\"ok\"):"
+        },
+        {
+          "line": 119,
+          "text": "        failures.append(\"strict add_task probe failed: \" + str(add_task_probe.get(\"error\")))"
+        }
+      ],
+      "hit_count": 9,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x91_addtask_bridge_adapter.py",
+      "hits": [
+        {
+          "line": 57,
+          "text": "def handle_add_task_payload(payload: Dict[str, Any]) -> Dict[str, Any]:"
+        },
+        {
+          "line": 103,
+          "text": "    parser = argparse.ArgumentParser(description=\"X91 add_task bridge adapter\")"
+        },
+        {
+          "line": 112,
+          "text": "        print(json.dumps(handle_add_task_payload(data), ensure_ascii=False, indent=2))"
+        }
+      ],
+      "hit_count": 3,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\core\\x91_master_ai_addtask_bridge.py",
+      "hits": [
+        {
+          "line": 61,
+          "text": "        if \"add_task\" in lowered or \"/add_task\" in lowered or \"add-task\" in lowered:"
+        },
+        {
+          "line": 72,
+          "text": "        if \"add_task\" in lower or \"/add_task\" in lower or \"add-task\" in lower:"
+        },
+        {
+          "line": 140,
+          "text": "            \"# To route /add_task into agent runtime, call:\\n\""
+        },
+        {
+          "line": 141,
+          "text": "            \"#   from core.x91_addtask_bridge_adapter import handle_add_task_payload\\n\""
+        },
+        {
+          "line": 142,
+          "text": "            \"#   result = handle_add_task_payload(payload)\\n\""
+        },
+        {
+          "line": 185,
+          "text": "    parser = argparse.ArgumentParser(description=\"X91 safe master_ai /add_task attach helper\")"
+        }
+      ],
+      "hit_count": 6,
+      "has_flask": true,
+      "has_fastapi": true,
+      "already_attached": true
+    },
+    {
+      "path": "D:\\openwebui\\data\\openwebui_tool_run_task_auto_result.py",
+      "hits": [
+        {
+          "line": 16,
+          "text": "            BRIDGE + \"/add_task\","
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\phase3a_apply_planner_agent.py",
+      "hits": [
+        {
+          "line": 48,
+          "text": "            \"run\", \"execute\", \"chạy\", \"tool\", \"queue\", \"task\", \"add_task\","
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\tools\\execute_master_ai_tool.py",
+      "hits": [
+        {
+          "line": 22,
+          "text": "This tool intentionally uses the old /add_task path."
+        },
+        {
+          "line": 32,
+          "text": "        self.add_task_urls = ["
+        },
+        {
+          "line": 33,
+          "text": "            os.getenv(\"MASTER_AI_ADD_TASK_URL\", \"http://master_ai:5000/add_task\"),"
+        },
+        {
+          "line": 34,
+          "text": "            \"http://host.docker.internal:5000/add_task\","
+        },
+        {
+          "line": 35,
+          "text": "            \"http://localhost:5000/add_task\","
+        },
+        {
+          "line": 39,
+          "text": "        \"\"\"Execute an AI Local OS task through the legacy master_ai /add_task bridge. Use this for project/file actions such as listing project files, backing up a project, or fixing syntax errors. Parameter: task is the user's full natural"
+        },
+        {
+          "line": 44,
+          "text": "        for url in self.add_task_urls:"
+        },
+        {
+          "line": 56,
+          "text": "        return json.dumps({\"ok\": False, \"binding\": \"WEBUI_EXECUTE_MASTER_AI_BINDING_V1\", \"error\": \"all add_task urls failed\", \"attempts\": errors}, ensure_ascii=False, indent=2)"
+        }
+      ],
+      "hit_count": 8,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\tools\\master_ai_controller.py",
+      "hits": [
+        {
+          "line": 27,
+          "text": "    def add_task(self, task: Any) -> str:"
+        }
+      ],
+      "hit_count": 1,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    },
+    {
+      "path": "D:\\openwebui\\tools\\x12q_ai_local_os_bridge_tool.py",
+      "hits": [
+        {
+          "line": 21,
+          "text": "Safe reconnect layer: forwards natural-language tasks to master_ai /add_task."
+        },
+        {
+          "line": 31,
+          "text": "BRIDGE_URL = \"http://localhost:5000/add_task\""
+        },
+        {
+          "line": 38,
+          "text": "    def add_task(self, task: str = \"\", text: str = \"\", query: str = \"\") -> str:"
+        },
+        {
+          "line": 47,
+          "text": "        \"\"\"Alias for add_task, friendlier for OpenWebUI tool calling.\"\"\""
+        }
+      ],
+      "hit_count": 4,
+      "has_flask": false,
+      "has_fastapi": false,
+      "already_attached": false
+    }
+  ],
+  "adapter_file": "D:\\openwebui\\core\\x91_addtask_bridge_adapter.py",
+  "adapter_exists": true
+}

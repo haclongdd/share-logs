@@ -1,0 +1,129 @@
+{
+  "ok": true,
+  "release": "X90_WEBUI_AGENT_BRIDGE",
+  "request_id": "x90req_1779290525886_9c392e7b",
+  "mode": "agent",
+  "task": "x93e checkpoint freeze smoke",
+  "result": {
+    "flow": "agent_dispatcher",
+    "seed": {
+      "ok": true,
+      "seed_message": "x86_1779290525992_19a59522",
+      "task": "x93e checkpoint freeze smoke"
+    },
+    "cycles": [
+      {
+        "ok": true,
+        "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+        "processed": [
+          {
+            "message_id": "x86_1779290525992_19a59522",
+            "role": "DEBUG",
+            "task": "x93e checkpoint freeze smoke",
+            "input_payload": {
+              "finding": "seeded by X87B dispatcher",
+              "evidence": "D:\\openwebui\\runtime\\temp"
+            },
+            "handled_at": "2026-05-20T15:22:06Z",
+            "ok": true,
+            "summary": "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+            "routed_to": "PATCHER",
+            "output_payload": {
+              "root_cause": "pending_real_log_review",
+              "evidence": "D:\\openwebui\\runtime\\temp",
+              "source_message": "x86_1779290525992_19a59522"
+            },
+            "routed_message_id": "x86_1779290526489_04c30b75"
+          },
+          {
+            "message_id": "x86_1779290526489_04c30b75",
+            "role": "PATCHER",
+            "task": "x93e checkpoint freeze smoke",
+            "input_payload": {
+              "root_cause": "pending_real_log_review",
+              "evidence": "D:\\openwebui\\runtime\\temp",
+              "source_message": "x86_1779290525992_19a59522"
+            },
+            "handled_at": "2026-05-20T15:22:06Z",
+            "ok": true,
+            "summary": "PATCHER worker consumed confirmed cause/artifact context.",
+            "routed_to": "VERIFY",
+            "output_payload": {
+              "artifact": "D:\\openwebui\\_patch_inbox",
+              "patch_rule": "target confirmed cause only",
+              "source_message": "x86_1779290526489_04c30b75"
+            },
+            "routed_message_id": "x86_1779290526981_c1099d1c"
+          },
+          {
+            "message_id": "x86_1779290526981_c1099d1c",
+            "role": "VERIFY",
+            "task": "x93e checkpoint freeze smoke",
+            "input_payload": {
+              "artifact": "D:\\openwebui\\_patch_inbox",
+              "patch_rule": "target confirmed cause only",
+              "source_message": "x86_1779290526489_04c30b75"
+            },
+            "handled_at": "2026-05-20T15:22:07Z",
+            "ok": true,
+            "summary": "VERIFY worker consumed artifact and produced verify handoff.",
+            "routed_to": "REPORT",
+            "output_payload": {
+              "verify": "pending_x75_check",
+              "source_message": "x86_1779290526981_c1099d1c"
+            },
+            "routed_message_id": "x86_1779290527469_1f374b64"
+          },
+          {
+            "message_id": "x86_1779290527469_1f374b64",
+            "role": "REPORT",
+            "task": "x93e checkpoint freeze smoke",
+            "input_payload": {
+              "verify": "pending_x75_check",
+              "source_message": "x86_1779290526981_c1099d1c"
+            },
+            "handled_at": "2026-05-20T15:22:07Z",
+            "ok": true,
+            "summary": "REPORT worker consumed final verification payload.",
+            "routed_to": null,
+            "output_payload": {
+              "final": {
+                "verify": "pending_x75_check",
+                "source_message": "x86_1779290526981_c1099d1c"
+              },
+              "source_message": "x86_1779290527469_1f374b64"
+            }
+          }
+        ],
+        "processed_count": 4,
+        "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+        "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779290527978.json"
+      },
+      {
+        "ok": true,
+        "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+        "processed": [],
+        "processed_count": 0,
+        "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+        "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779290529971.json"
+      },
+      {
+        "ok": true,
+        "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+        "processed": [],
+        "processed_count": 0,
+        "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+        "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779290531776.json"
+      },
+      {
+        "ok": true,
+        "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+        "processed": [],
+        "processed_count": 0,
+        "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+        "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779290533626.json"
+      }
+    ]
+  },
+  "ts": "2026-05-20T15:22:13Z"
+}

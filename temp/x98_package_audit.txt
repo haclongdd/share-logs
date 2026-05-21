@@ -1,0 +1,582 @@
+﻿[START] X98 package/path audit
+
+===== PATCH INBOX ROOT =====
+
+
+Name          : x98_patch_packaging_pipeline_audit
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:57:09 AM
+Length        : 
+
+Name          : x97d5_planner_seed_exact_repair
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:54:49 AM
+Length        : 
+
+Name          : x97d4_planner_seed_exactfix
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:50:30 AM
+Length        : 
+
+Name          : x97d3_planner_seed_repair
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:46:19 AM
+Length        : 
+
+Name          : x97d2_planner_seed_hotfix
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:41:32 AM
+Length        : 
+
+Name          : x97d_planner_aware_seed_bus_propagation
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:38:12 AM
+Length        : 
+
+Name          : x97c2b_seed_plan_hotfix
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:35:10 AM
+Length        : 
+
+Name          : x97c2_plan_seed_runtime_propagation
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:32:12 AM
+Length        : 
+
+Name          : x97c_plan_seed_lifecycle_scan
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:28:07 AM
+Length        : 
+
+Name          : x97b2_planner_driven_runtime_dispatch
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:24:44 AM
+Length        : 
+
+Name          : x97b_planner_driven_dispatch
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:18:39 AM
+Length        : 
+
+Name          : x97a_scan_planner_dispatch_surface
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:14:04 AM
+Length        : 
+
+Name          : x96d2_attach_master_planner_to_x90
+Mode          : d-----
+LastWriteTime : 5/21/2026 12:10:26 AM
+Length        : 
+
+Name          : x96d_attach_master_planner_to_x90
+Mode          : d-----
+LastWriteTime : 5/20/2026 11:31:42 PM
+Length        : 
+
+Name          : x96d_recover_x90_clean
+Mode          : d-----
+LastWriteTime : 5/20/2026 11:24:42 PM
+Length        : 
+
+Name          : x96c2_master_planner_reviewer_ascii_fix
+Mode          : d-----
+LastWriteTime : 5/20/2026 11:04:46 PM
+Length        : 
+
+Name          : x96c_master_planner_reviewer_foundation
+Mode          : d-----
+LastWriteTime : 5/20/2026 11:02:55 PM
+Length        : 
+
+Name          : x93d_disable_double_after_request_normalizer
+Mode          : d-----
+LastWriteTime : 5/20/2026 10:18:47 PM
+Length        : 
+
+Name          : x93c_force_webui_response_normalizer_fix
+Mode          : d-----
+LastWriteTime : 5/20/2026 9:53:16 PM
+Length        : 
+
+Name          : make_x93c_force_webui_response_normalizer_fix_v2.py
+Mode          : -a----
+LastWriteTime : 5/20/2026 9:53:11 PM
+Length        : 8838
+
+Name          : x93b_force_webui_response_normalizer
+Mode          : d-----
+LastWriteTime : 5/20/2026 8:42:19 PM
+Length        : 
+
+Name          : make_x93b_force_webui_response_normalizer.py
+Mode          : -a----
+LastWriteTime : 5/20/2026 8:42:09 PM
+Length        : 12793
+
+Name          : x93_webui_response_normalizer
+Mode          : d-----
+LastWriteTime : 5/20/2026 7:05:38 PM
+Length        : 
+
+Name          : make_x93_webui_response_normalizer.py
+Mode          : -a----
+LastWriteTime : 5/20/2026 7:05:35 PM
+Length        : 11339
+
+Name          : x92e_x87_rootdetect_fix
+Mode          : d-----
+LastWriteTime : 5/20/2026 6:50:47 PM
+Length        : 
+
+Name          : make_x92e_x87_rootdetect_fix.py
+Mode          : -a----
+LastWriteTime : 5/20/2026 6:50:43 PM
+Length        : 13375
+
+Name          : x92d_x90_rootdetect_fix
+Mode          : d-----
+LastWriteTime : 5/20/2026 6:46:58 PM
+Length        : 
+
+Name          : make_x92d_x90_rootdetect_fix.py
+Mode          : -a----
+LastWriteTime : 5/20/2026 6:46:47 PM
+Length        : 13659
+
+Name          : x92c_adapter_rootdetect_fix
+Mode          : d-----
+LastWriteTime : 5/20/2026 6:38:35 PM
+Length        : 
+
+Name          : make_x92c_adapter_rootdetect_fix.py
+Mode          : -a----
+LastWriteTime : 5/20/2026 6:38:18 PM
+Length        : 13766
+
+
+
+
+
+===== RECENT PATCH FOLDERS: [REDACTED] FILES =====
+
+--- FOLDER: D:\openwebui\_patch_inbox\x98_patch_packaging_pipeline_audit ---
+
+Name                                           Mode   Length LastWriteTime       
+----                                           ----   ------ -------------       
+apply_x98_patch_packaging_pipeline_audit.ps1   -a----    823 5/20/2026 5:56:34 PM
+cleanup_x98_patch_packaging_pipeline_audit.ps1 -a----    601 5/20/2026 5:56:34 PM
+x98_patch_packaging_pipeline_audit_check.ps1   -a----   3017 5/20/2026 5:56:34 PM
+
+
+
+--- APPLY SCRIPT: apply_x98_patch_packaging_pipeline_audit.ps1 references ---
+
+> x98_patch_packaging_pipeline_audit\apply_x98_patch_packaging_pipeline_audit.ps1:11:  foreach($p in 
+@('_patch_inbox','runtime\temp','core')){
+  x98_patch_packaging_pipeline_audit\apply_x98_patch_packaging_pipeline_audit.ps1:12:    $full = Join-Path $ROOT $p
+  x98_patch_packaging_pipeline_audit\apply_x98_patch_packaging_pipeline_audit.ps1:13:    if(Test-Path $full){ Log 
+"FOUND $p" } else { Log "MISSING $p" }
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97d5_planner_seed_exact_repair ---
+
+Name                                        Mode   Length LastWriteTime       
+----                                        ----   ------ -------------       
+apply_x97d5_planner_seed_exact_repair.ps1   -a----   1333 5/20/2026 5:52:38 PM
+cleanup_x97d5_planner_seed_exact_repair.ps1 -a----    324 5/20/2026 5:52:38 PM
+README.txt                                  -a----     32 5/20/2026 5:52:38 PM
+x97d5_patch.py                              -a----   3125 5/20/2026 5:52:38 PM
+x97d5_planner_seed_exact_repair_check.ps1   -a----   1612 5/20/2026 5:52:38 PM
+
+
+
+--- APPLY SCRIPT: apply_x97d5_planner_seed_exact_repair.ps1 references ---
+
+> x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:18:  Log "Running Python patcher: $patcher"
+> x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:19:  python $patcher 2>&1 | Tee-Object 
+-FilePath $LOG -Append
+> x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:20:  if ($LASTEXITCODE -ne 0) { throw 
+"Python patcher failed with exit $LASTEXITCODE" }
+  x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:21:  Log "Compiling target"
+> x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:22:  python -m py_compile 
+"$ROOT\core\x87_worker_dispatcher.py" 2>&1 | Tee-Object -FilePath $LOG -Append
+  x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:23:  if ($LASTEXITCODE -ne 0) { throw 
+"Compile failed" }
+  x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:24:  Log "[[REDACTED]] X97D5 apply complete"
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97d4_planner_seed_exactfix ---
+
+Name                                    Mode   Length LastWriteTime       
+----                                    ----   ------ -------------       
+apply_x97d4_planner_seed_exactfix.ps1   -a----   1610 5/20/2026 5:49:44 PM
+cleanup_x97d4_planner_seed_exactfix.ps1 -a----    451 5/20/2026 5:49:44 PM
+x97d4_patch.py                          -a----   3998 5/20/2026 5:49:44 PM
+x97d4_planner_seed_exactfix_check.ps1   -a----   2062 5/20/2026 5:49:44 PM
+
+
+
+--- APPLY SCRIPT: apply_x97d4_planner_seed_exactfix.ps1 references ---
+
+> x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:20:  Log "Running Python patcher: $py"
+> x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:21:  $out = & python $py 2>&1
+  x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:22:  $out | Tee-Object -FilePath $Log -Append
+  x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:23:  if($LASTEXITCODE -ne 0){ throw "patcher 
+failed" }
+> x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:25:  python -m py_compile (Join-Path $Root 
+"core\x87_worker_dispatcher.py") 2>&1 | Tee-Object -FilePath $Log -Append
+  x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:26:  if($LASTEXITCODE -ne 0){ throw "x87 compile 
+failed" }
+> x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:27:  python -m py_compile (Join-Path $Root 
+"core\x90_webui_agent_bridge.py") 2>&1 | Tee-Object -FilePath $Log -Append
+  x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:28:  if($LASTEXITCODE -ne 0){ throw "x90 compile 
+failed" }
+  x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:29:  Log "[[REDACTED]] X97D4 apply complete"
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97d3_planner_seed_repair ---
+
+Name                                  Mode   Length LastWriteTime       
+----                                  ----   ------ -------------       
+apply_x97d3_planner_seed_repair.ps1   -a----   1566 5/20/2026 5:43:22 PM
+cleanup_x97d3_planner_seed_repair.ps1 -a----    450 5/20/2026 5:43:22 PM
+x97d3_patch.py                        -a----   3660 5/20/2026 5:43:22 PM
+x97d3_planner_seed_repair_check.ps1   -a----   2342 5/20/2026 5:43:22 PM
+
+
+
+--- APPLY SCRIPT: apply_x97d3_planner_seed_repair.ps1 references ---
+
+> x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:21:  $py = Join-Path $PSScriptRoot "x97d3_patch.py"
+> x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:22:  Log "Running Python patcher: $py"
+> x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:23:  python $py 2>&1 | Tee-Object -FilePath $LOG 
+-Append
+> x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:24:  if ($LASTEXITCODE -ne 0) { throw "Python patcher 
+failed with exit code $LASTEXITCODE" }
+  x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:25:  Log "Compiling patched files"
+> x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:26:  python -m py_compile (Join-Path $ROOT 
+"core\x87_worker_dispatcher.py") 2>&1 | Tee-Object -FilePath $LOG -Append
+  x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:27:  if ($LASTEXITCODE -ne 0) { throw "x87 compile 
+failed" }
+> x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:28:  python -m py_compile (Join-Path $ROOT 
+"core\x90_webui_agent_bridge.py") 2>&1 | Tee-Object -FilePath $LOG -Append
+  x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:29:  if ($LASTEXITCODE -ne 0) { throw "x90 compile 
+failed" }
+  x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:30:  Log "[[REDACTED]] X97D3 apply complete"
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97d2_planner_seed_hotfix ---
+
+Name                                  Mode   Length LastWriteTime       
+----                                  ----   ------ -------------       
+apply_x97d2_planner_seed_hotfix.ps1   -a----   5242 5/20/2026 5:40:26 PM
+cleanup_x97d2_planner_seed_hotfix.ps1 -a----    509 5/20/2026 5:40:26 PM
+x97d2_planner_seed_hotfix_check.ps1   -a----   2036 5/20/2026 5:40:26 PM
+
+
+
+--- APPLY SCRIPT: apply_x97d2_planner_seed_hotfix.ps1 references ---
+
+> x97d2_planner_seed_hotfix\apply_x97d2_planner_seed_hotfix.ps1:116:"[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] 
+Running Python patcher: $py" | Tee-Object -FilePath $LOG -Append
+> x97d2_planner_seed_hotfix\apply_x97d2_planner_seed_hotfix.ps1:117:python $py 2>&1 | Tee-Object -FilePath $LOG -Append
+  x97d2_planner_seed_hotfix\apply_x97d2_planner_seed_hotfix.ps1:118:"[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] 
+Compiling targets" | Tee-Object -FilePath $LOG -Append
+> x97d2_planner_seed_hotfix\apply_x97d2_planner_seed_hotfix.ps1:119:python -m py_compile (Join-Path $ROOT 
+"core\x90_webui_agent_bridge.py") 2>&1 | Tee-Object -FilePath $LOG -Append
+> x97d2_planner_seed_hotfix\apply_x97d2_planner_seed_hotfix.ps1:120:python -m py_compile (Join-Path $ROOT 
+"core\x87_worker_dispatcher.py") 2>&1 | Tee-Object -FilePath $LOG -Append
+  x97d2_planner_seed_hotfix\apply_x97d2_planner_seed_hotfix.ps1:121:"[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] 
+[[REDACTED]] X97D2 apply complete" | Tee-Object -FilePath $LOG -Append
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97d_planner_aware_seed_bus_propagation ---
+
+Name                                                Mode   Length LastWriteTime       
+----                                                ----   ------ -------------       
+apply_x97d_planner_aware_seed_bus_propagation.ps1   -a----   5533 5/20/2026 5:37:14 PM
+cleanup_x97d_planner_aware_seed_bus_propagation.ps1 -a----    492 5/20/2026 5:37:14 PM
+x97d_planner_aware_seed_bus_propagation_check.ps1   -a----   1404 5/20/2026 5:37:14 PM
+
+
+
+--- APPLY SCRIPT: apply_x97d_planner_aware_seed_bus_propagation.ps1 references ---
+
+> x97d_planner_aware_seed_bus_propagation\apply_x97d_planner_aware_seed_bus_propagation.ps1:132:"[$(Get-Date -Format 
+'yyyy-MM-dd HH:mm:ss')] Running Python patcher: $py" | Tee-Object -FilePath $LOG -Append
+> x97d_planner_aware_seed_bus_propagation\apply_x97d_planner_aware_seed_bus_propagation.ps1:133:python $py 2>&1 | 
+Tee-Object -FilePath $LOG -Append
+  x97d_planner_aware_seed_bus_propagation\apply_x97d_planner_aware_seed_bus_propagation.ps1:134:"[$(Get-Date -Format 
+'yyyy-MM-dd HH:mm:ss')] Compiling target" | Tee-Object -FilePath $LOG -Append
+> x97d_planner_aware_seed_bus_propagation\apply_x97d_planner_aware_seed_bus_propagation.ps1:135:python -m py_compile 
+$target 2>&1 | Tee-Object -FilePath $LOG -Append
+  x97d_planner_aware_seed_bus_propagation\apply_x97d_planner_aware_seed_bus_propagation.ps1:136:"[$(Get-Date -Format 
+'yyyy-MM-dd HH:mm:ss')] [[REDACTED]] X97D apply complete" | Tee-Object -FilePath $LOG -Append
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97c2b_seed_plan_hotfix ---
+
+Name                                Mode   Length LastWriteTime       
+----                                ----   ------ -------------       
+apply_x97c2b_seed_plan_hotfix.ps1   -a----   4814 5/20/2026 5:34:46 PM
+cleanup_x97c2b_seed_plan_hotfix.ps1 -a----    225 5/20/2026 5:34:46 PM
+x97c2b_seed_plan_hotfix_check.ps1   -a----   1990 5/20/2026 5:34:46 PM
+
+
+
+--- APPLY SCRIPT: apply_x97c2b_seed_plan_hotfix.ps1 references ---
+
+> x97c2b_seed_plan_hotfix\apply_x97c2b_seed_plan_hotfix.ps1:101:Log "Running Python patcher: $py"
+> x97c2b_seed_plan_hotfix\apply_x97c2b_seed_plan_hotfix.ps1:102:python $py 2>&1 | Tee-Object -FilePath $LOG -Append
+  x97c2b_seed_plan_hotfix\apply_x97c2b_seed_plan_hotfix.ps1:103:Log '[[REDACTED]] X97C2B apply complete'
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97c2_plan_seed_runtime_propagation ---
+
+Name                                            Mode   Length LastWriteTime       
+----                                            ----   ------ -------------       
+apply_x97c2_plan_seed_runtime_propagation.ps1   -a----   6448 5/20/2026 5:30:46 PM
+cleanup_x97c2_plan_seed_runtime_propagation.ps1 -a----    733 5/20/2026 5:30:46 PM
+README.txt                                      -a----    436 5/20/2026 5:30:46 PM
+x97c2_plan_seed_runtime_propagation_check.ps1   -a----   2030 5/20/2026 5:30:46 PM
+
+
+
+--- APPLY SCRIPT: apply_x97c2_plan_seed_runtime_propagation.ps1 references ---
+
+> x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:75:        scout = """        if 
+to_role == "SCOUT":\n            result["summary"] = "SCOUT worker consumed planner seed and prepared context for 
+DEBUG."\n            result["output_payload"] = {\n                "evidence": payload.get("evidence") or 
+r"D:\\openwebui\\runtime\\temp",\n                "finding": payload.get("finding") or "seeded by X97C2 planner 
+runtime propagation",\n                "source_message": msg.get("id"),\n            }\n        elif to_role == 
+"DEBUG":\n"""
+  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:76:        if marker not in s:
+  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:77:            raise 
+RuntimeError("x87 DEBUG handler marker not found")
+> x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:89:    seed_new = """    def 
+seed(self, task: str, x96_plan=None) -> Dict[str, Any]:\n        \"\"\"X97C2_PLAN_SEED_RUNTIME_PROPAGATION: seed 
+planner first role when x96_plan exists; fallback to legacy DEBUG seed.\"\"\"\n        payload = {\n            
+"finding": "seeded by X97C2 planner runtime propagation",\n            "evidence": r"D:\\openwebui\\runtime\\temp",\n  
+      }\n        seed_from = "SCOUT"\n        seed_to = "DEBUG"\n        first_role = None\n        try:\n            
+if isinstance(x96_plan, dict):\n                payload["x96_plan"] = x96_plan\n                steps = 
+x96_plan.get("steps")\n                if isinstance(steps, list) and steps:\n                    first_role = 
+self._x97b2_extract_role(steps[0])\n                    if first_role:\n                        seed_to = first_role\n 
+                       seed_from = first_role\n        except Exception as exc:\n            
+payload["x97c2_seed_plan_error"] = str(exc)\n            seed_from = "SCOUT"\n            seed_to = "DEBUG"\n\n        
+msg = self.bus.send(seed_from, seed_to, task, payload)\n        return {\n            "ok": True,\n            
+"seed_message": msg.id,\n            "task": task,\n            "x97c2_seed_from": seed_from,\n            
+"x97c2_seed_to": seed_to,\n            "x97c2_first_plan_role": first_role,\n            "x96_plan_attached": 
+isinstance(x96_plan, dict),\n        }\n\n"""
+  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:90:    if "def seed(self, task: 
+str, x96_plan=None)" not in s:
+  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:91:        s2, n = 
+seed_re.subn(seed_new, s, count=1)
+> x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:104:Log "Running Python patcher: 
+$py"
+> x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:105:python $py 2>&1 | Tee-Object 
+-FilePath $LOG -Append
+  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:106:
+  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:107:Log "Compiling patched files"
+> x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:108:python -m py_compile 
+(Join-Path $ROOT "core\x90_webui_agent_bridge.py") 2>&1 | Tee-Object -FilePath $LOG -Append
+> x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:109:python -m py_compile 
+(Join-Path $ROOT "core\x87_worker_dispatcher.py") 2>&1 | Tee-Object -FilePath $LOG -Append
+> x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:110:python -m py_compile 
+(Join-Path $ROOT "core\x86_agent_bus.py") 2>&1 | Tee-Object -FilePath $LOG -Append
+  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:111:
+  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:112:Log "[[REDACTED]] X97C2 apply 
+complete"
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97c_plan_seed_lifecycle_scan ---
+
+Name                                      Mode   Length LastWriteTime       
+----                                      ----   ------ -------------       
+apply_x97c_plan_seed_lifecycle_scan.ps1   -a----   1047 5/20/2026 5:27:20 PM
+cleanup_x97c_plan_seed_lifecycle_scan.ps1 -a----    493 5/20/2026 5:27:20 PM
+README.txt                                -a----    702 5/20/2026 5:27:20 PM
+x97c_plan_seed_lifecycle_scan_check.ps1   -a----   3907 5/20/2026 5:27:20 PM
+
+
+
+--- APPLY SCRIPT: apply_x97c_plan_seed_lifecycle_scan.ps1 references ---
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97b2_planner_driven_runtime_dispatch ---
+
+Name                                              Mode   Length LastWriteTime       
+----                                              ----   ------ -------------       
+apply_x97b2_planner_driven_runtime_dispatch.ps1   -a----   5754 5/20/2026 5:22:56 PM
+cleanup_x97b2_planner_driven_runtime_dispatch.ps1 -a----    854 5/20/2026 5:22:56 PM
+x97b2_planner_driven_runtime_dispatch_check.ps1   -a----   1628 5/20/2026 5:22:56 PM
+
+
+
+--- APPLY SCRIPT: apply_x97b2_planner_driven_runtime_dispatch.ps1 references ---
+
+> x97b2_planner_driven_runtime_dispatch\apply_x97b2_planner_driven_runtime_dispatch.ps1:140:  Log "Running Python 
+patcher: $PatchPy"
+> x97b2_planner_driven_runtime_dispatch\apply_x97b2_planner_driven_runtime_dispatch.ps1:141:  python $PatchPy 2>&1 | 
+Tee-Object -FilePath $LogFile -Append
+> x97b2_planner_driven_runtime_dispatch\apply_x97b2_planner_driven_runtime_dispatch.ps1:142:  if ($LASTEXITCODE -ne 0) 
+{ throw "Python patcher failed with exit code $LASTEXITCODE" }
+  x97b2_planner_driven_runtime_dispatch\apply_x97b2_planner_driven_runtime_dispatch.ps1:143:
+  x97b2_planner_driven_runtime_dispatch\apply_x97b2_planner_driven_runtime_dispatch.ps1:144:  Log "Compiling target"
+> x97b2_planner_driven_runtime_dispatch\apply_x97b2_planner_driven_runtime_dispatch.ps1:145:  python -m py_compile 
+$Target 2>&1 | Tee-Object -FilePath $LogFile -Append
+  x97b2_planner_driven_runtime_dispatch\apply_x97b2_planner_driven_runtime_dispatch.ps1:146:  if ($LASTEXITCODE -ne 0) 
+{ throw "py_compile failed with exit code $LASTEXITCODE" }
+  x97b2_planner_driven_runtime_dispatch\apply_x97b2_planner_driven_runtime_dispatch.ps1:147:
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97b_planner_driven_dispatch ---
+
+Name                                     Mode   Length LastWriteTime       
+----                                     ----   ------ -------------       
+apply_x97b_planner_driven_dispatch.ps1   -a----    287 5/20/2026 5:18:14 PM
+cleanup_x97b_planner_driven_dispatch.ps1 -a----    293 5/20/2026 5:18:14 PM
+x97b_apply.py                            -a----   9160 5/20/2026 5:18:14 PM
+x97b_check.py                            -a----   2601 5/20/2026 5:18:14 PM
+x97b_cleanup.py                          -a----   1112 5/20/2026 5:18:14 PM
+x97b_planner_driven_dispatch_check.ps1   -a----    287 5/20/2026 5:18:14 PM
+
+
+
+--- APPLY SCRIPT: apply_x97b_planner_driven_dispatch.ps1 references ---
+
+> x97b_planner_driven_dispatch\apply_x97b_planner_driven_dispatch.ps1:5:python "$PSScriptRoot\x97b_apply.py" *> 
+(Join-Path $temp "x97b_apply_console.txt")
+  x97b_planner_driven_dispatch\apply_x97b_planner_driven_dispatch.ps1:6:Get-Content (Join-Path $temp 
+"x97b_apply_log.txt")
+
+
+
+
+--- FOLDER: D:\openwebui\_patch_inbox\x97a_scan_planner_dispatch_surface ---
+
+Name                                           Mode   Length LastWriteTime       
+----                                           ----   ------ -------------       
+apply_x97a_scan_planner_dispatch_surface.ps1   -a----   2012 5/20/2026 5:13:40 PM
+cleanup_x97a_scan_planner_dispatch_surface.ps1 -a----    531 5/20/2026 5:13:40 PM
+x97a_scan_planner_dispatch_surface_check.ps1   -a----   1130 5/20/2026 5:13:40 PM
+
+
+
+--- APPLY SCRIPT: apply_x97a_scan_planner_dispatch_surface.ps1 references ---
+
+
+===== FAILED X97D5 EVIDENCE =====
+
+
+===== GENERATOR/LOCAL PATCH RUNNER SOURCE HINTS =====
+
+--- FILE: core\x75_local_patch_runner.py ---
+
+  D:\openwebui\core\x75_local_patch_runner.py:58:
+> D:\openwebui\core\x75_local_patch_runner.py:59:    apply_files = list(patch.glob("apply_*.ps1"))
+> D:\openwebui\core\x75_local_patch_runner.py:60:    check_files = list(patch.glob("*check*.ps1"))
+  D:\openwebui\core\x75_local_patch_runner.py:61:
+> D:\openwebui\core\x75_local_patch_runner.py:62:    if not apply_files or not check_files:
+> D:\openwebui\core\x75_local_patch_runner.py:63:        report["stage"] = "missing_apply_or_check"
+  D:\openwebui\core\x75_local_patch_runner.py:64:        finish(report, 1)
+  D:\openwebui\core\x75_local_patch_runner.py:65:
+  D:\openwebui\core\x75_local_patch_runner.py:84:
+> D:\openwebui\core\x75_local_patch_runner.py:85:    report["apply"] = run(["powershell", "-ExecutionPolicy", 
+"By[REDACTED]", "-File", str(apply_files[0])])
+  D:\openwebui\core\x75_local_patch_runner.py:86:    if report["apply"]["returncode"] != 0 or "SyntaxError" in 
+report["apply"]["stderr"] or "Traceback" in report["apply"]["stderr"] or "[FAIL]" in report["apply"]["stdout"] or 
+"[FAIL]" in report["apply"]["stderr"]:
+> D:\openwebui\core\x75_local_patch_runner.py:87:        report["stage"] = "apply_fail"
+  D:\openwebui\core\x75_local_patch_runner.py:88:        finish(report, 1)
+  D:\openwebui\core\x75_local_patch_runner.py:89:
+> D:\openwebui\core\x75_local_patch_runner.py:90:    report["check"] = run(["powershell", "-ExecutionPolicy", 
+"By[REDACTED]", "-File", str(check_files[0])])
+  D:\openwebui\core\x75_local_patch_runner.py:91:    if report["check"]["returncode"] != 0 or "SyntaxError" in 
+report["check"]["stderr"] or "Traceback" in report["check"]["stderr"] or "[FAIL]" in report["check"]["stdout"] or 
+"[FAIL]" in report["check"]["stderr"]:
+> D:\openwebui\core\x75_local_patch_runner.py:92:        report["stage"] = "check_fail"
+  D:\openwebui\core\x75_local_patch_runner.py:93:        finish(report, 1)
+  D:\openwebui\core\x75_local_patch_runner.py:94:
+  D:\openwebui\core\x75_local_patch_runner.py:95:    report["ok"] = True
+> D:\openwebui\core\x75_local_patch_runner.py:96:    report["stage"] = "apply_check_[REDACTED]"
+  D:\openwebui\core\x75_local_patch_runner.py:97:    finish(report, 0)
+  D:\openwebui\core\x75_local_patch_runner.py:98:
+
+
+
+
+--- FILE: core\x78_template_aware_patch_generator.py ---
+
+  D:\openwebui\core\x78_template_aware_patch_generator.py:4:ROOT = Path(r"D:\openwebui")
+> D:\openwebui\core\x78_template_aware_patch_generator.py:5:PATCH_INBOX = ROOT / "_patch_inbox"
+  D:\openwebui\core\x78_template_aware_patch_generator.py:6:
+  D:\openwebui\core\x78_template_aware_patch_generator.py:7:TEMPLATES = {
+  D:\openwebui\core\x78_template_aware_patch_generator.py:30:
+> D:\openwebui\core\x78_template_aware_patch_generator.py:31:    apply_file = folder / ("apply_" + patch + ".ps1")
+> D:\openwebui\core\x78_template_aware_patch_generator.py:32:    check_file = folder / (patch + "_check.ps1")
+> D:\openwebui\core\x78_template_aware_patch_generator.py:33:    cleanup_file = folder / ("cleanup_" + patch + ".ps1")
+  D:\openwebui\core\x78_template_aware_patch_generator.py:34:
+> D:\openwebui\core\x78_template_aware_patch_generator.py:35:    apply_lines = [
+  D:\openwebui\core\x78_template_aware_patch_generator.py:36:        '$ErrorActionPreference="Stop"',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:37:        '$Root="D:\\openwebui"',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:42:    if template == "python_component":
+> D:\openwebui\core\x78_template_aware_patch_generator.py:43:        apply_lines += [
+  D:\openwebui\core\x78_template_aware_patch_generator.py:44:            '$Core=Join-Path $Root "core"',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:45:            'New-Item -ItemType Directory -Force -Path 
+$Core | Out-Null',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:51:
+> D:\openwebui\core\x78_template_aware_patch_generator.py:52:    apply_lines += [
+  D:\openwebui\core\x78_template_aware_patch_generator.py:53:        '$Manifest=@{ patch="' + patch + '"; template="' 
++ template + '"; status="generated_by_x78b"; local_only=$true; runtime_untouched=$true; 
+generated_at=(Get-Date).ToString("s") } | ConvertTo-Json -Depth 8',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:54:        'Set-Content -Path (Join-Path $Release "' + patch 
++ '.json") -Value $Manifest -Encoding UTF8',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:57:
+> D:\openwebui\core\x78_template_aware_patch_generator.py:58:    check_lines = [
+  D:\openwebui\core\x78_template_aware_patch_generator.py:59:        '$ErrorActionPreference="Stop"',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:60:        
+'$Manifest="D:\\openwebui\\release\\phase5_self_hosted\\' + patch + '.json"',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:67:    if template == "python_component":
+> D:\openwebui\core\x78_template_aware_patch_generator.py:68:        check_lines += [
+  D:\openwebui\core\x78_template_aware_patch_generator.py:69:            '$PyPath="D:\\openwebui\\core\\' + patch + 
+'.py"',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:70:            'if(!(Test-Path $PyPath)){ throw "[FAIL] 
+Missing python component" }',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:74:
+> D:\openwebui\core\x78_template_aware_patch_generator.py:75:    check_lines += [
+  D:\openwebui\core\x78_template_aware_patch_generator.py:76:        'Write-Host "[[REDACTED]] ' + patch + ' template 
+valid"',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:77:        'Write-Host "[[REDACTED]] ' + patch + ' check 
+complete"',
+  D:\openwebui\core\x78_template_aware_patch_generator.py:79:
+> D:\openwebui\core\x78_template_aware_patch_generator.py:80:    w(apply_file, apply_lines)
+> D:\openwebui\core\x78_template_aware_patch_generator.py:81:    w(check_file, check_lines)
+> D:\openwebui\core\x78_template_aware_patch_generator.py:82:    w(cleanup_file, ['Write-Host "[INFO] ' + patch + ' 
+cleanup placeholder"'])
+  D:\openwebui\core\x78_template_aware_patch_generator.py:83:
+  D:\openwebui\core\x78_template_aware_patch_generator.py:84:    print(json.dumps({"ok": True, "patch": patch, 
+"template": template, "folder": str(folder)}, indent=2))
+
+
+
+
+--- FILE: core\x79_auto_patch_orchestrator.py ---
+MISSING

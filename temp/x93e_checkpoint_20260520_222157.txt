@@ -1,0 +1,6 @@
+﻿X93D [REDACTED]
+- disabled duplicate X93C after_request normalizer
+- live /add_task normalized response [REDACTED]
+- ok/release/bridge/summary/result/report_file/debug.raw preserved
+- flow confirmed: WebUI -> master_ai_bridge -> X91 -> X90 -> X87B -> X86 -> reports
+- root cause fixed: double response normalization caused connection closed/empty reply

@@ -1,0 +1,27 @@
+{
+  "ok": false,
+  "release": "X90_WEBUI_AGENT_BRIDGE",
+  "request_id": "x90req_1779302423910_716913b4",
+  "mode": "agent",
+  "task": "x97e6 live verify after bus contract repair",
+  "error": "AttributeError(\"'BusMessage' object has no attribute 'get'\")",
+  "dependency_status": {
+    "x86": {
+      "path": "/app/core/x86_agent_bus.py",
+      "exists": true
+    },
+    "x87": {
+      "path": "/app/core/x87_worker_dispatcher.py",
+      "exists": true
+    },
+    "x88": {
+      "path": "/app/core/x88_persistent_scheduler.py",
+      "exists": true
+    },
+    "x89": {
+      "path": "/app/core/x89_sandbox_workers.py",
+      "exists": true
+    }
+  },
+  "ts": "2026-05-20T18:40:24Z"
+}

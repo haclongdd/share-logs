@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "release": "X92D_X90_ROOTDETECT_FIX",
+  "stage": "fixed",
+  "x90": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+  "backup": "D:\\openwebui\\_backups\\x92d_x90_rootdetect_fix\\x90_webui_agent_bridge.py.1779277620493.bak",
+  "fix": "auto-detect /app vs D:\\openwebui root by locating core/x87_worker_dispatcher.py",
+  "probe": {
+    "ok": true,
+    "release": "X92D_X90_ROOTDETECT_FIX",
+    "root": "D:\\openwebui",
+    "x90": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+    "x90_exists": true,
+    "x87_expected": "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+    "x87_exists": true,
+    "x88_exists": true,
+    "x89_exists": true,
+    "old_line_found": true,
+    "new_block_found": false,
+    "report_file": "D:\\openwebui\\runtime\\reports\\x92d_probe_1779277620492.json"
+  }
+}

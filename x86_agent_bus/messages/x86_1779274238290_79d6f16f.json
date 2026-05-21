@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779274238290_79d6f16f",
+  "ts": "2026-05-20T10:50:38Z",
+  "from_role": "PATCHER",
+  "to_role": "VERIFY",
+  "task": "x92 adapter smoke before attach",
+  "payload": {
+    "artifact": "D:\\openwebui\\_patch_inbox",
+    "patch_rule": "target confirmed cause only",
+    "source_message": "x86_1779274238261_a6cd0e2c"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:50:38Z"
+}

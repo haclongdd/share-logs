@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779271411926_3acfc436",
+  "ts": "2026-05-20T10:03:31Z",
+  "from_role": "PATCHER",
+  "to_role": "VERIFY",
+  "task": "x88 scheduler smoke",
+  "payload": {
+    "artifact": "D:\\openwebui\\_patch_inbox",
+    "patch_rule": "target confirmed cause only",
+    "source_message": "x86_1779271411902_7bee9d1c"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:03:31Z"
+}

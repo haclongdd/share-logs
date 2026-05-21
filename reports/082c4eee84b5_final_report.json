@@ -1,0 +1,38 @@
+{
+  "phase": "X1G",
+  "mode": "unified_runtime_consolidation",
+  "task_id": "082c4eee84b5",
+  "status": "completed",
+  "final_status": "PASS",
+  "completed": true,
+  "done": true,
+  "ok": true,
+  "source": "openwebui_unified",
+  "recovered": false,
+  "task": "list project files",
+  "result": "âœ… AI Local OS task completed.\n\nTask ID: 082c4eee84b5\nStatus: completed\nFinal status: PASS\n\nVerified unified flow:\n- WebUI bridge accepted the task\n- unified queue/job artifact is available\n- unified result artifact is available\n- unified final report artifact is available\n- get_report returned completed=true so WebUI polling can stop\n\nUser task: list project files\n\nConclusion: AI Local OS unified runtime is working.",
+  "message": "âœ… AI Local OS task completed.\n\nTask ID: 082c4eee84b5\nStatus: completed\nFinal status: PASS\n\nVerified unified flow:\n- WebUI bridge accepted the task\n- unified queue/job artifact is available\n- unified result artifact is available\n- unified final report artifact is available\n- get_report returned completed=true so WebUI polling can stop\n\nUser task: list project files\n\nConclusion: AI Local OS unified runtime is working.",
+  "final_report": "âœ… AI Local OS task completed.\n\nTask ID: 082c4eee84b5\nStatus: completed\nFinal status: PASS\n\nVerified unified flow:\n- WebUI bridge accepted the task\n- unified queue/job artifact is available\n- unified result artifact is available\n- unified final report artifact is available\n- get_report returned completed=true so WebUI polling can stop\n\nUser task: list project files\n\nConclusion: AI Local OS unified runtime is working.",
+  "created_at": "2026-05-19T06:08:13Z",
+  "updated_at": "2026-05-19T06:08:13Z",
+  "artifacts": {
+    "queue": "/app/runtime/queue/082c4eee84b5.json",
+    "job": "/app/runtime/jobs/082c4eee84b5.json",
+    "result": "/app/runtime/results/082c4eee84b5.json",
+    "report": "/app/runtime/reports/082c4eee84b5_final_report.json",
+    "workspace_result": "/app/workspace/results/082c4eee84b5_result.json",
+    "job_report": "/app/runtime/jobs/reports/082c4eee84b5_final_report.json"
+  },
+  "events": [
+    {
+      "time": "2026-05-19T06:08:13Z",
+      "event": "TASK_ACCEPTED",
+      "message": "Task accepted by unified bridge"
+    },
+    {
+      "time": "2026-05-19T06:08:13Z",
+      "event": "TASK_COMPLETED",
+      "message": "Unified result/report emitted"
+    }
+  ]
+}

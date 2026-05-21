@@ -1,0 +1,25 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260520164335
+Username: LONG2696\khach
+RunAs User: LONG2696\khach
+Configuration Name: 
+Machine: LONG2696 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy By[REDACTED] -Command Start-Transcript -Path D:\openwebui\runtime\temp\x85_run_20260520_164334.txt -Force; python D:\openwebui\core\x75_local_patch_runner.py --patch D:\openwebui\_patch_inbox\x85_role_agents --execute; python D:\openwebui\core\x85_role_agents.py chain --task 'x85 role runtime smoke'; Stop-Transcript
+Process ID: 57324
+PSVersion: 5.1.26100.8457
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8457
+BuildVersion: 10.0.26100.8457
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\openwebui\runtime\temp\x85_run_20260520_164334.txt
+
+
+**********************
+Windows PowerShell transcript end
+End time: 20260520164335
+**********************

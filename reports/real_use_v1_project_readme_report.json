@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "release": "AI_LOCAL_OS_REAL_USE_V1",
+  "checked_at": "2026-05-19T11:15:02",
+  "task": "scan project_v4_1 and create README_PROJECT.md",
+  "project": "D:\\openwebui\\project_v4_1",
+  "readme": "D:\\openwebui\\project_v4_1\\README_PROJECT.md",
+  "scan": "D:\\openwebui\\runtime\\real_use_v1\\project_v4_1_scan.json",
+  "file_count": 6,
+  "readme_exists": true,
+  "readme_size_bytes": 1810
+}

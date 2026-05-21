@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "release": "X13W_REAL_TASK_RUNNER_BRIDGE",
+  "checked_at": "2026-05-19T10:59:09",
+  "task_id": "x13w_list_project_files_v4_1",
+  "task": "list project files v4_1",
+  "request": "D:\\openwebui\\runtime\\task_runner\\x13w_list_project_files_v4_1_request.json",
+  "workflow": "D:\\openwebui\\runtime\\workflows\\x13w_list_project_files_v4_1_workflow.json",
+  "artifact": "D:\\openwebui\\runtime\\projects\\x13w_list_project_files_v4_1_artifact.md",
+  "artifact_sha256": "f62848c51000a3b5acd4507ce26f738b3f669d17bd5a66f8ca875007dc7a0715",
+  "checks": {
+    "request_exists": true,
+    "workflow_exists": true,
+    "artifact_exists": true,
+    "artifact_contains_task": true
+  }
+}

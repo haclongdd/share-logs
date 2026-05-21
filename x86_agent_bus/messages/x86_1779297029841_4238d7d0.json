@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779297029841_4238d7d0",
+  "ts": "2026-05-20T17:10:29Z",
+  "from_role": "SCOUT",
+  "to_role": "DEBUG",
+  "task": "x96d2 master planner attach smoke",
+  "payload": {
+    "finding": "seeded by X87B dispatcher",
+    "evidence": "D:\\openwebui\\runtime\\temp"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T17:10:29Z"
+}

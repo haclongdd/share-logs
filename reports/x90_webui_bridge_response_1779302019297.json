@@ -1,0 +1,27 @@
+{
+  "ok": false,
+  "release": "X90_WEBUI_AGENT_BRIDGE",
+  "request_id": "x90req_1779302019157_97593bba",
+  "mode": "agent",
+  "task": "x97e5 live verify planner dispatch after TEMP_DIR repair",
+  "error": "ValueError('invalid role MASTER; allowed=SCOUT, DEBUG, PATCHER, VERIFY, REPORT')",
+  "dependency_status": {
+    "x86": {
+      "path": "/app/core/x86_agent_bus.py",
+      "exists": true
+    },
+    "x87": {
+      "path": "/app/core/x87_worker_dispatcher.py",
+      "exists": true
+    },
+    "x88": {
+      "path": "/app/core/x88_persistent_scheduler.py",
+      "exists": true
+    },
+    "x89": {
+      "path": "/app/core/x89_sandbox_workers.py",
+      "exists": true
+    }
+  },
+  "ts": "2026-05-20T18:33:39Z"
+}

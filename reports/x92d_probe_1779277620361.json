@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "release": "X92D_X90_ROOTDETECT_FIX",
+  "root": "D:\\openwebui",
+  "x90": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+  "x90_exists": true,
+  "x87_expected": "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+  "x87_exists": true,
+  "x88_exists": true,
+  "x89_exists": true,
+  "old_line_found": true,
+  "new_block_found": false
+}

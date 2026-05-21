@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "release": "X13V_REAL_EXECUTION_TEST_HARNESS",
+  "checked_at": "2026-05-19T10:57:45",
+  "task_id": "x13v_real_task",
+  "task": "Create a real execution proof artifact for AI Local OS X13V.",
+  "workflow": "D:\\openwebui\\runtime\\workflows\\x13v_real_task_workflow.json",
+  "artifact": "D:\\openwebui\\runtime\\projects\\x13v_real_task_artifact.txt",
+  "artifact_sha256": "34816f817850f706c7389db285c44141a5afffb0fb84024d600a8e70e1abe045",
+  "checks": {
+    "workflow_exists": true,
+    "artifact_exists": true,
+    "artifact_contains_release": true,
+    "report_written": true
+  }
+}

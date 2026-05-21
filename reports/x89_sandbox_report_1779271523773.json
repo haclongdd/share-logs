@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "release": "X89_SANDBOX_WORKERS",
+  "run_id": "x89run_1779271523715_5336ac98",
+  "command": "python --version",
+  "cwd": "D:\\openwebui",
+  "timeout_seconds": 20,
+  "returncode": 0,
+  "duration_seconds": 0.055,
+  "stdout_file": "D:\\openwebui\\runtime\\x89_sandbox_workers\\runs\\x89run_1779271523715_5336ac98\\stdout.txt",
+  "stderr_file": "D:\\openwebui\\runtime\\x89_sandbox_workers\\runs\\x89run_1779271523715_5336ac98\\stderr.txt",
+  "stdout_tail": "Python 3.13.7\n",
+  "stderr_tail": ""
+}

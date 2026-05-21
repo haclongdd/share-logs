@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+  "processed": [
+    {
+      "message_id": "x86_1779297923314_4a500d22",
+      "role": "DEBUG",
+      "task": "x97b2 live planner driven dispatch smoke: use scout then verify then report",
+      "input_payload": {
+        "finding": "seeded by X87B dispatcher",
+        "evidence": "D:\\openwebui\\runtime\\temp"
+      },
+      "handled_at": "2026-05-20T17:25:23Z",
+      "ok": true,
+      "summary": "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+      "routed_to": "PATCHER",
+      "output_payload": {
+        "root_cause": "pending_real_log_review",
+        "evidence": "D:\\openwebui\\runtime\\temp",
+        "source_message": "x86_1779297923314_4a500d22"
+      },
+      "routed_message_id": "x86_1779297923951_749bf9eb"
+    },
+    {
+      "message_id": "x86_1779297923951_749bf9eb",
+      "role": "PATCHER",
+      "task": "x97b2 live planner driven dispatch smoke: use scout then verify then report",
+      "input_payload": {
+        "root_cause": "pending_real_log_review",
+        "evidence": "D:\\openwebui\\runtime\\temp",
+        "source_message": "x86_1779297923314_4a500d22"
+      },
+      "handled_at": "2026-05-20T17:25:24Z",
+      "ok": true,
+      "summary": "PATCHER worker consumed confirmed cause/artifact context.",
+      "routed_to": "VERIFY",
+      "output_payload": {
+        "artifact": "D:\\openwebui\\_patch_inbox",
+        "patch_rule": "target confirmed cause only",
+        "source_message": "x86_1779297923951_749bf9eb"
+      },
+      "routed_message_id": "x86_1779297924646_78ce9810"
+    },
+    {
+      "message_id": "x86_1779297924646_78ce9810",
+      "role": "VERIFY",
+      "task": "x97b2 live planner driven dispatch smoke: use scout then verify then report",
+      "input_payload": {
+        "artifact": "D:\\openwebui\\_patch_inbox",
+        "patch_rule": "target confirmed cause only",
+        "source_message": "x86_1779297923951_749bf9eb"
+      },
+      "handled_at": "2026-05-20T17:25:25Z",
+      "ok": true,
+      "summary": "VERIFY worker consumed artifact and produced verify handoff.",
+      "routed_to": "REPORT",
+      "output_payload": {
+        "verify": "pending_x75_check",
+        "source_message": "x86_1779297924646_78ce9810"
+      },
+      "routed_message_id": "x86_1779297925279_bf7064b1"
+    },
+    {
+      "message_id": "x86_1779297925279_bf7064b1",
+      "role": "REPORT",
+      "task": "x97b2 live planner driven dispatch smoke: use scout then verify then report",
+      "input_payload": {
+        "verify": "pending_x75_check",
+        "source_message": "x86_1779297924646_78ce9810"
+      },
+      "handled_at": "2026-05-20T17:25:26Z",
+      "ok": true,
+      "summary": "REPORT worker consumed final verification payload.",
+      "routed_to": null,
+      "output_payload": {
+        "final": {
+          "verify": "pending_x75_check",
+          "source_message": "x86_1779297924646_78ce9810"
+        },
+        "source_message": "x86_1779297925279_bf7064b1"
+      }
+    }
+  ],
+  "processed_count": 4,
+  "state_file": "/app/runtime/x87_worker_dispatcher/state.json"
+}

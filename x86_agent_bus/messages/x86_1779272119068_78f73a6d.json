@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779272119068_78f73a6d",
+  "ts": "2026-05-20T10:15:19Z",
+  "from_role": "PATCHER",
+  "to_role": "VERIFY",
+  "task": "x90 bridge smoke",
+  "payload": {
+    "artifact": "D:\\openwebui\\_patch_inbox",
+    "patch_rule": "target confirmed cause only",
+    "source_message": "x86_1779272119040_55e7bcf7"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:15:19Z"
+}

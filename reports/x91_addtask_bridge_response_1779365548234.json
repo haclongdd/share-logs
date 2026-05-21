@@ -1,0 +1,144 @@
+{
+  "ok": true,
+  "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+  "bridge": "x90_webui_agent_bridge",
+  "normalized": {
+    "task": "x97e7 live runtime verify",
+    "mode": "agent",
+    "payload": {}
+  },
+  "x90_response": {
+    "ok": true,
+    "release": "X90_WEBUI_AGENT_BRIDGE",
+    "request_id": "x90req_1779365534774_5371e7d5",
+    "mode": "agent",
+    "task": "x97e7 live runtime verify",
+    "result": {
+      "flow": "master_planner_then_agent_dispatcher",
+      "x96_plan": {
+        "ok": true,
+        "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+        "kind": "master_execution_plan",
+        "task_id": "x96_8ebf9bd63411",
+        "task": "x97e7 live runtime verify",
+        "created_at": "2026-05-21T12:12:14Z",
+        "master_model": "qwen2.5-coder",
+        "child_model": "llama",
+        "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+        "classification": {
+          "needs_patch": false,
+          "needs_repo_scan": false,
+          "needs_verify": true,
+          "fallback_allowed": false
+        },
+        "limits": {
+          "retry_limit_per_step": 2,
+          "fallback_api_websearch_limit": 1,
+          "allow_unbounded_loop": false
+        },
+        "fallback_policy": {
+          "local_first": true,
+          "api_websearch_only_if_worker_report_insufficient": true,
+          "max_calls": 1,
+          "after_fallback_return_to_child_worker": true
+        },
+        "steps": [
+          {
+            "step_id": "s01_scout",
+            "role": "SCOUT",
+            "goal": "Read project context, roadmap, and identify relevant files/layers.",
+            "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+            "next_role": "DEBUG",
+            "status": "planned",
+            "max_retries": 2,
+            "requires_master_review": false
+          },
+          {
+            "step_id": "s02_debug",
+            "role": "DEBUG",
+            "goal": "Verify the true failing layer or required change using logs/evidence.",
+            "input_hint": "Do not patch until root cause is confirmed.",
+            "next_role": "VERIFY",
+            "status": "planned",
+            "max_retries": 2,
+            "requires_master_review": false
+          },
+          {
+            "step_id": "s03_verify",
+            "role": "VERIFY",
+            "goal": "Run focused checks and collect pass/fail evidence.",
+            "input_hint": "Export full logs to runtime/temp/*.txt.",
+            "next_role": "REPORT",
+            "status": "planned",
+            "max_retries": 2,
+            "requires_master_review": true
+          },
+          {
+            "step_id": "s04_report",
+            "role": "REPORT",
+            "goal": "Summarize worker results for MASTER review.",
+            "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+            "next_role": null,
+            "status": "planned",
+            "max_retries": 2,
+            "requires_master_review": true
+          }
+        ],
+        "master_review_policy": {
+          "master_must_review_report": true,
+          "pass_condition": "VERIFY ok and REPORT has evidence",
+          "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+          "final_output_owner": "MASTER"
+        },
+        "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+        "roadmap_excerpt_present": false,
+        "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8ebf9bd63411_plan.json"
+      },
+      "x96_plan_error": null,
+      "seed": {
+        "ok": true,
+        "seed_message": "x86_1779365534965_eea7e16c",
+        "task": "x97e7 live runtime verify",
+        "seeded_to": "SCOUT",
+        "x97e_seed_mode": "planner_first"
+      },
+      "cycles": [
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+          "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779365538560.json"
+        },
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+          "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779365541699.json"
+        },
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+          "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779365544964.json"
+        },
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+          "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779365548165.json"
+        }
+      ]
+    },
+    "ts": "2026-05-21T12:12:28Z",
+    "report_file": "/app/runtime/reports/x90_webui_bridge_response_1779365548181.json"
+  },
+  "ts": "2026-05-21T12:12:28Z"
+}

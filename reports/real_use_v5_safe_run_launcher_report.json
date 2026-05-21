@@ -1,0 +1,8 @@
+﻿{
+    "ok":  true,
+    "release":  "AI_LOCAL_OS_REAL_USE_V5_SAFE_RUN_LAUNCHER",
+    "checked_at":  "2026-05-19T11:29:26",
+    "launcher":  "D:\\openwebui\\project_v4_1\\safe_run.py",
+    "markdown_report":  "D:\\openwebui\\project_v4_1\\SAFE_RUN_REPORT.md",
+    "summary_report":  "D:\\openwebui\\runtime\\reports\\real_use_v5_safe_run_launcher_report.json"
+}

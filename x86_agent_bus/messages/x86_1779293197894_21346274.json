@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779293197894_21346274",
+  "ts": "2026-05-20T16:06:37Z",
+  "from_role": "VERIFY",
+  "to_role": "REPORT",
+  "task": "x96d planner attach smoke",
+  "payload": {
+    "verify": "pending_x75_check",
+    "source_message": "x86_1779293197863_e7f8a7b2"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T16:06:37Z"
+}

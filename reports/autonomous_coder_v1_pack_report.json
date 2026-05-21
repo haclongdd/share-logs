@@ -1,0 +1,91 @@
+﻿{
+    "ok":  true,
+    "release":  "AI_LOCAL_OS_AUTONOMOUS_CODER_V1_PACK",
+    "checked_at":  "2026-05-19T12:16:54",
+    "webui_connect":  "D:\\openwebui\\core\\webui_connect_v1_bridge.py",
+    "real_edit":  "D:\\openwebui\\core\\autonomous_coder_v1.py",
+    "openwebui_tool_wrapper":  "D:\\openwebui\\tools\\openwebui_ai_local_os_tool.py",
+    "verify_coder":  {
+                         "ok":  true,
+                         "release":  "AUTONOMOUS_CODER_V1",
+                         "checked_at":  "2026-05-19T12:16:54",
+                         "project":  "D:\\openwebui\\project_v4_1",
+                         "supports":  [
+                                          "fix syntax error in \u003cfile\u003e.py",
+                                          "repair pasted markdown fences",
+                                          "compile-check after edit"
+                                      ]
+                     },
+    "verify_bridge":  {
+                          "ok":  true,
+                          "release":  "WEBUI_CONNECT_V1",
+                          "checked_at":  "2026-05-19T12:16:54",
+                          "command":  "check project status",
+                          "backend":  "D:\\openwebui\\core\\real_use_v8_action_router.py",
+                          "returncode":  0,
+                          "result":  {
+                                         "route":  "status",
+                                         "result":  {
+                                                        "ok":  true,
+                                                        "returncode":  0,
+                                                        "stdout":  {
+                                                                       "ok":  true,
+                                                                       "checked_at":  "2026-05-19T12:16:54",
+                                                                       "project":  "D:\\openwebui\\project_v4_1",
+                                                                       "project_exists":  true,
+                                                                       "file_count":  20,
+                                                                       "latest_reports":  [
+                                                                                              {
+                                                                                                  "name":  "real_use_v7_webui_command_router_report.json",
+                                                                                                  "size_bytes":  6316
+                                                                                              },
+                                                                                              {
+                                                                                                  "name":  "real_use_v8_action_router_report.json",
+                                                                                                  "size_bytes":  3334
+                                                                                              },
+                                                                                              {
+                                                                                                  "name":  "real_use_v9_natural_command_api_report.json",
+                                                                                                  "size_bytes":  2006
+                                                                                              },
+                                                                                              {
+                                                                                                  "name":  "x13n_latest_project_report.json",
+                                                                                                  "size_bytes":  3662
+                                                                                              },
+                                                                                              {
+                                                                                                  "name":  "x13v_real_task_report.json",
+                                                                                                  "size_bytes":  616
+                                                                                              },
+                                                                                              {
+                                                                                                  "name":  "x13w_list_project_files_v4_1_report.json",
+                                                                                                  "size_bytes":  709
+                                                                                              },
+                                                                                              {
+                                                                                                  "name":  "x13x_webui_api_handoff_probe_handoff_report.json",
+                                                                                                  "size_bytes":  1431
+                                                                                              },
+                                                                                              {
+                                                                                                  "name":  "x13x_webui_api_handoff_probe_report.json",
+                                                                                                  "size_bytes":  732
+                                                                                              },
+                                                                                              {
+                                                                                                  "name":  "x13y_live_api_probe_api_shim_report.json",
+                                                                                                  "size_bytes":  1317
+                                                                                              },
+                                                                                              {
+                                                                                                  "name":  "x13y_live_api_probe_report.json",
+                                                                                                  "size_bytes":  700
+                                                                                              }
+                                                                                          ],
+                                                                       "generated_files":  {
+                                                                                               "README_PROJECT.md":  true,
+                                                                                               "PROJECT_HEALTH_REPORT.md":  true,
+                                                                                               "PROJECT_TOOLS_REPORT.md":  true,
+                                                                                               "SAFE_RUN_REPORT.md":  true
+                                                                                           }
+                                                                   },
+                                                        "stderr":  ""
+                                                    }
+                                     },
+                          "stderr":  ""
+                      }
+}

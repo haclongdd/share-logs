@@ -1,8 +1,0 @@
-﻿python : Sorry: IndentationError: unexpected indent (x87_worker_dispatcher.py, line 238)
-At D:\openwebui\_patch_inbox\x97e3_x87_compile_audit_scan\apply_x97e3_x87_compile_audit_scan.ps1:32 char:3
-+   python -m py_compile $Target *> $CompileLog
-+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (Sorry: Indentat...r.py, line 238):String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-

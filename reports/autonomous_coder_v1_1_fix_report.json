@@ -1,0 +1,177 @@
+﻿{
+  "ok": true,
+  "release": "WEBUI_CONNECT_V1_1",
+  "checks": [
+    {
+      "ok": true,
+      "release": "WEBUI_CONNECT_V1_1",
+      "checked_at": "2026-05-19T12:20:06",
+      "command": "check project status",
+      "backend": "D:\\openwebui\\core\\real_use_v8_action_router.py",
+      "returncode": 0,
+      "result": {
+        "route": "status",
+        "result": {
+          "ok": true,
+          "returncode": 0,
+          "stdout": {
+            "ok": true,
+            "checked_at": "2026-05-19T12:20:06",
+            "project": "D:\\openwebui\\project_v4_1",
+            "project_exists": true,
+            "file_count": 20,
+            "latest_reports": [
+              {
+                "name": "real_use_v7_webui_command_router_report.json",
+                "size_bytes": 6316
+              },
+              {
+                "name": "real_use_v8_action_router_report.json",
+                "size_bytes": 3334
+              },
+              {
+                "name": "real_use_v9_natural_command_api_report.json",
+                "size_bytes": 2006
+              },
+              {
+                "name": "x13n_latest_project_report.json",
+                "size_bytes": 3662
+              },
+              {
+                "name": "x13v_real_task_report.json",
+                "size_bytes": 616
+              },
+              {
+                "name": "x13w_list_project_files_v4_1_report.json",
+                "size_bytes": 709
+              },
+              {
+                "name": "x13x_webui_api_handoff_probe_handoff_report.json",
+                "size_bytes": 1431
+              },
+              {
+                "name": "x13x_webui_api_handoff_probe_report.json",
+                "size_bytes": 732
+              },
+              {
+                "name": "x13y_live_api_probe_api_shim_report.json",
+                "size_bytes": 1317
+              },
+              {
+                "name": "x13y_live_api_probe_report.json",
+                "size_bytes": 700
+              }
+            ],
+            "generated_files": {
+              "README_PROJECT.md": true,
+              "PROJECT_HEALTH_REPORT.md": true,
+              "PROJECT_TOOLS_REPORT.md": true,
+              "SAFE_RUN_REPORT.md": true
+            }
+          },
+          "stderr": ""
+        }
+      },
+      "stderr": ""
+    },
+    {
+      "ok": true,
+      "release": "WEBUI_CONNECT_V1_1",
+      "checked_at": "2026-05-19T12:20:06",
+      "command": "list project files",
+      "backend": "D:\\openwebui\\core\\real_use_v7_webui_command_router.py",
+      "returncode": 0,
+      "result": {
+        "route": "list_project_files",
+        "result": {
+          "ok": true,
+          "checked_at": "2026-05-19T12:20:06",
+          "file_count": 20,
+          "files": [
+            {
+              "file": "__pycache__\\check_pi_node.cpython-313.pyc",
+              "size_bytes": 11921
+            },
+            {
+              "file": "__pycache__\\checkmail.cpython-313.pyc",
+              "size_bytes": 11993
+            },
+            {
+              "file": "__pycache__\\dashboard.cpython-313.pyc",
+              "size_bytes": 21157
+            },
+            {
+              "file": "__pycache__\\project_tools.cpython-313.pyc",
+              "size_bytes": 3394
+            },
+            {
+              "file": "__pycache__\\safe_run.cpython-313.pyc",
+              "size_bytes": 4262
+            },
+            {
+              "file": "_sanitized_configs\\node_config.json",
+              "size_bytes": 344
+            },
+            {
+              "file": "_sanitized_configs\\trade_config.json",
+              "size_bytes": 364
+            },
+            {
+              "file": "bot_trade_pi.py",
+              "size_bytes": 10911
+            },
+            {
+              "file": "check_pi_node.py",
+              "size_bytes": 7524
+            },
+            {
+              "file": "checkmail.py",
+              "size_bytes": 7487
+            },
+            {
+              "file": "CONFIG_SANITIZER_REPORT.md",
+              "size_bytes": 456
+            },
+            {
+              "file": "dashboard.py",
+              "size_bytes": 14808
+            },
+            {
+              "file": "node_config.json",
+              "size_bytes": 346
+            },
+            {
+              "file": "PROJECT_HEALTH_REPORT.md",
+              "size_bytes": 1660
+            },
+            {
+              "file": "project_tools.py",
+              "size_bytes": 1747
+            },
+            {
+              "file": "PROJECT_TOOLS_REPORT.md",
+              "size_bytes": 301
+            },
+            {
+              "file": "README_PROJECT.md",
+              "size_bytes": 1810
+            },
+            {
+              "file": "safe_run.py",
+              "size_bytes": 2696
+            },
+            {
+              "file": "SAFE_RUN_REPORT.md",
+              "size_bytes": 436
+            },
+            {
+              "file": "trade_config.json",
+              "size_bytes": 494
+            }
+          ]
+        }
+      },
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "release": "X89_SANDBOX_WORKERS",
+  "run_id": "x89run_1779271526006_048b5eda",
+  "command": "dir",
+  "cwd": "D:\\openwebui",
+  "timeout_seconds": 20,
+  "returncode": 0,
+  "duration_seconds": 0.036,
+  "stdout_file": "D:\\openwebui\\runtime\\x89_sandbox_workers\\runs\\x89run_1779271526006_048b5eda\\stdout.txt",
+  "stderr_file": "D:\\openwebui\\runtime\\x89_sandbox_workers\\runs\\x89run_1779271526006_048b5eda\\stderr.txt",
+  "stdout_tail": "       sandbox\n18/05/2026  04:49 CH    <DIR>          scripts\n12/05/2026  09:07 CH    <DIR>          services\n19/05/2026  02:19 CH    <DIR>          tools\n17/05/2026  11:47 SA    <DIR>          workspace\n19/05/2026  12:38 SA            14.074 x12n2_filter_locator_report.txt\n20/05/2026  02:03 SA               302 x25_ollama.compose.yml\n18/05/2026  01:06 CH    <DIR>          _archive_final_cleanup\n18/05/2026  05:37 CH    <DIR>          _archive_stabilization\n20/05/2026  02:12 CH    <DIR>          _backups\n20/05/2026  01:29 CH    <DIR>          _backupsy_auto_patch_pipeline_orchestrator\n20/05/2026  12:33 CH    <DIR>          _checkpoints\n19/05/2026  09:16 SA    <DIR>          _cleanup_archive\n18/05/2026  09:44 SA    <DIR>          _docs\n20/05/2026  05:05 CH    <DIR>          _patch_inbox\n18/05/2026  07:32 CH    <DIR>          _phase2_control\n18/05/2026  08:20 CH    <DIR>          __pycache__\n              27 File(s)         95.412 bytes\n              41 Dir(s)  633.634.009.088 bytes free\n",
+  "stderr_tail": ""
+}

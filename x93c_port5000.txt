@@ -1,8 +1,0 @@
-﻿docker : sh: 1: ss: not found
-At line:1 char:1
-+ docker exec master_ai sh -lc "ss -ltnp | grep 5000" *> D:\openwebui\r ...
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (sh: 1: ss: not found:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
- 
-

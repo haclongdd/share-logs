@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "release": "X92E_X87_ROOTDETECT_FIX",
+  "root": "D:\\openwebui",
+  "x87": "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+  "x87_exists": true,
+  "x86_expected": "D:\\openwebui\\core\\x86_agent_bus.py",
+  "x86_exists": true,
+  "old_line_found": true,
+  "new_block_found": false
+}

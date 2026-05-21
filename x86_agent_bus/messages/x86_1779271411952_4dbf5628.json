@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779271411952_4dbf5628",
+  "ts": "2026-05-20T10:03:31Z",
+  "from_role": "VERIFY",
+  "to_role": "REPORT",
+  "task": "x88 scheduler smoke",
+  "payload": {
+    "verify": "pending_x75_check",
+    "source_message": "x86_1779271411926_3acfc436"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:03:31Z"
+}

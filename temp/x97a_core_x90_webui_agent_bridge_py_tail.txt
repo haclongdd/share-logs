@@ -1,0 +1,260 @@
+﻿
+
+def import_class(path: Path, module_name: str, class_name: str):
+    if not path.exists():
+        raise FileNotFoundError(f"dependency missing: {path}")
+    spec = importlib.util.spec_from_file_location(module_name, str(path))
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot import {path}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    spec.loader.exec_module(module)
+    return getattr(module, class_name)
+
+
+class WebUIAgentBridge:
+    def __init__(self) -> None:
+        BRIDGE_DIR.mkdir(parents=True, exist_ok=True)
+        REQUESTS_DIR.mkdir(parents=True, exist_ok=True)
+        RESPONSES_DIR.mkdir(parents=True, exist_ok=True)
+        REPORT_DIR.mkdir(parents=True, exist_ok=True)
+
+        self.state = load_json(STATE_FILE, {
+            "release": "X90_WEBUI_AGENT_BRIDGE",
+            "created_at": utc_stamp(),
+            "requests_total": 0,
+            "requests_ok": 0,
+            "requests_failed": 0,
+            "last_request": None,
+            "last_response": None,
+            "last_error": None,
+        })
+
+    def save(self) -> None:
+        safe_write_json(STATE_FILE, self.state)
+
+    def dependency_status(self) -> Dict[str, Any]:
+        return {name: {"path": str(path), "exists": path.exists()} for name, path in DEPENDENCIES.items()}
+
+    def request_path(self, request_id: str) -> Path:
+        return REQUESTS_DIR / f"{request_id}.json"
+
+    def response_path(self, request_id: str) -> Path:
+        return RESPONSES_DIR / f"{request_id}.json"
+
+    def submit(self, task: str, mode: str = "agent", payload: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        mode = mode.lower().strip()
+        if mode not in {"agent", "schedule", "sandbox", "status"}:
+            raise ValueError("mode must be one of: agent, schedule, sandbox, status")
+
+        request_id = f"x90req_{now_ms()}_{uuid.uuid4().hex[:8]}"
+        request = {
+            "id": request_id,
+            "ts": utc_stamp(),
+            "task": task,
+            "mode": mode,
+            "payload": payload or {},
+            "status": "received",
+        }
+        safe_write_json(self.request_path(request_id), request)
+
+        self.state["requests_total"] = int(self.state.get("requests_total", 0)) + 1
+        self.state["last_request"] = request
+        self.save()
+
+        response = self.process_request(request)
+        safe_write_json(self.response_path(request_id), response)
+
+        self.state["last_response"] = response
+        if response.get("ok"):
+            self.state["requests_ok"] = int(self.state.get("requests_ok", 0)) + 1
+        else:
+            self.state["requests_failed"] = int(self.state.get("requests_failed", 0)) + 1
+            self.state["last_error"] = response
+        self.save()
+
+        return response
+
+    def process_request(self, request: Dict[str, Any]) -> Dict[str, Any]:
+        mode = request["mode"]
+        task = request["task"]
+        payload = request.get("payload") or {}
+        request_id = request["id"]
+
+        try:
+            if mode == "status":
+                result = self.status()
+            elif mode == "agent":
+                result = self.run_agent_flow(task=task)
+            elif mode == "schedule":
+                result = self.run_scheduler_flow(task=task, payload=payload)
+            elif mode == "sandbox":
+                result = self.run_sandbox_flow(task=task, payload=payload)
+            else:
+                raise RuntimeError(f"unhandled mode {mode}")
+
+            response = {
+                "ok": True,
+                "release": "X90_WEBUI_AGENT_BRIDGE",
+                "request_id": request_id,
+                "mode": mode,
+                "task": task,
+                "result": result,
+                "ts": utc_stamp(),
+            }
+        except Exception as exc:
+            response = {
+                "ok": False,
+                "release": "X90_WEBUI_AGENT_BRIDGE",
+                "request_id": request_id,
+                "mode": mode,
+                "task": task,
+                "error": repr(exc),
+                "dependency_status": self.dependency_status(),
+                "ts": utc_stamp(),
+            }
+
+        out = REPORT_DIR / f"x90_webui_bridge_response_{now_ms()}.json"
+        safe_write_json(out, response)
+        response["report_file"] = str(out)
+        return response
+
+    def run_agent_flow(self, task: str) -> Dict[str, Any]:
+        """X96D2_MASTER_PLANNER_ATTACHED: MASTER planner first, X87 dispatcher execution second."""
+        x96_plan = None
+        x96_plan_error = None
+
+        try:
+            if str(CORE_DIR) not in sys.path:
+                sys.path.insert(0, str(CORE_DIR))
+            import x96_master_planner_reviewer as x96_master_planner_reviewer
+
+            build_plan = getattr(x96_master_planner_reviewer, "build_plan", None)
+            if callable(build_plan):
+                x96_plan = build_plan(task)
+            else:
+                planner_cls = getattr(x96_master_planner_reviewer, "MasterPlannerReviewer", None)
+                if planner_cls is None:
+                    raise RuntimeError("x96_master_planner_reviewer has no build_plan() or MasterPlannerReviewer")
+                planner = planner_cls()
+                if not hasattr(planner, "build_plan"):
+                    raise RuntimeError("MasterPlannerReviewer has no build_plan()")
+                x96_plan = planner.build_plan(task)
+        except Exception as exc:
+            x96_plan_error = repr(exc)
+
+        WorkerDispatcher = import_class(DEPENDENCIES["x87"], "x87_worker_dispatcher_runtime_x90", "WorkerDispatcher")
+        dispatcher = WorkerDispatcher()
+        seed = dispatcher.seed(task)
+        cycles = []
+        for _ in range(4):
+            cycles.append(dispatcher.cycle(limit_per_role=50))
+
+        if x96_plan_error is None:
+            flow = "master_planner_then_agent_dispatcher"
+        else:
+            flow = "agent_dispatcher"
+
+        return {
+            "flow": flow,
+            "x96_plan": x96_plan,
+            "x96_plan_error": x96_plan_error,
+            "seed": seed,
+            "cycles": cycles,
+        }
+
+    def run_scheduler_flow(self, task: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+        PersistentScheduler = import_class(DEPENDENCIES["x88"], "x88_scheduler_runtime_x90", "PersistentScheduler")
+        scheduler = PersistentScheduler()
+        every_seconds = int(payload.get("every_seconds", 0))
+        max_runs = int(payload.get("max_runs", 1))
+        job = scheduler.add_job(task=task, every_seconds=every_seconds, max_runs=max_runs)
+        tick = scheduler.tick(limit_jobs=int(payload.get("limit_jobs", 10)))
+        return {
+            "flow": "scheduler",
+            "job": job,
+            "tick": tick,
+        }
+
+    def run_sandbox_flow(self, task: str, payload: Dict[str, Any]) -> Dict[str, Any]:
+        SandboxWorker = import_class(DEPENDENCIES["x89"], "x89_sandbox_runtime_x90", "SandboxWorker")
+        worker = SandboxWorker()
+        command = payload.get("command") or task
+        timeout = int(payload.get("timeout", 20))
+        cwd = str(payload.get("cwd", ""))
+        result = worker.execute(command=command, timeout_seconds=timeout, cwd=cwd)
+        return {
+            "flow": "sandbox",
+            "sandbox_result": result,
+        }
+
+    def latest_response(self) -> Dict[str, Any]:
+        rows = sorted(RESPONSES_DIR.glob("*.json"), [REDACTED]=lambda p: p.stat().st_mtime, reverse=True)
+        if not rows:
+            return {"ok": False, "error": "no responses yet"}
+        data = load_json(rows[0], {})
+        data["path"] = str(rows[0])
+        return data
+
+    def status(self) -> Dict[str, Any]:
+        responses = list(RESPONSES_DIR.glob("*.json"))
+        requests = list(REQUESTS_DIR.glob("*.json"))
+        return {
+            "ok": True,
+            "release": "X90_WEBUI_AGENT_BRIDGE",
+            "state_file": str(STATE_FILE),
+            "requests_dir": str(REQUESTS_DIR),
+            "responses_dir": str(RESPONSES_DIR),
+            "requests_count": len(requests),
+            "responses_count": len(responses),
+            "dependency_status": self.dependency_status(),
+            "state": self.state,
+        }
+
+
+def parse_payload(raw: str) -> Dict[str, Any]:
+    if not raw:
+        return {}
+    try:
+        data = json.loads(raw)
+        if not isinstance(data, dict):
+            raise ValueError("payload must be JSON object")
+        return data
+    except Exception as exc:
+        raise SystemExit(f"invalid --payload JSON: {exc}")
+
+
+def cli() -> int:
+    parser = argparse.ArgumentParser(description="X90 WebUI Agent Runtime Bridge")
+    sub = parser.add_subparsers(dest="cmd")
+
+    p_submit = sub.add_parser("submit")
+    p_submit.add_argument("--task", required=True)
+    p_submit.add_argument("--mode", default="agent", choices=["agent", "schedule", "sandbox", "status"])
+    p_submit.add_argument("--payload", default="{}")
+
+    sub.add_parser("status")
+    sub.add_parser("latest")
+
+    args = parser.parse_args()
+    bridge = WebUIAgentBridge()
+
+    if args.cmd == "submit":
+        result = bridge.submit(task=args.task, mode=args.mode, payload=parse_payload(args.payload))
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        return 0 if result.get("ok") else 1
+
+    if args.cmd == "status":
+        print(json.dumps(bridge.status(), ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "latest":
+        print(json.dumps(bridge.latest_response(), ensure_ascii=False, indent=2))
+        return 0
+
+    parser.print_help()
+    return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(cli())

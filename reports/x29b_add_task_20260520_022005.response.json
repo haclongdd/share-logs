@@ -1,0 +1,20 @@
+﻿{
+    "created_at":  "2026-05-19T19:20:06",
+    "error":  "missing D:\\openwebui/core/agent_con.py",
+    "flow":  [
+                 "WebUI/add_task",
+                 "X15D adapter",
+                 "agent_con --task-file",
+                 "ollama",
+                 "report"
+             ],
+    "id":  "x15d_d9222242f239",
+    "instruction":  "X29B path validation smoke 20260520_022005",
+    "ok":  false,
+    "patch":  "X15D_WEBUI_ADDTASK_AGENTCON_ATTACH",
+    "report_file":  "D:\\openwebui/runtime/x15d/reports/x15d_d9222242f239.json",
+    "source":  "webui_add_task",
+    "status":  "failed",
+    "task":  "X29B path validation smoke 20260520_022005",
+    "task_id":  "x15d_d9222242f239"
+}

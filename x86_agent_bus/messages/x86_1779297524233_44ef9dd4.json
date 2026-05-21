@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779297524233_44ef9dd4",
+  "ts": "2026-05-20T17:18:44Z",
+  "from_role": "VERIFY",
+  "to_role": "REPORT",
+  "task": "x97b planner driven dispatch smoke",
+  "payload": {
+    "verify": "pending_x75_check",
+    "source_message": "x86_1779297524199_b92a02e5"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T17:18:44Z"
+}

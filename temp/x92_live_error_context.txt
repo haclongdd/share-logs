@@ -1,0 +1,149 @@
+﻿
+  D:\openwebui\core\master_ai_bridge.py:20:# X14C_ORCHESTRATOR_ATTACHED
+  D:\openwebui\core\master_ai_bridge.py:21:def _x14c_execute_task_payload(task_text):
+  D:\openwebui\core\master_ai_bridge.py:22:    try:
+  D:\openwebui\core\master_ai_bridge.py:23:        from core.x14_bridge_adapter import execute_x14_task
+  D:\openwebui\core\master_ai_bridge.py:24:    except Exception:
+  D:\openwebui\core\master_ai_bridge.py:25:        from x14_bridge_adapter import execute_x14_task
+  D:\openwebui\core\master_ai_bridge.py:26:    return execute_x14_task(str(task_text or "").strip())
+  D:\openwebui\core\master_ai_bridge.py:27:
+> D:\openwebui\core\master_ai_bridge.py:28:import sys as _webui_bridge_sys  # WEBUI_ADD_TASK_BRIDGE_V1_1_PATCHED
+  D:\openwebui\core\master_ai_bridge.py:29:from pathlib import Path as _webui_bridge_Path
+  D:\openwebui\core\master_ai_bridge.py:30:_webui_bridge_sys.path.insert(0, 
+str(_webui_bridge_Path(__file__).resolve().parent))
+> D:\openwebui\core\master_ai_bridge.py:31:from webui_add_task_bridge_v1 import handle_add_task_payload
+  D:\openwebui\core\master_ai_bridge.py:32:# AI Local OS - Phase X1G Unified Runtime Consolidation
+  D:\openwebui\core\master_ai_bridge.py:33:# One source-of-truth bridge for OpenWebUI -> runtime -> result/report.
+  D:\openwebui\core\master_ai_bridge.py:34:# Backward compatible with Phase2 workspace/results and Phase5 
+runtime/results.
+  D:\openwebui\core\master_ai_bridge.py:35:from flask import Flask, request, jsonify
+  D:\openwebui\core\master_ai_bridge.py:36:from pathlib import Path
+  D:\openwebui\core\master_ai_bridge.py:37:from datetime import datetime, timezone
+  D:\openwebui\core\master_ai_bridge.py:38:import hashlib, json, traceback, os, glob
+  D:\openwebui\core\master_ai_bridge.py:39:
+  D:\openwebui\core\master_ai_bridge.py:40:ROOT = Path(os.environ.get("AIOS_ROOT", "/app"))
+  D:\openwebui\core\master_ai_bridge.py:41:RUNTIME = ROOT / "runtime"
+  D:\openwebui\core\master_ai_bridge.py:42:WORKSPACE = ROOT / "workspace"
+  D:\openwebui\core\master_ai_bridge.py:43:QUEUE = RUNTIME / "queue"
+  D:\openwebui\core\master_ai_bridge.py:188:@app.route("/", methods=["GET"])
+  D:\openwebui\core\master_ai_bridge.py:189:def root():
+  D:\openwebui\core\master_ai_bridge.py:190:    return jsonify({"service":"master_ai_bridge", "phase":"X1G", 
+"status":"ok", "mode":"unified_runtime_consolidation", "time":now()})
+  D:\openwebui\core\master_ai_bridge.py:191:
+  D:\openwebui\core\master_ai_bridge.py:192:@app.route("/health", methods=["GET"])
+  D:\openwebui\core\master_ai_bridge.py:193:def health():
+  D:\openwebui\core\master_ai_bridge.py:194:    return jsonify({"service":"master_ai_bridge", "phase":"X1G", 
+"status":"ok", "mode":"unified_runtime_consolidation", "time":now()})
+  D:\openwebui\core\master_ai_bridge.py:195:
+> D:\openwebui\core\master_ai_bridge.py:196:@app.route("/add_task", methods=["GET", "POST"])
+> D:\openwebui\core\master_ai_bridge.py:197:def add_task():
+  D:\openwebui\core\master_ai_bridge.py:198:    # X15D_WEBUI_ADDTASK_AGENTCON_ATTACH
+  D:\openwebui\core\master_ai_bridge.py:199:    try:
+> D:\openwebui\core\master_ai_bridge.py:200:        from core.x15d_webui_addtask_agentcon_attach import 
+webui_add_task_bridge
+  D:\openwebui\core\master_ai_bridge.py:201:        payload = request.get_json(silent=True) if 'request' in globals() 
+else None
+  D:\openwebui\core\master_ai_bridge.py:202:        if payload is None:
+  D:\openwebui\core\master_ai_bridge.py:203:            try:
+  D:\openwebui\core\master_ai_bridge.py:204:                from flask import request as _x15d_request
+  D:\openwebui\core\master_ai_bridge.py:205:                payload = _x15d_request.get_json(silent=True)
+  D:\openwebui\core\master_ai_bridge.py:206:            except Exception:
+  D:\openwebui\core\master_ai_bridge.py:207:                payload = None
+> D:\openwebui\core\master_ai_bridge.py:208:        # X92_ATTACH_X90_TO_MASTER_BRIDGE_START
+> D:\openwebui\core\master_ai_bridge.py:209:            from core.x91_addtask_bridge_adapter import 
+handle_add_task_payload as _x91_handle_add_task_payload
+> D:\openwebui\core\master_ai_bridge.py:210:            _x15d_result = _x91_handle_add_task_payload(payload)
+> D:\openwebui\core\master_ai_bridge.py:211:# X92_ATTACH_X90_TO_MASTER_BRIDGE_END
+> D:\openwebui\core\master_ai_bridge.py:212:        return jsonify(_x15d_result) if 'jsonify' in globals() else 
+_x15d_result
+  D:\openwebui\core\master_ai_bridge.py:213:    except Exception as _x15d_e:
+  D:\openwebui\core\master_ai_bridge.py:214:        return {'ok': False, 'patch': 
+'X15D_WEBUI_ADDTASK_AGENTCON_ATTACH', 'error': str(_x15d_e)}
+  D:\openwebui\core\master_ai_bridge.py:215:
+  D:\openwebui\core\master_ai_bridge.py:216:    # X14C_ORCHESTRATOR_ATTACHED: route WebUI tasks into Master 
+Orchestrator
+  D:\openwebui\core\master_ai_bridge.py:217:    try:
+  D:\openwebui\core\master_ai_bridge.py:218:        _body = request.get_json(silent=True) if 'request' in globals() 
+else None
+  D:\openwebui\core\master_ai_bridge.py:219:    except Exception:
+  D:\openwebui\core\master_ai_bridge.py:220:        _body = None
+  D:\openwebui\core\master_ai_bridge.py:221:    try:
+  D:\openwebui\core\master_ai_bridge.py:222:        if _body is None and 'body' in locals():
+  D:\openwebui\core\master_ai_bridge.py:223:            _body = body
+  D:\openwebui\core\master_ai_bridge.py:224:    except Exception:
+  D:\openwebui\core\master_ai_bridge.py:226:    try:
+  D:\openwebui\core\master_ai_bridge.py:227:        _task_text = None
+  D:\openwebui\core\master_ai_bridge.py:228:        if isinstance(_body, dict):
+  D:\openwebui\core\master_ai_bridge.py:229:            _task_text = _body.get('task') or _body.get('command') or 
+_body.get('prompt')
+  D:\openwebui\core\master_ai_bridge.py:230:        if _task_text:
+  D:\openwebui\core\master_ai_bridge.py:231:            return _x14c_execute_task_payload(_task_text)
+  D:\openwebui\core\master_ai_bridge.py:232:    except Exception as _x14c_e:
+  D:\openwebui\core\master_ai_bridge.py:233:        [REDACTED]
+> D:\openwebui\core\master_ai_bridge.py:234:    # WEBUI_ADD_TASK_BRIDGE_V1_1_PATCHED
+  D:\openwebui\core\master_ai_bridge.py:235:    data = request.get_json(silent=True)
+  D:\openwebui\core\master_ai_bridge.py:236:    if data is None:
+  D:\openwebui\core\master_ai_bridge.py:237:        data = {}
+  D:\openwebui\core\master_ai_bridge.py:238:    try:
+  D:\openwebui\core\master_ai_bridge.py:239:        if not data and getattr(request, "data", b""):
+  D:\openwebui\core\master_ai_bridge.py:240:            data = request.data.decode("utf-8", errors="replace")
+  D:\openwebui\core\master_ai_bridge.py:241:    except Exception:
+  D:\openwebui\core\master_ai_bridge.py:242:        [REDACTED]
+  D:\openwebui\core\master_ai_bridge.py:243:    try:
+  D:\openwebui\core\master_ai_bridge.py:244:        if not data and getattr(request, "form", None):
+  D:\openwebui\core\master_ai_bridge.py:245:            data = request.form.to_dict(flat=True)
+  D:\openwebui\core\master_ai_bridge.py:246:    except Exception:
+  D:\openwebui\core\master_ai_bridge.py:247:        [REDACTED]
+  D:\openwebui\core\master_ai_bridge.py:248:    try:
+  D:\openwebui\core\master_ai_bridge.py:249:        if not data and getattr(request, "args", None):
+  D:\openwebui\core\master_ai_bridge.py:250:            data = request.args.to_dict(flat=True)
+  D:\openwebui\core\master_ai_bridge.py:251:    except Exception:
+  D:\openwebui\core\master_ai_bridge.py:252:        [REDACTED]
+> D:\openwebui\core\master_ai_bridge.py:253:    return jsonify(handle_add_task_payload(data))
+  D:\openwebui\core\master_ai_bridge.py:254:
+  D:\openwebui\core\master_ai_bridge.py:255:@app.route("/get_report", methods=["GET", "POST"])
+  D:\openwebui\core\master_ai_bridge.py:256:def get_report():
+  D:\openwebui\core\master_ai_bridge.py:257:    try:
+  D:\openwebui\core\master_ai_bridge.py:258:        data = request.get_json(silent=True) or request.form.to_dict() or 
+request.args.to_dict() or {}
+  D:\openwebui\core\master_ai_bridge.py:259:        task_id = str(data.get("task_id") or data.get("id") or "").strip()
+  D:\openwebui\core\master_ai_bridge.py:260:        if not task_id:
+  D:\openwebui\core\master_ai_bridge.py:261:            return jsonify({"phase":"X1G", "status":"completed", 
+"completed":True, "final_status":"[REDACTED]", "result":"No task_id provided."}), 200
+  D:\openwebui\core\master_ai_bridge.py:262:        existing = find_existing(task_id)
+  D:\openwebui\core\master_ai_bridge.py:263:        if existing:
+  D:\openwebui\core\master_ai_bridge.py:264:            persist_all(existing)
+  D:\openwebui\core\master_ai_bridge.py:265:            return jsonify(existing), 200
+  D:\openwebui\core\master_ai_bridge.py:288:        status_dir = root / 'runtime' / 'x16' / 'status'
+  D:\openwebui\core\master_ai_bridge.py:289:        rows = []
+  D:\openwebui\core\master_ai_bridge.py:290:        if status_dir.exists():
+  D:\openwebui\core\master_ai_bridge.py:291:            for p in sorted(status_dir.glob('*.json'), [REDACTED]=lambda x: 
+x.stat().st_mtime, reverse=True)[:20]:
+  D:\openwebui\core\master_ai_bridge.py:292:                try: 
+rows.append(_x16_json.loads(p.read_text(encoding='utf-8')))
+  D:\openwebui\core\master_ai_bridge.py:293:                except Exception: [REDACTED]
+  D:\openwebui\core\master_ai_bridge.py:294:        return {'ok': True, 'items': rows}
+  D:\openwebui\core\master_ai_bridge.py:295:
+> D:\openwebui\core\master_ai_bridge.py:296:    @app.route('/x16/add_task', methods=['POST'])
+> D:\openwebui\core\master_ai_bridge.py:297:    def x16_add_task():
+  D:\openwebui\core\master_ai_bridge.py:298:        data = request.get_json(silent=True) or {}
+  D:\openwebui\core\master_ai_bridge.py:299:        task = data.get('task') or data.get('prompt') or 
+data.get('message') or ''
+  D:\openwebui\core\master_ai_bridge.py:300:        root = _X16Path(r'D:\openwebui')
+  D:\openwebui\core\master_ai_bridge.py:301:        runner = root / 'core' / 'x16_realtime_runner.py'
+  D:\openwebui\core\master_ai_bridge.py:302:        p = _x16_subprocess.run([_x16_sys.executable, str(runner), 
+'--task', task], capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=360)
+  D:\openwebui\core\master_ai_bridge.py:303:        try: return _x16_json.loads(p.stdout)
+  D:\openwebui\core\master_ai_bridge.py:304:        except Exception: return {'ok': False, 'stdout': p.stdout, 
+'stderr': p.stderr, 'code': p.returncode}
+  D:\openwebui\core\master_ai_bridge.py:305:except Exception as _x16_e:
+  D:\openwebui\core\master_ai_bridge.py:306:    print('[X16 attach skipped]', _x16_e)
+  D:\openwebui\core\master_ai_bridge.py:307:# END_X16_REALTIME_EXECUTION_STREAM_ATTACH
+  D:\openwebui\core\master_ai_bridge.py:308:
+  D:\openwebui\core\master_ai_bridge.py:309:# X16ABC_WEBUI_LIVE_TEST_PACK helper
+> D:\openwebui\core\master_ai_bridge.py:310:# Safe helper for Flask add_task routes to call, without breaking old code.
+  D:\openwebui\core\master_ai_bridge.py:311:def x16abc_run_task(task_text):
+  D:\openwebui\core\master_ai_bridge.py:312:    from core.x16_realtime_execution_stream import submit
+  D:\openwebui\core\master_ai_bridge.py:313:    return submit(task_text)
+
+

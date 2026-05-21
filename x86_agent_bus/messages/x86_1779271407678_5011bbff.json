@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779271407678_5011bbff",
+  "ts": "2026-05-20T10:03:27Z",
+  "from_role": "VERIFY",
+  "to_role": "REPORT",
+  "task": "x88 self check",
+  "payload": {
+    "verify": "pending_x75_check",
+    "source_message": "x86_1779271407650_b718f319"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:03:27Z"
+}

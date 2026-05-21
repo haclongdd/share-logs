@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "release": "X92E_X87_ROOTDETECT_FIX",
+  "stage": "fixed",
+  "x87": "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+  "backup": "D:\\openwebui\\_backups\\x92e_x87_rootdetect_fix\\x87_worker_dispatcher.py.1779277849689.bak",
+  "fix": "auto-detect /app vs D:\\openwebui root by locating core/x86_agent_bus.py",
+  "probe": {
+    "ok": true,
+    "release": "X92E_X87_ROOTDETECT_FIX",
+    "root": "D:\\openwebui",
+    "x87": "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+    "x87_exists": true,
+    "x86_expected": "D:\\openwebui\\core\\x86_agent_bus.py",
+    "x86_exists": true,
+    "old_line_found": true,
+    "new_block_found": false,
+    "report_file": "D:\\openwebui\\runtime\\reports\\x92e_probe_1779277849688.json"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "ok": true,
+  "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+  "bridge": "x90_webui_agent_bridge",
+  "normalized": {
+    "task": "x92e live webui runtime smoke",
+    "mode": "agent",
+    "payload": {}
+  },
+  "x90_response": {
+    "ok": true,
+    "release": "X90_WEBUI_AGENT_BRIDGE",
+    "request_id": "x90req_1779277931772_d95b6461",
+    "mode": "agent",
+    "task": "x92e live webui runtime smoke",
+    "result": {
+      "flow": "agent_dispatcher",
+      "seed": {
+        "ok": true,
+        "seed_message": "x86_1779277931888_fc83f71e",
+        "task": "x92e live webui runtime smoke"
+      },
+      "cycles": [
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [
+            {
+              "message_id": "x86_1779277931888_fc83f71e",
+              "role": "DEBUG",
+              "task": "x92e live webui runtime smoke",
+              "input_payload": {
+                "finding": "seeded by X87B dispatcher",
+                "evidence": "D:\\openwebui\\runtime\\temp"
+              },
+              "handled_at": "2026-05-20T11:52:12Z",
+              "ok": true,
+              "summary": "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+              "routed_to": "PATCHER",
+              "output_payload": {
+                "root_cause": "pending_real_log_review",
+                "evidence": "D:\\openwebui\\runtime\\temp",
+                "source_message": "x86_1779277931888_fc83f71e"
+              },
+              "routed_message_id": "x86_1779277932076_ebb37aa6"
+            },
+            {
+              "message_id": "x86_1779277932076_ebb37aa6",
+              "role": "PATCHER",
+              "task": "x92e live webui runtime smoke",
+              "input_payload": {
+                "root_cause": "pending_real_log_review",
+                "evidence": "D:\\openwebui\\runtime\\temp",
+                "source_message": "x86_1779277931888_fc83f71e"
+              },
+              "handled_at": "2026-05-20T11:52:12Z",
+              "ok": true,
+              "summary": "PATCHER worker consumed confirmed cause/artifact context.",
+              "routed_to": "VERIFY",
+              "output_payload": {
+                "artifact": "D:\\openwebui\\_patch_inbox",
+                "patch_rule": "target confirmed cause only",
+                "source_message": "x86_1779277932076_ebb37aa6"
+              },
+              "routed_message_id": "x86_1779277932278_8d6bbea7"
+            },
+            {
+              "message_id": "x86_1779277932278_8d6bbea7",
+              "role": "VERIFY",
+              "task": "x92e live webui runtime smoke",
+              "input_payload": {
+                "artifact": "D:\\openwebui\\_patch_inbox",
+                "patch_rule": "target confirmed cause only",
+                "source_message": "x86_1779277932076_ebb37aa6"
+              },
+              "handled_at": "2026-05-20T11:52:12Z",
+              "ok": true,
+              "summary": "VERIFY worker consumed artifact and produced verify handoff.",
+              "routed_to": "REPORT",
+              "output_payload": {
+                "verify": "pending_x75_check",
+                "source_message": "x86_1779277932278_8d6bbea7"
+              },
+              "routed_message_id": "x86_1779277932496_9afd41a7"
+            },
+            {
+              "message_id": "x86_1779277932496_9afd41a7",
+              "role": "REPORT",
+              "task": "x92e live webui runtime smoke",
+              "input_payload": {
+                "verify": "pending_x75_check",
+                "source_message": "x86_1779277932278_8d6bbea7"
+              },
+              "handled_at": "2026-05-20T11:52:12Z",
+              "ok": true,
+              "summary": "REPORT worker consumed final verification payload.",
+              "routed_to": null,
+              "output_payload": {
+                "final": {
+                  "verify": "pending_x75_check",
+                  "source_message": "x86_1779277932278_8d6bbea7"
+                },
+                "source_message": "x86_1779277932496_9afd41a7"
+              }
+            }
+          ],
+          "processed_count": 4,
+          "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+          "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779277932749.json"
+        },
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+          "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779277933467.json"
+        },
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+          "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779277934174.json"
+        },
+        {
+          "ok": true,
+          "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+          "processed": [],
+          "processed_count": 0,
+          "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+          "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779277934874.json"
+        }
+      ]
+    },
+    "ts": "2026-05-20T11:52:14Z",
+    "report_file": "/app/runtime/reports/x90_webui_bridge_response_1779277934888.json"
+  },
+  "ts": "2026-05-20T11:52:14Z"
+}

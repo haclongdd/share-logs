@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779272119040_55e7bcf7",
+  "ts": "2026-05-20T10:15:19Z",
+  "from_role": "DEBUG",
+  "to_role": "PATCHER",
+  "task": "x90 bridge smoke",
+  "payload": {
+    "root_cause": "pending_real_log_review",
+    "evidence": "D:\\openwebui\\runtime\\temp",
+    "source_message": "x86_1779272119019_ec7311f3"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:15:19Z"
+}

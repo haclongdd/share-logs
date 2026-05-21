@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779274238319_014677d5",
+  "ts": "2026-05-20T10:50:38Z",
+  "from_role": "VERIFY",
+  "to_role": "REPORT",
+  "task": "x92 adapter smoke before attach",
+  "payload": {
+    "verify": "pending_x75_check",
+    "source_message": "x86_1779274238290_79d6f16f"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:50:38Z"
+}

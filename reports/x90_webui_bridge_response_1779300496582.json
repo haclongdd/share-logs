@@ -1,0 +1,27 @@
+{
+  "ok": false,
+  "release": "X90_WEBUI_AGENT_BRIDGE",
+  "request_id": "x90req_1779300496504_5a25734a",
+  "mode": "agent",
+  "task": "x97e live final planner seed smoke: scout debug patch verify report",
+  "error": "IndentationError('unexpected indent', ('/app/core/x87_worker_dispatcher.py', 238, 16, '                x97e_plan_context = None\\n', 238, -1))",
+  "dependency_status": {
+    "x86": {
+      "path": "/app/core/x86_agent_bus.py",
+      "exists": true
+    },
+    "x87": {
+      "path": "/app/core/x87_worker_dispatcher.py",
+      "exists": true
+    },
+    "x88": {
+      "path": "/app/core/x88_persistent_scheduler.py",
+      "exists": true
+    },
+    "x89": {
+      "path": "/app/core/x89_sandbox_workers.py",
+      "exists": true
+    }
+  },
+  "ts": "2026-05-20T18:08:16Z"
+}

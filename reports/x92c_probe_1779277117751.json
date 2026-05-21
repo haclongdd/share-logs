@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "release": "X92C_ADAPTER_ROOTDETECT_FIX",
+  "root": "D:\\openwebui",
+  "adapter": "D:\\openwebui\\core\\x91_addtask_bridge_adapter.py",
+  "adapter_exists": true,
+  "x90_expected": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+  "x90_exists": true,
+  "old_line_found": true,
+  "new_block_found": false
+}

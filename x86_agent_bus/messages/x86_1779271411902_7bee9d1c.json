@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779271411902_7bee9d1c",
+  "ts": "2026-05-20T10:03:31Z",
+  "from_role": "DEBUG",
+  "to_role": "PATCHER",
+  "task": "x88 scheduler smoke",
+  "payload": {
+    "root_cause": "pending_real_log_review",
+    "evidence": "D:\\openwebui\\runtime\\temp",
+    "source_message": "x86_1779271411874_0229952e"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:03:31Z"
+}

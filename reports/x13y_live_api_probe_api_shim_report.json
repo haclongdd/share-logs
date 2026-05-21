@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "release": "X13Y_LIVE_API_ENDPOINT_SHIM",
+  "checked_at": "2026-05-19T11:04:00",
+  "task_id": "x13y_live_api_probe",
+  "parsed_task": "list project files v4_1 through X13Y live API shim",
+  "request": "D:\\openwebui\\runtime\\api_shim\\x13y_live_api_probe_request.json",
+  "runner_stdout": {
+    "ok": true,
+    "release": "X13W_REAL_TASK_RUNNER_BRIDGE",
+    "checked_at": "2026-05-19T11:04:00",
+    "task_id": "x13y_live_api_probe",
+    "task": "list project files v4_1 through X13Y live API shim",
+    "request": "D:\\openwebui\\runtime\\task_runner\\x13y_live_api_probe_request.json",
+    "workflow": "D:\\openwebui\\runtime\\workflows\\x13y_live_api_probe_workflow.json",
+    "artifact": "D:\\openwebui\\runtime\\projects\\x13y_live_api_probe_artifact.md",
+    "artifact_sha256": "1faf9b19119610ec214366e7e13970bc2eb6d2eeaf5b3e5cc69f35a868f34961",
+    "checks": {
+      "request_exists": true,
+      "workflow_exists": true,
+      "artifact_exists": true,
+      "artifact_contains_task": true
+    }
+  },
+  "runner_stderr": "",
+  "checks": {
+    "request_written": true,
+    "task_parsed": true,
+    "runner_returncode_ok": true,
+    "workflow_exists": true,
+    "artifact_exists": true,
+    "runner_report_exists": true,
+    "artifact_contains_task": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779274238261_a6cd0e2c",
+  "ts": "2026-05-20T10:50:38Z",
+  "from_role": "DEBUG",
+  "to_role": "PATCHER",
+  "task": "x92 adapter smoke before attach",
+  "payload": {
+    "root_cause": "pending_real_log_review",
+    "evidence": "D:\\openwebui\\runtime\\temp",
+    "source_message": "x86_1779274238239_8f19e161"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:50:38Z"
+}

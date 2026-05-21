@@ -1,0 +1,39 @@
+{
+  "ok": false,
+  "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+  "bridge": "x90_webui_agent_bridge",
+  "normalized": {
+    "task": "x92c live webui runtime smoke",
+    "mode": "agent",
+    "payload": {}
+  },
+  "x90_response": {
+    "ok": false,
+    "release": "X90_WEBUI_AGENT_BRIDGE",
+    "request_id": "x90req_1779277190247_e9fd5fd2",
+    "mode": "agent",
+    "task": "x92c live webui runtime smoke",
+    "error": "FileNotFoundError('dependency missing: D:\\\\openwebui/core/x87_worker_dispatcher.py')",
+    "dependency_status": {
+      "x86": {
+        "path": "D:\\openwebui/core/x86_agent_bus.py",
+        "exists": false
+      },
+      "x87": {
+        "path": "D:\\openwebui/core/x87_worker_dispatcher.py",
+        "exists": false
+      },
+      "x88": {
+        "path": "D:\\openwebui/core/x88_persistent_scheduler.py",
+        "exists": false
+      },
+      "x89": {
+        "path": "D:\\openwebui/core/x89_sandbox_workers.py",
+        "exists": false
+      }
+    },
+    "ts": "2026-05-20T11:39:50Z",
+    "report_file": "D:\\openwebui/runtime/reports/x90_webui_bridge_response_1779277190290.json"
+  },
+  "ts": "2026-05-20T11:39:50Z"
+}

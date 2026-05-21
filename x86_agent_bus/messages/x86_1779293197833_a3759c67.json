@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779293197833_a3759c67",
+  "ts": "2026-05-20T16:06:37Z",
+  "from_role": "DEBUG",
+  "to_role": "PATCHER",
+  "task": "x96d planner attach smoke",
+  "payload": {
+    "root_cause": "pending_real_log_review",
+    "evidence": "D:\\openwebui\\runtime\\temp",
+    "source_message": "x86_1779293197463_4a7f0d49"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T16:06:37Z"
+}

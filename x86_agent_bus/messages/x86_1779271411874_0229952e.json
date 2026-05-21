@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779271411874_0229952e",
+  "ts": "2026-05-20T10:03:31Z",
+  "from_role": "SCOUT",
+  "to_role": "DEBUG",
+  "task": "x88 scheduler smoke",
+  "payload": {
+    "finding": "seeded by X87B dispatcher",
+    "evidence": "D:\\openwebui\\runtime\\temp"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:03:31Z"
+}

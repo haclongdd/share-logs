@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779271129398_61b02c36",
+  "ts": "2026-05-20T09:58:49Z",
+  "from_role": "DEBUG",
+  "to_role": "PATCHER",
+  "task": "x87b dispatcher smoke",
+  "payload": {
+    "root_cause": "pending_real_log_review",
+    "evidence": "D:\\openwebui\\runtime\\temp",
+    "source_message": "x86_1779271129381_3e169a8d"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T09:58:49Z"
+}

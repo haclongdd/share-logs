@@ -1,0 +1,80 @@
+{
+  "ok": true,
+  "release": "X92_ATTACH_X90_TO_MASTER_BRIDGE",
+  "stage": "attached",
+  "target": "D:\\openwebui\\core\\master_ai_bridge.py",
+  "backup": "D:\\openwebui\\_backups\\x92_attach_x90_to_master_bridge\\master_ai_bridge.py.1779274240458.bak",
+  "replaced": "_x15d_result = webui_add_task_bridge(payload)",
+  "inserted": "x91_addtask_bridge_adapter.handle_add_task_payload",
+  "probe": {
+    "ok": true,
+    "release": "X92_ATTACH_X90_TO_MASTER_BRIDGE",
+    "target": "D:\\openwebui\\core\\master_ai_bridge.py",
+    "target_exists": true,
+    "adapter": "D:\\openwebui\\core\\x91_addtask_bridge_adapter.py",
+    "adapter_exists": true,
+    "old_call": "_x15d_result = webui_add_task_bridge(payload)",
+    "old_call_count": 1,
+    "already_attached": false,
+    "route_found": true,
+    "hits": [
+      {
+        "line": 31,
+        "text": "from webui_add_task_bridge_v1 import handle_add_task_payload"
+      },
+      {
+        "line": 196,
+        "text": "@app.route(\"/add_task\", methods=[\"GET\", \"POST\"])"
+      },
+      {
+        "line": 197,
+        "text": "def add_task():"
+      },
+      {
+        "line": 200,
+        "text": "        from core.x15d_webui_addtask_agentcon_attach import webui_add_task_bridge"
+      },
+      {
+        "line": 204,
+        "text": "                from flask import request as _x15d_request"
+      },
+      {
+        "line": 205,
+        "text": "                payload = _x15d_request.get_json(silent=True)"
+      },
+      {
+        "line": 208,
+        "text": "        _x15d_result = webui_add_task_bridge(payload)"
+      },
+      {
+        "line": 209,
+        "text": "        return jsonify(_x15d_result) if 'jsonify' in globals() else _x15d_result"
+      },
+      {
+        "line": 210,
+        "text": "    except Exception as _x15d_e:"
+      },
+      {
+        "line": 211,
+        "text": "        return {'ok': False, 'patch': 'X15D_WEBUI_ADDTASK_AGENTCON_ATTACH', 'error': str(_x15d_e)}"
+      },
+      {
+        "line": 250,
+        "text": "    return jsonify(handle_add_task_payload(data))"
+      },
+      {
+        "line": 293,
+        "text": "    @app.route('/x16/add_task', methods=['POST'])"
+      },
+      {
+        "line": 294,
+        "text": "    def x16_add_task():"
+      },
+      {
+        "line": 307,
+        "text": "# Safe helper for Flask add_task routes to call, without breaking old code."
+      }
+    ],
+    "report_file": "D:\\openwebui\\runtime\\reports\\x92_probe_1779274240456.json"
+  }
+}

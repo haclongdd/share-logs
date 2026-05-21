@@ -1,0 +1,7 @@
+﻿[START] X98B unify patch packaging contract apply
+[2026-05-21 01:00:06] Scan/guard package. No runtime orchestration core files modified.
+[2026-05-21 01:00:10] Contract audit written: D:\openwebui\runtime\temp\x98b_contract_audit.txt
+[2026-05-21 01:00:10] Patch folders scanned: 203
+[2026-05-21 01:00:10] Bad absolute inbox apply scripts: 0
+[2026-05-21 01:00:10] Installed guard: D:\openwebui\core\x98b_patch_contract_guard.py
+[2026-05-21 01:00:10] [[REDACTED]] X98B apply complete

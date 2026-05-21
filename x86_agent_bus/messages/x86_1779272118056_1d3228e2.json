@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779272118056_1d3228e2",
+  "ts": "2026-05-20T10:15:18Z",
+  "from_role": "PATCHER",
+  "to_role": "VERIFY",
+  "task": "x90 self check agent flow",
+  "payload": {
+    "artifact": "D:\\openwebui\\_patch_inbox",
+    "patch_rule": "target confirmed cause only",
+    "source_message": "x86_1779272118028_1520a608"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:15:18Z"
+}

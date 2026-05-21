@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779272119097_44adb333",
+  "ts": "2026-05-20T10:15:19Z",
+  "from_role": "VERIFY",
+  "to_role": "REPORT",
+  "task": "x90 bridge smoke",
+  "payload": {
+    "verify": "pending_x75_check",
+    "source_message": "x86_1779272119068_78f73a6d"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:15:19Z"
+}

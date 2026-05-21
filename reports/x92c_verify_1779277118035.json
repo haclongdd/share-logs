@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "release": "X92C_ADAPTER_ROOTDETECT_FIX",
+  "stage": "adapter_import_verify",
+  "adapter_status": {
+    "ok": true,
+    "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+    "root": "D:\\openwebui",
+    "x90_file": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+    "x90_exists": true
+  }
+}

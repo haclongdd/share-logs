@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779297524199_b92a02e5",
+  "ts": "2026-05-20T17:18:44Z",
+  "from_role": "PATCHER",
+  "to_role": "VERIFY",
+  "task": "x97b planner driven dispatch smoke",
+  "payload": {
+    "artifact": "D:\\openwebui\\_patch_inbox",
+    "patch_rule": "target confirmed cause only",
+    "source_message": "x86_1779297524168_9b591ba4"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T17:18:44Z"
+}

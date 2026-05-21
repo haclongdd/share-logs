@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "release": "X13X2_WEBUI_API_HANDOFF_QUOTE_SAFE",
+  "checked_at": "2026-05-19T11:02:43",
+  "root": "D:\\openwebui",
+  "task_id": "x13x_webui_api_handoff_probe",
+  "parsed_task": "list project files v4_1 from WebUI API handoff",
+  "request": "D:\\openwebui\\runtime\\webui_handoff\\x13x_webui_api_handoff_probe_payload.json",
+  "runner_stdout": {
+    "ok": true,
+    "release": "X13W_REAL_TASK_RUNNER_BRIDGE",
+    "checked_at": "2026-05-19T11:02:43",
+    "task_id": "x13x_webui_api_handoff_probe",
+    "task": "list project files v4_1 from WebUI API handoff",
+    "request": "D:\\openwebui\\runtime\\task_runner\\x13x_webui_api_handoff_probe_request.json",
+    "workflow": "D:\\openwebui\\runtime\\workflows\\x13x_webui_api_handoff_probe_workflow.json",
+    "artifact": "D:\\openwebui\\runtime\\projects\\x13x_webui_api_handoff_probe_artifact.md",
+    "artifact_sha256": "3ce2c34c1daf5a07f5293a14c14aa251fc89059760f3af4e0a0990dd3330916c",
+    "checks": {
+      "request_exists": true,
+      "workflow_exists": true,
+      "artifact_exists": true,
+      "artifact_contains_task": true
+    }
+  },
+  "runner_stderr": "",
+  "checks": {
+    "payload_written": true,
+    "task_parsed": true,
+    "runner_exists": true,
+    "runner_returncode_ok": true,
+    "workflow_exists": true,
+    "artifact_exists": true,
+    "runner_report_exists": true,
+    "artifact_contains_task": true
+  }
+}

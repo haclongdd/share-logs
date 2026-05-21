@@ -1,0 +1,136 @@
+{
+  "ok": true,
+  "project_id": "proj_572614eb8a08",
+  "goal": "x13k-x13n smoke test",
+  "dry_run": true,
+  "workflow_id": "wf_cee8591446d8",
+  "workflow_status": "done",
+  "agent_results": [
+    {
+      "ok": true,
+      "agent": "planner",
+      "task": {
+        "type": "project_step",
+        "project_id": "proj_572614eb8a08",
+        "step": {
+          "name": "planner_decompose",
+          "agent": "planner",
+          "goal": "x13k-x13n smoke test"
+        },
+        "dry_run": true
+      },
+      "result": "planner accepted project_step",
+      "finished_at": "2026-05-19T10:37:29"
+    },
+    {
+      "ok": true,
+      "agent": "executor",
+      "task": {
+        "type": "project_step",
+        "project_id": "proj_572614eb8a08",
+        "step": {
+          "name": "executor_run_steps",
+          "agent": "executor",
+          "goal": "x13k-x13n smoke test"
+        },
+        "dry_run": true
+      },
+      "result": "executor accepted project_step",
+      "finished_at": "2026-05-19T10:37:29"
+    },
+    {
+      "ok": true,
+      "agent": "reviewer",
+      "task": {
+        "type": "project_step",
+        "project_id": "proj_572614eb8a08",
+        "step": {
+          "name": "reviewer_validate",
+          "agent": "reviewer",
+          "goal": "x13k-x13n smoke test"
+        },
+        "dry_run": true
+      },
+      "result": "reviewer accepted project_step",
+      "finished_at": "2026-05-19T10:37:29"
+    },
+    {
+      "ok": true,
+      "agent": "supervisor",
+      "task": {
+        "type": "project_step",
+        "project_id": "proj_572614eb8a08",
+        "step": {
+          "name": "supervisor_finalize",
+          "agent": "supervisor",
+          "goal": "x13k-x13n smoke test"
+        },
+        "dry_run": true
+      },
+      "result": "supervisor accepted project_step",
+      "finished_at": "2026-05-19T10:37:29"
+    }
+  ],
+  "scheduled_followup": {
+    "id": "62a6e181-4f8e-4a94-b3d9-5e0a1fdf08e2",
+    "title": "x13n_followup_status",
+    "payload": {
+      "project_id": "proj_572614eb8a08",
+      "goal": "x13k-x13n smoke test",
+      "action": "status_check"
+    },
+    "run_at": "2026-05-19T10:37:29",
+    "status": "scheduled",
+    "attempts": 0,
+    "max_attempts": 3,
+    "created_at": "2026-05-19T10:37:29",
+    "updated_at": "2026-05-19T10:37:29"
+  },
+  "scheduler_tick": {
+    "ok": true,
+    "moved": 1,
+    "queue_file": "D:\\openwebui\\runtime\\queue\\x13j_queue.json",
+    "tasks": [
+      {
+        "id": "62a6e181-4f8e-4a94-b3d9-5e0a1fdf08e2",
+        "source": "x13k_scheduler",
+        "title": "x13n_followup_status",
+        "payload": {
+          "project_id": "proj_572614eb8a08",
+          "goal": "x13k-x13n smoke test",
+          "action": "status_check"
+        },
+        "status": "queued",
+        "created_at": "2026-05-19T10:37:29",
+        "queued_at": "2026-05-19T10:37:29"
+      }
+    ]
+  },
+  "mesh": {
+    "ok": true,
+    "registry": {
+      "agents": {
+        "planner": {
+          "role": "decompose tasks",
+          "status": "ready"
+        },
+        "executor": {
+          "role": "run approved steps",
+          "status": "ready"
+        },
+        "reviewer": {
+          "role": "validate outputs",
+          "status": "ready"
+        },
+        "supervisor": {
+          "role": "retry/resume/health",
+          "status": "ready"
+        }
+      },
+      "updated_at": "2026-05-19T10:37:29"
+    },
+    "event_count": 8,
+    "event_file": "D:\\openwebui\\runtime\\mesh\\x13m_mesh_events.jsonl"
+  },
+  "created_at": "2026-05-19T10:37:29"
+}

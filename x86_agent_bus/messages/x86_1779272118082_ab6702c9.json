@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779272118082_ab6702c9",
+  "ts": "2026-05-20T10:15:18Z",
+  "from_role": "VERIFY",
+  "to_role": "REPORT",
+  "task": "x90 self check agent flow",
+  "payload": {
+    "verify": "pending_x75_check",
+    "source_message": "x86_1779272118056_1d3228e2"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:15:18Z"
+}

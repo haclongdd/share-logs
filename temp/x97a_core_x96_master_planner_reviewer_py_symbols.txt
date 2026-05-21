@@ -1,0 +1,103 @@
+﻿D:\openwebui\core\x96_master_planner_reviewer.py:13:RELEASE = "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION"
+D:\openwebui\core\x96_master_planner_reviewer.py:19:PLAN_DIR = RUNTIME / "x96_master_plans"
+D:\openwebui\core\x96_master_planner_reviewer.py:20:REVIEW_DIR = RUNTIME / "x96_master_reviews"
+D:\openwebui\core\x96_master_planner_reviewer.py:21:REPORT_DIR = RUNTIME / "reports"
+D:\openwebui\core\x96_master_planner_reviewer.py:23:DEFAULT_RETRY_LIMIT = 2
+D:\openwebui\core\x96_master_planner_reviewer.py:24:DEFAULT_FALLBACK_LIMIT = 1
+D:\openwebui\core\x96_master_planner_reviewer.py:26:ROLE_ORDER = ["SCOUT", "DEBUG", "PATCHER", "VERIFY", "REPORT"]
+D:\openwebui\core\x96_master_planner_reviewer.py:28:def utc_now() -> str:
+D:\openwebui\core\x96_master_planner_reviewer.py:31:def safe_write_json(path: Path, data: Dict[str, Any]) -> None:
+D:\openwebui\core\x96_master_planner_reviewer.py:37:def read_text(path: Path, limit: int = 20000) -> str:
+D:\openwebui\core\x96_master_planner_reviewer.py:42:def task_id_for(task: str) -> str:
+D:\openwebui\core\x96_master_planner_reviewer.py:45:def classify_task(task: str) -> Dict[str, Any]:
+D:\openwebui\core\x96_master_planner_reviewer.py:49:    needs_verify = True
+D:\openwebui\core\x96_master_planner_reviewer.py:50:    needs_fallback = any(k in low for k in ["api", "web", "search", "unknown", "unknown", "blocked"])
+D:\openwebui\core\x96_master_planner_reviewer.py:54:        "needs_verify": needs_verify,
+D:\openwebui\core\x96_master_planner_reviewer.py:55:        "fallback_allowed": needs_fallback,
+D:\openwebui\core\x96_master_planner_reviewer.py:58:def make_step(step_id: int, role: str, goal: str, input_hint: str, next_role: Optional[str]) -> Dict[str, Any]:
+D:\openwebui\core\x96_master_planner_reviewer.py:60:        "step_id": f"s{step_id:02d}_{role.lower()}",
+D:\openwebui\core\x96_master_planner_reviewer.py:61:        "role": role,
+D:\openwebui\core\x96_master_planner_reviewer.py:64:        "next_role": next_role,
+D:\openwebui\core\x96_master_planner_reviewer.py:65:        "status": "planned",
+D:\openwebui\core\x96_master_planner_reviewer.py:66:        "max_retries": DEFAULT_RETRY_LIMIT,
+D:\openwebui\core\x96_master_planner_reviewer.py:67:        "requires_master_review": role in {"VERIFY", "REPORT"},
+D:\openwebui\core\x96_master_planner_reviewer.py:70:def build_plan(task: str, retry_limit: int = DEFAULT_RETRY_LIMIT, fallback_limit: int = DEFAULT_FALLBACK_LIMIT) -> Dict[str, Any]:
+D:\openwebui\core\x96_master_planner_reviewer.py:76:    steps: List[Dict[str, Any]] = []
+D:\openwebui\core\x96_master_planner_reviewer.py:79:    steps.append(make_step(n, "SCOUT", "Read project context, roadmap, and identify relevant files/layers.", "Use docs/ROADMAP.md and runtime reports first.", "DEBUG")); n += 1
+D:\openwebui\core\x96_master_planner_reviewer.py:80:    steps.append(make_step(n, "DEBUG", "Verify the true failing layer or required change using logs/evidence.", "Do not patch until root cause is confirmed.", "PATCHER" if meta["needs_patch"] else "VERIFY")); n += 1
+D:\openwebui\core\x96_master_planner_reviewer.py:83:        steps.append(make_step(n, "PATCHER", "Create a minimal targeted patch for the confirmed cause only.", "Patch must go through _patch_inbox and X75 runner.", "VERIFY")); n += 1
+D:\openwebui\core\x96_master_planner_reviewer.py:85:    steps.append(make_step(n, "VERIFY", "Run focused checks and collect [REDACTED]/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
+D:\openwebui\core\x96_master_planner_reviewer.py:86:    steps.append(make_step(n, "REPORT", "Summarize worker results for MASTER review.", "Report must state [REDACTED]/fail, evidence, and remaining risk.", None)); n += 1
+D:\openwebui\core\x96_master_planner_reviewer.py:88:    for s in steps:
+D:\openwebui\core\x96_master_planner_reviewer.py:89:        s["max_retries"] = retry_limit
+D:\openwebui\core\x96_master_planner_reviewer.py:91:    plan = {
+D:\openwebui\core\x96_master_planner_reviewer.py:94:        "kind": "master_execution_plan",
+D:\openwebui\core\x96_master_planner_reviewer.py:100:        "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+D:\openwebui\core\x96_master_planner_reviewer.py:103:            "retry_limit_per_step": retry_limit,
+D:\openwebui\core\x96_master_planner_reviewer.py:104:            "fallback_api_websearch_limit": fallback_limit,
+D:\openwebui\core\x96_master_planner_reviewer.py:107:        "fallback_policy": {
+D:\openwebui\core\x96_master_planner_reviewer.py:109:            "api_websearch_only_if_worker_report_insufficient": True,
+D:\openwebui\core\x96_master_planner_reviewer.py:110:            "max_calls": fallback_limit,
+D:\openwebui\core\x96_master_planner_reviewer.py:111:            "after_fallback_return_to_child_worker": True,
+D:\openwebui\core\x96_master_planner_reviewer.py:113:        "steps": steps,
+D:\openwebui\core\x96_master_planner_reviewer.py:114:        "master_review_policy": {
+D:\openwebui\core\x96_master_planner_reviewer.py:115:            "master_must_review_report": True,
+D:\openwebui\core\x96_master_planner_reviewer.py:116:            "[REDACTED]_condition": "VERIFY ok and REPORT has evidence",
+D:\openwebui\core\x96_master_planner_reviewer.py:117:            "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+D:\openwebui\core\x96_master_planner_reviewer.py:124:    out = PLAN_DIR / f"{tid}_plan.json"
+D:\openwebui\core\x96_master_planner_reviewer.py:125:    plan["plan_file"] = str(out)
+D:\openwebui\core\x96_master_planner_reviewer.py:126:    safe_write_json(out, plan)
+D:\openwebui\core\x96_master_planner_reviewer.py:127:    return plan
+D:\openwebui\core\x96_master_planner_reviewer.py:129:def review_worker_report(task_id: str, worker_report: Dict[str, Any]) -> Dict[str, Any]:
+D:\openwebui\core\x96_master_planner_reviewer.py:130:    ok = bool(worker_report.get("ok"))
+D:\openwebui\core\x96_master_planner_reviewer.py:131:    evidence = worker_report.get("evidence") or worker_report.get("report_file") or worker_report.get("summary")
+D:\openwebui\core\x96_master_planner_reviewer.py:132:    needs_retry = not ok
+D:\openwebui\core\x96_master_planner_reviewer.py:133:    fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 0)
+D:\openwebui\core\x96_master_planner_reviewer.py:135:    decision = "[REDACTED]" if ok and evidence else "RETRY"
+D:\openwebui\core\x96_master_planner_reviewer.py:136:    if needs_retry and fallback_calls_used < DEFAULT_FALLBACK_LIMIT:
+D:\openwebui\core\x96_master_planner_reviewer.py:137:        next_action = "ALLOW_LIMITED_FALLBACK_THEN_RETRY_CHILD"
+D:\openwebui\core\x96_master_planner_reviewer.py:138:    elif needs_retry:
+D:\openwebui\core\x96_master_planner_reviewer.py:139:        next_action = "STOP_RETRY_LIMIT_REACHED"
+D:\openwebui\core\x96_master_planner_reviewer.py:141:        next_action = "FINAL_REPORT_TO_WEBUI"
+D:\openwebui\core\x96_master_planner_reviewer.py:143:    review = {
+D:\openwebui\core\x96_master_planner_reviewer.py:146:        "kind": "master_review",
+D:\openwebui\core\x96_master_planner_reviewer.py:148:        "reviewed_at": utc_now(),
+D:\openwebui\core\x96_master_planner_reviewer.py:151:        "worker_report": worker_report,
+D:\openwebui\core\x96_master_planner_reviewer.py:154:            "child_worker_does_not_report_to_user_directly": True,
+D:\openwebui\core\x96_master_planner_reviewer.py:155:            "fallback_must_be_limited": True,
+D:\openwebui\core\x96_master_planner_reviewer.py:159:    out = REVIEW_DIR / f"{task_id}_review.json"
+D:\openwebui\core\x96_master_planner_reviewer.py:160:    review["review_file"] = str(out)
+D:\openwebui\core\x96_master_planner_reviewer.py:161:    safe_write_json(out, review)
+D:\openwebui\core\x96_master_planner_reviewer.py:162:    return review
+D:\openwebui\core\x96_master_planner_reviewer.py:164:def selftest() -> Dict[str, Any]:
+D:\openwebui\core\x96_master_planner_reviewer.py:165:    PLAN_DIR.mkdir(parents=True, exist_ok=True)
+D:\openwebui\core\x96_master_planner_reviewer.py:166:    REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+D:\openwebui\core\x96_master_planner_reviewer.py:167:    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+D:\openwebui\core\x96_master_planner_reviewer.py:170:    plan = build_plan(task)
+D:\openwebui\core\x96_master_planner_reviewer.py:171:    fake_worker_report = {
+D:\openwebui\core\x96_master_planner_reviewer.py:173:        "summary": "VERIFY [REDACTED]ed with evidence log.",
+D:\openwebui\core\x96_master_planner_reviewer.py:175:        "report_file": str(REPORT_DIR / "x96_selftest_report.json"),
+D:\openwebui\core\x96_master_planner_reviewer.py:176:        "fallback_calls_used": 0,
+D:\openwebui\core\x96_master_planner_reviewer.py:178:    review = review_worker_report(plan["task_id"], fake_worker_report)
+D:\openwebui\core\x96_master_planner_reviewer.py:181:        "ok": bool(plan.get("ok") and review.get("ok")),
+D:\openwebui\core\x96_master_planner_reviewer.py:183:        "plan_file": plan.get("plan_file"),
+D:\openwebui\core\x96_master_planner_reviewer.py:184:        "review_file": review.get("review_file"),
+D:\openwebui\core\x96_master_planner_reviewer.py:187:            "has_scout_step": any(s.get("role") == "SCOUT" for s in plan.get("steps", [])),
+D:\openwebui\core\x96_master_planner_reviewer.py:188:            "has_master_review": bool(plan.get("master_review_policy", {}).get("master_must_review_report")),
+D:\openwebui\core\x96_master_planner_reviewer.py:189:            "fallback_limited": plan.get("limits", {}).get("fallback_api_websearch_limit") == DEFAULT_FALLBACK_LIMIT,
+D:\openwebui\core\x96_master_planner_reviewer.py:190:            "final_owner_master": plan.get("master_review_policy", {}).get("final_output_owner") == "MASTER",
+D:\openwebui\core\x96_master_planner_reviewer.py:194:    report = REPORT_DIR / "x96c_master_planner_reviewer_selftest.json"
+D:\openwebui\core\x96_master_planner_reviewer.py:195:    result["report_file"] = str(report)
+D:\openwebui\core\x96_master_planner_reviewer.py:196:    safe_write_json(report, result)
+D:\openwebui\core\x96_master_planner_reviewer.py:199:def main() -> int:
+D:\openwebui\core\x96_master_planner_reviewer.py:200:    parser = argparse.ArgumentParser(description="X96 Master planner/reviewer")
+D:\openwebui\core\x96_master_planner_reviewer.py:203:    p = sub.add_parser("plan")
+D:\openwebui\core\x96_master_planner_reviewer.py:205:    p.add_argument("--retry-limit", type=int, default=DEFAULT_RETRY_LIMIT)
+D:\openwebui\core\x96_master_planner_reviewer.py:206:    p.add_argument("--fallback-limit", type=int, default=DEFAULT_FALLBACK_LIMIT)
+D:\openwebui\core\x96_master_planner_reviewer.py:208:    p = sub.add_parser("review")
+D:\openwebui\core\x96_master_planner_reviewer.py:210:    p.add_argument("--report-json", required=True)
+D:\openwebui\core\x96_master_planner_reviewer.py:216:    if args.cmd == "plan":
+D:\openwebui\core\x96_master_planner_reviewer.py:217:        out = build_plan(args.task, retry_limit=args.retry_limit, fallback_limit=args.fallback_limit)
+D:\openwebui\core\x96_master_planner_reviewer.py:218:    elif args.cmd == "review":
+D:\openwebui\core\x96_master_planner_reviewer.py:219:        worker_report = json.loads(Path(args.report_json).read_text(encoding="utf-8"))
+D:\openwebui\core\x96_master_planner_reviewer.py:220:        out = review_worker_report(args.task_id, worker_report)

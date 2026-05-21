@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "release": "AI_LOCAL_OS_REAL_USE_V2_PROJECT_HEALTH_AUDIT",
+  "checked_at": "2026-05-19T11:16:06",
+  "task": "audit project_v4_1 health and create PROJECT_HEALTH_REPORT.md",
+  "project": "D:\\openwebui\\project_v4_1",
+  "markdown_report": "D:\\openwebui\\project_v4_1\\PROJECT_HEALTH_REPORT.md",
+  "json_audit": "D:\\openwebui\\runtime\\real_use_v2\\project_health_audit.json",
+  "summary_report": "D:\\openwebui\\runtime\\reports\\real_use_v2_project_health_audit_report.json",
+  "file_count": 7,
+  "issue_count": 1,
+  "warning_count": 9
+}

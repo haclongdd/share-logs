@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779297029899_3fcda8af",
+  "ts": "2026-05-20T17:10:29Z",
+  "from_role": "PATCHER",
+  "to_role": "VERIFY",
+  "task": "x96d2 master planner attach smoke",
+  "payload": {
+    "artifact": "D:\\openwebui\\_patch_inbox",
+    "patch_rule": "target confirmed cause only",
+    "source_message": "x86_1779297029867_6b001267"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T17:10:29Z"
+}

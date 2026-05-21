@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+  "processed": [
+    {
+      "message_id": "x86_1779297082534_6f8c479f",
+      "role": "DEBUG",
+      "task": "x96 live orchestration smoke",
+      "input_payload": {
+        "finding": "seeded by X87B dispatcher",
+        "evidence": "D:\\openwebui\\runtime\\temp"
+      },
+      "handled_at": "2026-05-20T17:11:23Z",
+      "ok": true,
+      "summary": "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+      "routed_to": "PATCHER",
+      "output_payload": {
+        "root_cause": "pending_real_log_review",
+        "evidence": "D:\\openwebui\\runtime\\temp",
+        "source_message": "x86_1779297082534_6f8c479f"
+      },
+      "routed_message_id": "x86_1779297083522_009243f9"
+    },
+    {
+      "message_id": "x86_1779297083522_009243f9",
+      "role": "PATCHER",
+      "task": "x96 live orchestration smoke",
+      "input_payload": {
+        "root_cause": "pending_real_log_review",
+        "evidence": "D:\\openwebui\\runtime\\temp",
+        "source_message": "x86_1779297082534_6f8c479f"
+      },
+      "handled_at": "2026-05-20T17:11:24Z",
+      "ok": true,
+      "summary": "PATCHER worker consumed confirmed cause/artifact context.",
+      "routed_to": "VERIFY",
+      "output_payload": {
+        "artifact": "D:\\openwebui\\_patch_inbox",
+        "patch_rule": "target confirmed cause only",
+        "source_message": "x86_1779297083522_009243f9"
+      },
+      "routed_message_id": "x86_1779297084231_28bc4003"
+    },
+    {
+      "message_id": "x86_1779297084231_28bc4003",
+      "role": "VERIFY",
+      "task": "x96 live orchestration smoke",
+      "input_payload": {
+        "artifact": "D:\\openwebui\\_patch_inbox",
+        "patch_rule": "target confirmed cause only",
+        "source_message": "x86_1779297083522_009243f9"
+      },
+      "handled_at": "2026-05-20T17:11:24Z",
+      "ok": true,
+      "summary": "VERIFY worker consumed artifact and produced verify handoff.",
+      "routed_to": "REPORT",
+      "output_payload": {
+        "verify": "pending_x75_check",
+        "source_message": "x86_1779297084231_28bc4003"
+      },
+      "routed_message_id": "x86_1779297084958_bca8d80a"
+    },
+    {
+      "message_id": "x86_1779297084958_bca8d80a",
+      "role": "REPORT",
+      "task": "x96 live orchestration smoke",
+      "input_payload": {
+        "verify": "pending_x75_check",
+        "source_message": "x86_1779297084231_28bc4003"
+      },
+      "handled_at": "2026-05-20T17:11:25Z",
+      "ok": true,
+      "summary": "REPORT worker consumed final verification payload.",
+      "routed_to": null,
+      "output_payload": {
+        "final": {
+          "verify": "pending_x75_check",
+          "source_message": "x86_1779297084231_28bc4003"
+        },
+        "source_message": "x86_1779297084958_bca8d80a"
+      }
+    }
+  ],
+  "processed_count": 4,
+  "state_file": "/app/runtime/x87_worker_dispatcher/state.json"
+}

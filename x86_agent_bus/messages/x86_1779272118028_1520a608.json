@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779272118028_1520a608",
+  "ts": "2026-05-20T10:15:18Z",
+  "from_role": "DEBUG",
+  "to_role": "PATCHER",
+  "task": "x90 self check agent flow",
+  "payload": {
+    "root_cause": "pending_real_log_review",
+    "evidence": "D:\\openwebui\\runtime\\temp",
+    "source_message": "x86_1779272118002_4603419a"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:15:18Z"
+}

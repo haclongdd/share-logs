@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+  "plan_file": "D:\\openwebui\\runtime\\x96_master_plans\\x96_e23e8fa80d74_plan.json",
+  "review_file": "D:\\openwebui\\runtime\\x96_master_reviews\\x96_e23e8fa80d74_review.json",
+  "checks": {
+    "roadmap_exists": true,
+    "has_scout_step": true,
+    "has_master_review": true,
+    "fallback_limited": true,
+    "final_owner_master": true
+  },
+  "report_file": "D:\\openwebui\\runtime\\reports\\x96c_master_planner_reviewer_selftest.json"
+}

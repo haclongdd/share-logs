@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779274238239_8f19e161",
+  "ts": "2026-05-20T10:50:38Z",
+  "from_role": "SCOUT",
+  "to_role": "DEBUG",
+  "task": "x92 adapter smoke before attach",
+  "payload": {
+    "finding": "seeded by X87B dispatcher",
+    "evidence": "D:\\openwebui\\runtime\\temp"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T10:50:38Z"
+}

@@ -1,0 +1,8 @@
+﻿[X98C2 CONTRACT AUDIT]
+patch_folder=D:\openwebui\_patch_inbox\x98c2_legacy_patch_contract_migration_auditfix
+has_apply=True
+has_check=True
+has_cleanup=True
+uses_psscriptroot_in_apply=True
+bad_after_count=0
+migration_report=D:\openwebui\runtime\temp\x98c2_migration_report.txt

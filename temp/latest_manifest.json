@@ -1,0 +1,1678 @@
+{
+  "generated_at": "2026-05-21 19:23:36",
+  "total_files": 209,
+  "files": [
+    {
+      "filename": "x99c_manifest_runtime_log.txt",
+      "relative_path": "x99c_manifest_runtime_log.txt",
+      "size_bytes": 1142548,
+      "last_modified": "2026-05-21 19:23:35",
+      "sha256": "ef317ac472255806d4343d6bc97a53fabe6ddb1fffdcffe315bc1984299673b0",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99d_logsync_runtime_log.txt",
+      "relative_path": "x99d_logsync_runtime_log.txt",
+      "size_bytes": 864559,
+      "last_modified": "2026-05-21 19:23:34",
+      "sha256": "fbee49202d02e8f47668369380add88e13108c7704b8a042bd95a5c6036fa40a",
+      "extension": ".txt"
+    },
+    {
+      "filename": "latest_manifest.json",
+      "relative_path": "latest_manifest.json",
+      "size_bytes": 62537,
+      "last_modified": "2026-05-21 19:23:02",
+      "sha256": "42edf710420e0db428c00d3f075f499f58f18ec3e546ce2c5eb6533d1e951a07",
+      "extension": ".json"
+    },
+    {
+      "filename": "x97e7d_apply_log.txt",
+      "relative_path": "x97e7d_apply_log.txt",
+      "size_bytes": 393,
+      "last_modified": "2026-05-21 19:10:45",
+      "sha256": "cac2382759b0fad01888b432ce39bb5e2c77d97097706b03421b365e205cbee5",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7d_check_log.txt",
+      "relative_path": "x97e7d_check_log.txt",
+      "size_bytes": 81,
+      "last_modified": "2026-05-21 19:10:45",
+      "sha256": "84cb1b3171b3c48a6356889756bfd77b7160dcdc462dbb7ef142c4da0cbcd40d",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7d_check_source_audit.txt",
+      "relative_path": "x97e7d_check_source_audit.txt",
+      "size_bytes": 3041,
+      "last_modified": "2026-05-21 19:10:45",
+      "sha256": "a9c4db0fa8979f7227d0109d7afdd9865bd32037ddb19711f00096a31d098c1d",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7d_patch_x87.py",
+      "relative_path": "x97e7d_patch_x87.py",
+      "size_bytes": 4457,
+      "last_modified": "2026-05-21 19:10:45",
+      "sha256": "f00ddc503d56aec778e4c82a086390ea6d491cdbdb9e0e6cb6a53c854d18a5d3",
+      "extension": ".py"
+    },
+    {
+      "filename": "x97e7d_source_audit.txt",
+      "relative_path": "x97e7d_source_audit.txt",
+      "size_bytes": 3033,
+      "last_modified": "2026-05-21 19:10:45",
+      "sha256": "fd57d7ba7877bfcb503eb35c99d286cf42dea7cc40de6ef42657bb5bfabc5c9d",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7d_check_compile_log.txt",
+      "relative_path": "x97e7d_check_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 19:10:22",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7d_compile_log.txt",
+      "relative_path": "x97e7d_compile_log.txt",
+      "size_bytes": 456,
+      "last_modified": "2026-05-21 19:10:21",
+      "sha256": "9f9402d483c4147bad7d5855159da4c44a07f5fdda7ab8eae5d8faee70ee4662",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7c_check_compile_log.txt",
+      "relative_path": "x97e7c_check_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 19:07:59",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7c_check_log.txt",
+      "relative_path": "x97e7c_check_log.txt",
+      "size_bytes": 56,
+      "last_modified": "2026-05-21 19:07:59",
+      "sha256": "99d00c8ca592dbb5a2b614ce08a67b4ecc3794e752981384881a7e20fb71a674",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7c_apply_log.txt",
+      "relative_path": "x97e7c_apply_log.txt",
+      "size_bytes": 82,
+      "last_modified": "2026-05-21 19:07:58",
+      "sha256": "11564ca4096ac1a803fd79012e71ee77e9a0177f67575060a94f4585744d9aa2",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7c_compile_log.txt",
+      "relative_path": "x97e7c_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 19:07:58",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7b_source_audit.txt",
+      "relative_path": "x97e7b_source_audit.txt",
+      "size_bytes": 14854,
+      "last_modified": "2026-05-21 19:02:25",
+      "sha256": "024d21d1d69b1df87ca4b45c92e46b6d746f621ae9f5267f77a3abe69ecad0d0",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7b_check_compile_log.txt",
+      "relative_path": "x97e7b_check_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 19:02:05",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7b_apply_log.txt",
+      "relative_path": "x97e7b_apply_log.txt",
+      "size_bytes": 316,
+      "last_modified": "2026-05-21 19:02:03",
+      "sha256": "42f292b2b2cc6f2962f883cd3fe5123c4702c156e1ce338f534ad93b86552c24",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7b_compile_log.txt",
+      "relative_path": "x97e7b_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 19:02:03",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7_source_scan.txt",
+      "relative_path": "x97e7_source_scan.txt",
+      "size_bytes": 633954,
+      "last_modified": "2026-05-21 18:11:41",
+      "sha256": "073fb66bded9a7f829de64a23b52d47708b71cc88592ba9381b09e2427839fc9",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7_check_compile_log.txt",
+      "relative_path": "x97e7_check_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 18:09:40",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7_check_log.txt",
+      "relative_path": "x97e7_check_log.txt",
+      "size_bytes": 85,
+      "last_modified": "2026-05-21 18:09:39",
+      "sha256": "1594f92ea36e3a272cddc6b5f20d6daa8e05180a63e7052ce2dc152f49a4f32f",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7_apply_log.txt",
+      "relative_path": "x97e7_apply_log.txt",
+      "size_bytes": 297,
+      "last_modified": "2026-05-21 18:09:38",
+      "sha256": "fbabdac61f8891d0c06324dfb4b9dda6f7b944d8b2385fd9aa843208204937bb",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7_compile_log.txt",
+      "relative_path": "x97e7_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 18:09:38",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7_check_source_audit.txt",
+      "relative_path": "x97e7_check_source_audit.txt",
+      "size_bytes": 19,
+      "last_modified": "2026-05-21 18:06:45",
+      "sha256": "af7b9ad5ff85f3fd479facd0fa6e1fa9fea5dd6f402d81afda171221bd5a8595",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7_source_audit.txt",
+      "relative_path": "x97e7_source_audit.txt",
+      "size_bytes": 54,
+      "last_modified": "2026-05-21 18:06:43",
+      "sha256": "7ed8c741752abf76ada13faae8bdb68a6565619c8570f5674a541cec4d256691",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_patch_master_ai_bridge.py",
+      "relative_path": "x93c_patch_master_ai_bridge.py",
+      "size_bytes": 5235,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "ae96edf3262dfcde23daded9ab0bbe3935716edfd7fc7081b0a6f5ff3c59bcc9",
+      "extension": ".py"
+    },
+    {
+      "filename": "x93e_checkpoint_20260520_222157.txt",
+      "relative_path": "x93e_checkpoint_20260520_222157.txt",
+      "size_bytes": 362,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "9e098c636948af47c9fcc5382a6e803846cf4e4c8f61c5be11d77df814f8d888",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93_unit_check.py",
+      "relative_path": "x93_unit_check.py",
+      "size_bytes": 943,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "ff642ea2bb2a161f47ed8102eb36aa18c3795c5e2dd0fc8706186aea7447eb21",
+      "extension": ".py"
+    },
+    {
+      "filename": "x96d2_attach_check_log.txt",
+      "relative_path": "x96d2_attach_check_log.txt",
+      "size_bytes": 9091,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "e4968c412a06592b73cb1705e1813af6ce2484505203f5fcc6734f545e47f59c",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x86_agent_bus_py_head.txt",
+      "relative_path": "x97a_core_x86_agent_bus_py_head.txt",
+      "size_bytes": 8386,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "d209826a7b711450c61bb25d129c25bd2674f66e5215d1941c0cf9f2fff3e2b0",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x86_agent_bus_py_symbols.txt",
+      "relative_path": "x97a_core_x86_agent_bus_py_symbols.txt",
+      "size_bytes": 6301,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "1a5841e434ffb7dcbe7fe05c590f2bf3fc8671fbe95098cc11894916aaaf1175",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x86_agent_bus_py_tail.txt",
+      "relative_path": "x97a_core_x86_agent_bus_py_tail.txt",
+      "size_bytes": 8386,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "d209826a7b711450c61bb25d129c25bd2674f66e5215d1941c0cf9f2fff3e2b0",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x87_worker_dispatcher_py_head.txt",
+      "relative_path": "x97a_core_x87_worker_dispatcher_py_head.txt",
+      "size_bytes": 9119,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "a2ee889abaed9db01445763015630c79e275226627d4957ac1ce79666d36e9c1",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x87_worker_dispatcher_py_tail.txt",
+      "relative_path": "x97a_core_x87_worker_dispatcher_py_tail.txt",
+      "size_bytes": 9230,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "ff24666746f5ab8572c19bec5bf911436f7ed4d4f6ab2f6a3c2ef4bae4630ebb",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x90_webui_agent_bridge_py_head.txt",
+      "relative_path": "x97a_core_x90_webui_agent_bridge_py_head.txt",
+      "size_bytes": 9567,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "6bc3ea6c39e3fc175daf1c1b387242eeef5df7741df3f6b184b62b9d89187dcd",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x90_webui_agent_bridge_py_tail.txt",
+      "relative_path": "x97a_core_x90_webui_agent_bridge_py_tail.txt",
+      "size_bytes": 9954,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "54e7639452ed1a90e3a74ac53e424d5bfc00a93d081ce5f9b87cd64b39b2e9fa",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x96_master_planner_reviewer_py_head.txt",
+      "relative_path": "x97a_core_x96_master_planner_reviewer_py_head.txt",
+      "size_bytes": 9226,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "72cf3755074d0f3f858c86db05b88923384dfd5188740260e3a883779e8e9873",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x96_master_planner_reviewer_py_symbols.txt",
+      "relative_path": "x97a_core_x96_master_planner_reviewer_py_symbols.txt",
+      "size_bytes": 11504,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "7929894fca24657933a269ed8f41f123ab29fb0f5ab3a97b059db92a13a3ac51",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x96_master_planner_reviewer_py_tail.txt",
+      "relative_path": "x97a_core_x96_master_planner_reviewer_py_tail.txt",
+      "size_bytes": 9226,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "72cf3755074d0f3f858c86db05b88923384dfd5188740260e3a883779e8e9873",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_scan_apply_log.txt",
+      "relative_path": "x97a_scan_apply_log.txt",
+      "size_bytes": 327,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "9639b6bb4504a37342d308ad34ed179680d54756b2c6e9f16900dd681ecd9871",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_scan_check_log.txt",
+      "relative_path": "x97a_scan_check_log.txt",
+      "size_bytes": 3686,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "e8bd9ed86bffd48ad1cee65738975621fe520e522988cd837ca8909fcfb1dc00",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97b2_apply_log.txt",
+      "relative_path": "x97b2_apply_log.txt",
+      "size_bytes": 585,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "db4ae0fa6bb33480e1519a4f8c75c7d2181c27067079eaf4a2b67ea7a6176fdf",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97b2_check_log.txt",
+      "relative_path": "x97b2_check_log.txt",
+      "size_bytes": 10202,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "ab4dae09545d9091755e87ecbf6903df3391432cb890e7f2753dd58961d53f90",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97b2_live_addtask.txt",
+      "relative_path": "x97b2_live_addtask.txt",
+      "size_bytes": 49259,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "a6eb27db3dead4e00ca47241801c66464df4f8783e79ebaa8659ee1d6d752fd7",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97b2_patch_x87.py",
+      "relative_path": "x97b2_patch_x87.py",
+      "size_bytes": 4336,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "9232be19f5baac05d01c5d820a801f53390b0f0c1c558cde16c279bead94e804",
+      "extension": ".py"
+    },
+    {
+      "filename": "x97b_check_log.txt",
+      "relative_path": "x97b_check_log.txt",
+      "size_bytes": 14382,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "97d1cc7f5e491a92f86ad1181a3214a9dfcbfa408068713b926644548db275cb",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97c2b_patch_runtime.py",
+      "relative_path": "x97c2b_patch_runtime.py",
+      "size_bytes": 3776,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "9e0c6b3d27879c742a2f98213f9e585f36fe7fc4dabe9ca916b02d7351b09516",
+      "extension": ".py"
+    },
+    {
+      "filename": "x97c2_patch_runtime.py",
+      "relative_path": "x97c2_patch_runtime.py",
+      "size_bytes": 5056,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "b0f2b6884a3cf15220d718dca8b33175081d0b21af0ca82b432cbbc9029e1c05",
+      "extension": ".py"
+    },
+    {
+      "filename": "x97c_scan_apply_log.txt",
+      "relative_path": "x97c_scan_apply_log.txt",
+      "size_bytes": 668,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "91ad0671a7c7f7466c26e3661116a4ac58fd334395fd31a90b325bf224c66d57",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97c_scan_check_log.txt",
+      "relative_path": "x97c_scan_check_log.txt",
+      "size_bytes": 429,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "d9a96c5295f702badaa98bce34d76ec34fbb506a5253b46e1f0c803ff54dacdc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97c_scan_source_audit.txt",
+      "relative_path": "x97c_scan_source_audit.txt",
+      "size_bytes": 54633,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "f8f9458e94e4bffba1b2e04546799f3edc09844f9c6e8d040359b1fa2056e4f7",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d2_patch_seed.py",
+      "relative_path": "x97d2_patch_seed.py",
+      "size_bytes": 3777,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "8e93b279433d4c634ec16aa80c247a27bd4d40d7ef4a54c0c3909bfb116fbb33",
+      "extension": ".py"
+    },
+    {
+      "filename": "x97d_patch_x87.py",
+      "relative_path": "x97d_patch_x87.py",
+      "size_bytes": 4320,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "218c0a04bbe9ebfc3afd10760722dc9ee4a0378cd58a1830a3283059d3d7dd63",
+      "extension": ".py"
+    },
+    {
+      "filename": "x97e3_source_audit.txt",
+      "relative_path": "x97e3_source_audit.txt",
+      "size_bytes": 10561,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "15878c62ac7ee8e2792c3cc2bea66d762a047e9842e3ab8ef32f36642d81c21f",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e4_apply_log.txt",
+      "relative_path": "x97e4_apply_log.txt",
+      "size_bytes": 617,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "812ae262e86efe2f87f756fceaf4b19c27fd0fa786fe2dbe0e12f75fd42f9e3a",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e4_check_log.txt",
+      "relative_path": "x97e4_check_log.txt",
+      "size_bytes": 737,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "cbb94727dc3732d71443f902dfdd2e648022cdbb50c26350c61ba74534113ae8",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e4_source_audit.txt",
+      "relative_path": "x97e4_source_audit.txt",
+      "size_bytes": 1710,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "a213247334eba15fb5bc39e05c31345f778c7dd10cc3fcdb7b7b6df564eef3f5",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_apply_log.txt",
+      "relative_path": "x97e6_apply_log.txt",
+      "size_bytes": 366,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "836e75a0013d0da86278cfd977fb5be2fc52052d729fd78e0793e3566b1c6e48",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_check_log.txt",
+      "relative_path": "x97e6_check_log.txt",
+      "size_bytes": 102,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "1c39a5fc413e032639a9d2581ae4cd111b03d88a67298ad547b69abaa2093751",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_check_source_audit.txt",
+      "relative_path": "x97e6_check_source_audit.txt",
+      "size_bytes": 10050,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "acf72b4cf218aee14a225c4f1dfe7bb1ee8245ba3b79ed6ad577b83825982d0d",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_source_audit.txt",
+      "relative_path": "x97e6_source_audit.txt",
+      "size_bytes": 10051,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "126f483258d512f15920f11061fa981690263ffe253054a888b63393af0fd56e",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e7_busmessage_contract_scan.txt",
+      "relative_path": "x97e7_busmessage_contract_scan.txt",
+      "size_bytes": 48215,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "41cf5e4a4e0a351e1d6b2e1c2fd216f6f058dae25faf6335be1cc0c7ecd161fb",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98b_apply_log.txt",
+      "relative_path": "x98b_apply_log.txt",
+      "size_bytes": 492,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "42c5e4e781df60365c6c3e3d3253bdb7d6488091e1bb1231be9a1e6910dc5d11",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98_apply_log.txt",
+      "relative_path": "x98_apply_log.txt",
+      "size_bytes": 356,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "0c444ec013338333fcfc1906530310bb4d199e1b08755fc2c35e36b66d21cbfc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98_check_log.txt",
+      "relative_path": "x98_check_log.txt",
+      "size_bytes": 270,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "d88097d35b230834bb265341c3519a6b5cc13709a6a476298f4489ae21901e13",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98_package_audit.txt",
+      "relative_path": "x98_package_audit.txt",
+      "size_bytes": 29799,
+      "last_modified": "2026-05-21 18:04:58",
+      "sha256": "64a0f7b87791e42752304bdbd0897250d300c2e7329c74206c00a320b453ae2f",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x85_run_20260520_163219.txt",
+      "relative_path": "x85_run_20260520_163219.txt",
+      "size_bytes": 1515,
+      "last_modified": "2026-05-21 18:04:57",
+      "sha256": "bbb75f968103783ac5a989546e699eb9e0127930ff47b3285f171f4d211728eb",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x85_run_20260520_163226.txt",
+      "relative_path": "x85_run_20260520_163226.txt",
+      "size_bytes": 1515,
+      "last_modified": "2026-05-21 18:04:57",
+      "sha256": "b1c499e0f191389c55a20b5860a7b32ff314d305d2ae6d7315854f029614a258",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x85_run_20260520_164334.txt",
+      "relative_path": "x85_run_20260520_164334.txt",
+      "size_bytes": 1149,
+      "last_modified": "2026-05-21 18:04:57",
+      "sha256": "ccffb02f18fdcea3d5f878d10fc07aa6712d2d413dd96031c12c999c81745134",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x92_live_error_context.txt",
+      "relative_path": "x92_live_error_context.txt",
+      "size_bytes": 11328,
+      "last_modified": "2026-05-21 18:04:57",
+      "sha256": "45f4bafd88f4e95ef3a65710f07ae757a841ed589fd136a68afc70e3f8691a24",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99d_logsync_apply_log.txt",
+      "relative_path": "x99d_logsync_apply_log.txt",
+      "size_bytes": 134,
+      "last_modified": "2026-05-21 17:41:51",
+      "sha256": "e47f70389b0ad18f98f46c1fb7aba5381f50992971e94e54f832066ffc74e509",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99d_logsync_check_log.txt",
+      "relative_path": "x99d_logsync_check_log.txt",
+      "size_bytes": 12347,
+      "last_modified": "2026-05-21 17:41:51",
+      "sha256": "3d92e3e2051581ad1fcee28356d4c838417a983515ebc2eee18f234a3c086b42",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99b_logsync_runtime_log.txt",
+      "relative_path": "x99b_logsync_runtime_log.txt",
+      "size_bytes": 6517833,
+      "last_modified": "2026-05-21 17:41:41",
+      "sha256": "81bc15030e609c5dc93444c03ce26fbacb03408d4577a6d30bb033f3c789b31c",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99b_logsync_apply_log.txt",
+      "relative_path": "x99b_logsync_apply_log.txt",
+      "size_bytes": 976,
+      "last_modified": "2026-05-21 17:39:13",
+      "sha256": "a10c773f7f6acd252f91816213cb31ecbc5455c695a19d948a32e7e1dda4764f",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99b_logsync_cleanup_log.txt",
+      "relative_path": "x99b_logsync_cleanup_log.txt",
+      "size_bytes": 98,
+      "last_modified": "2026-05-21 17:34:24",
+      "sha256": "0b45b77054b4b4ae24f9cc6a4dc4eec6b56afe27f6b777132186352c66b07776",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99b_logsync_check_log.txt",
+      "relative_path": "x99b_logsync_check_log.txt",
+      "size_bytes": 4253,
+      "last_modified": "2026-05-21 02:22:35",
+      "sha256": "0e2885872173aa1077c74dc767d5b001be557132355d87df8b89fc497ca9da67",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99c_logsync_manifest_check_log.txt",
+      "relative_path": "x99c_logsync_manifest_check_log.txt",
+      "size_bytes": 11528,
+      "last_modified": "2026-05-21 02:20:40",
+      "sha256": "cdb3da8a04ab556fdb3d7ac6a8c0aa195a8c531b4566265f0a534528d9a3937b",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99c_logsync_manifest_apply_log.txt",
+      "relative_path": "x99c_logsync_manifest_apply_log.txt",
+      "size_bytes": 249,
+      "last_modified": "2026-05-21 02:20:38",
+      "sha256": "fb56753eb6b47a1f032df058d30c4746c5de2ec24e31b93f5c02f431d2afb449",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x99b_test_sync.txt",
+      "relative_path": "x99b_test_sync.txt",
+      "size_bytes": 15,
+      "last_modified": "2026-05-21 02:02:35",
+      "sha256": "d55d26a281b227d122b348b8b48f1cb088e6865bbe872c6b1cc1c1fb9731e0be",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_live_addtask.txt",
+      "relative_path": "x97e6_live_addtask.txt",
+      "size_bytes": 9256,
+      "last_modified": "2026-05-21 01:40:24",
+      "sha256": "f5bb2e01805aa8973d5cc021e7ee5ccb1e52257c01106d836bd5aad0626a66b4",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_check_compile_log.txt",
+      "relative_path": "x97e6_check_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 01:38:45",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_compile_log.txt",
+      "relative_path": "x97e6_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 01:38:44",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_x86_bus_role_contract.txt",
+      "relative_path": "x97e6_x86_bus_role_contract.txt",
+      "size_bytes": 15422,
+      "last_modified": "2026-05-21 01:35:54",
+      "sha256": "813a78e7d7a399e6ede3531802a4280b0a9bf5388b73ad2114874ce89e452468",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_role_scan.txt",
+      "relative_path": "x97e6_role_scan.txt",
+      "size_bytes": 34870,
+      "last_modified": "2026-05-21 01:34:19",
+      "sha256": "0c2c5df3d2aebf1512d827270d0ebcf89faa449e6b9a3e23acc7e02ba4df6ee2",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e6_x96_roles.txt",
+      "relative_path": "x97e6_x96_roles.txt",
+      "size_bytes": 18318,
+      "last_modified": "2026-05-21 01:34:19",
+      "sha256": "c04b8a6d6f004a5844c3d55c51c5b5e5d4b654f177c37a41dfadb8901f56f5a4",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e5_live_addtask.txt",
+      "relative_path": "x97e5_live_addtask.txt",
+      "size_bytes": 9376,
+      "last_modified": "2026-05-21 01:33:39",
+      "sha256": "3b19a959ada1ca49ba9bcfc965c57808ece2f74558d0a07cd8251fdc4e98c4fc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e5_source_audit.txt",
+      "relative_path": "x97e5_source_audit.txt",
+      "size_bytes": 914,
+      "last_modified": "2026-05-21 01:32:06",
+      "sha256": "ff25657c12b0f28fb0901783be856c104e7ad716a93ee3bd33fa9e3cde41966a",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e5_compile_after.txt",
+      "relative_path": "x97e5_compile_after.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 01:32:05",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e5_compile_before.txt",
+      "relative_path": "x97e5_compile_before.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 01:28:09",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e5_tempdir_decl_scan.txt",
+      "relative_path": "x97e5_tempdir_decl_scan.txt",
+      "size_bytes": 272,
+      "last_modified": "2026-05-21 01:28:07",
+      "sha256": "d68c326a74d42556a47792fc8a06877a5c6d431e67036aee39b6d92a9d0cef9d",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e5_tempdir_refs.txt",
+      "relative_path": "x97e5_tempdir_refs.txt",
+      "size_bytes": 1134,
+      "last_modified": "2026-05-21 01:28:07",
+      "sha256": "e6cd8a16fac0657c9759724c8c16e21b48ced9e46e94cb5c5bb3b57030c8ea99",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e5_x87_head.txt",
+      "relative_path": "x97e5_x87_head.txt",
+      "size_bytes": 7276,
+      "last_modified": "2026-05-21 01:28:07",
+      "sha256": "e89e7a5aba7cb92415a0b2b739576b90fc4c1b7c6267ad57a9de9e3afbc38f53",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e4_live_addtask.txt",
+      "relative_path": "x97e4_live_addtask.txt",
+      "size_bytes": 4703,
+      "last_modified": "2026-05-21 01:21:41",
+      "sha256": "68d3ec84770be23a193fe6bd54bd33722d42fb969999e9b6fe595f5e0078a327",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e4_check_compile_log.txt",
+      "relative_path": "x97e4_check_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 01:20:08",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e4_compile_log.txt",
+      "relative_path": "x97e4_compile_log.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 01:20:07",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e4_patcher_output.txt",
+      "relative_path": "x97e4_patcher_output.txt",
+      "size_bytes": 102,
+      "last_modified": "2026-05-21 01:20:07",
+      "sha256": "b09432758ee4d942caa4d7cc6a6f8ff0e3966bc8ad5b48a8b7bbe7e1c9675ee6",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e3_apply_log.txt",
+      "relative_path": "x97e3_apply_log.txt",
+      "size_bytes": 1017,
+      "last_modified": "2026-05-21 01:16:17",
+      "sha256": "1051a2baedcf408291399233781999312bd193a8fca9c9f89450e069a46b80d7",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e3_check_compile_log.txt",
+      "relative_path": "x97e3_check_compile_log.txt",
+      "size_bytes": 1020,
+      "last_modified": "2026-05-21 01:16:17",
+      "sha256": "c41a35223c0d9d05b7e27b6639df1f6f00c0ac4f158ad1842f2275b3ea9d6e78",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e3_check_log.txt",
+      "relative_path": "x97e3_check_log.txt",
+      "size_bytes": 1113,
+      "last_modified": "2026-05-21 01:16:17",
+      "sha256": "b84c9ccb45d983d2619bf3686b2bf587ea71c8c45828babb3cca15be20d121b9",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e3_compile_log.txt",
+      "relative_path": "x97e3_compile_log.txt",
+      "size_bytes": 916,
+      "last_modified": "2026-05-21 01:16:16",
+      "sha256": "d4eae395a28b37bb89d699da01c19510161d9f386248f389c3a60f53e40fadcf",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e2_check_log.txt",
+      "relative_path": "x97e2_check_log.txt",
+      "size_bytes": 167,
+      "last_modified": "2026-05-21 01:12:30",
+      "sha256": "ced3b1db8b1926c42eb4bd279cb11bca81664e6d53af542f5de05f45e74f419b",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e2_apply_log.txt",
+      "relative_path": "x97e2_apply_log.txt",
+      "size_bytes": 593,
+      "last_modified": "2026-05-21 01:12:28",
+      "sha256": "5768431befac56cddfc90bbd827eb5445dbc61e410fe099179954c55903e6f08",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e_live_addtask.txt",
+      "relative_path": "x97e_live_addtask.txt",
+      "size_bytes": 4816,
+      "last_modified": "2026-05-21 01:08:16",
+      "sha256": "ff8948e20c1c8634269d022054575cbb277d373d5237e7fa70df8a4ccf0b3054",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e_check_log.txt",
+      "relative_path": "x97e_check_log.txt",
+      "size_bytes": 386,
+      "last_modified": "2026-05-21 01:06:45",
+      "sha256": "765d6dd01fb4695c1990c446774c70b86b46d1f7cbbb702f776ee143da01a545",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97e_apply_log.txt",
+      "relative_path": "x97e_apply_log.txt",
+      "size_bytes": 725,
+      "last_modified": "2026-05-21 01:06:43",
+      "sha256": "7501bcad93c6ebeea02032167020f5043fba3291ea5ecc411b11d16336afee78",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98c2_check_log.txt",
+      "relative_path": "x98c2_check_log.txt",
+      "size_bytes": 665,
+      "last_modified": "2026-05-21 01:03:55",
+      "sha256": "c67edd7b9fe0d29b0310e7281441aa91f27cb92e3088ac02b538786baaec902b",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98c2_apply_log.txt",
+      "relative_path": "x98c2_apply_log.txt",
+      "size_bytes": 927,
+      "last_modified": "2026-05-21 01:03:53",
+      "sha256": "83808663416ff6378a89cbe94ddf222d8fca79e0307d4a98669b1829414147cc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98c2_contract_audit.txt",
+      "relative_path": "x98c2_contract_audit.txt",
+      "size_bytes": 287,
+      "last_modified": "2026-05-21 01:03:53",
+      "sha256": "e15662d09ad98dd84b3df7d2d4875a1d2573514023bf19c25727633810ef9e73",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98c2_migration_report.txt",
+      "relative_path": "x98c2_migration_report.txt",
+      "size_bytes": 1768,
+      "last_modified": "2026-05-21 01:03:53",
+      "sha256": "ffff441b3ce2537582fa78eccf8332eff9a449bfc76ab58ce33235374fb02ebc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98b_check_log.txt",
+      "relative_path": "x98b_check_log.txt",
+      "size_bytes": 126,
+      "last_modified": "2026-05-21 01:00:11",
+      "sha256": "2d099413f50e6117449d0a72c936ce37af9fd8fae8ac57f53794c948aaae7846",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x98b_guard_report.json",
+      "relative_path": "x98b_guard_report.json",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 01:00:11",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".json"
+    },
+    {
+      "filename": "x98b_contract_audit.txt",
+      "relative_path": "x98b_contract_audit.txt",
+      "size_bytes": 65039,
+      "last_modified": "2026-05-21 01:00:10",
+      "sha256": "57937fd3a5c93c0ddd32c9fad4579c3ddb0eda7decb770a33117a3fea2cbf534",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d5_check_log.txt",
+      "relative_path": "x97d5_check_log.txt",
+      "size_bytes": 294,
+      "last_modified": "2026-05-21 00:54:54",
+      "sha256": "e61239954d522cb4206691a00a83757948b6c0a0432aa739584250837c6b3366",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d5_apply_log.txt",
+      "relative_path": "x97d5_apply_log.txt",
+      "size_bytes": 926,
+      "last_modified": "2026-05-21 00:54:52",
+      "sha256": "6c67c49946c3b5d0ad1482f0e3ec1cd7f80db68e864811171d1cfa5a4f760d3e",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d4_check_log.txt",
+      "relative_path": "x97d4_check_log.txt",
+      "size_bytes": 452,
+      "last_modified": "2026-05-21 00:50:32",
+      "sha256": "511e5ca5522488e0ee7b4fa28946ca30d29fd7d95d38c3792b269bfb8d039df4",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d4_source_audit.txt",
+      "relative_path": "x97d4_source_audit.txt",
+      "size_bytes": 14386,
+      "last_modified": "2026-05-21 00:50:32",
+      "sha256": "dc0f33d09eaa13251a5bbff9aab451e36be616c0f41d2d10ff4344f6247f02cd",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d4_apply_log.txt",
+      "relative_path": "x97d4_apply_log.txt",
+      "size_bytes": 988,
+      "last_modified": "2026-05-21 00:50:31",
+      "sha256": "b28a3e264275435ef3ceb4f68dfbe0c8fe27ad60f5dd16fc4b64430c88035076",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d3_check_log.txt",
+      "relative_path": "x97d3_check_log.txt",
+      "size_bytes": 580,
+      "last_modified": "2026-05-21 00:46:23",
+      "sha256": "567588761416540a5cd0f251070f5d1b4ef3cf23802d782238b77236bf33dd58",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d3_source_audit.txt",
+      "relative_path": "x97d3_source_audit.txt",
+      "size_bytes": 14639,
+      "last_modified": "2026-05-21 00:46:23",
+      "sha256": "c523ce20b4a6758ab107ba6c87f5ac77909f8470799a73ce8bcf8da09b4be507",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d3_apply_log.txt",
+      "relative_path": "x97d3_apply_log.txt",
+      "size_bytes": 974,
+      "last_modified": "2026-05-21 00:46:21",
+      "sha256": "38bc4483aa5b1627b1b1b558368ff5a48d6dff98c2b2d32bbcb785dbbd7976cd",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d2_check_log.txt",
+      "relative_path": "x97d2_check_log.txt",
+      "size_bytes": 238,
+      "last_modified": "2026-05-21 00:41:37",
+      "sha256": "44614887b4636f30defe358bd052a78223e8fb6e8130f8c3867977ed8b67d25b",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d2_apply_log.txt",
+      "relative_path": "x97d2_apply_log.txt",
+      "size_bytes": 756,
+      "last_modified": "2026-05-21 00:41:36",
+      "sha256": "dfb971716d62db15c41f27acf7cd87b6b3de3ded12cc34c2abe26e4f19a9ade5",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d_check_log.txt",
+      "relative_path": "x97d_check_log.txt",
+      "size_bytes": 86,
+      "last_modified": "2026-05-21 00:38:16",
+      "sha256": "f0cc5a90811c5669016f022cf3c4956eb491e91ae4395e8c7c89401ecd0e1d0b",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97d_apply_log.txt",
+      "relative_path": "x97d_apply_log.txt",
+      "size_bytes": 414,
+      "last_modified": "2026-05-21 00:38:15",
+      "sha256": "8fcd88f1fbc92bff6a8581ea29a8da5a06af44d82d441598ae773fa6a3c066af",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97c2b_check_log.txt",
+      "relative_path": "x97c2b_check_log.txt",
+      "size_bytes": 197,
+      "last_modified": "2026-05-21 00:35:15",
+      "sha256": "b0f0147dd9ad0811a82a17fbdfb74d5f149dc9dac4dc7df37a4b7494ab398153",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97c2b_source_audit.txt",
+      "relative_path": "x97c2b_source_audit.txt",
+      "size_bytes": 32,
+      "last_modified": "2026-05-21 00:35:15",
+      "sha256": "0c5b14f9a666d6a51f71c5aa1d52fbe2c8dd1c047563fab205d753c75123106d",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97c2b_apply_log.txt",
+      "relative_path": "x97c2b_apply_log.txt",
+      "size_bytes": 536,
+      "last_modified": "2026-05-21 00:35:13",
+      "sha256": "0ae160638a3613cf35474d4e29eee19d55ba26e77b3ce346a2cf03efc9ef457d",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97c2_check_log.txt",
+      "relative_path": "x97c2_check_log.txt",
+      "size_bytes": 276,
+      "last_modified": "2026-05-21 00:32:17",
+      "sha256": "0689d315dbe5e78334996bc8da955e3a6f92a9b52d36122b531ae242927e76b3",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97c2_apply_log.txt",
+      "relative_path": "x97c2_apply_log.txt",
+      "size_bytes": 1136,
+      "last_modified": "2026-05-21 00:32:16",
+      "sha256": "cbd9c9d32c5975cce5251fba0900707031f233f54869344091a37409fdf9d28a",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97c_scan_latest_report_audit.txt",
+      "relative_path": "x97c_scan_latest_report_audit.txt",
+      "size_bytes": 6503,
+      "last_modified": "2026-05-21 00:28:13",
+      "sha256": "d8817fda647868b02b5b1ccea5e50a79da8d79667dab198f9f70ca299c0e28cf",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97b2_live_reports_list.txt",
+      "relative_path": "x97b2_live_reports_list.txt",
+      "size_bytes": 1029,
+      "last_modified": "2026-05-21 00:25:37",
+      "sha256": "9268f32fd12d357fd96faddd1fd740eb5bbc979629c8f5f4a0d22e17bd8895d1",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x87_symbols2.txt",
+      "relative_path": "x87_symbols2.txt",
+      "size_bytes": 9540,
+      "last_modified": "2026-05-21 00:19:48",
+      "sha256": "9b1a0bfecdd9629d7dc4ce773286ad48fa185a0b6eff1324456fae240e02a6e9",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x87_head.txt",
+      "relative_path": "x87_head.txt",
+      "size_bytes": 19418,
+      "last_modified": "2026-05-21 00:19:46",
+      "sha256": "a728753fd9425007823433d506b5d0f5227b0fe4ac14226f6f04bcbe5fe5d144",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x87_tail.txt",
+      "relative_path": "x87_tail.txt",
+      "size_bytes": 19418,
+      "last_modified": "2026-05-21 00:19:46",
+      "sha256": "a728753fd9425007823433d506b5d0f5227b0fe4ac14226f6f04bcbe5fe5d144",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97b_check_console.txt",
+      "relative_path": "x97b_check_console.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 00:18:43",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97b_apply_console.txt",
+      "relative_path": "x97b_apply_console.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-21 00:18:41",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97b_apply_log.txt",
+      "relative_path": "x97b_apply_log.txt",
+      "size_bytes": 1183,
+      "last_modified": "2026-05-21 00:18:41",
+      "sha256": "44730aa945579c2dd43785af17c9a9d72317fa15a3ae2551604b3a9debca5828",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x87_worker_dispatcher_py_symbols.txt",
+      "relative_path": "x97a_core_x87_worker_dispatcher_py_symbols.txt",
+      "size_bytes": 8593,
+      "last_modified": "2026-05-21 00:14:05",
+      "sha256": "9b70728f364f0a517100deffb61646d51ef5ff3cef163e1bf2fe3535adc41443",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_core_x90_webui_agent_bridge_py_symbols.txt",
+      "relative_path": "x97a_core_x90_webui_agent_bridge_py_symbols.txt",
+      "size_bytes": 5525,
+      "last_modified": "2026-05-21 00:14:05",
+      "sha256": "d1145ffa116bd237f1767c20ac1338e7ff84d86685e24c5866945bc77fc22776",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x97a_scan_summary.json",
+      "relative_path": "x97a_scan_summary.json",
+      "size_bytes": 3600,
+      "last_modified": "2026-05-21 00:14:05",
+      "sha256": "aedd7d3f5b27c7caed73e2f61d419696ccdb4305d8a35d4e3158a9f7e436a1f3",
+      "extension": ".json"
+    },
+    {
+      "filename": "x96d2_live_x87.txt",
+      "relative_path": "x96d2_live_x87.txt",
+      "size_bytes": 364,
+      "last_modified": "2026-05-21 00:12:11",
+      "sha256": "f7d873a27c0dea7af285f612e75229a2ee5e863ab7ef274b5109098bd09ccf52",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d2_live_x90.txt",
+      "relative_path": "x96d2_live_x90.txt",
+      "size_bytes": 16134,
+      "last_modified": "2026-05-21 00:12:10",
+      "sha256": "9777c5200ecf9b4b0ca2d43ab04ef3111d2ee3e903de8d62eae8d0b270bcf31c",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d2_live_x91.txt",
+      "relative_path": "x96d2_live_x91.txt",
+      "size_bytes": 17680,
+      "last_modified": "2026-05-21 00:12:10",
+      "sha256": "05d5702ff585e39ff117a4bdf65f32f69b70c1acd9b628975a769ac8139c4876",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d2_attach_apply_log.txt",
+      "relative_path": "x96d2_attach_apply_log.txt",
+      "size_bytes": 383,
+      "last_modified": "2026-05-21 00:10:27",
+      "sha256": "a4b3fe7242650ca311cc6cf70c346fb06eb55824b8867dfa9d2c5ca6154c5de5",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x90_symbols.txt",
+      "relative_path": "x90_symbols.txt",
+      "size_bytes": 5972,
+      "last_modified": "2026-05-20 23:33:00",
+      "sha256": "971ad4a17a5a82d38be1f8d10f158d4a8d3d213df7ab0414830cddc3c1dcc4ae",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x90_head.txt",
+      "relative_path": "x90_head.txt",
+      "size_bytes": 18648,
+      "last_modified": "2026-05-20 23:32:57",
+      "sha256": "cc40a4df1a044af473df92b2d7896f03e94d7a39a6cdce7d581dd26cd53eb4ae",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x90_tail.txt",
+      "relative_path": "x90_tail.txt",
+      "size_bytes": 19154,
+      "last_modified": "2026-05-20 23:32:57",
+      "sha256": "18baec2e547cd36d1c668c8120c0c207b696a9aebc2fa17f037b57e485f837e0",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_attach_check_log.txt",
+      "relative_path": "x96d_attach_check_log.txt",
+      "size_bytes": 1316,
+      "last_modified": "2026-05-20 23:31:50",
+      "sha256": "ac2619290895091fd19ad3141bab8c376f526c3cd1ac478ace129d2f05e72f15",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_attach_apply_log.txt",
+      "relative_path": "x96d_attach_apply_log.txt",
+      "size_bytes": 1528,
+      "last_modified": "2026-05-20 23:31:48",
+      "sha256": "e3cb86ec665ea742d7549921fab09df60e0a366ca2da7ac27c8b709ca1dfa7ca",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_recover_apply_log.txt",
+      "relative_path": "x96d_recover_apply_log.txt",
+      "size_bytes": 4242,
+      "last_modified": "2026-05-20 23:24:53",
+      "sha256": "218d766ee139ade725dfbdbdd8dc7bbe0aca93ec46c2c8f53190442815b0db4c",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_recover_compile.txt",
+      "relative_path": "x96d_recover_compile.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-20 23:24:53",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_recover_status.txt",
+      "relative_path": "x96d_recover_status.txt",
+      "size_bytes": 15776,
+      "last_modified": "2026-05-20 23:24:53",
+      "sha256": "a7a802036c720ccaf69144759506f9a55b4e49a196643b20772d96e6b5f18f95",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_recover_apply_inner_log.txt",
+      "relative_path": "x96d_recover_apply_inner_log.txt",
+      "size_bytes": 8046,
+      "last_modified": "2026-05-20 23:24:52",
+      "sha256": "2938f758e27d7d3a81688cc57b04fdcb4e93b94c094703283aa2f544e0f47534",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_restore_status.txt",
+      "relative_path": "x96d_restore_status.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-20 23:18:02",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_restore_compile.txt",
+      "relative_path": "x96d_restore_compile.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-20 23:18:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_compile_check.txt",
+      "relative_path": "x96d_compile_check.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-20 23:17:29",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_x90_smoke.txt",
+      "relative_path": "x96d_x90_smoke.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-20 23:12:25",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_folder_empty_check.txt",
+      "relative_path": "x96d_folder_empty_check.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-20 23:09:51",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96d_apply_log_retry.txt",
+      "relative_path": "x96d_apply_log_retry.txt",
+      "size_bytes": 440,
+      "last_modified": "2026-05-20 23:08:55",
+      "sha256": "56cdca63c845d8128093f0fa0d39b48f9fe1d014c1ae4a08b7e6e2f480e37a52",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96c2_apply_log.txt",
+      "relative_path": "x96c2_apply_log.txt",
+      "size_bytes": 4606,
+      "last_modified": "2026-05-20 23:04:51",
+      "sha256": "29e4ffb272fe7ce6594276353d5d421a944cc28f10435ec0bc88e152c91daf21",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96c_selftest_log.txt",
+      "relative_path": "x96c_selftest_log.txt",
+      "size_bytes": 1062,
+      "last_modified": "2026-05-20 23:04:51",
+      "sha256": "cf9b900d3fddbeb4e10fd4030194b7957bb5807991366dbb753a42c43e9df395",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96c_apply_log.txt",
+      "relative_path": "x96c_apply_log.txt",
+      "size_bytes": 4052,
+      "last_modified": "2026-05-20 23:02:56",
+      "sha256": "88d462f20eb75239b29e3f1b9d99fa6596b79b025241ddadd1a37e866c21f656",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96b_master.txt",
+      "relative_path": "x96b_master.txt",
+      "size_bytes": 26330,
+      "last_modified": "2026-05-20 22:55:35",
+      "sha256": "e0e0d32ef369dff6481bb77839b12bc97fd376db815034179c9947d7b3d04737",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96b_x84.txt",
+      "relative_path": "x96b_x84.txt",
+      "size_bytes": 19492,
+      "last_modified": "2026-05-20 22:55:34",
+      "sha256": "e3d4a762eb9c385aff6982256757b87483400daca59ebea915cdeb4aa36441cc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96b_x87.txt",
+      "relative_path": "x96b_x87.txt",
+      "size_bytes": 19418,
+      "last_modified": "2026-05-20 22:55:34",
+      "sha256": "a728753fd9425007823433d506b5d0f5227b0fe4ac14226f6f04bcbe5fe5d144",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96b_x90.txt",
+      "relative_path": "x96b_x90.txt",
+      "size_bytes": 21470,
+      "last_modified": "2026-05-20 22:55:34",
+      "sha256": "488561b600f4928781a3fc84d9a98267dfb96311c275bcae2aeea5892693f8b7",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96b_x91.txt",
+      "relative_path": "x96b_x91.txt",
+      "size_bytes": 15408,
+      "last_modified": "2026-05-20 22:55:34",
+      "sha256": "ab6ad38ea2792c5b97a2877a73d83261307811ea0d40338b3d4cab92ec2edb17",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96a_roadmap_confirm.txt",
+      "relative_path": "x96a_roadmap_confirm.txt",
+      "size_bytes": 4224,
+      "last_modified": "2026-05-20 22:54:30",
+      "sha256": "a54cebb9492469787e57bee962303b231775e382835aa37309d32fac80c4af6a",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96a_core_files.txt",
+      "relative_path": "x96a_core_files.txt",
+      "size_bytes": 21686,
+      "last_modified": "2026-05-20 22:54:27",
+      "sha256": "9706d3dfee9be1818f9042a05c3096d5dfc6ff9b0826e5e65385900a2f0720d4",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96a_master_planner_scan.txt",
+      "relative_path": "x96a_master_planner_scan.txt",
+      "size_bytes": 1058460,
+      "last_modified": "2026-05-20 22:54:27",
+      "sha256": "4f9c467b22e23ad7eb3f10c2348e79d363475906671120f07e2c798bfd66851c",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96_roadmap_save_log.txt",
+      "relative_path": "x96_roadmap_save_log.txt",
+      "size_bytes": 820,
+      "last_modified": "2026-05-20 22:53:28",
+      "sha256": "fc724c7feca609a3a2f03601be5277ec94cfbda4a3b3cf9371e84ee27008ddd7",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x96_docs_dir_log.txt",
+      "relative_path": "x96_docs_dir_log.txt",
+      "size_bytes": 810,
+      "last_modified": "2026-05-20 22:52:44",
+      "sha256": "c4f2d6242bdbf13ecff52c64a83dd81df95c38f2f3c57c354b848c37b7ae5a35",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x94_live_smoke.txt",
+      "relative_path": "x94_live_smoke.txt",
+      "size_bytes": 59526,
+      "last_modified": "2026-05-20 22:24:28",
+      "sha256": "c6deec7c94b3cd04795c3d34742ddff751f9eb1ab54b34707dc977445bba70d1",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x94_docker_ps.txt",
+      "relative_path": "x94_docker_ps.txt",
+      "size_bytes": 5268,
+      "last_modified": "2026-05-20 22:24:19",
+      "sha256": "ef319016835c09d341380a56fd1ddcd7922db432d40bb8e809d84397c5379d26",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93e_live_smoke.txt",
+      "relative_path": "x93e_live_smoke.txt",
+      "size_bytes": 59330,
+      "last_modified": "2026-05-20 22:22:13",
+      "sha256": "8cb833c43019fafc7561158df652b6b60872b095541fc7894d91a463fa8c12cc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93d_live_response_after_restart.txt",
+      "relative_path": "x93d_live_response_after_restart.txt",
+      "size_bytes": 59806,
+      "last_modified": "2026-05-20 22:20:23",
+      "sha256": "45a44bfd6c11fc7ed67a521cee890bbf23323572c1b1cfc659cb950ed63a2d7a",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93d_live_response.txt",
+      "relative_path": "x93d_live_response.txt",
+      "size_bytes": 0,
+      "last_modified": "2026-05-20 22:19:58",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93d_apply_log.txt",
+      "relative_path": "x93d_apply_log.txt",
+      "size_bytes": 4792,
+      "last_modified": "2026-05-20 22:18:57",
+      "sha256": "8bafc24278abf0bcdee638d1baf4a738cf340104aabd48770cca26abf11db61c",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_route_extract.txt",
+      "relative_path": "x93c_route_extract.txt",
+      "size_bytes": 50144,
+      "last_modified": "2026-05-20 22:17:29",
+      "sha256": "3a5998f6f949dd9f106004e969069d078dbe31ca036698aa06637366ce6fd219",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_docker_events.txt",
+      "relative_path": "x93c_docker_events.txt",
+      "size_bytes": 1054380,
+      "last_modified": "2026-05-20 22:17:11",
+      "sha256": "b95f4ee72b6a73d5363833c954397e556a84bd609472b490278258407637c863",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_docker_ps_a.txt",
+      "relative_path": "x93c_docker_ps_a.txt",
+      "size_bytes": 6472,
+      "last_modified": "2026-05-20 22:16:07",
+      "sha256": "c46364624eb988656fd9b48df67951575f92f460199ba3bedd9203d404d6da7b",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_restart_count.txt",
+      "relative_path": "x93c_restart_count.txt",
+      "size_bytes": 8,
+      "last_modified": "2026-05-20 22:16:07",
+      "sha256": "4af4aed4248c649ed7ae90eded643d8af8b56359361f7e856389976ac216cf6b",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_inspect_full.txt",
+      "relative_path": "x93c_inspect_full.txt",
+      "size_bytes": 18832,
+      "last_modified": "2026-05-20 22:14:48",
+      "sha256": "4117097c5b25eb6dd50596192161026c1303ab7e6ef44f8687b4629235d3b705",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_port5000.txt",
+      "relative_path": "x93c_port5000.txt",
+      "size_bytes": 696,
+      "last_modified": "2026-05-20 22:14:47",
+      "sha256": "f8a30eaf10729fd299f36849c51a2bfe06eb8e904ac2940b6286525aaa9e3b93",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_ps_master.txt",
+      "relative_path": "x93c_ps_master.txt",
+      "size_bytes": 696,
+      "last_modified": "2026-05-20 22:14:47",
+      "sha256": "1210348e2e1bb5a187f6240896001c77c191910b6faf0403823e6ac4b2549bcc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_after_irm_fail_master_logs.txt",
+      "relative_path": "x93c_after_irm_fail_master_logs.txt",
+      "size_bytes": 14394,
+      "last_modified": "2026-05-20 22:13:31",
+      "sha256": "0babf99df2178a7132718b896b10bf9d1b6c97bd216179f95640d1c25eb803bf",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_master_ai_bridge_after_patch.txt",
+      "relative_path": "x93c_master_ai_bridge_after_patch.txt",
+      "size_bytes": 33218,
+      "last_modified": "2026-05-20 22:13:29",
+      "sha256": "4d26fe48c26fa4d29a0cbedde035ecc1c0de08c1e883ad0e21a9089e037c0908",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_curl_live.txt",
+      "relative_path": "x93c_curl_live.txt",
+      "size_bytes": 5210,
+      "last_modified": "2026-05-20 22:04:08",
+      "sha256": "f07c7418303729a7f30c5a47c1777fd6b30ee3192d79bf9cc46cf24f5fb541d2",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_docker_ps.txt",
+      "relative_path": "x93c_docker_ps.txt",
+      "size_bytes": 5250,
+      "last_modified": "2026-05-20 22:03:58",
+      "sha256": "5cbc55c12da41adb683ff0d557057df3b708d82fff12e09e0ffff294e607f7cc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_master_logs.txt",
+      "relative_path": "x93c_master_logs.txt",
+      "size_bytes": 23740,
+      "last_modified": "2026-05-20 22:03:58",
+      "sha256": "c5103757ff8b83ae53a6d6bcf3e02ac840bfff919c94445792754d4d8936ecaa",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_master_state.txt",
+      "relative_path": "x93c_master_state.txt",
+      "size_bytes": 918,
+      "last_modified": "2026-05-20 22:03:58",
+      "sha256": "b41db28a7533498603f29670349d6706f48173985eb20403db0875ac95fea031",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_after_restart_apply_log.txt",
+      "relative_path": "x93c_after_restart_apply_log.txt",
+      "size_bytes": 4844,
+      "last_modified": "2026-05-20 22:03:25",
+      "sha256": "6ebcad87379a1a323124d6dbafba5e921d5e94eebad8ea2a209a561cf606dda9",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_preflight_20260520_220324.json",
+      "relative_path": "x93c_preflight_20260520_220324.json",
+      "size_bytes": 131,
+      "last_modified": "2026-05-20 22:03:24",
+      "sha256": "652a84d6205be0d1034e36d5f05981703158429abb3bbc22e6b16e6ee55d9073",
+      "extension": ".json"
+    },
+    {
+      "filename": "x93c_after_restart_docker_ps.txt",
+      "relative_path": "x93c_after_restart_docker_ps.txt",
+      "size_bytes": 5250,
+      "last_modified": "2026-05-20 22:03:21",
+      "sha256": "5cbc55c12da41adb683ff0d557057df3b708d82fff12e09e0ffff294e607f7cc",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_after_restart_master_ai.txt",
+      "relative_path": "x93c_after_restart_master_ai.txt",
+      "size_bytes": 14394,
+      "last_modified": "2026-05-20 22:03:21",
+      "sha256": "42f531164ae66601bb8a1ffd7edef5afd8dfde4fcb83834e61d7fe7e3d70de21",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_apply_log.txt",
+      "relative_path": "x93c_apply_log.txt",
+      "size_bytes": 4844,
+      "last_modified": "2026-05-20 22:01:59",
+      "sha256": "6ebcad87379a1a323124d6dbafba5e921d5e94eebad8ea2a209a561cf606dda9",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93c_preflight_20260520_220158.json",
+      "relative_path": "x93c_preflight_20260520_220158.json",
+      "size_bytes": 131,
+      "last_modified": "2026-05-20 22:01:58",
+      "sha256": "652a84d6205be0d1034e36d5f05981703158429abb3bbc22e6b16e6ee55d9073",
+      "extension": ".json"
+    },
+    {
+      "filename": "x93c_preflight_20260520_215919.json",
+      "relative_path": "x93c_preflight_20260520_215919.json",
+      "size_bytes": 131,
+      "last_modified": "2026-05-20 21:59:19",
+      "sha256": "652a84d6205be0d1034e36d5f05981703158429abb3bbc22e6b16e6ee55d9073",
+      "extension": ".json"
+    },
+    {
+      "filename": "x93c_preflight_20260520_215443.json",
+      "relative_path": "x93c_preflight_20260520_215443.json",
+      "size_bytes": 131,
+      "last_modified": "2026-05-20 21:54:43",
+      "sha256": "652a84d6205be0d1034e36d5f05981703158429abb3bbc22e6b16e6ee55d9073",
+      "extension": ".json"
+    },
+    {
+      "filename": "x93c_preflight_20260520_215319.json",
+      "relative_path": "x93c_preflight_20260520_215319.json",
+      "size_bytes": 133,
+      "last_modified": "2026-05-20 21:53:19",
+      "sha256": "a84579d99174339539986fe0d0f1e0844396894619f6b3882c6ed4691ad62f88",
+      "extension": ".json"
+    },
+    {
+      "filename": "x93c_generator_log.txt",
+      "relative_path": "x93c_generator_log.txt",
+      "size_bytes": 200,
+      "last_modified": "2026-05-20 21:53:16",
+      "sha256": "8f9e0e8422448eab66d1232394e9fcaf3ddea0a17027f7218d7cb8e5aa684a62",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93b_apply_log.txt",
+      "relative_path": "x93b_apply_log.txt",
+      "size_bytes": 3848,
+      "last_modified": "2026-05-20 20:42:21",
+      "sha256": "13769a62c0e439399271c4f9236841db87f3ed62a3fa735bcf6d5b1695761a42",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93b_dir_check.txt",
+      "relative_path": "x93b_dir_check.txt",
+      "size_bytes": 1394,
+      "last_modified": "2026-05-20 20:42:19",
+      "sha256": "e5381ec366c045034a9f2f037c6938d6660e5c0ebf788bfe5b0efcc116675319",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93b_generator_log.txt",
+      "relative_path": "x93b_generator_log.txt",
+      "size_bytes": 440,
+      "last_modified": "2026-05-20 20:42:19",
+      "sha256": "3807921b3ca1331bb1acc57106012346caca35c8bbae914a6b8e221e92f80ea0",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93_apply_log.txt",
+      "relative_path": "x93_apply_log.txt",
+      "size_bytes": 5044,
+      "last_modified": "2026-05-20 19:06:01",
+      "sha256": "32666093e753340a3d6f4373a926f5488a2510441d0904e216fd7ccf61c2552a",
+      "extension": ".txt"
+    },
+    {
+      "filename": "x93_live_response.json",
+      "relative_path": "x93_live_response.json",
+      "size_bytes": 14279,
+      "last_modified": "2026-05-20 19:06:01",
+      "sha256": "0645fa7c0aafec491898edbd300bda62b528bfd6d971d16c094b004bcb0cc566",
+      "extension": ".json"
+    },
+    {
+      "filename": "x93_preflight_20260520_190555.json",
+      "relative_path": "x93_preflight_20260520_190555.json",
+      "size_bytes": 200,
+      "last_modified": "2026-05-20 19:05:55",
+      "sha256": "3ca8d5fc326d7bee4501753db8e9bd92b1b5fe29e484a19f0242e081ff69b54c",
+      "extension": ".json"
+    },
+    {
+      "filename": "x93_preflight_20260520_190542.json",
+      "relative_path": "x93_preflight_20260520_190542.json",
+      "size_bytes": 201,
+      "last_modified": "2026-05-20 19:05:42",
+      "sha256": "257821abc16b5cc042e233daa9530451c613cbfe80c50464695d80952e7b9bca",
+      "extension": ".json"
+    },
+    {
+      "filename": "x85_run_2.txt",
+      "relative_path": "x85_run_2.txt",
+      "size_bytes": 1100,
+      "last_modified": "2026-05-20 16:44:32",
+      "sha256": "76e23f4da688bdf16a726b45d65c62e8d532794411f0ecc353b4811b3bc3aef1",
+      "extension": ".txt"
+    }
+  ]
+}

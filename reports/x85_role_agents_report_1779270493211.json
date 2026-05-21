@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "release": "X85_ROLE_AGENTS",
+  "task": "x85 self check",
+  "results": [
+    {
+      "role": "SCOUT",
+      "ok": true,
+      "summary": "SCOUT checked project root, patch inbox, runner, and temp log area.",
+      "findings": [
+        "D:\\openwebui\\core\\x75_local_patch_runner.py: exists",
+        "D:\\openwebui\\_patch_inbox: exists",
+        "D:\\openwebui\\runtime\\temp: exists",
+        "latest_log=D:\\openwebui\\runtime\\temp\\x85_run_2.txt"
+      ],
+      "next_role": "DEBUG",
+      "evidence": null,
+      "ts": "2026-05-20T09:48:13Z"
+    },
+    {
+      "role": "DEBUG",
+      "ok": true,
+      "summary": "DEBUG found no obvious fail/error signal in latest log tail.",
+      "findings": [
+        "log=D:\\openwebui\\runtime\\temp\\x85_run_2.txt",
+        "tail_chars=1070"
+      ],
+      "next_role": "VERIFY",
+      "evidence": {
+        "log": "D:\\openwebui\\runtime\\temp\\x85_run_2.txt",
+        "signals": []
+      },
+      "ts": "2026-05-20T09:48:13Z"
+    },
+    {
+      "role": "VERIFY",
+      "ok": true,
+      "summary": "VERIFY checked X85 runtime files and required directories.",
+      "findings": [
+        "D:\\openwebui\\core\\x85_role_agents.py: exists",
+        "D:\\openwebui\\runtime: exists",
+        "D:\\openwebui\\_patch_inbox: exists"
+      ],
+      "next_role": "REPORT",
+      "evidence": null,
+      "ts": "2026-05-20T09:48:13Z"
+    },
+    {
+      "role": "REPORT",
+      "ok": true,
+      "summary": "X85 role-agent runtime report generated.",
+      "findings": [
+        "roles=SCOUT, DEBUG, PATCHER, VERIFY, REPORT",
+        "state=D:\\openwebui\\runtime\\x85_role_agents\\state.json",
+        "last_role=VERIFY",
+        "last_ok=True"
+      ],
+      "next_role": null,
+      "evidence": null,
+      "ts": "2026-05-20T09:48:13Z"
+    }
+  ],
+  "state_file": "D:\\openwebui\\runtime\\x85_role_agents\\state.json"
+}
