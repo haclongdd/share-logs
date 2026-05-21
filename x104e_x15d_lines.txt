@@ -1,0 +1,57 @@
+﻿   120	    _write_json(status_file, payload)
+   121	
+   122	    try:
+   123	        if wait:
+   124	            p = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+   125	            result = {
+   126	                **payload,
+   127	                "ok": p.returncode == 0,
+   128	                "status": "success" if p.returncode == 0 else "failed",
+   129	                "updated_at": _now(),
+   130	                "returncode": p.returncode,
+   131	                "stdout": p.stdout[-8000:],
+   132	                "stderr": p.stderr[-8000:],
+   133	            }
+   134	            _write_json(status_file, result)
+   135	            _write_json(report_file, result)
+   136	            return result
+   137	        else:
+   138	            proc = subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+   139	            result = {**payload, "ok": True, "status": "started", "pid": proc.pid, "updated_at": _now()}
+   140	            _write_json(status_file, result)
+   141	            return result
+   142	    except Exception as e:
+   143	        result = {**payload, "ok": False, "status": "failed", "updated_at": _now(), "error": str(e)}
+   144	        _write_json(status_file, result)
+   145	        _write_json(report_file, result)
+   146	        return result
+   147	
+   148	
+   149	def webui_add_task_bridge(data: Any = None, task: str | None = None) -> Dict[str, Any]:
+   150	    if task is None:
+   151	        if isinstance(data, dict):
+   152	            task = data.get("task") or data.get("message") or data.get("prompt") or data.get("input")
+   153	        elif isinstance(data, str):
+   154	            task = data
+   155	    task = (task or "").strip()
+   156	    if not task:
+   157	        return {"ok": False, "patch": PATCH, "status": "failed", "error": "empty task"}
+   158	    return run_agentcon_task(task, source="webui_add_task", wait=True)
+   159	
+   160	
+   161	def latest_status(limit: int = 20) -> Dict[str, Any]:
+   162	    items = []
+   163	    for f in sorted(STATUS.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)[:limit]:
+   164	        items.append(_read_json(f, {"file": str(f)}))
+   165	    return {"ok": True, "patch": PATCH, "items": items}
+   166	
+   167	
+   168	if __name__ == "__main__":
+   169	    import argparse
+   170	    ap = argparse.ArgumentParser()
+   171	    ap.add_argument("--task", default="")
+   172	    ap.add_argument("--probe", action="store_true")
+   173	    ap.add_argument("--latest", action="store_true")
+   174	    args = ap.parse_args()
+   175	
+

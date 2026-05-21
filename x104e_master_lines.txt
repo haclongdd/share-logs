@@ -1,0 +1,22 @@
+﻿   255	                from flask import request as _x15d_request
+   256	                payload = _x15d_request.get_json(silent=True)
+   257	            except Exception:
+   258	                payload = None
+   259	
+   260	        # X92_ATTACH_X90_TO_MASTER_BRIDGE_START
+   261	        from core.x91_addtask_bridge_adapter import handle_add_task_payload as _x91_handle_add_task_payload
+   262	        _x15d_result = _x91_handle_add_task_payload(payload)
+   263	        # X92_ATTACH_X90_TO_MASTER_BRIDGE_END
+   264	
+   265	        safe_payload = x93_normalize_add_task_response(_x15d_result)
+   266	        safe_text = safe_json_dumps(safe_payload, ensure_ascii=False, indent=2)
+   267	        return Response(safe_text, mimetype="application/json")
+   268	
+   269	    except Exception as _x15d_e:
+   270	        return {
+   271	            'ok': False,
+   272	            'patch': 'X15D_WEBUI_ADDTASK_AGENTCON_ATTACH',
+   273	            'error': str(_x15d_e)
+   274	        }
+   275	
+
