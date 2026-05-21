@@ -42,3 +42,5 @@ error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
 [2026-05-21T13:25:10.379398Z] PUSH OK changed=4 latest_commit=x99e debug sync 2026-05-21 20:25:06
 [2026-05-21T13:25:41.449170Z] MANIFEST latest=temp/x99c_manifest_runtime_log.txt total=609 changed=4
 [2026-05-21T13:25:44.764498Z] PUSH OK changed=4 latest_commit=x99e debug sync 2026-05-21 20:25:41
+[2026-05-21T13:26:15.828709Z] MANIFEST latest=temp/x99d_logsync_runtime_log.txt total=609 changed=4
+[2026-05-21T13:26:19.301602Z] PUSH OK changed=4 latest_commit=x99e debug sync 2026-05-21 20:26:16
