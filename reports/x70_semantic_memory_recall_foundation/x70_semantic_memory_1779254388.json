@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "component": "x70_semantic_memory_recall_foundation",
+  "local_only": true,
+  "runtime_untouched": true,
+  "results": [
+    {
+      "score": 0.7746,
+      "item": {
+        "id": "x70-1779254387398",
+        "text": "planner retry orchestration failure recovery",
+        "meta": {},
+        "created_at": "2026-05-20T12:19:47"
+      }
+    },
+    {
+      "score": 0.7746,
+      "item": {
+        "id": "x70-1779254388092",
+        "text": "planner retry orchestration failure recovery",
+        "meta": {},
+        "created_at": "2026-05-20T12:19:48"
+      }
+    }
+  ],
+  "checked_at": "2026-05-20T12:19:48"
+}

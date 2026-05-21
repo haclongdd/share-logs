@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "component": "x68_self_healing_runtime_foundation",
+  "local_only": true,
+  "runtime_untouched": true,
+  "mode": "detect_and_plan_only",
+  "inspected": {
+    "memory_store": {
+      "ok": true,
+      "type": "file",
+      "path": "D:\\openwebui\\core\\x52_persistent_memory_store.py",
+      "required": true
+    },
+    "helper_memory": {
+      "ok": true,
+      "type": "file",
+      "path": "D:\\openwebui\\core\\x53_helper_chain_memory_integration.py",
+      "required": true
+    }
+  },
+  "recovery_plan": [],
+  "checked_at": "2026-05-20T12:14:48"
+}

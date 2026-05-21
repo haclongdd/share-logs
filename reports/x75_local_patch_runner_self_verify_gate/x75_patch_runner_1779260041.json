@@ -1,0 +1,66 @@
+{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop",
+  "stage": "apply_fail",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\apply_x81_daemon_worker_loop.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\cleanup_x81_daemon_worker_loop.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\x81_daemon_worker_loop_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\apply_x81_daemon_worker_loop.ps1"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "  File \"D:\\openwebui\\core\\x81_daemon_worker_loop.py\", line 77\n    line = f\"[{now()}] {message}\n           ^\nSyntaxError: unterminated f-string literal (detected at line 77)\npy_compile failed for D:\\openwebui\\core\\x81_daemon_worker_loop.py\nAt D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\apply_x81_daemon_worker_loop.ps1:29 char:28\n+ if ($LASTEXITCODE -ne 0) { throw \"py_compile failed for $DST\" }\n+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (py_compile fail..._worker_loop.py:String) [], RuntimeException\n    + FullyQualifiedErrorId : py_compile failed for D:\\openwebui\\core\\x81_daemon_worker_loop.py\n \n"
+  },
+  "check": null,
+  "false_pass_guard": true
+}

@@ -1,0 +1,12 @@
+{
+  "id": "x86_1779270739612_39685bdb",
+  "ts": "2026-05-20T09:52:19Z",
+  "from_role": "SCOUT",
+  "to_role": "DEBUG",
+  "task": "x86 bus smoke",
+  "payload": {
+    "finding": "project/context collected"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T09:58:48Z"
+}

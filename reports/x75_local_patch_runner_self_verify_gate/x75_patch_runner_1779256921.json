@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x76c_probe_patch",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\apply_x76c_probe_patch.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\cleanup_x76c_probe_patch.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\x76c_probe_patch_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\apply_x76c_probe_patch.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] x76c_probe_patch applied\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\x76c_probe_patch_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] x76c_probe_patch manifest valid\n[PASS] x76c_probe_patch check complete\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

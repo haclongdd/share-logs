@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "component": "x64_permission_approval_layer_foundation",
+  "local_only": true,
+  "runtime_untouched": true,
+  "probes": {
+    "inspect": {
+      "id": "x64-1779253657606",
+      "action": "inspect runtime status",
+      "payload": {
+        "source": "x64"
+      },
+      "decision_mode": "auto_approved",
+      "status": "auto_approved",
+      "created_at": "2026-05-20T12:07:37"
+    },
+    "shell": {
+      "id": "x64-1779253657607",
+      "action": "shell run command",
+      "payload": {
+        "source": "x64"
+      },
+      "decision_mode": "requires_approval",
+      "status": "pending",
+      "created_at": "2026-05-20T12:07:37"
+    },
+    "delete": {
+      "id": "x64-1779253657607",
+      "action": "delete protected files",
+      "payload": {
+        "source": "x64"
+      },
+      "decision_mode": "blocked",
+      "status": "blocked",
+      "created_at": "2026-05-20T12:07:37"
+    },
+    "decision": {
+      "request_id": "x64-1779253657607",
+      "approved": false,
+      "reason": "probe denial",
+      "decided_at": "2026-05-20T12:07:37"
+    }
+  },
+  "checked_at": "2026-05-20T12:07:37"
+}

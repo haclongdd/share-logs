@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x85_role_agents",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x85_role_agents\\apply_x85_role_agents.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x85_role_agents\\cleanup_x85_role_agents.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x85_role_agents\\x85_role_agents_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x85_role_agents\\files\\core\\x85_role_agents.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x85_role_agents\\files\\core\\x85_role_agents.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x85_role_agents\\apply_x85_role_agents.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X85 role-based multi-agent runtime applied.\n[INFO] Runtime: D:\\openwebui\\core\\x85_role_agents.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x85_role_agents\\x85_role_agents_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X85 role-based multi-agent runtime check passed.\n[INFO] Roles: SCOUT, DEBUG, PATCHER, VERIFY, REPORT\n[INFO] Report: D:\\openwebui\\runtime\\reports\\x85_role_agents_report_1779270493211.json\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

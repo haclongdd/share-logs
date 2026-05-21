@@ -1,0 +1,77 @@
+{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x93_webui_response_normalizer",
+  "stage": "check_fail",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x93_webui_response_normalizer\\apply_x93_webui_response_normalizer.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x93_webui_response_normalizer\\cleanup_x93_webui_response_normalizer.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x93_webui_response_normalizer\\x93_webui_response_normalizer_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x93_webui_response_normalizer\\apply_x93_webui_response_normalizer.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[INFO] Root=D:\\openwebui\n[INFO] Target=D:\\openwebui\\core\\master_ai_bridge.py\n[INFO] Preflight saved: D:\\openwebui\\runtime\\temp\\x93_preflight_20260520_190555.json\n[PASS] X93 already installed. No rewrite needed.\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x93_webui_response_normalizer\\x93_webui_response_normalizer_check.ps1"
+    ],
+    "returncode": 1,
+    "stdout": "[INFO] Root=D:\\openwebui\n[PASS] X93 unit normalization contract ok\n[INFO] Live response saved: D:\\openwebui\\runtime\\temp\\x93_live_response.json\n[FAIL] Live /add_task missing summary\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

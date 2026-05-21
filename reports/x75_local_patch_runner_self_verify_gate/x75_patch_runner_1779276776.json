@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix",
+  "stage": "missing_patch_folder",
+  "checks": [],
+  "apply": null,
+  "check": null,
+  "false_pass_guard": true
+}

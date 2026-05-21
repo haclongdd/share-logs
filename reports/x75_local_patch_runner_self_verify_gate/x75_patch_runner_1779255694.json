@@ -1,0 +1,19 @@
+{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x74_autonomous_recovery_orchestrator_foundation",
+  "stage": "powershell_syntax_fail",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x74_autonomous_recovery_orchestrator_foundation\\apply_x74_autonomous_recovery_orchestrator_foundation.ps1",
+      "result": {
+        "cmd": "powershell -NoProfile -Command \"[scriptblock]::Create((Get-Content -Raw -LiteralPath {path})) | Out-Null\"",
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Get-Content : Cannot evaluate parameter 'LiteralPath' because its argument is specified as a script block and there is \nno input. A script block cannot be evaluated without input.\nAt line:1 char:54\n+ [scriptblock]::Create((Get-Content -Raw -LiteralPath {path})) | Out-N ...\n+                                                      ~~~~~~\n    + CategoryInfo          : MetadataError: (:) [Get-Content], ParameterBindingException\n    + FullyQualifiedErrorId : ScriptBlockArgumentNoInput,Microsoft.PowerShell.Commands.GetContentCommand\n \n"
+      }
+    }
+  ],
+  "apply": null,
+  "check": null
+}

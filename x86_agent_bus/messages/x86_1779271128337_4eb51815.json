@@ -1,0 +1,16 @@
+{
+  "id": "x86_1779271128337_4eb51815",
+  "ts": "2026-05-20T09:58:48Z",
+  "from_role": "DEBUG",
+  "to_role": "PATCHER",
+  "task": "x86 self check",
+  "payload": {
+    "root_cause": "pending_real_log_review",
+    "evidence": {
+      "finding": "project/context collected"
+    },
+    "source_message": "x86_1779270738766_8813df71"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T09:58:48Z"
+}

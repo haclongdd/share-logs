@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x92e_x87_rootdetect_fix",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x92e_x87_rootdetect_fix\\apply_x92e_x87_rootdetect_fix.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x92e_x87_rootdetect_fix\\cleanup_x92e_x87_rootdetect_fix.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x92e_x87_rootdetect_fix\\x92e_x87_rootdetect_fix_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x92e_x87_rootdetect_fix\\files\\core\\x92e_x87_rootdetect_fix.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x92e_x87_rootdetect_fix\\files\\core\\x92e_x87_rootdetect_fix.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x92e_x87_rootdetect_fix\\apply_x92e_x87_rootdetect_fix.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"release\": \"X92E_X87_ROOTDETECT_FIX\",\n  \"root\": \"D:\\\\openwebui\",\n  \"x87\": \"D:\\\\openwebui\\\\core\\\\x87_worker_dispatcher.py\",\n  \"x87_exists\": true,\n  \"x86_expected\": \"D:\\\\openwebui\\\\core\\\\x86_agent_bus.py\",\n  \"x86_exists\": true,\n  \"old_line_found\": true,\n  \"new_block_found\": false,\n  \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x92e_probe_1779277849536.json\"\n}\n{\n  \"ok\": true,\n  \"release\": \"X92E_X87_ROOTDETECT_FIX\",\n  \"stage\": \"fixed\",\n  \"x87\": \"D:\\\\openwebui\\\\core\\\\x87_worker_dispatcher.py\",\n  \"backup\": \"D:\\\\openwebui\\\\_backups\\\\x92e_x87_rootdetect_fix\\\\x87_worker_dispatcher.py.1779277849689.bak\",\n  \"fix\": \"auto-detect /app vs D:\\\\openwebui root by locating core/x86_agent_bus.py\",\n  \"probe\": {\n    \"ok\": true,\n    \"release\": \"X92E_X87_ROOTDETECT_FIX\",\n    \"root\": \"D:\\\\openwebui\",\n    \"x87\": \"D:\\\\openwebui\\\\core\\\\x87_worker_dispatcher.py\",\n    \"x87_exists\": true,\n    \"x86_expected\": \"D:\\\\openwebui\\\\core\\\\x86_agent_bus.py\",\n    \"x86_exists\": true,\n    \"old_line_found\": true,\n    \"new_block_found\": false,\n    \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x92e_probe_1779277849688.json\"\n  },\n  \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x92e_apply_1779277849693.json\"\n}\n{\n  \"ok\": true,\n  \"release\": \"X92E_X87_ROOTDETECT_FIX\",\n  \"stage\": \"x87_import_verify\",\n  \"x87_status\": {\n    \"ok\": true,\n    \"release\": \"X87B_WORKER_DISPATCHER_IMPORTFIX\",\n    \"state_file\": \"D:\\\\openwebui\\\\runtime\\\\x87_worker_dispatcher\\\\state.json\",\n    \"state\": {\n      \"release\": \"X87B_WORKER_DISPATCHER_IMPORTFIX\",\n      \"created_at\": \"2026-05-20T09:58:48Z\",\n      \"cycles\": 22,\n      \"processed_total\": 46,\n      \"last_cycle\": {\n        \"ts\": \"2026-05-20T10:50:38Z\",\n        \"roles\": [\n          \"DEBUG\",\n          \"PATCHER\",\n          \"VERIFY\",\n          \"REPORT\"\n        ],\n        \"processed\": 0\n      },\n      \"last_error\": null\n    },\n    \"x86_messages_dir\": \"D:\\\\openwebui\\\\runtime\\\\x86_agent_bus\\\\messages\",\n    \"x86_exists\": true,\n    \"import_fix\": \"sys.modules[module_name] registered before exec_module\"\n  },\n  \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x92e_verify_1779277850034.json\"\n}\n[PASS] X92E X87 rootdetect fix applied.\n[INFO] Runtime: D:\\openwebui\\core\\x92e_x87_rootdetect_fix.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x92e_x87_rootdetect_fix\\x92e_x87_rootdetect_fix_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X92E X87 rootdetect fix check passed.\n[INFO] Verify report: D:\\openwebui\\runtime\\reports\\x92e_verify_1779277851200.json\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

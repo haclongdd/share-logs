@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry\\apply_x77_patch_template_registry.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry\\cleanup_x77_patch_template_registry.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry\\x77_patch_template_registry_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry\\apply_x77_patch_template_registry.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X77 patch template registry written\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry\\x77_patch_template_registry_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X77 registry valid\n[PASS] X77 patch template registry check complete\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

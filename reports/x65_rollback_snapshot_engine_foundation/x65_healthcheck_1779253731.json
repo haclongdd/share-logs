@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "component": "x65_rollback_snapshot_engine_foundation",
+  "local_only": true,
+  "runtime_untouched": true,
+  "snapshot_root": "D:\\openwebui\\_backups\\x65_rollback_snapshots",
+  "good_probe": {
+    "ok": true,
+    "relative_path": "runtime/sandbox/x65_probe.txt",
+    "target": "D:\\openwebui\\runtime\\sandbox\\x65_probe.txt",
+    "reason": "ok",
+    "created_at": "2026-05-20T12:08:51",
+    "snapshot_path": "D:\\openwebui\\_backups\\x65_rollback_snapshots\\1779253731751\\runtime\\sandbox\\x65_probe.txt",
+    "existed": true
+  },
+  "bad_probe": {
+    "ok": false,
+    "relative_path": "ollama_data/blocked.bin",
+    "target": "D:\\openwebui\\ollama_data\\blocked.bin",
+    "reason": "denied path area: ['ollama_data']",
+    "created_at": "2026-05-20T12:08:51"
+  },
+  "checked_at": "2026-05-20T12:08:51"
+}

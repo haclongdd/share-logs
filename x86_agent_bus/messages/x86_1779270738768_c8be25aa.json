@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779270738768_c8be25aa",
+  "ts": "2026-05-20T09:52:18Z",
+  "from_role": "DEBUG",
+  "to_role": "PATCHER",
+  "task": "x86 self check",
+  "payload": {
+    "root_cause": "confirmed by real log",
+    "evidence": "runtime/temp/*.txt"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T09:58:48Z"
+}

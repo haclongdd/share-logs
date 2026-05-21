@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x93b_force_webui_response_normalizer",
+  "stage": "missing_patch_folder",
+  "checks": [],
+  "apply": null,
+  "check": null,
+  "false_pass_guard": true
+}

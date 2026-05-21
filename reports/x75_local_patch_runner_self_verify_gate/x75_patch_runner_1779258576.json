@@ -1,0 +1,66 @@
+{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator",
+  "stage": "apply_fail",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator\\apply_x79_auto_patch_pipeline_orchestrator.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator\\cleanup_x79_auto_patch_pipeline_orchestrator.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator\\x79_auto_patch_pipeline_orchestrator_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator\\apply_x79_auto_patch_pipeline_orchestrator.ps1"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Copy-Item : Cannot find path \n'D:\\openwebui\\_patch_inboxy_auto_patch_pipeline_orchestrator\\x79_auto_patch_pipeline_orchestrator.py.src' because it \ndoes not exist.\nAt D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator\\apply_x79_auto_patch_pipeline_orchestrator.ps1:27 \nchar:1\n+ Copy-Item -Force $SRC $DST\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : ObjectNotFound: (D:\\openwebui\\_p...estrator.py.src:String) [Copy-Item], ItemNotFoundExce \n   ption\n    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.CopyItemCommand\n \n"
+  },
+  "check": null,
+  "false_pass_guard": true
+}

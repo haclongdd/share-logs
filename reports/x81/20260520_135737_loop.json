@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "stage": "loop_complete",
+  "orchestrator": "X81_DAEMON_WORKER_LOOP",
+  "root": "D:\\openwebui",
+  "created_at": "2026-05-20T13:57:37",
+  "cycles_requested": 1,
+  "cycles_completed": 1,
+  "reports": [
+    {
+      "cmd": [
+        "C:\\Users\\khach\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "D:\\openwebui\\core\\x80_queue_patch_executor.py",
+        "run-once",
+        "--limit",
+        "1"
+      ],
+      "started_at": "2026-05-20T13:57:37",
+      "finished_at": "2026-05-20T13:57:37",
+      "returncode": 0,
+      "stdout": "{\n  \"ok\": true,\n  \"stage\": \"run_once_complete\",\n  \"orchestrator\": \"X80_QUEUE_PATCH_EXECUTOR\",\n  \"root\": \"D:\\\\openwebui\",\n  \"pending_before\": 0,\n  \"processed\": 0,\n  \"reports\": []\n}\n",
+      "stderr": "",
+      "false_pass_hits": [],
+      "ok": true
+    }
+  ],
+  "x80_status": {
+    "cmd": [
+      "C:\\Users\\khach\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "D:\\openwebui\\core\\x80_queue_patch_executor.py",
+      "status"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"stage\": \"status\",\n  \"orchestrator\": \"X80_QUEUE_PATCH_EXECUTOR\",\n  \"root\": \"D:\\\\openwebui\",\n  \"queued\": 0,\n  \"done\": 1,\n  \"failed\": 0,\n  \"queue_dir\": \"D:\\\\openwebui\\\\runtime\\\\queue\\\\x80\",\n  \"report_dir\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x80\"\n}\n",
+    "stderr": "",
+    "false_pass_hits": [],
+    "ok": true,
+    "parsed": {
+      "ok": true,
+      "stage": "status",
+      "orchestrator": "X80_QUEUE_PATCH_EXECUTOR",
+      "root": "D:\\openwebui",
+      "queued": 0,
+      "done": 1,
+      "failed": 0,
+      "queue_dir": "D:\\openwebui\\runtime\\queue\\x80",
+      "report_dir": "D:\\openwebui\\runtime\\reports\\x80"
+    }
+  },
+  "lock": {
+    "orchestrator": "X81_DAEMON_WORKER_LOOP",
+    "pid": 25100,
+    "created_at": "2026-05-20T13:57:37"
+  }
+}

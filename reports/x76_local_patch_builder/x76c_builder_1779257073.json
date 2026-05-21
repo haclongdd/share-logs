@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "patch": "x77_patch_template_registry",
+  "folder": "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry",
+  "apply": "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry\\apply_x77_patch_template_registry.ps1",
+  "check": "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry\\x77_patch_template_registry_check.ps1",
+  "cleanup": "D:\\openwebui\\_patch_inbox\\x77_patch_template_registry\\cleanup_x77_patch_template_registry.ps1"
+}

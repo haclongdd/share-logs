@@ -1,0 +1,14 @@
+{
+  "id": "x86_1779271128394_96798f6f",
+  "ts": "2026-05-20T09:58:48Z",
+  "from_role": "PATCHER",
+  "to_role": "VERIFY",
+  "task": "x87b self check",
+  "payload": {
+    "artifact": "D:\\openwebui\\_patch_inbox",
+    "patch_rule": "target confirmed cause only",
+    "source_message": "x86_1779271128340_758559a7"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T09:58:48Z"
+}

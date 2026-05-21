@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x92_attach_x90_to_master_bridge",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x92_attach_x90_to_master_bridge\\apply_x92_attach_x90_to_master_bridge.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x92_attach_x90_to_master_bridge\\cleanup_x92_attach_x90_to_master_bridge.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x92_attach_x90_to_master_bridge\\x92_attach_x90_to_master_bridge_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x92_attach_x90_to_master_bridge\\files\\core\\x92_attach_x90_to_master_bridge.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x92_attach_x90_to_master_bridge\\files\\core\\x92_attach_x90_to_master_bridge.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x92_attach_x90_to_master_bridge\\apply_x92_attach_x90_to_master_bridge.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X92 attach helper applied.\n[INFO] Runtime: D:\\openwebui\\core\\x92_attach_x90_to_master_bridge.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x92_attach_x90_to_master_bridge\\x92_attach_x90_to_master_bridge_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X92 attach helper check passed.\n[INFO] Probe report: D:\\openwebui\\runtime\\reports\\x92_probe_1779274238021.json\n[INFO] Smoke report: D:\\openwebui\\runtime\\reports\\x92_smoke_1779274238500.json\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

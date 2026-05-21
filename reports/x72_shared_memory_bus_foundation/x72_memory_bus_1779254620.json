@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "component": "x72_shared_memory_bus_foundation",
+  "local_only": true,
+  "runtime_untouched": true,
+  "planner_items": 1,
+  "memory_items": 1,
+  "checked_at": "2026-05-20T12:23:40"
+}

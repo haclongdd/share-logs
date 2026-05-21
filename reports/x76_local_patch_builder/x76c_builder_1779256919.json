@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "patch": "x76c_probe_patch",
+  "folder": "D:\\openwebui\\_patch_inbox\\x76c_probe_patch",
+  "apply": "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\apply_x76c_probe_patch.ps1",
+  "check": "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\x76c_probe_patch_check.ps1",
+  "cleanup": "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\cleanup_x76c_probe_patch.ps1"
+}

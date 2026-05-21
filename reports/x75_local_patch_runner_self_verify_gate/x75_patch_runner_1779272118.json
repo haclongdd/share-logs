@@ -1,0 +1,92 @@
+{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge",
+  "stage": "check_fail",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\apply_x90_webui_agent_bridge.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\cleanup_x90_webui_agent_bridge.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\x90_webui_agent_bridge_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\files\\core\\x90_webui_agent_bridge.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\files\\core\\x90_webui_agent_bridge.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\apply_x90_webui_agent_bridge.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X90 WebUI agent bridge applied.\n[INFO] Runtime: D:\\openwebui\\core\\x90_webui_agent_bridge.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\x90_webui_agent_bridge_check.ps1"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "invalid --payload JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n[FAIL] sandbox submit failed\nAt D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\x90_webui_agent_bridge_check.ps1:24 char:3\n+   throw \"[FAIL] sandbox submit failed\"\n+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: ([FAIL] sandbox submit failed:String) [], RuntimeException\n    + FullyQualifiedErrorId : [FAIL] sandbox submit failed\n \n"
+  },
+  "false_pass_guard": true
+}

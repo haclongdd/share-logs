@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator",
+  "stage": "missing_patch_folder",
+  "checks": [],
+  "apply": null,
+  "check": null,
+  "false_pass_guard": true
+}

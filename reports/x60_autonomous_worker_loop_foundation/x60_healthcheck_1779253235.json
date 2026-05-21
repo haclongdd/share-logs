@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "component": "x60_autonomous_worker_loop_foundation",
+  "local_only": true,
+  "runtime_untouched": true,
+  "queue_path": "D:\\openwebui\\runtime\\tasks\\autonomous_worker_queue.jsonl",
+  "queued_probe_id": "x60-1779253235055",
+  "queue_items": 2,
+  "checked_at": "2026-05-20T12:00:35"
+}

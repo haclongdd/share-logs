@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "patch": "x78b_template_aware_patch_generator",
+  "folder": "D:\\openwebui\\_patch_inbox\\x78b_template_aware_patch_generator",
+  "apply": "D:\\openwebui\\_patch_inbox\\x78b_template_aware_patch_generator\\apply_x78b_template_aware_patch_generator.ps1",
+  "check": "D:\\openwebui\\_patch_inbox\\x78b_template_aware_patch_generator\\x78b_template_aware_patch_generator_check.ps1",
+  "cleanup": "D:\\openwebui\\_patch_inbox\\x78b_template_aware_patch_generator\\cleanup_x78b_template_aware_patch_generator.ps1"
+}

@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x80_queue_patch_executor",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x80_queue_patch_executor\\apply_x80_queue_patch_executor.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x80_queue_patch_executor\\cleanup_x80_queue_patch_executor.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x80_queue_patch_executor\\x80_queue_patch_executor_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x80_queue_patch_executor\\apply_x80_queue_patch_executor.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X80 queue executor installed: D:\\openwebui\\core\\x80_queue_patch_executor.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x80_queue_patch_executor\\x80_queue_patch_executor_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X80 status preflight PASS\n[INFO] Next smoke:\npython D:/openwebui/core/x80_queue_patch_executor.py enqueue --name x80_probe_python_component --template python_component --execute\npython D:/openwebui/core/x80_queue_patch_executor.py run-once --limit 1\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

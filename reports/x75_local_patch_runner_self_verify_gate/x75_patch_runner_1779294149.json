@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x96d_recover_x90_clean",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x96d_recover_x90_clean\\apply_x96d_recover_x90_clean.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x96d_recover_x90_clean\\cleanup_x96d_recover_x90_clean.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x96d_recover_x90_clean\\x96d_recover_x90_clean_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x96d_recover_x90_clean\\apply_x96d_recover_x90_clean.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X96D recovered clean x90_webui_agent_bridge.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x96d_recover_x90_clean\\x96d_recover_x90_clean_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X96D recover check ok\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

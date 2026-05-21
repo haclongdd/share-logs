@@ -1,0 +1,107 @@
+{
+  "ok": false,
+  "patch": "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge",
+  "stage": "check_fail",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\apply_x91_master_ai_addtask_bridge.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\cleanup_x91_master_ai_addtask_bridge.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\x91_master_ai_addtask_bridge_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\files\\core\\x91_addtask_bridge_adapter.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\files\\core\\x91_addtask_bridge_adapter.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\files\\core\\x91_master_ai_addtask_bridge.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\files\\core\\x91_master_ai_addtask_bridge.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\apply_x91_master_ai_addtask_bridge.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X91 master_ai add_task bridge files applied.\n[INFO] Runtime: D:\\openwebui\\core\\x91_master_ai_addtask_bridge.py\n[INFO] Adapter: D:\\openwebui\\core\\x91_addtask_bridge_adapter.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\x91_master_ai_addtask_bridge_check.ps1"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"D:\\openwebui\\core\\x91_addtask_bridge_adapter.py\", line 111, in <module>\n    data = json.loads(args.payload)\n  File \"C:\\Users\\khach\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"C:\\Users\\khach\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\khach\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\json\\decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\njson.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n[FAIL] adapter submit failed\nAt D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\x91_master_ai_addtask_bridge_check.ps1:29 char:3\n+   throw \"[FAIL] adapter submit failed\"\n+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: ([FAIL] adapter submit failed:String) [], RuntimeException\n    + FullyQualifiedErrorId : [FAIL] adapter submit failed\n \n"
+  },
+  "false_pass_guard": true
+}

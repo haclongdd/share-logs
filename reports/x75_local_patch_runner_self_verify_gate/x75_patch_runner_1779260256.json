@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\apply_x81_daemon_worker_loop.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\cleanup_x81_daemon_worker_loop.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\x81_daemon_worker_loop_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\apply_x81_daemon_worker_loop.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X81 daemon worker loop installed: D:\\openwebui\\core\\x81_daemon_worker_loop.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\x81_daemon_worker_loop_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"stage\": \"preflight\",\n  \"orchestrator\": \"X81_DAEMON_WORKER_LOOP\",\n  \"root\": \"D:\\\\openwebui\",\n  \"checks\": {\n    \"x80_exists\": true,\n    \"state_dir\": \"D:\\\\openwebui\\\\runtime\\\\state\\\\x81\",\n    \"report_dir\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x81\",\n    \"log_dir\": \"D:\\\\openwebui\\\\runtime\\\\logs\\\\x81\"\n  },\n  \"x80_status\": {\n    \"cmd\": [\n      \"C:\\\\Users\\\\khach\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe\",\n      \"D:\\\\openwebui\\\\core\\\\x80_queue_patch_executor.py\",\n      \"status\"\n    ],\n    \"returncode\": 0,\n    \"stdout\": \"{\\n  \\\"ok\\\": true,\\n  \\\"stage\\\": \\\"status\\\",\\n  \\\"orchestrator\\\": \\\"X80_QUEUE_PATCH_EXECUTOR\\\",\\n  \\\"root\\\": \\\"D:\\\\\\\\openwebui\\\",\\n  \\\"queued\\\": 0,\\n  \\\"done\\\": 1,\\n  \\\"failed\\\": 0,\\n  \\\"queue_dir\\\": \\\"D:\\\\\\\\openwebui\\\\\\\\runtime\\\\\\\\queue\\\\\\\\x80\\\",\\n  \\\"report_dir\\\": \\\"D:\\\\\\\\openwebui\\\\\\\\runtime\\\\\\\\reports\\\\\\\\x80\\\"\\n}\\n\",\n    \"stderr\": \"\",\n    \"false_pass_hits\": [],\n    \"ok\": true,\n    \"parsed\": {\n      \"ok\": true,\n      \"stage\": \"status\",\n      \"orchestrator\": \"X80_QUEUE_PATCH_EXECUTOR\",\n      \"root\": \"D:\\\\openwebui\",\n      \"queued\": 0,\n      \"done\": 1,\n      \"failed\": 0,\n      \"queue_dir\": \"D:\\\\openwebui\\\\runtime\\\\queue\\\\x80\",\n      \"report_dir\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x80\"\n    }\n  },\n  \"created_at\": \"2026-05-20T13:57:36\"\n}\n[PASS] X81 preflight PASS\n[INFO] Smoke:\npython D:/openwebui/core/x81_daemon_worker_loop.py loop --cycles 1 --interval 1 --limit 1 --stop-on-fail --clear-stop\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

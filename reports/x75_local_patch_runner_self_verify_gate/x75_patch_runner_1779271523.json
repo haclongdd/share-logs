@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\apply_x89_sandbox_workers.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\cleanup_x89_sandbox_workers.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\x89_sandbox_workers_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\files\\core\\x89_sandbox_workers.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\files\\core\\x89_sandbox_workers.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\apply_x89_sandbox_workers.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X89 sandbox workers applied.\n[INFO] Runtime: D:\\openwebui\\core\\x89_sandbox_workers.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\x89_sandbox_workers_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X89 sandbox workers check passed.\n[INFO] Safe run report: D:\\openwebui\\runtime\\reports\\x89_sandbox_report_1779271523105.json\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

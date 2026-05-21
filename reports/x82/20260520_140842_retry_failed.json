@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "stage": "retry_failed_complete",
+  "orchestrator": "X82_RETRY_QUARANTINE_ENGINE",
+  "root": "D:\\openwebui",
+  "failed_seen": 0,
+  "processed": 0,
+  "reports": [],
+  "created_at": "2026-05-20T14:08:42"
+}

@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x93d_disable_double_after_request_normalizer",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x93d_disable_double_after_request_normalizer\\apply_x93d_disable_double_after_request_normalizer.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x93d_disable_double_after_request_normalizer\\cleanup_x93d_disable_double_after_request_normalizer.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x93d_disable_double_after_request_normalizer\\x93d_disable_double_after_request_normalizer_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x93d_disable_double_after_request_normalizer\\apply_x93d_disable_double_after_request_normalizer.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X93D disabled duplicate X93C after_request normalizer\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x93d_disable_double_after_request_normalizer\\x93d_disable_double_after_request_normalizer_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X93D check ok: duplicate after_request disabled\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

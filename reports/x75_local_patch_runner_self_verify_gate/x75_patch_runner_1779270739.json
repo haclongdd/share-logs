@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x86_agent_bus",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x86_agent_bus\\apply_x86_agent_bus.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x86_agent_bus\\cleanup_x86_agent_bus.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x86_agent_bus\\x86_agent_bus_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x86_agent_bus\\files\\core\\x86_agent_bus.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x86_agent_bus\\files\\core\\x86_agent_bus.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x86_agent_bus\\apply_x86_agent_bus.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X86 inter-agent task bus applied.\n[INFO] Runtime: D:\\openwebui\\core\\x86_agent_bus.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x86_agent_bus\\x86_agent_bus_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X86 inter-agent task bus check passed.\n[INFO] Messages: 4\n[INFO] Report: D:\\openwebui\\runtime\\reports\\x86_agent_bus_report_1779270738773.json\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

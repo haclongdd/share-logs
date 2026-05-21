@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix\\apply_x92c_adapter_rootdetect_fix.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix\\cleanup_x92c_adapter_rootdetect_fix.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix\\x92c_adapter_rootdetect_fix_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix\\files\\core\\x92c_adapter_rootdetect_fix.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix\\files\\core\\x92c_adapter_rootdetect_fix.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix\\apply_x92c_adapter_rootdetect_fix.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"release\": \"X92C_ADAPTER_ROOTDETECT_FIX\",\n  \"root\": \"D:\\\\openwebui\",\n  \"adapter\": \"D:\\\\openwebui\\\\core\\\\x91_addtask_bridge_adapter.py\",\n  \"adapter_exists\": true,\n  \"x90_expected\": \"D:\\\\openwebui\\\\core\\\\x90_webui_agent_bridge.py\",\n  \"x90_exists\": true,\n  \"old_line_found\": true,\n  \"new_block_found\": false,\n  \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x92c_probe_1779277117603.json\"\n}\n{\n  \"ok\": true,\n  \"release\": \"X92C_ADAPTER_ROOTDETECT_FIX\",\n  \"stage\": \"fixed\",\n  \"adapter\": \"D:\\\\openwebui\\\\core\\\\x91_addtask_bridge_adapter.py\",\n  \"backup\": \"D:\\\\openwebui\\\\_backups\\\\x92c_adapter_rootdetect_fix\\\\x91_addtask_bridge_adapter.py.1779277117752.bak\",\n  \"fix\": \"auto-detect /app vs D:\\\\openwebui root by locating core/x90_webui_agent_bridge.py\",\n  \"probe\": {\n    \"ok\": true,\n    \"release\": \"X92C_ADAPTER_ROOTDETECT_FIX\",\n    \"root\": \"D:\\\\openwebui\",\n    \"adapter\": \"D:\\\\openwebui\\\\core\\\\x91_addtask_bridge_adapter.py\",\n    \"adapter_exists\": true,\n    \"x90_expected\": \"D:\\\\openwebui\\\\core\\\\x90_webui_agent_bridge.py\",\n    \"x90_exists\": true,\n    \"old_line_found\": true,\n    \"new_block_found\": false,\n    \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x92c_probe_1779277117751.json\"\n  },\n  \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x92c_apply_1779277117755.json\"\n}\n{\n  \"ok\": true,\n  \"release\": \"X92C_ADAPTER_ROOTDETECT_FIX\",\n  \"stage\": \"adapter_import_verify\",\n  \"adapter_status\": {\n    \"ok\": true,\n    \"release\": \"X91_MASTER_AI_ADDTASK_BRIDGE\",\n    \"root\": \"D:\\\\openwebui\",\n    \"x90_file\": \"D:\\\\openwebui\\\\core\\\\x90_webui_agent_bridge.py\",\n    \"x90_exists\": true\n  },\n  \"report_file\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x92c_verify_1779277118035.json\"\n}\n[PASS] X92C adapter rootdetect fix applied.\n[INFO] Runtime: D:\\openwebui\\core\\x92c_adapter_rootdetect_fix.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix\\x92c_adapter_rootdetect_fix_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X92C adapter rootdetect fix check passed.\n[INFO] Adapter status x90_exists: True\n[INFO] Verify report: D:\\openwebui\\runtime\\reports\\x92c_verify_1779277119260.json\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

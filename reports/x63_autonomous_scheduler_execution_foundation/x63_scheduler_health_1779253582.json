@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "component": "x63_autonomous_scheduler_execution_foundation",
+  "local_only": true,
+  "runtime_untouched": true,
+  "scheduled_probe": {
+    "id": "x63-1779253582863",
+    "task": "x63_probe_task",
+    "interval_seconds": 30,
+    "enabled": true,
+    "created_at": "2026-05-20T12:06:22",
+    "last_run": null
+  },
+  "tick_ran": [
+    "x63-1779253582863"
+  ],
+  "checked_at": "2026-05-20T12:06:22"
+}

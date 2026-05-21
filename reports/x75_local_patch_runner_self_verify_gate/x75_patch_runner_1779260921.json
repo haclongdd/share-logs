@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x82_retry_quarantine_engine",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x82_retry_quarantine_engine\\apply_x82_retry_quarantine_engine.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x82_retry_quarantine_engine\\cleanup_x82_retry_quarantine_engine.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x82_retry_quarantine_engine\\x82_retry_quarantine_engine_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x82_retry_quarantine_engine\\apply_x82_retry_quarantine_engine.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X82 retry quarantine engine installed: D:\\openwebui\\core\\x82_retry_quarantine_engine.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x82_retry_quarantine_engine\\x82_retry_quarantine_engine_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "{   \"ok\": true,   \"stage\": \"preflight\",   \"orchestrator\": \"X82_RETRY_QUARANTINE_ENGINE\",   \"root\": \"D:\\\\openwebui\",   \"queued\": 0,   \"done\": 1,   \"failed\": 0,   \"quarantine\": 0,   \"x80_exists\": true,   \"created_at\": \"2026-05-20T14:08:41\" }\n[PASS] X82 preflight PASS\n[INFO] Smoke:\npython D:/openwebui/core/x82_retry_quarantine_engine.py retry-failed --limit 5 --max-attempts 2 --execute\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}

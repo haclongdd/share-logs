@@ -1,0 +1,13 @@
+{
+  "id": "x86_1779271128294_aaaa5f7e",
+  "ts": "2026-05-20T09:58:48Z",
+  "from_role": "SCOUT",
+  "to_role": "DEBUG",
+  "task": "x87b self check",
+  "payload": {
+    "finding": "seeded by X87B dispatcher",
+    "evidence": "D:\\openwebui\\runtime\\temp"
+  },
+  "status": "consumed",
+  "consumed_at": "2026-05-20T09:58:48Z"
+}

@@ -1,0 +1,7 @@
+{
+  "ok": false,
+  "relative_path": "ollama_data/blocked.bin",
+  "target": "D:\\openwebui\\ollama_data\\blocked.bin",
+  "reason": "denied path area: ['ollama_data']",
+  "created_at": "2026-05-20T12:08:51"
+}

@@ -1,0 +1,47 @@
+{
+  "ok": true,
+  "stage": "job_pass",
+  "orchestrator": "X80_QUEUE_PATCH_EXECUTOR",
+  "root": "D:\\openwebui",
+  "job_path": "D:\\openwebui\\runtime\\queue\\x80\\20260520_134909_x80_probe_python_component.json",
+  "job": {
+    "job_id": "20260520_134909_x80_probe_python_component",
+    "orchestrator": "X80_QUEUE_PATCH_EXECUTOR",
+    "status": "done",
+    "created_at": "2026-05-20T13:49:09",
+    "root": "D:\\openwebui",
+    "patch_name": "x80_probe_python_component",
+    "template": "python_component",
+    "execute": true,
+    "timeout": 180,
+    "attempt": 1,
+    "max_attempts": 1,
+    "started_at": "2026-05-20T13:49:09",
+    "finished_at": "2026-05-20T13:49:12",
+    "report_path": "D:\\openwebui\\runtime\\reports\\x80\\20260520_134912_x80_probe_python_component.json"
+  },
+  "checks": {
+    "x79_exists": true
+  },
+  "created_at": "2026-05-20T13:49:09",
+  "x79_result": {
+    "cmd": [
+      "C:\\Users\\khach\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "D:\\openwebui\\core\\x79_auto_patch_pipeline_orchestrator.py",
+      "--name",
+      "x80_probe_python_component",
+      "--template",
+      "python_component",
+      "--execute"
+    ],
+    "cwd": "D:\\openwebui",
+    "started_at": "2026-05-20T13:49:09",
+    "returncode": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"stage\": \"pipeline_pass\",\n  \"orchestrator\": \"X79_AUTO_PATCH_PIPELINE_ORCHESTRATOR\",\n  \"root\": \"D:\\\\openwebui\",\n  \"patch_name\": \"x80_probe_python_component\",\n  \"template\": \"python_component\",\n  \"execute\": true,\n  \"dry_run\": false,\n  \"created_at\": \"2026-05-20T13:49:10\",\n  \"checks\": {\n    \"generator_exists\": true,\n    \"runner_exists\": true\n  },\n  \"steps\": [\n    {\n      \"name\": \"generate_patch_with_x78b\",\n      \"cmd\": [\n        \"C:\\\\Users\\\\khach\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe\",\n        \"D:\\\\openwebui\\\\core\\\\x78_template_aware_patch_generator.py\",\n        \"--name\",\n        \"x80_probe_python_component\",\n        \"--template\",\n        \"python_component\"\n      ],\n      \"cwd\": \"D:\\\\openwebui\",\n      \"started_at\": \"2026-05-20T13:49:10\",\n      \"returncode\": 0,\n      \"stdout\": \"{\\n  \\\"ok\\\": true,\\n  \\\"patch\\\": \\\"x80_probe_python_component\\\",\\n  \\\"template\\\": \\\"python_component\\\",\\n  \\\"folder\\\": \\\"D:\\\\\\\\openwebui\\\\\\\\_patch_inbox\\\\\\\\x80_probe_python_component\\\"\\n}\\n\",\n      \"stderr\": \"\",\n      \"false_pass_hits\": [],\n      \"ok\": true\n    },\n    {\n      \"name\": \"verify_apply_check_with_x75d\",\n      \"cmd\": [\n        \"C:\\\\Users\\\\khach\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python313\\\\python.exe\",\n        \"D:\\\\openwebui\\\\core\\\\x75_local_patch_runner.py\",\n        \"--patch\",\n        \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\",\n        \"--execute\"\n      ],\n      \"cwd\": \"D:\\\\openwebui\",\n      \"started_at\": \"2026-05-20T13:49:10\",\n      \"returncode\": 0,\n      \"stdout\": \"{\\n  \\\"ok\\\": true,\\n  \\\"patch\\\": \\\"D:\\\\\\\\openwebui\\\\\\\\_patch_inbox\\\\\\\\x80_probe_python_component\\\",\\n  \\\"stage\\\": \\\"apply_check_pass\\\",\\n  \\\"checks\\\": [\\n    {\\n      \\\"type\\\": \\\"ps_syntax\\\",\\n      \\\"file\\\": \\\"D:\\\\\\\\openwebui\\\\\\\\_patch_inbox\\\\\\\\x80_probe_python_component\\\\\\\\apply_x80_probe_python_component.ps1\\\",\\n      \\\"result\\\": {\\n        \\\"cmd\\\": [\\n          \\\"powershell\\\",\\n          \\\"-NoProfile\\\",\\n          \\\"-Command\\\",\\n          \\\"$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\\\"\\n        ],\\n        \\\"returncode\\\": 0,\\n        \\\"stdout\\\": \\\"\\\",\\n        \\\"stderr\\\": \\\"\\\"\\n      }\\n    },\\n    {\\n      \\\"type\\\": \\\"ps_syntax\\\",\\n      \\\"file\\\": \\\"D:\\\\\\\\openwebui\\\\\\\\_patch_inbox\\\\\\\\x80_probe_python_component\\\\\\\\cleanup_x80_probe_python_component.ps1\\\",\\n      \\\"result\\\": {\\n        \\\"cmd\\\": [\\n          \\\"powershell\\\",\\n          \\\"-NoProfile\\\",\\n          \\\"-Command\\\",\\n          \\\"$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\\\"\\n        ],\\n        \\\"returncode\\\": 0,\\n        \\\"stdout\\\": \\\"\\\",\\n        \\\"stderr\\\": \\\"\\\"\\n      }\\n    },\\n    {\\n      \\\"type\\\": \\\"ps_syntax\\\",\\n      \\\"file\\\": \\\"D:\\\\\\\\openwebui\\\\\\\\_patch_inbox\\\\\\\\x80_probe_python_component\\\\\\\\x80_probe_python_component_check.ps1\\\",\\n      \\\"result\\\": {\\n        \\\"cmd\\\": [\\n          \\\"powershell\\\",\\n          \\\"-NoProfile\\\",\\n          \\\"-Command\\\",\\n          \\\"$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\\\"\\n        ],\\n        \\\"returncode\\\": 0,\\n        \\\"stdout\\\": \\\"\\\",\\n        \\\"stderr\\\": \\\"\\\"\\n      }\\n    }\\n  ],\\n  \\\"apply\\\": {\\n    \\\"cmd\\\": [\\n      \\\"powershell\\\",\\n      \\\"-ExecutionPolicy\\\",\\n      \\\"Bypass\\\",\\n      \\\"-File\\\",\\n      \\\"D:\\\\\\\\openwebui\\\\\\\\_patch_inbox\\\\\\\\x80_probe_python_component\\\\\\\\apply_x80_probe_python_component.ps1\\\"\\n    ],\\n    \\\"returncode\\\": 0,\\n    \\\"stdout\\\": \\\"[PASS] x80_probe_python_component applied\\\\n\\\",\\n    \\\"stderr\\\": \\\"\\\"\\n  },\\n  \\\"check\\\": {\\n    \\\"cmd\\\": [\\n      \\\"powershell\\\",\\n      \\\"-ExecutionPolicy\\\",\\n      \\\"Bypass\\\",\\n      \\\"-File\\\",\\n      \\\"D:\\\\\\\\openwebui\\\\\\\\_patch_inbox\\\\\\\\x80_probe_python_component\\\\\\\\x80_probe_python_component_check.ps1\\\"\\n    ],\\n    \\\"returncode\\\": 0,\\n    \\\"stdout\\\": \\\"[PASS] x80_probe_python_component template valid\\\\n[PASS] x80_probe_python_component check complete\\\\n\\\",\\n    \\\"stderr\\\": \\\"\\\"\\n  },\\n  \\\"false_pass_guard\\\": true\\n}\\n\",\n      \"stderr\": \"\",\n      \"false_pass_hits\": [],\n      \"ok\": true\n    }\n  ],\n  \"patch_folder\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\",\n  \"report_path\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x79\\\\20260520_134912_x80_probe_python_component.json\"\n}\n",
+    "stderr": "",
+    "false_pass_hits": [],
+    "ok": true
+  },
+  "report_path": "D:\\openwebui\\runtime\\reports\\x80\\20260520_134912_x80_probe_python_component.json",
+  "final_job_path": "D:\\openwebui\\runtime\\queue\\x80\\done\\20260520_134909_x80_probe_python_component.json"
+}

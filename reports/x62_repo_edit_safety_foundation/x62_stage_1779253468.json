@@ -1,0 +1,7 @@
+{
+  "ok": false,
+  "relative_path": "_backups/should_not_write.txt",
+  "target": "D:\\openwebui\\_backups\\should_not_write.txt",
+  "reason": "target touches denied area: ['_backups']",
+  "checked_at": "2026-05-20T12:04:28"
+}

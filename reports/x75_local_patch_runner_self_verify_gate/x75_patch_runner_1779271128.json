@@ -1,0 +1,92 @@
+{
+  "ok": true,
+  "patch": "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix",
+  "stage": "apply_check_pass",
+  "checks": [
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\apply_x87b_worker_dispatcher_importfix.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\cleanup_x87b_worker_dispatcher_importfix.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "ps_syntax",
+      "file": "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\x87b_worker_dispatcher_importfix_check.ps1",
+      "result": {
+        "cmd": [
+          "powershell",
+          "-NoProfile",
+          "-Command",
+          "$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "type": "py_compile",
+      "file": "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\files\\core\\x87_worker_dispatcher.py",
+      "result": {
+        "cmd": [
+          "python",
+          "-m",
+          "py_compile",
+          "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\files\\core\\x87_worker_dispatcher.py"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    }
+  ],
+  "apply": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\apply_x87b_worker_dispatcher_importfix.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X87B worker dispatcher importfix applied.\n[INFO] Runtime: D:\\openwebui\\core\\x87_worker_dispatcher.py\n",
+    "stderr": ""
+  },
+  "check": {
+    "cmd": [
+      "powershell",
+      "-ExecutionPolicy",
+      "Bypass",
+      "-File",
+      "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\x87b_worker_dispatcher_importfix_check.ps1"
+    ],
+    "returncode": 0,
+    "stdout": "[PASS] X87B worker dispatcher importfix check passed.\n[INFO] Processed total: 22\n[INFO] Report: D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_demo_1779271128700.json\n",
+    "stderr": ""
+  },
+  "false_pass_guard": true
+}
