@@ -1,0 +1,628 @@
+﻿X101A MASTER REVIEW RUNTIME SCAN
+root=D:\openwebui
+time=2026-05-21T21:00:01.3603856+07:00
+
+==== FILE D:\openwebui\core\x96_master_planner_reviewer.py ====
+exists=True
+length=8951
+sha256=CE671FBB6F2EC3E10C62F62BD13ECAB63C8F10EDF74FC4F7E144EC5C170F1126
+pattern master_review count=7
+pattern final_output_owner count=2
+pattern REPORT count=10
+pattern routed_to count=0
+pattern planner_complete count=0
+pattern review count=30
+pattern synthesis count=0
+pattern x96_plan count=0
+pattern processed_count count=0
+pattern add_task count=0
+pattern report_file count=3
+-- context lines matching review/report/master/final --
+@@ lines 11-15
+   11: from typing import Any, Dict, List, Optional
+   12: 
+   13: RELEASE = "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION"
+   14: 
+   15: ROOT = Path(os.environ.get("AI_LOCAL_OS_ROOT", r"D:\openwebui"))
+@@ lines 18-22
+   18: ROADMAP = DOCS / "ROADMAP.md"
+   19: PLAN_DIR = RUNTIME / "x96_master_plans"
+   20: REVIEW_DIR = RUNTIME / "x96_master_reviews"
+   21: REPORT_DIR = RUNTIME / "reports"
+   22: 
+@@ lines 19-23
+   19: PLAN_DIR = RUNTIME / "x96_master_plans"
+   20: REVIEW_DIR = RUNTIME / "x96_master_reviews"
+   21: REPORT_DIR = RUNTIME / "reports"
+   22: 
+   23: DEFAULT_RETRY_LIMIT = 2
+@@ lines 24-28
+   24: DEFAULT_FALLBACK_LIMIT = 1
+   25: 
+   26: ROLE_ORDER = ["SCOUT", "DEBUG", "PATCHER", "VERIFY", "REPORT"]
+   27: 
+   28: def utc_now() -> str:
+@@ lines 65-69
+   65:         "status": "planned",
+   66:         "max_retries": DEFAULT_RETRY_LIMIT,
+   67:         "requires_master_review": role in {"VERIFY", "REPORT"},
+   68:     }
+   69: 
+@@ lines 77-81
+   77:     n = 1
+   78: 
+   79:     steps.append(make_step(n, "SCOUT", "Read project context, roadmap, and identify relevant files/layers.", "Use docs/ROADMAP.md and runtime reports first.", "DEBUG")); n += 1
+   80:     steps.append(make_step(n, "DEBUG", "Verify the true failing layer or required change using logs/evidence.", "Do not patch until root cause is confirmed.", "PATCHER" if meta["needs_patch"] else "VERIFY")); n += 1
+   81: 
+@@ lines 83-87
+   83:         steps.append(make_step(n, "PATCHER", "Create a minimal targeted patch for the confirmed cause only.", "Patch must go through _patch_inbox and X75 runner.", "VERIFY")); n += 1
+   84: 
+   85:     steps.append(make_step(n, "VERIFY", "Run focused checks and collect pass/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
+   86:     steps.append(make_step(n, "REPORT", "Summarize worker results for MASTER review.", "Report must state pass/fail, evidence, and remaining risk.", None)); n += 1
+   87: 
+@@ lines 84-88
+   84: 
+   85:     steps.append(make_step(n, "VERIFY", "Run focused checks and collect pass/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
+   86:     steps.append(make_step(n, "REPORT", "Summarize worker results for MASTER review.", "Report must state pass/fail, evidence, and remaining risk.", None)); n += 1
+   87: 
+   88:     for s in steps:
+@@ lines 98-102
+   98:         "master_model": "qwen2.5-coder",
+   99:         "child_model": "llama",
+  100:         "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+  101:         "classification": meta,
+  102:         "limits": {
+@@ lines 107-111
+  107:         "fallback_policy": {
+  108:             "local_first": True,
+  109:             "api_websearch_only_if_worker_report_insufficient": True,
+  110:             "max_calls": fallback_limit,
+  111:             "after_fallback_return_to_child_worker": True,
+@@ lines 112-116
+  112:         },
+  113:         "steps": steps,
+  114:         "master_review_policy": {
+  115:             "master_must_review_report": True,
+  116:             "pass_condition": "VERIFY ok and REPORT has evidence",
+@@ lines 113-117
+  113:         "steps": steps,
+  114:         "master_review_policy": {
+  115:             "master_must_review_report": True,
+  116:             "pass_condition": "VERIFY ok and REPORT has evidence",
+  117:             "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+@@ lines 114-118
+  114:         "master_review_policy": {
+  115:             "master_must_review_report": True,
+  116:             "pass_condition": "VERIFY ok and REPORT has evidence",
+  117:             "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+  118:             "final_output_owner": "MASTER",
+@@ lines 116-120
+  116:             "pass_condition": "VERIFY ok and REPORT has evidence",
+  117:             "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+  118:             "final_output_owner": "MASTER",
+  119:         },
+  120:         "roadmap_source": str(ROADMAP),
+@@ lines 127-131
+  127:     return plan
+  128: 
+  129: def review_worker_report(task_id: str, worker_report: Dict[str, Any]) -> Dict[str, Any]:
+  130:     ok = bool(worker_report.get("ok"))
+  131:     evidence = worker_report.get("evidence") or worker_report.get("report_file") or worker_report.get("summary")
+@@ lines 128-132
+  128: 
+  129: def review_worker_report(task_id: str, worker_report: Dict[str, Any]) -> Dict[str, Any]:
+  130:     ok = bool(worker_report.get("ok"))
+  131:     evidence = worker_report.get("evidence") or worker_report.get("report_file") or worker_report.get("summary")
+  132:     needs_retry = not ok
+@@ lines 129-133
+  129: def review_worker_report(task_id: str, worker_report: Dict[str, Any]) -> Dict[str, Any]:
+  130:     ok = bool(worker_report.get("ok"))
+  131:     evidence = worker_report.get("evidence") or worker_report.get("report_file") or worker_report.get("summary")
+  132:     needs_retry = not ok
+  133:     fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 0)
+@@ lines 131-135
+  131:     evidence = worker_report.get("evidence") or worker_report.get("report_file") or worker_report.get("summary")
+  132:     needs_retry = not ok
+  133:     fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 0)
+  134: 
+  135:     decision = "PASS" if ok and evidence else "RETRY"
+@@ lines 139-143
+  139:         next_action = "STOP_RETRY_LIMIT_REACHED"
+  140:     else:
+  141:         next_action = "FINAL_REPORT_TO_WEBUI"
+  142: 
+  143:     review = {
+@@ lines 141-145
+  141:         next_action = "FINAL_REPORT_TO_WEBUI"
+  142: 
+  143:     review = {
+  144:         "ok": decision == "PASS",
+  145:         "release": RELEASE,
+@@ lines 144-148
+  144:         "ok": decision == "PASS",
+  145:         "release": RELEASE,
+  146:         "kind": "master_review",
+  147:         "task_id": task_id,
+  148:         "reviewed_at": utc_now(),
+@@ lines 146-150
+  146:         "kind": "master_review",
+  147:         "task_id": task_id,
+  148:         "reviewed_at": utc_now(),
+  149:         "decision": decision,
+  150:         "next_action": next_action,
+@@ lines 149-153
+  149:         "decision": decision,
+  150:         "next_action": next_action,
+  151:         "worker_report": worker_report,
+  152:         "master_notes": {
+  153:             "master_is_final_decider": True,
+@@ lines 152-156
+  152:         "master_notes": {
+  153:             "master_is_final_decider": True,
+  154:             "child_worker_does_not_report_to_user_directly": True,
+  155:             "fallback_must_be_limited": True,
+  156:         },
+@@ lines 157-161
+  157:     }
+  158: 
+  159:     out = REVIEW_DIR / f"{task_id}_review.json"
+  160:     review["review_file"] = str(out)
+  161:     safe_write_json(out, review)
+@@ lines 158-162
+  158: 
+  159:     out = REVIEW_DIR / f"{task_id}_review.json"
+  160:     review["review_file"] = str(out)
+  161:     safe_write_json(out, review)
+  162:     return review
+@@ lines 159-163
+  159:     out = REVIEW_DIR / f"{task_id}_review.json"
+  160:     review["review_file"] = str(out)
+  161:     safe_write_json(out, review)
+  162:     return review
+  163: 
+@@ lines 160-164
+  160:     review["review_file"] = str(out)
+  161:     safe_write_json(out, review)
+  162:     return review
+  163: 
+  164: def selftest() -> Dict[str, Any]:
+@@ lines 164-168
+  164: def selftest() -> Dict[str, Any]:
+  165:     PLAN_DIR.mkdir(parents=True, exist_ok=True)
+  166:     REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+  167:     REPORT_DIR.mkdir(parents=True, exist_ok=True)
+  168: 
+@@ lines 165-169
+  165:     PLAN_DIR.mkdir(parents=True, exist_ok=True)
+  166:     REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+  167:     REPORT_DIR.mkdir(parents=True, exist_ok=True)
+  168: 
+  169:     task = "x96 selftest fix runtime response with root cause first"
+@@ lines 169-173
+  169:     task = "x96 selftest fix runtime response with root cause first"
+  170:     plan = build_plan(task)
+  171:     fake_worker_report = {
+  172:         "ok": True,
+  173:         "summary": "VERIFY passed with evidence log.",
+@@ lines 173-177
+  173:         "summary": "VERIFY passed with evidence log.",
+  174:         "evidence": str(RUNTIME / "temp"),
+  175:         "report_file": str(REPORT_DIR / "x96_selftest_report.json"),
+  176:         "fallback_calls_used": 0,
+  177:     }
+@@ lines 176-180
+  176:         "fallback_calls_used": 0,
+  177:     }
+  178:     review = review_worker_report(plan["task_id"], fake_worker_report)
+  179: 
+  180:     result = {
+@@ lines 179-183
+  179: 
+  180:     result = {
+  181:         "ok": bool(plan.get("ok") and review.get("ok")),
+  182:         "release": RELEASE,
+  183:         "plan_file": plan.get("plan_file"),
+@@ lines 182-186
+  182:         "release": RELEASE,
+  183:         "plan_file": plan.get("plan_file"),
+  184:         "review_file": review.get("review_file"),
+  185:         "checks": {
+  186:             "roadmap_exists": ROADMAP.exists(),
+@@ lines 186-190
+  186:             "roadmap_exists": ROADMAP.exists(),
+  187:             "has_scout_step": any(s.get("role") == "SCOUT" for s in plan.get("steps", [])),
+  188:             "has_master_review": bool(plan.get("master_review_policy", {}).get("master_must_review_report")),
+  189:             "fallback_limited": plan.get("limits", {}).get("fallback_api_websearch_limit") == DEFAULT_FALLBACK_LIMIT,
+  190:             "final_owner_master": plan.get("master_review_policy", {}).get("final_output_owner") == "MASTER",
+@@ lines 188-192
+  188:             "has_master_review": bool(plan.get("master_review_policy", {}).get("master_must_review_report")),
+  189:             "fallback_limited": plan.get("limits", {}).get("fallback_api_websearch_limit") == DEFAULT_FALLBACK_LIMIT,
+  190:             "final_owner_master": plan.get("master_review_policy", {}).get("final_output_owner") == "MASTER",
+  191:         },
+  192:     }
+@@ lines 192-196
+  192:     }
+  193: 
+  194:     report = REPORT_DIR / "x96c_master_planner_reviewer_selftest.json"
+  195:     result["report_file"] = str(report)
+  196:     safe_write_json(report, result)
+@@ lines 193-197
+  193: 
+  194:     report = REPORT_DIR / "x96c_master_planner_reviewer_selftest.json"
+  195:     result["report_file"] = str(report)
+  196:     safe_write_json(report, result)
+  197:     return result
+@@ lines 194-198
+  194:     report = REPORT_DIR / "x96c_master_planner_reviewer_selftest.json"
+  195:     result["report_file"] = str(report)
+  196:     safe_write_json(report, result)
+  197:     return result
+  198: 
+@@ lines 198-202
+  198: 
+  199: def main() -> int:
+  200:     parser = argparse.ArgumentParser(description="X96 Master planner/reviewer")
+  201:     sub = parser.add_subparsers(dest="cmd", required=True)
+  202: 
+@@ lines 206-210
+  206:     p.add_argument("--fallback-limit", type=int, default=DEFAULT_FALLBACK_LIMIT)
+  207: 
+  208:     p = sub.add_parser("review")
+  209:     p.add_argument("--ta[REDACTED_OPENAI_KEY]", required=True)
+  210:     p.add_argument("--report-json", required=True)
+@@ lines 208-212
+  208:     p = sub.add_parser("review")
+  209:     p.add_argument("--ta[REDACTED_OPENAI_KEY]", required=True)
+  210:     p.add_argument("--report-json", required=True)
+  211: 
+  212:     sub.add_parser("selftest")
+@@ lines 216-220
+  216:     if args.cmd == "plan":
+  217:         out = build_plan(args.task, retry_limit=args.retry_limit, fallback_limit=args.fallback_limit)
+  218:     elif args.cmd == "review":
+  219:         worker_report = json.loads(Path(args.report_json).read_text(encoding="utf-8"))
+  220:         out = review_worker_report(args.task_id, worker_report)
+@@ lines 217-221
+  217:         out = build_plan(args.task, retry_limit=args.retry_limit, fallback_limit=args.fallback_limit)
+  218:     elif args.cmd == "review":
+  219:         worker_report = json.loads(Path(args.report_json).read_text(encoding="utf-8"))
+  220:         out = review_worker_report(args.task_id, worker_report)
+  221:     elif args.cmd == "selftest":
+@@ lines 218-222
+  218:     elif args.cmd == "review":
+  219:         worker_report = json.loads(Path(args.report_json).read_text(encoding="utf-8"))
+  220:         out = review_worker_report(args.task_id, worker_report)
+  221:     elif args.cmd == "selftest":
+  222:         out = selftest()
+
+==== FILE D:\openwebui\core\x87_worker_dispatcher.py ====
+exists=True
+length=16343
+sha256=585D07C9E35F41E2F09097B3B6A048775E0E9F98B3E3D8E34C402FCD208421BA
+pattern master_review count=0
+pattern final_output_owner count=0
+pattern REPORT count=9
+pattern routed_to count=2
+pattern planner_complete count=1
+pattern review count=1
+pattern synthesis count=0
+pattern x96_plan count=16
+pattern processed_count count=1
+pattern add_task count=0
+pattern report_file count=2
+-- context lines matching review/report/master/final --
+@@ lines 56-60
+   56: BUS_DIR = RUNTIME_DIR / "x86_agent_bus"
+   57: MESSAGES_DIR = BUS_DIR / "messages"
+   58: REPORT_DIR = RUNTIME_DIR / "reports"
+   59: STATE_DIR = RUNTIME_DIR / "x87_worker_dispatcher"
+   60: STATE_FILE = STATE_DIR / "state.json"
+@@ lines 63-67
+   63:     "SCOUT": "DEBUG",
+   64:     "DEBUG": "VERIFY",
+   65:     "VERIFY": "REPORT",
+   66: }
+   67: 
+@@ lines 179-183
+  179:                     return next_role
+  180: 
+  181:             plan["x97b2_runtime_dispatch"] = "planner_complete"
+  182:             return None
+  183:         except Exception as exc:
+@@ lines 191-195
+  191:     def __init__(self) -> None:
+  192:         STATE_DIR.mkdir(parents=True, exist_ok=True)
+  193:         REPORT_DIR.mkdir(parents=True, exist_ok=True)
+  194:         AgentBus = load_x86_bus_class()
+  195:         self.bus = AgentBus()
+@@ lines 223-227
+  223:             "ok": True,
+  224:             "summary": "",
+  225:             "routed_to": None,
+  226:         }
+  227: 
+@@ lines 229-233
+  229:             result["summary"] = "DEBUG worker consumed evidence and confirmed root-cause-first handoff."
+  230:             result["output_payload"] = {
+  231:                 "root_cause": _busmsg_get(payload, "root_cause") or "pending_real_log_review",
+  232:                 "evidence": _busmsg_get(payload, "evidence") or payload,
+  233:                 "source_message": _busmsg_get(msg, "id"),
+@@ lines 246-250
+  246:                 "source_message": _busmsg_get(msg, "id"),
+  247:             }
+  248:         elif to_role == "REPORT":
+  249:             result["summary"] = "REPORT worker consumed final verification payload."
+  250:             result["output_payload"] = {
+@@ lines 247-251
+  247:             }
+  248:         elif to_role == "REPORT":
+  249:             result["summary"] = "REPORT worker consumed final verification payload."
+  250:             result["output_payload"] = {
+  251:                 "final": payload,
+@@ lines 275-279
+  275:         if result["ok"] and next_role:
+  276:             sent = self.bus.send(to_role, next_role, task, result["output_payload"])
+  277:             result["routed_to"] = next_role
+  278:             result["routed_message_id"] = sent.id
+  279: 
+@@ lines 281-285
+  281: 
+  282:     def cycle(self, roles: Optional[List[str]] = None, limit_per_role: int = 10) -> Dict[str, Any]:
+  283:         roles = [r.upper() for r in (roles or ["SCOUT", "DEBUG", "VERIFY", "REPORT"])]
+  284:         processed: List[Dict[str, Any]] = []
+  285: 
+@@ lines 299-303
+  299:         self.save()
+  300: 
+  301:         report = {
+  302:             "ok": True,
+  303:             "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+@@ lines 306-310
+  306:             "state_file": str(STATE_FILE),
+  307:         }
+  308:         out = REPORT_DIR / f"x87b_worker_dispatcher_report_{now_ms()}.json"
+  309:         safe_write_json(out, report)
+  310:         report["report_file"] = str(out)
+@@ lines 307-311
+  307:         }
+  308:         out = REPORT_DIR / f"x87b_worker_dispatcher_report_{now_ms()}.json"
+  309:         safe_write_json(out, report)
+  310:         report["report_file"] = str(out)
+  311:         return report
+@@ lines 308-312
+  308:         out = REPORT_DIR / f"x87b_worker_dispatcher_report_{now_ms()}.json"
+  309:         safe_write_json(out, report)
+  310:         report["report_file"] = str(out)
+  311:         return report
+  312: 
+@@ lines 309-313
+  309:         safe_write_json(out, report)
+  310:         report["report_file"] = str(out)
+  311:         return report
+  312: 
+  313:     # X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION: planner-aware first bus message
+@@ lines 350-354
+  350:         for _ in range(4):
+  351:             cycles.append(self.cycle(limit_per_role=20))
+  352:         report = {
+  353:             "ok": True,
+  354:             "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+@@ lines 358-362
+  358:             "state_file": str(STATE_FILE),
+  359:         }
+  360:         out = REPORT_DIR / f"x87b_worker_dispatcher_demo_{now_ms()}.json"
+  361:         safe_write_json(out, report)
+  362:         report["report_file"] = str(out)
+@@ lines 359-363
+  359:         }
+  360:         out = REPORT_DIR / f"x87b_worker_dispatcher_demo_{now_ms()}.json"
+  361:         safe_write_json(out, report)
+  362:         report["report_file"] = str(out)
+  363:         return report
+@@ lines 360-364
+  360:         out = REPORT_DIR / f"x87b_worker_dispatcher_demo_{now_ms()}.json"
+  361:         safe_write_json(out, report)
+  362:         report["report_file"] = str(out)
+  363:         return report
+  364: 
+@@ lines 361-365
+  361:         safe_write_json(out, report)
+  362:         report["report_file"] = str(out)
+  363:         return report
+  364: 
+  365:     def status(self) -> Dict[str, Any]:
+@@ lines 383-387
+  383: 
+  384:     p_cycle = sub.add_parser("cycle")
+  385:     p_cycle.add_argument("--roles", default="SCOUT,DEBUG,VERIFY,REPORT")
+  386:     p_cycle.add_argument("--limit", type=int, default=10)
+  387: 
+
+==== FILE D:\openwebui\core\x90_webui_agent_bridge.py ====
+exists=True
+length=11815
+sha256=C7669CDA45F9D901D4F6AA9BAFD8ED9DD84F121C6266864B2CC48F5D3AE902D6
+pattern master_review count=0
+pattern final_output_owner count=0
+pattern REPORT count=3
+pattern routed_to count=0
+pattern planner_complete count=0
+pattern review count=5
+pattern synthesis count=0
+pattern x96_plan count=12
+pattern processed_count count=0
+pattern add_task count=0
+pattern report_file count=1
+-- context lines matching review/report/master/final --
+@@ lines 38-42
+   38: CORE_DIR = ROOT / "core"
+   39: RUNTIME_DIR = ROOT / "runtime"
+   40: REPORT_DIR = RUNTIME_DIR / "reports"
+   41: BRIDGE_DIR = RUNTIME_DIR / "x90_webui_agent_bridge"
+   42: REQUESTS_DIR = BRIDGE_DIR / "requests"
+@@ lines 93-97
+   93:         REQUESTS_DIR.mkdir(parents=True, exist_ok=True)
+   94:         RESPONSES_DIR.mkdir(parents=True, exist_ok=True)
+   95:         REPORT_DIR.mkdir(parents=True, exist_ok=True)
+   96: 
+   97:         self.state = load_json(STATE_FILE, {
+@@ lines 190-194
+  190:             }
+  191: 
+  192:         out = REPORT_DIR / f"x90_webui_bridge_response_{now_ms()}.json"
+  193:         safe_write_json(out, response)
+  194:         response["report_file"] = str(out)
+@@ lines 192-196
+  192:         out = REPORT_DIR / f"x90_webui_bridge_response_{now_ms()}.json"
+  193:         safe_write_json(out, response)
+  194:         response["report_file"] = str(out)
+  195:         return response
+  196: 
+@@ lines 203-207
+  203:             if str(CORE_DIR) not in sys.path:
+  204:                 sys.path.insert(0, str(CORE_DIR))
+  205:             import x96_master_planner_reviewer as x96_master_planner_reviewer
+  206: 
+  207:             build_plan = getattr(x96_master_planner_reviewer, "build_plan", None)
+@@ lines 205-209
+  205:             import x96_master_planner_reviewer as x96_master_planner_reviewer
+  206: 
+  207:             build_plan = getattr(x96_master_planner_reviewer, "build_plan", None)
+  208:             if callable(build_plan):
+  209:                 x96_plan = build_plan(task)
+@@ lines 209-213
+  209:                 x96_plan = build_plan(task)
+  210:             else:
+  211:                 planner_cls = getattr(x96_master_planner_reviewer, "MasterPlannerReviewer", None)
+  212:                 if planner_cls is None:
+  213:                     raise RuntimeError("x96_master_planner_reviewer has no build_plan() or MasterPlannerReviewer")
+@@ lines 211-215
+  211:                 planner_cls = getattr(x96_master_planner_reviewer, "MasterPlannerReviewer", None)
+  212:                 if planner_cls is None:
+  213:                     raise RuntimeError("x96_master_planner_reviewer has no build_plan() or MasterPlannerReviewer")
+  214:                 planner = planner_cls()
+  215:                 if not hasattr(planner, "build_plan"):
+@@ lines 214-218
+  214:                 planner = planner_cls()
+  215:                 if not hasattr(planner, "build_plan"):
+  216:                     raise RuntimeError("MasterPlannerReviewer has no build_plan()")
+  217:                 x96_plan = planner.build_plan(task)
+  218:         except Exception as exc:
+
+==== FILE D:\openwebui\core\x91_addtask_bridge.py ====
+MISSING
+
+==== FILE D:\openwebui\core\x86_agent_bus.py ====
+exists=True
+length=8178
+sha256=E86C59FC693BD70959D73898DA79C3A1E16DB8D5B14AF0266A812DECD27EF949
+pattern master_review count=0
+pattern final_output_owner count=0
+pattern REPORT count=10
+pattern routed_to count=0
+pattern planner_complete count=0
+pattern review count=0
+pattern synthesis count=0
+pattern x96_plan count=0
+pattern processed_count count=0
+pattern add_task count=0
+pattern report_file count=1
+-- context lines matching review/report/master/final --
+@@ lines 17-21
+   17: BUS_DIR = RUNTIME_DIR / "x86_agent_bus"
+   18: MESSAGES_DIR = BUS_DIR / "messages"
+   19: REPORT_DIR = RUNTIME_DIR / "reports"
+   20: STATE_FILE = BUS_DIR / "state.json"
+   21: 
+@@ lines 20-24
+   20: STATE_FILE = BUS_DIR / "state.json"
+   21: 
+   22: ROLES = ("SCOUT", "DEBUG", "PATCHER", "VERIFY", "REPORT")
+   23: ALLOWED_TRANSITIONS = {
+   24:     "SCOUT": ["SCOUT", "DEBUG", "REPORT"],  # X97C2 allows planner seed into SCOUT
+@@ lines 22-26
+   22: ROLES = ("SCOUT", "DEBUG", "PATCHER", "VERIFY", "REPORT")
+   23: ALLOWED_TRANSITIONS = {
+   24:     "SCOUT": ["SCOUT", "DEBUG", "REPORT"],  # X97C2 allows planner seed into SCOUT
+   25:     "DEBUG": ["PATCHER", "VERIFY", "REPORT"],
+   26:     "PATCHER": ["VERIFY", "REPORT"],
+@@ lines 23-27
+   23: ALLOWED_TRANSITIONS = {
+   24:     "SCOUT": ["SCOUT", "DEBUG", "REPORT"],  # X97C2 allows planner seed into SCOUT
+   25:     "DEBUG": ["PATCHER", "VERIFY", "REPORT"],
+   26:     "PATCHER": ["VERIFY", "REPORT"],
+   27:     "VERIFY": ["REPORT"],
+@@ lines 24-28
+   24:     "SCOUT": ["SCOUT", "DEBUG", "REPORT"],  # X97C2 allows planner seed into SCOUT
+   25:     "DEBUG": ["PATCHER", "VERIFY", "REPORT"],
+   26:     "PATCHER": ["VERIFY", "REPORT"],
+   27:     "VERIFY": ["REPORT"],
+   28:     "REPORT": [],
+@@ lines 25-29
+   25:     "DEBUG": ["PATCHER", "VERIFY", "REPORT"],
+   26:     "PATCHER": ["VERIFY", "REPORT"],
+   27:     "VERIFY": ["REPORT"],
+   28:     "REPORT": [],
+   29: }
+@@ lines 26-30
+   26:     "PATCHER": ["VERIFY", "REPORT"],
+   27:     "VERIFY": ["REPORT"],
+   28:     "REPORT": [],
+   29: }
+   30: 
+@@ lines 69-73
+   69:         BUS_DIR.mkdir(parents=True, exist_ok=True)
+   70:         MESSAGES_DIR.mkdir(parents=True, exist_ok=True)
+   71:         REPORT_DIR.mkdir(parents=True, exist_ok=True)
+   72:         self.state = load_json(STATE_FILE, {
+   73:             "release": "X86_AGENT_BUS",
+@@ lines 145-149
+  145:         sent.append(asdict(self.send("DEBUG", "PATCHER", task, {"root_cause": "confirmed by real log", "evidence": "runtime/temp/*.txt"})))
+  146:         sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
+  147:         sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "pass"})))
+  148:         report = {
+  149:             "ok": True,
+@@ lines 146-150
+  146:         sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
+  147:         sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "pass"})))
+  148:         report = {
+  149:             "ok": True,
+  150:             "release": "X86_AGENT_BUS",
+@@ lines 154-158
+  154:             "messages_dir": str(MESSAGES_DIR),
+  155:         }
+  156:         out = REPORT_DIR / f"x86_agent_bus_report_{now_ms()}.json"
+  157:         safe_write_json(out, report)
+  158:         report["report_file"] = str(out)
+@@ lines 155-159
+  155:         }
+  156:         out = REPORT_DIR / f"x86_agent_bus_report_{now_ms()}.json"
+  157:         safe_write_json(out, report)
+  158:         report["report_file"] = str(out)
+  159:         return report
+@@ lines 156-160
+  156:         out = REPORT_DIR / f"x86_agent_bus_report_{now_ms()}.json"
+  157:         safe_write_json(out, report)
+  158:         report["report_file"] = str(out)
+  159:         return report
+  160: 
+@@ lines 157-161
+  157:         safe_write_json(out, report)
+  158:         report["report_file"] = str(out)
+  159:         return report
+  160: 
+  161:     def status(self) -> Dict[str, Any]:
+@@ lines 226-230
+  226: 
+  227:     if args.cmd == "demo-chain":
+  228:         report = bus.demo_chain(args.task)
+  229:         print(json.dumps(report, ensure_ascii=False, indent=2))
+  230:         return 0
+@@ lines 227-231
+  227:     if args.cmd == "demo-chain":
+  228:         report = bus.demo_chain(args.task)
+  229:         print(json.dumps(report, ensure_ascii=False, indent=2))
+  230:         return 0
+  231: 
+
+
