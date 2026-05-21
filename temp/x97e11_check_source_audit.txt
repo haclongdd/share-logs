@@ -1,0 +1,5 @@
+﻿compile_ok=True
+has_literal_backtick_n=False
+has_scout_branch=True
+has_old_patcher_default=False
+has_scout_default_or_cycle=True

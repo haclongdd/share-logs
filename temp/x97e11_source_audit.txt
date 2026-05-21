@@ -1,0 +1,8 @@
+﻿target=D:\openwebui\core\x87_worker_dispatcher.py
+before_sha256=D32D1400273C369ECFD2AD9796626AF99164916EF77663C585730E3E9D5E7FDA
+after_sha256=585D07C9E35F41E2F09097B3B6A048775E0E9F98B3E3D8E34C402FCD208421BA
+changed=True
+has_literal_backtick_n=False
+has_scout_branch=True
+has_debug_branch=True
+has_verify_branch=True
