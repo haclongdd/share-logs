@@ -1,7 +1,9 @@
-﻿# X99B sanitized log sync repo
-*
-!README.md
-!*.txt
-!*.log
-!*.json
-!.gitignore
+﻿*.tmp
+*.bak
+*.db
+*.sqlite
+*.zip
+*.ps1
+x99b_logsync_*
+x99c_manifest_*
+x99d_logsync_*
