@@ -59,7 +59,7 @@
     {
       "step_id": "s04_verify",
       "role": "VERIFY",
-      "goal": "Run focused checks and collect [REDACTED]/fail evidence.",
+      "goal": "Run focused checks and collect pass/fail evidence.",
       "input_hint": "Export full logs to runtime/temp/*.txt.",
       "next_role": "REPORT",
       "status": "planned",
@@ -70,7 +70,7 @@
       "step_id": "s05_report",
       "role": "REPORT",
       "goal": "Summarize worker results for MASTER review.",
-      "input_hint": "Report must state [REDACTED]/fail, evidence, and remaining risk.",
+      "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
       "next_role": null,
       "status": "planned",
       "max_retries": 2,
@@ -79,7 +79,7 @@
   ],
   "master_review_policy": {
     "master_must_review_report": true,
-    "[REDACTED]_condition": "VERIFY ok and REPORT has evidence",
+    "pass_condition": "VERIFY ok and REPORT has evidence",
     "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
     "final_output_owner": "MASTER"
   },

@@ -1,0 +1,5 @@
+﻿target=D:\openwebui\x99e_debug_sync_autopush.py
+has_release=True
+has_lock=True
+has_git_push=True
+has_runtime_temp=True
