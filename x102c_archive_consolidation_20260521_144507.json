@@ -1,0 +1,1341 @@
+﻿{
+  "release": "X102C_ARCHIVE_CONSOLIDATION",
+  "mode": "execute",
+  "root": "D:\\openwebui",
+  "archive_root": "D:\\openwebui\\archive\\consolidated_20260521_144507",
+  "items": [
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_auto_exec_filter_v104",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_auto_exec_filter_v104",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 7704,
+      "mtime": "2026-05-19T08:17:51.674131+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_autonomous_coder_v1_1_fix_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_autonomous_coder_v1_1_fix_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 11262,
+      "mtime": "2026-05-19T05:19:51.361547+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_autonomous_coder_v1_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_autonomous_coder_v1_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 14339,
+      "mtime": "2026-05-19T05:16:49.686986+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_pretty_output_filter_v105",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_pretty_output_filter_v105",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 11684,
+      "mtime": "2026-05-19T09:55:06.949046+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_real_use_v1_project_readme_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_real_use_v1_project_readme_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 8678,
+      "mtime": "2026-05-19T04:14:58.506266+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_real_use_v2_project_health_audit_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_real_use_v2_project_health_audit_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 7802,
+      "mtime": "2026-05-19T04:16:02.859496+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_real_use_v3_safe_repo_tools_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_real_use_v3_safe_repo_tools_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4881,
+      "mtime": "2026-05-19T04:23:08.213498+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_real_use_v4_safe_config_sanitizer_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_real_use_v4_safe_config_sanitizer_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4674,
+      "mtime": "2026-05-19T04:25:12.803120+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_real_use_v5_safe_run_launcher_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_real_use_v5_safe_run_launcher_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 5790,
+      "mtime": "2026-05-19T04:29:20.698874+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_real_use_v6_live_status_query_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_real_use_v6_live_status_query_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 3562,
+      "mtime": "2026-05-19T04:38:26.429848+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_real_use_v7_webui_command_router_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_real_use_v7_webui_command_router_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4682,
+      "mtime": "2026-05-19T04:42:49.312600+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_real_use_v8_action_router_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_real_use_v8_action_router_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 5305,
+      "mtime": "2026-05-19T04:45:02.836880+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\ai_local_os_real_use_v9_natural_command_api_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\ai_local_os_real_use_v9_natural_command_api_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 5132,
+      "mtime": "2026-05-19T04:46:40.294928+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\webui_add_task_bridge_v1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\webui_add_task_bridge_v1",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 13588,
+      "mtime": "2026-05-19T06:07:43.444402+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\webui_add_task_bridge_v1_1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\webui_add_task_bridge_v1_1",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 14304,
+      "mtime": "2026-05-19T06:18:01.481643+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\webui_add_task_bridge_v1_2",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\webui_add_task_bridge_v1_2",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 13323,
+      "mtime": "2026-05-19T06:28:04.345048+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\webui_add_task_bridge_v1_3",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\webui_add_task_bridge_v1_3",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 14116,
+      "mtime": "2026-05-19T06:31:39.164350+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\webui_execute_master_ai_binding_v1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\webui_execute_master_ai_binding_v1",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 14340,
+      "mtime": "2026-05-19T07:19:59.484580+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\webui_flow_audit_and_bind_fix_v1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\webui_flow_audit_and_bind_fix_v1",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 5729,
+      "mtime": "2026-05-19T07:38:00.150387+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\webui_flow_audit_and_bind_fix_v1_1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\webui_flow_audit_and_bind_fix_v1_1",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 10395,
+      "mtime": "2026-05-19T07:40:13.700949+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\webui_force_execute_master_ai_tool_v1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\webui_force_execute_master_ai_tool_v1",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 8176,
+      "mtime": "2026-05-19T07:21:41.180758+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12p_add_task_payload_parse_fix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12p_add_task_payload_parse_fix",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 2315,
+      "mtime": "2026-05-19T03:30:26.644531+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12q_webui_bridge_reconnect",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12q_webui_bridge_reconnect",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 5875,
+      "mtime": "2026-05-19T03:30:28.789637+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12r_webui_bridge_e2e_smoke",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12r_webui_bridge_e2e_smoke",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4271,
+      "mtime": "2026-05-19T03:30:30.938666+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12s_cleanup_patch_test_junk",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12s_cleanup_patch_test_junk",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4396,
+      "mtime": "2026-05-19T03:30:33.069203+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12u_stable_checkpoint_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12u_stable_checkpoint_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4010,
+      "mtime": "2026-05-19T03:30:35.222682+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12v_hard_audit_state",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12v_hard_audit_state",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4957,
+      "mtime": "2026-05-19T03:30:37.362073+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12w_consolidate_patch_inbox",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12w_consolidate_patch_inbox",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4409,
+      "mtime": "2026-05-19T03:30:40.051812+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12x1_tools_manifest_marker_hotfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12x1_tools_manifest_marker_hotfix",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 3016,
+      "mtime": "2026-05-19T03:30:42.196358+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12x_tools_layer_consolidation",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12x_tools_layer_consolidation",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 5164,
+      "mtime": "2026-05-19T03:30:44.338588+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x12y_runtime_artifact_hygiene",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x12y_runtime_artifact_hygiene",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4649,
+      "mtime": "2026-05-19T03:30:46.476042+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13_consolidated_planner_agent",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13_consolidated_planner_agent",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 7852,
+      "mtime": "2026-05-19T02:16:54+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13a_planner_check_hotfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13a_planner_check_hotfix",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 2447,
+      "mtime": "2026-05-19T03:30:48.615578+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13b_planner_import_repair",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13b_planner_import_repair",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 3522,
+      "mtime": "2026-05-19T03:31:57.483676+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13c_planner_planfile_check_fix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13c_planner_planfile_check_fix",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 3054,
+      "mtime": "2026-05-19T03:31:59.600645+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13d_plan_executor",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13d_plan_executor",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 5524,
+      "mtime": "2026-05-19T03:32:01.740706+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13e1_native_binder_writefix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13e1_native_binder_writefix",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 1909,
+      "mtime": "2026-05-19T03:32:03.869522+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13e2_native_binder_final_repair",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13e2_native_binder_final_repair",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 7216,
+      "mtime": "2026-05-19T03:32:06.005398+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13e_native_step_binder",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13e_native_step_binder",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 6778,
+      "mtime": "2026-05-19T03:32:08.131476+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13f_execution_memory_retry_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13f_execution_memory_retry_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 13481,
+      "mtime": "2026-05-19T03:32:10.467897+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13g_execution_report_bridge_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13g_execution_report_bridge_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 12237,
+      "mtime": "2026-05-19T03:32:13.198175+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13h_runtime_status_api_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13h_runtime_status_api_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 4616,
+      "mtime": "2026-05-19T03:32:15.424912+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13j_persistent_queue_resume_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13j_persistent_queue_resume_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 322,
+      "mtime": "2026-05-19T03:17:47.002515+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13k_to_x13n_autonomous_runtime_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13k_to_x13n_autonomous_runtime_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 17371,
+      "mtime": "2026-05-19T03:49:03.004161+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13o_autonomous_runtime_hardening_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13o_autonomous_runtime_hardening_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 10538,
+      "mtime": "2026-05-19T03:49:04.188214+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13p_restore_x13i_x13j_dependency_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13p_restore_x13i_x13j_dependency_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 11537,
+      "mtime": "2026-05-19T03:49:29.736016+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13q_integration_smoke_selftest_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13q_integration_smoke_selftest_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 11214,
+      "mtime": "2026-05-19T03:53:52.786592+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13r_to_x13u_autonomous_expansion_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13r_to_x13u_autonomous_expansion_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 966,
+      "mtime": "2026-05-19T03:55:57.266046+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13v_real_execution_test_harness_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13v_real_execution_test_harness_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 7280,
+      "mtime": "2026-05-19T03:57:40.776013+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13w_real_task_runner_bridge_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13w_real_task_runner_bridge_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 7663,
+      "mtime": "2026-05-19T03:59:06.166114+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13x2_webui_api_handoff_quote_safe_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13x2_webui_api_handoff_quote_safe_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 7421,
+      "mtime": "2026-05-19T04:02:39.175004+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13x_webui_api_handoff_validator_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13x_webui_api_handoff_validator_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 7610,
+      "mtime": "2026-05-19T04:00:43.626735+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x13y_live_api_endpoint_shim_pack",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x13y_live_api_endpoint_shim_pack",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 7810,
+      "mtime": "2026-05-19T04:03:55.545782+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_patch_inbox\\x14_master_orchestrator_loop",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\patch_inbox_old\\x14_master_orchestrator_loop",
+      "reason": "Old patch inbox folder; preserve in archive for forensic history",
+      "bytes": 13108,
+      "mtime": "2026-05-19T11:51:58.611543+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\20260518_224453",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\20260518_224453",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 8283,
+      "mtime": "2026-05-18T15:44:53.460192+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\_backups\\ai-local-os-backup-20260512.zip",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\ai-local-os-backup-20260512.zip",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 56946,
+      "mtime": "2026-05-15T11:48:27.964375+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\ai_local_os_integration_final_hotfix_v2",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\ai_local_os_integration_final_hotfix_v2",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 11173,
+      "mtime": "2026-05-18T10:11:42.393152+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\ai_local_os_result_render_final",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\ai_local_os_result_render_final",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 19119,
+      "mtime": "2026-05-18T10:57:48.129487+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\auto_tool_execution_hook_hotfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\auto_tool_execution_hook_hotfix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 10500,
+      "mtime": "2026-05-18T10:44:46.285295+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\auto_tool_execution_hook_hotfix_v2",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\auto_tool_execution_hook_hotfix_v2",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 7342,
+      "mtime": "2026-05-18T10:46:22.557981+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\auto_tool_execution_hook_hotfix_v3",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\auto_tool_execution_hook_hotfix_v3",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 9604,
+      "mtime": "2026-05-18T10:48:39.930551+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\autonomous_coder_v1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\autonomous_coder_v1",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 21822,
+      "mtime": "2026-05-19T05:20:08.123781+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\dashboard_alive_fix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\dashboard_alive_fix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 4151,
+      "mtime": "2026-05-17T04:01:21.125454+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\dashboard_hardfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\dashboard_hardfix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 4156,
+      "mtime": "2026-05-17T04:05:15.789970+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\openwebui_bridge_route_hotfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\openwebui_bridge_route_hotfix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 1096,
+      "mtime": "2026-05-18T10:16:46.339105+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\openwebui_filter_autoexec_final",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\openwebui_filter_autoexec_final",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 1962,
+      "mtime": "2026-05-18T12:53:19.676756+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\openwebui_force_pipe_bind_v2",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\openwebui_force_pipe_bind_v2",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 2680,
+      "mtime": "2026-05-18T11:13:52.651773+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_finish_20260517_004505",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_finish_20260517_004505",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 27188,
+      "mtime": "2026-05-16T17:45:05.448053+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_get_report_hardfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_get_report_hardfix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 5676,
+      "mtime": "2026-05-17T02:30:46.325445+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_ollama_keepalive_20260517_095146",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_ollama_keepalive_20260517_095146",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 1524,
+      "mtime": "2026-05-17T02:51:46.245770+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_ollama_keepalive_20260517_095615",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_ollama_keepalive_20260517_095615",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 2170,
+      "mtime": "2026-05-17T02:56:15.544900+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_ollama_keepalive_20260517_095628",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_ollama_keepalive_20260517_095628",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 2170,
+      "mtime": "2026-05-17T02:56:28.776990+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_prep_20260516_232931",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_prep_20260516_232931",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 58351,
+      "mtime": "2026-05-16T16:29:31.139592+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_smart_routing_20260517_102804",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_smart_routing_20260517_102804",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 9058,
+      "mtime": "2026-05-17T03:28:04.793896+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_smart_routing_fixed_20260517_103508",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_smart_routing_fixed_20260517_103508",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 12819,
+      "mtime": "2026-05-17T03:35:08.812815+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_stable_20260517_112743",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_stable_20260517_112743",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 47630,
+      "mtime": "2026-05-17T04:27:43.872324+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_stable_20260517_112926",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_stable_20260517_112926",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 47630,
+      "mtime": "2026-05-17T04:29:26.448674+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_stable_20260517_112944",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_stable_20260517_112944",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 47630,
+      "mtime": "2026-05-17T04:29:44.917663+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2b_syncfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2b_syncfix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 5671,
+      "mtime": "2026-05-17T02:24:21.789801+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\phase2c3_router_v2_20260517_140626",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\phase2c3_router_v2_20260517_140626",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 4951,
+      "mtime": "2026-05-17T07:06:26.897753+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\real_use_v8_actions",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\real_use_v8_actions",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 205536,
+      "mtime": "2026-05-19T04:46:49.949538+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\webui_add_task_bridge_v1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\webui_add_task_bridge_v1",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 8456,
+      "mtime": "2026-05-19T06:08:11.208347+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\webui_add_task_bridge_v1_1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\webui_add_task_bridge_v1_1",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 8227,
+      "mtime": "2026-05-19T06:18:08.389701+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\webui_add_task_bridge_v1_2",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\webui_add_task_bridge_v1_2",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 17209,
+      "mtime": "2026-05-19T06:28:08.164047+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\webui_add_task_bridge_v1_3",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\webui_add_task_bridge_v1_3",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 18236,
+      "mtime": "2026-05-19T06:31:43.739659+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\webui_auto_exec_stable_20260519_153247",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\webui_auto_exec_stable_20260519_153247",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 14333076,
+      "mtime": "2026-05-19T08:32:48.158111+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\webui_execute_master_ai_binding_v1_20260519_141943",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\webui_execute_master_ai_binding_v1_20260519_141943",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 14327808,
+      "mtime": "2026-05-19T07:19:43.116409+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\WEBUI_FLOW_AUDIT_AND_BIND_FIX_V1_1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\WEBUI_FLOW_AUDIT_AND_BIND_FIX_V1_1",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 28655616,
+      "mtime": "2026-05-19T07:41:30.183125+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\webui_force_execute_master_ai_tool_v1",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\webui_force_execute_master_ai_tool_v1",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 14327808,
+      "mtime": "2026-05-19T07:21:42.691407+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\webui_pretty_auto_exec_stable_20260519_165857",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\webui_pretty_auto_exec_stable_20260519_165857",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 14333040,
+      "mtime": "2026-05-19T09:58:57.355800+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12_webui_final_output_interceptor_20260518_201143",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12_webui_final_output_interceptor_20260518_201143",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 12165,
+      "mtime": "2026-05-18T13:11:43.612029+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12b_final_renderer_project_fix_20260518_202041",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12b_final_renderer_project_fix_20260518_202041",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 10107,
+      "mtime": "2026-05-18T13:20:41.931317+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12c_project_name_parser_fix_20260518_202403",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12c_project_name_parser_fix_20260518_202403",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 10681,
+      "mtime": "2026-05-18T13:24:03.189319+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12d_intent_dispatch_fix_20260518_203139",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12d_intent_dispatch_fix_20260518_203139",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 7409,
+      "mtime": "2026-05-18T13:31:39.853927+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12e3_intent_detector_bridge_fix_20260518_203639",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12e3_intent_detector_bridge_fix_20260518_203639",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 3456,
+      "mtime": "2026-05-18T13:36:39.931660+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12e_intent_detector_hotfix_20260518_203445",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12e_intent_detector_hotfix_20260518_203445",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 10218,
+      "mtime": "2026-05-18T13:34:45.894333+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12f_body_bridge_hotfix_20260518_215950",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12f_body_bridge_hotfix_20260518_215950",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 5357,
+      "mtime": "2026-05-18T14:59:50.610890+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12g_exact_outlet_response_bridge_20260518_222335",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12g_exact_outlet_response_bridge_20260518_222335",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 8525,
+      "mtime": "2026-05-18T15:23:35.750013+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12i_replace_active_auto_vs1_filter_20260518_225314",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12i_replace_active_auto_vs1_filter_20260518_225314",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 7702,
+      "mtime": "2026-05-18T15:53:14.904250+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12j_master_controller_direct_result_fix_20260518_234435",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12j_master_controller_direct_result_fix_20260518_234435",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 7922,
+      "mtime": "2026-05-18T16:44:35.511485+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12k_master_controller_list_files_fix_20260518_234916",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12k_master_controller_list_files_fix_20260518_234916",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 1227,
+      "mtime": "2026-05-18T16:49:16.519502+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12l2_master_ai_nl_parser_hard_fix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12l2_master_ai_nl_parser_hard_fix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 14892,
+      "mtime": "2026-05-18T16:58:15.383871+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12l3_master_ai_nl_parser_safety_net",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12l3_master_ai_nl_parser_safety_net",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 18876,
+      "mtime": "2026-05-18T17:00:23.045985+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12l4_master_ai_mojibake_nl_fix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12l4_master_ai_mojibake_nl_fix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 23525,
+      "mtime": "2026-05-18T17:02:02.840298+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12l_master_ai_nl_parser_fix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12l_master_ai_nl_parser_fix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 9235,
+      "mtime": "2026-05-18T16:55:00.827454+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12m_openwebui_force_pipe_http_bridge",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12m_openwebui_force_pipe_http_bridge",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 7197,
+      "mtime": "2026-05-18T17:25:53.650295+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12n_filter_execution_bridge",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12n_filter_execution_bridge",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 14764368,
+      "mtime": "2026-05-18T17:35:55.734130+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x12o_tool_execute_master_ai_alias",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x12o_tool_execute_master_ai_alias",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 14327808,
+      "mtime": "2026-05-18T17:50:58.927305+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x13b_planner_import_repair",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x13b_planner_import_repair",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 4320,
+      "mtime": "2026-05-19T02:20:56.560117+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x13e1_native_binder_writefix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x13e1_native_binder_writefix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 4882,
+      "mtime": "2026-05-19T02:31:17.229745+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x13e2_native_binder_final_repair",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x13e2_native_binder_final_repair",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 4904,
+      "mtime": "2026-05-19T02:51:51.588194+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x14a1_check_header_fix_20260519_185437",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x14a1_check_header_fix_20260519_185437",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 707,
+      "mtime": "2026-05-19T11:54:37.745150+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x14b_dynamic_project_resolver_20260519_190012",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x14b_dynamic_project_resolver_20260519_190012",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 7568,
+      "mtime": "2026-05-19T12:00:12.366267+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x14c1_windows_check_fix_20260519_190423",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x14c1_windows_check_fix_20260519_190423",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 1979,
+      "mtime": "2026-05-19T12:04:23.642879+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x14c_attach_orchestrator_to_add_task_20260519_190311",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x14c_attach_orchestrator_to_add_task_20260519_190311",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 8922,
+      "mtime": "2026-05-19T12:03:13.511968+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x5c2_unicodeescape_hotfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x5c2_unicodeescape_hotfix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 3631,
+      "mtime": "2026-05-18T06:48:39.957746+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x5c3_entrypoint_adapter_fix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x5c3_entrypoint_adapter_fix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 4142,
+      "mtime": "2026-05-18T06:53:20.745522+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x5c_operational_parser_fix_pack_20260518_134251",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x5c_operational_parser_fix_pack_20260518_134251",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 796,
+      "mtime": "2026-05-18T06:42:51.138695+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x5e2_payload_file_multistep_hotfix_20260518_141459",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x5e2_payload_file_multistep_hotfix_20260518_141459",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 4990,
+      "mtime": "2026-05-18T07:14:59.475199+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x5e3_payload_file_bridge_fix_20260518_141826",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x5e3_payload_file_bridge_fix_20260518_141826",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 10766,
+      "mtime": "2026-05-18T07:18:26.630752+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x6_full_20260518_143537",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x6_full_20260518_143537",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 5195,
+      "mtime": "2026-05-18T07:35:37.069280+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x6_payload_parser_hotfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x6_payload_parser_hotfix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 11276,
+      "mtime": "2026-05-18T07:37:38.219931+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x6a2_persistent_queue_check_hotfix",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x6a2_persistent_queue_check_hotfix",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 10754,
+      "mtime": "2026-05-18T07:25:18.977587+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "dir",
+      "src": "D:\\openwebui\\_backups\\x7_unreadable_cache_hotfix_20260518_144522",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\backups_old\\x7_unreadable_cache_hotfix_20260518_144522",
+      "reason": "Old rollback backup; preserve in archive, not delete",
+      "bytes": 13081,
+      "mtime": "2026-05-18T07:45:23.012737+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\082c4eee84b5_final_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\082c4eee84b5_final_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 2423,
+      "mtime": "2026-05-19T06:08:13.301506+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\1ff6ff7a610f_final_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\1ff6ff7a610f_final_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 2539,
+      "mtime": "2026-05-18T18:34:17.635134+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\autonomous_coder_v1_1_fix_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\autonomous_coder_v1_1_fix_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 5253,
+      "mtime": "2026-05-19T05:20:06.809759+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\autonomous_coder_v1_1_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\autonomous_coder_v1_1_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 1639,
+      "mtime": "2026-05-19T05:20:08.148922+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\autonomous_coder_v1_pack_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\autonomous_coder_v1_pack_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 8032,
+      "mtime": "2026-05-19T05:16:54.763283+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\autonomous_coder_v1_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\autonomous_coder_v1_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 2086,
+      "mtime": "2026-05-19T05:17:07.288033+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\c4f9e8ec3a97_final_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\c4f9e8ec3a97_final_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 3055,
+      "mtime": "2026-05-19T02:26:59.600223+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\e077e2cb0d5d_final_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\e077e2cb0d5d_final_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 3099,
+      "mtime": "2026-05-19T02:26:59.370993+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\e0a38003a56b_final_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\e0a38003a56b_final_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 2447,
+      "mtime": "2026-05-19T02:10:44.543005+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\fe3b3d2586eb_final_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\fe3b3d2586eb_final_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 3119,
+      "mtime": "2026-05-19T02:26:59.473178+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\real_use_v1_project_readme_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\real_use_v1_project_readme_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 418,
+      "mtime": "2026-05-19T04:15:02.142198+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\real_use_v2_project_health_audit_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\real_use_v2_project_health_audit_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 569,
+      "mtime": "2026-05-19T04:16:06.977507+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\real_use_v3_safe_repo_tools_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\real_use_v3_safe_repo_tools_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 419,
+      "mtime": "2026-05-19T04:23:14.338183+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\real_use_v5_safe_run_launcher_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\real_use_v5_safe_run_launcher_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 371,
+      "mtime": "2026-05-19T04:29:26.208874+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\real_use_v7_webui_command_router_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\real_use_v7_webui_command_router_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 6316,
+      "mtime": "2026-05-19T04:42:52.193863+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\real_use_v8_action_router_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\real_use_v8_action_router_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 3334,
+      "mtime": "2026-05-19T04:45:07.395050+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\real_use_v9_natural_command_api_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\real_use_v9_natural_command_api_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 2006,
+      "mtime": "2026-05-19T04:46:44.061987+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\x13n_latest_project_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\x13n_latest_project_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 3662,
+      "mtime": "2026-05-19T03:37:29.447377+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\x13v_real_task_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\x13v_real_task_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 616,
+      "mtime": "2026-05-19T03:57:45.257890+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\x13w_list_project_files_v4_1_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\x13w_list_project_files_v4_1_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 709,
+      "mtime": "2026-05-19T03:59:09.939227+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\x13x_webui_api_handoff_probe_handoff_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\x13x_webui_api_handoff_probe_handoff_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 1431,
+      "mtime": "2026-05-19T04:02:43.107085+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\x13x_webui_api_handoff_probe_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\x13x_webui_api_handoff_probe_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 732,
+      "mtime": "2026-05-19T04:02:43.089706+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\x13y_live_api_probe_api_shim_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\x13y_live_api_probe_api_shim_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 1317,
+      "mtime": "2026-05-19T04:04:00.509424+00:00"
+    },
+    {
+      "action": "ARCHIVE",
+      "kind": "file",
+      "src": "D:\\openwebui\\runtime\\reports\\x13y_live_api_probe_report.json",
+      "dest": "D:\\openwebui\\archive\\consolidated_20260521_144507\\runtime_reports_old\\x13y_live_api_probe_report.json",
+      "reason": "Old runtime report; preserve in archive to reduce live reports noise",
+      "bytes": 700,
+      "mtime": "2026-05-19T04:04:00.492717+00:00"
+    }
+  ],
+  "errors": []
+}

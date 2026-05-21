@@ -1,9 +1,45 @@
 ﻿{
-    "updated_at":  "2026-05-21T21:45:04.0394474+07:00",
+    "updated_at":  "2026-05-21T21:45:18.5258640+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x102b_check_log.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102b_check_log.txt",
+    "latest":  "x102c_check_log.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102c_check_log.txt",
     "recent":  [
+                   {
+                       "name":  "x102c_check_log.txt",
+                       "size":  96,
+                       "modified_at":  "2026-05-21T21:45:10.8047235+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102c_check_log.txt"
+                   },
+                   {
+                       "name":  "x102c_check_result.json",
+                       "size":  125,
+                       "modified_at":  "2026-05-21T21:45:10.7979320+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102c_check_result.json"
+                   },
+                   {
+                       "name":  "x102c_apply_log.txt",
+                       "size":  430,
+                       "modified_at":  "2026-05-21T21:45:07.4589849+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102c_apply_log.txt"
+                   },
+                   {
+                       "name":  "x102c_archive_consolidation_20260521_144507.json",
+                       "size":  62663,
+                       "modified_at":  "2026-05-21T21:45:07.4344030+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102c_archive_consolidation_20260521_144507.json"
+                   },
+                   {
+                       "name":  "x102c_latest_archive_consolidation_summary.txt",
+                       "size":  20819,
+                       "modified_at":  "2026-05-21T21:45:07.4323699+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102c_latest_archive_consolidation_summary.txt"
+                   },
+                   {
+                       "name":  "x102c_archive_consolidation_20260521_144507.txt",
+                       "size":  20819,
+                       "modified_at":  "2026-05-21T21:45:07.4318481+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102c_archive_consolidation_20260521_144507.txt"
+                   },
                    {
                        "name":  "x102b_check_log.txt",
                        "size":  108,
@@ -11,16 +47,16 @@
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102b_check_log.txt"
                    },
                    {
-                       "name":  "x102b_latest_safe_clean_summary.txt",
-                       "size":  10115,
-                       "modified_at":  "2026-05-21T21:40:57.3132077+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102b_latest_safe_clean_summary.txt"
-                   },
-                   {
                        "name":  "x102b_safe_clean_20260521_214036.txt",
                        "size":  10115,
                        "modified_at":  "2026-05-21T21:40:57.3132077+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102b_safe_clean_20260521_214036.txt"
+                   },
+                   {
+                       "name":  "x102b_latest_safe_clean_summary.txt",
+                       "size":  10115,
+                       "modified_at":  "2026-05-21T21:40:57.3132077+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x102b_latest_safe_clean_summary.txt"
                    },
                    {
                        "name":  "x102b_safe_clean_20260521_214036.json",
@@ -87,42 +123,6 @@
                        "size":  864,
                        "modified_at":  "2026-05-21T21:20:53.9507925+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_apply_wrapper_log.txt"
-                   },
-                   {
-                       "name":  "x101c_apply_log.txt",
-                       "size":  625,
-                       "modified_at":  "2026-05-21T21:20:53.9417596+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_apply_log.txt"
-                   },
-                   {
-                       "name":  "x101c_source_audit.txt",
-                       "size":  329,
-                       "modified_at":  "2026-05-21T21:20:53.9406326+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_source_audit.txt"
-                   },
-                   {
-                       "name":  "x101c_compile_log.txt",
-                       "size":  0,
-                       "modified_at":  "2026-05-21T21:20:53.9396356+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_compile_log.txt"
-                   },
-                   {
-                       "name":  "x101b_report_block_context.txt",
-                       "size":  6042,
-                       "modified_at":  "2026-05-21T21:13:44.2216731+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101b_report_block_context.txt"
-                   },
-                   {
-                       "name":  "x101b_check_log.txt",
-                       "size":  89,
-                       "modified_at":  "2026-05-21T21:11:48.1324872+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101b_check_log.txt"
-                   },
-                   {
-                       "name":  "x101b_check_source_audit.txt",
-                       "size":  159,
-                       "modified_at":  "2026-05-21T21:11:48.0978175+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101b_check_source_audit.txt"
                    }
                ]
 }
