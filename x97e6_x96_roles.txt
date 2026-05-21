@@ -33,9 +33,9 @@ else "VERIFY")); n += 1
 for the confirmed cause only.", "Patch must go through _patch_inbox and X75 runner.", "VERIFY")); n += 1
   core\x96_master_planner_reviewer.py:84:
 > core\x96_master_planner_reviewer.py:85:    steps.append(make_step(n, "VERIFY", "Run focused checks and collect 
-[REDACTED]/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
+pass/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
 > core\x96_master_planner_reviewer.py:86:    steps.append(make_step(n, "REPORT", "Summarize worker results for MASTER 
-review.", "Report must state [REDACTED]/fail, evidence, and remaining risk.", None)); n += 1
+review.", "Report must state pass/fail, evidence, and remaining risk.", None)); n += 1
   core\x96_master_planner_reviewer.py:87:
   core\x96_master_planner_reviewer.py:93:        "release": RELEASE,
 > core\x96_master_planner_reviewer.py:94:        "kind": "master_execution_plan",
@@ -52,7 +52,7 @@ review -> WebUI",
   core\x96_master_planner_reviewer.py:113:        "steps": steps,
 > core\x96_master_planner_reviewer.py:114:        "master_review_policy": {
 > core\x96_master_planner_reviewer.py:115:            "master_must_review_report": True,
-> core\x96_master_planner_reviewer.py:116:            "[REDACTED]_condition": "VERIFY ok and REPORT has evidence",
+> core\x96_master_planner_reviewer.py:116:            "pass_condition": "VERIFY ok and REPORT has evidence",
   core\x96_master_planner_reviewer.py:117:            "fail_action": "retry step or use limited fallback then send 
 updated instruction to child worker",
 > core\x96_master_planner_reviewer.py:118:            "final_output_owner": "MASTER",
@@ -85,7 +85,7 @@ worker_report.get("report_file") or worker_report.get("summary")
   core\x96_master_planner_reviewer.py:170:    plan = build_plan(task)
 > core\x96_master_planner_reviewer.py:171:    fake_worker_report = {
   core\x96_master_planner_reviewer.py:172:        "ok": True,
-> core\x96_master_planner_reviewer.py:173:        "summary": "VERIFY [REDACTED]ed with evidence log.",
+> core\x96_master_planner_reviewer.py:173:        "summary": "VERIFY passed with evidence log.",
   core\x96_master_planner_reviewer.py:174:        "evidence": str(RUNTIME / "temp"),
 > core\x96_master_planner_reviewer.py:175:        "report_file": str(REPORT_DIR / "x96_selftest_report.json"),
   core\x96_master_planner_reviewer.py:176:        "fallback_calls_used": 0,
@@ -111,7 +111,7 @@ plan.get("steps", [])),
 > core\x96_master_planner_reviewer.py:200:    parser = argparse.ArgumentParser(description="X96 Master 
 planner/reviewer")
   core\x96_master_planner_reviewer.py:201:    sub = parser.add_subparsers(dest="cmd", required=True)
-  core\x96_master_planner_reviewer.py:209:    p.add_argument("--ta[REDACTED_OPENAI_[REDACTED]]", required=True)
+  core\x96_master_planner_reviewer.py:209:    p.add_argument("--ta[REDACTED_OPENAI_KEY]", required=True)
 > core\x96_master_planner_reviewer.py:210:    p.add_argument("--report-json", required=True)
   core\x96_master_planner_reviewer.py:211:
   core\x96_master_planner_reviewer.py:218:    elif args.cmd == "review":

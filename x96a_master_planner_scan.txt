@@ -2,7 +2,7 @@
   D:\openwebui\core\agent_con.py:34:        "warmup",
   D:\openwebui\core\agent_con.py:35:        "reply ok",
 > D:\openwebui\core\agent_con.py:36:        "tiny hello report",
-  D:\openwebui\core\agent_con.py:37:        "return [REDACTED]/fail",
+  D:\openwebui\core\agent_con.py:37:        "return pass/fail",
   D:\openwebui\core\agent_con.py:38:        "phase 2b healthcheck",
   D:\openwebui\core\agent_con.py:39:        "test phase2b",
   D:\openwebui\core\agent_con.py:40:    ]
@@ -20,7 +20,7 @@ f"auto_exec_{utc_now().replace(':','').replace('-','')}.json"
 indent=2), encoding="utf-8")
 > D:\openwebui\core\ai_local_os_auto_exec_hook.py:180:        report["artifact"] = str(out)
   D:\openwebui\core\ai_local_os_auto_exec_hook.py:181:    except Exception:
-  D:\openwebui\core\ai_local_os_auto_exec_hook.py:182:        [REDACTED]
+  D:\openwebui\core\ai_local_os_auto_exec_hook.py:182:        pass
 > D:\openwebui\core\ai_local_os_auto_exec_hook.py:183:    return report
   D:\openwebui\core\ai_local_os_auto_exec_hook.py:184:
   D:\openwebui\core\ai_local_os_auto_exec_hook.py:185:
@@ -51,7 +51,7 @@ None
   D:\openwebui\core\ai_local_os_integration_final.py:24:
 > D:\openwebui\core\ai_local_os_integration_final.py:25:SAFE_ACTIONS = {"status", "python", "powershell", "git_audit", 
 "repo_snapshot", "planner", "echo"}
-  D:\openwebui\core\ai_local_os_integration_final.py:26:DANGEROUS_[REDACTED]S = [
+  D:\openwebui\core\ai_local_os_integration_final.py:26:DANGEROUS_TOKENS = [
   D:\openwebui\core\ai_local_os_integration_final.py:27:    "Remove-Item -Recurse -Force", "rm -rf", "format ", "del 
 /s", "rmdir /s", "git reset --hard",
   D:\openwebui\core\ai_local_os_integration_final.py:28:    "git clean -fd", "shutdown", "Stop-Computer", 
@@ -328,14 +328,14 @@ handle_add_task_payload as _x91_handle_add_task_payload
   D:\openwebui\core\master_ai_bridge.py:266:    except Exception as _x15d_e:
   D:\openwebui\core\master_ai_bridge.py:267:        return {
   D:\openwebui\core\master_ai_bridge.py:268:            'ok': False,
-  D:\openwebui\core\master_ai_bridge.py:299:        [REDACTED]
+  D:\openwebui\core\master_ai_bridge.py:299:        pass
   D:\openwebui\core\master_ai_bridge.py:300:
 > D:\openwebui\core\master_ai_bridge.py:301:    # WEBUI_ADD_TASK_BRIDGE_V1_1_PATCHED
   D:\openwebui\core\master_ai_bridge.py:302:    data = request.get_json(silent=True)
   D:\openwebui\core\master_ai_bridge.py:303:
   D:\openwebui\core\master_ai_bridge.py:304:    if data is None:
   D:\openwebui\core\master_ai_bridge.py:305:        data = {}
-  D:\openwebui\core\master_ai_bridge.py:323:        [REDACTED]
+  D:\openwebui\core\master_ai_bridge.py:323:        pass
   D:\openwebui\core\master_ai_bridge.py:324:
 > D:\openwebui\core\master_ai_bridge.py:325:    return 
 jsonify(x93_normalize_add_task_response(handle_add_task_payload(data)))
@@ -439,7 +439,7 @@ reviewer.")
 > D:\openwebui\core\master_ai_queue.py:155:    data = read_json(reviewing_path)
   D:\openwebui\core\master_ai_queue.py:156:
 > D:\openwebui\core\master_ai_queue.py:157:    if reviewer_result["return_code"] == 0:
-> D:\openwebui\core\master_ai_queue.py:158:        append_event(data, "REVIEW_[REDACTED]", "Reviewer accepted result")
+> D:\openwebui\core\master_ai_queue.py:158:        append_event(data, "REVIEW_PASS", "Reviewer accepted result")
 > D:\openwebui\core\master_ai_queue.py:159:        final_path = save_final_result(data, coder_result, reviewer_result, 
 "success")
 > D:\openwebui\core\master_ai_queue.py:160:        move_task(reviewing_path, COMPLETED_DIR, data, "completed")
@@ -533,12 +533,12 @@ float = 0.25):
   D:\openwebui\core\phase2c3_model_router.py:71:
   D:\openwebui\core\phase2c3_model_router.py:73:            return "code"
   D:\openwebui\core\phase2c3_model_router.py:74:
-> D:\openwebui\core\phase2c3_model_router.py:75:        if self._contains_[REDACTED]word(prompt, cfg.get("reviewer", 
-{}).get("[REDACTED]words", [])):
+> D:\openwebui\core\phase2c3_model_router.py:75:        if self._contains_keyword(prompt, cfg.get("reviewer", 
+{}).get("keywords", [])):
 > D:\openwebui\core\phase2c3_model_router.py:76:            return "reviewer"
   D:\openwebui\core\phase2c3_model_router.py:77:
-  D:\openwebui\core\phase2c3_model_router.py:78:        if self._contains_[REDACTED]word(prompt, cfg.get("chat", 
-{}).get("[REDACTED]words", [])):
+  D:\openwebui\core\phase2c3_model_router.py:78:        if self._contains_keyword(prompt, cfg.get("chat", 
+{}).get("keywords", [])):
   D:\openwebui\core\phase2c3_model_router.py:79:            return "chat"
   D:\openwebui\core\phase2c3_model_router.py:80:
   D:\openwebui\core\phase3_final_orchestration_registry.py:22:def discover_phase3_components():
@@ -573,7 +573,7 @@ bus.build_context_window("research", limit=3)
   D:\openwebui\core\phase3_final_orchestration_registry.py:107:    return {
   D:\openwebui\core\phase3_final_orchestration_registry.py:108:        "phase": "3",
   D:\openwebui\core\phase3_final_orchestration_registry.py:109:        "name": "AI ORCHESTRATION",
-  D:\openwebui\core\phase3_final_orchestration_registry.py:110:        "status": "[REDACTED]_READY",
+  D:\openwebui\core\phase3_final_orchestration_registry.py:110:        "status": "PASS_READY",
   D:\openwebui\core\phase3_final_orchestration_registry.py:111:        "items": {
 > D:\openwebui\core\phase3_final_orchestration_registry.py:112:            "planner_agent": True,
   D:\openwebui\core\phase3_final_orchestration_registry.py:113:            "scout_research_agent": True,
@@ -604,7 +604,7 @@ report."""
   D:\openwebui\core\phase5e_job_lifecycle.py:105:    jid = _safe_job_id(job.get("job_id") or job_path.stem)
   D:\openwebui\core\phase5e_job_lifecycle.py:106:    job["job_id"] = jid
   D:\openwebui\core\phase5e_job_lifecycle.py:117:    except Exception:
-  D:\openwebui\core\phase5e_job_lifecycle.py:118:        [REDACTED]
+  D:\openwebui\core\phase5e_job_lifecycle.py:118:        pass
 > D:\openwebui\core\phase5e_job_lifecycle.py:119:    write_report(job)
   D:\openwebui\core\phase5e_job_lifecycle.py:120:    return final_path
   D:\openwebui\core\phase5e_job_lifecycle.py:121:
@@ -750,9 +750,9 @@ text and "real files on disk" in text
 > D:\openwebui\core\real_use_v2_project_health_audit.py:9:REPORTS = ROOT / "runtime" / "reports"
   D:\openwebui\core\real_use_v2_project_health_audit.py:10:RELEASE = "AI_LOCAL_OS_REAL_USE_V2_PROJECT_HEALTH_AUDIT"
   D:\openwebui\core\real_use_v2_project_health_audit.py:11:
-  D:\openwebui\core\real_use_v2_project_health_audit.py:12:[REDACTED]_PATTERNS = [
-  D:\openwebui\core\real_use_v2_project_health_audit.py:13:    ("api_[REDACTED]_like", 
-re.compile(r"(?i)(api[_-]?[REDACTED]|[REDACTED]|[REDACTED]|[REDACTED])\s*[:=]\s*['\"]?[^'\"\n,}]{6,}")),
+  D:\openwebui\core\real_use_v2_project_health_audit.py:12:SECRET_PATTERNS = [
+  D:\openwebui\core\real_use_v2_project_health_audit.py:13:    ("api_key_like", 
+re.compile(r"(?i)(api[_-]?key|secret|password|token)\s*[:=]\s*['\"]?[^'\"\n,}]{6,}")),
   D:\openwebui\core\real_use_v2_project_health_audit.py:72:def run():
   D:\openwebui\core\real_use_v2_project_health_audit.py:73:    RUNTIME.mkdir(parents=True, exist_ok=True)
 > D:\openwebui\core\real_use_v2_project_health_audit.py:74:    REPORTS.mkdir(parents=True, exist_ok=True)
@@ -771,7 +771,7 @@ p.is_file()]
   D:\openwebui\core\real_use_v2_project_health_audit.py:116:    md.append("## Next real-use recommendation")
   D:\openwebui\core\real_use_v2_project_health_audit.py:117:    md.append("")
 > D:\openwebui\core\real_use_v2_project_health_audit.py:118:    md.append("Use this report to decide the first real 
-repo edit: fix compile errors, separate [REDACTED]s from configs, or add safer run scripts.")
+repo edit: fix compile errors, separate secrets from configs, or add safer run scripts.")
   D:\openwebui\core\real_use_v2_project_health_audit.py:119:    md.append("")
   D:\openwebui\core\real_use_v2_project_health_audit.py:120:
 > D:\openwebui\core\real_use_v2_project_health_audit.py:121:    report_md = PROJECT / "PROJECT_HEALTH_REPORT.md"
@@ -827,8 +827,8 @@ report_md.exists() else ""
   D:\openwebui\core\real_use_v4_safe_config_sanitizer.py:7:OUT_DIR = PROJECT / "_sanitized_configs"
 > D:\openwebui\core\real_use_v4_safe_config_sanitizer.py:8:REPORT = PROJECT / "CONFIG_SANITIZER_REPORT.md"
   D:\openwebui\core\real_use_v4_safe_config_sanitizer.py:9:
-  D:\openwebui\core\real_use_v4_safe_config_sanitizer.py:10:[REDACTED]_[REDACTED]S = 
-re.compile(r"(?i)(api|[REDACTED]|[REDACTED]|[REDACTED]|[REDACTED]|[REDACTED]|chatid|chat_id)")
+  D:\openwebui\core\real_use_v4_safe_config_sanitizer.py:10:SECRET_KEYS = 
+re.compile(r"(?i)(api|key|secret|token|password|pass|chatid|chat_id)")
   D:\openwebui\core\real_use_v4_safe_config_sanitizer.py:11:
   D:\openwebui\core\real_use_v4_safe_config_sanitizer.py:12:def now():
   D:\openwebui\core\real_use_v4_safe_config_sanitizer.py:50:        rows.append(item)
@@ -1119,11 +1119,11 @@ bridge.get("final_report") or bridge.get("message") or bridge.get("result")
 + "Z"
   D:\openwebui\core\x13f_execution_memory_retry.py:70:    "max_retries": 2,
   D:\openwebui\core\x13f_execution_memory_retry.py:71:    "base_delay_seconds": 0,
-> D:\openwebui\core\x13f_execution_memory_retry.py:72:    "retryable_error_[REDACTED]words": [
+> D:\openwebui\core\x13f_execution_memory_retry.py:72:    "retryable_error_keywords": [
   D:\openwebui\core\x13f_execution_memory_retry.py:73:        "timeout", "temporarily", "connection", "locked", 
 "busy", "rate", "empty", "json", "decode"
   D:\openwebui\core\x13f_execution_memory_retry.py:74:    ],
-> D:\openwebui\core\x13f_execution_memory_retry.py:75:    "non_retryable_error_[REDACTED]words": [
+> D:\openwebui\core\x13f_execution_memory_retry.py:75:    "non_retryable_error_keywords": [
   D:\openwebui\core\x13f_execution_memory_retry.py:76:        "permission denied", "syntaxerror", "indentationerror", 
 "filenotfounderror"
   D:\openwebui\core\x13f_execution_memory_retry.py:77:    ]
@@ -1159,14 +1159,14 @@ Optional[Dict[str, Any]] = None):
 bool]:
   D:\openwebui\core\x13f_execution_memory_retry.py:159:        name = type(exc).__name__
   D:\openwebui\core\x13f_execution_memory_retry.py:160:        msg = str(exc).lower()
-> D:\openwebui\core\x13f_execution_memory_retry.py:161:        for [REDACTED]word in 
-self.policy.get("non_retryable_error_[REDACTED]words", []):
-  D:\openwebui\core\x13f_execution_memory_retry.py:162:            if [REDACTED]word.lower() in msg or [REDACTED]word.lower() in 
+> D:\openwebui\core\x13f_execution_memory_retry.py:161:        for keyword in 
+self.policy.get("non_retryable_error_keywords", []):
+  D:\openwebui\core\x13f_execution_memory_retry.py:162:            if keyword.lower() in msg or keyword.lower() in 
 name.lower():
   D:\openwebui\core\x13f_execution_memory_retry.py:163:                return name, False
-> D:\openwebui\core\x13f_execution_memory_retry.py:164:        for [REDACTED]word in 
-self.policy.get("retryable_error_[REDACTED]words", []):
-  D:\openwebui\core\x13f_execution_memory_retry.py:165:            if [REDACTED]word.lower() in msg or [REDACTED]word.lower() in 
+> D:\openwebui\core\x13f_execution_memory_retry.py:164:        for keyword in 
+self.policy.get("retryable_error_keywords", []):
+  D:\openwebui\core\x13f_execution_memory_retry.py:165:            if keyword.lower() in msg or keyword.lower() in 
 name.lower():
   D:\openwebui\core\x13f_execution_memory_retry.py:166:                return name, True
   D:\openwebui\core\x13f_execution_memory_retry.py:167:        return name, True
@@ -1441,14 +1441,14 @@ current report without writing")
   D:\openwebui\core\x13h_runtime_status_api.py:58:        },
   D:\openwebui\core\x13h_runtime_status_api.py:59:    }
   D:\openwebui\core\x13h_runtime_status_api.py:60:
-> D:\openwebui\core\x13h_runtime_status_api.py:61:    for [REDACTED], path in [("execution_memory_lines", memory_log), 
+> D:\openwebui\core\x13h_runtime_status_api.py:61:    for key, path in [("execution_memory_lines", memory_log), 
 ("retry_history_lines", retry_log)]:
   D:\openwebui\core\x13h_runtime_status_api.py:62:        if path.exists():
   D:\openwebui\core\x13h_runtime_status_api.py:63:            try:
-  D:\openwebui\core\x13h_runtime_status_api.py:64:                status["logs"][[REDACTED]] = 
+  D:\openwebui\core\x13h_runtime_status_api.py:64:                status["logs"][key] = 
 len(path.read_text(encoding="utf-8", errors="ignore").splitlines())
   D:\openwebui\core\x13h_runtime_status_api.py:65:            except Exception:
-  D:\openwebui\core\x13h_runtime_status_api.py:66:                status["logs"][[REDACTED]] = -1
+  D:\openwebui\core\x13h_runtime_status_api.py:66:                status["logs"][key] = -1
   D:\openwebui\core\x13h_runtime_status_api.py:67:
 > D:\openwebui\core\x13h_runtime_status_api.py:68:    missing_required = [k for k, v in status["inputs"].items() if k 
 in ("latest_report", "health_report") and not v["exists"]]
@@ -1628,11 +1628,11 @@ mutation",
   D:\openwebui\core\x13q_integration_smoke_selftest.py:161:        "mesh_status": "ready" if compile_ok else "blocked",
   D:\openwebui\core\x13q_integration_smoke_selftest.py:162:    }
   D:\openwebui\core\x13q_integration_smoke_selftest.py:163:    project = {
-  D:\openwebui\core\x13q_integration_smoke_selftest.py:197:    runtime_[REDACTED] = compile_ok and artifacts_ok and 
+  D:\openwebui\core\x13q_integration_smoke_selftest.py:197:    runtime_pass = compile_ok and artifacts_ok and 
 (x13j_runtime_ok or mode == "check_only")
   D:\openwebui\core\x13q_integration_smoke_selftest.py:198:
 > D:\openwebui\core\x13q_integration_smoke_selftest.py:199:    report = {
-  D:\openwebui\core\x13q_integration_smoke_selftest.py:200:        "ok": bool(runtime_[REDACTED]),
+  D:\openwebui\core\x13q_integration_smoke_selftest.py:200:        "ok": bool(runtime_pass),
   D:\openwebui\core\x13q_integration_smoke_selftest.py:201:        "release": RELEASE,
   D:\openwebui\core\x13q_integration_smoke_selftest.py:202:        "checked_at": now(),
   D:\openwebui\core\x13q_integration_smoke_selftest.py:203:        "root": str(ROOT),
@@ -1967,7 +1967,7 @@ relevant files before editing.")
   D:\openwebui\core\x13_consolidated_planner_agent.py:61:        add("Create safe patch", "Prepare apply/check/cleanup 
 scripts with backup discipline.")
 > D:\openwebui\core\x13_consolidated_planner_agent.py:62:        add("Run validation", "Execute checks and report 
-[REDACTED]/FAIL with exact next action.")
+PASS/FAIL with exact next action.")
   D:\openwebui\core\x13_consolidated_planner_agent.py:63:    elif any(k in t for k in ["dá»n", "don", "cleanup", 
 "clean", "rÃ¡c", "rac"]):
   D:\openwebui\core\x13_consolidated_planner_agent.py:64:        add("Classify removable artifacts", "Separate active 
@@ -2075,8 +2075,8 @@ for j in jobs}
 concurrent.futures.as_completed(future_map):
   D:\openwebui\core\x14g_multi_job_parallel_retry.py:165:            completed.append(fut.result())
   D:\openwebui\core\x14g_multi_job_parallel_retry.py:166:
-  D:\openwebui\core\x14g_multi_job_parallel_retry.py:167:    completed.sort([REDACTED]=lambda x: x.index)
-  D:\openwebui\core\x14g_multi_job_parallel_retry.py:168:    ok = all(j.status == "[REDACTED]" for j in completed)
+  D:\openwebui\core\x14g_multi_job_parallel_retry.py:167:    completed.sort(key=lambda x: x.index)
+  D:\openwebui\core\x14g_multi_job_parallel_retry.py:168:    ok = all(j.status == "pass" for j in completed)
 > D:\openwebui\core\x14g_multi_job_parallel_retry.py:169:    report = {
   D:\openwebui\core\x14g_multi_job_parallel_retry.py:170:        "ok": ok,
 > D:\openwebui\core\x14g_multi_job_parallel_retry.py:171:        "release": "X14G_MULTI_JOB_PARALLEL_RETRY",
@@ -2089,8 +2089,8 @@ concurrent.futures.as_completed(future_map):
 > D:\openwebui\core\x14g_multi_job_parallel_retry.py:177:        "retry_per_job_enabled": True,
   D:\openwebui\core\x14g_multi_job_parallel_retry.py:178:        "summary": {
   D:\openwebui\core\x14g_multi_job_parallel_retry.py:179:            "total_jobs": len(completed),
-  D:\openwebui\core\x14g_multi_job_parallel_retry.py:180:            "[REDACTED]ed": sum(1 for j in completed if j.status == 
-"[REDACTED]"),
+  D:\openwebui\core\x14g_multi_job_parallel_retry.py:180:            "passed": sum(1 for j in completed if j.status == 
+"pass"),
   D:\openwebui\core\x14g_multi_job_parallel_retry.py:181:            "failed": sum(1 for j in completed if j.status == 
 "fail"),
   D:\openwebui\core\x14g_multi_job_parallel_retry.py:184:        "jobs": [asdict(j) for j in completed],
@@ -2142,7 +2142,7 @@ tests.
   D:\openwebui\core\x14h_batch_report_merger.py:58:
 > D:\openwebui\core\x14h_batch_report_merger.py:59:def build_final_report(source: Dict[str, Any]) -> Dict[str, Any]:
   D:\openwebui\core\x14h_batch_report_merger.py:60:    jobs = [normalize_job(j) for j in source.get("jobs", [])]
-  D:\openwebui\core\x14h_batch_report_merger.py:61:    jobs.sort([REDACTED]=lambda j: j["index"])
+  D:\openwebui\core\x14h_batch_report_merger.py:61:    jobs.sort(key=lambda j: j["index"])
   D:\openwebui\core\x14h_batch_report_merger.py:62:
   D:\openwebui\core\x14h_batch_report_merger.py:63:    total = len(jobs)
   D:\openwebui\core\x14h_batch_report_merger.py:69:    final_lines: List[str] = []
@@ -2150,10 +2150,10 @@ tests.
 > D:\openwebui\core\x14h_batch_report_merger.py:71:        final_lines.append("No jobs found to merge. Run X14G first 
 or provide a report file.")
   D:\openwebui\core\x14h_batch_report_merger.py:72:    else:
-  D:\openwebui\core\x14h_batch_report_merger.py:73:        final_lines.append(f"Batch finished: {[REDACTED]ed}/{total} jobs 
-[REDACTED]ed, {failed} failed, {retried} retried.")
+  D:\openwebui\core\x14h_batch_report_merger.py:73:        final_lines.append(f"Batch finished: {passed}/{total} jobs 
+passed, {failed} failed, {retried} retried.")
   D:\openwebui\core\x14h_batch_report_merger.py:74:        for j in jobs:
-  D:\openwebui\core\x14h_batch_report_merger.py:75:            marker = "[REDACTED]" if j["status"] == "[REDACTED]" else "FAIL"
+  D:\openwebui\core\x14h_batch_report_merger.py:75:            marker = "PASS" if j["status"] == "pass" else "FAIL"
   D:\openwebui\core\x14h_batch_report_merger.py:77:            final_lines.append(f"[{marker}] #{j['index']} 
 {j['kind']} via {j['model']}: {detail}")
   D:\openwebui\core\x14h_batch_report_merger.py:78:
@@ -2162,13 +2162,13 @@ or provide a report file.")
   D:\openwebui\core\x14h_batch_report_merger.py:81:        next_action = "run_x14g_first"
   D:\openwebui\core\x14h_batch_report_merger.py:82:
   D:\openwebui\core\x14h_batch_report_merger.py:83:    return {
-  D:\openwebui\core\x14h_batch_report_merger.py:91:            "decision": "[REDACTED]" if ok else "FAIL",
+  D:\openwebui\core\x14h_batch_report_merger.py:91:            "decision": "PASS" if ok else "FAIL",
   D:\openwebui\core\x14h_batch_report_merger.py:92:            "next_action": next_action,
 > D:\openwebui\core\x14h_batch_report_merger.py:93:            "requires_human_review": failed > 0,
   D:\openwebui\core\x14h_batch_report_merger.py:94:        },
   D:\openwebui\core\x14h_batch_report_merger.py:95:        "summary": {
   D:\openwebui\core\x14h_batch_report_merger.py:96:            "total_jobs": total,
-  D:\openwebui\core\x14h_batch_report_merger.py:97:            "[REDACTED]ed": [REDACTED]ed,
+  D:\openwebui\core\x14h_batch_report_merger.py:97:            "passed": passed,
   D:\openwebui\core\x14h_batch_report_merger.py:100:        },
   D:\openwebui\core\x14h_batch_report_merger.py:101:        "jobs": jobs,
 > D:\openwebui\core\x14h_batch_report_merger.py:102:        "final_report_text": "\n".join(final_lines),
@@ -2265,12 +2265,12 @@ render_report
   D:\openwebui\core\x14_bridge_adapter.py:20:    first = worker_results[0] if worker_results else {}
   D:\openwebui\core\x14_bridge_adapter.py:21:
   D:\openwebui\core\x14_bridge_adapter.py:22:    return {
-> D:\openwebui\core\x14_bridge_adapter.py:23:        "ok": report.get("status") == "[REDACTED]",
+> D:\openwebui\core\x14_bridge_adapter.py:23:        "ok": report.get("status") == "PASS",
   D:\openwebui\core\x14_bridge_adapter.py:24:        "action": "x14_master_orchestrated",
 > D:\openwebui\core\x14_bridge_adapter.py:25:        "bridge": "WEBUI_ADD_TASK_BRIDGE_V1",
   D:\openwebui\core\x14_bridge_adapter.py:26:        "bridge_patch": "X14C_ORCHESTRATOR_ATTACHED",
   D:\openwebui\core\x14_bridge_adapter.py:27:        "command": task,
-> D:\openwebui\core\x14_bridge_adapter.py:28:        "error": None if report.get("status") == "[REDACTED]" else 
+> D:\openwebui\core\x14_bridge_adapter.py:28:        "error": None if report.get("status") == "PASS" else 
 report.get("review", {}).get("reason"),
 > D:\openwebui\core\x14_bridge_adapter.py:29:        "workflow": report.get("workflow"),
 > D:\openwebui\core\x14_bridge_adapter.py:30:        "master_model": report.get("master_model"),
@@ -2353,7 +2353,7 @@ Agent", RUNNER_MODEL, task, f"Project:{project}"), "checks": checks}
 Dict[str, Any]:
   D:\openwebui\core\x14_master_orchestrator.py:178:    bad = [r for r in results if r.get("status") != "ok"]
 > D:\openwebui\core\x14_master_orchestrator.py:179:    decision = "accept" if not bad else "retry_needed"
-  D:\openwebui\core\x14_master_orchestrator.py:180:    reason = "All six-agent workflow stages [REDACTED]ed." if not bad 
+  D:\openwebui\core\x14_master_orchestrator.py:180:    reason = "All six-agent workflow stages passed." if not bad 
 else f"{len(bad)} stage(s) failed."
 > D:\openwebui\core\x14_master_orchestrator.py:181:    return {"agent": "Reviewer Agent", "model": REVIEWER_MODEL, 
 "status": "ok", "decision": decision, "reason": reason, "probe": agent_probe("Reviewer Agent", REVIEWER_MODEL, task, 
@@ -2414,7 +2414,7 @@ run_id = "x14f_" + datetime.now().strftime("%Y%m%d_%H%M%S")
   D:\openwebui\core\x14_master_orchestrator.py:225:    stub = {"project": str(project), "intent": intent}
   D:\openwebui\core\x14_master_orchestrator.py:226:    memory = memory_agent(task, stub)
 > D:\openwebui\core\x14_master_orchestrator.py:227:    agent_results = [master, scout, coder, runner, reviewer, memory]
-> D:\openwebui\core\x14_master_orchestrator.py:228:    status = "[REDACTED]" if reviewer["decision"] == "accept" and 
+> D:\openwebui\core\x14_master_orchestrator.py:228:    status = "PASS" if reviewer["decision"] == "accept" and 
 memory["status"] == "ok" else "NEEDS_RETRY"
 > D:\openwebui\core\x14_master_orchestrator.py:229:    report: Dict[str, Any] = {"run_id": run_id, "created_at": 
 created_at, "status": status, "task": task, "workflow": "six_agent", "agent_roles": AGENT_ROLES, "project": 
@@ -2428,7 +2428,7 @@ str(mem_path); report_path.write_text(json.dumps(report, ensure_ascii=False, ind
   D:\openwebui\core\x14_master_orchestrator.py:234:    task = " ".join(argv[1:]).strip() if len(argv) > 1 else 
 "analyze project v4.1"
 > D:\openwebui\core\x14_master_orchestrator.py:235:    report = run_orchestrator(task); print(render_report(report)); 
-return 0 if report["status"] == "[REDACTED]" else 2
+return 0 if report["status"] == "PASS" else 2
   D:\openwebui\core\x14_master_orchestrator.py:236:
   D:\openwebui\core\x14_master_orchestrator.py:237:if __name__ == "__main__":
   D:\openwebui\core\x14_master_orchestrator.py:238:    raise SystemExit(main(sys.argv))
@@ -2457,7 +2457,7 @@ return 0 if report["status"] == "[REDACTED]" else 2
   D:\openwebui\core\x14_master_orchestrator_loop.py:93:You are AI Local OS Master Orchestrator.
 > D:\openwebui\core\x14_master_orchestrator_loop.py:94:Rules: local-first, no DB patch, no GitHub push, no destructive 
 command, qwen master plans/reviews, llama worker executes small jobs.
-  D:\openwebui\core\x14_master_orchestrator_loop.py:95:Return compact JSON only with [REDACTED]s: intent, jobs, risk.
+  D:\openwebui\core\x14_master_orchestrator_loop.py:95:Return compact JSON only with keys: intent, jobs, risk.
   D:\openwebui\core\x14_master_orchestrator_loop.py:96:Task: {task}
   D:\openwebui\core\x14_master_orchestrator_loop.py:97:Project: {project}
   D:\openwebui\core\x14_master_orchestrator_loop.py:98:""".strip()
@@ -2517,7 +2517,7 @@ encoding="utf-8")
 > D:\openwebui\core\x14_master_orchestrator_loop.py:230:def format_x14_report(report: Dict[str, Any]) -> str:
   D:\openwebui\core\x14_master_orchestrator_loop.py:231:    lines = []
   D:\openwebui\core\x14_master_orchestrator_loop.py:232:    lines.append("[AI Local OS X14 MASTER ORCHESTRATOR]")
-> D:\openwebui\core\x14_master_orchestrator_loop.py:233:    lines.append(f"Status: {'[REDACTED]' if report.get('ok') else 
+> D:\openwebui\core\x14_master_orchestrator_loop.py:233:    lines.append(f"Status: {'PASS' if report.get('ok') else 
 'FAIL'}")
 > D:\openwebui\core\x14_master_orchestrator_loop.py:234:    lines.append(f"Task: {report.get('task')}")
 > D:\openwebui\core\x14_master_orchestrator_loop.py:235:    lines.append(f"Workflow: {report.get('workflow')}")
@@ -2580,7 +2580,7 @@ in jobs):
   D:\openwebui\core\x15ab_realtime_bridge.py:128:        state["overall"] = "running"
   D:\openwebui\core\x15ab_realtime_bridge.py:129:    elif jobs:
 > D:\openwebui\core\x15ab_realtime_bridge.py:130:        state["overall"] = "done" if all(j.get("status") in {"done", 
-"[REDACTED]", "success"} for j in jobs) else "needs_review"
+"pass", "success"} for j in jobs) else "needs_review"
   D:\openwebui\core\x15ab_realtime_bridge.py:131:    write_state(state)
   D:\openwebui\core\x15ab_realtime_bridge.py:132:    emit("job_update", message or status, job_id=job_id, 
 data={"status": status, "attempt": attempt})
@@ -2599,10 +2599,10 @@ data={"status": status, "attempt": attempt})
   D:\openwebui\core\x15ab_realtime_bridge.py:144:
   D:\openwebui\core\x15ab_realtime_bridge.py:145:def read_events(limit: int = 50) -> List[Dict[str, Any]]:
   D:\openwebui\core\x15ab_realtime_bridge.py:171:    update_agent("runner", "running", "checking patch", "job-3")
-  D:\openwebui\core\x15ab_realtime_bridge.py:172:    update_job("job-3", "done", "check [REDACTED]ed", 1)
+  D:\openwebui\core\x15ab_realtime_bridge.py:172:    update_job("job-3", "done", "check passed", 1)
 > D:\openwebui\core\x15ab_realtime_bridge.py:173:    update_agent("reviewer", "done", "approved")
 > D:\openwebui\core\x15ab_realtime_bridge.py:174:    set_report({"status": "success", "summary": "X15AB demo 
-completed", "[REDACTED]ed": 3, "failed": 0})
+completed", "passed": 3, "failed": 0})
   D:\openwebui\core\x15ab_realtime_bridge.py:175:    return read_state()
   D:\openwebui\core\x15ab_realtime_bridge.py:176:
   D:\openwebui\core\x15ab_realtime_bridge.py:177:
@@ -2614,7 +2614,7 @@ id="report"></pre></div>
   D:\openwebui\core\x15ab_realtime_dashboard.py:43:</div>
   D:\openwebui\core\x15ab_realtime_dashboard.py:44:<script>
 > D:\openwebui\core\x15ab_realtime_dashboard.py:45:function cls(s){s=(s||'').toLowerCase(); 
-if(['done','[REDACTED]','success','idle'].includes(s)) return 'status ok'; if(['running','retrying','queued'].includes(s)) 
+if(['done','pass','success','idle'].includes(s)) return 'status ok'; if(['running','retrying','queued'].includes(s)) 
 return 'status run'; if(['fail','failed','error'].includes(s)) return 'status bad'; return 'status';}
   D:\openwebui\core\x15ab_realtime_dashboard.py:46:async function j(url){const r=await fetch(url); return await 
 r.json();}
@@ -2654,7 +2654,7 @@ document.getElementById('report').textContent=JSON.stringify(st.last_report||{},
   D:\openwebui\core\x15c_agentcon_status_bridge.py:151:        "created_at": now(),
   D:\openwebui\core\x15c_agentcon_status_bridge.py:152:        "updated_at": now(),
 > D:\openwebui\core\x15c_agentcon_status_bridge.py:153:        "flow": ["WebUI/add_task", "x15c bridge", "agent_con 
---ta[REDACTED_OPENAI_[REDACTED]]", "ollama", "report"],
+--ta[REDACTED_OPENAI_KEY]", "ollama", "report"],
   D:\openwebui\core\x15c_agentcon_status_bridge.py:154:    }
   D:\openwebui\core\x15c_agentcon_status_bridge.py:155:    write_json(TASKS / f"{task_id}.json", state)
   D:\openwebui\core\x15c_agentcon_status_bridge.py:156:    write_json(STATE_FILE, state)
@@ -2669,7 +2669,7 @@ document.getElementById('report').textContent=JSON.stringify(st.last_report||{},
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:1:# X30_FORCE_X15D_CONTAINER_ROOT_FIX: hardcoded Windows 
 D:/openwebui paths replaced with /app for container runtime.
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:2:# X15D_WEBUI_ADDTASK_AGENTCON_ATTACH
-> D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:3:# Safe adapter: WebUI /add_task -> agent_con ta[REDACTED_OPENAI_[REDACTED]] 
+> D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:3:# Safe adapter: WebUI /add_task -> agent_con ta[REDACTED_OPENAI_KEY] 
 flow -> status/report files.
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:4:from __future__ import annotations
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:5:
@@ -2703,7 +2703,7 @@ flow -> status/report files.
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:103:        "patch": PATCH,
 > D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:104:        "report_file": str(report_file),
 > D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:105:        "flow": ["WebUI/add_task", "X15D adapter", 
-"agent_con --ta[REDACTED_OPENAI_[REDACTED]]", "ollama", "report"],
+"agent_con --ta[REDACTED_OPENAI_KEY]", "ollama", "report"],
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:106:    }
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:107:    _write_json(task_file, payload)
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:108:    _write_json(status_file, payload)
@@ -2715,7 +2715,7 @@ flow -> status/report files.
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:114:        return payload
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:115:
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:116:    py = sys.executable
-  D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:117:    cmd = [py, str(AGENT_CON), "--ta[REDACTED_OPENAI_[REDACTED]]", 
+  D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:117:    cmd = [py, str(AGENT_CON), "--ta[REDACTED_OPENAI_KEY]", 
 str(task_file)]
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:132:            }
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:133:            _write_json(status_file, result)
@@ -2769,7 +2769,7 @@ rec.append('increase_timeout_or_split_task')
 X16ABCD_UPDATE_TASK_STATE_FIX
   D:\openwebui\core\x16_realtime_execution_stream.py:2:# X16ABC AI Local OS realtime execution stream
 > D:\openwebui\core\x16_realtime_execution_stream.py:3:# Safe standalone bridge: WebUI/add_task -> x16 -> agent_con 
---ta[REDACTED_OPENAI_[REDACTED]] -> ollama/report
+--ta[REDACTED_OPENAI_KEY] -> ollama/report
   D:\openwebui\core\x16_realtime_execution_stream.py:4:import argparse, json, os, subprocess, sys, time, uuid
   D:\openwebui\core\x16_realtime_execution_stream.py:5:from datetime import datetime
   D:\openwebui\core\x16_realtime_execution_stream.py:6:from pathlib import Path
@@ -2844,7 +2844,7 @@ ${t.task||''}<pre>${(t.log||[]).join('\n')}</pre></div>`});document.getElementBy
 X16ABCD_UPDATE_TASK_STATE_FIX
   D:\openwebui\core\x16_realtime_execution_stream.x16abcdef.tmp.py:2:# X16ABC AI Local OS realtime execution stream
 > D:\openwebui\core\x16_realtime_execution_stream.x16abcdef.tmp.py:3:# Safe standalone bridge: WebUI/add_task -> x16 
--> agent_con --ta[REDACTED_OPENAI_[REDACTED]] -> ollama/report
+-> agent_con --ta[REDACTED_OPENAI_KEY] -> ollama/report
   D:\openwebui\core\x16_realtime_execution_stream.x16abcdef.tmp.py:4:import argparse, json, os, subprocess, sys, time, 
 uuid
   D:\openwebui\core\x16_realtime_execution_stream.x16abcdef.tmp.py:5:from datetime import datetime
@@ -2952,7 +2952,7 @@ ${t.task||''}<pre>${(t.log||[]).join('\n')}</pre></div>`});document.getElementBy
   D:\openwebui\core\x16_realtime_runner.py:93:        'created_at': now(),
   D:\openwebui\core\x16_realtime_runner.py:94:        'task_file': str(task_file),
 > D:\openwebui\core\x16_realtime_runner.py:95:        'flow': ['WebUI/add_task', 'master_ai_bridge', 'x16 realtime 
-runner', 'agent_con --ta[REDACTED_OPENAI_[REDACTED]]', 'ollama', 'final report'],
+runner', 'agent_con --ta[REDACTED_OPENAI_KEY]', 'ollama', 'final report'],
   D:\openwebui\core\x16_realtime_runner.py:96:        'events': [{'time': now(), 'step': 'queued', 'message': 'Task 
 received'}],
   D:\openwebui\core\x16_realtime_runner.py:97:    }
@@ -2967,7 +2967,7 @@ write_json(report_path(task_id), base)
   D:\openwebui\core\x16_realtime_runner.py:104:        return base
   D:\openwebui\core\x16_realtime_runner.py:105:
   D:\openwebui\core\x16_realtime_runner.py:106:    py = sys.executable
-  D:\openwebui\core\x16_realtime_runner.py:107:    cmd = [py, str(agent), '--ta[REDACTED_OPENAI_[REDACTED]]', str(task_file)]
+  D:\openwebui\core\x16_realtime_runner.py:107:    cmd = [py, str(agent), '--ta[REDACTED_OPENAI_KEY]', str(task_file)]
   D:\openwebui\core\x16_realtime_runner.py:129:            'ok': code == 0,
   D:\openwebui\core\x16_realtime_runner.py:130:            'status': 'completed' if code == 0 else 'failed',
 > D:\openwebui\core\x16_realtime_runner.py:131:            'step': 'final_report',
@@ -3132,7 +3132,7 @@ f"{variant}.stderr.txt").write_text(attempt.get("stderr",""), encoding="utf-8", 
   D:\openwebui\core\x19_agentcon_execution_trace.py:179:        if attempt.get("ok"):
 > D:\openwebui\core\x19_agentcon_execution_trace.py:180:            report["ok"] = True
 > D:\openwebui\core\x19_agentcon_execution_trace.py:181:            report["status"] = "success"
-> D:\openwebui\core\x19_agentcon_execution_trace.py:182:            report["[REDACTED]ed_variant"] = variant
+> D:\openwebui\core\x19_agentcon_execution_trace.py:182:            report["passed_variant"] = variant
   D:\openwebui\core\x19_agentcon_execution_trace.py:183:            break
   D:\openwebui\core\x19_agentcon_execution_trace.py:184:
 > D:\openwebui\core\x19_agentcon_execution_trace.py:185:    if not report["ok"]:
@@ -3151,7 +3151,7 @@ f"x19_report_{int(time.time())}.json", report)
   D:\openwebui\core\x19_agentcon_execution_trace.py:196:    print("\n=== X19 SUMMARY ===")
 > D:\openwebui\core\x19_agentcon_execution_trace.py:197:    print("STATUS:", report.get("status"))
 > D:\openwebui\core\x19_agentcon_execution_trace.py:198:    if report.get("ok"):
-> D:\openwebui\core\x19_agentcon_execution_trace.py:199:        print("[REDACTED]ED VARIANT:", report.get("[REDACTED]ed_variant"))
+> D:\openwebui\core\x19_agentcon_execution_trace.py:199:        print("PASSED VARIANT:", report.get("passed_variant"))
   D:\openwebui\core\x19_agentcon_execution_trace.py:200:        print("NEXT: can reconnect this working variant back 
 to WebUI/X16.")
   D:\openwebui\core\x19_agentcon_execution_trace.py:201:    else:
@@ -3180,7 +3180,7 @@ X15D/X16/X19/X20/X21/X23/X29/X30/X32 runtime.
   D:\openwebui\core\x36_phase3_planner_decomposer.py:15:PLANS_DIR = RUNTIME_DIR / "plans"
 > D:\openwebui\core\x36_phase3_planner_decomposer.py:16:REPORTS_DIR = RUNTIME_DIR / "reports"
   D:\openwebui\core\x36_phase3_planner_decomposer.py:17:
-  D:\openwebui\core\x36_phase3_planner_decomposer.py:18:ACTION_[REDACTED]WORDS = {
+  D:\openwebui\core\x36_phase3_planner_decomposer.py:18:ACTION_KEYWORDS = {
   D:\openwebui\core\x36_phase3_planner_decomposer.py:19:    "list_files": ["list", "liá»‡t kÃª", "danh sÃ¡ch", 
 "files", "file"],
   D:\openwebui\core\x36_phase3_planner_decomposer.py:20:    "read_context": ["read", "Ä‘á»c", "scan", "quÃ©t", 
@@ -3257,7 +3257,7 @@ ensure_ascii=False, indent=2), encoding="utf-8")
   D:\openwebui\core\x37_phase3_multijob_queue_bridge.py:22:    "execute": "Runner/agent_con executes one safe local 
 step",
 > D:\openwebui\core\x37_phase3_multijob_queue_bridge.py:23:    "review": "Reviewer Agent validates result and decides 
-[REDACTED]/fail",
+pass/fail",
 > D:\openwebui\core\x37_phase3_multijob_queue_bridge.py:24:    "report": "Master Agent writes final report for user",
   D:\openwebui\core\x37_phase3_multijob_queue_bridge.py:25:}
   D:\openwebui\core\x37_phase3_multijob_queue_bridge.py:26:
@@ -3268,7 +3268,7 @@ f"Create scoped plan for goal, avoid symptom patching: {goal}", ["x37_scout"]),
   D:\openwebui\core\x37_phase3_multijob_queue_bridge.py:50:        JobStep("x37_runner_execute", "runner_llama", 
 "execute", f"Execute the first safe local step for goal: {goal}", ["x37_master_plan"]),
 > D:\openwebui\core\x37_phase3_multijob_queue_bridge.py:51:        JobStep("x37_reviewer", "reviewer_qwen", "review", 
-f"Validate root cause and [REDACTED]/fail for goal: {goal}", ["x37_runner_execute"]),
+f"Validate root cause and pass/fail for goal: {goal}", ["x37_runner_execute"]),
 > D:\openwebui\core\x37_phase3_multijob_queue_bridge.py:52:        JobStep("x37_report", "master_qwen", "report", 
 f"Summarize result and next action for user: {goal}", ["x37_reviewer"]),
   D:\openwebui\core\x37_phase3_multijob_queue_bridge.py:53:    ]
@@ -3376,7 +3376,7 @@ datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", 
 > D:\openwebui\core\x39_phase3_report_aggregator.py:51:    raw_results = runner_report.get("results") or []
   D:\openwebui\core\x39_phase3_report_aggregator.py:52:    results = [normalize_result(x, i) for i, x in 
 enumerate(raw_results) if isinstance(x, dict)]
-  D:\openwebui\core\x39_phase3_report_aggregator.py:53:    [REDACTED]ed = [x for x in results if x["ok"]]
+  D:\openwebui\core\x39_phase3_report_aggregator.py:53:    passed = [x for x in results if x["ok"]]
   D:\openwebui\core\x39_phase3_report_aggregator.py:54:    failed = [x for x in results if not x["ok"]]
 > D:\openwebui\core\x39_phase3_report_aggregator.py:55:    retry_candidates: List[Dict[str, Any]] = []
   D:\openwebui\core\x39_phase3_report_aggregator.py:56:    for item in failed:
@@ -3391,8 +3391,8 @@ unsupported action" not in err
   D:\openwebui\core\x39_phase3_report_aggregator.py:64:            "reason": err or "job failed without explicit 
 error",
   D:\openwebui\core\x39_phase3_report_aggregator.py:65:        })
-> D:\openwebui\core\x39_phase3_report_aggregator.py:66:    status = "[REDACTED]" if runner_report.get("ok") and not failed 
-else ("partial_fail" if [REDACTED]ed and failed else "fail")
+> D:\openwebui\core\x39_phase3_report_aggregator.py:66:    status = "pass" if runner_report.get("ok") and not failed 
+else ("partial_fail" if passed and failed else "fail")
   D:\openwebui\core\x39_phase3_report_aggregator.py:67:    return {
 > D:\openwebui\core\x39_phase3_report_aggregator.py:68:        "ok": len(failed) == 0 and bool(runner_report.get("ok", 
 len(results) > 0)),
@@ -3403,14 +3403,14 @@ len(results) > 0)),
   D:\openwebui\core\x39_phase3_report_aggregator.py:73:        "status": status,
   D:\openwebui\core\x39_phase3_report_aggregator.py:74:        "started_at": started,
   D:\openwebui\core\x39_phase3_report_aggregator.py:75:        "finished_at": now_utc(),
-  D:\openwebui\core\x39_phase3_report_aggregator.py:79:        "[REDACTED]_jobs": [{"job_id": x["job_id"], "action": 
-x["action"]} for x in [REDACTED]ed],
+  D:\openwebui\core\x39_phase3_report_aggregator.py:79:        "pass_jobs": [{"job_id": x["job_id"], "action": 
+x["action"]} for x in passed],
   D:\openwebui\core\x39_phase3_report_aggregator.py:80:        "fail_jobs": [{"job_id": x["job_id"], "action": 
 x["action"], "error": x["error"]} for x in failed],
 > D:\openwebui\core\x39_phase3_report_aggregator.py:81:        "retry_candidates": retry_candidates,
   D:\openwebui\core\x39_phase3_report_aggregator.py:82:        "master_summary": {
 > D:\openwebui\core\x39_phase3_report_aggregator.py:83:            "ready_for_master_review": True,
-  D:\openwebui\core\x39_phase3_report_aggregator.py:84:            "all_jobs_[REDACTED]ed": len(failed) == 0,
+  D:\openwebui\core\x39_phase3_report_aggregator.py:84:            "all_jobs_passed": len(failed) == 0,
 > D:\openwebui\core\x39_phase3_report_aggregator.py:85:            "needs_retry": len(retry_candidates) > 0,
 > D:\openwebui\core\x39_phase3_report_aggregator.py:86:            "next_recommended_step": "review_failed_jobs" if 
 failed else "promote_phase3_multijob_flow",
@@ -3632,7 +3632,7 @@ payload. Preserve all useful forms.
 > D:\openwebui\core\x41_phase3_retry_executor_loop.py:125:        "component": "X41_RETRY_AGGREGATED_REPORT",
   D:\openwebui\core\x41_phase3_retry_executor_loop.py:126:        "helper_only": True,
   D:\openwebui\core\x41_phase3_retry_executor_loop.py:127:        "total_jobs": len(results),
-  D:\openwebui\core\x41_phase3_retry_executor_loop.py:128:        "[REDACTED]ed_count": len([REDACTED]ed),
+  D:\openwebui\core\x41_phase3_retry_executor_loop.py:128:        "passed_count": len(passed),
   D:\openwebui\core\x41_phase3_retry_executor_loop.py:129:        "failed_count": len(failed),
   D:\openwebui\core\x41_phase3_retry_executor_loop.py:135:
   D:\openwebui\core\x41_phase3_retry_executor_loop.py:136:
@@ -3753,7 +3753,7 @@ aggregate_report: Path) -> Dict[str, Any]:
 runner_report.exists() else {"ok": False, "results": [], "error": "runner_report_missing"}
   D:\openwebui\core\x43_controlled_runtime_integration.py:186:    results = rr.get("results") if 
 isinstance(rr.get("results"), list) else []
-  D:\openwebui\core\x43_controlled_runtime_integration.py:187:    [REDACTED]ed = [r for r in results if r.get("ok")]
+  D:\openwebui\core\x43_controlled_runtime_integration.py:187:    passed = [r for r in results if r.get("ok")]
   D:\openwebui\core\x43_controlled_runtime_integration.py:188:    failed = [r for r in results if not r.get("ok")]
   D:\openwebui\core\x43_controlled_runtime_integration.py:189:    data = {
   D:\openwebui\core\x43_controlled_runtime_integration.py:190:        "ok": len(failed) == 0 and bool(rr.get("ok", 
@@ -3763,7 +3763,7 @@ len(failed) == 0)),
   D:\openwebui\core\x43_controlled_runtime_integration.py:192:        "helper_only": True,
 > D:\openwebui\core\x43_controlled_runtime_integration.py:193:        "source_runner_report": str(runner_report),
   D:\openwebui\core\x43_controlled_runtime_integration.py:194:        "total_jobs": len(results),
-  D:\openwebui\core\x43_controlled_runtime_integration.py:195:        "[REDACTED]ed_count": len([REDACTED]ed),
+  D:\openwebui\core\x43_controlled_runtime_integration.py:195:        "passed_count": len(passed),
   D:\openwebui\core\x43_controlled_runtime_integration.py:196:        "failed_count": len(failed),
   D:\openwebui\core\x43_controlled_runtime_integration.py:197:        "final_failed_count": len(failed),
 > D:\openwebui\core\x43_controlled_runtime_integration.py:198:        "retry_candidates": failed,
@@ -3854,7 +3854,7 @@ bool(retry_data.get("ok", True)),
   D:\openwebui\core\x43_controlled_runtime_integration.py:262:def load_task(args: argparse.Namespace) -> Dict[str, 
 Any]:
   D:\openwebui\core\x43_controlled_runtime_integration.py:281:    ap.add_argument("--task", default="")
-  D:\openwebui\core\x43_controlled_runtime_integration.py:282:    ap.add_argument("--ta[REDACTED_OPENAI_[REDACTED]]", default="")
+  D:\openwebui\core\x43_controlled_runtime_integration.py:282:    ap.add_argument("--ta[REDACTED_OPENAI_KEY]", default="")
 > D:\openwebui\core\x43_controlled_runtime_integration.py:283:    ap.add_argument("--report", default=str(RUNTIME / 
 "x43_report.json"))
   D:\openwebui\core\x43_controlled_runtime_integration.py:284:    ap.add_argument("--execute-phase3", 
@@ -3908,7 +3908,7 @@ urllib.request
 Dict[str, Any]:
 > D:\openwebui\core\x44_e2e_webui_multistep_test.py:43:    task_file = RUNTIME / (report_path.stem + "_task.json")
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:44:    write_json(task_file, task)
-> D:\openwebui\core\x44_e2e_webui_multistep_test.py:45:    cmd = [sys.executable, str(X43), "--ta[REDACTED_OPENAI_[REDACTED]]", 
+> D:\openwebui\core\x44_e2e_webui_multistep_test.py:45:    cmd = [sys.executable, str(X43), "--ta[REDACTED_OPENAI_KEY]", 
 str(task_file), "--report", str(report_path)]
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:46:    code, out = run_cmd(cmd, timeout=120)
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:47:    if code != 0:
@@ -3940,7 +3940,7 @@ resp:
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:70:    ap = argparse.ArgumentParser()
 > D:\openwebui\core\x44_e2e_webui_multistep_test.py:71:    ap.add_argument("--report", default=str(RUNTIME / 
 "x44_e2e_report.json"))
-> D:\openwebui\core\x44_e2e_webui_multistep_test.py:72:    ap.add_argument("--add-ta[REDACTED_OPENAI_[REDACTED]]", 
+> D:\openwebui\core\x44_e2e_webui_multistep_test.py:72:    ap.add_argument("--add-ta[REDACTED_OPENAI_KEY]", 
 default="http://localhost:5000/add_task")
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:73:    ap.add_argument("--strict-add-task", action="store_true")
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:74:    args = ap.parse_args()
@@ -4010,8 +4010,8 @@ str(add_task_probe.get("error")))
   D:\openwebui\core\x52_persistent_memory_store.py:20:    MEMORY_DIR.mkdir(parents=True, exist_ok=True)
 > D:\openwebui\core\x52_persistent_memory_store.py:21:    REPORT_DIR.mkdir(parents=True, exist_ok=True)
   D:\openwebui\core\x52_persistent_memory_store.py:22:
-  D:\openwebui\core\x52_persistent_memory_store.py:23:def _stable_id(kind: str, [REDACTED]: str, content: str) -> str:
-  D:\openwebui\core\x52_persistent_memory_store.py:24:    raw = f"{kind}\n{[REDACTED]}\n{content}".encode("utf-8", "replace")
+  D:\openwebui\core\x52_persistent_memory_store.py:23:def _stable_id(kind: str, key: str, content: str) -> str:
+  D:\openwebui\core\x52_persistent_memory_store.py:24:    raw = f"{kind}\n{key}\n{content}".encode("utf-8", "replace")
   D:\openwebui\core\x52_persistent_memory_store.py:25:    return hashlib.sha256(raw).hexdigest()[:16]
   D:\openwebui\core\x53_helper_chain_memory_integration.py:13:MEMORY_DIR = ROOT / "runtime" / "memory"
   D:\openwebui\core\x53_helper_chain_memory_integration.py:14:EVENTS_PATH = MEMORY_DIR / 
@@ -4234,7 +4234,7 @@ exist_ok=True)
   D:\openwebui\core\x64_permission_approval_layer_foundation.py:27:
   D:\openwebui\core\x64_permission_approval_layer_foundation.py:28:def classify(action: str) -> str:
   D:\openwebui\core\x64_permission_approval_layer_foundation.py:29:    a = action.strip().lower()
-  D:\openwebui\core\x64_permission_approval_layer_foundation.py:30:    for [REDACTED], decision in RISK_RULES.items():
+  D:\openwebui\core\x64_permission_approval_layer_foundation.py:30:    for key, decision in RISK_RULES.items():
   D:\openwebui\core\x64_permission_approval_layer_foundation.py:65:    delete = request_approval("delete protected 
 files", {"source": "x64"})
   D:\openwebui\core\x64_permission_approval_layer_foundation.py:66:    decision = decide(shell["id"], False, "probe 
@@ -4487,7 +4487,7 @@ ensure_ascii=False, indent=2))
   D:\openwebui\core\x70_semantic_memory_recall_foundation.py:19:    MEMORY.parent.mkdir(parents=True, exist_ok=True)
 > D:\openwebui\core\x70_semantic_memory_recall_foundation.py:20:    REPORT_DIR.mkdir(parents=True, exist_ok=True)
   D:\openwebui\core\x70_semantic_memory_recall_foundation.py:21:
-  D:\openwebui\core\x70_semantic_memory_recall_foundation.py:22:def [REDACTED]ize(text: str):
+  D:\openwebui\core\x70_semantic_memory_recall_foundation.py:22:def tokenize(text: str):
   D:\openwebui\core\x70_semantic_memory_recall_foundation.py:23:    return re.findall(r"[a-zA-Z0-9_]+", text.lower())
   D:\openwebui\core\x70_semantic_memory_recall_foundation.py:24:
   D:\openwebui\core\x70_semantic_memory_recall_foundation.py:72:    ensure()
@@ -4675,7 +4675,7 @@ encoding="utf-8")
   D:\openwebui\core\x75_local_patch_runner.py:51:
   D:\openwebui\core\x75_local_patch_runner.py:52:    patch = Path(args.patch)
 > D:\openwebui\core\x75_local_patch_runner.py:53:    report = {"ok": False, "patch": str(patch), "stage": "start", 
-"checks": [], "apply": None, "check": None, "false_[REDACTED]_guard": True}
+"checks": [], "apply": None, "check": None, "false_pass_guard": True}
   D:\openwebui\core\x75_local_patch_runner.py:54:
   D:\openwebui\core\x75_local_patch_runner.py:55:    if not patch.exists():
 > D:\openwebui\core\x75_local_patch_runner.py:56:        report["stage"] = "missing_patch_folder"
@@ -4706,11 +4706,11 @@ str(f), "result": r})
   D:\openwebui\core\x75_local_patch_runner.py:79:
   D:\openwebui\core\x75_local_patch_runner.py:80:    if not args.execute:
 > D:\openwebui\core\x75_local_patch_runner.py:81:        report["ok"] = True
-> D:\openwebui\core\x75_local_patch_runner.py:82:        report["stage"] = "verify_only_[REDACTED]"
+> D:\openwebui\core\x75_local_patch_runner.py:82:        report["stage"] = "verify_only_pass"
 > D:\openwebui\core\x75_local_patch_runner.py:83:        finish(report, 0)
   D:\openwebui\core\x75_local_patch_runner.py:84:
 > D:\openwebui\core\x75_local_patch_runner.py:85:    report["apply"] = run(["powershell", "-ExecutionPolicy", 
-"By[REDACTED]", "-File", str(apply_files[0])])
+"Bypass", "-File", str(apply_files[0])])
 > D:\openwebui\core\x75_local_patch_runner.py:86:    if report["apply"]["returncode"] != 0 or "SyntaxError" in 
 report["apply"]["stderr"] or "Traceback" in report["apply"]["stderr"] or "[FAIL]" in report["apply"]["stdout"] or 
 "[FAIL]" in report["apply"]["stderr"]:
@@ -4718,7 +4718,7 @@ report["apply"]["stderr"] or "Traceback" in report["apply"]["stderr"] or "[FAIL]
 > D:\openwebui\core\x75_local_patch_runner.py:88:        finish(report, 1)
   D:\openwebui\core\x75_local_patch_runner.py:89:
 > D:\openwebui\core\x75_local_patch_runner.py:90:    report["check"] = run(["powershell", "-ExecutionPolicy", 
-"By[REDACTED]", "-File", str(check_files[0])])
+"Bypass", "-File", str(check_files[0])])
 > D:\openwebui\core\x75_local_patch_runner.py:91:    if report["check"]["returncode"] != 0 or "SyntaxError" in 
 report["check"]["stderr"] or "Traceback" in report["check"]["stderr"] or "[FAIL]" in report["check"]["stdout"] or 
 "[FAIL]" in report["check"]["stderr"]:
@@ -4726,7 +4726,7 @@ report["check"]["stderr"] or "Traceback" in report["check"]["stderr"] or "[FAIL]
 > D:\openwebui\core\x75_local_patch_runner.py:93:        finish(report, 1)
   D:\openwebui\core\x75_local_patch_runner.py:94:
 > D:\openwebui\core\x75_local_patch_runner.py:95:    report["ok"] = True
-> D:\openwebui\core\x75_local_patch_runner.py:96:    report["stage"] = "apply_check_[REDACTED]"
+> D:\openwebui\core\x75_local_patch_runner.py:96:    report["stage"] = "apply_check_pass"
 > D:\openwebui\core\x75_local_patch_runner.py:97:    finish(report, 0)
   D:\openwebui\core\x75_local_patch_runner.py:98:
   D:\openwebui\core\x75_local_patch_runner.py:99:if __name__ == "__main__":
@@ -4794,7 +4794,7 @@ str(_write_report(root, patch_name, report))
   D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:192:
 > D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:193:        report["ok"] = True
   D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:194:
-> D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:195:        report["stage"] = "dry_run_preflight_[REDACTED]"
+> D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:195:        report["stage"] = "dry_run_preflight_pass"
   D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:196:
 > D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:197:        report["report_path"] = 
 str(_write_report(root, patch_name, report))
@@ -4837,7 +4837,7 @@ str(patch_folder)]
   D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:236:
 > D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:237:    report["ok"] = bool(run_result["ok"])
   D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:238:
-> D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:239:    report["stage"] = "pipeline_[REDACTED]" if report["ok"] 
+> D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:239:    report["stage"] = "pipeline_pass" if report["ok"] 
 else "pipeline_failed"
   D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:240:
 > D:\openwebui\core\x79_auto_patch_pipeline_orchestrator.py:241:    report["report_path"] = str(_write_report(root, 
@@ -4902,7 +4902,7 @@ indent=2))
   D:\openwebui\core\x80_queue_patch_executor.py:332:
 > D:\openwebui\core\x80_queue_patch_executor.py:333:        report["ok"] = bool(result["ok"])
   D:\openwebui\core\x80_queue_patch_executor.py:334:
-> D:\openwebui\core\x80_queue_patch_executor.py:335:        report["stage"] = "job_[REDACTED]" if report["ok"] else 
+> D:\openwebui\core\x80_queue_patch_executor.py:335:        report["stage"] = "job_pass" if report["ok"] else 
 "job_failed"
   D:\openwebui\core\x80_queue_patch_executor.py:336:
   D:\openwebui\core\x80_queue_patch_executor.py:337:
@@ -5042,7 +5042,7 @@ False)
   D:\openwebui\core\x82_retry_quarantine_engine.py:17:X80 = ROOT / "core" / "x80_queue_patch_executor.py"
   D:\openwebui\core\x82_retry_quarantine_engine.py:18:
   D:\openwebui\core\x82_retry_quarantine_engine.py:19:BAD_PATTERNS = ["SyntaxError", "Traceback", "[FAIL]", "false 
-[REDACTED]"]
+pass"]
   D:\openwebui\core\x82_retry_quarantine_engine.py:23:
   D:\openwebui\core\x82_retry_quarantine_engine.py:24:def ensure_dirs():
 > D:\openwebui\core\x82_retry_quarantine_engine.py:25:    for d in [QUEUE_DIR, DONE_DIR, FAILED_DIR, QUARANTINE_DIR, 
@@ -5086,7 +5086,7 @@ job_path.name)}")
 timeout=60)
 > D:\openwebui\core\x82_retry_quarantine_engine.py:116:        reports.append({
   D:\openwebui\core\x82_retry_quarantine_engine.py:117:            "ok": result["ok"],
-> D:\openwebui\core\x82_retry_quarantine_engine.py:118:            "stage": "retry_[REDACTED]" if result["ok"] else 
+> D:\openwebui\core\x82_retry_quarantine_engine.py:118:            "stage": "retry_pass" if result["ok"] else 
 "retry_fail",
   D:\openwebui\core\x82_retry_quarantine_engine.py:119:            "job_path": str(queued_path),
   D:\openwebui\core\x82_retry_quarantine_engine.py:120:            "job": job,
@@ -5147,7 +5147,7 @@ args.execute)
   D:\openwebui\core\x83_failure_memory_lessons.py:70:    return "No failure pattern detected."
   D:\openwebui\core\x83_failure_memory_lessons.py:71:
 > D:\openwebui\core\x83_failure_memory_lessons.py:72:def scan_reports(limit=200):
-> D:\openwebui\core\x83_failure_memory_lessons.py:73:    files = sorted(REPORT_ROOT.rglob("*.json"), [REDACTED]=lambda x: 
+> D:\openwebui\core\x83_failure_memory_lessons.py:73:    files = sorted(REPORT_ROOT.rglob("*.json"), key=lambda x: 
 x.stat().st_mtime, reverse=True)[:limit] if REPORT_ROOT.exists() else []
   D:\openwebui\core\x83_failure_memory_lessons.py:74:    records = []
   D:\openwebui\core\x83_failure_memory_lessons.py:75:    for path in files:
@@ -5204,7 +5204,7 @@ lessons before deciding the fix.", "Known mistakes should not repeat.")); idx +=
 request into inspect, change, test, and report.", "Default safe path for unknown work.")); idx += 1
   D:\openwebui\core\x84_task_decomposer.py:94:
 > D:\openwebui\core\x84_task_decomposer.py:95:    steps.append(make_step(idx, "write_final_report", "Save a clear 
-report with what changed, what [REDACTED]ed, and what remains.", "Keep checkpoint clean for the next step."))
+report with what changed, what passed, and what remains.", "Keep checkpoint clean for the next step."))
   D:\openwebui\core\x84_task_decomposer.py:96:
   D:\openwebui\core\x84_task_decomposer.py:97:    lessons = load_lessons()
   D:\openwebui\core\x84_task_decomposer.py:98:    return {
@@ -5355,7 +5355,7 @@ multi-agent runtime")
   D:\openwebui\core\x86_agent_bus.py:146:        sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": 
 r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
 > D:\openwebui\core\x86_agent_bus.py:147:        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": 
-"[REDACTED]"})))
+"pass"})))
 > D:\openwebui\core\x86_agent_bus.py:148:        report = {
   D:\openwebui\core\x86_agent_bus.py:149:            "ok": True,
   D:\openwebui\core\x86_agent_bus.py:150:            "release": "X86_AGENT_BUS",
@@ -5679,7 +5679,7 @@ f"x88_persistent_scheduler_demo_{now_ms()}.json"
 "x87_worker_dispatcher.py").exists():
   D:\openwebui\core\x90_webui_agent_bridge.py:30:                return candidate
   D:\openwebui\core\x90_webui_agent_bridge.py:31:        except Exception:
-  D:\openwebui\core\x90_webui_agent_bridge.py:32:            [REDACTED]
+  D:\openwebui\core\x90_webui_agent_bridge.py:32:            pass
   D:\openwebui\core\x90_webui_agent_bridge.py:33:
   D:\openwebui\core\x90_webui_agent_bridge.py:38:CORE_DIR = ROOT / "core"
   D:\openwebui\core\x90_webui_agent_bridge.py:39:RUNTIME_DIR = ROOT / "runtime"
@@ -5789,7 +5789,7 @@ Runtime Bridge")
 "x90_webui_agent_bridge.py").exists():
   D:\openwebui\core\x91_addtask_bridge_adapter.py:27:                return candidate
   D:\openwebui\core\x91_addtask_bridge_adapter.py:28:        except Exception:
-  D:\openwebui\core\x91_addtask_bridge_adapter.py:29:            [REDACTED]
+  D:\openwebui\core\x91_addtask_bridge_adapter.py:29:            pass
   D:\openwebui\core\x91_addtask_bridge_adapter.py:30:
   D:\openwebui\core\x91_addtask_bridge_adapter.py:34:ROOT = _resolve_aios_root()
   D:\openwebui\core\x91_addtask_bridge_adapter.py:35:CORE_DIR = ROOT / "core"
@@ -5888,7 +5888,7 @@ ensure_ascii=False, indent=2))
 > D:\openwebui\core\x91_master_ai_addtask_bridge.py:61:        if "add_task" in lowered or "/add_task" in lowered or 
 "add-task" in lowered:
   D:\openwebui\core\x91_master_ai_addtask_bridge.py:62:            found.append(path)
-  D:\openwebui\core\x91_master_ai_addtask_bridge.py:63:    return sorted(set(found), [REDACTED]=lambda p: str(p).lower())
+  D:\openwebui\core\x91_master_ai_addtask_bridge.py:63:    return sorted(set(found), key=lambda p: str(p).lower())
   D:\openwebui\core\x91_master_ai_addtask_bridge.py:64:
   D:\openwebui\core\x91_master_ai_addtask_bridge.py:65:
   D:\openwebui\core\x91_master_ai_addtask_bridge.py:70:    for i, line in enumerate(lines, start=1):
@@ -6027,7 +6027,7 @@ os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")\n    if explic
    candidates = [\n        Path("/app"),\n        Path(r"D:\\\\openwebui"),\n        
 Path(__file__).resolve().parent.parent,\n    ]\n\n    for candidate in candidates:\n        try:\n            if 
 (candidate / "core" / "x90_webui_agent_bridge.py").exists():\n                return candidate\n        except 
-Exception:\n            [REDACTED]\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
+Exception:\n            pass\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
   D:\openwebui\core\x92c_adapter_rootdetect_fix.py:26:
   D:\openwebui\core\x92c_adapter_rootdetect_fix.py:27:
   D:\openwebui\core\x92c_adapter_rootdetect_fix.py:28:def now_ms() -> int:
@@ -6111,9 +6111,9 @@ importlib.util.spec_from_file_location(module_name, str(ADAPTER))
   D:\openwebui\core\x92c_adapter_rootdetect_fix.py:163:            "state": self.state,
   D:\openwebui\core\x92c_adapter_rootdetect_fix.py:164:        }
   D:\openwebui\core\x92c_adapter_rootdetect_fix.py:165:
-  D:\openwebui\core\x92c_adapter_rootdetect_fix.py:166:    def _record(self, [REDACTED]: str, result: Dict[str, Any], prefix: 
+  D:\openwebui\core\x92c_adapter_rootdetect_fix.py:166:    def _record(self, key: str, result: Dict[str, Any], prefix: 
 str) -> Dict[str, Any]:
-  D:\openwebui\core\x92c_adapter_rootdetect_fix.py:167:        self.state[[REDACTED]] = result
+  D:\openwebui\core\x92c_adapter_rootdetect_fix.py:167:        self.state[key] = result
   D:\openwebui\core\x92c_adapter_rootdetect_fix.py:168:        self.save()
 > D:\openwebui\core\x92c_adapter_rootdetect_fix.py:169:        out = REPORT_DIR / f"{prefix}_{now_ms()}.json"
   D:\openwebui\core\x92c_adapter_rootdetect_fix.py:170:        safe_write_json(out, result)
@@ -6145,7 +6145,7 @@ os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")\n    if explic
    candidates = [\n        Path("/app"),\n        Path(r"D:\\\\openwebui"),\n        
 Path(__file__).resolve().parent.parent,\n    ]\n\n    for candidate in candidates:\n        try:\n            if 
 (candidate / "core" / "x87_worker_dispatcher.py").exists():\n                return candidate\n        except 
-Exception:\n            [REDACTED]\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
+Exception:\n            pass\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
   D:\openwebui\core\x92d_x90_rootdetect_fix.py:26:
   D:\openwebui\core\x92d_x90_rootdetect_fix.py:27:
   D:\openwebui\core\x92d_x90_rootdetect_fix.py:28:def now_ms() -> int:
@@ -6274,9 +6274,9 @@ str(X90))
   D:\openwebui\core\x92d_x90_rootdetect_fix.py:168:            "state": self.state,
   D:\openwebui\core\x92d_x90_rootdetect_fix.py:169:        }
   D:\openwebui\core\x92d_x90_rootdetect_fix.py:170:
-  D:\openwebui\core\x92d_x90_rootdetect_fix.py:171:    def _record(self, [REDACTED]: str, result: Dict[str, Any], prefix: 
+  D:\openwebui\core\x92d_x90_rootdetect_fix.py:171:    def _record(self, key: str, result: Dict[str, Any], prefix: 
 str) -> Dict[str, Any]:
-  D:\openwebui\core\x92d_x90_rootdetect_fix.py:172:        self.state[[REDACTED]] = result
+  D:\openwebui\core\x92d_x90_rootdetect_fix.py:172:        self.state[key] = result
   D:\openwebui\core\x92d_x90_rootdetect_fix.py:173:        self.save()
 > D:\openwebui\core\x92d_x90_rootdetect_fix.py:174:        out = REPORT_DIR / f"{prefix}_{now_ms()}.json"
   D:\openwebui\core\x92d_x90_rootdetect_fix.py:175:        safe_write_json(out, result)
@@ -6358,7 +6358,7 @@ str(X87))
   D:\openwebui\core\x92e_x87_rootdetect_fix.py:148:        result = {
   D:\openwebui\core\x92e_x87_rootdetect_fix.py:149:            "ok": ok,
   D:\openwebui\core\x92e_x87_rootdetect_fix.py:150:            "release": "X92E_X87_ROOTDETECT_FIX",
-  D:\openwebui\core\x92e_x87_rootdetect_fix.py:169:        self.state[[REDACTED]] = result
+  D:\openwebui\core\x92e_x87_rootdetect_fix.py:169:        self.state[key] = result
   D:\openwebui\core\x92e_x87_rootdetect_fix.py:170:        self.save()
 > D:\openwebui\core\x92e_x87_rootdetect_fix.py:171:        out = REPORT_DIR / f"{prefix}_{now_ms()}.json"
   D:\openwebui\core\x92e_x87_rootdetect_fix.py:172:        safe_write_json(out, result)
@@ -6509,7 +6509,7 @@ task, "mode": "agent"})
   D:\openwebui\core\x92_attach_x90_to_master_bridge.py:179:            "target": str(TARGET),
   D:\openwebui\core\x92_attach_x90_to_master_bridge.py:180:            "target_exists": TARGET.exists(),
   D:\openwebui\core\x92_attach_x90_to_master_bridge.py:181:            "adapter": str(ADAPTER),
-  D:\openwebui\core\x92_attach_x90_to_master_bridge.py:187:        self.state[[REDACTED]] = result
+  D:\openwebui\core\x92_attach_x90_to_master_bridge.py:187:        self.state[key] = result
   D:\openwebui\core\x92_attach_x90_to_master_bridge.py:188:        self.save()
 > D:\openwebui\core\x92_attach_x90_to_master_bridge.py:189:        out = REPORT_DIR / ("%s_%d.json" % (prefix, 
 now_ms()))
