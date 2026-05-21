@@ -1,0 +1,1 @@
+﻿[FAIL] check failed: os_environ_fixed. See D:\openwebui\_patch_inbox\x97e8_x87_role_contract_repair\x97e8_check_source_audit.txt

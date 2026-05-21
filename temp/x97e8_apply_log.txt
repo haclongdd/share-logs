@@ -4,4 +4,3 @@
 [2026-05-21T19:40:59.6055416+07:00] py_compile [REDACTED]
 [2026-05-21T19:40:59.6083410+07:00] audit=D:\openwebui\_patch_inbox\x97e8_x87_role_contract_repair\x97e8_source_audit.txt
 [2026-05-21T19:40:59.6245395+07:00] DONE x97e8
-
