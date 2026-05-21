@@ -3,6 +3,6 @@
 [2026-05-21T19:50:18.9558254+07:00] Backup=D:\openwebui\_backups\x97e9_x87_check_contract_runtime_audit\x87_worker_dispatcher.py.bak
 [2026-05-21T19:50:19.0705810+07:00] no core source change needed; audit/check contract only
 [2026-05-21T19:50:19.0762438+07:00] SHA256 before=4ACFF0BECEBB9E14BA24BD617FD44839D4F6FF929C33F2F5546F8399CA768920 after=4ACFF0BECEBB9E14BA24BD617FD44839D4F6FF929C33F2F5546F8399CA768920 changed=False
-[2026-05-21T19:50:19.2850179+07:00] py_compile [REDACTED] compile=D:\openwebui\runtime\temp\x97e9_compile_log.txt
+[2026-05-21T19:50:19.2850179+07:00] py_compile PASS compile=D:\openwebui\runtime\temp\x97e9_compile_log.txt
 [2026-05-21T19:50:19.2878439+07:00] audit=D:\openwebui\runtime\temp\x97e9_source_audit.txt context=D:\openwebui\runtime\temp\x97e9_source_context.txt
 [2026-05-21T19:50:19.3029958+07:00] DONE x97e9
