@@ -1,0 +1,96 @@
+﻿X102B_SAFE_CLEAN mode=execute
+root=D:\openwebui
+created_at=2026-05-21T14:40:57.311690Z
+candidate_count=477
+affected_count=242
+error_count=0
+candidate_file_bytes=10336
+
+POLICY: delete only __pycache__, *.pyc/*.pyo, tmp artifacts, empty dirs
+NOT TOUCHED: _backups, _patch_inbox, runtime/reports, core source, data, .git
+
+TOP AFFECTED:
+dir D:\openwebui\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\backups\phase2a_20260516_222203\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\backups\phase2a_full_20260516_222736\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\backups\phase2b_20260516_231816\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\data\functions\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\project_v4_1\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\runtime\diagnostics\full_project_20260518_110920\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\runtime\diagnostics\full_project_20260518_114739\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\runtime\live_runtime\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\runtime\smoke_tests\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\runtime\x15c\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\tools\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\tools\openwebui_functions\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_final_cleanup\20260518_130648\release_expanded_mirror\release\AI_LOCAL_OS_V1_STABLE\AI_LOCAL_OS_V1_STABLE\agents\planner\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_final_cleanup\20260518_130648\release_expanded_mirror\release\AI_LOCAL_OS_V1_STABLE\AI_LOCAL_OS_V1_STABLE\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_final_cleanup\20260518_130648\release_expanded_mirror\release\AI_LOCAL_OS_V1_STABLE\AI_LOCAL_OS_V1_STABLE\runtime\live_runtime\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_final_cleanup\20260518_130648\release_expanded_mirror\release\AI_LOCAL_OS_V1_STABLE\AI_LOCAL_OS_V1_STABLE\runtime\proof\full_project_20260518_114739\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_final_cleanup\20260518_130648\release_expanded_mirror\release\AI_LOCAL_OS_V1_STABLE\AI_LOCAL_OS_V1_STABLE\scripts\patches\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_final_cleanup\20260518_130648\release_expanded_mirror\release\AI_LOCAL_OS_V1_STABLE\AI_LOCAL_OS_V1_STABLE\_phase2_control\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\ai_local_os_x10\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\ai_local_os_x11\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\ai_local_os_x5\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\ai_local_os_x6\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\ai_local_os_x7\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\ai_local_os_x8\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\ai_local_os_x9\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\runtime\x8_autonomous_code_agent\workspaces\x8_hotfix_check_job\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\tools\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_archive_stabilization\20260518_173735\python_cache\_phase2_control\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_backups\real_use_v8_actions\project_v4_1_backup_20260519_114507\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_backups\real_use_v8_actions\project_v4_1_backup_20260519_114509\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_backups\real_use_v8_actions\project_v4_1_backup_20260519_114514\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_backups\real_use_v8_actions\project_v4_1_backup_20260519_114649\__pycache__ reason=__pycache__ safe generated cache bytes=
+file D:\openwebui\_backups\x28_container_path_resolve_agentcon\core_x16_realtime_execution_stream.x16abcdef.tmp.py reason=temporary generated artifact bytes=10336
+dir D:\openwebui\_checkpoints\AI_LOCAL_OS_V1_STABLE\agents\planner\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_checkpoints\AI_LOCAL_OS_V1_STABLE\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_checkpoints\AI_LOCAL_OS_V1_STABLE\runtime\live_runtime\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_checkpoints\AI_LOCAL_OS_V1_STABLE\runtime\proof\full_project_20260518_114739\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_checkpoints\AI_LOCAL_OS_V1_STABLE\scripts\cleanup_archive\phase2c3_temp_20260517_140720\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_checkpoints\AI_LOCAL_OS_V1_STABLE\scripts\patches\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_checkpoints\AI_LOCAL_OS_V1_STABLE\_phase2_control\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_cleanup_archive\x12s_20260519_085753\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_cleanup_archive\x12s_20260519_085753\runtime_smoke_tests\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_cleanup_archive\x12s_20260519_085753\_patch_inbox_folders\x12e2_intent_detector_hotfix\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_cleanup_archive\x12s_20260519_085753\_patch_inbox_folders\x12e_intent_detector_hotfix\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_cleanup_archive\x12s_20260519_085753\_patch_inbox_folders\x12o_tool_execute_master_ai_alias\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x85_role_agents\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x86_agent_bus\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x87b_worker_dispatcher_importfix\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x87_worker_dispatcher\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x88_persistent_scheduler\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x89_sandbox_workers\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x90_webui_agent_bridge\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x91_master_ai_addtask_bridge\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x92c_adapter_rootdetect_fix\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x92d_x90_rootdetect_fix\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x92e_x87_rootdetect_fix\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_patch_inbox\x92_attach_x90_to_master_bridge\files\core\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\_phase2_control\__pycache__ reason=__pycache__ safe generated cache bytes=
+dir D:\openwebui\api_keys reason=empty directory bytes=
+dir D:\openwebui\backups\daily reason=empty directory bytes=
+dir D:\openwebui\backups\emergency reason=empty directory bytes=
+dir D:\openwebui\backups\weekly reason=empty directory bytes=
+dir D:\openwebui\docs\ROADMAP reason=empty directory bytes=
+dir D:\openwebui\Dï€ºïœopenwebui\runtime\x87_worker_dispatcher reason=empty directory bytes=
+dir D:\openwebui\local_os reason=empty directory bytes=
+dir D:\openwebui\models\llama reason=empty directory bytes=
+dir D:\openwebui\models\qwen reason=empty directory bytes=
+dir D:\openwebui\runtime\agent_comm reason=empty directory bytes=
+dir D:\openwebui\runtime\ai_local_os_auto_exec_hook\logs reason=empty directory bytes=
+dir D:\openwebui\runtime\ai_local_os_host_bridge reason=empty directory bytes=
+dir D:\openwebui\runtime\ai_local_os_integration_final\logs reason=empty directory bytes=
+dir D:\openwebui\runtime\ai_local_os_integration_final\snapshots reason=empty directory bytes=
+dir D:\openwebui\runtime\chains reason=empty directory bytes=
+dir D:\openwebui\runtime\checks reason=empty directory bytes=
+dir D:\openwebui\runtime\daemon reason=empty directory bytes=
+dir D:\openwebui\runtime\events reason=empty directory bytes=
+dir D:\openwebui\runtime\graphs reason=empty directory bytes=
+
+json=D:\openwebui\runtime\temp\x102b_safe_clean_20260521_214036.json
+txt=D:\openwebui\runtime\temp\x102b_safe_clean_20260521_214036.txt
+

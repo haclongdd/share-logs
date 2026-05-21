@@ -1,0 +1,1485 @@
+﻿{
+  "ok": true,
+  "release": "X102B_SAFE_CLEAN",
+  "mode": "execute",
+  "root": "D:\\openwebui",
+  "created_at": "2026-05-21T14:40:57.311690Z",
+  "candidate_count": 477,
+  "affected_count": 242,
+  "error_count": 0,
+  "candidate_file_bytes": 10336,
+  "affected": [
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\backups\\phase2a_20260516_222203\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\backups\\phase2a_full_20260516_222736\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\backups\\phase2b_20260516_231816\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\data\\functions\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\project_v4_1\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\diagnostics\\full_project_20260518_110920\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\diagnostics\\full_project_20260518_114739\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\live_runtime\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\smoke_tests\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x15c\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\tools\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\tools\\openwebui_functions\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\agents\\planner\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\runtime\\live_runtime\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\runtime\\proof\\full_project_20260518_114739\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\scripts\\patches\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\_phase2_control\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\ai_local_os_x10\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\ai_local_os_x11\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\ai_local_os_x5\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\ai_local_os_x6\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\ai_local_os_x7\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\ai_local_os_x8\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\ai_local_os_x9\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\runtime\\x8_autonomous_code_agent\\workspaces\\x8_hotfix_check_job\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\tools\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_stabilization\\20260518_173735\\python_cache\\_phase2_control\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\real_use_v8_actions\\project_v4_1_backup_20260519_114507\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\real_use_v8_actions\\project_v4_1_backup_20260519_114509\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\real_use_v8_actions\\project_v4_1_backup_20260519_114514\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\real_use_v8_actions\\project_v4_1_backup_20260519_114649\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "file",
+      "path": "D:\\openwebui\\_backups\\x28_container_path_resolve_agentcon\\core_x16_realtime_execution_stream.x16abcdef.tmp.py",
+      "reason": "temporary generated artifact",
+      "bytes": 10336,
+      "sha256": "9cc19fc445f7b69ed807b0c1404bb02b5b518423ea28464c5316fd3f02ace20d",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\agents\\planner\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\runtime\\live_runtime\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\runtime\\proof\\full_project_20260518_114739\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\scripts\\cleanup_archive\\phase2c3_temp_20260517_140720\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\scripts\\patches\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\_phase2_control\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_cleanup_archive\\x12s_20260519_085753\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_cleanup_archive\\x12s_20260519_085753\\runtime_smoke_tests\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_cleanup_archive\\x12s_20260519_085753\\_patch_inbox_folders\\x12e2_intent_detector_hotfix\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_cleanup_archive\\x12s_20260519_085753\\_patch_inbox_folders\\x12e_intent_detector_hotfix\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_cleanup_archive\\x12s_20260519_085753\\_patch_inbox_folders\\x12o_tool_execute_master_ai_alias\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x85_role_agents\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x86_agent_bus\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x87_worker_dispatcher\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x88_persistent_scheduler\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x91_master_ai_addtask_bridge\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x92c_adapter_rootdetect_fix\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x92d_x90_rootdetect_fix\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x92e_x87_rootdetect_fix\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x92_attach_x90_to_master_bridge\\files\\core\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_phase2_control\\__pycache__",
+      "reason": "__pycache__ safe generated cache",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\api_keys",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\backups\\daily",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\backups\\emergency",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\backups\\weekly",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\docs\\ROADMAP",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\Dï€ºïœopenwebui\\runtime\\x87_worker_dispatcher",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\local_os",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\models\\llama",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\models\\qwen",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\agent_comm",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\ai_local_os_auto_exec_hook\\logs",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\ai_local_os_host_bridge",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\ai_local_os_integration_final\\logs",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\ai_local_os_integration_final\\snapshots",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\chains",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\checks",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\daemon",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\events",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\graphs",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\jobs\\done",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\jobs\\failed",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\jobs\\inbox",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\jobs\\running",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\logs\\x82",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\native_reports",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\phase4",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\phase5g_panel",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\prompts",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\prompt_fix",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\queue\\x80\\failed",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\queue\\x80\\quarantine",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\queues",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\real_execution_tests",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\recovery",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\repo",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\reports\\x46_verify_layer_network_correction",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\reports\\x53_phase4_memory_helper_chain_integration",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\reports\\x57_phase5_scheduler_plugin_foundation",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\reports\\x84",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\repo_operator",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\share_logs\\reports\\x46_verify_layer_network_correction",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\share_logs\\reports\\x53_phase4_memory_helper_chain_integration",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\share_logs\\reports\\x57_phase5_scheduler_plugin_foundation",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\share_logs\\reports\\x84",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\state\\x81",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\supervisor",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\traces",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\workers",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x10_command_center\\commands",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x11_stable_release\\manifests",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x11_stable_release\\snapshots",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x13j_queue",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x15d1",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x3a_true_tool_injection",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x3b_webui_hardwire",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x4c_native_openwebui_tool_bridge",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x5e_workflows\\queue",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x5e_workflows\\reports",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x5e_workflows\\state",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x6_persistent\\queue",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x6_persistent_runtime\\states",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\runtime\\x9_agent_ops\\gates",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\sandbox\\x5",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\inbox\\tasks",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\inbox\\temp",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\inbox\\uploads",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\logs\\report_agent",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\logs\\system",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\logs\\web_agent",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\memory\\learned_fixes",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\projects\\project_ai",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\projects\\web_projects",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\queue\\failed",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\queue\\processing",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\queue\\reviewing",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\queue\\_hold_old_20260517_112926",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\queue\\_hold_permanent_guard_test",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\reports\\daily",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\reports\\monthly",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\reports\\weekly",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\shared_memory\\embeddings",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\shared_memory\\knowledge",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\shared_memory\\summaries",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\workspace\\shared_memory\\vector_db",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\docs\\ROADMAP",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\root_old_artifacts\\Dï€º\\openwebui\\runtime\\diagnostics",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\root_old_artifacts\\_trash_review\\phase5z\\20260518_094041_phase3c",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\root_old_artifacts\\_trash_review\\phaseX_final_release_pack_scripts",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase3a_memory_20260517_114702",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5a1_runtime_registry",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5b2_scheduler_engine",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5b3_internal_api_router",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5b4_dashboard_backend",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5b5_tool_daemon",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5c1_autonomous_workflow_gateway",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5c_distributed_agent",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5c_final",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5c_voice_vision_interaction",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5d_real_execution_worker",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5f_runtime_monitor_20260518_093101",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5g_webui_runtime_panel_bridge",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5h_webui_runtime_panel_embed_lite_20260518_093333",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5i_final_integration_seal",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5z_root_cleanup_audit",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5_final_completion",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5_foundation_alignment",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phase5_full_final",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phaseX1h_stable_checkpoint_20260518_115332\\AI_LOCAL_OS_V1_STABLE",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phaseX1h_stable_checkpoint_20260518_115332\\release_AI_LOCAL_OS_V1_STABLE",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_archive_final_cleanup\\20260518_130648\\_backups_old_temp\\_backups\\phaseX1_real_live_execution_runtime_fix_20260518_100550",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\ai_local_os_auto_tool_execution_hook\\20260518_174316",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\ai_local_os_integration_final\\20260518_165625",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\ai_local_os_integration_final_hotfix\\20260518_171014",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\ai_local_os_integration_final_hotfix\\20260518_171019",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\ai_local_os_stabilization\\20260518_173735",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\force_chat_auto_exec_hook\\20260518_180904",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\openwebui_force_pipe_bind\\20260518_181246",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\openwebui_native_tool_bridge\\20260518_193258",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\phase2b_auto_result_return",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\phase3b_task_decomp_queue",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\phase4d_phase4_finalize",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\phaseX2A_true_local_shell_filesystem_tool_20260518_121649",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\phaseX2B_true_local_shell_command_runner_20260518_122043",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\phaseX2C_true_local_shell_tool_router",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\real_use_v3",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\real_use_v5",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x11_x4c_compat_audit_hotfix",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x12q_webui_bridge_reconnect",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x12r_webui_bridge_e2e_smoke",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x12_webui_final_output_interceptor_20260518_201044",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x13f_execution_memory_retry_20260519_095844",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x13g_execution_report_bridge_20260519_100225",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x13h_runtime_status_api",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x13i_autonomous_runtime_supervisor_20260519_101349",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x13k_to_x13n_autonomous_runtime_pack_20260519_103727",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x13o_autonomous_runtime_hardening_pack",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x13p_restore_x13i_x13j_dependency_pack_20260519_105002",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x13_x17_full_local_ai_os_pack_20260518_164937",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x14a2_install_orchestrator_core_20260519_185803",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x14g_multi_job_parallel_retry_20260519_235529",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x14h_batch_report_merger_20260520_000015",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x14_master_orchestrator_loop_20260519_185200",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\X15AB_REALTIME_WEBUI_DASHBOARD_20260520_000434",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\X15C_WEBUI_AGENTCON_STATUS_BRIDGE_20260520_001249",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x17_agentcon_isolated_debug",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x18_agentcon_task_schema_normalize",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x19_agentcon_execution_trace_bundle",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x23b_reconnect_ollama_agentcon_network_fix",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x23c_reconnect_network_check_fix",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x24_reconnect_x19_x16_webui_e2e_smoke",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x25b_x26b_compose_label_check_fix",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x25_x26_compose_ollama_core_import_fix\\files\\_archive_final_cleanup\\20260518_130648\\release_expanded_mirror\\release\\AI_LOCAL_OS_V1_STABLE\\AI_LOCAL_OS_V1_STABLE\\scripts\\cleanup_archive\\phase2c3_temp_20260517_140720",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x27_webui_e2e_real_validation_20260520_020913",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x27_webui_e2e_real_validation_20260520_021613",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x36_phase3_planner_decomposer_minimal_20260520_025812",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x37_phase3_multijob_queue_bridge\\20260520_025916",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x38_phase3_multijob_runner_20260520_090219",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x39_phase3_report_aggregator_20260520_093212",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x40_phase3_retry_selector_20260520_094809",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x41_phase3_retry_executor_loop_20260520_095159",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x44_e2e_webui_multistep_test_20260520_103040",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x45_phase3_stable_release",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x5e_real_multistep_workflow_pack_20260518_141002",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x5_full_local_ai_os_pack_20260518_133246",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x6a_persistent_queue_state_20260518_142225",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x79_auto_patch_pipeline_orchestrator",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x7_full_repo_intelligence_20260518_144143\\ai_local_os_x7",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x80_queue_patch_executor",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x82_retry_quarantine_engine",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x84_task_decomposer",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x8_full_autonomous_code_agent_20260518_144918",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x91_master_ai_addtask_bridge",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backups\\x96c_master_planner_reviewer_foundation",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_backupsy_auto_patch_pipeline_orchestrator",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_checkpoints\\AI_LOCAL_OS_V1_STABLE\\docs\\ROADMAP",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_checkpoints\\phase4_memory_helper_chain_integration",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_cleanup_archive\\x12w_patch_inbox_archive_20260519_091302\\x5_full_local_ai_os_pack\\payload\\runtime\\x5_reports",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_cleanup_archive\\x12w_patch_inbox_archive_20260519_091302\\x5_full_local_ai_os_pack\\payload\\sandbox\\x5",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x13p_restore_x13i_x13j_dependency_pack\\payload\\runtime\\queue",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x13p_restore_x13i_x13j_dependency_pack\\payload\\runtime\\status",
+      "reason": "empty directory",
+      "deleted": true
+    },
+    {
+      "kind": "dir",
+      "path": "D:\\openwebui\\_patch_inbox\\x13p_restore_x13i_x13j_dependency_pack\\payload\\runtime\\supervisor",
+      "reason": "empty directory",
+      "deleted": true
+    }
+  ],
+  "errors": [],
+  "policy": {
+    "deleted_only": [
+      "__pycache__ dirs",
+      "*.pyc",
+      "*.pyo",
+      "*.tmp.py/tmp artifacts",
+      "empty dirs"
+    ],
+    "not_touched": [
+      "_backups",
+      "_patch_inbox",
+      "runtime/reports",
+      "core source",
+      "data",
+      ".git"
+    ]
+  }
+}
