@@ -1,0 +1,27 @@
+﻿ 220:             "task": task,
+ 221:             "input_payload": payload,
+ 222:             "handled_at": utc_stamp(),
+ 223:             "ok": True,
+ 224:             "summary": "",
+ 225:             "routed_to": None,
+ 226:         }
+ 227: 
+ 228:         if to_role == "DEBUG":
+ 229:             result["summary"] = "DEBUG worker consumed evidence and confirmed root-cause-first handoff."
+ 230:             result["output_payload"] = {
+ 231:                 "root_cause": _busmsg_get(payload, "root_cause") or "pending_real_log_review",
+ 232:                 "evidence": _busmsg_get(payload, "evidence") or payload,
+ 233:                 "source_message": _busmsg_get(msg, "id"),
+ 234:             }
+ 235:         elif to_role == "SCOUT":`n            result["summary"] = "SCOUT worker consumed planner task context."
+ 236:             result["output_payload"] = {
+ 237:                 "artifact": _busmsg_get(payload, "artifact") or r"D:\openwebui\_patch_inbox",
+ 238:                 "patch_rule": "target confirmed cause only",
+ 239:                 "source_message": _busmsg_get(msg, "id"),
+ 240:             }
+ 241:         elif to_role == "VERIFY":
+ 242:             result["summary"] = "VERIFY worker consumed artifact and produced verify handoff."
+ 243:             result["output_payload"] = {
+ 244:                 "verify": _busmsg_get(payload, "verify") or "pending_x75_check",
+ 245:                 "source_message": _busmsg_get(msg, "id"),
+
