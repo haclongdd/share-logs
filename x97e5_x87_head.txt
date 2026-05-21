@@ -1,0 +1,121 @@
+﻿#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""X87B Autonomous Worker Dispatcher import fix for AI Local OS."""
+from __future__ import annotations
+
+import argparse
+import importlib.util
+import json
+import os
+import sys
+import time
+from pathlib import Path
+from typing import Any, Dict, List, Optional
+
+def _resolve_aios_root() -> Path:
+    explicit = os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")
+    if explicit:
+        return Path(explicit)
+
+    candidates = [
+        Path("/app"),
+        Path(r"D:\\openwebui"),
+        Path(__file__).resolve().parent.parent,
+    ]
+
+    for candidate in candidates:
+        try:
+            if (candidate / "core" / "x86_agent_bus.py").exists():
+                return candidate
+        except Exception:
+            pass
+
+    return Path(r"D:\\openwebui")
+
+
+ROOT = _resolve_aios_root()
+CORE_DIR = ROOT / "core"
+RUNTIME_DIR = ROOT / "runtime"
+BUS_DIR = RUNTIME_DIR / "x86_agent_bus"
+MESSAGES_DIR = BUS_DIR / "messages"
+REPORT_DIR = RUNTIME_DIR / "reports"
+STATE_DIR = RUNTIME_DIR / "x87_worker_dispatcher"
+STATE_FILE = STATE_DIR / "state.json"
+
+ROUTE_NEXT = {
+    "DEBUG": "PATCHER",
+    "PATCHER": "VERIFY",
+    "VERIFY": "REPORT",
+}
+
+
+def utc_stamp() -> str:
+    return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+
+
+def now_ms() -> int:
+    return int(time.time() * 1000)
+
+
+def safe_write_json(path: Path, data: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+
+def load_json(path: Path, default: Dict[str, Any]) -> Dict[str, Any]:
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return {**default, "load_warning": f"Failed to load {path}: {exc}"}
+
+
+def load_x86_bus_class():
+    bus_file = CORE_DIR / "x86_agent_bus.py"
+    if not bus_file.exists():
+        raise FileNotFoundError(f"X86 dependency missing: {bus_file}")
+
+    module_name = "x86_agent_bus_runtime"
+    spec = importlib.util.spec_from_file_location(module_name, str(bus_file))
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"Cannot import X86 bus from {bus_file}")
+
+    module = importlib.util.module_from_spec(spec)
+
+    # X87B root-cause fix:
+    # Python 3.13 dataclasses expect cls.__module__ to exist in sys.modules
+    # while decorators execute during exec_module().
+    sys.modules[module_name] = module
+
+    spec.loader.exec_module(module)
+    return module.AgentBus
+
+
+class WorkerDispatcher:
+
+    # X97B2_PLANNER_DRIVEN_RUNTIME_DISPATCH
+    def _x97b2_get_x96_plan(self, task_obj):
+        """Return x96_plan dict from common task/message shapes without breaking fallback."""
+        if not isinstance(task_obj, dict):
+            return None
+        direct = task_obj.get("x96_plan")
+        if isinstance(direct, dict):
+            return direct
+        payload = task_obj.get("payload")
+        if isinstance(payload, dict):
+            nested = payload.get("x96_plan")
+            if isinstance(nested, dict):
+                return nested
+        meta = task_obj.get("metadata")
+        if isinstance(meta, dict):
+            nested = meta.get("x96_plan")
+            if isinstance(nested, dict):
+                return nested
+        return None
+
+    def _x97b2_extract_role(self, step):
+        """Accept role fields used by planner variants."""
+

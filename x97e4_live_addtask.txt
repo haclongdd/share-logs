@@ -1,0 +1,64 @@
+﻿{
+    "bridge":  "x90_webui_agent_bridge",
+    "debug":  {
+                  "normalized_at":  "2026-05-20T18:21:41.327723+00:00",
+                  "normalized_by":  "X93_WEBUI_RESPONSE_NORMALIZER",
+                  "raw":  {
+                              "bridge":  "x90_webui_agent_bridge",
+                              "normalized":  {
+                                                 "mode":  "agent",
+                                                 "payload":  {
+
+                                                             },
+                                                 "task":  "x97e4 final orchestration live test: scout debug patch verify report"
+                                             },
+                              "ok":  false,
+                              "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779301301311.json",
+                              "ts":  "2026-05-20T18:21:41Z",
+                              "x90_response":  {
+                                                   "dependency_status":  {
+                                                                             "x86":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x86_agent_bus.py"
+                                                                                     },
+                                                                             "x87":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x87_worker_dispatcher.py"
+                                                                                     },
+                                                                             "x88":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x88_persistent_scheduler.py"
+                                                                                     },
+                                                                             "x89":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x89_sandbox_workers.py"
+                                                                                     }
+                                                                         },
+                                                   "error":  "NameError(\"name \u0027TEMP_DIR\u0027 is not defined\")",
+                                                   "mode":  "agent",
+                                                   "ok":  false,
+                                                   "release":  "X90_WEBUI_AGENT_BRIDGE",
+                                                   "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779301301261.json",
+                                                   "request_id":  "x90req_1779301301071_2ce2590f",
+                                                   "task":  "x97e4 final orchestration live test: scout debug patch verify report",
+                                                   "ts":  "2026-05-20T18:21:41Z"
+                                               }
+                          },
+                  "x90":  {
+                              "bridge":  null,
+                              "ok":  false,
+                              "release":  "X90_WEBUI_AGENT_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779301301261.json",
+                              "request_id":  "x90req_1779301301071_2ce2590f"
+                          }
+              },
+    "ok":  false,
+    "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+    "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779301301311.json",
+    "result":  null,
+    "summary":  "failed | task=x97e4 final orchestration live test: scout debug patch verify report | report=/app/runtime/reports/x91_addtask_bridge_response_1779301301311.json",
+    "task":  "x97e4 final orchestration live test: scout debug patch verify report",
+    "ts":  "2026-05-20T18:21:41Z"
+}
+
