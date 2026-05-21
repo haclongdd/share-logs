@@ -1,6 +1,6 @@
 ﻿0003: """X87B Autonomous Worker Dispatcher import fix for AI Local OS."""
-0017: def _busmsg_get(message, [REDACTED], default=None):
-0020:         return message.get([REDACTED], default)
+0017: def _busmsg_get(message, key, default=None):
+0020:         return message.get(key, default)
 0024:     """Normalize x86 BusMessage/dataclass objects to dict before dispatcher access."""
 0031: def _resolve_aios_root() -> Path:
 0032:     explicit = os.environ.get( "AI_LOCAL_OS_ROOT") or os.environ.get( "AIOS_ROOT")
