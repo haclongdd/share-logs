@@ -1,9 +1,21 @@
 ﻿{
-    "updated_at":  "2026-05-22T00:53:59.5184428+07:00",
+    "updated_at":  "2026-05-22T00:54:14.0343684+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x108d_check_log.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x108d_check_log.txt",
+    "latest":  "x108d2_check_log.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x108d2_check_log.txt",
     "recent":  [
+                   {
+                       "name":  "x108d2_check_log.txt",
+                       "size":  1784,
+                       "modified_at":  "2026-05-22T00:54:06.9873423+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x108d2_check_log.txt"
+                   },
+                   {
+                       "name":  "x108d2_apply_log.txt",
+                       "size":  2360,
+                       "modified_at":  "2026-05-22T00:54:05.5888306+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x108d2_apply_log.txt"
+                   },
                    {
                        "name":  "x108d_check_log.txt",
                        "size":  1758,
@@ -111,18 +123,6 @@
                        "size":  541,
                        "modified_at":  "2026-05-21T22:09:44.3367140+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_check_audit.json"
-                   },
-                   {
-                       "name":  "x104b2_apply_log.txt",
-                       "size":  3794,
-                       "modified_at":  "2026-05-21T22:09:42.3765606+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_apply_log.txt"
-                   },
-                   {
-                       "name":  "x104b2_diagnostic_audit.json",
-                       "size":  1613,
-                       "modified_at":  "2026-05-21T22:09:42.3588843+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_diagnostic_audit.json"
                    }
                ]
 }
