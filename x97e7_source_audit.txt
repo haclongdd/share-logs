@@ -1,0 +1,38 @@
+﻿X97E7 source audit
+
+--- .get occurrences before ---
+D:\openwebui\core\x87_worker_dispatcher.py:16: explicit = os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")
+D:\openwebui\core\x87_worker_dispatcher.py:105: direct = task_obj.get("x96_plan")
+D:\openwebui\core\x87_worker_dispatcher.py:108: payload = task_obj.get("payload")
+D:\openwebui\core\x87_worker_dispatcher.py:110: nested = payload.get("x96_plan")
+D:\openwebui\core\x87_worker_dispatcher.py:113: meta = task_obj.get("metadata")
+D:\openwebui\core\x87_worker_dispatcher.py:115: nested = meta.get("x96_plan")
+D:\openwebui\core\x87_worker_dispatcher.py:125: val = step.get(key)
+D:\openwebui\core\x87_worker_dispatcher.py:132: fallback = ROUTE_NEXT.get(current_role)
+D:\openwebui\core\x87_worker_dispatcher.py:137: steps = plan.get("steps")
+D:\openwebui\core\x87_worker_dispatcher.py:148: step["status"] = "done" if isinstance(result, dict) and result.get("ok") else "failed"
+D:\openwebui\core\x87_worker_dispatcher.py:149: step["last_result_ok"] = bool(isinstance(result, dict) and result.get("ok"))
+D:\openwebui\core\x87_worker_dispatcher.py:150: step["retries"] = int(step.get("retries") or 0)
+D:\openwebui\core\x87_worker_dispatcher.py:159: if isinstance(next_step, dict) and not next_step.get("status"):
+D:\openwebui\core\x87_worker_dispatcher.py:192: to_role = str(msg.get("to_role", "")).upper()
+D:\openwebui\core\x87_worker_dispatcher.py:193: task = str(msg.get("task", ""))
+D:\openwebui\core\x87_worker_dispatcher.py:194: payload = msg.get("payload") if isinstance(msg.get("payload"), dict) else {}
+D:\openwebui\core\x87_worker_dispatcher.py:197: "message_id": msg.get("id"),
+D:\openwebui\core\x87_worker_dispatcher.py:210: "root_cause": payload.get("root_cause") or "pending_real_log_review",
+D:\openwebui\core\x87_worker_dispatcher.py:211: "evidence": payload.get("evidence") or payload,
+D:\openwebui\core\x87_worker_dispatcher.py:212: "source_message": msg.get("id"),
+D:\openwebui\core\x87_worker_dispatcher.py:217: "artifact": payload.get("artifact") or r"D:\openwebui\_patch_inbox",
+D:\openwebui\core\x87_worker_dispatcher.py:219: "source_message": msg.get("id"),
+D:\openwebui\core\x87_worker_dispatcher.py:224: "verify": payload.get("verify") or "pending_x75_check",
+D:\openwebui\core\x87_worker_dispatcher.py:225: "source_message": msg.get("id"),
+D:\openwebui\core\x87_worker_dispatcher.py:231: "source_message": msg.get("id"),
+D:\openwebui\core\x87_worker_dispatcher.py:236: result["output_payload"] = {"source_message": msg.get("id")}
+D:\openwebui\core\x87_worker_dispatcher.py:241: x97e_input_payload = msg.get("payload") if isinstance(msg, dict) else None
+D:\openwebui\core\x87_worker_dispatcher.py:243: x97e_plan_context = x97e_input_payload.get("x96_plan")
+D:\openwebui\core\x87_worker_dispatcher.py:244: if x97e_plan_context and isinstance(result.get("output_payload"), dict):
+D:\openwebui\core\x87_worker_dispatcher.py:270: self.state["cycles"] = int(self.state.get("cycles", 0)) + 1
+D:\openwebui\core\x87_worker_dispatcher.py:271: self.state["processed_total"] = int(self.state.get("processed_total", 0)) + len(processed)
+D:\openwebui\core\x87_worker_dispatcher.py:309: steps = x96_plan.get("steps") or []
+D:\openwebui\core\x87_worker_dispatcher.py:313: plan_first_role = first.get("role") or first.get("to_role") or first.get("agent_role")
+D:\openwebui\core\x87_worker_dispatcher.py:324: return {"ok": True, "seed_message": sent.get("id"), "task": task, "seeded_to": to_role, "x97e_seed_mode": payload.get("x97e_seed_mode", "fallback_route_next")}
+

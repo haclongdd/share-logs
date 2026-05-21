@@ -1,0 +1,4 @@
+﻿X97E7 BusMessage .get repair apply log
+[2026-05-21T17:58:30.8577974+07:00] Inserted _busmsg_get helper
+[2026-05-21T17:58:30.8913352+07:00] Rewrote variable.get(...) calls to _busmsg_get(variable, ...)
+
