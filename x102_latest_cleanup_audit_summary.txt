@@ -1,0 +1,238 @@
+﻿X102 REPO CLEANUP AUDIT - SCAN ONLY
+root=D:\openwebui
+created_at=2026-05-21T21:28:29.2790857+07:00
+policy=NO_DELETE
+
+== SUMMARY BY ACTION ==
+REVIEW: files=0 dirs=2 bytes=0
+KEEP: files=448 dirs=281 bytes=15554646
+CANDIDATE_ARCHIVE: files=24 dirs=157 bytes=56292
+CANDIDATE_DELETE: files=133 dirs=195 bytes=15627512
+
+== SUMMARY BY CATEGORY/ACTION ==
+BACKUP_OLD, CANDIDATE_ARCHIVE: 103
+BACKUP_RECENT, KEEP: 102
+EMPTY_DIR, CANDIDATE_DELETE: 195
+KEEP_FILE, KEEP: 5
+KEEP_OR_REVIEW, REVIEW: 1
+KEEP_ROOT, KEEP: 7
+PATCH_INBOX_OLD, CANDIDATE_ARCHIVE: 54
+PATCH_INBOX_RECENT, KEEP: 172
+REVIEW_ROOT_DIR, REVIEW: 1
+RUNTIME_REPORT_OLD, CANDIDATE_ARCHIVE: 24
+RUNTIME_REPORT_RECENT, KEEP: 184
+RUNTIME_TEMP_RECENT, KEEP: 259
+STALE_GENERATED_FILE, CANDIDATE_DELETE: 133
+
+== TOP CANDIDATE DELETE FILES BY SIZE ==
+DELETE? _backups\x12n_filter_execution_bridge\webui.db.20260519_003555.bak bytes=14327808 last=2026-05-19T00:25:59 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x12n_filter_execution_bridge\webui.db-wal.20260519_003555.bak bytes=403792 last=2026-05-19T00:35:37 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? tools\__pycache__\master_ai_controller.cpython-313.pyc bytes=43434 last=2026-05-19T00:02:02 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x12n_filter_execution_bridge\webui.db-shm.20260519_003555.bak bytes=32768 last=2026-05-19T00:35:41 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\ai_local_os_x8\__pycache__\x8_autonomous_code_agent.cpython-313.pyc bytes=25103 last=2026-05-18T14:54:38 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\ai_local_os_x7\__pycache__\x7_repo_intelligence.cpython-313.pyc bytes=23756 last=2026-05-18T14:45:23 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x12l4_master_ai_mojibake_nl_fix\master_ai_controller.py.20260519_000202.bak bytes=23525 last=2026-05-19T00:00:23 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114509\__pycache__\dashboard.cpython-313.pyc bytes=21157 last=2026-05-19T11:45:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114649\__pycache__\dashboard.cpython-313.pyc bytes=21157 last=2026-05-19T11:46:45 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114514\__pycache__\dashboard.cpython-313.pyc bytes=21157 last=2026-05-19T11:45:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114507\__pycache__\dashboard.cpython-313.pyc bytes=21157 last=2026-05-19T11:45:07 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\ai_local_os_x6\__pycache__\x6_persistent_runtime.cpython-313.pyc bytes=19165 last=2026-05-18T14:37:38 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x12l3_master_ai_nl_parser_safety_net\master_ai_controller.py.20260519_000023.bak bytes=18876 last=2026-05-18T23:58:15 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\core\__pycache__\ai_local_os_integration_final.cpython-313.pyc bytes=16559 last=2026-05-18T17:13:37 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x12l2_master_ai_nl_parser_hard_fix\master_ai_controller.py.20260518_235815.bak bytes=14892 last=2026-05-18T23:55:00 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\core\__pycache__\phaseX3A_true_tool_execution_injection.cpython-313.pyc bytes=14796 last=2026-05-18T12:51:01 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\ai_local_os_x5\__pycache__\x5_runtime.cpython-313.pyc bytes=13798 last=2026-05-18T13:53:21 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_final_cleanup\20260518_130648\_backups_old_temp\_backups\phaseX1c_bridge_hardwire_20260518_102226\master_ai_bridge.py.bak bytes=12426 last=2026-05-18T10:14:12 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114649\__pycache__\checkmail.cpython-313.pyc bytes=11993 last=2026-05-19T11:46:45 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114514\__pycache__\checkmail.cpython-313.pyc bytes=11993 last=2026-05-19T11:45:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114507\__pycache__\checkmail.cpython-313.pyc bytes=11993 last=2026-05-19T11:45:06 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114509\__pycache__\checkmail.cpython-313.pyc bytes=11993 last=2026-05-19T11:45:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\ai_local_os_x5\__pycache__\x5e_workflow_engine.cpython-313.pyc bytes=11989 last=2026-05-18T14:10:03 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114514\__pycache__\check_pi_node.cpython-313.pyc bytes=11921 last=2026-05-19T11:45:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114507\__pycache__\check_pi_node.cpython-313.pyc bytes=11921 last=2026-05-19T11:45:06 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114509\__pycache__\check_pi_node.cpython-313.pyc bytes=11921 last=2026-05-19T11:45:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114649\__pycache__\check_pi_node.cpython-313.pyc bytes=11921 last=2026-05-19T11:46:45 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x14d_real_ollama_model_binding_20260519_220120\x14_master_orchestrator.py.bak bytes=11842 last=2026-05-19T19:00:12 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\core\__pycache__\phaseX2B_command_runner.cpython-313.pyc bytes=11841 last=2026-05-18T12:32:51 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x14e_memory_context_recall_20260519_233006\x14_master_orchestrator.py.bak bytes=11785 last=2026-05-19T15:03:18 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\autonomous_coder_v1\bot_trade_pi.py.20260519_122008.bak bytes=10911 last=2026-05-15T02:22:22 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\autonomous_coder_v1\bot_trade_pi.py.20260519_121707.bak bytes=10911 last=2026-05-15T02:22:22 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x6_payload_parser_hotfix\x6_persistent_runtime.py.bak bytes=10763 last=2026-05-18T07:27:10 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x6a2_persistent_queue_check_hotfix\x6_persistent_runtime.py.bak bytes=10754 last=2026-05-18T07:21:50 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\ai_local_os_x9\__pycache__\x9_agent_ops.cpython-313.pyc bytes=10510 last=2026-05-18T14:56:43 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_final_cleanup\20260518_130648\_backups_old_temp\_backups\phaseX1b_webui_live_sync_20260518_101412\master_ai_bridge.py.bak bytes=10234 last=2026-05-18T08:50:33 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\core\__pycache__\x12_task_queue.cpython-313.pyc bytes=10030 last=2026-05-18T16:43:03 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? tools\__pycache__\x12_project_file_list_tool.cpython-313.pyc bytes=10006 last=2026-05-18T20:31:39 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\webui_add_task_bridge_v1_3\webui_add_task_bridge_v1.py.bak bytes=9316 last=2026-05-19T13:28:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x12l_master_ai_nl_parser_fix\master_ai_controller.py.20260518_235500.bak bytes=9235 last=2026-05-18T23:49:16 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x14c_attach_orchestrator_to_add_task_20260519_190311\.bak bytes=8922 last=2026-05-19T13:31:43 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\webui_add_task_bridge_v1_3\master_ai_bridge.py.bak bytes=8920 last=2026-05-19T13:28:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\webui_add_task_bridge_v1_2\master_ai_bridge.py.bak bytes=8915 last=2026-05-19T13:18:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_final_cleanup\20260518_130648\_backups_old_temp\_backups\phaseX1d_bridge_result_autofinalize_20260518_102551\master_ai_bridge.py.bak bytes=8787 last=2026-05-18T10:22:26 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\webui_add_task_bridge_v1\master_ai_bridge.py.before_webui_add_task_bridge_v1.bak bytes=8456 last=2026-05-18T11:23:02 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\webui_add_task_bridge_v1_2\webui_add_task_bridge_v1.py.bak bytes=8294 last=2026-05-19T13:18:08 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\20260518_224453\x12_intent_dispatch.py.bak bytes=8283 last=2026-05-18T22:23:35 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\webui_add_task_bridge_v1_1\master_ai_bridge.py.before_webui_add_task_bridge_v1_1.bak bytes=8227 last=2026-05-19T13:12:40 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\core\__pycache__\phaseX2C_tool_router.cpython-313.pyc bytes=7972 last=2026-05-18T12:32:51 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x14b_dynamic_project_resolver_20260519_190012\x14_master_orchestrator.py.bak bytes=7568 last=2026-05-19T11:55:34 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\tools\__pycache__\x5_native_openwebui_tool.cpython-313.pyc bytes=7500 last=2026-05-18T14:18:27 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_final_cleanup\20260518_130648\_backups_old_temp\_backups\phaseX1e_container_bridge_sync_20260518_102828\master_ai_bridge.py.bak bytes=7026 last=2026-05-18T10:25:51 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\ai_local_os_x5\__pycache__\x5e_multistep_workflow.cpython-313.pyc bytes=6901 last=2026-05-18T14:18:27 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\ai_local_os_x10\__pycache__\x10_command_center.cpython-313.pyc bytes=6769 last=2026-05-18T15:11:33 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_final_cleanup\20260518_130648\_backups_old_temp\_backups\phaseX1f_webui_direct_result_20260518_110739\master_ai_bridge.py.bak bytes=6709 last=2026-05-18T10:27:21 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x5e3_payload_file_bridge_fix_20260518_141826\x5e_multistep_workflow.py.bak bytes=6295 last=2026-05-18T07:11:32 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\core\__pycache__\x13_sandbox_executor.cpython-313.pyc bytes=5525 last=2026-05-18T16:49:38 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? tools\openwebui_functions\__pycache__\ai_local_os_auto_exec_filter.cpython-313.pyc bytes=5439 last=2026-05-18T19:53:20 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\ai_local_os_x11\__pycache__\x11_stable_release.cpython-313.pyc bytes=5387 last=2026-05-18T16:37:34 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\core\__pycache__\phaseX3C_true_webui_interceptor.cpython-313.pyc bytes=5370 last=2026-05-18T12:53:48 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? tools\__pycache__\x12_webui_output_interceptor_filter.cpython-313.pyc bytes=5342 last=2026-05-18T20:20:42 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x12m_openwebui_force_pipe_http_bridge\ai_local_os_force_pipe.py.20260519_002553.bak bytes=4926 last=2026-05-19T00:14:26 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x13e2_native_binder_final_repair\x13e_native_step_binder.py.20260519_095151.bak bytes=4904 last=2026-05-19T09:31:17 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x13e1_native_binder_writefix\x13e_native_step_binder.py.bak bytes=4882 last=2026-05-19T09:29:25 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_final_cleanup\20260518_130648\_backups_old_temp\_backups\phaseX1f_webui_direct_result_20260518_110739\openwebui_tool_run_task_auto_result.py.bak bytes=4677 last=2026-05-17T11:10:46 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x5e3_payload_file_bridge_fix_20260518_141826\x5_native_openwebui_tool.py.bak bytes=4471 last=2026-05-18T07:11:32 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x13b_planner_import_repair\x13_consolidated_planner_agent.py.bak bytes=4320 last=2026-05-19T09:19:32 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114509\__pycache__\safe_run.cpython-313.pyc bytes=4262 last=2026-05-19T11:45:09 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114514\__pycache__\safe_run.cpython-313.pyc bytes=4262 last=2026-05-19T11:45:09 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114649\__pycache__\safe_run.cpython-313.pyc bytes=4262 last=2026-05-19T11:46:46 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114507\__pycache__\safe_run.cpython-313.pyc bytes=4262 last=2026-05-19T11:45:07 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x5c3_entrypoint_adapter_fix\x5_native_openwebui_tool.py.20260518_135320.bak bytes=4142 last=2026-05-18T06:43:38 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? tools\openwebui_functions\__pycache__\ai_local_os_force_pipe.cpython-313.pyc bytes=4030 last=2026-05-18T18:13:53 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\tools\__pycache__\x13_x17_native_os_tool.cpython-313.pyc bytes=3986 last=2026-05-18T16:49:38 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x35b_verify_layer_parsefix_20260520_025658\x35_stable_checkpoint_verify_check.ps1.bak bytes=3853 last=2026-05-19T19:55:06 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x5c2_unicodeescape_hotfix\x5_native_openwebui_tool.py.20260518_134839.bak bytes=3631 last=2026-05-18T13:37:30 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\x12e3_intent_detector_bridge_fix_20260518_203639\x12_webui_output_interceptor_filter.py.bak bytes=3456 last=2026-05-18T20:34:45 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? runtime\smoke_tests\__pycache__\x12r_webui_bridge_e2e_smoke.cpython-313.pyc bytes=3419 last=2026-05-19T01:34:16 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _archive_stabilization\20260518_173735\python_cache\core\__pycache__\phaseX2C_intent_classifier.cpython-313.pyc bytes=3410 last=2026-05-18T12:34:18 reason=Stale generated/backup/temp file outside protected source dirs
+DELETE? _backups\real_use_v8_actions\project_v4_1_backup_20260519_114514\__pycache__\project_tools.cpython-313.pyc bytes=3394 last=2026-05-19T11:45:09 reason=Stale generated/backup/temp file outside protected source dirs
+
+== TOP CANDIDATE ARCHIVE ==
+ARCHIVE? _backups\phase2b_prep_20260516_232931 kind=dir last=2026-05-16T23:29:31 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_finish_20260517_004505 kind=dir last=2026-05-17T00:45:05 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_syncfix kind=dir last=2026-05-17T09:24:21 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_get_report_hardfix kind=dir last=2026-05-17T09:30:46 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_ollama_keepalive_20260517_095146 kind=dir last=2026-05-17T09:51:46 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_ollama_keepalive_20260517_095615 kind=dir last=2026-05-17T09:56:15 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_ollama_keepalive_20260517_095628 kind=dir last=2026-05-17T09:56:28 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_smart_routing_20260517_102804 kind=dir last=2026-05-17T10:28:04 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_smart_routing_fixed_20260517_103508 kind=dir last=2026-05-17T10:35:08 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\dashboard_alive_fix kind=dir last=2026-05-17T11:01:21 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\dashboard_hardfix kind=dir last=2026-05-17T11:05:15 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_auto_result_return kind=dir last=2026-05-17T11:10:45 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_stable_20260517_112743 kind=dir last=2026-05-17T11:27:43 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_stable_20260517_112926 kind=dir last=2026-05-17T11:29:26 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2b_stable_20260517_112944 kind=dir last=2026-05-17T11:29:44 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase2c3_router_v2_20260517_140626 kind=dir last=2026-05-17T14:06:26 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase3b_task_decomp_queue kind=dir last=2026-05-17T14:26:12 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phase4d_phase4_finalize kind=dir last=2026-05-17T15:06:27 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phaseX2A_true_local_shell_filesystem_tool_20260518_121649 kind=dir last=2026-05-18T12:16:49 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phaseX2B_true_local_shell_command_runner_20260518_122043 kind=dir last=2026-05-18T12:20:43 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\phaseX2C_true_local_shell_tool_router kind=dir last=2026-05-18T12:23:01 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x5_full_local_ai_os_pack_20260518_133246 kind=dir last=2026-05-18T13:32:46 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x5c_operational_parser_fix_pack_20260518_134251 kind=dir last=2026-05-18T13:42:51 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x5c2_unicodeescape_hotfix kind=dir last=2026-05-18T13:48:39 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x5c3_entrypoint_adapter_fix kind=dir last=2026-05-18T13:53:20 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x5e_real_multistep_workflow_pack_20260518_141002 kind=dir last=2026-05-18T14:10:02 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x5e2_payload_file_multistep_hotfix_20260518_141459 kind=dir last=2026-05-18T14:14:59 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x5e3_payload_file_bridge_fix_20260518_141826 kind=dir last=2026-05-18T14:18:26 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x6a_persistent_queue_state_20260518_142225 kind=dir last=2026-05-18T14:22:25 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x6a2_persistent_queue_check_hotfix kind=dir last=2026-05-18T14:25:18 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x6_full_20260518_143537 kind=dir last=2026-05-18T14:35:37 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x6_payload_parser_hotfix kind=dir last=2026-05-18T14:37:38 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x7_full_repo_intelligence_20260518_144143 kind=dir last=2026-05-18T14:41:43 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x7_unreadable_cache_hotfix_20260518_144522 kind=dir last=2026-05-18T14:45:23 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x8_full_autonomous_code_agent_20260518_144918 kind=dir last=2026-05-18T14:49:18 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x11_x4c_compat_audit_hotfix kind=dir last=2026-05-18T16:38:53 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x13_x17_full_local_ai_os_pack_20260518_164937 kind=dir last=2026-05-18T16:49:37 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\ai_local_os_integration_final kind=dir last=2026-05-18T16:56:25 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\ai_local_os_integration_final_hotfix kind=dir last=2026-05-18T17:10:19 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\ai_local_os_integration_final_hotfix_v2 kind=dir last=2026-05-18T17:11:42 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\openwebui_bridge_route_hotfix kind=dir last=2026-05-18T17:16:46 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\ai_local_os_stabilization kind=dir last=2026-05-18T17:37:35 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\ai_local_os_auto_tool_execution_hook kind=dir last=2026-05-18T17:43:16 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\auto_tool_execution_hook_hotfix kind=dir last=2026-05-18T17:44:46 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\auto_tool_execution_hook_hotfix_v2 kind=dir last=2026-05-18T17:46:22 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\auto_tool_execution_hook_hotfix_v3 kind=dir last=2026-05-18T17:48:39 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\ai_local_os_result_render_final kind=dir last=2026-05-18T17:57:48 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\force_chat_auto_exec_hook kind=dir last=2026-05-18T18:09:04 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\openwebui_force_pipe_bind kind=dir last=2026-05-18T18:12:46 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\openwebui_force_pipe_bind_v2 kind=dir last=2026-05-18T18:13:52 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\openwebui_native_tool_bridge kind=dir last=2026-05-18T19:39:13 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\openwebui_filter_autoexec_final kind=dir last=2026-05-18T19:53:19 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12_webui_final_output_interceptor_20260518_201044 kind=dir last=2026-05-18T20:10:44 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12_webui_final_output_interceptor_20260518_201143 kind=dir last=2026-05-18T20:11:43 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12b_final_renderer_project_fix_20260518_202041 kind=dir last=2026-05-18T20:20:41 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12c_project_name_parser_fix_20260518_202403 kind=dir last=2026-05-18T20:24:03 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12d_intent_dispatch_fix_20260518_203139 kind=dir last=2026-05-18T20:31:39 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12e_intent_detector_hotfix_20260518_203445 kind=dir last=2026-05-18T20:34:45 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12e3_intent_detector_bridge_fix_20260518_203639 kind=dir last=2026-05-18T20:36:39 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12f_body_bridge_hotfix_20260518_215950 kind=dir last=2026-05-18T21:59:50 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12g_exact_outlet_response_bridge_20260518_222335 kind=dir last=2026-05-18T22:23:35 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\20260518_224453 kind=dir last=2026-05-18T22:44:53 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12i_replace_active_auto_vs1_filter_20260518_225314 kind=dir last=2026-05-18T22:53:14 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12j_master_controller_direct_result_fix_20260518_234435 kind=dir last=2026-05-18T23:44:35 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12k_master_controller_list_files_fix_20260518_234916 kind=dir last=2026-05-18T23:49:16 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12l_master_ai_nl_parser_fix kind=dir last=2026-05-18T23:55:00 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12l2_master_ai_nl_parser_hard_fix kind=dir last=2026-05-18T23:58:15 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12l3_master_ai_nl_parser_safety_net kind=dir last=2026-05-19T00:00:23 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12l4_master_ai_mojibake_nl_fix kind=dir last=2026-05-19T00:02:02 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12m_openwebui_force_pipe_http_bridge kind=dir last=2026-05-19T00:25:53 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12n_filter_execution_bridge kind=dir last=2026-05-19T00:35:55 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12o_tool_execute_master_ai_alias kind=dir last=2026-05-19T00:50:58 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12q_webui_bridge_reconnect kind=dir last=2026-05-19T01:26:42 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x12r_webui_bridge_e2e_smoke kind=dir last=2026-05-19T01:34:16 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? runtime\reports\1ff6ff7a610f_final_report.json kind=file last=2026-05-19T01:34:17 reason=Old runtime report; archive before delete
+ARCHIVE? runtime\reports\e0a38003a56b_final_report.json kind=file last=2026-05-19T09:10:44 reason=Old runtime report; archive before delete
+ARCHIVE? _patch_inbox\x13_consolidated_planner_agent kind=dir last=2026-05-19T09:16:54 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _backups\x13b_planner_import_repair kind=dir last=2026-05-19T09:20:56 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? runtime\reports\c4f9e8ec3a97_final_report.json kind=file last=2026-05-19T09:26:59 reason=Old runtime report; archive before delete
+ARCHIVE? runtime\reports\fe3b3d2586eb_final_report.json kind=file last=2026-05-19T09:26:59 reason=Old runtime report; archive before delete
+ARCHIVE? runtime\reports\e077e2cb0d5d_final_report.json kind=file last=2026-05-19T09:26:59 reason=Old runtime report; archive before delete
+ARCHIVE? _backups\x13e1_native_binder_writefix kind=dir last=2026-05-19T09:31:17 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x13e2_native_binder_final_repair kind=dir last=2026-05-19T09:51:51 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x13f_execution_memory_retry_20260519_095844 kind=dir last=2026-05-19T09:58:44 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x13g_execution_report_bridge_20260519_100225 kind=dir last=2026-05-19T10:02:25 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x13h_runtime_status_api kind=dir last=2026-05-19T10:03:35 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _backups\x13i_autonomous_runtime_supervisor_20260519_101349 kind=dir last=2026-05-19T10:13:49 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _patch_inbox\x13j_persistent_queue_resume_pack kind=dir last=2026-05-19T10:17:47 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12p_add_task_payload_parse_fix kind=dir last=2026-05-19T10:30:26 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12q_webui_bridge_reconnect kind=dir last=2026-05-19T10:30:28 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12r_webui_bridge_e2e_smoke kind=dir last=2026-05-19T10:30:30 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12s_cleanup_patch_test_junk kind=dir last=2026-05-19T10:30:33 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12u_stable_checkpoint_pack kind=dir last=2026-05-19T10:30:35 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12v_hard_audit_state kind=dir last=2026-05-19T10:30:37 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12w_consolidate_patch_inbox kind=dir last=2026-05-19T10:30:40 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12x1_tools_manifest_marker_hotfix kind=dir last=2026-05-19T10:30:42 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12x_tools_layer_consolidation kind=dir last=2026-05-19T10:30:44 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x12y_runtime_artifact_hygiene kind=dir last=2026-05-19T10:30:46 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13a_planner_check_hotfix kind=dir last=2026-05-19T10:30:48 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13b_planner_import_repair kind=dir last=2026-05-19T10:31:57 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13c_planner_planfile_check_fix kind=dir last=2026-05-19T10:31:59 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13d_plan_executor kind=dir last=2026-05-19T10:32:01 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13e1_native_binder_writefix kind=dir last=2026-05-19T10:32:03 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13e2_native_binder_final_repair kind=dir last=2026-05-19T10:32:06 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13e_native_step_binder kind=dir last=2026-05-19T10:32:08 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13f_execution_memory_retry_pack kind=dir last=2026-05-19T10:32:10 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13g_execution_report_bridge_pack kind=dir last=2026-05-19T10:32:13 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13h_runtime_status_api_pack kind=dir last=2026-05-19T10:32:15 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _backups\x13k_to_x13n_autonomous_runtime_pack_20260519_103727 kind=dir last=2026-05-19T10:37:27 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? runtime\reports\x13n_latest_project_report.json kind=file last=2026-05-19T10:37:29 reason=Old runtime report; archive before delete
+ARCHIVE? _backups\x13o_autonomous_runtime_hardening_pack kind=dir last=2026-05-19T10:43:40 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _patch_inbox\x13k_to_x13n_autonomous_runtime_pack kind=dir last=2026-05-19T10:49:03 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13o_autonomous_runtime_hardening_pack kind=dir last=2026-05-19T10:49:04 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13p_restore_x13i_x13j_dependency_pack kind=dir last=2026-05-19T10:49:29 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _backups\x13p_restore_x13i_x13j_dependency_pack_20260519_105002 kind=dir last=2026-05-19T10:50:02 reason=Old rollback backup; archive, do not hard delete yet
+ARCHIVE? _patch_inbox\x13q_integration_smoke_selftest_pack kind=dir last=2026-05-19T10:53:52 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13r_to_x13u_autonomous_expansion_pack kind=dir last=2026-05-19T10:55:57 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? _patch_inbox\x13v_real_execution_test_harness_pack kind=dir last=2026-05-19T10:57:40 reason=Old patch folder; keep only if needed for rollback/history
+ARCHIVE? runtime\reports\x13v_real_task_report.json kind=file last=2026-05-19T10:57:45 reason=Old runtime report; archive before delete
+ARCHIVE? _patch_inbox\x13w_real_task_runner_bridge_pack kind=dir last=2026-05-19T10:59:06 reason=Old patch folder; keep only if needed for rollback/history
+
+== REVIEW ITEMS ==
+REVIEW .git kind=dir last=2026-05-18T16:49:39 reason=Dependency/repo/system folder; do not delete without owner confirmation
+REVIEW archive kind=dir last=2026-05-17T16:22:18 reason=Generic root folder name may contain stale artifacts
+
+audit_json=D:\openwebui\runtime\temp\x102_repo_cleanup_audit_20260521_212820.json
+audit_csv=D:\openwebui\runtime\temp\x102_repo_cleanup_audit_20260521_212820.csv
+audit_txt=D:\openwebui\runtime\temp\x102_repo_cleanup_audit_20260521_212820.txt
+
