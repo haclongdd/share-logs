@@ -1,0 +1,22 @@
+﻿/app/core/x15d_webui_addtask_agentcon_attach.py:2:# X15D_WEBUI_ADDTASK_AGENTCON_ATTACH
+/app/core/x15d_webui_addtask_agentcon_attach.py:47:PATCH = "X15D_WEBUI_ADDTASK_AGENTCON_ATTACH"
+/app/core/x15d_webui_addtask_agentcon_attach.py:59:    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+/app/core/x15d_webui_addtask_agentcon_attach.py:176:        print(json.dumps({
+/app/core/x15d_webui_addtask_agentcon_attach.py:183:        print(json.dumps(latest_status(), ensure_ascii=False, indent=2))
+/app/core/x15d_webui_addtask_agentcon_attach.py:185:        print(json.dumps(webui_add_task_bridge(task=args.task), ensure_ascii=False, indent=2))
+/app/core/master_ai_bridge.py:35:from flask import Flask, request, jsonify
+/app/core/master_ai_bridge.py:63:    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+/app/core/master_ai_bridge.py:79:        return json.dumps(val, ensure_ascii=False)
+/app/core/master_ai_bridge.py:82:    return json.dumps(data, ensure_ascii=False)
+/app/core/master_ai_bridge.py:153:        result = json.dumps(result, ensure_ascii=False, indent=2)
+/app/core/master_ai_bridge.py:238:    return jsonify({"service":"master_ai_bridge", "phase":"X1G", "status":"ok", "mode":"unified_runtime_consolidation", "time":now()})
+/app/core/master_ai_bridge.py:242:    return jsonify({"service":"master_ai_bridge", "phase":"X1G", "status":"ok", "mode":"unified_runtime_consolidation", "time":now()})
+/app/core/master_ai_bridge.py:246:    # X15D_WEBUI_ADDTASK_AGENTCON_ATTACH
+/app/core/master_ai_bridge.py:264:        return jsonify(x93_normalize_add_task_response(_x15d_result)) if 'jsonify' in globals() else _x15d_result
+/app/core/master_ai_bridge.py:269:            'patch': 'X15D_WEBUI_ADDTASK_AGENTCON_ATTACH',
+/app/core/master_ai_bridge.py:325:    return jsonify(x93_normalize_add_task_response(handle_add_task_payload(data)))
+/app/core/master_ai_bridge.py:333:            return jsonify({"phase":"X1G", "status":"completed", "completed":True, "final_status":"PASS", "result":"No task_id provided."}), 200
+/app/core/master_ai_bridge.py:337:            return jsonify(existing), 200
+/app/core/master_ai_bridge.py:341:        return jsonify(payload), 200
+/app/core/master_ai_bridge.py:345:        return jsonify(err), 200
+
