@@ -1,0 +1,48 @@
+﻿{
+    "status":  "[REDACTED]",
+    "purpose":  "Correct X45 verify-layer false-negative by checking docker network inspect and per-container network attachments.",
+    "scope":  "verify-layer only; runtime/container/network configuration untouched",
+    "network_name":  "openwebui_ai_net",
+    "network_visible":  true,
+    "network_id":  "e14e976646303828dbb7d23324a01e5e7ad93bb5b63c8084416e5a4549cc4a94",
+    "required_containers":  [
+                                "master_ai",
+                                "open-webui",
+                                "ollama"
+                            ],
+    "all_required_containers_attached":  true,
+    "container_network_checks":  {
+                                     "open-webui":  {
+                                                        "attached_to_openwebui_ai_net":  true,
+                                                        "ip_address":  "172.20.0.5",
+                                                        "dns_names":  [
+                                                                          "open-webui",
+                                                                          "9c5b9941e394"
+                                                                      ],
+                                                        "error":  null
+                                                    },
+                                     "ollama":  {
+                                                    "attached_to_openwebui_ai_net":  true,
+                                                    "ip_address":  "172.20.0.2",
+                                                    "dns_names":  [
+                                                                      "ollama",
+                                                                      "dead8f204d7d"
+                                                                  ],
+                                                    "error":  null
+                                                },
+                                     "master_ai":  {
+                                                       "attached_to_openwebui_ai_net":  true,
+                                                       "ip_address":  "172.20.0.3",
+                                                       "dns_names":  [
+                                                                         "master_ai",
+                                                                         "master-ai",
+                                                                         "4e0484713f41"
+                                                                     ],
+                                                       "error":  null
+                                                   }
+                                 },
+    "errors":  [
+
+               ],
+    "checked_at":  "2026-05-20T10:46:22"
+}

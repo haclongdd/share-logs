@@ -1,0 +1,17 @@
+﻿{
+    "written_at":  "2026-05-20T10:48:36",
+    "root":  "D:\\openwebui",
+    "checked_paths":  {
+                          "release_dir":  "D:\\openwebui\\release\\phase3_stable_final",
+                          "checkpoint_dir":  "D:\\openwebui\\_checkpoints\\phase3_stable_final_snapshot",
+                          "runtime_anchor":  "D:\\openwebui\\core\\agent_con.py"
+                      },
+    "network_visible":  true,
+    "network_containers":  [
+                               "master_ai",
+                               "open-webui",
+                               "agent_con",
+                               "ollama"
+                           ],
+    "note":  "Report-only audit. No cleanup/delete performed."
+}

@@ -1,0 +1,12 @@
+﻿{
+    "ok":  true,
+    "id":  "X51_PHASE4_MEMORY_FOUNDATION_GATE_REPORT",
+    "created_at":  "2026-05-20T11:06:45+07:00",
+    "release_manifest":  "D:\\openwebui\\release\\phase4_memory\\X51_PHASE4_MEMORY_FOUNDATION_GATE.json",
+    "checkpoint_dir":  "D:\\openwebui\\_checkpoints\\phase4_memory_foundation_gate",
+    "runtime_memory_dir":  "D:\\openwebui\\runtime\\memory",
+    "missing_phase3_artifacts":  [
+
+                                 ],
+    "runtime_touched":  false
+}

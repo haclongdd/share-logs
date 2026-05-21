@@ -1,0 +1,37 @@
+﻿{
+  "ok": true,
+  "checked_at": "2026-05-20T11:20:21",
+  "checks": [
+    {
+      "name": "import_x52",
+      "ok": true,
+      "detail": "x52_persistent_memory_store imported"
+    },
+    {
+      "name": "x52_exports_visible",
+      "ok": true,
+      "detail": "Any,Dict,INDEX_FILE,List,MEMORY_DIR,MEMORY_FILE,Path,REPORT_DIR,ROOT,add_memory,argparse,hashlib,json,main,os,rebuild_index,search_memory,status,sys"
+    },
+    {
+      "name": "import_x53",
+      "ok": true,
+      "detail": "x53_helper_chain_memory_integration imported"
+    },
+    {
+      "name": "x53_healthcheck",
+      "ok": true,
+      "detail": "{\"ok\": true, \"component\": \"x53_helper_chain_memory_integration\", \"compat\": \"x53b\", \"x52_module\": \"D:\\\\openwebui\\\\core\\\\x52_persistent_memory_store.py\", \"write_adapter\": \"x53_compat_fallback\", \"read_adapter\": \"x53_local_jsonl\", \"items_seen\": 3, \"checked_at\": \"2026-05-20T04:20:21.164477+00:00\"}"
+    },
+    {
+      "name": "memory_write_probe",
+      "ok": true,
+      "detail": "fallback local jsonl proof written: runtime/memory/x54_e2e_probe.jsonl"
+    },
+    {
+      "name": "memory_persistence_artifacts",
+      "ok": true,
+      "detail": "runtime\\memory\\persistent_memory.jsonl;runtime\\memory\\phase4_persistent_memory.jsonl;runtime\\memory\\phase4_persistent_memory_index.json;runtime\\memory\\unified_memory_index.jsonl;runtime\\memory\\x14g_execution_memory.jsonl;runtime\\memory\\x14h_final_report_memory.jsonl;runtime\\memory\\x53_helper_chain_events.jsonl;runtime\\memory\\x54_e2e_probe.jsonl;runtime\\memory\\failures\\failure_learning.jsonl;runtime\\memory\\failures\\failure_lessons.json;runtime\\memory\\sessions\\failure_learning.json;runtime\\memory\\sessions\\phase4b_selfcheck.json;runtime\\memory\\sessions\\phase4d_check.jsonl;runtime\\memory\\sessions\\phase4d_smoke.jsonl;runtime\\memory\\vector\\failure_learning.json;runtime\\memory\\vector\\selfcheck.json;runtime\\memory\\vectors\\vector_lite_9f532937.jsonl"
+    }
+  ]
+}
+

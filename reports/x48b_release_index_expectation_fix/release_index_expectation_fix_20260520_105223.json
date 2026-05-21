@@ -1,0 +1,52 @@
+﻿{
+    "name":  "X48B_RELEASE_INDEX_EXPECTATION_FIX",
+    "created_utc":  "2026-05-20T03:52:23.8418935Z",
+    "scope":  "verify/release-index expectation correction only; runtime untouched",
+    "root_cause":  "X48 expected a historical X47 text artifact that may not exist; actual Phase 3 release state should be indexed from real files on disk.",
+    "old_wrong_expectation":  "release\\phase3_stable\\X47_PHASE3_STABLE_FINAL_SNAPSHOT.txt",
+    "old_wrong_expectation_exists":  false,
+    "required_existing_artifacts":  [
+                                        "release\\phase3_stable\\phase3_stable_manifest.json",
+                                        "_checkpoints\\phase3_stable_release\\phase3_stable_manifest.json",
+                                        "release\\phase3_stable\\X45_PHASE3_STABLE_RELEASE_SUMMARY.txt",
+                                        "release\\phase3_stable\\X48_PHASE3_RELEASE_INTEGRITY_INDEX.json"
+                                    ],
+    "missing_required_existing_artifacts":  [
+
+                                            ],
+    "release_files_detected":  [
+                                   {
+                                       "path":  "release\\phase3_stable\\.x45_phase3_stable_release_applied",
+                                       "bytes":  27,
+                                       "modified_utc":  "2026-05-20T03:41:38.9877514Z"
+                                   },
+                                   {
+                                       "path":  "release\\phase3_stable\\phase3_stable_manifest.json",
+                                       "bytes":  22089,
+                                       "modified_utc":  "2026-05-20T03:46:22.8940931Z"
+                                   },
+                                   {
+                                       "path":  "release\\phase3_stable\\X45_PHASE3_STABLE_RELEASE_SUMMARY.txt",
+                                       "bytes":  438,
+                                       "modified_utc":  "2026-05-20T03:41:38.9862379Z"
+                                   },
+                                   {
+                                       "path":  "release\\phase3_stable\\X48_PHASE3_RELEASE_INTEGRITY_INDEX.json",
+                                       "bytes":  5050,
+                                       "modified_utc":  "2026-05-20T03:51:04.4999946Z"
+                                   }
+                               ],
+    "checkpoint_files_detected":  [
+                                      {
+                                          "path":  "_checkpoints\\phase3_stable_release\\phase3_stable_manifest.json",
+                                          "bytes":  22089,
+                                          "modified_utc":  "2026-05-20T03:46:22.8940931Z"
+                                      },
+                                      {
+                                          "path":  "_checkpoints\\phase3_stable_release\\X48_PHASE3_RELEASE_INTEGRITY_INDEX.json",
+                                          "bytes":  5050,
+                                          "modified_utc":  "2026-05-20T03:51:04.4999946Z"
+                                      }
+                                  ],
+    "runtime_touched":  false
+}

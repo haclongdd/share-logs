@@ -1,0 +1,127 @@
+{
+  "ok": true,
+  "marker": "X56_PHASE5_RUNTIME_MONITOR_INDEX",
+  "created_at": "2026-05-20T11:32:47",
+  "root": "D:\\openwebui",
+  "scope": "runtime_monitor_index_read_only",
+  "local_only": true,
+  "cloud_api_added": false,
+  "runtime_logic_touched": false,
+  "docker": {
+    "available": true,
+    "detail": {
+      "ok": true,
+      "returncode": 0,
+      "stdout": "\"29.2.1\"",
+      "stderr": ""
+    }
+  },
+  "network": {
+    "name": "openwebui_ai_net",
+    "visible": true,
+    "containers": [
+      "agent_con",
+      "master_ai",
+      "ollama",
+      "open-webui"
+    ],
+    "error": ""
+  },
+  "containers": [
+    {
+      "name": "open-webui",
+      "visible": true,
+      "running": true,
+      "networks": [
+        "openwebui_ai_net"
+      ],
+      "ports": {
+        "8080/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "3000"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "3000"
+          }
+        ]
+      },
+      "error": ""
+    },
+    {
+      "name": "master_ai",
+      "visible": true,
+      "running": true,
+      "networks": [
+        "openwebui_ai_net"
+      ],
+      "ports": {
+        "5000/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "5000"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "5000"
+          }
+        ]
+      },
+      "error": ""
+    },
+    {
+      "name": "agent_con",
+      "visible": true,
+      "running": true,
+      "networks": [
+        "openwebui_ai_net"
+      ],
+      "ports": {},
+      "error": ""
+    },
+    {
+      "name": "ollama",
+      "visible": true,
+      "running": true,
+      "networks": [
+        "openwebui_ai_net"
+      ],
+      "ports": {
+        "11434/tcp": [
+          {
+            "HostIp": "0.0.0.0",
+            "HostPort": "11434"
+          },
+          {
+            "HostIp": "::",
+            "HostPort": "11434"
+          }
+        ]
+      },
+      "error": ""
+    }
+  ],
+  "core_files": [
+    {
+      "path": "core\\agent_con.py",
+      "exists": true
+    },
+    {
+      "path": "core\\x52_persistent_memory_store.py",
+      "exists": true
+    },
+    {
+      "path": "core\\x53_helper_chain_memory_integration.py",
+      "exists": true
+    }
+  ],
+  "safe_roots": [
+    "_patch_inbox",
+    "_backups",
+    "_checkpoints",
+    "release",
+    "ollama_data"
+  ],
+  "note": "Read-only monitor index. It only inspects Docker/runtime anchors and writes release/report JSON."
+}

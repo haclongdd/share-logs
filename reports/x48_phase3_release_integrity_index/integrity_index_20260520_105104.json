@@ -1,0 +1,52 @@
+﻿{
+    "x48_phase3_release_integrity_index":  {
+                                               "status":  "generated",
+                                               "generated_at":  "2026-05-20T10:51:04.4348997+07:00",
+                                               "root":  "D:\\openwebui",
+                                               "purpose":  "Phase 3 stable release integrity index; report-only; runtime untouched",
+                                               "runtime_touched":  false,
+                                               "network_expectation":  {
+                                                                           "expected_network":  "openwebui_ai_net",
+                                                                           "visible_from_docker":  true,
+                                                                           "note":  "X46 corrected verify-layer false-negative; this is informational only."
+                                                                       },
+                                               "required_artifacts":  [
+                                                                          {
+                                                                              "relative_path":  "release\\phase3_stable\\phase3_stable_manifest.json",
+                                                                              "exists":  true,
+                                                                              "sha256":  "D157782FFFDC4A5DDBB66530286DECB7EC31DDBB5A20D567E607E293ACC27377",
+                                                                              "size_bytes":  22089,
+                                                                              "last_write_time":  "2026-05-20T10:46:22.8940931+07:00"
+                                                                          },
+                                                                          {
+                                                                              "relative_path":  "_checkpoints\\phase3_stable_release\\phase3_stable_manifest.json",
+                                                                              "exists":  true,
+                                                                              "sha256":  "D157782FFFDC4A5DDBB66530286DECB7EC31DDBB5A20D567E607E293ACC27377",
+                                                                              "size_bytes":  22089,
+                                                                              "last_write_time":  "2026-05-20T10:46:22.8940931+07:00"
+                                                                          },
+                                                                          {
+                                                                              "relative_path":  "release\\phase3_stable\\X45_PHASE3_STABLE_RELEASE_SUMMARY.txt",
+                                                                              "exists":  true,
+                                                                              "sha256":  "8F0DF1D68B3E628A77453FE85975C7C1BD7FF96D8EC5CE1A08233E036704FF9C",
+                                                                              "size_bytes":  438,
+                                                                              "last_write_time":  "2026-05-20T10:41:38.9862379+07:00"
+                                                                          },
+                                                                          {
+                                                                              "relative_path":  "release\\phase3_stable\\X47_PHASE3_STABLE_FINAL_SNAPSHOT.txt",
+                                                                              "exists":  false,
+                                                                              "sha256":  null,
+                                                                              "size_bytes":  null,
+                                                                              "last_write_time":  null
+                                                                          }
+                                                                      ],
+                                               "safe_keep_dirs":  [
+                                                                      "_patch_inbox",
+                                                                      "_backups",
+                                                                      "_checkpoints",
+                                                                      "release",
+                                                                      "ollama_data"
+                                                                  ],
+                                               "next_recommended_step":  "Phase 3 final closeout or Phase 4 memory foundation"
+                                           }
+}

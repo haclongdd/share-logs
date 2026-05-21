@@ -1,0 +1,20 @@
+﻿{
+    "root":  "D:\\openwebui",
+    "checked_at":  "2026-05-20T10:53:17.1695246+07:00",
+    "scope":  "X49 Phase 3 Closure Gate - artifact/verify closure only, runtime untouched",
+    "runtime_untouched":  true,
+    "required_artifacts":  {
+                               "phase3_stable_manifest":  true,
+                               "x48_integrity_index":  true,
+                               "agent_con_anchor":  true
+                           },
+    "safe_keep":  [
+                      "_patch_inbox",
+                      "_backups",
+                      "_checkpoints",
+                      "release",
+                      "ollama_data"
+                  ],
+    "closure_status":  "PHASE_3_STABLE_CLOSURE_READY",
+    "docker_network_openwebui_ai_net_visible":  true
+}

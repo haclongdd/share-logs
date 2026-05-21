@@ -1,0 +1,50 @@
+﻿{
+    "release":  "X50_PHASE3_FINAL_SEAL",
+    "created_at":  "2026-05-20T10:59:08.9577229+07:00",
+    "root":  "D:\\openwebui",
+    "scope":  "final seal / handoff artifacts only; runtime untouched",
+    "phase_status":  {
+                         "phase1":  "DONE",
+                         "phase2":  "DONE_STABLE",
+                         "phase3":  "STABLE_FINAL_SEALED",
+                         "next":  "PHASE4_MEMORY_FOUNDATION"
+                     },
+    "confirmed_flow":  [
+                           "single-step -\u003e legacy_agent_con",
+                           "multi-step explicit -\u003e phase3_helper_chain -\u003e planner -\u003e queue -\u003e runner -\u003e aggregator -\u003e retry selector -\u003e retry executor -\u003e final report"
+                       ],
+    "required_safe_dirs":  [
+                               "_patch_inbox",
+                               "_backups",
+                               "_checkpoints",
+                               "release",
+                               "ollama_data"
+                           ],
+    "runtime_anchors":  {
+                            "agent_con_py":  true,
+                            "release_dir":  true,
+                            "checkpoint_dir":  true
+                        },
+    "docker":  {
+                   "network_openwebui_ai_net_visible":  true,
+                   "containers":  {
+                                      "agent_con":  {
+                                                        "network_raw":  "{\"openwebui_ai_net\":{\"IPAMConfig\":null,\"Links\":null,\"Aliases\":[\"agent_con\",\"agent-con\"],\"DriverOpts\":null,\"GwPriority\":0,\"NetworkID\":\"e14e976646303828dbb7d23324a01e5e7ad93bb5b63c8084416e5a4549cc4a94\",\"EndpointID\":\"fe6d8c464e8bb456f710f33fe69397cc65de33e5e99b6e1dcd83c082dec59b06\",\"Gateway\":\"172.20.0.1\",\"IPAddress\":\"172.20.0.4\",\"MacAddress\":\"36:e3:18:1f:82:c2\",\"IPPrefixLen\":16,\"IPv6Gateway\":\"\",\"GlobalIPv6Address\":\"\",\"GlobalIPv6PrefixLen\":0,\"DNSNames\":[\"agent_con\",\"agent-con\",\"ab269a960997\"]}}",
+                                                        "ok":  true
+                                                    },
+                                      "open-webui":  {
+                                                         "network_raw":  "{\"openwebui_ai_net\":{\"IPAMConfig\":null,\"Links\":null,\"Aliases\":[\"open-webui\",\"open-webui\"],\"DriverOpts\":null,\"GwPriority\":0,\"NetworkID\":\"e14e976646303828dbb7d23324a01e5e7ad93bb5b63c8084416e5a4549cc4a94\",\"EndpointID\":\"c5821abaa0951cac695ad0bd25d4e1ae47b163b17acfece99e726b900c5bffa3\",\"Gateway\":\"172.20.0.1\",\"IPAddress\":\"172.20.0.5\",\"MacAddress\":\"22:93:1b:3a:50:4b\",\"IPPrefixLen\":16,\"IPv6Gateway\":\"\",\"GlobalIPv6Address\":\"\",\"GlobalIPv6PrefixLen\":0,\"DNSNames\":[\"open-webui\",\"9c5b9941e394\"]}}",
+                                                         "ok":  true
+                                                     },
+                                      "ollama":  {
+                                                     "network_raw":  "{\"openwebui_ai_net\":{\"IPAMConfig\":null,\"Links\":null,\"Aliases\":[\"ollama\",\"ollama\"],\"DriverOpts\":null,\"GwPriority\":0,\"NetworkID\":\"e14e976646303828dbb7d23324a01e5e7ad93bb5b63c8084416e5a4549cc4a94\",\"EndpointID\":\"7b32b43f903d92ddf0010ee84b4e38740e83ff229dd19a1d3233c665dd35a074\",\"Gateway\":\"172.20.0.1\",\"IPAddress\":\"172.20.0.2\",\"MacAddress\":\"06:43:b1:a6:cc:85\",\"IPPrefixLen\":16,\"IPv6Gateway\":\"\",\"GlobalIPv6Address\":\"\",\"GlobalIPv6PrefixLen\":0,\"DNSNames\":[\"ollama\",\"dead8f204d7d\"]}}",
+                                                     "ok":  true
+                                                 },
+                                      "master_ai":  {
+                                                        "network_raw":  "{\"openwebui_ai_net\":{\"IPAMConfig\":null,\"Links\":null,\"Aliases\":[\"master_ai\",\"master-ai\"],\"DriverOpts\":null,\"GwPriority\":0,\"NetworkID\":\"e14e976646303828dbb7d23324a01e5e7ad93bb5b63c8084416e5a4549cc4a94\",\"EndpointID\":\"56536073c6472e3492f0e62ea69483b8f050cf807767449b78f2e58c151ae483\",\"Gateway\":\"172.20.0.1\",\"IPAddress\":\"172.20.0.3\",\"MacAddress\":\"c6:00:88:db:ca:91\",\"IPPrefixLen\":16,\"IPv6Gateway\":\"\",\"GlobalIPv6Address\":\"\",\"GlobalIPv6PrefixLen\":0,\"DNSNames\":[\"master_ai\",\"master-ai\",\"4e0484713f41\"]}}",
+                                                        "ok":  true
+                                                    }
+                                  }
+               },
+    "operating_rule":  "inspect/log first; verify true failing layer; no speculative symptom patches; no scope expansion"
+}

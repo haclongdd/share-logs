@@ -1,0 +1,250 @@
+﻿{
+    "patch_id":  "X45_PHASE3_STABLE_RELEASE",
+    "created_at":  "2026-05-20T10:41:38.9433357+07:00",
+    "project_root":  "D:\\openwebui",
+    "phase_status":  {
+                         "phase1":  "DONE",
+                         "phase2":  "DONE/STABLE",
+                         "phase3":  "E2E helper-chain DONE; X45 stable release checkpoint"
+                     },
+    "confirmed_[REDACTED]":  [
+                           "X36 planner/decomposer",
+                           "X37 queue bridge",
+                           "X38 multijob runner",
+                           "X39 aggregator",
+                           "X40 retry selector",
+                           "X41 retry executor",
+                           "X42 helper-chain audit",
+                           "X43 controlled runtime integration",
+                           "X44B execute-chain integration"
+                       ],
+    "real_flow":  {
+                      "single_step":  "legacy_agent_con",
+                      "multi_step_explicit":  [
+                                                  "phase3_helper_chain",
+                                                  "planner",
+                                                  "queue",
+                                                  "runner",
+                                                  "aggregator",
+                                                  "retry_selector",
+                                                  "retry_executor",
+                                                  "final_report"
+                                              ]
+                  },
+    "operating_rule":  {
+                           "forbidden":  [
+                                             "guessing",
+                                             "leaning-based fix",
+                                             "symptom patch chain",
+                                             "scope expansion"
+                                         ],
+                           "required":  [
+                                            "inspect/log first",
+                                            "verify failing layer",
+                                            "clear root cause before fix",
+                                            "patch only confirmed layer"
+                                        ]
+                       },
+    "safe_keep":  [
+                      "_patch_inbox",
+                      "_backups",
+                      "_checkpoints",
+                      "release",
+                      "ollama_data"
+                  ],
+    "runtime_confirmed_by_user":  {
+                                      "agent_con_container_path":  "/app/core/agent_con.py",
+                                      "ollama_port":  "11434:11434",
+                                      "shared_network":  "openwebui_ai_net"
+                                  },
+    "detected_components":  [
+                                {
+                                    "id":  "X36",
+                                    "name":  "planner_decomposer",
+                                    "detected":  true,
+                                    "files":  [
+                                                  "core\\__pycache__\\x36_phase3_planner_decomposer.cpython-313.pyc",
+                                                  "core\\x36_phase3_planner_decomposer.py",
+                                                  "runtime\\x36\\plans\\x36_plan_20260520_025812_list_project_files_then_write_report.json",
+                                                  "runtime\\x36\\plans\\x36_plan_20260520_025813_check_status_list_files_write_report.json",
+                                                  "runtime\\x36\\plans\\x36_plan_20260520_101427_check_status_list_files_write_report.json",
+                                                  "runtime\\x36\\reports\\x36_report_20260520_025812.json",
+                                                  "runtime\\x36\\reports\\x36_report_20260520_025813.json",
+                                                  "runtime\\x36\\reports\\x36_report_20260520_101427.json",
+                                                  "runtime\\x36\\x36_apply_manifest_20260520_025812.json",
+                                                  "runtime\\x36\\x36_apply_smoke_20260520_025812.json"
+                                              ]
+                                },
+                                {
+                                    "id":  "X37",
+                                    "name":  "queue_bridge",
+                                    "detected":  true,
+                                    "files":  [
+                                                  "core\\x37_phase3_multijob_queue_bridge.py",
+                                                  "runtime\\phase3_queue\\x37_latest_multijob_plan.json",
+                                                  "runtime\\phase3_queue\\x37_multijob_20260520_025916_x37_check_create_deterministic_multi_job_plan.json",
+                                                  "runtime\\phase3_queue\\x37_multijob_20260520_101428_x37_check_create_deterministic_multi_job_plan.json",
+                                                  "runtime\\x37\\x37_apply_manifest_20260520_025916.json",
+                                                  "runtime\\x37\\x37_enqueue_manifest_20260520_025916.json",
+                                                  "runtime\\x37\\x37_enqueue_manifest_20260520_101428.json"
+                                              ]
+                                },
+                                {
+                                    "id":  "X38",
+                                    "name":  "multijob_runner",
+                                    "detected":  true,
+                                    "files":  [
+                                                  "core\\__pycache__\\x38_phase3_multijob_runner.cpython-313.pyc",
+                                                  "core\\x38_phase3_multijob_runner.py",
+                                                  "runtime\\x38\\x38_apply_manifest_20260520_090219.json",
+                                                  "runtime\\x38\\x38_check_sample_queue.json",
+                                                  "runtime\\x38\\x38_multijob_runner_report.json",
+                                                  "runtime\\x38b\\x38b_apply_manifest.json",
+                                                  "runtime\\x38b\\x38b_sample_queue_bom.json",
+                                                  "runtime\\x38b\\x38b_sample_report.json",
+                                                  "runtime\\x38c\\x38c_apply_manifest.json",
+                                                  "runtime\\x38c\\x38c_check_queue_bom.json"
+                                              ]
+                                },
+                                {
+                                    "id":  "X39",
+                                    "name":  "aggregator",
+                                    "detected":  true,
+                                    "files":  [
+                                                  "core\\__pycache__\\x39_phase3_report_aggregator.cpython-313.pyc",
+                                                  "core\\x39_phase3_report_aggregator.py",
+                                                  "runtime\\x39\\x39_apply_manifest_20260520_093212.json",
+                                                  "runtime\\x39\\x39_apply_manifest_20260520_094701.json",
+                                                  "runtime\\x39\\x39_check_aggregated_report.json",
+                                                  "runtime\\x39\\x39_sample_x38_runner_report.json"
+                                              ]
+                                },
+                                {
+                                    "id":  "X40",
+                                    "name":  "retry_selector",
+                                    "detected":  true,
+                                    "files":  [
+                                                  "core\\x40_phase3_retry_selector.py",
+                                                  "runtime\\x40\\x40_apply_manifest_20260520_094809.json",
+                                                  "runtime\\x40\\x40_check_aggregate_bom.json",
+                                                  "runtime\\x40\\x40_check_retry_queue.json"
+                                              ]
+                                },
+                                {
+                                    "id":  "X41",
+                                    "name":  "retry_executor",
+                                    "detected":  true,
+                                    "files":  [
+                                                  "core\\__pycache__\\x41_phase3_retry_executor_loop.cpython-313.pyc",
+                                                  "core\\x41_phase3_retry_executor_loop.py",
+                                                  "runtime\\x41\\x41_apply_manifest_20260520_095159.json",
+                                                  "runtime\\x41\\x41_check_out\\x41_retry_aggregated_report.json",
+                                                  "runtime\\x41\\x41_check_out\\x41_retry_executor_final_report.json",
+                                                  "runtime\\x41\\x41_check_out\\x41_retry_normalized_queue.json",
+                                                  "runtime\\x41\\x41_check_out\\x41_retry_queue_for_runner.json",
+                                                  "runtime\\x41\\x41_check_out\\x41_retry_runner_report.json",
+                                                  "runtime\\x41\\x41_check_retry_queue.json",
+                                                  "runtime\\x41\\x41_check_retry_queue_bom.json",
+                                                  "runtime\\x41d\\x41d_check_out\\x41_retry_executor_final_report.json"
+                                              ]
+                                },
+                                {
+                                    "id":  "X42",
+                                    "name":  "helper_chain_audit",
+                                    "detected":  true,
+                                    "files":  [
+                                                  "runtime\\x42\\x42_apply_manifest_20260520_101426.json",
+                                                  "runtime\\x42\\x42_helper_chain_audit_summary.json"
+                                              ]
+                                },
+                                {
+                                    "id":  "X43",
+                                    "name":  "controlled_runtime_integration",
+                                    "detected":  true,
+                                    "files":  [
+                                                  "core\\__pycache__\\x43_controlled_runtime_integration.cpython-313.pyc",
+                                                  "core\\x43_controlled_runtime_integration.py"
+                                              ]
+                                },
+                                {
+                                    "id":  "X44B",
+                                    "name":  "execute_chain_integration",
+                                    "detected":  true,
+                                    "files":  [
+                                                  "runtime\\x44b\\x44b_apply_manifest_20260520_103822.json",
+                                                  "runtime\\x44b\\x44b_multi_report.json",
+                                                  "runtime\\x44b\\x44b_multi_task.json",
+                                                  "runtime\\x44b\\x44b_single_report.json",
+                                                  "runtime\\x44b\\x44b_single_task.json"
+                                              ]
+                                }
+                            ],
+    "runtime_checks":  {
+                           "agent_con_py":  {
+                                                "path":  "D:\\openwebui\\core\\agent_con.py",
+                                                "exists":  true
+                                            },
+                           "docker":  {
+                                          "docker_available":  true,
+                                          "containers":  [
+                                                             {
+                                                                 "name":  "ollama",
+                                                                 "image":  "ollama/ollama:latest",
+                                                                 "status":  "Up 56 minutes",
+                                                                 "ports":  "0.0.0.0:11434-\u003e11434/tcp, [::]:11434-\u003e11434/tcp"
+                                                             },
+                                                             {
+                                                                 "name":  "testnet2",
+                                                                 "image":  "pinetwork/pi-node-docker:community-v1.1-p23.0.1",
+                                                                 "status":  "Up 56 minutes",
+                                                                 "ports":  "0.0.0.0:31402-\u003e31402/tcp, [::]:31402-\u003e31402/tcp, 0.0.0.0:31403-\u003e1570/tcp, [::]:31403-\u003e1570/tcp, 0.0.0.0:31401-\u003e8000/tcp, [::]:31401-\u003e8000/tcp"
+                                                             },
+                                                             {
+                                                                 "name":  "openwebui-ai-local-os-memory-1",
+                                                                 "image":  "python:3.11-slim",
+                                                                 "status":  "Up 56 minutes",
+                                                                 "ports":  "0.0.0.0:8770-\u003e8770/tcp, [::]:8770-\u003e8770/tcp"
+                                                             },
+                                                             {
+                                                                 "name":  "openwebui-ai-local-os-dashboard-1",
+                                                                 "image":  "python:3.11-slim",
+                                                                 "status":  "Up 56 minutes",
+                                                                 "ports":  "0.0.0.0:8765-\u003e8765/tcp, [::]:8765-\u003e8765/tcp"
+                                                             },
+                                                             {
+                                                                 "name":  "master_ai",
+                                                                 "image":  "openwebui-master-ai",
+                                                                 "status":  "Up 56 minutes",
+                                                                 "ports":  "0.0.0.0:5000-\u003e5000/tcp, [::]:5000-\u003e5000/tcp"
+                                                             },
+                                                             {
+                                                                 "name":  "agent_con",
+                                                                 "image":  "openwebui-agent-con",
+                                                                 "status":  "Up 56 minutes",
+                                                                 "ports":  ""
+                                                             },
+                                                             {
+                                                                 "name":  "open-webui",
+                                                                 "image":  "ghcr.io/open-webui/open-webui:main",
+                                                                 "status":  "Up 56 minutes (healthy)",
+                                                                 "ports":  "0.0.0.0:3000-\u003e8080/tcp, [::]:3000-\u003e8080/tcp"
+                                                             },
+                                                             {
+                                                                 "name":  "optimai_crawl4ai_0_7_8",
+                                                                 "image":  "unclecode/crawl4ai:0.7.8",
+                                                                 "status":  "Up 56 minutes (healthy)",
+                                                                 "ports":  "0.0.0.0:11235-\u003e11235/tcp, [::]:11235-\u003e11235/tcp"
+                                                             }
+                                                         ],
+                                          "networks":  [
+                                                           "openwebui_ai_net"
+                                                       ],
+                                          "ports":  [
+                                                        "0.0.0.0:11434-\u003e11434/tcp, [::]:11434-\u003e11434/tcp"
+                                                    ],
+                                          "notes":  [
+
+                                                    ]
+                                      }
+                       }
+}

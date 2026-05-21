@@ -1,0 +1,16 @@
+﻿{
+  "ok": true,
+  "status": "ready",
+  "index": {
+    "schema": "AI_LOCAL_OS_PHASE4_MEMORY_INDEX_V1",
+    "updated_at": "2026-05-20T11:15:33",
+    "entry_count": 1,
+    "kinds": {
+      "system_checkpoint": 1
+    },
+    "latest_ids": [
+      "0a04974f73d09fe4"
+    ],
+    "memory_file": "D:\\openwebui\\runtime\\memory\\phase4_persistent_memory.jsonl"
+  }
+}
