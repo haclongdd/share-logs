@@ -53,26 +53,26 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x93c_force_webui_response_normalizer_fix\\apply_x93c_force_webui_response_normalizer_fix.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] X93C patched master_ai_bridge.py\n[[REDACTED]] X93C apply completed\n",
+    "stdout": "[PASS] X93C patched master_ai_bridge.py\n[PASS] X93C apply completed\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x93c_force_webui_response_normalizer_fix\\x93c_force_webui_response_normalizer_fix_check.ps1"
     ],
     "returncode": 1,
-    "stdout": "[[REDACTED]] X93C unit normalization contract ok\nThe underlying connection was closed: The connection was closed unexpectedly.\n",
+    "stdout": "[PASS] X93C unit normalization contract ok\nThe underlying connection was closed: The connection was closed unexpectedly.\n",
     "stderr": ""
   },
-  "false_[REDACTED]_guard": true
+  "false_pass_guard": true
 }
 
