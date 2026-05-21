@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x84_task_decomposer",
-  "stage": "apply_check_[REDACTED]",
+  "stage": "apply_check_pass",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,25 +53,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x84_task_decomposer\\apply_x84_task_decomposer.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] X84 task decomposer installed: D:\\openwebui\\core\\x84_task_decomposer.py\n",
+    "stdout": "[PASS] X84 task decomposer installed: D:\\openwebui\\core\\x84_task_decomposer.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x84_task_decomposer\\x84_task_decomposer_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "{   \"ok\": true,   \"stage\": \"status\",   \"orchestrator\": \"X84_TASK_DECOMPOSER\",   \"root\": \"D:\\\\openwebui\",   \"plans\": 0,   \"reports\": 0,   \"x80_exists\": true,   \"x83_memory_exists\": true,   \"plan_dir\": \"D:\\\\openwebui\\\\runtime\\\\plans\\\\x84\",   \"report_dir\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x84\",   \"created_at\": \"2026-05-20T14:17:52\" }\n[[REDACTED]] X84 status [REDACTED]\n[INFO] Smoke:\npython D:/openwebui/core/x84_task_decomposer.py plan --task \"fix runtime bug and verify patch\" --name x84_smoke\n",
+    "stdout": "{   \"ok\": true,   \"stage\": \"status\",   \"orchestrator\": \"X84_TASK_DECOMPOSER\",   \"root\": \"D:\\\\openwebui\",   \"plans\": 0,   \"reports\": 0,   \"x80_exists\": true,   \"x83_memory_exists\": true,   \"plan_dir\": \"D:\\\\openwebui\\\\runtime\\\\plans\\\\x84\",   \"report_dir\": \"D:\\\\openwebui\\\\runtime\\\\reports\\\\x84\",   \"created_at\": \"2026-05-20T14:17:52\" }\n[PASS] X84 status PASS\n[INFO] Smoke:\npython D:/openwebui/core/x84_task_decomposer.py plan --task \"fix runtime bug and verify patch\" --name x84_smoke\n",
     "stderr": ""
   },
-  "false_[REDACTED]_guard": true
+  "false_pass_guard": true
 }
