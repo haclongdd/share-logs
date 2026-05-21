@@ -1,2 +1,2 @@
-﻿[PASS] Generated patch folder: D:\openwebui\_patch_inbox\x93c_force_webui_response_normalizer_fix
+﻿[[REDACTED]] Generated patch folder: D:\openwebui\_patch_inbox\x93c_force_webui_response_normalizer_fix
 
