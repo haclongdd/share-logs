@@ -9,12 +9,12 @@ has handle_message normalization=True
 
   D:\openwebui\core\x87_worker_dispatcher.py:1:
   D:\openwebui\core\x87_worker_dispatcher.py:2:
-> D:\openwebui\core\x87_worker_dispatcher.py:3:def _busmsg_get(message, key, default=None):
+> D:\openwebui\core\x87_worker_dispatcher.py:3:def _busmsg_get(message, [REDACTED], default=None):
   D:\openwebui\core\x87_worker_dispatcher.py:4:    """Safe getter for both dict payloads and BusMessage/dataclass-like 
 objects."""
   D:\openwebui\core\x87_worker_dispatcher.py:5:    if isinstance(message, dict):
-> D:\openwebui\core\x87_worker_dispatcher.py:6:        return _busmsg_get(message, key, default)
-  D:\openwebui\core\x87_worker_dispatcher.py:7:    return getattr(message, key, default)
+> D:\openwebui\core\x87_worker_dispatcher.py:6:        return _busmsg_get(message, [REDACTED], default)
+  D:\openwebui\core\x87_worker_dispatcher.py:7:    return getattr(message, [REDACTED], default)
   D:\openwebui\core\x87_worker_dispatcher.py:8:#!/usr/bin/env python3
   D:\openwebui\core\x87_worker_dispatcher.py:21:
   D:\openwebui\core\x87_worker_dispatcher.py:22:def _resolve_aios_root() -> Path:
@@ -44,9 +44,9 @@ dispatcher .get(...) access."""
   D:\openwebui\core\x87_worker_dispatcher.py:146:            if isinstance(nested, dict):
   D:\openwebui\core\x87_worker_dispatcher.py:147:                return nested
   D:\openwebui\core\x87_worker_dispatcher.py:153:            return None
-  D:\openwebui\core\x87_worker_dispatcher.py:154:        for key in ("role", "to_role", "worker_role", "agent_role", 
+  D:\openwebui\core\x87_worker_dispatcher.py:154:        for [REDACTED] in ("role", "to_role", "worker_role", "agent_role", 
 "name"):
-> D:\openwebui\core\x87_worker_dispatcher.py:155:            val = _busmsg_get(step, key)
+> D:\openwebui\core\x87_worker_dispatcher.py:155:            val = _busmsg_get(step, [REDACTED])
   D:\openwebui\core\x87_worker_dispatcher.py:156:            if isinstance(val, str) and val.strip():
   D:\openwebui\core\x87_worker_dispatcher.py:157:                return val.strip().upper()
   D:\openwebui\core\x87_worker_dispatcher.py:160:    def _x97b2_resolve_next_role(self, task_obj, current_role, 
