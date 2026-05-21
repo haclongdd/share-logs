@@ -1,5 +1,5 @@
 ﻿[X97A SCAN CHECK] 2026-05-21T00:14:08.2283020+07:00
-[PASS] scan outputs exist
+[[REDACTED]] scan outputs exist
 {
     "ok":  true,
     "stage":  "scan_exported",

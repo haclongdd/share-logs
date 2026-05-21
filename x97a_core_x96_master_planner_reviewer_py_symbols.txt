@@ -26,8 +26,8 @@ D:\openwebui\core\x96_master_planner_reviewer.py:76:    steps: List[Dict[str, An
 D:\openwebui\core\x96_master_planner_reviewer.py:79:    steps.append(make_step(n, "SCOUT", "Read project context, roadmap, and identify relevant files/layers.", "Use docs/ROADMAP.md and runtime reports first.", "DEBUG")); n += 1
 D:\openwebui\core\x96_master_planner_reviewer.py:80:    steps.append(make_step(n, "DEBUG", "Verify the true failing layer or required change using logs/evidence.", "Do not patch until root cause is confirmed.", "PATCHER" if meta["needs_patch"] else "VERIFY")); n += 1
 D:\openwebui\core\x96_master_planner_reviewer.py:83:        steps.append(make_step(n, "PATCHER", "Create a minimal targeted patch for the confirmed cause only.", "Patch must go through _patch_inbox and X75 runner.", "VERIFY")); n += 1
-D:\openwebui\core\x96_master_planner_reviewer.py:85:    steps.append(make_step(n, "VERIFY", "Run focused checks and collect pass/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
-D:\openwebui\core\x96_master_planner_reviewer.py:86:    steps.append(make_step(n, "REPORT", "Summarize worker results for MASTER review.", "Report must state pass/fail, evidence, and remaining risk.", None)); n += 1
+D:\openwebui\core\x96_master_planner_reviewer.py:85:    steps.append(make_step(n, "VERIFY", "Run focused checks and collect [REDACTED]/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
+D:\openwebui\core\x96_master_planner_reviewer.py:86:    steps.append(make_step(n, "REPORT", "Summarize worker results for MASTER review.", "Report must state [REDACTED]/fail, evidence, and remaining risk.", None)); n += 1
 D:\openwebui\core\x96_master_planner_reviewer.py:88:    for s in steps:
 D:\openwebui\core\x96_master_planner_reviewer.py:89:        s["max_retries"] = retry_limit
 D:\openwebui\core\x96_master_planner_reviewer.py:91:    plan = {
@@ -42,7 +42,7 @@ D:\openwebui\core\x96_master_planner_reviewer.py:111:            "after_fallback
 D:\openwebui\core\x96_master_planner_reviewer.py:113:        "steps": steps,
 D:\openwebui\core\x96_master_planner_reviewer.py:114:        "master_review_policy": {
 D:\openwebui\core\x96_master_planner_reviewer.py:115:            "master_must_review_report": True,
-D:\openwebui\core\x96_master_planner_reviewer.py:116:            "pass_condition": "VERIFY ok and REPORT has evidence",
+D:\openwebui\core\x96_master_planner_reviewer.py:116:            "[REDACTED]_condition": "VERIFY ok and REPORT has evidence",
 D:\openwebui\core\x96_master_planner_reviewer.py:117:            "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
 D:\openwebui\core\x96_master_planner_reviewer.py:124:    out = PLAN_DIR / f"{tid}_plan.json"
 D:\openwebui\core\x96_master_planner_reviewer.py:125:    plan["plan_file"] = str(out)
@@ -53,7 +53,7 @@ D:\openwebui\core\x96_master_planner_reviewer.py:130:    ok = bool(worker_report
 D:\openwebui\core\x96_master_planner_reviewer.py:131:    evidence = worker_report.get("evidence") or worker_report.get("report_file") or worker_report.get("summary")
 D:\openwebui\core\x96_master_planner_reviewer.py:132:    needs_retry = not ok
 D:\openwebui\core\x96_master_planner_reviewer.py:133:    fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 0)
-D:\openwebui\core\x96_master_planner_reviewer.py:135:    decision = "PASS" if ok and evidence else "RETRY"
+D:\openwebui\core\x96_master_planner_reviewer.py:135:    decision = "[REDACTED]" if ok and evidence else "RETRY"
 D:\openwebui\core\x96_master_planner_reviewer.py:136:    if needs_retry and fallback_calls_used < DEFAULT_FALLBACK_LIMIT:
 D:\openwebui\core\x96_master_planner_reviewer.py:137:        next_action = "ALLOW_LIMITED_FALLBACK_THEN_RETRY_CHILD"
 D:\openwebui\core\x96_master_planner_reviewer.py:138:    elif needs_retry:
@@ -75,7 +75,7 @@ D:\openwebui\core\x96_master_planner_reviewer.py:166:    REVIEW_DIR.mkdir(parent
 D:\openwebui\core\x96_master_planner_reviewer.py:167:    REPORT_DIR.mkdir(parents=True, exist_ok=True)
 D:\openwebui\core\x96_master_planner_reviewer.py:170:    plan = build_plan(task)
 D:\openwebui\core\x96_master_planner_reviewer.py:171:    fake_worker_report = {
-D:\openwebui\core\x96_master_planner_reviewer.py:173:        "summary": "VERIFY passed with evidence log.",
+D:\openwebui\core\x96_master_planner_reviewer.py:173:        "summary": "VERIFY [REDACTED]ed with evidence log.",
 D:\openwebui\core\x96_master_planner_reviewer.py:175:        "report_file": str(REPORT_DIR / "x96_selftest_report.json"),
 D:\openwebui\core\x96_master_planner_reviewer.py:176:        "fallback_calls_used": 0,
 D:\openwebui\core\x96_master_planner_reviewer.py:178:    review = review_worker_report(plan["task_id"], fake_worker_report)

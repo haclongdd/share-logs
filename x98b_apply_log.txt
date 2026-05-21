@@ -4,5 +4,5 @@
 [2026-05-21 01:00:10] Patch folders scanned: 203
 [2026-05-21 01:00:10] Bad absolute inbox apply scripts: 0
 [2026-05-21 01:00:10] Installed guard: D:\openwebui\core\x98b_patch_contract_guard.py
-[2026-05-21 01:00:10] [PASS] X98B apply complete
+[2026-05-21 01:00:10] [[REDACTED]] X98B apply complete
 

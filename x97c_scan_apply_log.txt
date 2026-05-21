@@ -6,6 +6,6 @@
 [2026-05-21 00:28:09] FOUND core\x87_worker_dispatcher.py
 [2026-05-21 00:28:09] FOUND core\x86_agent_bus.py
 [2026-05-21 00:28:10] MISSING master_ai_bridge.py
-[2026-05-21 00:28:10] [PASS] X97C scan apply complete
-[2026-05-21 00:28:10] Next run: powershell -ExecutionPolicy Bypass -File .\x97c_plan_seed_lifecycle_scan\x97c_plan_seed_lifecycle_scan_check.ps1
+[2026-05-21 00:28:10] [[REDACTED]] X97C scan apply complete
+[2026-05-21 00:28:10] Next run: powershell -ExecutionPolicy By[REDACTED] -File .\x97c_plan_seed_lifecycle_scan\x97c_plan_seed_lifecycle_scan_check.ps1
 

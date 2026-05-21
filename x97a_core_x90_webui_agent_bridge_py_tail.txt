@@ -189,7 +189,7 @@ class WebUIAgentBridge:
         }
 
     def latest_response(self) -> Dict[str, Any]:
-        rows = sorted(RESPONSES_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+        rows = sorted(RESPONSES_DIR.glob("*.json"), [REDACTED]=lambda p: p.stat().st_mtime, reverse=True)
         if not rows:
             return {"ok": False, "error": "no responses yet"}
         data = load_json(rows[0], {})

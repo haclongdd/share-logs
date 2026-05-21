@@ -75,7 +75,7 @@ Any]] = None) -> BusMessage:
   core\x86_agent_bus.py:116:
 > core\x86_agent_bus.py:117:    def list_messages(self, status: Optional[str] = None) -> List[Dict[str, Any]]:
   core\x86_agent_bus.py:118:        rows = []
-> core\x86_agent_bus.py:119:        for path in sorted(MESSAGES_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime):
+> core\x86_agent_bus.py:119:        for path in sorted(MESSAGES_DIR.glob("*.json"), [REDACTED]=lambda p: p.stat().st_mtime):
   core\x86_agent_bus.py:120:            item = load_json(path, {})
 > core\x86_agent_bus.py:121:            if status and item.get("status") != status:
   core\x86_agent_bus.py:122:                continue
@@ -106,7 +106,7 @@ collected"})))
 by real log", "evidence": "runtime/temp/*.txt"})))
 > core\x86_agent_bus.py:146:        sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": 
 r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
-> core\x86_agent_bus.py:147:        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "pass"})))
+> core\x86_agent_bus.py:147:        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "[REDACTED]"})))
   core\x86_agent_bus.py:148:        report = {
   core\x86_agent_bus.py:149:            "ok": True,
   core\x86_agent_bus.py:150:            "release": "X86_AGENT_BUS",
@@ -227,8 +227,8 @@ fallback."""
   core\x87_worker_dispatcher.py:121:        """Accept role fields used by planner variants."""
   core\x87_worker_dispatcher.py:122:        if not isinstance(step, dict):
   core\x87_worker_dispatcher.py:123:            return None
-  core\x87_worker_dispatcher.py:124:        for key in ("role", "to_role", "worker_role", "agent_role", "name"):
-> core\x87_worker_dispatcher.py:125:            val = step.get(key)
+  core\x87_worker_dispatcher.py:124:        for [REDACTED] in ("role", "to_role", "worker_role", "agent_role", "name"):
+> core\x87_worker_dispatcher.py:125:            val = step.get([REDACTED])
   core\x87_worker_dispatcher.py:126:            if isinstance(val, str) and val.strip():
   core\x87_worker_dispatcher.py:127:                return val.strip().upper()
   core\x87_worker_dispatcher.py:128:        return None
@@ -275,7 +275,7 @@ result.get("ok"))
   core\x87_worker_dispatcher.py:168:                if isinstance(task_obj, dict):
 > core\x87_worker_dispatcher.py:169:                    task_obj.setdefault("x97b2_dispatch_error", str(exc))
   core\x87_worker_dispatcher.py:170:            except Exception:
-  core\x87_worker_dispatcher.py:171:                pass
+  core\x87_worker_dispatcher.py:171:                [REDACTED]
   core\x87_worker_dispatcher.py:172:            return fallback
   core\x87_worker_dispatcher.py:173:
   core\x87_worker_dispatcher.py:176:        REPORT_DIR.mkdir(parents=True, exist_ok=True)
@@ -355,7 +355,7 @@ dict):
   core\x87_worker_dispatcher.py:246:                result["output_payload"].setdefault("x97e_plan_propagated", True)
   core\x87_worker_dispatcher.py:247:        except Exception as exc:
   core\x87_worker_dispatcher.py:248:            try:
-  core\x87_worker_dispatcher.py:251:                pass
+  core\x87_worker_dispatcher.py:251:                [REDACTED]
   core\x87_worker_dispatcher.py:252:        x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if 
 x97e_plan_context else task
   core\x87_worker_dispatcher.py:253:        next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, 
@@ -520,7 +520,7 @@ ensure_ascii=False, indent=2))
 > core\x90_webui_agent_bridge.py:29:            if (candidate / "core" / "x87_worker_dispatcher.py").exists():
   core\x90_webui_agent_bridge.py:30:                return candidate
   core\x90_webui_agent_bridge.py:31:        except Exception:
-  core\x90_webui_agent_bridge.py:32:            pass
+  core\x90_webui_agent_bridge.py:32:            [REDACTED]
   core\x90_webui_agent_bridge.py:33:
   core\x90_webui_agent_bridge.py:44:STATE_FILE = BRIDGE_DIR / "state.json"
   core\x90_webui_agent_bridge.py:45:
@@ -647,7 +647,7 @@ payload=parse_payload(args.payload))
   core\x96_master_planner_reviewer.py:113:        "steps": steps,
   core\x96_master_planner_reviewer.py:114:        "master_review_policy": {
   core\x96_master_planner_reviewer.py:115:            "master_must_review_report": True,
-  core\x96_master_planner_reviewer.py:116:            "pass_condition": "VERIFY ok and REPORT has evidence",
+  core\x96_master_planner_reviewer.py:116:            "[REDACTED]_condition": "VERIFY ok and REPORT has evidence",
 > core\x96_master_planner_reviewer.py:117:            "fail_action": "retry step or use limited fallback then send 
 updated instruction to child worker",
   core\x96_master_planner_reviewer.py:118:            "final_output_owner": "MASTER",
@@ -666,7 +666,7 @@ worker_report.get("report_file") or worker_report.get("summary")
 > core\x96_master_planner_reviewer.py:133:    fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 
 0)
   core\x96_master_planner_reviewer.py:134:
-  core\x96_master_planner_reviewer.py:135:    decision = "PASS" if ok and evidence else "RETRY"
+  core\x96_master_planner_reviewer.py:135:    decision = "[REDACTED]" if ok and evidence else "RETRY"
   core\x96_master_planner_reviewer.py:136:    if needs_retry and fallback_calls_used < DEFAULT_FALLBACK_LIMIT:
   core\x96_master_planner_reviewer.py:137:        next_action = "ALLOW_LIMITED_FALLBACK_THEN_RETRY_CHILD"
   core\x96_master_planner_reviewer.py:177:    }

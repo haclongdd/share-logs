@@ -82,8 +82,8 @@ def build_plan(task: str, retry_limit: int = DEFAULT_RETRY_LIMIT, fallback_limit
     if meta["needs_patch"]:
         steps.append(make_step(n, "PATCHER", "Create a minimal targeted patch for the confirmed cause only.", "Patch must go through _patch_inbox and X75 runner.", "VERIFY")); n += 1
 
-    steps.append(make_step(n, "VERIFY", "Run focused checks and collect pass/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
-    steps.append(make_step(n, "REPORT", "Summarize worker results for MASTER review.", "Report must state pass/fail, evidence, and remaining risk.", None)); n += 1
+    steps.append(make_step(n, "VERIFY", "Run focused checks and collect [REDACTED]/fail evidence.", "Export full logs to runtime/temp/*.txt.", "REPORT")); n += 1
+    steps.append(make_step(n, "REPORT", "Summarize worker results for MASTER review.", "Report must state [REDACTED]/fail, evidence, and remaining risk.", None)); n += 1
 
     for s in steps:
         s["max_retries"] = retry_limit
@@ -113,7 +113,7 @@ def build_plan(task: str, retry_limit: int = DEFAULT_RETRY_LIMIT, fallback_limit
         "steps": steps,
         "master_review_policy": {
             "master_must_review_report": True,
-            "pass_condition": "VERIFY ok and REPORT has evidence",
+            "[REDACTED]_condition": "VERIFY ok and REPORT has evidence",
             "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
             "final_output_owner": "MASTER",
         },
@@ -132,7 +132,7 @@ def review_worker_report(task_id: str, worker_report: Dict[str, Any]) -> Dict[st
     needs_retry = not ok
     fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 0)
 
-    decision = "PASS" if ok and evidence else "RETRY"
+    decision = "[REDACTED]" if ok and evidence else "RETRY"
     if needs_retry and fallback_calls_used < DEFAULT_FALLBACK_LIMIT:
         next_action = "ALLOW_LIMITED_FALLBACK_THEN_RETRY_CHILD"
     elif needs_retry:
@@ -141,7 +141,7 @@ def review_worker_report(task_id: str, worker_report: Dict[str, Any]) -> Dict[st
         next_action = "FINAL_REPORT_TO_WEBUI"
 
     review = {
-        "ok": decision == "PASS",
+        "ok": decision == "[REDACTED]",
         "release": RELEASE,
         "kind": "master_review",
         "task_id": task_id,
@@ -170,7 +170,7 @@ def selftest() -> Dict[str, Any]:
     plan = build_plan(task)
     fake_worker_report = {
         "ok": True,
-        "summary": "VERIFY passed with evidence log.",
+        "summary": "VERIFY [REDACTED]ed with evidence log.",
         "evidence": str(RUNTIME / "temp"),
         "report_file": str(REPORT_DIR / "x96_selftest_report.json"),
         "fallback_calls_used": 0,
@@ -206,7 +206,7 @@ def main() -> int:
     p.add_argument("--fallback-limit", type=int, default=DEFAULT_FALLBACK_LIMIT)
 
     p = sub.add_parser("review")
-    p.add_argument("--ta[REDACTED_OPENAI_KEY]", required=True)
+    p.add_argument("--ta[REDACTED]id", required=True)
     p.add_argument("--report-json", required=True)
 
     sub.add_parser("selftest")

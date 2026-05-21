@@ -3,5 +3,5 @@
 [OK] exported core\x86_agent_bus.py
 [OK] exported core\x96_master_planner_reviewer.py
 [OK] exported core\x90_webui_agent_bridge.py
-[PASS] X97A scan exported. Summary: D:\openwebui\runtime\temp\x97a_scan_summary.json
+[[REDACTED]] X97A scan exported. Summary: D:\openwebui\runtime\temp\x97a_scan_summary.json
 

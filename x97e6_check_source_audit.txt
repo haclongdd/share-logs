@@ -33,8 +33,8 @@
 === CHECK X87 SEED ===
   D:\openwebui\core\x87_worker_dispatcher.py:122:        if not isinstance(step, dict):
   D:\openwebui\core\x87_worker_dispatcher.py:123:            return None
-> D:\openwebui\core\x87_worker_dispatcher.py:124:        for key in ("role", "to_role", "worker_role", "agent_role", "name"):
-  D:\openwebui\core\x87_worker_dispatcher.py:125:            val = step.get(key)
+> D:\openwebui\core\x87_worker_dispatcher.py:124:        for [REDACTED] in ("role", "to_role", "worker_role", "agent_role", "name"):
+  D:\openwebui\core\x87_worker_dispatcher.py:125:            val = step.get([REDACTED])
   D:\openwebui\core\x87_worker_dispatcher.py:126:            if isinstance(val, str) and val.strip():
   D:\openwebui\core\x87_worker_dispatcher.py:190:
   D:\openwebui\core\x87_worker_dispatcher.py:191:    def handle_message(self, msg: Dict[str, Any]) -> Dict[str, Any]:
@@ -71,7 +71,7 @@
 > D:\openwebui\core\x87_worker_dispatcher.py:235:            result["summary"] = f"No worker handler for role {to_role}"
   D:\openwebui\core\x87_worker_dispatcher.py:236:            result["output_payload"] = {"source_message": msg.get("id")}
   D:\openwebui\core\x87_worker_dispatcher.py:237:
-  D:\openwebui\core\x87_worker_dispatcher.py:251:                pass
+  D:\openwebui\core\x87_worker_dispatcher.py:251:                [REDACTED]
   D:\openwebui\core\x87_worker_dispatcher.py:252:        x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if x97e_plan_context else task
 > D:\openwebui\core\x87_worker_dispatcher.py:253:        next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, result)
   D:\openwebui\core\x87_worker_dispatcher.py:254:        if result["ok"] and next_role:

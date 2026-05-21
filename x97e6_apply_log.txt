@@ -1,7 +1,7 @@
 ﻿[INFO] X97E6 apply start 2026-05-21T01:38:44.4229770+07:00
 [INFO] Root=D:\openwebui
-[PASS] Replaced planner seed from_role MASTER -> SCOUT in X87 only.
-[PASS] py_compile passed: D:\openwebui\core\x87_worker_dispatcher.py
-[PASS] Source audit written: D:\openwebui\runtime\temp\x97e6_source_audit.txt
-[PASS] X97E6 apply complete
+[[REDACTED]] Replaced planner seed from_role MASTER -> SCOUT in X87 only.
+[[REDACTED]] py_compile [REDACTED]ed: D:\openwebui\core\x87_worker_dispatcher.py
+[[REDACTED]] Source audit written: D:\openwebui\runtime\temp\x97e6_source_audit.txt
+[[REDACTED]] X97E6 apply complete
 

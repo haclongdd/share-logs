@@ -79,7 +79,7 @@ _body.get('prompt')
   D:\openwebui\core\master_ai_bridge.py:230:        if _task_text:
   D:\openwebui\core\master_ai_bridge.py:231:            return _x14c_execute_task_payload(_task_text)
   D:\openwebui\core\master_ai_bridge.py:232:    except Exception as _x14c_e:
-  D:\openwebui\core\master_ai_bridge.py:233:        pass
+  D:\openwebui\core\master_ai_bridge.py:233:        [REDACTED]
 > D:\openwebui\core\master_ai_bridge.py:234:    # WEBUI_ADD_TASK_BRIDGE_V1_1_PATCHED
   D:\openwebui\core\master_ai_bridge.py:235:    data = request.get_json(silent=True)
   D:\openwebui\core\master_ai_bridge.py:236:    if data is None:
@@ -88,17 +88,17 @@ _body.get('prompt')
   D:\openwebui\core\master_ai_bridge.py:239:        if not data and getattr(request, "data", b""):
   D:\openwebui\core\master_ai_bridge.py:240:            data = request.data.decode("utf-8", errors="replace")
   D:\openwebui\core\master_ai_bridge.py:241:    except Exception:
-  D:\openwebui\core\master_ai_bridge.py:242:        pass
+  D:\openwebui\core\master_ai_bridge.py:242:        [REDACTED]
   D:\openwebui\core\master_ai_bridge.py:243:    try:
   D:\openwebui\core\master_ai_bridge.py:244:        if not data and getattr(request, "form", None):
   D:\openwebui\core\master_ai_bridge.py:245:            data = request.form.to_dict(flat=True)
   D:\openwebui\core\master_ai_bridge.py:246:    except Exception:
-  D:\openwebui\core\master_ai_bridge.py:247:        pass
+  D:\openwebui\core\master_ai_bridge.py:247:        [REDACTED]
   D:\openwebui\core\master_ai_bridge.py:248:    try:
   D:\openwebui\core\master_ai_bridge.py:249:        if not data and getattr(request, "args", None):
   D:\openwebui\core\master_ai_bridge.py:250:            data = request.args.to_dict(flat=True)
   D:\openwebui\core\master_ai_bridge.py:251:    except Exception:
-  D:\openwebui\core\master_ai_bridge.py:252:        pass
+  D:\openwebui\core\master_ai_bridge.py:252:        [REDACTED]
 > D:\openwebui\core\master_ai_bridge.py:253:    return jsonify(handle_add_task_payload(data))
   D:\openwebui\core\master_ai_bridge.py:254:
   D:\openwebui\core\master_ai_bridge.py:255:@app.route("/get_report", methods=["GET", "POST"])
@@ -109,7 +109,7 @@ request.args.to_dict() or {}
   D:\openwebui\core\master_ai_bridge.py:259:        task_id = str(data.get("task_id") or data.get("id") or "").strip()
   D:\openwebui\core\master_ai_bridge.py:260:        if not task_id:
   D:\openwebui\core\master_ai_bridge.py:261:            return jsonify({"phase":"X1G", "status":"completed", 
-"completed":True, "final_status":"PASS", "result":"No task_id provided."}), 200
+"completed":True, "final_status":"[REDACTED]", "result":"No task_id provided."}), 200
   D:\openwebui\core\master_ai_bridge.py:262:        existing = find_existing(task_id)
   D:\openwebui\core\master_ai_bridge.py:263:        if existing:
   D:\openwebui\core\master_ai_bridge.py:264:            persist_all(existing)
@@ -117,11 +117,11 @@ request.args.to_dict() or {}
   D:\openwebui\core\master_ai_bridge.py:288:        status_dir = root / 'runtime' / 'x16' / 'status'
   D:\openwebui\core\master_ai_bridge.py:289:        rows = []
   D:\openwebui\core\master_ai_bridge.py:290:        if status_dir.exists():
-  D:\openwebui\core\master_ai_bridge.py:291:            for p in sorted(status_dir.glob('*.json'), key=lambda x: 
+  D:\openwebui\core\master_ai_bridge.py:291:            for p in sorted(status_dir.glob('*.json'), [REDACTED]=lambda x: 
 x.stat().st_mtime, reverse=True)[:20]:
   D:\openwebui\core\master_ai_bridge.py:292:                try: 
 rows.append(_x16_json.loads(p.read_text(encoding='utf-8')))
-  D:\openwebui\core\master_ai_bridge.py:293:                except Exception: pass
+  D:\openwebui\core\master_ai_bridge.py:293:                except Exception: [REDACTED]
   D:\openwebui\core\master_ai_bridge.py:294:        return {'ok': True, 'items': rows}
   D:\openwebui\core\master_ai_bridge.py:295:
 > D:\openwebui\core\master_ai_bridge.py:296:    @app.route('/x16/add_task', methods=['POST'])

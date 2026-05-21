@@ -18,7 +18,7 @@
  247:             try:
  248:                 result.setdefault("x97e_plan_propagation_error", str(exc))
  249:             except Exception:
- 250:                 pass
+ 250:                 [REDACTED]
  251:         x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if x97e_plan_context else task
  252:         next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, result)
  253:         if result["ok"] and next_role:

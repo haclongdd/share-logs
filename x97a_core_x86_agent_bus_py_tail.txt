@@ -116,7 +116,7 @@ class AgentBus:
 
     def list_messages(self, status: Optional[str] = None) -> List[Dict[str, Any]]:
         rows = []
-        for path in sorted(MESSAGES_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime):
+        for path in sorted(MESSAGES_DIR.glob("*.json"), [REDACTED]=lambda p: p.stat().st_mtime):
             item = load_json(path, {})
             if status and item.get("status") != status:
                 continue
@@ -144,7 +144,7 @@ class AgentBus:
         sent.append(asdict(self.send("SCOUT", "DEBUG", task, {"finding": "project/context collected"})))
         sent.append(asdict(self.send("DEBUG", "PATCHER", task, {"root_cause": "confirmed by real log", "evidence": "runtime/temp/*.txt"})))
         sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
-        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "pass"})))
+        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "[REDACTED]"})))
         report = {
             "ok": True,
             "release": "X86_AGENT_BUS",

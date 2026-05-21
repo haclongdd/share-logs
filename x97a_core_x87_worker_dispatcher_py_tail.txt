@@ -9,7 +9,7 @@
             if (candidate / "core" / "x86_agent_bus.py").exists():
                 return candidate
         except Exception:
-            pass
+            [REDACTED]
 
     return Path(r"D:\\openwebui")
 

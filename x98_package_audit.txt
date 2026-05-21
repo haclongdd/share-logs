@@ -157,7 +157,7 @@ Length        : 13766
 
 
 
-===== RECENT PATCH FOLDERS: KEY FILES =====
+===== RECENT PATCH FOLDERS: [REDACTED] FILES =====
 
 --- FOLDER: D:\openwebui\_patch_inbox\x98_patch_packaging_pipeline_audit ---
 
@@ -204,7 +204,7 @@ x97d5_planner_seed_exact_repair_check.ps1   -a----   1612 5/20/2026 5:52:38 PM
 "$ROOT\core\x87_worker_dispatcher.py" 2>&1 | Tee-Object -FilePath $LOG -Append
   x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:23:  if ($LASTEXITCODE -ne 0) { throw 
 "Compile failed" }
-  x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:24:  Log "[PASS] X97D5 apply complete"
+  x97d5_planner_seed_exact_repair\apply_x97d5_planner_seed_exact_repair.ps1:24:  Log "[[REDACTED]] X97D5 apply complete"
 
 
 
@@ -235,7 +235,7 @@ failed" }
 "core\x90_webui_agent_bridge.py") 2>&1 | Tee-Object -FilePath $Log -Append
   x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:28:  if($LASTEXITCODE -ne 0){ throw "x90 compile 
 failed" }
-  x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:29:  Log "[PASS] X97D4 apply complete"
+  x97d4_planner_seed_exactfix\apply_x97d4_planner_seed_exactfix.ps1:29:  Log "[[REDACTED]] X97D4 apply complete"
 
 
 
@@ -268,7 +268,7 @@ failed" }
 "core\x90_webui_agent_bridge.py") 2>&1 | Tee-Object -FilePath $LOG -Append
   x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:29:  if ($LASTEXITCODE -ne 0) { throw "x90 compile 
 failed" }
-  x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:30:  Log "[PASS] X97D3 apply complete"
+  x97d3_planner_seed_repair\apply_x97d3_planner_seed_repair.ps1:30:  Log "[[REDACTED]] X97D3 apply complete"
 
 
 
@@ -295,7 +295,7 @@ Compiling targets" | Tee-Object -FilePath $LOG -Append
 > x97d2_planner_seed_hotfix\apply_x97d2_planner_seed_hotfix.ps1:120:python -m py_compile (Join-Path $ROOT 
 "core\x87_worker_dispatcher.py") 2>&1 | Tee-Object -FilePath $LOG -Append
   x97d2_planner_seed_hotfix\apply_x97d2_planner_seed_hotfix.ps1:121:"[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] 
-[PASS] X97D2 apply complete" | Tee-Object -FilePath $LOG -Append
+[[REDACTED]] X97D2 apply complete" | Tee-Object -FilePath $LOG -Append
 
 
 
@@ -321,7 +321,7 @@ Tee-Object -FilePath $LOG -Append
 > x97d_planner_aware_seed_bus_propagation\apply_x97d_planner_aware_seed_bus_propagation.ps1:135:python -m py_compile 
 $target 2>&1 | Tee-Object -FilePath $LOG -Append
   x97d_planner_aware_seed_bus_propagation\apply_x97d_planner_aware_seed_bus_propagation.ps1:136:"[$(Get-Date -Format 
-'yyyy-MM-dd HH:mm:ss')] [PASS] X97D apply complete" | Tee-Object -FilePath $LOG -Append
+'yyyy-MM-dd HH:mm:ss')] [[REDACTED]] X97D apply complete" | Tee-Object -FilePath $LOG -Append
 
 
 
@@ -340,7 +340,7 @@ x97c2b_seed_plan_hotfix_check.ps1   -a----   1990 5/20/2026 5:34:46 PM
 
 > x97c2b_seed_plan_hotfix\apply_x97c2b_seed_plan_hotfix.ps1:101:Log "Running Python patcher: $py"
 > x97c2b_seed_plan_hotfix\apply_x97c2b_seed_plan_hotfix.ps1:102:python $py 2>&1 | Tee-Object -FilePath $LOG -Append
-  x97c2b_seed_plan_hotfix\apply_x97c2b_seed_plan_hotfix.ps1:103:Log '[PASS] X97C2B apply complete'
+  x97c2b_seed_plan_hotfix\apply_x97c2b_seed_plan_hotfix.ps1:103:Log '[[REDACTED]] X97C2B apply complete'
 
 
 
@@ -398,7 +398,7 @@ $py"
 > x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:110:python -m py_compile 
 (Join-Path $ROOT "core\x86_agent_bus.py") 2>&1 | Tee-Object -FilePath $LOG -Append
   x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:111:
-  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:112:Log "[PASS] X97C2 apply 
+  x97c2_plan_seed_runtime_propagation\apply_x97c2_plan_seed_runtime_propagation.ps1:112:Log "[[REDACTED]] X97C2 apply 
 complete"
 
 
@@ -500,7 +500,7 @@ x97a_scan_planner_dispatch_surface_check.ps1   -a----   1130 5/20/2026 5:13:40 P
   D:\openwebui\core\x75_local_patch_runner.py:65:
   D:\openwebui\core\x75_local_patch_runner.py:84:
 > D:\openwebui\core\x75_local_patch_runner.py:85:    report["apply"] = run(["powershell", "-ExecutionPolicy", 
-"Bypass", "-File", str(apply_files[0])])
+"By[REDACTED]", "-File", str(apply_files[0])])
   D:\openwebui\core\x75_local_patch_runner.py:86:    if report["apply"]["returncode"] != 0 or "SyntaxError" in 
 report["apply"]["stderr"] or "Traceback" in report["apply"]["stderr"] or "[FAIL]" in report["apply"]["stdout"] or 
 "[FAIL]" in report["apply"]["stderr"]:
@@ -508,7 +508,7 @@ report["apply"]["stderr"] or "Traceback" in report["apply"]["stderr"] or "[FAIL]
   D:\openwebui\core\x75_local_patch_runner.py:88:        finish(report, 1)
   D:\openwebui\core\x75_local_patch_runner.py:89:
 > D:\openwebui\core\x75_local_patch_runner.py:90:    report["check"] = run(["powershell", "-ExecutionPolicy", 
-"Bypass", "-File", str(check_files[0])])
+"By[REDACTED]", "-File", str(check_files[0])])
   D:\openwebui\core\x75_local_patch_runner.py:91:    if report["check"]["returncode"] != 0 or "SyntaxError" in 
 report["check"]["stderr"] or "Traceback" in report["check"]["stderr"] or "[FAIL]" in report["check"]["stdout"] or 
 "[FAIL]" in report["check"]["stderr"]:
@@ -516,7 +516,7 @@ report["check"]["stderr"] or "Traceback" in report["check"]["stderr"] or "[FAIL]
   D:\openwebui\core\x75_local_patch_runner.py:93:        finish(report, 1)
   D:\openwebui\core\x75_local_patch_runner.py:94:
   D:\openwebui\core\x75_local_patch_runner.py:95:    report["ok"] = True
-> D:\openwebui\core\x75_local_patch_runner.py:96:    report["stage"] = "apply_check_pass"
+> D:\openwebui\core\x75_local_patch_runner.py:96:    report["stage"] = "apply_check_[REDACTED]"
   D:\openwebui\core\x75_local_patch_runner.py:97:    finish(report, 0)
   D:\openwebui\core\x75_local_patch_runner.py:98:
 
@@ -562,9 +562,9 @@ generated_at=(Get-Date).ToString("s") } | ConvertTo-Json -Depth 8',
 Missing python component" }',
   D:\openwebui\core\x78_template_aware_patch_generator.py:74:
 > D:\openwebui\core\x78_template_aware_patch_generator.py:75:    check_lines += [
-  D:\openwebui\core\x78_template_aware_patch_generator.py:76:        'Write-Host "[PASS] ' + patch + ' template 
+  D:\openwebui\core\x78_template_aware_patch_generator.py:76:        'Write-Host "[[REDACTED]] ' + patch + ' template 
 valid"',
-  D:\openwebui\core\x78_template_aware_patch_generator.py:77:        'Write-Host "[PASS] ' + patch + ' check 
+  D:\openwebui\core\x78_template_aware_patch_generator.py:77:        'Write-Host "[[REDACTED]] ' + patch + ' check 
 complete"',
   D:\openwebui\core\x78_template_aware_patch_generator.py:79:
 > D:\openwebui\core\x78_template_aware_patch_generator.py:80:    w(apply_file, apply_lines)

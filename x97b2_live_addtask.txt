@@ -174,7 +174,7 @@
                                                                                                                 "fail_action":  "retry step or use limited fallback then send updated instruction to child worker",
                                                                                                                 "final_output_owner":  "MASTER",
                                                                                                                 "master_must_review_report":  true,
-                                                                                                                "pass_condition":  "VERIFY ok and REPORT has evidence"
+                                                                                                                "[REDACTED]_condition":  "VERIFY ok and REPORT has evidence"
                                                                                                             },
                                                                                    "ok":  true,
                                                                                    "plan_file":  "D:\\openwebui/runtime/x96_master_plans/x96_73aa9198a000_plan.json",
@@ -213,7 +213,7 @@
                                                                                                      "step_id":  "s03_patcher"
                                                                                                  },
                                                                                                  {
-                                                                                                     "goal":  "Run focused checks and collect pass/fail evidence.",
+                                                                                                     "goal":  "Run focused checks and collect [REDACTED]/fail evidence.",
                                                                                                      "input_hint":  "Export full logs to runtime/temp/*.txt.",
                                                                                                      "max_retries":  2,
                                                                                                      "next_role":  "REPORT",
@@ -224,7 +224,7 @@
                                                                                                  },
                                                                                                  {
                                                                                                      "goal":  "Summarize worker results for MASTER review.",
-                                                                                                     "input_hint":  "Report must state pass/fail, evidence, and remaining risk.",
+                                                                                                     "input_hint":  "Report must state [REDACTED]/fail, evidence, and remaining risk.",
                                                                                                      "max_retries":  2,
                                                                                                      "next_role":  null,
                                                                                                      "requires_master_review":  true,
@@ -406,7 +406,7 @@
                                                                  "fail_action":  "retry step or use limited fallback then send updated instruction to child worker",
                                                                  "final_output_owner":  "MASTER",
                                                                  "master_must_review_report":  true,
-                                                                 "pass_condition":  "VERIFY ok and REPORT has evidence"
+                                                                 "[REDACTED]_condition":  "VERIFY ok and REPORT has evidence"
                                                              },
                                     "ok":  true,
                                     "plan_file":  "D:\\openwebui/runtime/x96_master_plans/x96_73aa9198a000_plan.json",
@@ -445,7 +445,7 @@
                                                       "step_id":  "s03_patcher"
                                                   },
                                                   {
-                                                      "goal":  "Run focused checks and collect pass/fail evidence.",
+                                                      "goal":  "Run focused checks and collect [REDACTED]/fail evidence.",
                                                       "input_hint":  "Export full logs to runtime/temp/*.txt.",
                                                       "max_retries":  2,
                                                       "next_role":  "REPORT",
@@ -456,7 +456,7 @@
                                                   },
                                                   {
                                                       "goal":  "Summarize worker results for MASTER review.",
-                                                      "input_hint":  "Report must state pass/fail, evidence, and remaining risk.",
+                                                      "input_hint":  "Report must state [REDACTED]/fail, evidence, and remaining risk.",
                                                       "max_retries":  2,
                                                       "next_role":  null,
                                                       "requires_master_review":  true,

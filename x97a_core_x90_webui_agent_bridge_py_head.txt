@@ -29,7 +29,7 @@ def _resolve_aios_root() -> Path:
             if (candidate / "core" / "x87_worker_dispatcher.py").exists():
                 return candidate
         except Exception:
-            pass
+            [REDACTED]
 
     return Path(r"D:\\openwebui")
 

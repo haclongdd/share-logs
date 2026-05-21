@@ -5,7 +5,7 @@ Username: LONG2696\khach
 RunAs User: LONG2696\khach
 Configuration Name: 
 Machine: LONG2696 (Microsoft Windows NT 10.0.26100.0)
-Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command Start-Transcript -Path D:\openwebui\runtime\temp\x85_run_20260520_163219.txt -Force; python D:\openwebui\core\x75_local_patch_runner.py --patch D:\openwebui\_patch_inbox\x85_role_agents --execute; python D:\openwebui\core\x85_role_agents.py chain --task 'x85 role runtime smoke'; Stop-Transcript
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy By[REDACTED] -Command Start-Transcript -Path D:\openwebui\runtime\temp\x85_run_20260520_163219.txt -Force; python D:\openwebui\core\x75_local_patch_runner.py --patch D:\openwebui\_patch_inbox\x85_role_agents --execute; python D:\openwebui\core\x85_role_agents.py chain --task 'x85 role runtime smoke'; Stop-Transcript
 Process ID: 23808
 PSVersion: 5.1.26100.8457
 PSEdition: Desktop
@@ -24,7 +24,7 @@ Transcript started, output file is D:\openwebui\runtime\temp\x85_run_20260520_16
   "checks": [],
   "apply": null,
   "check": null,
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }
 C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python313\python.exe: can't open file 'D:\\openwebui\\core\\x85_role_agents
 .py': [Errno 2] No such file or directory

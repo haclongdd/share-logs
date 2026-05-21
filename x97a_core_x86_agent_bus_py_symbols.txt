@@ -47,7 +47,7 @@ D:\openwebui\core\x86_agent_bus.py:142:    def demo_chain(self, task: str) -> Di
 D:\openwebui\core\x86_agent_bus.py:144:        sent.append(asdict(self.send("SCOUT", "DEBUG", task, {"finding": "project/context collected"})))
 D:\openwebui\core\x86_agent_bus.py:145:        sent.append(asdict(self.send("DEBUG", "PATCHER", task, {"root_cause": "confirmed by real log", "evidence": "runtime/temp/*.txt"})))
 D:\openwebui\core\x86_agent_bus.py:146:        sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
-D:\openwebui\core\x86_agent_bus.py:147:        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "pass"})))
+D:\openwebui\core\x86_agent_bus.py:147:        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "[REDACTED]"})))
 D:\openwebui\core\x86_agent_bus.py:148:        report = {
 D:\openwebui\core\x86_agent_bus.py:156:        out = REPORT_DIR / f"x86_agent_bus_report_{now_ms()}.json"
 D:\openwebui\core\x86_agent_bus.py:157:        safe_write_json(out, report)

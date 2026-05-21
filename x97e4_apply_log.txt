@@ -1,9 +1,9 @@
 ﻿[START] X97E4 exact indentation repair apply
 [2026-05-21 01:20:07] Backup created: D:\openwebui\_backups\x97e4_exact_indentation_repair\x87_worker_dispatcher.py.20260521_012007.bak
 [2026-05-21 01:20:07] Running patcher: D:\openwebui\_patch_inbox\x97e4_exact_indentation_repair\x97e4_patch.py
-[2026-05-21 01:20:07] [PASS] X97E4 repaired indentation for X97E block
+[2026-05-21 01:20:07] [[REDACTED]] X97E4 repaired indentation for X97E block
 [2026-05-21 01:20:07] Compiling target
-[2026-05-21 01:20:07] [PASS] compile passed
+[2026-05-21 01:20:07] [[REDACTED]] compile [REDACTED]ed
 [2026-05-21 01:20:07] Audit written: D:\openwebui\runtime\temp\x97e4_source_audit.txt
-[2026-05-21 01:20:07] [PASS] X97E4 apply complete
+[2026-05-21 01:20:07] [[REDACTED]] X97E4 apply complete
 
