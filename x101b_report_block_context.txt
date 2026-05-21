@@ -1,0 +1,52 @@
+﻿ 235:         elif to_role == "SCOUT":
+ 236:             result["summary"] = "SCOUT worker consumed planner task context."
+ 237:             result["output_payload"] = {
+ 238:                 "artifact": _busmsg_get(payload, "artifact") or r"D:\openwebui\_patch_inbox",
+ 239:                 "patch_rule": "target confirmed cause only",
+ 240:                 "source_message": _busmsg_get(msg, "id"),
+ 241:             }
+ 242:         elif to_role == "VERIFY":
+ 243:             result["summary"] = "VERIFY worker consumed artifact and produced verify handoff."
+ 244:             result["output_payload"] = {
+ 245:                 "verify": _busmsg_get(payload, "verify") or "pending_x75_check",
+ 246:                 "source_message": _busmsg_get(msg, "id"),
+ 247:             }
+ 248:         elif to_role == "REPORT":
+ 249:             result["summary"] = "REPORT worker consumed final verification payload."
+ 250:             result["output_payload"] = {
+ 251:                 "final": payload,
+ 252:                 "source_message": _busmsg_get(msg, "id"),
+ 253:             }
+ 254:         else:
+ 255:             result["ok"] = False
+ 256:             result["summary"] = f"No worker handler for role {to_role}"
+ 257:             result["output_payload"] = {"source_message": _busmsg_get(msg, "id")}
+ 258: 
+ 259:         # X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION: carry plan metadata from input payload into routing context
+ 260:         x97e_plan_context = None
+ 261:         try:
+ 262:             x97e_input_payload = _busmsg_get(msg, "payload") if isinstance(msg, dict) else None
+ 263:             if isinstance(x97e_input_payload, dict):
+ 264:                 x97e_plan_context = _busmsg_get(x97e_input_payload, "x96_plan")
+ 265:             if x97e_plan_context and isinstance(_busmsg_get(result, "output_payload"), dict):
+ 266:                 result["output_payload"].setdefault("x96_plan", x97e_plan_context)
+ 267:                 result["output_payload"].setdefault("x97e_plan_propagated", True)
+ 268:         except Exception as exc:
+ 269:             try:
+ 270:                 result.setdefault("x97e_plan_propagation_error", str(exc))
+ 271:             except Exception:
+ 272:                 pass
+ 273:         x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if x97e_plan_context else task
+ 274:         next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, result)
+ 275:         if result["ok"] and next_role:
+ 276:             sent = self.bus.send(to_role, next_role, task, result["output_payload"])
+ 277:             result["routed_to"] = next_role
+ 278:             result["routed_message_id"] = sent.id
+ 279: 
+ 280:         return result
+ 281: 
+ 282:     def cycle(self, roles: Optional[List[str]] = None, limit_per_role: int = 10) -> Dict[str, Any]:
+ 283:         roles = [r.upper() for r in (roles or ["SCOUT", "DEBUG", "VERIFY", "REPORT"])]
+ 284:         processed: List[Dict[str, Any]] = []
+ 285: 
+
