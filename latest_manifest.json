@@ -1,9 +1,15 @@
 ﻿{
-    "updated_at":  "2026-05-21T20:10:55.7663939+07:00",
+    "updated_at":  "2026-05-21T20:11:09.7137058+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x97e11_check_log.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x97e11_check_log.txt",
+    "latest":  "x97e11_live_x87_big_report.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x97e11_live_x87_big_report.txt",
     "recent":  [
+                   {
+                       "name":  "x97e11_live_x87_big_report.txt",
+                       "size":  129335,
+                       "modified_at":  "2026-05-21T20:11:04.8615438+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x97e11_live_x87_big_report.txt"
+                   },
                    {
                        "name":  "x97e11_check_log.txt",
                        "size":  47,
@@ -117,12 +123,6 @@
                        "size":  3082,
                        "modified_at":  "2026-05-21T19:50:19.1247503+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x97e9_source_context.txt"
-                   },
-                   {
-                       "name":  "x97e8_check_log.txt",
-                       "size":  133,
-                       "modified_at":  "2026-05-21T19:41:00.9179918+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x97e8_check_log.txt"
                    }
                ]
 }
