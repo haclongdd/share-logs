@@ -206,7 +206,7 @@ def main() -> int:
     p.add_argument("--fallback-limit", type=int, default=DEFAULT_FALLBACK_LIMIT)
 
     p = sub.add_parser("review")
-    p.add_argument("--task-id", required=True)
+    p.add_argument("--ta[REDACTED_OPENAI_KEY]", required=True)
     p.add_argument("--report-json", required=True)
 
     sub.add_parser("selftest")

@@ -165,8 +165,8 @@
             "OpenStdin": false,
             "StdinOnce": false,
             "Env": [
-                "GEMINI_API_KEY=",
-                "GROQ_API_KEY=",
+                "GEMINI_API_KEY=[REDACTED],
+                "GROQ_API_KEY=[REDACTED],
                 "MODEL=llama3:8b",
                 "OLLAMA_URL=http://ollama:11434",
                 "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",

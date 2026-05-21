@@ -111,7 +111,7 @@ plan.get("steps", [])),
 > core\x96_master_planner_reviewer.py:200:    parser = argparse.ArgumentParser(description="X96 Master 
 planner/reviewer")
   core\x96_master_planner_reviewer.py:201:    sub = parser.add_subparsers(dest="cmd", required=True)
-  core\x96_master_planner_reviewer.py:209:    p.add_argument("--task-id", required=True)
+  core\x96_master_planner_reviewer.py:209:    p.add_argument("--ta[REDACTED_OPENAI_KEY]", required=True)
 > core\x96_master_planner_reviewer.py:210:    p.add_argument("--report-json", required=True)
   core\x96_master_planner_reviewer.py:211:
   core\x96_master_planner_reviewer.py:218:    elif args.cmd == "review":

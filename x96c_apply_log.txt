@@ -18,19 +18,19 @@ At line:1 char:1
     ...<3 lines>...
         shell=False
     )
-  File "C:\Users\[USER]\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 556, in run
     stdout, stderr = process.communicate(input, timeout=timeout)
                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\[USER]\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1222, in communicate
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1222, in communicate
     stdout, stderr = self._communicate(input, endtime, timeout)
                      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\[USER]\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1638, in _communicate
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1638, in _communicate
     self._stdin_write(input)
     ~~~~~~~~~~~~~~~~~^^^^^^^
-  File "C:\Users\[USER]\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1156, in _stdin_write
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1156, in _stdin_write
     self.stdin.write(input)
     ~~~~~~~~~~~~~~~~^^^^^^^
-  File "C:\Users\[USER]\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+  File "C:\Users\[REDACTED_USER]\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
     return codecs.charmap_encode(input,self.errors,encoding_table)[0]
            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 UnicodeEncodeError: 'charmap' codec can't encode character '\u1ed7' in position 1819: character maps to <undefined>

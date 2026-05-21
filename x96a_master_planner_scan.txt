@@ -2654,7 +2654,7 @@ document.getElementById('report').textContent=JSON.stringify(st.last_report||{},
   D:\openwebui\core\x15c_agentcon_status_bridge.py:151:        "created_at": now(),
   D:\openwebui\core\x15c_agentcon_status_bridge.py:152:        "updated_at": now(),
 > D:\openwebui\core\x15c_agentcon_status_bridge.py:153:        "flow": ["WebUI/add_task", "x15c bridge", "agent_con 
---task-file", "ollama", "report"],
+--ta[REDACTED_OPENAI_KEY]", "ollama", "report"],
   D:\openwebui\core\x15c_agentcon_status_bridge.py:154:    }
   D:\openwebui\core\x15c_agentcon_status_bridge.py:155:    write_json(TASKS / f"{task_id}.json", state)
   D:\openwebui\core\x15c_agentcon_status_bridge.py:156:    write_json(STATE_FILE, state)
@@ -2669,7 +2669,7 @@ document.getElementById('report').textContent=JSON.stringify(st.last_report||{},
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:1:# X30_FORCE_X15D_CONTAINER_ROOT_FIX: hardcoded Windows 
 D:/openwebui paths replaced with /app for container runtime.
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:2:# X15D_WEBUI_ADDTASK_AGENTCON_ATTACH
-> D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:3:# Safe adapter: WebUI /add_task -> agent_con task-file 
+> D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:3:# Safe adapter: WebUI /add_task -> agent_con ta[REDACTED_OPENAI_KEY] 
 flow -> status/report files.
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:4:from __future__ import annotations
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:5:
@@ -2703,7 +2703,7 @@ flow -> status/report files.
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:103:        "patch": PATCH,
 > D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:104:        "report_file": str(report_file),
 > D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:105:        "flow": ["WebUI/add_task", "X15D adapter", 
-"agent_con --task-file", "ollama", "report"],
+"agent_con --ta[REDACTED_OPENAI_KEY]", "ollama", "report"],
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:106:    }
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:107:    _write_json(task_file, payload)
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:108:    _write_json(status_file, payload)
@@ -2715,7 +2715,7 @@ flow -> status/report files.
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:114:        return payload
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:115:
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:116:    py = sys.executable
-  D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:117:    cmd = [py, str(AGENT_CON), "--task-file", 
+  D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:117:    cmd = [py, str(AGENT_CON), "--ta[REDACTED_OPENAI_KEY]", 
 str(task_file)]
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:132:            }
   D:\openwebui\core\x15d_webui_addtask_agentcon_attach.py:133:            _write_json(status_file, result)
@@ -2769,7 +2769,7 @@ rec.append('increase_timeout_or_split_task')
 X16ABCD_UPDATE_TASK_STATE_FIX
   D:\openwebui\core\x16_realtime_execution_stream.py:2:# X16ABC AI Local OS realtime execution stream
 > D:\openwebui\core\x16_realtime_execution_stream.py:3:# Safe standalone bridge: WebUI/add_task -> x16 -> agent_con 
---task-file -> ollama/report
+--ta[REDACTED_OPENAI_KEY] -> ollama/report
   D:\openwebui\core\x16_realtime_execution_stream.py:4:import argparse, json, os, subprocess, sys, time, uuid
   D:\openwebui\core\x16_realtime_execution_stream.py:5:from datetime import datetime
   D:\openwebui\core\x16_realtime_execution_stream.py:6:from pathlib import Path
@@ -2844,7 +2844,7 @@ ${t.task||''}<pre>${(t.log||[]).join('\n')}</pre></div>`});document.getElementBy
 X16ABCD_UPDATE_TASK_STATE_FIX
   D:\openwebui\core\x16_realtime_execution_stream.x16abcdef.tmp.py:2:# X16ABC AI Local OS realtime execution stream
 > D:\openwebui\core\x16_realtime_execution_stream.x16abcdef.tmp.py:3:# Safe standalone bridge: WebUI/add_task -> x16 
--> agent_con --task-file -> ollama/report
+-> agent_con --ta[REDACTED_OPENAI_KEY] -> ollama/report
   D:\openwebui\core\x16_realtime_execution_stream.x16abcdef.tmp.py:4:import argparse, json, os, subprocess, sys, time, 
 uuid
   D:\openwebui\core\x16_realtime_execution_stream.x16abcdef.tmp.py:5:from datetime import datetime
@@ -2952,7 +2952,7 @@ ${t.task||''}<pre>${(t.log||[]).join('\n')}</pre></div>`});document.getElementBy
   D:\openwebui\core\x16_realtime_runner.py:93:        'created_at': now(),
   D:\openwebui\core\x16_realtime_runner.py:94:        'task_file': str(task_file),
 > D:\openwebui\core\x16_realtime_runner.py:95:        'flow': ['WebUI/add_task', 'master_ai_bridge', 'x16 realtime 
-runner', 'agent_con --task-file', 'ollama', 'final report'],
+runner', 'agent_con --ta[REDACTED_OPENAI_KEY]', 'ollama', 'final report'],
   D:\openwebui\core\x16_realtime_runner.py:96:        'events': [{'time': now(), 'step': 'queued', 'message': 'Task 
 received'}],
   D:\openwebui\core\x16_realtime_runner.py:97:    }
@@ -2967,7 +2967,7 @@ write_json(report_path(task_id), base)
   D:\openwebui\core\x16_realtime_runner.py:104:        return base
   D:\openwebui\core\x16_realtime_runner.py:105:
   D:\openwebui\core\x16_realtime_runner.py:106:    py = sys.executable
-  D:\openwebui\core\x16_realtime_runner.py:107:    cmd = [py, str(agent), '--task-file', str(task_file)]
+  D:\openwebui\core\x16_realtime_runner.py:107:    cmd = [py, str(agent), '--ta[REDACTED_OPENAI_KEY]', str(task_file)]
   D:\openwebui\core\x16_realtime_runner.py:129:            'ok': code == 0,
   D:\openwebui\core\x16_realtime_runner.py:130:            'status': 'completed' if code == 0 else 'failed',
 > D:\openwebui\core\x16_realtime_runner.py:131:            'step': 'final_report',
@@ -3854,7 +3854,7 @@ bool(retry_data.get("ok", True)),
   D:\openwebui\core\x43_controlled_runtime_integration.py:262:def load_task(args: argparse.Namespace) -> Dict[str, 
 Any]:
   D:\openwebui\core\x43_controlled_runtime_integration.py:281:    ap.add_argument("--task", default="")
-  D:\openwebui\core\x43_controlled_runtime_integration.py:282:    ap.add_argument("--task-file", default="")
+  D:\openwebui\core\x43_controlled_runtime_integration.py:282:    ap.add_argument("--ta[REDACTED_OPENAI_KEY]", default="")
 > D:\openwebui\core\x43_controlled_runtime_integration.py:283:    ap.add_argument("--report", default=str(RUNTIME / 
 "x43_report.json"))
   D:\openwebui\core\x43_controlled_runtime_integration.py:284:    ap.add_argument("--execute-phase3", 
@@ -3908,7 +3908,7 @@ urllib.request
 Dict[str, Any]:
 > D:\openwebui\core\x44_e2e_webui_multistep_test.py:43:    task_file = RUNTIME / (report_path.stem + "_task.json")
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:44:    write_json(task_file, task)
-> D:\openwebui\core\x44_e2e_webui_multistep_test.py:45:    cmd = [sys.executable, str(X43), "--task-file", 
+> D:\openwebui\core\x44_e2e_webui_multistep_test.py:45:    cmd = [sys.executable, str(X43), "--ta[REDACTED_OPENAI_KEY]", 
 str(task_file), "--report", str(report_path)]
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:46:    code, out = run_cmd(cmd, timeout=120)
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:47:    if code != 0:
@@ -3940,7 +3940,7 @@ resp:
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:70:    ap = argparse.ArgumentParser()
 > D:\openwebui\core\x44_e2e_webui_multistep_test.py:71:    ap.add_argument("--report", default=str(RUNTIME / 
 "x44_e2e_report.json"))
-> D:\openwebui\core\x44_e2e_webui_multistep_test.py:72:    ap.add_argument("--add-task-url", 
+> D:\openwebui\core\x44_e2e_webui_multistep_test.py:72:    ap.add_argument("--add-ta[REDACTED_OPENAI_KEY]", 
 default="http://localhost:5000/add_task")
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:73:    ap.add_argument("--strict-add-task", action="store_true")
   D:\openwebui\core\x44_e2e_webui_multistep_test.py:74:    args = ap.parse_args()

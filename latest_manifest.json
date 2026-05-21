@@ -1,116 +1,58 @@
 ﻿{
-    "schema":  "ai-local-os-log-manifest-v1",
-    "generated_at_utc":  "2026-05-20T19:29:52.8709011Z",
-    "generated_at_local":  "2026-05-21T02:29:52.8709011+07:00",
+    "updated_at":  "2026-05-21T17:40:00.8954203+07:00",
+    "temp_dir":  "D:\\openwebui\\runtime\\temp",
     "share_dir":  "D:\\openwebui\\runtime\\share_logs",
-    "latest":  "x93c_inspect_full.txt",
-    "recent_count":  15,
+    "latest":  "x97e7_busmessage_contract_scan.txt",
     "recent":  [
                    {
-                       "path":  "x93c_inspect_full.txt",
-                       "name":  "x93c_inspect_full.txt",
-                       "kind":  "log",
-                       "size_bytes":  0,
-                       "modified_utc":  "2026-05-20T19:29:52.8508319Z"
+                       "name":  "x97e7_busmessage_contract_scan.txt",
+                       "size":  48158,
+                       "modified_at":  "2026-05-21T02:21:35.2540149+07:00"
                    },
                    {
-                       "path":  "x93c_generator_log.txt",
-                       "name":  "x93c_generator_log.txt",
-                       "kind":  "log",
-                       "size_bytes":  104,
-                       "modified_utc":  "2026-05-20T19:29:52.8488426Z"
+                       "name":  "x99c_logsync_manifest_check_log.txt",
+                       "size":  11528,
+                       "modified_at":  "2026-05-21T02:20:40.2041159+07:00"
                    },
                    {
-                       "path":  "x93c_docker_ps_a.txt",
-                       "name":  "x93c_docker_ps_a.txt",
-                       "kind":  "log",
-                       "size_bytes":  3252,
-                       "modified_utc":  "2026-05-20T19:29:52.8468405Z"
+                       "name":  "x99c_logsync_manifest_apply_log.txt",
+                       "size":  249,
+                       "modified_at":  "2026-05-21T02:20:38.6365872+07:00"
                    },
                    {
-                       "path":  "x93c_docker_ps.txt",
-                       "name":  "x93c_docker_ps.txt",
-                       "kind":  "log",
-                       "size_bytes":  2641,
-                       "modified_utc":  "2026-05-20T19:29:52.8438426Z"
+                       "name":  "x99b_test_sync.txt",
+                       "size":  15,
+                       "modified_at":  "2026-05-21T02:02:35.4549279+07:00"
                    },
                    {
-                       "path":  "x93c_docker_events.txt",
-                       "name":  "x93c_docker_events.txt",
-                       "kind":  "log",
-                       "size_bytes":  529185,
-                       "modified_utc":  "2026-05-20T19:29:52.8408387Z"
+                       "name":  "x97e6_live_addtask.txt",
+                       "size":  9256,
+                       "modified_at":  "2026-05-21T01:40:24.1568746+07:00"
                    },
                    {
-                       "path":  "x93c_curl_live.txt",
-                       "name":  "x93c_curl_live.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  2609,
-                       "modified_utc":  "2026-05-20T19:29:52.8064540Z"
+                       "name":  "x97e6_check_log.txt",
+                       "size":  90,
+                       "modified_at":  "2026-05-21T01:38:45.8730746+07:00"
                    },
                    {
-                       "path":  "x93c_apply_log.txt",
-                       "name":  "x93c_apply_log.txt",
-                       "kind":  "apply",
-                       "size_bytes":  2426,
-                       "modified_utc":  "2026-05-20T19:29:52.8048459Z"
+                       "name":  "x97e6_check_source_audit.txt",
+                       "size":  10029,
+                       "modified_at":  "2026-05-21T01:38:45.8720689+07:00"
                    },
                    {
-                       "path":  "x93c_after_restart_master_ai.txt",
-                       "name":  "x93c_after_restart_master_ai.txt",
-                       "kind":  "log",
-                       "size_bytes":  7201,
-                       "modified_utc":  "2026-05-20T19:29:52.8024581Z"
+                       "name":  "x97e6_check_compile_log.txt",
+                       "size":  0,
+                       "modified_at":  "2026-05-21T01:38:45.6859381+07:00"
                    },
                    {
-                       "path":  "x93c_after_restart_docker_ps.txt",
-                       "name":  "x93c_after_restart_docker_ps.txt",
-                       "kind":  "log",
-                       "size_bytes":  2641,
-                       "modified_utc":  "2026-05-20T19:29:52.7994070Z"
+                       "name":  "x97e6_apply_log.txt",
+                       "size":  336,
+                       "modified_at":  "2026-05-21T01:38:44.6495633+07:00"
                    },
                    {
-                       "path":  "x93c_after_restart_apply_log.txt",
-                       "name":  "x93c_after_restart_apply_log.txt",
-                       "kind":  "apply",
-                       "size_bytes":  2426,
-                       "modified_utc":  "2026-05-20T19:29:52.7971982Z"
-                   },
-                   {
-                       "path":  "x93c_after_irm_fail_master_logs.txt",
-                       "name":  "x93c_after_irm_fail_master_logs.txt",
-                       "kind":  "error",
-                       "size_bytes":  7201,
-                       "modified_utc":  "2026-05-20T19:29:52.7938364Z"
-                   },
-                   {
-                       "path":  "x93b_generator_log.txt",
-                       "name":  "x93b_generator_log.txt",
-                       "kind":  "log",
-                       "size_bytes":  224,
-                       "modified_utc":  "2026-05-20T19:29:52.7918140Z"
-                   },
-                   {
-                       "path":  "x93b_dir_check.txt",
-                       "name":  "x93b_dir_check.txt",
-                       "kind":  "check",
-                       "size_bytes":  701,
-                       "modified_utc":  "2026-05-20T19:29:52.7897881Z"
-                   },
-                   {
-                       "path":  "x93b_apply_log.txt",
-                       "name":  "x93b_apply_log.txt",
-                       "kind":  "apply",
-                       "size_bytes":  1928,
-                       "modified_utc":  "2026-05-20T19:29:52.7867306Z"
-                   },
-                   {
-                       "path":  "x92_live_error_context.txt",
-                       "name":  "x92_live_error_context.txt",
-                       "kind":  "error",
-                       "size_bytes":  11287,
-                       "modified_utc":  "2026-05-20T19:29:52.7847563Z"
+                       "name":  "x97e6_source_audit.txt",
+                       "size":  10030,
+                       "modified_at":  "2026-05-21T01:38:44.6353269+07:00"
                    }
-               ],
-    "raw_base":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/"
+               ]
 }
