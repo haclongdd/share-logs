@@ -1,0 +1,7 @@
+﻿239:    return jsonify({"service":"master_ai_bridge", "phase":"X1G", "status":"ok", "mode":"unified_runtime_consolidation", "time":now()})
+243:    return jsonify({"service":"master_ai_bridge", "phase":"X1G", "status":"ok", "mode":"unified_runtime_consolidation", "time":now()})
+338:            return jsonify({"phase":"X1G", "status":"completed", "completed":True, "final_status":"PASS", "result":"No task_id provided."}), 200
+342:            return jsonify(existing), 200
+346:        return jsonify(payload), 200
+350:        return jsonify(err), 200
+

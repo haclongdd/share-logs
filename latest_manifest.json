@@ -1,9 +1,27 @@
 ﻿{
-    "updated_at":  "2026-05-21T22:58:32.0352892+07:00",
+    "updated_at":  "2026-05-21T22:58:46.2627625+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x104f_x91_adapter.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104f_x91_adapter.txt",
+    "latest":  "x104g_compile.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104g_compile.txt",
     "recent":  [
+                   {
+                       "name":  "x104g_compile.txt",
+                       "size":  0,
+                       "modified_at":  "2026-05-21T22:58:41.6035907+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104g_compile.txt"
+                   },
+                   {
+                       "name":  "x104g_jsonify_scan.txt",
+                       "size":  1116,
+                       "modified_at":  "2026-05-21T22:58:40.7349310+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104g_jsonify_scan.txt"
+                   },
+                   {
+                       "name":  "x104g_json_scan.txt",
+                       "size":  112466,
+                       "modified_at":  "2026-05-21T22:58:40.4373653+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104g_json_scan.txt"
+                   },
                    {
                        "name":  "x104f_x91_adapter.txt",
                        "size":  8958,
@@ -105,24 +123,6 @@
                        "size":  4643,
                        "modified_at":  "2026-05-21T22:09:39.2534526+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_add_task_response.json"
-                   },
-                   {
-                       "name":  "x104b2_latest_report_snapshot.json",
-                       "size":  1098,
-                       "modified_at":  "2026-05-21T22:09:39.2069928+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_latest_report_snapshot.json"
-                   },
-                   {
-                       "name":  "x104b2_serialization_grep.txt",
-                       "size":  1064,
-                       "modified_at":  "2026-05-21T22:09:32.5185371+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_serialization_grep.txt"
-                   },
-                   {
-                       "name":  "x104b2_container_audit.txt",
-                       "size":  1246,
-                       "modified_at":  "2026-05-21T22:09:32.2902277+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_container_audit.txt"
                    }
                ]
 }
