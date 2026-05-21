@@ -1,0 +1,7 @@
+﻿has_x101b_marker=False
+has_review_fn_call=False
+has_master_review_result=False
+keeps_report_terminal_bus=True
+no_master_bus_role=True
+compile_ok=True
+
