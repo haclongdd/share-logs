@@ -1,4 +1,5 @@
-﻿X97E7 BusMessage .get repair apply log
-[2026-05-21T18:06:43.5190583+07:00] Helper already exists
-[2026-05-21T18:06:43.5488092+07:00] No variable.get(...) calls found to rewrite
+﻿[2026-05-21T18:09:38.0360929+07:00] APPLY x97e7_busmessage_handle_message_repair
+backup=D:\openwebui\_backups\x97e7_busmessage_handle_message_repair\x87_worker_dispatcher.py.bak_20260521_180938
+inserted helper X97E7_BUSMESSAGE_INPUT_NORMALIZATION
+patched handle_message normalization entry
 
