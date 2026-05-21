@@ -1,6 +1,6 @@
 ﻿START x97e11 fix literal backtick-n syntax corruption
 [2026-05-21T19:58:40.9380488+07:00] patched literal backtick-n on SCOUT branch
-[2026-05-21T19:58:41.1149139+07:00] py_compile PASS
+[2026-05-21T19:58:41.1149139+07:00] py_compile [REDACTED]
 [2026-05-21T19:58:41.1164096+07:00] audit=D:\openwebui\runtime\temp\x97e11_source_audit.txt
 [2026-05-21T19:58:41.1237117+07:00] DONE x97e11
 
