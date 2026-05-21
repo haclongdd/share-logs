@@ -1,0 +1,85 @@
+﻿
+
+FullName      : D:\openwebui\runtime\reports\x91_addtask_bridge_response_1779376179197.json
+LastWriteTime : 5/21/2026 10:09:39 PM
+Length        : 1098
+
+FullName      : D:\openwebui\runtime\reports\x90_webui_bridge_response_1779376179141.json
+LastWriteTime : 5/21/2026 10:09:39 PM
+Length        : 674
+
+FullName      : D:\openwebui\runtime\reports\x91_addtask_bridge_response_1779375875479.json
+LastWriteTime : 5/21/2026 10:04:35 PM
+Length        : 1098
+
+FullName      : D:\openwebui\runtime\reports\x90_webui_bridge_response_1779375875434.json
+LastWriteTime : 5/21/2026 10:04:35 PM
+Length        : 674
+
+FullName      : D:\openwebui\runtime\reports\x91_addtask_bridge_response_1779375668501.json
+LastWriteTime : 5/21/2026 10:01:08 PM
+Length        : 1098
+
+FullName      : D:\openwebui\runtime\reports\x90_webui_bridge_response_1779375668447.json
+LastWriteTime : 5/21/2026 10:01:08 PM
+Length        : 674
+
+FullName      : D:\openwebui\runtime\reports\x91_addtask_bridge_response_1779373267003.json
+LastWriteTime : 5/21/2026 9:21:07 PM
+Length        : 1070
+
+FullName      : D:\openwebui\runtime\reports\x90_webui_bridge_response_1779373266959.json
+LastWriteTime : 5/21/2026 9:21:06 PM
+Length        : 660
+
+FullName      : D:\openwebui\runtime\reports\x91_addtask_bridge_response_1779370220713.json
+LastWriteTime : 5/21/2026 8:30:20 PM
+Length        : 55789
+
+FullName      : D:\openwebui\runtime\reports\x90_webui_bridge_response_1779370220659.json
+LastWriteTime : 5/21/2026 8:30:20 PM
+Length        : 53097
+
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779370220646.json
+LastWriteTime : 5/21/2026 8:30:20 PM
+Length        : 173
+
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779370216431.json
+LastWriteTime : 5/21/2026 8:30:16 PM
+Length        : 173
+
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779370212385.json
+LastWriteTime : 5/21/2026 8:30:12 PM
+Length        : 173
+
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779370208239.json
+LastWriteTime : 5/21/2026 8:30:08 PM
+Length        : 42324
+
+FullName      : D:\openwebui\runtime\reports\x91_addtask_bridge_response_1779370123444.json
+LastWriteTime : 5/21/2026 8:28:43 PM
+Length        : 55789
+
+FullName      : D:\openwebui\runtime\reports\x90_webui_bridge_response_1779370123385.json
+LastWriteTime : 5/21/2026 8:28:43 PM
+Length        : 53097
+
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779370123370.json
+LastWriteTime : 5/21/2026 8:28:43 PM
+Length        : 173
+
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779370118797.json
+LastWriteTime : 5/21/2026 8:28:38 PM
+Length        : 173
+
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779370114299.json
+LastWriteTime : 5/21/2026 8:28:34 PM
+Length        : 173
+
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779370109643.json
+LastWriteTime : 5/21/2026 8:28:29 PM
+Length        : 42324
+
+
+
+

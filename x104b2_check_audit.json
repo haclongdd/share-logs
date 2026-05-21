@@ -1,0 +1,19 @@
+﻿{
+    "release":  "X104B2_CIRCULAR_TRACE_DIAGNOSTIC_FIXED_CHECK",
+    "required_missing":  [
+
+                         ],
+    "required_zero":  [
+
+                      ],
+    "diagnostic_audit_parse_ok":  true,
+    "container_has_x104_safe_json":  false,
+    "container_has_safe_json_dumps":  false,
+    "grep_has_json_dumps":  false,
+    "grep_has_json_dump":  false,
+    "latest_has_circular_reference":  true,
+    "latest_has_master_review_result":  false,
+    "latest_has_final_decision":  false,
+    "ok":  true
+}
+

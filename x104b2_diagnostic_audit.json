@@ -1,10 +1,4 @@
-﻿[2026-05-21T22:09:31.7061530+07:00] START X104B2 circular trace diagnostic fixed
-[INFO] collecting docker ps
-[INFO] collecting container audit
-[INFO] grepping serialization points
-[INFO] invoking live add_task
-[INFO] collecting latest reports
-{
+﻿{
     "release":  "X104B2_CIRCULAR_TRACE_DIAGNOSTIC_FIXED",
     "root":  "D:\\openwebui",
     "task":  "x104b2 circular trace diagnostic smoke 20260521_220932",
@@ -33,6 +27,4 @@
                },
     "ok":  true
 }
-
-[DONE] X104B2 diagnostic complete
 
