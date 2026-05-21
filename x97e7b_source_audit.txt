@@ -1,0 +1,193 @@
+﻿=== X97E7B source audit ===
+target=D:\openwebui\core\x87_worker_dispatcher.py
+has _busmsg_get=True
+has _x97e7_busmessage_to_dict=True
+has self._busmsg_get=False
+has _busmsg_get(state cycles)=False
+has handle_message normalization=True
+--- focused matches ---
+
+  D:\openwebui\core\x87_worker_dispatcher.py:1:
+  D:\openwebui\core\x87_worker_dispatcher.py:2:
+> D:\openwebui\core\x87_worker_dispatcher.py:3:def _busmsg_get(message, key, default=None):
+  D:\openwebui\core\x87_worker_dispatcher.py:4:    """Safe getter for both dict payloads and BusMessage/dataclass-like 
+objects."""
+  D:\openwebui\core\x87_worker_dispatcher.py:5:    if isinstance(message, dict):
+> D:\openwebui\core\x87_worker_dispatcher.py:6:        return _busmsg_get(message, key, default)
+  D:\openwebui\core\x87_worker_dispatcher.py:7:    return getattr(message, key, default)
+  D:\openwebui\core\x87_worker_dispatcher.py:8:#!/usr/bin/env python3
+  D:\openwebui\core\x87_worker_dispatcher.py:21:
+  D:\openwebui\core\x87_worker_dispatcher.py:22:def _resolve_aios_root() -> Path:
+> D:\openwebui\core\x87_worker_dispatcher.py:23:    explicit = os._busmsg_get(environ, "AI_LOCAL_OS_ROOT") or 
+os._busmsg_get(environ, "AIOS_ROOT")
+  D:\openwebui\core\x87_worker_dispatcher.py:24:    if explicit:
+  D:\openwebui\core\x87_worker_dispatcher.py:25:        return Path(explicit)
+  D:\openwebui\core\x87_worker_dispatcher.py:104:
+  D:\openwebui\core\x87_worker_dispatcher.py:105:# X97E7_BUSMESSAGE_INPUT_NORMALIZATION
+> D:\openwebui\core\x87_worker_dispatcher.py:106:def _x97e7_busmessage_to_dict(msg):
+  D:\openwebui\core\x87_worker_dispatcher.py:107:    """Normalize x86 BusMessage/dataclass objects to dict before 
+dispatcher .get(...) access."""
+  D:\openwebui\core\x87_worker_dispatcher.py:108:    if isinstance(msg, dict):
+  D:\openwebui\core\x87_worker_dispatcher.py:133:        if not isinstance(task_obj, dict):
+  D:\openwebui\core\x87_worker_dispatcher.py:134:            return None
+> D:\openwebui\core\x87_worker_dispatcher.py:135:        direct = _busmsg_get(task_obj, "x96_plan")
+  D:\openwebui\core\x87_worker_dispatcher.py:136:        if isinstance(direct, dict):
+  D:\openwebui\core\x87_worker_dispatcher.py:137:            return direct
+> D:\openwebui\core\x87_worker_dispatcher.py:138:        payload = _busmsg_get(task_obj, "payload")
+  D:\openwebui\core\x87_worker_dispatcher.py:139:        if isinstance(payload, dict):
+> D:\openwebui\core\x87_worker_dispatcher.py:140:            nested = _busmsg_get(payload, "x96_plan")
+  D:\openwebui\core\x87_worker_dispatcher.py:141:            if isinstance(nested, dict):
+  D:\openwebui\core\x87_worker_dispatcher.py:142:                return nested
+> D:\openwebui\core\x87_worker_dispatcher.py:143:        meta = _busmsg_get(task_obj, "metadata")
+  D:\openwebui\core\x87_worker_dispatcher.py:144:        if isinstance(meta, dict):
+> D:\openwebui\core\x87_worker_dispatcher.py:145:            nested = _busmsg_get(meta, "x96_plan")
+  D:\openwebui\core\x87_worker_dispatcher.py:146:            if isinstance(nested, dict):
+  D:\openwebui\core\x87_worker_dispatcher.py:147:                return nested
+  D:\openwebui\core\x87_worker_dispatcher.py:153:            return None
+  D:\openwebui\core\x87_worker_dispatcher.py:154:        for key in ("role", "to_role", "worker_role", "agent_role", 
+"name"):
+> D:\openwebui\core\x87_worker_dispatcher.py:155:            val = _busmsg_get(step, key)
+  D:\openwebui\core\x87_worker_dispatcher.py:156:            if isinstance(val, str) and val.strip():
+  D:\openwebui\core\x87_worker_dispatcher.py:157:                return val.strip().upper()
+  D:\openwebui\core\x87_worker_dispatcher.py:160:    def _x97b2_resolve_next_role(self, task_obj, current_role, 
+result):
+  D:\openwebui\core\x87_worker_dispatcher.py:161:        """Plan-first next-role resolver; ROUTE_NEXT remains safety 
+fallback."""
+> D:\openwebui\core\x87_worker_dispatcher.py:162:        fallback = _busmsg_get(ROUTE_NEXT, current_role)
+  D:\openwebui\core\x87_worker_dispatcher.py:163:        try:
+  D:\openwebui\core\x87_worker_dispatcher.py:164:            plan = self._x97b2_get_x96_plan(task_obj)
+  D:\openwebui\core\x87_worker_dispatcher.py:165:            if not isinstance(plan, dict):
+  D:\openwebui\core\x87_worker_dispatcher.py:166:                return fallback
+> D:\openwebui\core\x87_worker_dispatcher.py:167:            steps = _busmsg_get(plan, "steps")
+  D:\openwebui\core\x87_worker_dispatcher.py:168:            if not isinstance(steps, list) or not steps:
+  D:\openwebui\core\x87_worker_dispatcher.py:169:                return fallback
+  D:\openwebui\core\x87_worker_dispatcher.py:176:                    current_index = idx
+  D:\openwebui\core\x87_worker_dispatcher.py:177:                    if isinstance(step, dict):
+> D:\openwebui\core\x87_worker_dispatcher.py:178:                        step["status"] = "done" if isinstance(result, 
+dict) and _busmsg_get(result, "ok") else "failed"
+> D:\openwebui\core\x87_worker_dispatcher.py:179:                        step["last_result_ok"] = 
+bool(isinstance(result, dict) and _busmsg_get(result, "ok"))
+> D:\openwebui\core\x87_worker_dispatcher.py:180:                        step["retries"] = int(_busmsg_get(step, 
+"retries") or 0)
+  D:\openwebui\core\x87_worker_dispatcher.py:181:                    break
+  D:\openwebui\core\x87_worker_dispatcher.py:182:
+  D:\openwebui\core\x87_worker_dispatcher.py:187:                next_role = self._x97b2_extract_role(next_step)
+  D:\openwebui\core\x87_worker_dispatcher.py:188:                if next_role:
+> D:\openwebui\core\x87_worker_dispatcher.py:189:                    if isinstance(next_step, dict) and not 
+_busmsg_get(next_step, "status"):
+  D:\openwebui\core\x87_worker_dispatcher.py:190:                        next_step["status"] = "queued"
+  D:\openwebui\core\x87_worker_dispatcher.py:191:                    plan["x97b2_runtime_dispatch"] = "planner_driven"
+  D:\openwebui\core\x87_worker_dispatcher.py:210:            "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+  D:\openwebui\core\x87_worker_dispatcher.py:211:            "created_at": utc_stamp(),
+> D:\openwebui\core\x87_worker_dispatcher.py:212:            "cycles": 0,
+  D:\openwebui\core\x87_worker_dispatcher.py:213:            "processed_total": 0,
+  D:\openwebui\core\x87_worker_dispatcher.py:214:            "last_cycle": None,
+  D:\openwebui\core\x87_worker_dispatcher.py:219:        safe_write_json(STATE_FILE, self.state)
+  D:\openwebui\core\x87_worker_dispatcher.py:220:
+> D:\openwebui\core\x87_worker_dispatcher.py:221:    def handle_message(self, msg: Dict[str, Any]) -> Dict[str, Any]:
+  D:\openwebui\core\x87_worker_dispatcher.py:222:
+  D:\openwebui\core\x87_worker_dispatcher.py:223:        # X97E7: BusMessage/dataclass may come directly from x86 
+send(); convert before msg.get(...).
+  D:\openwebui\core\x87_worker_dispatcher.py:224:
+  D:\openwebui\core\x87_worker_dispatcher.py:225:        msg = _x97e7_busmessage_to_dict(msg)
+> D:\openwebui\core\x87_worker_dispatcher.py:226:        to_role = str(_busmsg_get(msg, "to_role", "")).upper()
+> D:\openwebui\core\x87_worker_dispatcher.py:227:        task = str(_busmsg_get(msg, "task", ""))
+> D:\openwebui\core\x87_worker_dispatcher.py:228:        payload = _busmsg_get(msg, "payload") if 
+isinstance(_busmsg_get(msg, "payload"), dict) else {}
+  D:\openwebui\core\x87_worker_dispatcher.py:229:
+  D:\openwebui\core\x87_worker_dispatcher.py:230:        result = {
+> D:\openwebui\core\x87_worker_dispatcher.py:231:            "message_id": _busmsg_get(msg, "id"),
+  D:\openwebui\core\x87_worker_dispatcher.py:232:            "role": to_role,
+  D:\openwebui\core\x87_worker_dispatcher.py:233:            "task": task,
+  D:\openwebui\core\x87_worker_dispatcher.py:242:            result["summary"] = "DEBUG worker consumed evidence and 
+confirmed root-cause-first handoff."
+  D:\openwebui\core\x87_worker_dispatcher.py:243:            result["output_payload"] = {
+> D:\openwebui\core\x87_worker_dispatcher.py:244:                "root_cause": _busmsg_get(payload, "root_cause") or 
+"pending_real_log_review",
+> D:\openwebui\core\x87_worker_dispatcher.py:245:                "evidence": _busmsg_get(payload, "evidence") or 
+payload,
+> D:\openwebui\core\x87_worker_dispatcher.py:246:                "source_message": _busmsg_get(msg, "id"),
+  D:\openwebui\core\x87_worker_dispatcher.py:247:            }
+  D:\openwebui\core\x87_worker_dispatcher.py:248:        elif to_role == "PATCHER":
+  D:\openwebui\core\x87_worker_dispatcher.py:249:            result["summary"] = "PATCHER worker consumed confirmed 
+cause/artifact context."
+  D:\openwebui\core\x87_worker_dispatcher.py:250:            result["output_payload"] = {
+> D:\openwebui\core\x87_worker_dispatcher.py:251:                "artifact": _busmsg_get(payload, "artifact") or 
+r"D:\openwebui\_patch_inbox",
+  D:\openwebui\core\x87_worker_dispatcher.py:252:                "patch_rule": "target confirmed cause only",
+> D:\openwebui\core\x87_worker_dispatcher.py:253:                "source_message": _busmsg_get(msg, "id"),
+  D:\openwebui\core\x87_worker_dispatcher.py:254:            }
+  D:\openwebui\core\x87_worker_dispatcher.py:255:        elif to_role == "VERIFY":
+  D:\openwebui\core\x87_worker_dispatcher.py:256:            result["summary"] = "VERIFY worker consumed artifact and 
+produced verify handoff."
+  D:\openwebui\core\x87_worker_dispatcher.py:257:            result["output_payload"] = {
+> D:\openwebui\core\x87_worker_dispatcher.py:258:                "verify": _busmsg_get(payload, "verify") or 
+"pending_x75_check",
+> D:\openwebui\core\x87_worker_dispatcher.py:259:                "source_message": _busmsg_get(msg, "id"),
+  D:\openwebui\core\x87_worker_dispatcher.py:260:            }
+  D:\openwebui\core\x87_worker_dispatcher.py:261:        elif to_role == "REPORT":
+  D:\openwebui\core\x87_worker_dispatcher.py:263:            result["output_payload"] = {
+  D:\openwebui\core\x87_worker_dispatcher.py:264:                "final": payload,
+> D:\openwebui\core\x87_worker_dispatcher.py:265:                "source_message": _busmsg_get(msg, "id"),
+  D:\openwebui\core\x87_worker_dispatcher.py:266:            }
+  D:\openwebui\core\x87_worker_dispatcher.py:267:        else:
+  D:\openwebui\core\x87_worker_dispatcher.py:268:            result["ok"] = False
+  D:\openwebui\core\x87_worker_dispatcher.py:269:            result["summary"] = f"No worker handler for role 
+{to_role}"
+> D:\openwebui\core\x87_worker_dispatcher.py:270:            result["output_payload"] = {"source_message": 
+_busmsg_get(msg, "id")}
+  D:\openwebui\core\x87_worker_dispatcher.py:271:
+  D:\openwebui\core\x87_worker_dispatcher.py:272:        # X97E_PLANNER_SEED_AND_PAYLOAD_PROPAGATION: carry plan 
+metadata from input payload into routing context
+  D:\openwebui\core\x87_worker_dispatcher.py:273:        x97e_plan_context = None
+  D:\openwebui\core\x87_worker_dispatcher.py:274:        try:
+> D:\openwebui\core\x87_worker_dispatcher.py:275:            x97e_input_payload = _busmsg_get(msg, "payload") if 
+isinstance(msg, dict) else None
+  D:\openwebui\core\x87_worker_dispatcher.py:276:            if isinstance(x97e_input_payload, dict):
+> D:\openwebui\core\x87_worker_dispatcher.py:277:                x97e_plan_context = _busmsg_get(x97e_input_payload, 
+"x96_plan")
+> D:\openwebui\core\x87_worker_dispatcher.py:278:            if x97e_plan_context and isinstance(_busmsg_get(result, 
+"output_payload"), dict):
+  D:\openwebui\core\x87_worker_dispatcher.py:279:                result["output_payload"].setdefault("x96_plan", 
+x97e_plan_context)
+  D:\openwebui\core\x87_worker_dispatcher.py:280:                
+result["output_payload"].setdefault("x97e_plan_propagated", True)
+  D:\openwebui\core\x87_worker_dispatcher.py:302:                processed.append(self.handle_message(msg))
+  D:\openwebui\core\x87_worker_dispatcher.py:303:
+> D:\openwebui\core\x87_worker_dispatcher.py:304:        self.state["cycles"] = int(_busmsg_get(self.state, "cycles", 
+0)) + 1
+> D:\openwebui\core\x87_worker_dispatcher.py:305:        self.state["processed_total"] = int(_busmsg_get(state, 
+"processed_total", 0)) + len(processed)
+  D:\openwebui\core\x87_worker_dispatcher.py:306:        self.state["last_cycle"] = {
+  D:\openwebui\core\x87_worker_dispatcher.py:307:            "ts": utc_stamp(),
+  D:\openwebui\core\x87_worker_dispatcher.py:341:        try:
+  D:\openwebui\core\x87_worker_dispatcher.py:342:            if isinstance(x96_plan, dict):
+> D:\openwebui\core\x87_worker_dispatcher.py:343:                steps = _busmsg_get(x96_plan, "steps") or []
+  D:\openwebui\core\x87_worker_dispatcher.py:344:                if isinstance(steps, list) and steps:
+  D:\openwebui\core\x87_worker_dispatcher.py:345:                    first = steps[0]
+  D:\openwebui\core\x87_worker_dispatcher.py:346:                    if isinstance(first, dict):
+> D:\openwebui\core\x87_worker_dispatcher.py:347:                        plan_first_role = _busmsg_get(first, "role") 
+or _busmsg_get(first, "to_role") or _busmsg_get(first, "agent_role")
+  D:\openwebui\core\x87_worker_dispatcher.py:348:                if plan_first_role:
+  D:\openwebui\core\x87_worker_dispatcher.py:349:                    from_role = "SCOUT"
+  D:\openwebui\core\x87_worker_dispatcher.py:356:
+  D:\openwebui\core\x87_worker_dispatcher.py:357:        sent = self.bus.send(from_role, to_role, task, payload)
+> D:\openwebui\core\x87_worker_dispatcher.py:358:        return {"ok": True, "seed_message": _busmsg_get(sent, "id"), 
+"task": task, "seeded_to": to_role, "x97e_seed_mode": _busmsg_get(payload, "x97e_seed_mode", "fallback_route_next")}
+  D:\openwebui\core\x87_worker_dispatcher.py:359:
+  D:\openwebui\core\x87_worker_dispatcher.py:360:    def demo(self, task: str) -> Dict[str, Any]:
+  D:\openwebui\core\x87_worker_dispatcher.py:361:        seed = self.seed(task)
+> D:\openwebui\core\x87_worker_dispatcher.py:362:        cycles = []
+  D:\openwebui\core\x87_worker_dispatcher.py:363:        for _ in range(4):
+> D:\openwebui\core\x87_worker_dispatcher.py:364:            cycles.append(self.cycle(limit_per_role=20))
+  D:\openwebui\core\x87_worker_dispatcher.py:365:        report = {
+  D:\openwebui\core\x87_worker_dispatcher.py:366:            "ok": True,
+  D:\openwebui\core\x87_worker_dispatcher.py:368:            "task": task,
+  D:\openwebui\core\x87_worker_dispatcher.py:369:            "seed": seed,
+> D:\openwebui\core\x87_worker_dispatcher.py:370:            "cycles": cycles,
+  D:\openwebui\core\x87_worker_dispatcher.py:371:            "state_file": str(STATE_FILE),
+  D:\openwebui\core\x87_worker_dispatcher.py:372:        }
+
+
+
+
