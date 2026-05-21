@@ -1,0 +1,1 @@
+﻿[FAIL] check failed: old_patcher_required_absent. See D:\openwebui\runtime\temp\x97e9_check_source_audit.txt context=D:\openwebui\runtime\temp\x97e9_check_source_context.txt
