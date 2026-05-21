@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x76b_real_local_patch_builder",
-  "stage": "apply_check_pass",
+  "stage": "apply_check_[REDACTED]",
   "checks": [
     {
       "type": "ps_syntax",
@@ -38,24 +38,24 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x76b_real_local_patch_builder\\apply_x76b_real_local_patch_builder.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X76B real local patch builder installed\n",
+    "stdout": "[[REDACTED]] X76B real local patch builder installed\n",
     "stderr": "  File \"D:\\openwebui\\core\\x76_local_patch_builder.py\", line 26\n    'Stop=\"Stop\"\n    ^\nSyntaxError: unterminated string literal (detected at line 26)\n"
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x76b_real_local_patch_builder\\x76b_real_local_patch_builder_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X76B builder syntax valid\n[PASS] X76B real local patch builder ready\n",
+    "stdout": "[[REDACTED]] X76B builder syntax valid\n[[REDACTED]] X76B real local patch builder ready\n",
     "stderr": "  File \"D:\\openwebui\\core\\x76_local_patch_builder.py\", line 26\n    'Stop=\"Stop\"\n    ^\nSyntaxError: unterminated string literal (detected at line 26)\n"
   }
 }

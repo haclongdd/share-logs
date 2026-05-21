@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "stage": "pipeline_pass",
+  "stage": "pipeline_[REDACTED]",
   "orchestrator": "X79_AUTO_PATCH_PIPELINE_ORCHESTRATOR",
   "root": "D:\\openwebui",
   "patch_name": "x80_probe_python_component",
@@ -28,7 +28,7 @@
       "returncode": 0,
       "stdout": "{\n  \"ok\": true,\n  \"patch\": \"x80_probe_python_component\",\n  \"template\": \"python_component\",\n  \"folder\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\"\n}\n",
       "stderr": "",
-      "false_pass_hits": [],
+      "false_[REDACTED]_hits": [],
       "ok": true
     },
     {
@@ -43,9 +43,9 @@
       "cwd": "D:\\openwebui",
       "started_at": "2026-05-20T13:49:10",
       "returncode": 0,
-      "stdout": "{\n  \"ok\": true,\n  \"patch\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\",\n  \"stage\": \"apply_check_pass\",\n  \"checks\": [\n    {\n      \"type\": \"ps_syntax\",\n      \"file\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\apply_x80_probe_python_component.ps1\",\n      \"result\": {\n        \"cmd\": [\n          \"powershell\",\n          \"-NoProfile\",\n          \"-Command\",\n          \"$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\"\n        ],\n        \"returncode\": 0,\n        \"stdout\": \"\",\n        \"stderr\": \"\"\n      }\n    },\n    {\n      \"type\": \"ps_syntax\",\n      \"file\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\cleanup_x80_probe_python_component.ps1\",\n      \"result\": {\n        \"cmd\": [\n          \"powershell\",\n          \"-NoProfile\",\n          \"-Command\",\n          \"$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\"\n        ],\n        \"returncode\": 0,\n        \"stdout\": \"\",\n        \"stderr\": \"\"\n      }\n    },\n    {\n      \"type\": \"ps_syntax\",\n      \"file\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\x80_probe_python_component_check.ps1\",\n      \"result\": {\n        \"cmd\": [\n          \"powershell\",\n          \"-NoProfile\",\n          \"-Command\",\n          \"$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\"\n        ],\n        \"returncode\": 0,\n        \"stdout\": \"\",\n        \"stderr\": \"\"\n      }\n    }\n  ],\n  \"apply\": {\n    \"cmd\": [\n      \"powershell\",\n      \"-ExecutionPolicy\",\n      \"Bypass\",\n      \"-File\",\n      \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\apply_x80_probe_python_component.ps1\"\n    ],\n    \"returncode\": 0,\n    \"stdout\": \"[PASS] x80_probe_python_component applied\\n\",\n    \"stderr\": \"\"\n  },\n  \"check\": {\n    \"cmd\": [\n      \"powershell\",\n      \"-ExecutionPolicy\",\n      \"Bypass\",\n      \"-File\",\n      \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\x80_probe_python_component_check.ps1\"\n    ],\n    \"returncode\": 0,\n    \"stdout\": \"[PASS] x80_probe_python_component template valid\\n[PASS] x80_probe_python_component check complete\\n\",\n    \"stderr\": \"\"\n  },\n  \"false_pass_guard\": true\n}\n",
+      "stdout": "{\n  \"ok\": true,\n  \"patch\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\",\n  \"stage\": \"apply_check_[REDACTED]\",\n  \"checks\": [\n    {\n      \"type\": \"ps_syntax\",\n      \"file\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\apply_x80_probe_python_component.ps1\",\n      \"result\": {\n        \"cmd\": [\n          \"powershell\",\n          \"-NoProfile\",\n          \"-Command\",\n          \"$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\"\n        ],\n        \"returncode\": 0,\n        \"stdout\": \"\",\n        \"stderr\": \"\"\n      }\n    },\n    {\n      \"type\": \"ps_syntax\",\n      \"file\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\cleanup_x80_probe_python_component.ps1\",\n      \"result\": {\n        \"cmd\": [\n          \"powershell\",\n          \"-NoProfile\",\n          \"-Command\",\n          \"$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\"\n        ],\n        \"returncode\": 0,\n        \"stdout\": \"\",\n        \"stderr\": \"\"\n      }\n    },\n    {\n      \"type\": \"ps_syntax\",\n      \"file\": \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\x80_probe_python_component_check.ps1\",\n      \"result\": {\n        \"cmd\": [\n          \"powershell\",\n          \"-NoProfile\",\n          \"-Command\",\n          \"$code = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\"\n        ],\n        \"returncode\": 0,\n        \"stdout\": \"\",\n        \"stderr\": \"\"\n      }\n    }\n  ],\n  \"apply\": {\n    \"cmd\": [\n      \"powershell\",\n      \"-ExecutionPolicy\",\n      \"By[REDACTED]\",\n      \"-File\",\n      \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\apply_x80_probe_python_component.ps1\"\n    ],\n    \"returncode\": 0,\n    \"stdout\": \"[[REDACTED]] x80_probe_python_component applied\\n\",\n    \"stderr\": \"\"\n  },\n  \"check\": {\n    \"cmd\": [\n      \"powershell\",\n      \"-ExecutionPolicy\",\n      \"By[REDACTED]\",\n      \"-File\",\n      \"D:\\\\openwebui\\\\_patch_inbox\\\\x80_probe_python_component\\\\x80_probe_python_component_check.ps1\"\n    ],\n    \"returncode\": 0,\n    \"stdout\": \"[[REDACTED]] x80_probe_python_component template valid\\n[[REDACTED]] x80_probe_python_component check complete\\n\",\n    \"stderr\": \"\"\n  },\n  \"false_[REDACTED]_guard\": true\n}\n",
       "stderr": "",
-      "false_pass_hits": [],
+      "false_[REDACTED]_hits": [],
       "ok": true
     }
   ],

@@ -6565,4 +6565,15 @@ x90.get("report_file"))
   D:\openwebui\core\x93_response_normalizer.py:46:            "normalized_by": RELEASE,
   D:\openwebui\core\x93_response_normalizer.py:47:            "normalized_at": datetime.now(timezone.utc).isoformat(),
 > D:\openwebui\core\x93_response_normalizer.py:48:            "x90": {
-> D:\op
+> D:\openwebui\core\x93_response_normalizer.py:49:                "ok": x90.get("ok"),
+> D:\openwebui\core\x93_response_normalizer.py:50:                "release": x90.get("release"),
+> D:\openwebui\core\x93_response_normalizer.py:51:                "bridge": x90.get("bridge"),
+> D:\openwebui\core\x93_response_normalizer.py:52:                "request_id": x90.get("request_id"),
+> D:\openwebui\core\x93_response_normalizer.py:53:                "report_file": x90.get("report_file"),
+  D:\openwebui\core\x93_response_normalizer.py:54:            },
+  D:\openwebui\core\x93_response_normalizer.py:55:            "raw": raw,
+  D:\openwebui\core\x93_response_normalizer.py:56:        },
+  D:\openwebui\core\x93_response_normalizer.py:57:    }
+
+
+

@@ -317,4 +317,5 @@ def add_task():
         [REDACTED]
 
     try:
-     
+        if not data and getattr(request, "args", None):
+

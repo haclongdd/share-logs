@@ -325,4 +325,7 @@ data.get('message') or ''
   D:\openwebui\core\master_ai_bridge.py:399:def x16abc_run_task(task_text):
   D:\openwebui\core\master_ai_bridge.py:400:    from core.x16_realtime_execution_stream import submit
 > D:\openwebui\core\master_ai_bridge.py:401:    return submit(task_text)
-  D:\openwebui\
+  D:\openwebui\core\master_ai_bridge.py:402:
+
+
+

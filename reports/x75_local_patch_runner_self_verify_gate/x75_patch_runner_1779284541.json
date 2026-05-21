@@ -15,11 +15,11 @@
         ],
         "returncode": 1,
         "stdout": "",
-        "stderr": "Exception calling \"Create\" with \"1\" argument(s): \"At line:129 char:43\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                           ~~~~~~~~~~~~~~~~~~~~\nUnexpected token 'summary\\\"|'summary'\"' in expression or statement.\nAt line:129 char:43\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                           ~\nMissing closing ')' in expression.\nAt line:129 char:43\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                           ~\nThe hash literal was incomplete.\nAt line:129 char:63\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                                               ~\nUnexpected token ')' in expression or statement.\nAt line:132 char:1\n+ }\n+ ~\nUnexpected token '}' in expression or statement.\"\nAt line:1 char:36\n+ ...  = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : ParseException\n \n"
+        "stderr": "Exception calling \"Create\" with \"1\" argument(s): \"At line:129 char:43\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                           ~~~~~~~~~~~~~~~~~~~~\nUnexpected [REDACTED] 'summary\\\"|'summary'\"' in expression or statement.\nAt line:129 char:43\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                           ~\nMissing closing ')' in expression.\nAt line:129 char:43\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                           ~\nThe hash literal was incomplete.\nAt line:129 char:63\n+     has_summary_literal = ($src -match \"\\\"summary\\\"|'summary'\")\n+                                                               ~\nUnexpected [REDACTED] ')' in expression or statement.\nAt line:132 char:1\n+ }\n+ ~\nUnexpected [REDACTED] '}' in expression or statement.\"\nAt line:1 char:36\n+ ...  = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : ParseException\n \n"
       }
     }
   ],
   "apply": null,
   "check": null,
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }

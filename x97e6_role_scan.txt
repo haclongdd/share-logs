@@ -248,4 +248,7 @@ ensure_ascii=False, indent=2))
   core\x87_worker_dispatcher.py:388:    if args.cmd == "status":
 > core\x87_worker_dispatcher.py:389:        print(json.dumps(dispatcher.status(), ensure_ascii=False, indent=2))
   core\x87_worker_dispatcher.py:390:        return 0
-  core\x87_worker_dispat
+  core\x87_worker_dispatcher.py:391:
+
+
+

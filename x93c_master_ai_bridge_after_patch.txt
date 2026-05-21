@@ -388,4 +388,17 @@ try:
         root = _X16Path(r'D:\openwebui')
         runner = root / 'core' / 'x16_realtime_runner.py'
         p = _x16_subprocess.run([_x16_sys.executable, str(runner), '--task', task], capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=360)
-        try: return _x16_json.loads(p
+        try: return _x16_json.loads(p.stdout)
+        except Exception: return {'ok': False, 'stdout': p.stdout, 'stderr': p.stderr, 'code': p.returncode}
+except Exception as _x16_e:
+    print('[X16 attach skipped]', _x16_e)
+# END_X16_REALTIME_EXECUTION_STREAM_ATTACH
+
+# X16ABC_WEBUI_LIVE_TEST_PACK helper
+# Safe helper for Flask add_task routes to call, without breaking old code.
+def x16abc_run_task(task_text):
+    from core.x16_realtime_execution_stream import submit
+    return submit(task_text)
+
+
+

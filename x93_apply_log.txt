@@ -73,4 +73,6 @@
     "stdout": "[INFO] Root=D:\\openwebui\n[[REDACTED]] X93 unit normalization contract ok\n[INFO] Live response saved: D:\\openwebui\\runtime\\temp\\x93_live_response.json\n[FAIL] Live /add_task missing summary\n",
     "stderr": ""
   },
-  "false_
+  "false_[REDACTED]_guard": true
+}
+

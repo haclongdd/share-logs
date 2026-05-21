@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x78b_template_aware_patch_generator",
-  "stage": "apply_check_pass",
+  "stage": "apply_check_[REDACTED]",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,25 +53,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x78b_template_aware_patch_generator\\apply_x78b_template_aware_patch_generator.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X78B template-aware generator installed\n",
+    "stdout": "[[REDACTED]] X78B template-aware generator installed\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x78b_template_aware_patch_generator\\x78b_template_aware_patch_generator_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X78B generator valid\n[PASS] X78B check complete\n",
+    "stdout": "[[REDACTED]] X78B generator valid\n[[REDACTED]] X78B check complete\n",
     "stderr": ""
   },
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }

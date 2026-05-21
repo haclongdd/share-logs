@@ -117,4 +117,5 @@ class WorkerDispatcher:
         return None
 
     def _x97b2_extract_role(self, step):
-        """Accept role fields used by planner variants."
+        """Accept role fields used by planner variants."""
+

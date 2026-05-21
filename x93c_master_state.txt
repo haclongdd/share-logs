@@ -5,4 +5,6 @@ At line:1 char:1
 + docker inspect master_ai --format "{{.State.Status}} {{.State.Health. ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : NotSpecified: (template parsin...or [REDACTED] "Health":String) [], RemoteException
-    + FullyQualifiedErrorId : NativeComma
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

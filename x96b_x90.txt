@@ -301,4 +301,5 @@ def cli() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemEx
+    raise SystemExit(cli())
+

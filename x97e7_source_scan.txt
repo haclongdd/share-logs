@@ -4509,4 +4509,27 @@ def cli() -> int:
 
     if args.cmd == "consume":
         rows = bus.consume(args.role, args.limit)
-        print(json.dumps({"ok": True, "role": args.role.upper(), "count": len(rows), "messages": rows}, ensure_ascii=False, inden
+        print(json.dumps({"ok": True, "role": args.role.upper(), "count": len(rows), "messages": rows}, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "list":
+        rows = bus.list_messages(args.status)
+        print(json.dumps({"ok": True, "count": len(rows), "messages": rows}, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "demo-chain":
+        report = bus.demo_chain(args.task)
+        print(json.dumps(report, ensure_ascii=False, indent=2))
+        return 0
+
+    if args.cmd == "status":
+        print(json.dumps(bus.status(), ensure_ascii=False, indent=2))
+        return 0
+
+    parser.print_help()
+    return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(cli())
+

@@ -105,4 +105,9 @@ RULES
 - Local-first
 - Root-cause-first
 - Verify bằng log thật trước khi fix
-- Không patch
+- Không patch mò
+- Script luôn export *.txt log
+- User gửi log txt
+- AI đọc log và quyết định bước tiếp theo
+
+

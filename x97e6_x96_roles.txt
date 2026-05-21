@@ -118,4 +118,7 @@ planner/reviewer")
 > core\x96_master_planner_reviewer.py:219:        worker_report = 
 json.loads(Path(args.report_json).read_text(encoding="utf-8"))
 > core\x96_master_planner_reviewer.py:220:        out = review_worker_report(args.task_id, worker_report)
-  core\x96_master_planner_reviewer.py:221:    elif 
+  core\x96_master_planner_reviewer.py:221:    elif args.cmd == "selftest":
+
+
+
