@@ -1,0 +1,29 @@
+﻿RAW_TYPE= <class 'NoneType'>
+RAW_REPR_HEAD= None
+SAFE_RAW=
+null
+NORMALIZED_TYPE= <class 'dict'>
+NORMALIZED_REPR_HEAD= {'ok': False, 'release': 'unknown', 'bridge': 'unknown', 'summary': 'failed', 'task': None, 'result': None, 'report_file': None, 'debug': {'normalized_by': 'X93_WEBUI_RESPONSE_NORMALIZER', 'normalized_at': '2026-05-21T15:45:39.481935+00:00', 'x90': {'ok': None, 'release': None, 'bridge': None, 'request_id': None, 'report_file': None}, 'raw': None}}
+SAFE_NORMALIZED=
+{
+  "ok": false,
+  "release": "unknown",
+  "bridge": "unknown",
+  "summary": "failed",
+  "task": null,
+  "result": null,
+  "report_file": null,
+  "debug": {
+    "normalized_by": "X93_WEBUI_RESPONSE_NORMALIZER",
+    "normalized_at": "2026-05-21T15:45:39.481935+00:00",
+    "x90": {
+      "ok": null,
+      "release": null,
+      "bridge": null,
+      "request_id": null,
+      "report_file": null
+    },
+    "raw": null
+  }
+}
+
