@@ -1,0 +1,135 @@
+﻿#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+from __future__ import annotations
+
+import importlib.util
+import json
+import os
+import sys
+import time
+from pathlib import Path
+from typing import Any, Dict
+
+def _resolve_aios_root() -> Path:
+    explicit = os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")
+    if explicit:
+        return Path(explicit)
+
+    candidates = [
+        Path("/app"),
+        Path(r"D:\\openwebui"),
+        Path(__file__).resolve().parent.parent,
+    ]
+
+    for candidate in candidates:
+        try:
+            if (candidate / "core" / "x90_webui_agent_bridge.py").exists():
+                return candidate
+        except Exception:
+            pass
+
+    return Path(r"D:\\openwebui")
+
+
+ROOT = _resolve_aios_root()
+CORE_DIR = ROOT / "core"
+REPORT_DIR = ROOT / "runtime" / "reports"
+X90_FILE = CORE_DIR / "x90_webui_agent_bridge.py"
+
+
+def safe_write_json(path: Path, data: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+
+def import_x90_bridge_class():
+    if not X90_FILE.exists():
+        raise FileNotFoundError(f"X90 bridge missing: {X90_FILE}")
+    module_name = "x90_webui_agent_bridge_runtime_x91"
+    spec = importlib.util.spec_from_file_location(module_name, str(X90_FILE))
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"cannot import {X90_FILE}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    spec.loader.exec_module(module)
+    return module.WebUIAgentBridge
+
+
+def normalize_task_payload(payload: Dict[str, Any]) -> Dict[str, Any]:
+    task = payload.get("task") or payload.get("message") or payload.get("prompt") or payload.get("command") or payload.get("text") or ""
+    mode = str(payload.get("mode") or payload.get("agent_mode") or "agent").strip().lower()
+    if mode not in {"agent", "schedule", "sandbox", "status"}:
+        mode = "agent"
+
+    bridge_payload = payload.get("payload")
+    if not isinstance(bridge_payload, dict):
+        bridge_payload = {}
+
+    if mode == "sandbox" and "command" in payload:
+        bridge_payload.setdefault("command", payload.get("command"))
+    if mode == "sandbox" and "timeout" in payload:
+        bridge_payload.setdefault("timeout", payload.get("timeout"))
+
+    return {"task": str(task).strip(), "mode": mode, "payload": bridge_payload}
+
+
+def handle_add_task_payload(payload: Dict[str, Any]) -> Dict[str, Any]:
+    normalized = normalize_task_payload(payload)
+    if not normalized["task"] and normalized["mode"] != "status":
+        return {
+            "ok": False,
+            "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+            "error": "empty task",
+            "normalized": normalized,
+        }
+
+    Bridge = import_x90_bridge_class()
+    bridge = Bridge()
+    response = bridge.submit(
+        task=normalized["task"] or "status",
+        mode=normalized["mode"],
+        payload=normalized["payload"],
+    )
+
+    result = {
+        "ok": bool(response.get("ok")),
+        "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+        "bridge": "x90_webui_agent_bridge",
+        "normalized": normalized,
+        "x90_response": response,
+        "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    }
+
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    report = REPORT_DIR / ("x91_addtask_bridge_response_%d.json" % int(time.time() * 1000))
+    safe_write_json(report, result)
+    result["report_file"] = str(report)
+    return result
+
+
+def status() -> Dict[str, Any]:
+    return {
+        "ok": True,
+        "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+        "root": str(ROOT),
+        "x90_file": str(X90_FILE),
+        "x90_exists": X90_FILE.exists(),
+    }
+
+
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="X91 add_task bridge adapter")
+    parser.add_argument("cmd", choices=["status", "submit"])
+    parser.add_argument("--payload", default="{}")
+    args = parser.parse_args()
+
+    if args.cmd == "status":
+        print(json.dumps(status(), ensure_ascii=False, indent=2))
+    else:
+        data = json.loads(args.payload)
+        print(json.dumps(handle_add_task_payload(data), ensure_ascii=False, indent=2))
+
+
