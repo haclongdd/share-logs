@@ -1,0 +1,6 @@
+﻿has_release=True
+has_lock=True
+has_once=True
+has_git_push=True
+has_sources=True
+
