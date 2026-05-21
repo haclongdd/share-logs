@@ -1,128 +1,116 @@
 ﻿{
-    "updated_at":  "2026-05-21T23:53:52.1143757+07:00",
-    "tool":  "x99d_logsync_clean",
-    "latest":  "x104g_compile.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104g_compile.txt",
+    "schema":  "ai-local-os-log-manifest-v1",
+    "generated_at_utc":  "2026-05-21T16:54:06.1412079Z",
+    "generated_at_local":  "2026-05-21T23:54:06.1422114+07:00",
+    "share_dir":  "D:\\openwebui\\runtime\\share_logs",
+    "latest":  "x85_run_2.txt",
+    "recent_count":  15,
     "recent":  [
                    {
-                       "name":  "x104g_compile.txt",
-                       "size":  0,
-                       "modified_at":  "2026-05-21T22:58:41.6035907+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104g_compile.txt"
+                       "path":  "x85_run_2.txt",
+                       "name":  "x85_run_2.txt",
+                       "kind":  "log",
+                       "size_bytes":  1102,
+                       "modified_utc":  "2026-05-21T16:54:06.0278083Z"
                    },
                    {
-                       "name":  "x104g_jsonify_scan.txt",
-                       "size":  1116,
-                       "modified_at":  "2026-05-21T22:58:40.7349310+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104g_jsonify_scan.txt"
+                       "path":  "x93_preflight_20260520_190542.json",
+                       "name":  "x93_preflight_20260520_190542.json",
+                       "kind":  "log",
+                       "size_bytes":  203,
+                       "modified_utc":  "2026-05-21T16:54:06.0261224Z"
                    },
                    {
-                       "name":  "x104g_json_scan.txt",
-                       "size":  112466,
-                       "modified_at":  "2026-05-21T22:58:40.4373653+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104g_json_scan.txt"
+                       "path":  "x93_preflight_20260520_190555.json",
+                       "name":  "x93_preflight_20260520_190555.json",
+                       "kind":  "log",
+                       "size_bytes":  202,
+                       "modified_utc":  "2026-05-21T16:54:06.0249619Z"
                    },
                    {
-                       "name":  "x104f_x91_adapter.txt",
-                       "size":  8958,
-                       "modified_at":  "2026-05-21T22:53:43.7568209+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104f_x91_adapter.txt"
+                       "path":  "x93_live_response.json",
+                       "name":  "x93_live_response.json",
+                       "kind":  "runtime",
+                       "size_bytes":  14281,
+                       "modified_utc":  "2026-05-21T16:54:06.0232088Z"
                    },
                    {
-                       "name":  "x104e_docker_logs.txt",
-                       "size":  14838,
-                       "modified_at":  "2026-05-21T22:51:13.6094329+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104e_docker_logs.txt"
+                       "path":  "x93_apply_log.txt",
+                       "name":  "x93_apply_log.txt",
+                       "kind":  "apply",
+                       "size_bytes":  2526,
+                       "modified_utc":  "2026-05-21T16:54:06.0214893Z"
                    },
                    {
-                       "name":  "x104e_x15d_lines.txt",
-                       "size":  5260,
-                       "modified_at":  "2026-05-21T22:51:12.7254850+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104e_x15d_lines.txt"
+                       "path":  "x93b_generator_log.txt",
+                       "name":  "x93b_generator_log.txt",
+                       "kind":  "log",
+                       "size_bytes":  224,
+                       "modified_utc":  "2026-05-21T16:54:06.0202687Z"
                    },
                    {
-                       "name":  "x104e_master_lines.txt",
-                       "size":  2018,
-                       "modified_at":  "2026-05-21T22:51:12.4399918+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104e_master_lines.txt"
+                       "path":  "x93b_dir_check.txt",
+                       "name":  "x93b_dir_check.txt",
+                       "kind":  "check",
+                       "size_bytes":  701,
+                       "modified_utc":  "2026-05-21T16:54:06.0186222Z"
                    },
                    {
-                       "name":  "x104d_trace_jsonify.txt",
-                       "size":  1880,
-                       "modified_at":  "2026-05-21T22:45:39.4783413+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104d_trace_jsonify.txt"
+                       "path":  "x93b_apply_log.txt",
+                       "name":  "x93b_apply_log.txt",
+                       "kind":  "apply",
+                       "size_bytes":  1928,
+                       "modified_utc":  "2026-05-21T16:54:06.0176111Z"
                    },
                    {
-                       "name":  "x104c_after_patch_scan.txt",
-                       "size":  5114,
-                       "modified_at":  "2026-05-21T22:41:49.3107787+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104c_after_patch_scan.txt"
+                       "path":  "x93c_generator_log.txt",
+                       "name":  "x93c_generator_log.txt",
+                       "kind":  "log",
+                       "size_bytes":  104,
+                       "modified_utc":  "2026-05-21T16:54:06.0156096Z"
                    },
                    {
-                       "name":  "x104c_after_patch_docker_logs.txt",
-                       "size":  7334,
-                       "modified_at":  "2026-05-21T22:41:47.5773648+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104c_after_patch_docker_logs.txt"
+                       "path":  "x93c_preflight_20260520_215319.json",
+                       "name":  "x93c_preflight_20260520_215319.json",
+                       "kind":  "log",
+                       "size_bytes":  135,
+                       "modified_utc":  "2026-05-21T16:54:06.0146095Z"
                    },
                    {
-                       "name":  "x15d_circular_source_scan.txt",
-                       "size":  4630,
-                       "modified_at":  "2026-05-21T22:35:17.3773800+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x15d_circular_source_scan.txt"
+                       "path":  "x93c_preflight_20260520_215443.json",
+                       "name":  "x93c_preflight_20260520_215443.json",
+                       "kind":  "log",
+                       "size_bytes":  133,
+                       "modified_utc":  "2026-05-21T16:54:06.0136173Z"
                    },
                    {
-                       "name":  "x15d_circular_docker_logs.txt",
-                       "size":  7374,
-                       "modified_at":  "2026-05-21T22:35:15.9943385+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x15d_circular_docker_logs.txt"
+                       "path":  "x93c_preflight_20260520_215919.json",
+                       "name":  "x93c_preflight_20260520_215919.json",
+                       "kind":  "log",
+                       "size_bytes":  133,
+                       "modified_utc":  "2026-05-21T16:54:06.0126094Z"
                    },
                    {
-                       "name":  "x104_runtime_sync_compile.txt",
-                       "size":  822,
-                       "modified_at":  "2026-05-21T22:13:23.1175098+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104_runtime_sync_compile.txt"
+                       "path":  "x93c_preflight_20260520_220158.json",
+                       "name":  "x93c_preflight_20260520_220158.json",
+                       "kind":  "log",
+                       "size_bytes":  133,
+                       "modified_utc":  "2026-05-21T16:54:06.0106114Z"
                    },
                    {
-                       "name":  "x104_runtime_sync_docker_logs.txt",
-                       "size":  7334,
-                       "modified_at":  "2026-05-21T22:13:15.9892975+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104_runtime_sync_docker_logs.txt"
+                       "path":  "x93c_apply_log.txt",
+                       "name":  "x93c_apply_log.txt",
+                       "kind":  "apply",
+                       "size_bytes":  2426,
+                       "modified_utc":  "2026-05-21T16:54:06.0096155Z"
                    },
                    {
-                       "name":  "x104b2_check_log.txt",
-                       "size":  1260,
-                       "modified_at":  "2026-05-21T22:09:44.3413252+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_check_log.txt"
-                   },
-                   {
-                       "name":  "x104b2_check_audit.json",
-                       "size":  541,
-                       "modified_at":  "2026-05-21T22:09:44.3367140+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_check_audit.json"
-                   },
-                   {
-                       "name":  "x104b2_apply_log.txt",
-                       "size":  3794,
-                       "modified_at":  "2026-05-21T22:09:42.3765606+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_apply_log.txt"
-                   },
-                   {
-                       "name":  "x104b2_diagnostic_audit.json",
-                       "size":  1613,
-                       "modified_at":  "2026-05-21T22:09:42.3588843+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_diagnostic_audit.json"
-                   },
-                   {
-                       "name":  "x104b2_latest_reports.txt",
-                       "size":  3117,
-                       "modified_at":  "2026-05-21T22:09:42.3235092+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_latest_reports.txt"
-                   },
-                   {
-                       "name":  "x104b2_add_task_response.json",
-                       "size":  4643,
-                       "modified_at":  "2026-05-21T22:09:39.2534526+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104b2_add_task_response.json"
+                       "path":  "x93c_after_restart_docker_ps.txt",
+                       "name":  "x93c_after_restart_docker_ps.txt",
+                       "kind":  "log",
+                       "size_bytes":  2641,
+                       "modified_utc":  "2026-05-21T16:54:06.0086008Z"
                    }
-               ]
+               ],
+    "raw_base":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/"
 }
