@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x78b_probe_python_component",
-  "stage": "apply_check_[REDACTED]",
+  "stage": "apply_check_pass",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,25 +53,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x78b_probe_python_component\\apply_x78b_probe_python_component.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] x78b_probe_python_component applied\n",
+    "stdout": "[PASS] x78b_probe_python_component applied\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x78b_probe_python_component\\x78b_probe_python_component_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] x78b_probe_python_component template valid\n[[REDACTED]] x78b_probe_python_component check complete\n",
+    "stdout": "[PASS] x78b_probe_python_component template valid\n[PASS] x78b_probe_python_component check complete\n",
     "stderr": ""
   },
-  "false_[REDACTED]_guard": true
+  "false_pass_guard": true
 }

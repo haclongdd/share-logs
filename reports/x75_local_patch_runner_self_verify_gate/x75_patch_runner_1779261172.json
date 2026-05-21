@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x83_failure_memory_lessons",
-  "stage": "apply_check_[REDACTED]",
+  "stage": "apply_check_pass",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,25 +53,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x83_failure_memory_lessons\\apply_x83_failure_memory_lessons.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] X83 failure memory lessons installed: D:\\openwebui\\core\\x83_failure_memory_lessons.py\n",
+    "stdout": "[PASS] X83 failure memory lessons installed: D:\\openwebui\\core\\x83_failure_memory_lessons.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x83_failure_memory_lessons\\x83_failure_memory_lessons_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "{\n  \"ok\": true,\n  \"stage\": \"status\",\n  \"orchestrator\": \"X83_FAILURE_MEMORY_LESSONS\",\n  \"root\": \"D:\\\\openwebui\",\n  \"json_exists\": true,\n  \"md_exists\": true,\n  \"json_path\": \"D:\\\\openwebui\\\\runtime\\\\memory\\\\x83\\\\failure_lessons.json\",\n  \"md_path\": \"D:\\\\openwebui\\\\runtime\\\\memory\\\\x83\\\\failure_lessons.md\",\n  \"created_at\": \"2026-05-20T14:12:52\",\n  \"total_failure_records\": 23\n}\n[[REDACTED]] X83 status [REDACTED]\n",
+    "stdout": "{\n  \"ok\": true,\n  \"stage\": \"status\",\n  \"orchestrator\": \"X83_FAILURE_MEMORY_LESSONS\",\n  \"root\": \"D:\\\\openwebui\",\n  \"json_exists\": true,\n  \"md_exists\": true,\n  \"json_path\": \"D:\\\\openwebui\\\\runtime\\\\memory\\\\x83\\\\failure_lessons.json\",\n  \"md_path\": \"D:\\\\openwebui\\\\runtime\\\\memory\\\\x83\\\\failure_lessons.md\",\n  \"created_at\": \"2026-05-20T14:12:52\",\n  \"total_failure_records\": 23\n}\n[PASS] X83 status PASS\n",
     "stderr": ""
   },
-  "false_[REDACTED]_guard": true
+  "false_pass_guard": true
 }

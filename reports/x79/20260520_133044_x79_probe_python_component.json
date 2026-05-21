@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "stage": "dry_run_preflight_[REDACTED]",
+  "stage": "dry_run_preflight_pass",
   "orchestrator": "X79_AUTO_PATCH_PIPELINE_ORCHESTRATOR",
   "root": "D:\\openwebui",
   "patch_name": "x79_probe_python_component",
