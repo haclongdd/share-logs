@@ -60,4 +60,8 @@ error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
 error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
 [2026-05-21T13:30:18.736799Z] MANIFEST latest=reports/x87b_worker_dispatcher_report_1779370216431.json total=618 changed=8
 [2026-05-21T13:30:22.345033Z] PUSH OK changed=8 latest_commit=x99e debug sync 2026-05-21 20:30:18
+[2026-05-21T13:30:53.662662Z] MANIFEST latest=temp/x99d_logsync_runtime_log.txt total=621 changed=8
+[2026-05-21T13:30:57.336598Z] git push failed code=1 err=To https://github.com/haclongdd/share-logs.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 1b261b8ed1274777036fa5a04f80057c3a5cfd2d but expected 5c473d20ac563ddb4f7cb9841d966e4eb60ccbed)
+error: failed to push some refs to 'https://github.com/haclongdd/share-logs.git'
 
