@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix",
-  "stage": "apply_check_pass",
+  "stage": "apply_check_[REDACTED]",
   "checks": [
     {
       "type": "ps_syntax",
@@ -68,25 +68,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\apply_x87b_worker_dispatcher_importfix.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X87B worker dispatcher importfix applied.\n[INFO] Runtime: D:\\openwebui\\core\\x87_worker_dispatcher.py\n",
+    "stdout": "[[REDACTED]] X87B worker dispatcher importfix applied.\n[INFO] Runtime: D:\\openwebui\\core\\x87_worker_dispatcher.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x87b_worker_dispatcher_importfix\\x87b_worker_dispatcher_importfix_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X87B worker dispatcher importfix check passed.\n[INFO] Processed total: 22\n[INFO] Report: D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_demo_1779271128700.json\n",
+    "stdout": "[[REDACTED]] X87B worker dispatcher importfix check [REDACTED]ed.\n[INFO] Processed total: 22\n[INFO] Report: D:\\openwebui\\runtime\\reports\\x87b_worker_dispatcher_demo_1779271128700.json\n",
     "stderr": ""
   },
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }

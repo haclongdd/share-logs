@@ -2,7 +2,7 @@
   "ok": false,
   "cmd": "Remove-Item D:\\openwebui -Recurse",
   "allowed": false,
-  "reason": "denied keyword: remove-item",
+  "reason": "denied [REDACTED]word: remove-item",
   "dry_run": true,
   "checked_at": "2026-05-20T12:03:13"
 }

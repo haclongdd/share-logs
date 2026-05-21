@@ -53,7 +53,7 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\apply_x81_daemon_worker_loop.ps1"
     ],
@@ -62,5 +62,5 @@
     "stderr": "  File \"D:\\openwebui\\core\\x81_daemon_worker_loop.py\", line 77\n    line = f\"[{now()}] {message}\n           ^\nSyntaxError: unterminated f-string literal (detected at line 77)\npy_compile failed for D:\\openwebui\\core\\x81_daemon_worker_loop.py\nAt D:\\openwebui\\_patch_inbox\\x81_daemon_worker_loop\\apply_x81_daemon_worker_loop.ps1:29 char:28\n+ if ($LASTEXITCODE -ne 0) { throw \"py_compile failed for $DST\" }\n+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: (py_compile fail..._worker_loop.py:String) [], RuntimeException\n    + FullyQualifiedErrorId : py_compile failed for D:\\openwebui\\core\\x81_daemon_worker_loop.py\n \n"
   },
   "check": null,
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }
