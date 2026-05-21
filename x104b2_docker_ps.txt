@@ -1,0 +1,10 @@
+﻿NAMES                               IMAGE                                             STATUS                       PORTS
+ollama                              ollama/ollama:latest                              Up 24 hours                  0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp
+testnet2                            pinetwork/pi-node-docker:community-v1.1-p23.0.1   Up 24 hours                  0.0.0.0:31402->31402/tcp, [::]:31402->31402/tcp, 0.0.0.0:31403->1570/tcp, [::]:31403->1570/tcp, 0.0.0.0:31401->8000/tcp, [::]:31401->8000/tcp
+openwebui-ai-local-os-memory-1      python:3.11-slim                                  Up 24 hours                  0.0.0.0:8770->8770/tcp, [::]:8770->8770/tcp
+openwebui-ai-local-os-dashboard-1   python:3.11-slim                                  Up 24 hours                  0.0.0.0:8765->8765/tcp, [::]:8765->8765/tcp
+master_ai                           openwebui-master-ai                               Up 24 hours                  0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp
+agent_con                           openwebui-agent-con                               Up 24 hours                  
+open-webui                          ghcr.io/open-webui/open-webui:main                Up 24 hours (healthy)        0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+optimai_crawl4ai_0_7_8              unclecode/crawl4ai:0.7.8                          Up About an hour (healthy)   0.0.0.0:11235->11235/tcp, [::]:11235->11235/tcp
+

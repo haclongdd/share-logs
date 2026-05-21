@@ -1,0 +1,4 @@
+﻿docker ps --format "table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+docker exec master_ai sh -lc 'python - <<"PY"`nimport os, sys`nfor p in ["/app/core/x104_safe_json.py","/app/core/x90_webui_agent_bridge.py","/app/core/x91_master_ai_addtask_bridge.py","/app/core/x93_webui_response_normalizer.py"]:`n    print(p, os.path.exists(p))`nPY'
+docker exec master_ai sh -lc 'grep -RIn --include="*.py" -E "json\\.(dumps|dump)|safe_json|normalize|Circular reference" /app/core /app 2>/dev/null | head -n 300'
+

@@ -1,0 +1,9 @@
+﻿docker : reference /app/core /app 2>/dev/null | head -n 500: 1: Syntax error: "(" unexpected
+At D:\openwebui\_patch_inbox\x104b2_circular_trace_diagnostic_fix\apply_x104b2_circular_trace_diagnostic_fix.ps1:59 
+char:3
++   docker exec master_ai sh -lc 'grep -RIn --include="*.py" -E "json\. ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (reference /app/... "(" unexpected:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

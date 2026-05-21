@@ -1,0 +1,13 @@
+﻿docker :   File "<stdin>", line 2
+At D:\openwebui\_patch_inbox\x104b2_circular_trace_diagnostic_fix\apply_x104b2_circular_trace_diagnostic_fix.ps1:41 
+char:3
++   docker exec master_ai sh -lc 'python - <<"PY"
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "<stdin>", line 2:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    paths=[/app/core/x104_safe_json.py,/app/core/x90_webui_agent_bridge.py,/app/core/x91_master_ai_addtask_bridge.py,/a
+pp/core/x93_webui_response_normalizer.py]
+           ^
+SyntaxError: invalid syntax
+

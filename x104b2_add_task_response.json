@@ -1,0 +1,64 @@
+﻿{
+    "bridge":  "x90_webui_agent_bridge",
+    "debug":  {
+                  "normalized_at":  "2026-05-21T15:09:39.212627+00:00",
+                  "normalized_by":  "X93_WEBUI_RESPONSE_NORMALIZER",
+                  "raw":  {
+                              "bridge":  "x90_webui_agent_bridge",
+                              "normalized":  {
+                                                 "mode":  "agent",
+                                                 "payload":  {
+
+                                                             },
+                                                 "task":  "x104b2 circular trace diagnostic smoke 20260521_220932"
+                                             },
+                              "ok":  false,
+                              "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779376179197.json",
+                              "ts":  "2026-05-21T15:09:39Z",
+                              "x90_response":  {
+                                                   "dependency_status":  {
+                                                                             "x86":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x86_agent_bus.py"
+                                                                                     },
+                                                                             "x87":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x87_worker_dispatcher.py"
+                                                                                     },
+                                                                             "x88":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x88_persistent_scheduler.py"
+                                                                                     },
+                                                                             "x89":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x89_sandbox_workers.py"
+                                                                                     }
+                                                                         },
+                                                   "error":  "ValueError(\u0027Circular reference detected\u0027)",
+                                                   "mode":  "agent",
+                                                   "ok":  false,
+                                                   "release":  "X90_WEBUI_AGENT_BRIDGE",
+                                                   "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779376179141.json",
+                                                   "request_id":  "x90req_1779376172682_353693cf",
+                                                   "task":  "x104b2 circular trace diagnostic smoke 20260521_220932",
+                                                   "ts":  "2026-05-21T15:09:39Z"
+                                               }
+                          },
+                  "x90":  {
+                              "bridge":  null,
+                              "ok":  false,
+                              "release":  "X90_WEBUI_AGENT_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779376179141.json",
+                              "request_id":  "x90req_1779376172682_353693cf"
+                          }
+              },
+    "ok":  false,
+    "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+    "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779376179197.json",
+    "result":  null,
+    "summary":  "failed | task=x104b2 circular trace diagnostic smoke 20260521_220932 | report=/app/runtime/reports/x91_addtask_bridge_response_1779376179197.json",
+    "task":  "x104b2 circular trace diagnostic smoke 20260521_220932",
+    "ts":  "2026-05-21T15:09:39Z"
+}
+
