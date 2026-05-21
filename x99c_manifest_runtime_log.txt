@@ -10963,4 +10963,6 @@
 [2026-05-21T17:39:45.5914616+07:00] manifest updated latest=x98b_guard_report.json recent=15
 [2026-05-21T17:39:50.6328651+07:00] manifest updated latest=x98b_guard_report.json recent=15
 [2026-05-21T17:39:55.6631968+07:00] manifest updated latest=x98b_guard_report.json recent=15
+[2026-05-21T17:40:00.6876610+07:00] manifest updated latest=x97a_core_x96_master_planner_reviewer_py_head.txt recent=15
+[2026-05-21T17:40:05.7136204+07:00] manifest updated latest=x85_run_20260520_163219.txt recent=15
 
