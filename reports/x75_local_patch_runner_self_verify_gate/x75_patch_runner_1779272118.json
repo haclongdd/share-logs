@@ -68,19 +68,19 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\apply_x90_webui_agent_bridge.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X90 WebUI agent bridge applied.\n[INFO] Runtime: D:\\openwebui\\core\\x90_webui_agent_bridge.py\n",
+    "stdout": "[[REDACTED]] X90 WebUI agent bridge applied.\n[INFO] Runtime: D:\\openwebui\\core\\x90_webui_agent_bridge.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\x90_webui_agent_bridge_check.ps1"
     ],
@@ -88,5 +88,5 @@
     "stdout": "",
     "stderr": "invalid --payload JSON: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)\n[FAIL] sandbox submit failed\nAt D:\\openwebui\\_patch_inbox\\x90_webui_agent_bridge\\x90_webui_agent_bridge_check.ps1:24 char:3\n+   throw \"[FAIL] sandbox submit failed\"\n+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : OperationStopped: ([FAIL] sandbox submit failed:String) [], RuntimeException\n    + FullyQualifiedErrorId : [FAIL] sandbox submit failed\n \n"
   },
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }
