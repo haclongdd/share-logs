@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers",
-  "stage": "apply_check_pass",
+  "stage": "apply_check_[REDACTED]",
   "checks": [
     {
       "type": "ps_syntax",
@@ -68,25 +68,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\apply_x89_sandbox_workers.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X89 sandbox workers applied.\n[INFO] Runtime: D:\\openwebui\\core\\x89_sandbox_workers.py\n",
+    "stdout": "[[REDACTED]] X89 sandbox workers applied.\n[INFO] Runtime: D:\\openwebui\\core\\x89_sandbox_workers.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x89_sandbox_workers\\x89_sandbox_workers_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X89 sandbox workers check passed.\n[INFO] Safe run report: D:\\openwebui\\runtime\\reports\\x89_sandbox_report_1779271523105.json\n",
+    "stdout": "[[REDACTED]] X89 sandbox workers check [REDACTED]ed.\n[INFO] Safe run report: D:\\openwebui\\runtime\\reports\\x89_sandbox_report_1779271523105.json\n",
     "stderr": ""
   },
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }

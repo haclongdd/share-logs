@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x76c_probe_patch",
-  "stage": "apply_check_pass",
+  "stage": "apply_check_[REDACTED]",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,25 +53,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\apply_x76c_probe_patch.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] x76c_probe_patch applied\n",
+    "stdout": "[[REDACTED]] x76c_probe_patch applied\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x76c_probe_patch\\x76c_probe_patch_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] x76c_probe_patch manifest valid\n[PASS] x76c_probe_patch check complete\n",
+    "stdout": "[[REDACTED]] x76c_probe_patch manifest valid\n[[REDACTED]] x76c_probe_patch check complete\n",
     "stderr": ""
   },
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }
