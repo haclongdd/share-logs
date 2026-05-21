@@ -101,7 +101,7 @@ obj.get("final_report") or obj.get("summary") or "Task completed."
   D:\openwebui\core\master_ai_bridge.py:154:    obj["phase"] = obj.get("phase", "X1G")
   D:\openwebui\core\master_ai_bridge.py:155:    obj["task_id"] = obj.get("task_id", task_id)
   D:\openwebui\core\master_ai_bridge.py:156:    obj["status"] = "completed"
-  D:\openwebui\core\master_ai_bridge.py:157:    obj["final_status"] = obj.get("final_status", "[REDACTED]")
+  D:\openwebui\core\master_ai_bridge.py:157:    obj["final_status"] = obj.get("final_status", "PASS")
   D:\openwebui\core\master_ai_bridge.py:162:    obj["message"] = obj.get("message", str(result))
   D:\openwebui\core\master_ai_bridge.py:163:    obj["final_report"] = obj.get("final_report", str(result))
   D:\openwebui\core\master_ai_bridge.py:164:    obj["updated_at"] = now()
@@ -234,7 +234,7 @@ Orchestrator
 > D:\openwebui\core\master_ai_bridge.py:296:            return _x14c_execute_task_payload(_task_text)
   D:\openwebui\core\master_ai_bridge.py:297:
   D:\openwebui\core\master_ai_bridge.py:298:    except Exception as _x14c_e:
-  D:\openwebui\core\master_ai_bridge.py:299:        [REDACTED]
+  D:\openwebui\core\master_ai_bridge.py:299:        pass
   D:\openwebui\core\master_ai_bridge.py:300:
 > D:\openwebui\core\master_ai_bridge.py:301:    # WEBUI_ADD_TASK_BRIDGE_V1_1_PATCHED
   D:\openwebui\core\master_ai_bridge.py:302:    data = request.get_json(silent=True)
@@ -244,7 +244,7 @@ Orchestrator
   D:\openwebui\core\master_ai_bridge.py:306:
   D:\openwebui\core\master_ai_bridge.py:307:    try:
   D:\openwebui\core\master_ai_bridge.py:322:    except Exception:
-  D:\openwebui\core\master_ai_bridge.py:323:        [REDACTED]
+  D:\openwebui\core\master_ai_bridge.py:323:        pass
   D:\openwebui\core\master_ai_bridge.py:324:
 > D:\openwebui\core\master_ai_bridge.py:325:    return 
 jsonify(x93_normalize_add_task_response(handle_add_task_payload(data)))
@@ -257,7 +257,7 @@ request.args.to_dict() or {}
   D:\openwebui\core\master_ai_bridge.py:331:        task_id = str(data.get("task_id") or data.get("id") or "").strip()
   D:\openwebui\core\master_ai_bridge.py:332:        if not task_id:
 > D:\openwebui\core\master_ai_bridge.py:333:            return jsonify({"phase":"X1G", "status":"completed", 
-"completed":True, "final_status":"[REDACTED]", "result":"No task_id provided."}), 200
+"completed":True, "final_status":"PASS", "result":"No task_id provided."}), 200
   D:\openwebui\core\master_ai_bridge.py:334:        existing = find_existing(task_id)
   D:\openwebui\core\master_ai_bridge.py:335:        if existing:
   D:\openwebui\core\master_ai_bridge.py:336:            persist_all(existing)
@@ -297,11 +297,11 @@ nr.status_code=response.status_code; return nr
 starting on port 5000", flush=True)
   D:\openwebui\core\master_ai_bridge.py:365:    app.run(host="0.0.0.0", port=5000)
   D:\openwebui\core\master_ai_bridge.py:366:
-  D:\openwebui\core\master_ai_bridge.py:379:            for p in sorted(status_dir.glob('*.json'), [REDACTED]=lambda x: 
+  D:\openwebui\core\master_ai_bridge.py:379:            for p in sorted(status_dir.glob('*.json'), key=lambda x: 
 x.stat().st_mtime, reverse=True)[:20]:
   D:\openwebui\core\master_ai_bridge.py:380:                try: 
 rows.append(_x16_json.loads(p.read_text(encoding='utf-8')))
-  D:\openwebui\core\master_ai_bridge.py:381:                except Exception: [REDACTED]
+  D:\openwebui\core\master_ai_bridge.py:381:                except Exception: pass
 > D:\openwebui\core\master_ai_bridge.py:382:        return {'ok': True, 'items': rows}
   D:\openwebui\core\master_ai_bridge.py:383:
 > D:\openwebui\core\master_ai_bridge.py:384:    @app.route('/x16/add_task', methods=['POST'])
