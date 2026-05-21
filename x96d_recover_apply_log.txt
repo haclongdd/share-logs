@@ -1,7 +1,7 @@
 ﻿{
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x96d_recover_x90_clean",
-  "stage": "apply_check_pass",
+  "stage": "apply_check_[REDACTED]",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,26 +53,26 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x96d_recover_x90_clean\\apply_x96d_recover_x90_clean.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X96D recovered clean x90_webui_agent_bridge.py\n",
+    "stdout": "[[REDACTED]] X96D recovered clean x90_webui_agent_bridge.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x96d_recover_x90_clean\\x96d_recover_x90_clean_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X96D recover check ok\n",
+    "stdout": "[[REDACTED]] X96D recover check ok\n",
     "stderr": ""
   },
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }
 

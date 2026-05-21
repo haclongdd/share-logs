@@ -1,0 +1,3 @@
+﻿[2026-05-21T02:20:38.5592179+07:00] APPLY x99c_logsync_manifest start
+[2026-05-21T02:20:38.6351887+07:00] Started manifest runner PID=73108
+[2026-05-21T02:20:38.6365872+07:00] Manifest path=D:\openwebui\runtime\share_logs\latest_manifest.json
