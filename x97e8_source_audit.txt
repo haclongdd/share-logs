@@ -1,0 +1,9 @@
+﻿target=D:\openwebui\core\x87_worker_dispatcher.py
+has_recursive_busmsg_get=False
+has_dict_getter=True
+has_corrupt_os_busmsg_get=False
+has_os_environ_get=False
+has_undefined_state_processed_total=False
+has_self_state_processed_total=True
+has_planner_roles_text=True
+

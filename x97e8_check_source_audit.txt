@@ -1,0 +1,8 @@
+﻿dict_getter_fixed=True
+recursive_getter_removed=True
+os_environ_fixed=False
+corrupt_os_removed=True
+processed_total_self_state=True
+undefined_state_removed=True
+planner_roles_present=True
+
