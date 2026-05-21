@@ -1,0 +1,16 @@
+﻿[2026-05-21T22:01:14.0775103+07:00] START X103D check
+{
+    "release":  "X103D_LIVE_MASTER_REVIEW_VERIFY_CHECK",
+    "audit_exists":  true,
+    "audit_parse_ok":  true,
+    "dispatcher_compile_ok":  true,
+    "dispatcher_compile_output":  "D:\\openwebui\\runtime\\temp\\x103d_dispatcher_compile_output.txt",
+    "invoke_ok":  true,
+    "latest_report_exists":  true,
+    "has_master_review_result":  false,
+    "has_final_decision":  false,
+    "still_routed_to_null":  false,
+    "ok":  false
+}
+[FAIL] X103D check failed or live handoff not confirmed
+

@@ -1,0 +1,64 @@
+﻿{
+    "bridge":  "x90_webui_agent_bridge",
+    "debug":  {
+                  "normalized_at":  "2026-05-21T15:01:08.516564+00:00",
+                  "normalized_by":  "X93_WEBUI_RESPONSE_NORMALIZER",
+                  "raw":  {
+                              "bridge":  "x90_webui_agent_bridge",
+                              "normalized":  {
+                                                 "mode":  "agent",
+                                                 "payload":  {
+
+                                                             },
+                                                 "task":  "x103d live master review handoff smoke 20260521_220102"
+                                             },
+                              "ok":  false,
+                              "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779375668501.json",
+                              "ts":  "2026-05-21T15:01:08Z",
+                              "x90_response":  {
+                                                   "dependency_status":  {
+                                                                             "x86":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x86_agent_bus.py"
+                                                                                     },
+                                                                             "x87":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x87_worker_dispatcher.py"
+                                                                                     },
+                                                                             "x88":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x88_persistent_scheduler.py"
+                                                                                     },
+                                                                             "x89":  {
+                                                                                         "exists":  true,
+                                                                                         "path":  "/app/core/x89_sandbox_workers.py"
+                                                                                     }
+                                                                         },
+                                                   "error":  "ValueError(\u0027Circular reference detected\u0027)",
+                                                   "mode":  "agent",
+                                                   "ok":  false,
+                                                   "release":  "X90_WEBUI_AGENT_BRIDGE",
+                                                   "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779375668447.json",
+                                                   "request_id":  "x90req_1779375662539_f2dc8bed",
+                                                   "task":  "x103d live master review handoff smoke 20260521_220102",
+                                                   "ts":  "2026-05-21T15:01:08Z"
+                                               }
+                          },
+                  "x90":  {
+                              "bridge":  null,
+                              "ok":  false,
+                              "release":  "X90_WEBUI_AGENT_BRIDGE",
+                              "report_file":  "/app/runtime/reports/x90_webui_bridge_response_1779375668447.json",
+                              "request_id":  "x90req_1779375662539_f2dc8bed"
+                          }
+              },
+    "ok":  false,
+    "release":  "X91_MASTER_AI_ADDTASK_BRIDGE",
+    "report_file":  "/app/runtime/reports/x91_addtask_bridge_response_1779375668501.json",
+    "result":  null,
+    "summary":  "failed | task=x103d live master review handoff smoke 20260521_220102 | report=/app/runtime/reports/x91_addtask_bridge_response_1779375668501.json",
+    "task":  "x103d live master review handoff smoke 20260521_220102",
+    "ts":  "2026-05-21T15:01:08Z"
+}
+

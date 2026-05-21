@@ -1,0 +1,39 @@
+﻿{
+  "ok": false,
+  "release": "X91_MASTER_AI_ADDTASK_BRIDGE",
+  "bridge": "x90_webui_agent_bridge",
+  "normalized": {
+    "task": "x103d live master review handoff smoke 20260521_220102",
+    "mode": "agent",
+    "payload": {}
+  },
+  "x90_response": {
+    "ok": false,
+    "release": "X90_WEBUI_AGENT_BRIDGE",
+    "request_id": "x90req_1779375662539_f2dc8bed",
+    "mode": "agent",
+    "task": "x103d live master review handoff smoke 20260521_220102",
+    "error": "ValueError('Circular reference detected')",
+    "dependency_status": {
+      "x86": {
+        "path": "/app/core/x86_agent_bus.py",
+        "exists": true
+      },
+      "x87": {
+        "path": "/app/core/x87_worker_dispatcher.py",
+        "exists": true
+      },
+      "x88": {
+        "path": "/app/core/x88_persistent_scheduler.py",
+        "exists": true
+      },
+      "x89": {
+        "path": "/app/core/x89_sandbox_workers.py",
+        "exists": true
+      }
+    },
+    "ts": "2026-05-21T15:01:08Z",
+    "report_file": "/app/runtime/reports/x90_webui_bridge_response_1779375668447.json"
+  },
+  "ts": "2026-05-21T15:01:08Z"
+}
