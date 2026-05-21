@@ -1,0 +1,24 @@
+﻿{
+  "release": "X103C_IMPORT_ORDER_REPAIR",
+  "dispatcher": "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+  "ok": true,
+  "actions": [
+    "backup_created",
+    "header_reordered_future_import_first"
+  ],
+  "checks": {
+    "source_audit_written": true,
+    "starts_with_utf8_bom": false,
+    "has_nul_byte": false,
+    "future_import_count": 1,
+    "future_import_is_first_code": true,
+    "x103_hook_still_present": true,
+    "compile_ok": true,
+    "compile_output": "D:\\openwebui\\runtime\\temp\\x103c_compile_output.txt",
+    "removed_future_imports_before_rebuild": 1,
+    "original_had_bom": false,
+    "original_had_nul": false,
+    "first_nonempty": "from __future__ import annotations"
+  },
+  "backup": "D:\\openwebui\\_backups\\x103c_import_order_repair\\x87_worker_dispatcher.py.1779375535.bak"
+}
