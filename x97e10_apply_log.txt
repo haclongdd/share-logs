@@ -1,0 +1,3 @@
+﻿[2026-05-21T19:55:56.6908188+07:00] START x97e10_x87_planner_role_contract
+[2026-05-21T19:55:56.8230022+07:00] source patched: D:\openwebui\core\x87_worker_dispatcher.py
+
