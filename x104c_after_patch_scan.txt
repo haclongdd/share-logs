@@ -1,0 +1,24 @@
+﻿/app/core/x15d_webui_addtask_agentcon_attach.py:2:# X15D_WEBUI_ADDTASK_AGENTCON_ATTACH
+/app/core/x15d_webui_addtask_agentcon_attach.py:5:from x104_safe_json import safe_json_dumps, safe_json_dump
+/app/core/x15d_webui_addtask_agentcon_attach.py:48:PATCH = "X15D_WEBUI_ADDTASK_AGENTCON_ATTACH"
+/app/core/x15d_webui_addtask_agentcon_attach.py:60:    path.write_text(safe_json_dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+/app/core/x15d_webui_addtask_agentcon_attach.py:177:        print(safe_json_dumps({
+/app/core/x15d_webui_addtask_agentcon_attach.py:184:        print(safe_json_dumps(latest_status(), ensure_ascii=False, indent=2))
+/app/core/x15d_webui_addtask_agentcon_attach.py:186:        print(safe_json_dumps(webui_add_task_bridge(task=args.task), ensure_ascii=False, indent=2))
+/app/core/master_ai_bridge.py:1:from x104_safe_json import safe_json_dumps, safe_json_dump
+/app/core/master_ai_bridge.py:36:from flask import Flask, request, jsonify
+/app/core/master_ai_bridge.py:64:    tmp.write_text(safe_json_dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+/app/core/master_ai_bridge.py:80:        return safe_json_dumps(val, ensure_ascii=False)
+/app/core/master_ai_bridge.py:83:    return safe_json_dumps(data, ensure_ascii=False)
+/app/core/master_ai_bridge.py:154:        result = safe_json_dumps(result, ensure_ascii=False, indent=2)
+/app/core/master_ai_bridge.py:239:    return jsonify({"service":"master_ai_bridge", "phase":"X1G", "status":"ok", "mode":"unified_runtime_consolidation", "time":now()})
+/app/core/master_ai_bridge.py:243:    return jsonify({"service":"master_ai_bridge", "phase":"X1G", "status":"ok", "mode":"unified_runtime_consolidation", "time":now()})
+/app/core/master_ai_bridge.py:247:    # X15D_WEBUI_ADDTASK_AGENTCON_ATTACH
+/app/core/master_ai_bridge.py:265:        return jsonify(x93_normalize_add_task_response(_x15d_result)) if 'jsonify' in globals() else _x15d_result
+/app/core/master_ai_bridge.py:270:            'patch': 'X15D_WEBUI_ADDTASK_AGENTCON_ATTACH',
+/app/core/master_ai_bridge.py:326:    return jsonify(x93_normalize_add_task_response(handle_add_task_payload(data)))
+/app/core/master_ai_bridge.py:334:            return jsonify({"phase":"X1G", "status":"completed", "completed":True, "final_status":"PASS", "result":"No task_id provided."}), 200
+/app/core/master_ai_bridge.py:338:            return jsonify(existing), 200
+/app/core/master_ai_bridge.py:342:        return jsonify(payload), 200
+/app/core/master_ai_bridge.py:346:        return jsonify(err), 200
+
