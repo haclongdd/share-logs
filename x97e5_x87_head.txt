@@ -28,7 +28,7 @@ def _resolve_aios_root() -> Path:
             if (candidate / "core" / "x86_agent_bus.py").exists():
                 return candidate
         except Exception:
-            [REDACTED]
+            pass
 
     return Path(r"D:\\openwebui")
 
