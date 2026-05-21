@@ -1,0 +1,11 @@
+﻿{
+    "release":  "X103B_DISPATCHER_BOM_REPAIR_CHECK",
+    "dispatcher":  "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+    "starts_with_utf8_bom":  false,
+    "has_nul_byte":  false,
+    "compile_ok":  false,
+    "x103_hook_still_present":  true,
+    "compile_output":  "D:\\openwebui\\runtime\\temp\\x103b_check_compile_output.txt",
+    "ok":  false
+}
+
