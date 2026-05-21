@@ -1,0 +1,1167 @@
+{
+  "ok": true,
+  "release": "X90_WEBUI_AGENT_BRIDGE",
+  "request_id": "x90req_1779370203760_f35c14ac",
+  "mode": "agent",
+  "task": "x100 live verify master review after report",
+  "result": {
+    "flow": "master_planner_then_agent_dispatcher",
+    "x96_plan": {
+      "ok": true,
+      "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+      "kind": "master_execution_plan",
+      "task_id": "x96_8223243ebf42",
+      "task": "x100 live verify master review after report",
+      "created_at": "2026-05-21T13:30:03Z",
+      "master_model": "qwen2.5-coder",
+      "child_model": "llama",
+      "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+      "classification": {
+        "needs_patch": false,
+        "needs_repo_scan": true,
+        "needs_verify": true,
+        "fallback_allowed": false
+      },
+      "limits": {
+        "retry_limit_per_step": 2,
+        "fallback_api_websearch_limit": 1,
+        "allow_unbounded_loop": false
+      },
+      "fallback_policy": {
+        "local_first": true,
+        "api_websearch_only_if_worker_report_insufficient": true,
+        "max_calls": 1,
+        "after_fallback_return_to_child_worker": true
+      },
+      "steps": [
+        {
+          "step_id": "s01_scout",
+          "role": "SCOUT",
+          "goal": "Read project context, roadmap, and identify relevant files/layers.",
+          "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+          "next_role": "DEBUG",
+          "status": "planned",
+          "max_retries": 2,
+          "requires_master_review": false
+        },
+        {
+          "step_id": "s02_debug",
+          "role": "DEBUG",
+          "goal": "Verify the true failing layer or required change using logs/evidence.",
+          "input_hint": "Do not patch until root cause is confirmed.",
+          "next_role": "VERIFY",
+          "status": "planned",
+          "max_retries": 2,
+          "requires_master_review": false
+        },
+        {
+          "step_id": "s03_verify",
+          "role": "VERIFY",
+          "goal": "Run focused checks and collect pass/fail evidence.",
+          "input_hint": "Export full logs to runtime/temp/*.txt.",
+          "next_role": "REPORT",
+          "status": "planned",
+          "max_retries": 2,
+          "requires_master_review": true
+        },
+        {
+          "step_id": "s04_report",
+          "role": "REPORT",
+          "goal": "Summarize worker results for MASTER review.",
+          "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+          "next_role": null,
+          "status": "planned",
+          "max_retries": 2,
+          "requires_master_review": true
+        }
+      ],
+      "master_review_policy": {
+        "master_must_review_report": true,
+        "pass_condition": "VERIFY ok and REPORT has evidence",
+        "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+        "final_output_owner": "MASTER"
+      },
+      "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+      "roadmap_excerpt_present": false,
+      "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json"
+    },
+    "x96_plan_error": null,
+    "seed": {
+      "ok": true,
+      "seed_message": "x86_1779370203882_26db9c56",
+      "task": "x100 live verify master review after report",
+      "seeded_to": "SCOUT",
+      "x97e_seed_mode": "planner_first"
+    },
+    "cycles": [
+      {
+        "ok": true,
+        "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+        "processed": [
+          {
+            "message_id": "x86_1779370203882_26db9c56",
+            "role": "SCOUT",
+            "task": "x100 live verify master review after report",
+            "input_payload": {
+              "finding": "seeded by X87B dispatcher",
+              "evidence": "/app/runtime/temp",
+              "x96_plan": {
+                "ok": true,
+                "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                "kind": "master_execution_plan",
+                "task_id": "x96_8223243ebf42",
+                "task": "x100 live verify master review after report",
+                "created_at": "2026-05-21T13:30:03Z",
+                "master_model": "qwen2.5-coder",
+                "child_model": "llama",
+                "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                "classification": {
+                  "needs_patch": false,
+                  "needs_repo_scan": true,
+                  "needs_verify": true,
+                  "fallback_allowed": false
+                },
+                "limits": {
+                  "retry_limit_per_step": 2,
+                  "fallback_api_websearch_limit": 1,
+                  "allow_unbounded_loop": false
+                },
+                "fallback_policy": {
+                  "local_first": true,
+                  "api_websearch_only_if_worker_report_insufficient": true,
+                  "max_calls": 1,
+                  "after_fallback_return_to_child_worker": true
+                },
+                "steps": [
+                  {
+                    "step_id": "s01_scout",
+                    "role": "SCOUT",
+                    "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                    "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                    "next_role": "DEBUG",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s02_debug",
+                    "role": "DEBUG",
+                    "goal": "Verify the true failing layer or required change using logs/evidence.",
+                    "input_hint": "Do not patch until root cause is confirmed.",
+                    "next_role": "VERIFY",
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": false
+                  },
+                  {
+                    "step_id": "s03_verify",
+                    "role": "VERIFY",
+                    "goal": "Run focused checks and collect pass/fail evidence.",
+                    "input_hint": "Export full logs to runtime/temp/*.txt.",
+                    "next_role": "REPORT",
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  },
+                  {
+                    "step_id": "s04_report",
+                    "role": "REPORT",
+                    "goal": "Summarize worker results for MASTER review.",
+                    "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                    "next_role": null,
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  }
+                ],
+                "master_review_policy": {
+                  "master_must_review_report": true,
+                  "pass_condition": "VERIFY ok and REPORT has evidence",
+                  "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                  "final_output_owner": "MASTER"
+                },
+                "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                "roadmap_excerpt_present": false,
+                "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                "x97b2_runtime_dispatch": "planner_driven"
+              },
+              "x97e_seed_mode": "planner_first",
+              "x97e_first_role": "SCOUT"
+            },
+            "handled_at": "2026-05-21T13:30:04Z",
+            "ok": true,
+            "summary": "SCOUT worker consumed planner task context.",
+            "routed_to": "DEBUG",
+            "output_payload": {
+              "artifact": "D:\\openwebui\\_patch_inbox",
+              "patch_rule": "target confirmed cause only",
+              "source_message": "x86_1779370203882_26db9c56",
+              "x96_plan": {
+                "ok": true,
+                "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                "kind": "master_execution_plan",
+                "task_id": "x96_8223243ebf42",
+                "task": "x100 live verify master review after report",
+                "created_at": "2026-05-21T13:30:03Z",
+                "master_model": "qwen2.5-coder",
+                "child_model": "llama",
+                "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                "classification": {
+                  "needs_patch": false,
+                  "needs_repo_scan": true,
+                  "needs_verify": true,
+                  "fallback_allowed": false
+                },
+                "limits": {
+                  "retry_limit_per_step": 2,
+                  "fallback_api_websearch_limit": 1,
+                  "allow_unbounded_loop": false
+                },
+                "fallback_policy": {
+                  "local_first": true,
+                  "api_websearch_only_if_worker_report_insufficient": true,
+                  "max_calls": 1,
+                  "after_fallback_return_to_child_worker": true
+                },
+                "steps": [
+                  {
+                    "step_id": "s01_scout",
+                    "role": "SCOUT",
+                    "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                    "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                    "next_role": "DEBUG",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s02_debug",
+                    "role": "DEBUG",
+                    "goal": "Verify the true failing layer or required change using logs/evidence.",
+                    "input_hint": "Do not patch until root cause is confirmed.",
+                    "next_role": "VERIFY",
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": false
+                  },
+                  {
+                    "step_id": "s03_verify",
+                    "role": "VERIFY",
+                    "goal": "Run focused checks and collect pass/fail evidence.",
+                    "input_hint": "Export full logs to runtime/temp/*.txt.",
+                    "next_role": "REPORT",
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  },
+                  {
+                    "step_id": "s04_report",
+                    "role": "REPORT",
+                    "goal": "Summarize worker results for MASTER review.",
+                    "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                    "next_role": null,
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  }
+                ],
+                "master_review_policy": {
+                  "master_must_review_report": true,
+                  "pass_condition": "VERIFY ok and REPORT has evidence",
+                  "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                  "final_output_owner": "MASTER"
+                },
+                "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                "roadmap_excerpt_present": false,
+                "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                "x97b2_runtime_dispatch": "planner_driven"
+              },
+              "x97e_plan_propagated": true
+            },
+            "routed_message_id": "x86_1779370204894_a00b9021"
+          },
+          {
+            "message_id": "x86_1779370204894_a00b9021",
+            "role": "DEBUG",
+            "task": "x100 live verify master review after report",
+            "input_payload": {
+              "artifact": "D:\\openwebui\\_patch_inbox",
+              "patch_rule": "target confirmed cause only",
+              "source_message": "x86_1779370203882_26db9c56",
+              "x96_plan": {
+                "ok": true,
+                "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                "kind": "master_execution_plan",
+                "task_id": "x96_8223243ebf42",
+                "task": "x100 live verify master review after report",
+                "created_at": "2026-05-21T13:30:03Z",
+                "master_model": "qwen2.5-coder",
+                "child_model": "llama",
+                "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                "classification": {
+                  "needs_patch": false,
+                  "needs_repo_scan": true,
+                  "needs_verify": true,
+                  "fallback_allowed": false
+                },
+                "limits": {
+                  "retry_limit_per_step": 2,
+                  "fallback_api_websearch_limit": 1,
+                  "allow_unbounded_loop": false
+                },
+                "fallback_policy": {
+                  "local_first": true,
+                  "api_websearch_only_if_worker_report_insufficient": true,
+                  "max_calls": 1,
+                  "after_fallback_return_to_child_worker": true
+                },
+                "steps": [
+                  {
+                    "step_id": "s01_scout",
+                    "role": "SCOUT",
+                    "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                    "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                    "next_role": "DEBUG",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s02_debug",
+                    "role": "DEBUG",
+                    "goal": "Verify the true failing layer or required change using logs/evidence.",
+                    "input_hint": "Do not patch until root cause is confirmed.",
+                    "next_role": "VERIFY",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s03_verify",
+                    "role": "VERIFY",
+                    "goal": "Run focused checks and collect pass/fail evidence.",
+                    "input_hint": "Export full logs to runtime/temp/*.txt.",
+                    "next_role": "REPORT",
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  },
+                  {
+                    "step_id": "s04_report",
+                    "role": "REPORT",
+                    "goal": "Summarize worker results for MASTER review.",
+                    "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                    "next_role": null,
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  }
+                ],
+                "master_review_policy": {
+                  "master_must_review_report": true,
+                  "pass_condition": "VERIFY ok and REPORT has evidence",
+                  "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                  "final_output_owner": "MASTER"
+                },
+                "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                "roadmap_excerpt_present": false,
+                "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                "x97b2_runtime_dispatch": "planner_driven"
+              },
+              "x97e_plan_propagated": true
+            },
+            "handled_at": "2026-05-21T13:30:05Z",
+            "ok": true,
+            "summary": "DEBUG worker consumed evidence and confirmed root-cause-first handoff.",
+            "routed_to": "VERIFY",
+            "output_payload": {
+              "root_cause": "pending_real_log_review",
+              "evidence": {
+                "artifact": "D:\\openwebui\\_patch_inbox",
+                "patch_rule": "target confirmed cause only",
+                "source_message": "x86_1779370203882_26db9c56",
+                "x96_plan": {
+                  "ok": true,
+                  "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                  "kind": "master_execution_plan",
+                  "task_id": "x96_8223243ebf42",
+                  "task": "x100 live verify master review after report",
+                  "created_at": "2026-05-21T13:30:03Z",
+                  "master_model": "qwen2.5-coder",
+                  "child_model": "llama",
+                  "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                  "classification": {
+                    "needs_patch": false,
+                    "needs_repo_scan": true,
+                    "needs_verify": true,
+                    "fallback_allowed": false
+                  },
+                  "limits": {
+                    "retry_limit_per_step": 2,
+                    "fallback_api_websearch_limit": 1,
+                    "allow_unbounded_loop": false
+                  },
+                  "fallback_policy": {
+                    "local_first": true,
+                    "api_websearch_only_if_worker_report_insufficient": true,
+                    "max_calls": 1,
+                    "after_fallback_return_to_child_worker": true
+                  },
+                  "steps": [
+                    {
+                      "step_id": "s01_scout",
+                      "role": "SCOUT",
+                      "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                      "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                      "next_role": "DEBUG",
+                      "status": "done",
+                      "max_retries": 2,
+                      "requires_master_review": false,
+                      "last_result_ok": true,
+                      "retries": 0
+                    },
+                    {
+                      "step_id": "s02_debug",
+                      "role": "DEBUG",
+                      "goal": "Verify the true failing layer or required change using logs/evidence.",
+                      "input_hint": "Do not patch until root cause is confirmed.",
+                      "next_role": "VERIFY",
+                      "status": "done",
+                      "max_retries": 2,
+                      "requires_master_review": false,
+                      "last_result_ok": true,
+                      "retries": 0
+                    },
+                    {
+                      "step_id": "s03_verify",
+                      "role": "VERIFY",
+                      "goal": "Run focused checks and collect pass/fail evidence.",
+                      "input_hint": "Export full logs to runtime/temp/*.txt.",
+                      "next_role": "REPORT",
+                      "status": "planned",
+                      "max_retries": 2,
+                      "requires_master_review": true
+                    },
+                    {
+                      "step_id": "s04_report",
+                      "role": "REPORT",
+                      "goal": "Summarize worker results for MASTER review.",
+                      "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                      "next_role": null,
+                      "status": "planned",
+                      "max_retries": 2,
+                      "requires_master_review": true
+                    }
+                  ],
+                  "master_review_policy": {
+                    "master_must_review_report": true,
+                    "pass_condition": "VERIFY ok and REPORT has evidence",
+                    "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                    "final_output_owner": "MASTER"
+                  },
+                  "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                  "roadmap_excerpt_present": false,
+                  "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                  "x97b2_runtime_dispatch": "planner_driven"
+                },
+                "x97e_plan_propagated": true
+              },
+              "source_message": "x86_1779370204894_a00b9021",
+              "x96_plan": {
+                "ok": true,
+                "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                "kind": "master_execution_plan",
+                "task_id": "x96_8223243ebf42",
+                "task": "x100 live verify master review after report",
+                "created_at": "2026-05-21T13:30:03Z",
+                "master_model": "qwen2.5-coder",
+                "child_model": "llama",
+                "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                "classification": {
+                  "needs_patch": false,
+                  "needs_repo_scan": true,
+                  "needs_verify": true,
+                  "fallback_allowed": false
+                },
+                "limits": {
+                  "retry_limit_per_step": 2,
+                  "fallback_api_websearch_limit": 1,
+                  "allow_unbounded_loop": false
+                },
+                "fallback_policy": {
+                  "local_first": true,
+                  "api_websearch_only_if_worker_report_insufficient": true,
+                  "max_calls": 1,
+                  "after_fallback_return_to_child_worker": true
+                },
+                "steps": [
+                  {
+                    "step_id": "s01_scout",
+                    "role": "SCOUT",
+                    "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                    "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                    "next_role": "DEBUG",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s02_debug",
+                    "role": "DEBUG",
+                    "goal": "Verify the true failing layer or required change using logs/evidence.",
+                    "input_hint": "Do not patch until root cause is confirmed.",
+                    "next_role": "VERIFY",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s03_verify",
+                    "role": "VERIFY",
+                    "goal": "Run focused checks and collect pass/fail evidence.",
+                    "input_hint": "Export full logs to runtime/temp/*.txt.",
+                    "next_role": "REPORT",
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  },
+                  {
+                    "step_id": "s04_report",
+                    "role": "REPORT",
+                    "goal": "Summarize worker results for MASTER review.",
+                    "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                    "next_role": null,
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  }
+                ],
+                "master_review_policy": {
+                  "master_must_review_report": true,
+                  "pass_condition": "VERIFY ok and REPORT has evidence",
+                  "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                  "final_output_owner": "MASTER"
+                },
+                "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                "roadmap_excerpt_present": false,
+                "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                "x97b2_runtime_dispatch": "planner_driven"
+              },
+              "x97e_plan_propagated": true
+            },
+            "routed_message_id": "x86_1779370205957_3137ee5d"
+          },
+          {
+            "message_id": "x86_1779370205957_3137ee5d",
+            "role": "VERIFY",
+            "task": "x100 live verify master review after report",
+            "input_payload": {
+              "root_cause": "pending_real_log_review",
+              "evidence": {
+                "artifact": "D:\\openwebui\\_patch_inbox",
+                "patch_rule": "target confirmed cause only",
+                "source_message": "x86_1779370203882_26db9c56",
+                "x96_plan": {
+                  "ok": true,
+                  "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                  "kind": "master_execution_plan",
+                  "task_id": "x96_8223243ebf42",
+                  "task": "x100 live verify master review after report",
+                  "created_at": "2026-05-21T13:30:03Z",
+                  "master_model": "qwen2.5-coder",
+                  "child_model": "llama",
+                  "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                  "classification": {
+                    "needs_patch": false,
+                    "needs_repo_scan": true,
+                    "needs_verify": true,
+                    "fallback_allowed": false
+                  },
+                  "limits": {
+                    "retry_limit_per_step": 2,
+                    "fallback_api_websearch_limit": 1,
+                    "allow_unbounded_loop": false
+                  },
+                  "fallback_policy": {
+                    "local_first": true,
+                    "api_websearch_only_if_worker_report_insufficient": true,
+                    "max_calls": 1,
+                    "after_fallback_return_to_child_worker": true
+                  },
+                  "steps": [
+                    {
+                      "step_id": "s01_scout",
+                      "role": "SCOUT",
+                      "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                      "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                      "next_role": "DEBUG",
+                      "status": "done",
+                      "max_retries": 2,
+                      "requires_master_review": false,
+                      "last_result_ok": true,
+                      "retries": 0
+                    },
+                    {
+                      "step_id": "s02_debug",
+                      "role": "DEBUG",
+                      "goal": "Verify the true failing layer or required change using logs/evidence.",
+                      "input_hint": "Do not patch until root cause is confirmed.",
+                      "next_role": "VERIFY",
+                      "status": "done",
+                      "max_retries": 2,
+                      "requires_master_review": false,
+                      "last_result_ok": true,
+                      "retries": 0
+                    },
+                    {
+                      "step_id": "s03_verify",
+                      "role": "VERIFY",
+                      "goal": "Run focused checks and collect pass/fail evidence.",
+                      "input_hint": "Export full logs to runtime/temp/*.txt.",
+                      "next_role": "REPORT",
+                      "status": "planned",
+                      "max_retries": 2,
+                      "requires_master_review": true
+                    },
+                    {
+                      "step_id": "s04_report",
+                      "role": "REPORT",
+                      "goal": "Summarize worker results for MASTER review.",
+                      "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                      "next_role": null,
+                      "status": "planned",
+                      "max_retries": 2,
+                      "requires_master_review": true
+                    }
+                  ],
+                  "master_review_policy": {
+                    "master_must_review_report": true,
+                    "pass_condition": "VERIFY ok and REPORT has evidence",
+                    "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                    "final_output_owner": "MASTER"
+                  },
+                  "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                  "roadmap_excerpt_present": false,
+                  "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                  "x97b2_runtime_dispatch": "planner_driven"
+                },
+                "x97e_plan_propagated": true
+              },
+              "source_message": "x86_1779370204894_a00b9021",
+              "x96_plan": {
+                "ok": true,
+                "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                "kind": "master_execution_plan",
+                "task_id": "x96_8223243ebf42",
+                "task": "x100 live verify master review after report",
+                "created_at": "2026-05-21T13:30:03Z",
+                "master_model": "qwen2.5-coder",
+                "child_model": "llama",
+                "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                "classification": {
+                  "needs_patch": false,
+                  "needs_repo_scan": true,
+                  "needs_verify": true,
+                  "fallback_allowed": false
+                },
+                "limits": {
+                  "retry_limit_per_step": 2,
+                  "fallback_api_websearch_limit": 1,
+                  "allow_unbounded_loop": false
+                },
+                "fallback_policy": {
+                  "local_first": true,
+                  "api_websearch_only_if_worker_report_insufficient": true,
+                  "max_calls": 1,
+                  "after_fallback_return_to_child_worker": true
+                },
+                "steps": [
+                  {
+                    "step_id": "s01_scout",
+                    "role": "SCOUT",
+                    "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                    "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                    "next_role": "DEBUG",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s02_debug",
+                    "role": "DEBUG",
+                    "goal": "Verify the true failing layer or required change using logs/evidence.",
+                    "input_hint": "Do not patch until root cause is confirmed.",
+                    "next_role": "VERIFY",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s03_verify",
+                    "role": "VERIFY",
+                    "goal": "Run focused checks and collect pass/fail evidence.",
+                    "input_hint": "Export full logs to runtime/temp/*.txt.",
+                    "next_role": "REPORT",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": true,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s04_report",
+                    "role": "REPORT",
+                    "goal": "Summarize worker results for MASTER review.",
+                    "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                    "next_role": null,
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  }
+                ],
+                "master_review_policy": {
+                  "master_must_review_report": true,
+                  "pass_condition": "VERIFY ok and REPORT has evidence",
+                  "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                  "final_output_owner": "MASTER"
+                },
+                "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                "roadmap_excerpt_present": false,
+                "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                "x97b2_runtime_dispatch": "planner_driven"
+              },
+              "x97e_plan_propagated": true
+            },
+            "handled_at": "2026-05-21T13:30:07Z",
+            "ok": true,
+            "summary": "VERIFY worker consumed artifact and produced verify handoff.",
+            "routed_to": "REPORT",
+            "output_payload": {
+              "verify": "pending_x75_check",
+              "source_message": "x86_1779370205957_3137ee5d",
+              "x96_plan": {
+                "ok": true,
+                "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                "kind": "master_execution_plan",
+                "task_id": "x96_8223243ebf42",
+                "task": "x100 live verify master review after report",
+                "created_at": "2026-05-21T13:30:03Z",
+                "master_model": "qwen2.5-coder",
+                "child_model": "llama",
+                "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                "classification": {
+                  "needs_patch": false,
+                  "needs_repo_scan": true,
+                  "needs_verify": true,
+                  "fallback_allowed": false
+                },
+                "limits": {
+                  "retry_limit_per_step": 2,
+                  "fallback_api_websearch_limit": 1,
+                  "allow_unbounded_loop": false
+                },
+                "fallback_policy": {
+                  "local_first": true,
+                  "api_websearch_only_if_worker_report_insufficient": true,
+                  "max_calls": 1,
+                  "after_fallback_return_to_child_worker": true
+                },
+                "steps": [
+                  {
+                    "step_id": "s01_scout",
+                    "role": "SCOUT",
+                    "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                    "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                    "next_role": "DEBUG",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s02_debug",
+                    "role": "DEBUG",
+                    "goal": "Verify the true failing layer or required change using logs/evidence.",
+                    "input_hint": "Do not patch until root cause is confirmed.",
+                    "next_role": "VERIFY",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s03_verify",
+                    "role": "VERIFY",
+                    "goal": "Run focused checks and collect pass/fail evidence.",
+                    "input_hint": "Export full logs to runtime/temp/*.txt.",
+                    "next_role": "REPORT",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": true,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s04_report",
+                    "role": "REPORT",
+                    "goal": "Summarize worker results for MASTER review.",
+                    "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                    "next_role": null,
+                    "status": "planned",
+                    "max_retries": 2,
+                    "requires_master_review": true
+                  }
+                ],
+                "master_review_policy": {
+                  "master_must_review_report": true,
+                  "pass_condition": "VERIFY ok and REPORT has evidence",
+                  "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                  "final_output_owner": "MASTER"
+                },
+                "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                "roadmap_excerpt_present": false,
+                "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                "x97b2_runtime_dispatch": "planner_driven"
+              },
+              "x97e_plan_propagated": true
+            },
+            "routed_message_id": "x86_1779370207148_4dfdd6a3"
+          },
+          {
+            "message_id": "x86_1779370207148_4dfdd6a3",
+            "role": "REPORT",
+            "task": "x100 live verify master review after report",
+            "input_payload": {
+              "verify": "pending_x75_check",
+              "source_message": "x86_1779370205957_3137ee5d",
+              "x96_plan": {
+                "ok": true,
+                "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                "kind": "master_execution_plan",
+                "task_id": "x96_8223243ebf42",
+                "task": "x100 live verify master review after report",
+                "created_at": "2026-05-21T13:30:03Z",
+                "master_model": "qwen2.5-coder",
+                "child_model": "llama",
+                "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                "classification": {
+                  "needs_patch": false,
+                  "needs_repo_scan": true,
+                  "needs_verify": true,
+                  "fallback_allowed": false
+                },
+                "limits": {
+                  "retry_limit_per_step": 2,
+                  "fallback_api_websearch_limit": 1,
+                  "allow_unbounded_loop": false
+                },
+                "fallback_policy": {
+                  "local_first": true,
+                  "api_websearch_only_if_worker_report_insufficient": true,
+                  "max_calls": 1,
+                  "after_fallback_return_to_child_worker": true
+                },
+                "steps": [
+                  {
+                    "step_id": "s01_scout",
+                    "role": "SCOUT",
+                    "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                    "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                    "next_role": "DEBUG",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s02_debug",
+                    "role": "DEBUG",
+                    "goal": "Verify the true failing layer or required change using logs/evidence.",
+                    "input_hint": "Do not patch until root cause is confirmed.",
+                    "next_role": "VERIFY",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s03_verify",
+                    "role": "VERIFY",
+                    "goal": "Run focused checks and collect pass/fail evidence.",
+                    "input_hint": "Export full logs to runtime/temp/*.txt.",
+                    "next_role": "REPORT",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": true,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s04_report",
+                    "role": "REPORT",
+                    "goal": "Summarize worker results for MASTER review.",
+                    "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                    "next_role": null,
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": true,
+                    "last_result_ok": true,
+                    "retries": 0
+                  }
+                ],
+                "master_review_policy": {
+                  "master_must_review_report": true,
+                  "pass_condition": "VERIFY ok and REPORT has evidence",
+                  "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                  "final_output_owner": "MASTER"
+                },
+                "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                "roadmap_excerpt_present": false,
+                "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                "x97b2_runtime_dispatch": "planner_complete"
+              },
+              "x97e_plan_propagated": true
+            },
+            "handled_at": "2026-05-21T13:30:08Z",
+            "ok": true,
+            "summary": "REPORT worker consumed final verification payload.",
+            "routed_to": null,
+            "output_payload": {
+              "final": {
+                "verify": "pending_x75_check",
+                "source_message": "x86_1779370205957_3137ee5d",
+                "x96_plan": {
+                  "ok": true,
+                  "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                  "kind": "master_execution_plan",
+                  "task_id": "x96_8223243ebf42",
+                  "task": "x100 live verify master review after report",
+                  "created_at": "2026-05-21T13:30:03Z",
+                  "master_model": "qwen2.5-coder",
+                  "child_model": "llama",
+                  "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                  "classification": {
+                    "needs_patch": false,
+                    "needs_repo_scan": true,
+                    "needs_verify": true,
+                    "fallback_allowed": false
+                  },
+                  "limits": {
+                    "retry_limit_per_step": 2,
+                    "fallback_api_websearch_limit": 1,
+                    "allow_unbounded_loop": false
+                  },
+                  "fallback_policy": {
+                    "local_first": true,
+                    "api_websearch_only_if_worker_report_insufficient": true,
+                    "max_calls": 1,
+                    "after_fallback_return_to_child_worker": true
+                  },
+                  "steps": [
+                    {
+                      "step_id": "s01_scout",
+                      "role": "SCOUT",
+                      "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                      "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                      "next_role": "DEBUG",
+                      "status": "done",
+                      "max_retries": 2,
+                      "requires_master_review": false,
+                      "last_result_ok": true,
+                      "retries": 0
+                    },
+                    {
+                      "step_id": "s02_debug",
+                      "role": "DEBUG",
+                      "goal": "Verify the true failing layer or required change using logs/evidence.",
+                      "input_hint": "Do not patch until root cause is confirmed.",
+                      "next_role": "VERIFY",
+                      "status": "done",
+                      "max_retries": 2,
+                      "requires_master_review": false,
+                      "last_result_ok": true,
+                      "retries": 0
+                    },
+                    {
+                      "step_id": "s03_verify",
+                      "role": "VERIFY",
+                      "goal": "Run focused checks and collect pass/fail evidence.",
+                      "input_hint": "Export full logs to runtime/temp/*.txt.",
+                      "next_role": "REPORT",
+                      "status": "done",
+                      "max_retries": 2,
+                      "requires_master_review": true,
+                      "last_result_ok": true,
+                      "retries": 0
+                    },
+                    {
+                      "step_id": "s04_report",
+                      "role": "REPORT",
+                      "goal": "Summarize worker results for MASTER review.",
+                      "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                      "next_role": null,
+                      "status": "done",
+                      "max_retries": 2,
+                      "requires_master_review": true,
+                      "last_result_ok": true,
+                      "retries": 0
+                    }
+                  ],
+                  "master_review_policy": {
+                    "master_must_review_report": true,
+                    "pass_condition": "VERIFY ok and REPORT has evidence",
+                    "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                    "final_output_owner": "MASTER"
+                  },
+                  "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                  "roadmap_excerpt_present": false,
+                  "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                  "x97b2_runtime_dispatch": "planner_complete"
+                },
+                "x97e_plan_propagated": true
+              },
+              "source_message": "x86_1779370207148_4dfdd6a3",
+              "x96_plan": {
+                "ok": true,
+                "release": "X96C_MASTER_PLANNER_REVIEWER_FOUNDATION",
+                "kind": "master_execution_plan",
+                "task_id": "x96_8223243ebf42",
+                "task": "x100 live verify master review after report",
+                "created_at": "2026-05-21T13:30:03Z",
+                "master_model": "qwen2.5-coder",
+                "child_model": "llama",
+                "workflow": "User -> WebUI -> MASTER -> child workers -> MASTER review -> WebUI",
+                "classification": {
+                  "needs_patch": false,
+                  "needs_repo_scan": true,
+                  "needs_verify": true,
+                  "fallback_allowed": false
+                },
+                "limits": {
+                  "retry_limit_per_step": 2,
+                  "fallback_api_websearch_limit": 1,
+                  "allow_unbounded_loop": false
+                },
+                "fallback_policy": {
+                  "local_first": true,
+                  "api_websearch_only_if_worker_report_insufficient": true,
+                  "max_calls": 1,
+                  "after_fallback_return_to_child_worker": true
+                },
+                "steps": [
+                  {
+                    "step_id": "s01_scout",
+                    "role": "SCOUT",
+                    "goal": "Read project context, roadmap, and identify relevant files/layers.",
+                    "input_hint": "Use docs/ROADMAP.md and runtime reports first.",
+                    "next_role": "DEBUG",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s02_debug",
+                    "role": "DEBUG",
+                    "goal": "Verify the true failing layer or required change using logs/evidence.",
+                    "input_hint": "Do not patch until root cause is confirmed.",
+                    "next_role": "VERIFY",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": false,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s03_verify",
+                    "role": "VERIFY",
+                    "goal": "Run focused checks and collect pass/fail evidence.",
+                    "input_hint": "Export full logs to runtime/temp/*.txt.",
+                    "next_role": "REPORT",
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": true,
+                    "last_result_ok": true,
+                    "retries": 0
+                  },
+                  {
+                    "step_id": "s04_report",
+                    "role": "REPORT",
+                    "goal": "Summarize worker results for MASTER review.",
+                    "input_hint": "Report must state pass/fail, evidence, and remaining risk.",
+                    "next_role": null,
+                    "status": "done",
+                    "max_retries": 2,
+                    "requires_master_review": true,
+                    "last_result_ok": true,
+                    "retries": 0
+                  }
+                ],
+                "master_review_policy": {
+                  "master_must_review_report": true,
+                  "pass_condition": "VERIFY ok and REPORT has evidence",
+                  "fail_action": "retry step or use limited fallback then send updated instruction to child worker",
+                  "final_output_owner": "MASTER"
+                },
+                "roadmap_source": "D:\\openwebui/docs/ROADMAP.md",
+                "roadmap_excerpt_present": false,
+                "plan_file": "D:\\openwebui/runtime/x96_master_plans/x96_8223243ebf42_plan.json",
+                "x97b2_runtime_dispatch": "planner_complete"
+              },
+              "x97e_plan_propagated": true
+            }
+          }
+        ],
+        "processed_count": 4,
+        "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+        "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779370208239.json"
+      },
+      {
+        "ok": true,
+        "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+        "processed": [],
+        "processed_count": 0,
+        "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+        "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779370212385.json"
+      },
+      {
+        "ok": true,
+        "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+        "processed": [],
+        "processed_count": 0,
+        "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+        "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779370216431.json"
+      },
+      {
+        "ok": true,
+        "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+        "processed": [],
+        "processed_count": 0,
+        "state_file": "/app/runtime/x87_worker_dispatcher/state.json",
+        "report_file": "/app/runtime/reports/x87b_worker_dispatcher_report_1779370220646.json"
+      }
+    ]
+  },
+  "ts": "2026-05-21T13:30:20Z"
+}
