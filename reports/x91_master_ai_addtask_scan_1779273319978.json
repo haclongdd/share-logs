@@ -378,7 +378,7 @@
       "hits": [
         {
           "line": 153,
-          "text": "        \"flow\": [\"WebUI/add_task\", \"x15c bridge\", \"agent_con --task-file\", \"ollama\", \"report\"],"
+          "text": "        \"flow\": [\"WebUI/add_task\", \"x15c bridge\", \"agent_con --ta[REDACTED]file\", \"ollama\", \"report\"],"
         }
       ],
       "hit_count": 1,
@@ -391,7 +391,7 @@
       "hits": [
         {
           "line": 3,
-          "text": "# Safe adapter: WebUI /add_task -> agent_con task-file flow -> status/report files."
+          "text": "# Safe adapter: WebUI /add_task -> agent_con ta[REDACTED]file flow -> status/report files."
         },
         {
           "line": 89,
@@ -399,7 +399,7 @@
         },
         {
           "line": 105,
-          "text": "        \"flow\": [\"WebUI/add_task\", \"X15D adapter\", \"agent_con --task-file\", \"ollama\", \"report\"],"
+          "text": "        \"flow\": [\"WebUI/add_task\", \"X15D adapter\", \"agent_con --ta[REDACTED]file\", \"ollama\", \"report\"],"
         },
         {
           "line": 148,
@@ -424,7 +424,7 @@
       "hits": [
         {
           "line": 3,
-          "text": "# Safe standalone bridge: WebUI/add_task -> x16 -> agent_con --task-file -> ollama/report"
+          "text": "# Safe standalone bridge: WebUI/add_task -> x16 -> agent_con --ta[REDACTED]file -> ollama/report"
         },
         {
           "line": 112,
@@ -445,7 +445,7 @@
       "hits": [
         {
           "line": 3,
-          "text": "# Safe standalone bridge: WebUI/add_task -> x16 -> agent_con --task-file -> ollama/report"
+          "text": "# Safe standalone bridge: WebUI/add_task -> x16 -> agent_con --ta[REDACTED]file -> ollama/report"
         },
         {
           "line": 131,
@@ -466,7 +466,7 @@
       "hits": [
         {
           "line": 95,
-          "text": "        'flow': ['WebUI/add_task', 'master_ai_bridge', 'x16 realtime runner', 'agent_con --task-file', 'ollama', 'final report'],"
+          "text": "        'flow': ['WebUI/add_task', 'master_ai_bridge', 'x16 realtime runner', 'agent_con --ta[REDACTED]file', 'ollama', 'final report'],"
         }
       ],
       "hit_count": 1,
@@ -504,7 +504,7 @@
         },
         {
           "line": 72,
-          "text": "    ap.add_argument(\"--add-task-url\", default=\"http://localhost:5000/add_task\")"
+          "text": "    ap.add_argument(\"--add-ta[REDACTED]url\", default=\"http://localhost:5000/add_task\")"
         },
         {
           "line": 73,

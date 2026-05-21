@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x88_persistent_scheduler",
-  "stage": "apply_check_pass",
+  "stage": "apply_check_[REDACTED]",
   "checks": [
     {
       "type": "ps_syntax",
@@ -68,25 +68,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x88_persistent_scheduler\\apply_x88_persistent_scheduler.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X88 persistent autonomous scheduler applied.\n[INFO] Runtime: D:\\openwebui\\core\\x88_persistent_scheduler.py\n",
+    "stdout": "[[REDACTED]] X88 persistent autonomous scheduler applied.\n[INFO] Runtime: D:\\openwebui\\core\\x88_persistent_scheduler.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x88_persistent_scheduler\\x88_persistent_scheduler_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X88 persistent autonomous scheduler check passed.\n[INFO] Ticks: 1\n[INFO] Jobs total: 1\n[INFO] Report: D:\\openwebui\\runtime\\reports\\x88_persistent_scheduler_demo_1779271407711.json\n",
+    "stdout": "[[REDACTED]] X88 persistent autonomous scheduler check [REDACTED]ed.\n[INFO] Ticks: 1\n[INFO] Jobs total: 1\n[INFO] Report: D:\\openwebui\\runtime\\reports\\x88_persistent_scheduler_demo_1779271407711.json\n",
     "stderr": ""
   },
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }

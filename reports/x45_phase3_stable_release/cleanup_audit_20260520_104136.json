@@ -7,7 +7,7 @@
                          "phase2":  "DONE/STABLE",
                          "phase3":  "E2E helper-chain DONE; X45 stable release checkpoint"
                      },
-    "confirmed_pass":  [
+    "confirmed_[REDACTED]":  [
                            "X36 planner/decomposer",
                            "X37 queue bridge",
                            "X38 multijob runner",

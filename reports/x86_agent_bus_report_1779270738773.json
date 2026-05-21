@@ -50,4 +50,5 @@
     }
   ],
   "state_file": "D:\\openwebui\\runtime\\x86_agent_bus\\state.json",
-  "messages_dir": "D:\\openwebui\\runtime\\x86_agent_bus\\messag
+  "messages_dir": "D:\\openwebui\\runtime\\x86_agent_bus\\messages"
+}

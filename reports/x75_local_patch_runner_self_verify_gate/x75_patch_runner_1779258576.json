@@ -53,7 +53,7 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator\\apply_x79_auto_patch_pipeline_orchestrator.ps1"
     ],
@@ -62,5 +62,5 @@
     "stderr": "Copy-Item : Cannot find path \n'D:\\openwebui\\_patch_inboxy_auto_patch_pipeline_orchestrator\\x79_auto_patch_pipeline_orchestrator.py.src' because it \ndoes not exist.\nAt D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator\\apply_x79_auto_patch_pipeline_orchestrator.ps1:27 \nchar:1\n+ Copy-Item -Force $SRC $DST\n+ ~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : ObjectNotFound: (D:\\openwebui\\_p...estrator.py.src:String) [Copy-Item], ItemNotFoundExce \n   ption\n    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.CopyItemCommand\n \n"
   },
   "check": null,
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }

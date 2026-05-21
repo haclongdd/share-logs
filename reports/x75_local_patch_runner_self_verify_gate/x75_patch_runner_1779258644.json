@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator",
-  "stage": "apply_check_pass",
+  "stage": "apply_check_[REDACTED]",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,25 +53,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator\\apply_x79_auto_patch_pipeline_orchestrator.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X79 orchestrator installed: D:\\openwebui\\core\\x79_auto_patch_pipeline_orchestrator.py\n",
+    "stdout": "[[REDACTED]] X79 orchestrator installed: D:\\openwebui\\core\\x79_auto_patch_pipeline_orchestrator.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x79_auto_patch_pipeline_orchestrator\\x79_auto_patch_pipeline_orchestrator_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X79 dry-run preflight PASS\n[INFO] Next real smoke:\npython D:\\openwebui\\core/x79_auto_patch_pipeline_orchestrator.py --name x79_probe_python_component --template python_component --execute\n",
+    "stdout": "[[REDACTED]] X79 dry-run preflight [REDACTED]\n[INFO] Next real smoke:\npython D:\\openwebui\\core/x79_auto_patch_pipeline_orchestrator.py --name x79_probe_python_component --template python_component --execute\n",
     "stderr": ""
   },
-  "false_pass_guard": true
+  "false_[REDACTED]_guard": true
 }
