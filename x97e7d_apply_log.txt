@@ -1,0 +1,11 @@
+﻿=== X97E7D compile recover safe apply ===
+target=D:\openwebui\core\x87_worker_dispatcher.py
+OK
+trimmed_prefix_before_shebang
+repaired_os\._busmsg_get\(environ,
+removed_existing__x97e7_busmessage_to_dict
+inserted_clean_helpers_after_imports
+replaced__busmsg_get(state, "processed_total", 0)
+converted_msg_dot_get
+[PASS] X97E7D recovered compile-safe x87_worker_dispatcher.py
+
