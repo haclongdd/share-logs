@@ -44,7 +44,7 @@
       "to_role": "REPORT",
       "task": "x86 self check",
       "payload": {
-        "verify": "[REDACTED]"
+        "verify": "pass"
       },
       "status": "queued"
     }

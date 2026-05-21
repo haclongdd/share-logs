@@ -28,7 +28,7 @@ def _resolve_aios_root() -> Path:
             if (candidate / "core" / "x86_agent_bus.py").exists():
                 return candidate
         except Exception:
-            pass
+            [REDACTED]
 
     return Path(r"D:\\openwebui")
 
@@ -276,5 +276,4 @@ def cli() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(cli())
-
+    raise SystemExit(cli(

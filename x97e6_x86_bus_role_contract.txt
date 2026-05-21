@@ -73,7 +73,7 @@ collected"})))
 by real log", "evidence": "runtime/temp/*.txt"})))
 > core\x86_agent_bus.py:146:        sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": 
 r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
-> core\x86_agent_bus.py:147:        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "pass"})))
+> core\x86_agent_bus.py:147:        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "[REDACTED]"})))
 > core\x86_agent_bus.py:148:        report = {
   core\x86_agent_bus.py:149:            "ok": True,
   core\x86_agent_bus.py:150:            "release": "X86_AGENT_BUS",
@@ -122,6 +122,3 @@ indent=2))
 > core\x86_agent_bus.py:229:        print(json.dumps(report, ensure_ascii=False, indent=2))
   core\x86_agent_bus.py:230:        return 0
   core\x86_agent_bus.py:231:
-
-
-

@@ -7,14 +7,14 @@ try:
     _x26_here = _x26_Path(__file__).resolve()
     _x26_candidates.extend([_x26_here.parent, *_x26_here.parents])
 except Exception:
-    pass
+    [REDACTED]
 _x26_candidates.extend([_x26_Path('/app'), _x26_Path('/workspace'), _x26_Path('/openwebui'), _x26_Path(r'D:\openwebui')])
 for _x26_p in _x26_candidates:
     try:
         if (_x26_p / 'core').exists() and str(_x26_p) not in _x26_sys.path:
             _x26_sys.path.insert(0, str(_x26_p))
     except Exception:
-        pass
+        [REDACTED]
 
 
 # X14C_ORCHESTRATOR_ATTACHED
@@ -89,7 +89,7 @@ def completed_payload(task_id, task_text, source="unified_bridge", recovered=Fal
         "âœ… AI Local OS task completed.\n\n"
         f"Task ID: {task_id}\n"
         "Status: completed\n"
-        "Final status: PASS\n\n"
+        "Final status: [REDACTED]\n\n"
         "Verified unified flow:\n"
         "- WebUI bridge accepted the task\n"
         "- unified queue/job artifact is available\n"
@@ -105,7 +105,7 @@ def completed_payload(task_id, task_text, source="unified_bridge", recovered=Fal
         "mode": "unified_runtime_consolidation",
         "task_id": task_id,
         "status": "completed",
-        "final_status": "PASS",
+        "final_status": "[REDACTED]",
         "completed": True,
         "done": True,
         "ok": True,
@@ -154,7 +154,7 @@ def normalize_existing(obj, task_id):
     obj["phase"] = obj.get("phase", "X1G")
     obj["task_id"] = obj.get("task_id", task_id)
     obj["status"] = "completed"
-    obj["final_status"] = obj.get("final_status", "PASS")
+    obj["final_status"] = obj.get("final_status", "[REDACTED]")
     obj["completed"] = True
     obj["done"] = True
     obj["ok"] = True
@@ -280,7 +280,7 @@ def add_task():
         if _body is None and 'body' in locals():
             _body = body
     except Exception:
-        pass
+        [REDACTED]
 
     try:
         _task_text = None
@@ -296,7 +296,7 @@ def add_task():
             return _x14c_execute_task_payload(_task_text)
 
     except Exception as _x14c_e:
-        pass
+        [REDACTED]
 
     # WEBUI_ADD_TASK_BRIDGE_V1_1_PATCHED
     data = request.get_json(silent=True)
@@ -308,14 +308,13 @@ def add_task():
         if not data and getattr(request, "data", b""):
             data = request.data.decode("utf-8", errors="replace")
     except Exception:
-        pass
+        [REDACTED]
 
     try:
         if not data and getattr(request, "form", None):
             data = request.form.to_dict(flat=True)
     except Exception:
-        pass
+        [REDACTED]
 
     try:
-        if not data and getattr(request, "args", None):
-
+     

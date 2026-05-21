@@ -29,7 +29,7 @@ def _resolve_aios_root() -> Path:
             if (candidate / "core" / "x87_worker_dispatcher.py").exists():
                 return candidate
         except Exception:
-            pass
+            [REDACTED]
 
     return Path(r"D:\\openwebui")
 
@@ -233,7 +233,7 @@ class WebUIAgentBridge:
         }
 
     def latest_response(self) -> Dict[str, Any]:
-        rows = sorted(RESPONSES_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+        rows = sorted(RESPONSES_DIR.glob("*.json"), [REDACTED]=lambda p: p.stat().st_mtime, reverse=True)
         if not rows:
             return {"ok": False, "error": "no responses yet"}
         data = load_json(rows[0], {})
@@ -301,5 +301,4 @@ def cli() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(cli())
-
+    raise SystemEx

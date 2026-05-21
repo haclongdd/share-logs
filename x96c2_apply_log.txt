@@ -1,7 +1,7 @@
 ﻿{
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x96c2_master_planner_reviewer_ascii_fix",
-  "stage": "apply_check_pass",
+  "stage": "apply_check_[REDACTED]",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,26 +53,24 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x96c2_master_planner_reviewer_ascii_fix\\apply_x96c2_master_planner_reviewer_ascii_fix.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X96C installed master planner/reviewer foundation\n",
+    "stdout": "[[REDACTED]] X96C installed master planner/reviewer foundation\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "Bypass",
+      "By[REDACTED]",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x96c2_master_planner_reviewer_ascii_fix\\x96c2_master_planner_reviewer_ascii_fix_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[PASS] X96C check ok\n",
+    "stdout": "[[REDACTED]] X96C check ok\n",
     "stderr": ""
   },
-  "false_pass_guard": true
-}
-
+  "

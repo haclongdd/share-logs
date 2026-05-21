@@ -53,25 +53,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x93_webui_response_normalizer\\apply_x93_webui_response_normalizer.ps1"
     ],
     "returncode": 0,
-    "stdout": "[INFO] Root=D:\\openwebui\n[INFO] Target=D:\\openwebui\\core\\master_ai_bridge.py\n[INFO] Preflight saved: D:\\openwebui\\runtime\\temp\\x93_preflight_20260520_190555.json\n[[REDACTED]] X93 already installed. No rewrite needed.\n",
+    "stdout": "[INFO] Root=D:\\openwebui\n[INFO] Target=D:\\openwebui\\core\\master_ai_bridge.py\n[INFO] Preflight saved: D:\\openwebui\\runtime\\temp\\x93_preflight_20260520_190555.json\n[PASS] X93 already installed. No rewrite needed.\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x93_webui_response_normalizer\\x93_webui_response_normalizer_check.ps1"
     ],
     "returncode": 1,
-    "stdout": "[INFO] Root=D:\\openwebui\n[[REDACTED]] X93 unit normalization contract ok\n[INFO] Live response saved: D:\\openwebui\\runtime\\temp\\x93_live_response.json\n[FAIL] Live /add_task missing summary\n",
+    "stdout": "[INFO] Root=D:\\openwebui\n[PASS] X93 unit normalization contract ok\n[INFO] Live response saved: D:\\openwebui\\runtime\\temp\\x93_live_response.json\n[FAIL] Live /add_task missing summary\n",
     "stderr": ""
   },
-  "false_[REDACTED]_guard": true
+  "false_pass_guard": true
 }

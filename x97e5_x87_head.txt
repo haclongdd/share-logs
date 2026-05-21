@@ -28,7 +28,7 @@ def _resolve_aios_root() -> Path:
             if (candidate / "core" / "x86_agent_bus.py").exists():
                 return candidate
         except Exception:
-            pass
+            [REDACTED]
 
     return Path(r"D:\\openwebui")
 
@@ -117,5 +117,4 @@ class WorkerDispatcher:
         return None
 
     def _x97b2_extract_role(self, step):
-        """Accept role fields used by planner variants."""
-
+        """Accept role fields used by planner variants."

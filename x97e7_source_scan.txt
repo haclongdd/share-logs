@@ -114,7 +114,7 @@ tiÃªn. Muá»‘n xem nhiá»u hÆ¡n thÃ¬ yÃªu cáº§u max_files lá»
   core\ai_local_os_auto_exec_hook.py:202:    if mode == "auto_tool_status":
 > core\ai_local_os_auto_exec_hook.py:203:        return f"AI Local OS Ä‘ang hoáº¡t Ä‘á»™ng. Root: {result.get('root')}"
   core\ai_local_os_auto_exec_hook.py:204:    if mode and "selftest" in mode:
-  core\ai_local_os_auto_exec_hook.py:205:        return "AI Local OS auto tool selftest PASS."
+  core\ai_local_os_auto_exec_hook.py:205:        return "AI Local OS auto tool selftest [REDACTED]."
   core\ai_local_os_auto_exec_hook.py:206:    return json.dumps(result, ensure_ascii=False, indent=2)
   core\ai_local_os_auto_exec_hook.py:208:
   core\ai_local_os_auto_exec_hook.py:209:def auto_execute_and_render(text: str) -> Dict[str, Any]:
@@ -178,7 +178,7 @@ in task:
 > core\ai_local_os_host_bridge_server.py:44:                task2 = args.get("task") or args.get("prompt") or task
   core\ai_local_os_host_bridge_server.py:45:                return natural_to_payload(str(task2))
   core\ai_local_os_host_bridge_server.py:46:        except Exception:
-  core\ai_local_os_host_bridge_server.py:47:            pass
+  core\ai_local_os_host_bridge_server.py:47:            [REDACTED]
   core\ai_local_os_host_bridge_server.py:64:def run_task(task: str) -> Dict[str, Any]:
   core\ai_local_os_host_bridge_server.py:65:    payload = natural_to_payload(task)
   core\ai_local_os_host_bridge_server.py:66:    rendered = auto_execute_and_render(payload)
@@ -298,7 +298,7 @@ obj.get("summary") or "Task completed."
 > core\master_ai_bridge.py:154:    obj["phase"] = obj.get("phase", "X1G")
 > core\master_ai_bridge.py:155:    obj["task_id"] = obj.get("task_id", task_id)
   core\master_ai_bridge.py:156:    obj["status"] = "completed"
-> core\master_ai_bridge.py:157:    obj["final_status"] = obj.get("final_status", "PASS")
+> core\master_ai_bridge.py:157:    obj["final_status"] = obj.get("final_status", "[REDACTED]")
   core\master_ai_bridge.py:158:    obj["completed"] = True
   core\master_ai_bridge.py:159:    obj["done"] = True
   core\master_ai_bridge.py:160:    obj["ok"] = True
@@ -378,7 +378,7 @@ request.args.to_dict() or {}
 > core\master_ai_bridge.py:331:        task_id = str(data.get("task_id") or data.get("id") or "").strip()
   core\master_ai_bridge.py:332:        if not task_id:
   core\master_ai_bridge.py:333:            return jsonify({"phase":"X1G", "status":"completed", "completed":True, 
-"final_status":"PASS", "result":"No task_id provided."}), 200
+"final_status":"[REDACTED]", "result":"No task_id provided."}), 200
   core\master_ai_bridge.py:334:        existing = find_existing(task_id)
   core\master_ai_bridge.py:375:    @app.route('/x16/add_task', methods=['POST'])
   core\master_ai_bridge.py:376:    def x16_add_task():
@@ -438,13 +438,13 @@ else ""
   core\phase2c2_lag_guard.py:44:            "cache": {},
   core\phase2c2_lag_guard.py:51:        _write_json(self.state_file, self.state)
   core\phase2c2_lag_guard.py:52:
-  core\phase2c2_lag_guard.py:53:    def should_poll(self, key="default"):
+  core\phase2c2_lag_guard.py:53:    def should_poll(self, [REDACTED]="default"):
 > core\phase2c2_lag_guard.py:54:        polling = self.config.get("polling", {})
 > core\phase2c2_lag_guard.py:55:        min_interval = float(polling.get("min_interval_sec", 0.75))
-> core\phase2c2_lag_guard.py:56:        last = float(self.state.get("last_poll", {}).get(key, 0))
+> core\phase2c2_lag_guard.py:56:        last = float(self.state.get("last_poll", {}).get([REDACTED], 0))
   core\phase2c2_lag_guard.py:57:        allowed = (now_ts() - last) >= min_interval
   core\phase2c2_lag_guard.py:58:        if allowed:
-  core\phase2c2_lag_guard.py:59:            self.state.setdefault("last_poll", {})[key] = now_ts()
+  core\phase2c2_lag_guard.py:59:            self.state.setdefault("last_poll", {})[[REDACTED]] = now_ts()
   core\phase2c2_lag_guard.py:61:        return allowed
   core\phase2c2_lag_guard.py:62:
   core\phase2c2_lag_guard.py:63:    def next_poll_interval(self, pending_count=0):
@@ -455,15 +455,15 @@ else ""
   core\phase2c2_lag_guard.py:68:        interval = base * (factor ** max(int(pending_count), 0))
   core\phase2c2_lag_guard.py:69:        return min(interval, max_interval)
   core\phase2c2_lag_guard.py:70:
-  core\phase2c2_lag_guard.py:71:    def cache_result(self, key, value):
+  core\phase2c2_lag_guard.py:71:    def cache_result(self, [REDACTED], value):
 > core\phase2c2_lag_guard.py:72:        ttl = float(self.config.get("polling", {}).get("success_cache_ttl_sec", 20))
-  core\phase2c2_lag_guard.py:73:        self.state.setdefault("cache", {})[key] = {
+  core\phase2c2_lag_guard.py:73:        self.state.setdefault("cache", {})[[REDACTED]] = {
   core\phase2c2_lag_guard.py:74:            "expires_at": now_ts() + ttl,
   core\phase2c2_lag_guard.py:75:            "value": value,
   core\phase2c2_lag_guard.py:77:        self.save()
   core\phase2c2_lag_guard.py:78:
-  core\phase2c2_lag_guard.py:79:    def get_cached(self, key):
-> core\phase2c2_lag_guard.py:80:        item = self.state.get("cache", {}).get(key)
+  core\phase2c2_lag_guard.py:79:    def get_cached(self, [REDACTED]):
+> core\phase2c2_lag_guard.py:80:        item = self.state.get("cache", {}).get([REDACTED])
   core\phase2c2_lag_guard.py:81:        if not item:
   core\phase2c2_lag_guard.py:82:            return None
 > core\phase2c2_lag_guard.py:83:        if float(item.get("expires_at", 0)) < now_ts():
@@ -521,14 +521,14 @@ else ""
   core\phase2c3_model_router.py:69:                return "code"
   core\phase2c3_model_router.py:70:            return role
   core\phase2c3_model_router.py:71:
-> core\phase2c3_model_router.py:72:        if self._contains_keyword(prompt, cfg.get("code", {}).get("keywords", [])):
+> core\phase2c3_model_router.py:72:        if self._contains_[REDACTED]word(prompt, cfg.get("code", {}).get("[REDACTED]words", [])):
   core\phase2c3_model_router.py:73:            return "code"
   core\phase2c3_model_router.py:74:
-> core\phase2c3_model_router.py:75:        if self._contains_keyword(prompt, cfg.get("reviewer", {}).get("keywords", 
+> core\phase2c3_model_router.py:75:        if self._contains_[REDACTED]word(prompt, cfg.get("reviewer", {}).get("[REDACTED]words", 
 [])):
   core\phase2c3_model_router.py:76:            return "reviewer"
   core\phase2c3_model_router.py:77:
-> core\phase2c3_model_router.py:78:        if self._contains_keyword(prompt, cfg.get("chat", {}).get("keywords", [])):
+> core\phase2c3_model_router.py:78:        if self._contains_[REDACTED]word(prompt, cfg.get("chat", {}).get("[REDACTED]words", [])):
   core\phase2c3_model_router.py:79:            return "chat"
   core\phase2c3_model_router.py:80:
   core\phase2c3_model_router.py:81:        return "default"
@@ -639,7 +639,7 @@ len(routed)})
   core\phase4b_vector_session_memory.py:162:            public = {k: item[k] for k in item if k != "embedding"}
   core\phase4b_vector_session_memory.py:163:            public["score"] = round(score, 6)
   core\phase4b_vector_session_memory.py:164:            scored.append((score, public))
-> core\phase4b_vector_session_memory.py:165:    scored.sort(key=lambda x: (x[0], x[1].get("created_at", 0)), 
+> core\phase4b_vector_session_memory.py:165:    scored.sort([REDACTED]=lambda x: (x[0], x[1].get("created_at", 0)), 
 reverse=True)
   core\phase4b_vector_session_memory.py:166:    return [x[1] for x in scored[:top_k]]
   core\phase4b_vector_session_memory.py:167:
@@ -711,18 +711,18 @@ None)
   core\phase4c_failure_learning_memory.py:159:            existing.setdefault("fix_attempts", []).append(event)
   core\phase4c_failure_learning_memory.py:160:        existing.setdefault("events", []).append(event)
   core\phase4c_failure_learning_memory.py:187:    cfg = load_config()
-  core\phase4c_failure_learning_memory.py:188:    q_tokens = tokens(error_text + " " + context)
+  core\phase4c_failure_learning_memory.py:188:    q_[REDACTED]s = [REDACTED]s(error_text + " " + context)
   core\phase4c_failure_learning_memory.py:189:    db = load_db()
 > core\phase4c_failure_learning_memory.py:190:    threshold = float(cfg.get("similarity_threshold", 0.18))
 > core\phase4c_failure_learning_memory.py:191:    top_k = int(top_k or cfg.get("top_k", 5))
   core\phase4c_failure_learning_memory.py:192:    scored = []
 > core\phase4c_failure_learning_memory.py:193:    for lesson in db.get("lessons", []):
-> core\phase4c_failure_learning_memory.py:194:        score = jaccard(q_tokens, lesson.get("tokens", []))
+> core\phase4c_failure_learning_memory.py:194:        score = jaccard(q_[REDACTED]s, lesson.get("[REDACTED]s", []))
   core\phase4c_failure_learning_memory.py:195:        if score >= threshold:
-  core\phase4c_failure_learning_memory.py:196:            public = {k: v for k, v in lesson.items() if k != "tokens"}
+  core\phase4c_failure_learning_memory.py:196:            public = {k: v for k, v in lesson.items() if k != "[REDACTED]s"}
   core\phase4c_failure_learning_memory.py:197:            public["score"] = round(score, 6)
   core\phase4c_failure_learning_memory.py:198:            scored.append((score, public))
-> core\phase4c_failure_learning_memory.py:199:    scored.sort(key=lambda x: (x[0], x[1].get("last_seen", 0)), 
+> core\phase4c_failure_learning_memory.py:199:    scored.sort([REDACTED]=lambda x: (x[0], x[1].get("last_seen", 0)), 
 reverse=True)
   core\phase4c_failure_learning_memory.py:200:    return [x[1] for x in scored[:top_k]]
   core\phase4c_failure_learning_memory.py:201:
@@ -761,12 +761,12 @@ str(FAILURE_DB)}
   core\phase4d_unified_memory.py:106:            continue
 > core\phase4d_unified_memory.py:107:        text = (str(item.get("content", "")) + " " + json.dumps(item.get("meta", 
 {}), ensure_ascii=False)).lower()
-  core\phase4d_unified_memory.py:108:        score = sum(1 for t in q_tokens if t in text)
+  core\phase4d_unified_memory.py:108:        score = sum(1 for t in q_[REDACTED]s if t in text)
   core\phase4d_unified_memory.py:109:        if q in text:
   core\phase4d_unified_memory.py:110:            score += 5
   core\phase4d_unified_memory.py:111:        if score > 0:
 > core\phase4d_unified_memory.py:112:            scored.append((score, item.get("created_at", ""), item))
-  core\phase4d_unified_memory.py:113:    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+  core\phase4d_unified_memory.py:113:    scored.sort([REDACTED]=lambda x: (x[0], x[1]), reverse=True)
   core\phase4d_unified_memory.py:114:    return [x[2] for x in scored[: max(1, int(limit))]]
   core\phase4d_unified_memory.py:115:
   core\phase4d_unified_memory.py:120:        return ""
@@ -883,7 +883,7 @@ data.get("timestamp_utc") or data.get("created_at_utc"))
   core\phaseX2B_command_runner.py:263:
   core\phaseX2B_command_runner.py:264:
   core\phaseX2B_command_runner.py:265:def format_for_chat(result: Dict[str, Any]) -> str:
-> core\phaseX2B_command_runner.py:266:    status = "PASS" if result.get("ok") else ("BLOCKED" if result.get("blocked") 
+> core\phaseX2B_command_runner.py:266:    status = "[REDACTED]" if result.get("ok") else ("BLOCKED" if result.get("blocked") 
 else "FAIL")
   core\phaseX2B_command_runner.py:267:    out = [
   core\phaseX2B_command_runner.py:268:        f"[X2B COMMAND RUNNER] {status}",
@@ -993,7 +993,7 @@ f"count={result.get('count', 0)}"]
   core\real_use_v4_safe_config_sanitizer.py:57:    md.append("| File | Status | Output |")
   core\real_use_v4_safe_config_sanitizer.py:58:    md.append("|---|---|---|")
   core\real_use_v4_safe_config_sanitizer.py:59:    for r in rows:
-> core\real_use_v4_safe_config_sanitizer.py:60:        md.append(f"| `{r['file']}` | `{'PASS' if r.get('ok') else 
+> core\real_use_v4_safe_config_sanitizer.py:60:        md.append(f"| `{r['file']}` | `{'[REDACTED]' if r.get('ok') else 
 'FAIL'}` | `{r.get('sanitized', r.get('error', '-'))}` |")
   core\real_use_v4_safe_config_sanitizer.py:61:    md.append("")
   core\real_use_v4_safe_config_sanitizer.py:62:    md.append("Original config files were not modified.")
@@ -1067,7 +1067,7 @@ payload.get("message") or payload.get("text") or ""
 re.compile(r"(?:project|folder|repo|app|source|codebase)\s*[:=\-]?\s*([A-Za-z0-9_.\- ]+)", re.I)
   core\webui_add_task_bridge_v1.py:26:
   core\webui_add_task_bridge_v1.py:93:        ]
-  core\webui_add_task_bridge_v1.py:94:        for k in keys:
+  core\webui_add_task_bridge_v1.py:94:        for k in [REDACTED]s:
   core\webui_add_task_bridge_v1.py:95:            if k in payload:
 > core\webui_add_task_bridge_v1.py:96:                v = payload.get(k)
   core\webui_add_task_bridge_v1.py:97:                if isinstance(v, str) and v.strip():
@@ -1253,7 +1253,7 @@ utc_now()}
   core\x13d_plan_executor.py:69:            try:
   core\x13d_plan_executor.py:70:                result = post_task(step_task)
 > core\x13d_plan_executor.py:71:                record["ok"] = bool(result.get("ok", False) or 
-result.get("final_status") == "PASS")
+result.get("final_status") == "[REDACTED]")
 > core\x13d_plan_executor.py:72:                record["status"] = result.get("status") or result.get("final_status") 
 or "unknown"
 > core\x13d_plan_executor.py:73:                record["task_id"] = result.get("task_id")
@@ -1294,7 +1294,7 @@ result.get("message") or result.get("result")
 > core\x13e_native_step_binder.py:107:            "title": step.get("title"),
   core\x13e_native_step_binder.py:108:            "started_at": utc_now(),
   core\x13e_native_step_binder.py:109:        }
-  core\x13e_native_step_binder.py:110:        native_ok, project_key, project_path = should_native_list_files(step, 
+  core\x13e_native_step_binder.py:110:        native_ok, project_[REDACTED], project_path = should_native_list_files(step, 
 original_task)
 > core\x13e_native_step_binder.py:111:        task_sent = f"[X13E execute {step.get('id')}] {step.get('title')}. 
 Action: {step.get('action')}. Original user task: {original_task}"
@@ -1367,11 +1367,11 @@ Any]]:
   core\x13f_execution_memory_retry.py:158:    def classify_error(self, exc: BaseException) -> Tuple[str, bool]:
   core\x13f_execution_memory_retry.py:159:        name = type(exc).__name__
   core\x13f_execution_memory_retry.py:160:        msg = str(exc).lower()
-> core\x13f_execution_memory_retry.py:161:        for keyword in self.policy.get("non_retryable_error_keywords", []):
-  core\x13f_execution_memory_retry.py:162:            if keyword.lower() in msg or keyword.lower() in name.lower():
+> core\x13f_execution_memory_retry.py:161:        for [REDACTED]word in self.policy.get("non_retryable_error_[REDACTED]words", []):
+  core\x13f_execution_memory_retry.py:162:            if [REDACTED]word.lower() in msg or [REDACTED]word.lower() in name.lower():
   core\x13f_execution_memory_retry.py:163:                return name, False
-> core\x13f_execution_memory_retry.py:164:        for keyword in self.policy.get("retryable_error_keywords", []):
-  core\x13f_execution_memory_retry.py:165:            if keyword.lower() in msg or keyword.lower() in name.lower():
+> core\x13f_execution_memory_retry.py:164:        for [REDACTED]word in self.policy.get("retryable_error_[REDACTED]words", []):
+  core\x13f_execution_memory_retry.py:165:            if [REDACTED]word.lower() in msg or [REDACTED]word.lower() in name.lower():
   core\x13f_execution_memory_retry.py:166:                return name, True
   core\x13f_execution_memory_retry.py:167:        return name, True
   core\x13f_execution_memory_retry.py:168:
@@ -1654,11 +1654,11 @@ isinstance(smoke_task, dict) else "x13q_smoke_task",
   core\x13q_integration_smoke_selftest.py:152:        "release": RELEASE,
   core\x13q_integration_smoke_selftest.py:193:    artifacts_ok = all(x["ok"] for x in artifact_items)
   core\x13q_integration_smoke_selftest.py:194:
-  core\x13q_integration_smoke_selftest.py:195:    # X13I execution is not fatal if compile passes; X13P restored 
-compile dependency already. X13J runtime should pass.
+  core\x13q_integration_smoke_selftest.py:195:    # X13I execution is not fatal if compile [REDACTED]es; X13P restored 
+compile dependency already. X13J runtime should [REDACTED].
 > core\x13q_integration_smoke_selftest.py:196:    x13j_runtime_ok = execution.get("x13j_persistent_queue", 
 {}).get("ok", True)
-  core\x13q_integration_smoke_selftest.py:197:    runtime_pass = compile_ok and artifacts_ok and (x13j_runtime_ok or 
+  core\x13q_integration_smoke_selftest.py:197:    runtime_[REDACTED] = compile_ok and artifacts_ok and (x13j_runtime_ok or 
 mode == "check_only")
   core\x13q_integration_smoke_selftest.py:198:
   core\x13q_integration_smoke_selftest.py:199:    report = {
@@ -1724,8 +1724,8 @@ str(e)})
   core\x13y_live_api_endpoint_shim.py:141:
   core\x13_consolidated_planner_agent.py:35:def _clean_task(task: Any) -> str:
   core\x13_consolidated_planner_agent.py:36:    if isinstance(task, dict):
-  core\x13_consolidated_planner_agent.py:37:        for key in ("task", "text", "query", "prompt", "message"):
-> core\x13_consolidated_planner_agent.py:38:            val = task.get(key)
+  core\x13_consolidated_planner_agent.py:37:        for [REDACTED] in ("task", "text", "query", "prompt", "message"):
+> core\x13_consolidated_planner_agent.py:38:            val = task.get([REDACTED])
   core\x13_consolidated_planner_agent.py:39:            if isinstance(val, str) and val.strip():
   core\x13_consolidated_planner_agent.py:40:                return val.strip()
   core\x13_consolidated_planner_agent.py:41:        return json.dumps(task, ensure_ascii=False)
@@ -1762,7 +1762,7 @@ trong project v4_1"
   core\x14h_batch_report_merger.py:40:
   core\x14h_batch_report_merger.py:41:def normalize_job(job: Dict[str, Any]) -> Dict[str, Any]:
 > core\x14h_batch_report_merger.py:42:    result = job.get("result") or {}
-> core\x14h_batch_report_merger.py:43:    status = job.get("status") or ("pass" if result.get("ok") else "fail")
+> core\x14h_batch_report_merger.py:43:    status = job.get("status") or ("[REDACTED]" if result.get("ok") else "fail")
   core\x14h_batch_report_merger.py:44:    return {
 > core\x14h_batch_report_merger.py:45:        "job_id": job.get("job_id", "unknown"),
 > core\x14h_batch_report_merger.py:46:        "index": int(job.get("index", 0) or 0),
@@ -1780,7 +1780,7 @@ trong project v4_1"
   core\x14h_batch_report_merger.py:58:
   core\x14h_batch_report_merger.py:59:def build_final_report(source: Dict[str, Any]) -> Dict[str, Any]:
 > core\x14h_batch_report_merger.py:60:    jobs = [normalize_job(j) for j in source.get("jobs", [])]
-  core\x14h_batch_report_merger.py:61:    jobs.sort(key=lambda j: j["index"])
+  core\x14h_batch_report_merger.py:61:    jobs.sort([REDACTED]=lambda j: j["index"])
   core\x14h_batch_report_merger.py:62:
   core\x14h_batch_report_merger.py:63:    total = len(jobs)
   core\x14h_batch_report_merger.py:83:    return {
@@ -1806,12 +1806,12 @@ encoding="utf-8") as f:
   core\x14_bridge_adapter.py:20:    first = worker_results[0] if worker_results else {}
   core\x14_bridge_adapter.py:21:
   core\x14_bridge_adapter.py:22:    return {
-> core\x14_bridge_adapter.py:23:        "ok": report.get("status") == "PASS",
+> core\x14_bridge_adapter.py:23:        "ok": report.get("status") == "[REDACTED]",
   core\x14_bridge_adapter.py:24:        "action": "x14_master_orchestrated",
   core\x14_bridge_adapter.py:25:        "bridge": "WEBUI_ADD_TASK_BRIDGE_V1",
   core\x14_bridge_adapter.py:26:        "bridge_patch": "X14C_ORCHESTRATOR_ATTACHED",
   core\x14_bridge_adapter.py:27:        "command": task,
-> core\x14_bridge_adapter.py:28:        "error": None if report.get("status") == "PASS" else report.get("review", 
+> core\x14_bridge_adapter.py:28:        "error": None if report.get("status") == "[REDACTED]" else report.get("review", 
 {}).get("reason"),
 > core\x14_bridge_adapter.py:29:        "workflow": report.get("workflow"),
 > core\x14_bridge_adapter.py:30:        "master_model": report.get("master_model"),
@@ -1911,7 +1911,7 @@ task, f"Project:{project}"), "checks": checks}
   core\x14_master_orchestrator.py:177:def reviewer_agent(task: str, results: List[Dict[str, Any]]) -> Dict[str, Any]:
 > core\x14_master_orchestrator.py:178:    bad = [r for r in results if r.get("status") != "ok"]
   core\x14_master_orchestrator.py:179:    decision = "accept" if not bad else "retry_needed"
-  core\x14_master_orchestrator.py:180:    reason = "All six-agent workflow stages passed." if not bad else 
+  core\x14_master_orchestrator.py:180:    reason = "All six-agent workflow stages [REDACTED]ed." if not bad else 
 f"{len(bad)} stage(s) failed."
   core\x14_master_orchestrator.py:181:    return {"agent": "Reviewer Agent", "model": REVIEWER_MODEL, "status": "ok", 
 "decision": decision, "reason": reason, "probe": agent_probe("Reviewer Agent", REVIEWER_MODEL, task, 
@@ -1989,7 +1989,7 @@ errors="ignore"))
 > core\x14_master_orchestrator_loop.py:105:                if isinstance(parsed.get("jobs"), list):
   core\x14_master_orchestrator_loop.py:106:                    return {"source": "qwen", **parsed}
   core\x14_master_orchestrator_loop.py:107:            except Exception:
-  core\x14_master_orchestrator_loop.py:108:                pass
+  core\x14_master_orchestrator_loop.py:108:                [REDACTED]
   core\x14_master_orchestrator_loop.py:140:
   core\x14_master_orchestrator_loop.py:141:def llama_worker(job: X14Job, project: Dict[str, Any], task: str) -> X14Job:
   core\x14_master_orchestrator_loop.py:142:    job.attempts += 1
@@ -2024,7 +2024,7 @@ errors="ignore"))
   core\x14_master_orchestrator_loop.py:230:def format_x14_report(report: Dict[str, Any]) -> str:
   core\x14_master_orchestrator_loop.py:231:    lines = []
   core\x14_master_orchestrator_loop.py:232:    lines.append("[AI Local OS X14 MASTER ORCHESTRATOR]")
-> core\x14_master_orchestrator_loop.py:233:    lines.append(f"Status: {'PASS' if report.get('ok') else 'FAIL'}")
+> core\x14_master_orchestrator_loop.py:233:    lines.append(f"Status: {'[REDACTED]' if report.get('ok') else 'FAIL'}")
 > core\x14_master_orchestrator_loop.py:234:    lines.append(f"Task: {report.get('task')}")
 > core\x14_master_orchestrator_loop.py:235:    lines.append(f"Workflow: {report.get('workflow')}")
 > core\x14_master_orchestrator_loop.py:236:    lines.append(f"Master: {report.get('models', {}).get('master')} | 
@@ -2078,7 +2078,7 @@ attempt or 1, "updated_at": _now()}
 > core\x15ab_realtime_bridge.py:127:    if any(j.get("status") in {"running", "retrying", "queued"} for j in jobs):
   core\x15ab_realtime_bridge.py:128:        state["overall"] = "running"
   core\x15ab_realtime_bridge.py:129:    elif jobs:
-> core\x15ab_realtime_bridge.py:130:        state["overall"] = "done" if all(j.get("status") in {"done", "pass", 
+> core\x15ab_realtime_bridge.py:130:        state["overall"] = "done" if all(j.get("status") in {"done", "[REDACTED]", 
 "success"} for j in jobs) else "needs_review"
   core\x15ab_realtime_bridge.py:131:    write_state(state)
   core\x15ab_realtime_bridge.py:132:    emit("job_update", message or status, job_id=job_id, data={"status": status, 
@@ -2322,7 +2322,7 @@ encoding="utf-8", errors="ignore")
 > core\x18_agentcon_task_schema_normalize.py:64:    task_file = TASKS / f"{payload.get('task_id') or 
 payload.get('id')}_{variant_name}.json"
   core\x18_agentcon_task_schema_normalize.py:65:    write_json(task_file, payload)
-  core\x18_agentcon_task_schema_normalize.py:66:    cmd = [sys.executable, str(AGENT_CON), "--ta[REDACTED_OPENAI_KEY]", 
+  core\x18_agentcon_task_schema_normalize.py:66:    cmd = [sys.executable, str(AGENT_CON), "--ta[REDACTED_OPENAI_[REDACTED]]", 
 str(task_file)]
   core\x18_agentcon_task_schema_normalize.py:67:    out = {
   core\x18_agentcon_task_schema_normalize.py:114:    for name, payload in build_task_variants(task_text):
@@ -2330,7 +2330,7 @@ str(task_file)]
   core\x18_agentcon_task_schema_normalize.py:116:        result["attempts"].append(attempt)
 > core\x18_agentcon_task_schema_normalize.py:117:        if attempt.get("ok"):
   core\x18_agentcon_task_schema_normalize.py:118:            result["ok"] = True
-  core\x18_agentcon_task_schema_normalize.py:119:            result["passed_variant"] = name
+  core\x18_agentcon_task_schema_normalize.py:119:            result["[REDACTED]ed_variant"] = name
   core\x18_agentcon_task_schema_normalize.py:120:            break
   core\x18_agentcon_task_schema_normalize.py:142:        out = run(args.task)
   core\x18_agentcon_task_schema_normalize.py:143:
@@ -2357,13 +2357,13 @@ f"{variant}.stderr.txt").write_text(attempt.get("stderr",""), encoding="utf-8", 
 > core\x19_agentcon_execution_trace.py:179:        if attempt.get("ok"):
   core\x19_agentcon_execution_trace.py:180:            report["ok"] = True
   core\x19_agentcon_execution_trace.py:181:            report["status"] = "success"
-  core\x19_agentcon_execution_trace.py:182:            report["passed_variant"] = variant
+  core\x19_agentcon_execution_trace.py:182:            report["[REDACTED]ed_variant"] = variant
   core\x19_agentcon_execution_trace.py:194:def print_summary(report):
   core\x19_agentcon_execution_trace.py:195:    print(json.dumps(report, ensure_ascii=False, indent=2))
   core\x19_agentcon_execution_trace.py:196:    print("\n=== X19 SUMMARY ===")
 > core\x19_agentcon_execution_trace.py:197:    print("STATUS:", report.get("status"))
 > core\x19_agentcon_execution_trace.py:198:    if report.get("ok"):
-> core\x19_agentcon_execution_trace.py:199:        print("PASSED VARIANT:", report.get("passed_variant"))
+> core\x19_agentcon_execution_trace.py:199:        print("[REDACTED]ED VARIANT:", report.get("[REDACTED]ed_variant"))
   core\x19_agentcon_execution_trace.py:200:        print("NEXT: can reconnect this working variant back to WebUI/X16.")
   core\x19_agentcon_execution_trace.py:201:    else:
 > core\x19_agentcon_execution_trace.py:202:        print("FAILURE GUESS:", "; 
@@ -2399,7 +2399,7 @@ action}})
 > core\x38_phase3_multijob_runner.py:65:            target = safe_child_path(job.get("path") or ".")
   core\x38_phase3_multijob_runner.py:66:            files = []
   core\x38_phase3_multijob_runner.py:67:            if target.exists() and target.is_dir():
-  core\x38_phase3_multijob_runner.py:68:                for child in sorted(target.iterdir(), key=lambda x: 
+  core\x38_phase3_multijob_runner.py:68:                for child in sorted(target.iterdir(), [REDACTED]=lambda x: 
 x.name.lower())[:100]:
   core\x38_phase3_multijob_runner.py:69:                    files.append({"name": child.name, "is_dir": 
 child.is_dir(), "size": child.stat().st_size if child.is_file() else None})
@@ -2458,7 +2458,7 @@ Dict[str, Any]:
 > core\x39_phase3_report_aggregator.py:51:    raw_results = runner_report.get("results") or []
   core\x39_phase3_report_aggregator.py:52:    results = [normalize_result(x, i) for i, x in enumerate(raw_results) if 
 isinstance(x, dict)]
-  core\x39_phase3_report_aggregator.py:53:    passed = [x for x in results if x["ok"]]
+  core\x39_phase3_report_aggregator.py:53:    [REDACTED]ed = [x for x in results if x["ok"]]
   core\x39_phase3_report_aggregator.py:54:    failed = [x for x in results if not x["ok"]]
   core\x39_phase3_report_aggregator.py:55:    retry_candidates: List[Dict[str, Any]] = []
   core\x39_phase3_report_aggregator.py:56:    for item in failed:
@@ -2471,8 +2471,8 @@ action" not in err
   core\x39_phase3_report_aggregator.py:63:            "retryable": retryable,
   core\x39_phase3_report_aggregator.py:64:            "reason": err or "job failed without explicit error",
   core\x39_phase3_report_aggregator.py:65:        })
-> core\x39_phase3_report_aggregator.py:66:    status = "pass" if runner_report.get("ok") and not failed else 
-("partial_fail" if passed and failed else "fail")
+> core\x39_phase3_report_aggregator.py:66:    status = "[REDACTED]" if runner_report.get("ok") and not failed else 
+("partial_fail" if [REDACTED]ed and failed else "fail")
   core\x39_phase3_report_aggregator.py:67:    return {
 > core\x39_phase3_report_aggregator.py:68:        "ok": len(failed) == 0 and bool(runner_report.get("ok", len(results) 
 > 0)),
@@ -2608,7 +2608,7 @@ job.get("payload") or "")})
   core\x41_phase3_retry_executor_loop.py:119:
   core\x41_phase3_retry_executor_loop.py:120:def aggregate_results(results: List[Dict[str, Any]]) -> Dict[str, Any]:
 > core\x41_phase3_retry_executor_loop.py:121:    failed = [r for r in results if not r.get("ok")]
-> core\x41_phase3_retry_executor_loop.py:122:    passed = [r for r in results if r.get("ok")]
+> core\x41_phase3_retry_executor_loop.py:122:    [REDACTED]ed = [r for r in results if r.get("ok")]
   core\x41_phase3_retry_executor_loop.py:123:    return {
   core\x41_phase3_retry_executor_loop.py:124:        "ok": len(failed) == 0,
   core\x41_phase3_retry_executor_loop.py:125:        "component": "X41_RETRY_AGGREGATED_REPORT",
@@ -2728,7 +2728,7 @@ Path) -> Dict[str, Any]:
 {"ok": False, "results": [], "error": "runner_report_missing"}
 > core\x43_controlled_runtime_integration.py:186:    results = rr.get("results") if isinstance(rr.get("results"), 
 list) else []
-> core\x43_controlled_runtime_integration.py:187:    passed = [r for r in results if r.get("ok")]
+> core\x43_controlled_runtime_integration.py:187:    [REDACTED]ed = [r for r in results if r.get("ok")]
 > core\x43_controlled_runtime_integration.py:188:    failed = [r for r in results if not r.get("ok")]
   core\x43_controlled_runtime_integration.py:189:    data = {
 > core\x43_controlled_runtime_integration.py:190:        "ok": len(failed) == 0 and bool(rr.get("ok", len(failed) == 
@@ -2840,7 +2840,7 @@ encoding="utf-8")
   core\x52_persistent_memory_store.py:62:    return index
   core\x52_persistent_memory_store.py:63:
   core\x52_persistent_memory_store.py:67:    entries = _load_entries()
-  core\x52_persistent_memory_store.py:68:    mem_id = _stable_id(kind, key, content)
+  core\x52_persistent_memory_store.py:68:    mem_id = _stable_id(kind, [REDACTED], content)
   core\x52_persistent_memory_store.py:69:    for e in entries:
 > core\x52_persistent_memory_store.py:70:        if e.get("id") == mem_id:
   core\x52_persistent_memory_store.py:71:            e["last_seen_at"] = _now()
@@ -2897,7 +2897,7 @@ items[-limit:]}
 > core\x56_runtime_monitor_index.py:43:        state = data.get("State") or {}
 > core\x56_runtime_monitor_index.py:44:        item["running"] = bool(state.get("Running"))
 > core\x56_runtime_monitor_index.py:45:        ns = (data.get("NetworkSettings") or {}).get("Networks") or {}
-  core\x56_runtime_monitor_index.py:46:        item["networks"] = sorted(ns.keys())
+  core\x56_runtime_monitor_index.py:46:        item["networks"] = sorted(ns.[REDACTED]s())
 > core\x56_runtime_monitor_index.py:47:        item["ports"] = (data.get("NetworkSettings") or {}).get("Ports") or {}
   core\x56_runtime_monitor_index.py:48:    except Exception as exc:
   core\x56_runtime_monitor_index.py:49:        item["parse_error"] = repr(exc)
@@ -2995,7 +2995,7 @@ t3.get("cursor") == 3,
   core\x70_semantic_memory_recall_foundation.py:61:    for item in read_all():
 > core\x70_semantic_memory_recall_foundation.py:62:        score = cosine(qv, vectorize(item.get("text", "")))
   core\x70_semantic_memory_recall_foundation.py:63:        scored.append((score, item))
-  core\x70_semantic_memory_recall_foundation.py:64:    scored.sort(key=lambda x: x[0], reverse=True)
+  core\x70_semantic_memory_recall_foundation.py:64:    scored.sort([REDACTED]=lambda x: x[0], reverse=True)
   core\x70_semantic_memory_recall_foundation.py:65:    return [
   core\x72_shared_memory_bus_foundation.py:38:        if not line.strip():
   core\x72_shared_memory_bus_foundation.py:39:            continue
@@ -3297,7 +3297,7 @@ Any]] = None) -> BusMessage:
   core\x86_agent_bus.py:113:        self.state["last_error"] = None
   core\x86_agent_bus.py:114:        self.save()
   core\x86_agent_bus.py:118:        rows = []
-  core\x86_agent_bus.py:119:        for path in sorted(MESSAGES_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime):
+  core\x86_agent_bus.py:119:        for path in sorted(MESSAGES_DIR.glob("*.json"), [REDACTED]=lambda p: p.stat().st_mtime):
   core\x86_agent_bus.py:120:            item = load_json(path, {})
 > core\x86_agent_bus.py:121:            if status and item.get("status") != status:
   core\x86_agent_bus.py:122:                continue
@@ -3312,11 +3312,11 @@ Any]] = None) -> BusMessage:
   core\x86_agent_bus.py:133:            item["consumed_at"] = utc_stamp()
   core\x87_worker_dispatcher.py:1:
   core\x87_worker_dispatcher.py:2:
-  core\x87_worker_dispatcher.py:3:def _busmsg_get(message, key, default=None):
+  core\x87_worker_dispatcher.py:3:def _busmsg_get(message, [REDACTED], default=None):
 > core\x87_worker_dispatcher.py:4:    """Safe getter for both dict payloads and BusMessage/dataclass-like objects."""
   core\x87_worker_dispatcher.py:5:    if isinstance(message, dict):
-  core\x87_worker_dispatcher.py:6:        return _busmsg_get(message, key, default)
-  core\x87_worker_dispatcher.py:7:    return getattr(message, key, default)
+  core\x87_worker_dispatcher.py:6:        return _busmsg_get(message, [REDACTED], default)
+  core\x87_worker_dispatcher.py:7:    return getattr(message, [REDACTED], default)
   core\x87_worker_dispatcher.py:102:    return module.AgentBus
   core\x87_worker_dispatcher.py:103:
   core\x87_worker_dispatcher.py:104:
@@ -3601,7 +3601,7 @@ os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")\n    if explic
    candidates = [\n        Path("/app"),\n        Path(r"D:\\\\openwebui"),\n        
 Path(__file__).resolve().parent.parent,\n    ]\n\n    for candidate in candidates:\n        try:\n            if 
 (candidate / "core" / "x90_webui_agent_bridge.py").exists():\n                return candidate\n        except 
-Exception:\n            pass\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
+Exception:\n            [REDACTED]\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
   core\x92c_adapter_rootdetect_fix.py:26:
   core\x92c_adapter_rootdetect_fix.py:27:
   core\x92c_adapter_rootdetect_fix.py:28:def now_ms() -> int:
@@ -3648,7 +3648,7 @@ os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")\n    if explic
    candidates = [\n        Path("/app"),\n        Path(r"D:\\\\openwebui"),\n        
 Path(__file__).resolve().parent.parent,\n    ]\n\n    for candidate in candidates:\n        try:\n            if 
 (candidate / "core" / "x87_worker_dispatcher.py").exists():\n                return candidate\n        except 
-Exception:\n            pass\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
+Exception:\n            [REDACTED]\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
   core\x92d_x90_rootdetect_fix.py:26:
   core\x92d_x90_rootdetect_fix.py:27:
   core\x92d_x90_rootdetect_fix.py:28:def now_ms() -> int:
@@ -3696,7 +3696,7 @@ os.environ.get("AI_LOCAL_OS_ROOT") or os.environ.get("AIOS_ROOT")\n    if explic
    candidates = [\n        Path("/app"),\n        Path(r"D:\\\\openwebui"),\n        
 Path(__file__).resolve().parent.parent,\n    ]\n\n    for candidate in candidates:\n        try:\n            if 
 (candidate / "core" / "x86_agent_bus.py").exists():\n                return candidate\n        except Exception:\n     
-       pass\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
+       [REDACTED]\n\n    return Path(r"D:\\\\openwebui")\n\n\nROOT = _resolve_aios_root()'
   core\x92e_x87_rootdetect_fix.py:26:
   core\x92e_x87_rootdetect_fix.py:27:
   core\x92e_x87_rootdetect_fix.py:28:def now_ms() -> int:
@@ -3789,9 +3789,9 @@ normalized.get("task"))
   core\x93_response_normalizer.py:55:            "raw": raw,
   core\x93_response_normalizer.py:56:        },
   core\x93_response_normalizer.py:58:
-  core\x93_response_normalizer.py:59:    for key in ("ts", "error", "request_id"):
-  core\x93_response_normalizer.py:60:        if key in root and key not in response:
-> core\x93_response_normalizer.py:61:            response[key] = root.get(key)
+  core\x93_response_normalizer.py:59:    for [REDACTED] in ("ts", "error", "request_id"):
+  core\x93_response_normalizer.py:60:        if [REDACTED] in root and [REDACTED] not in response:
+> core\x93_response_normalizer.py:61:            response[[REDACTED]] = root.get([REDACTED])
   core\x93_response_normalizer.py:62:
   core\x93_response_normalizer.py:63:    return response
   core\x93_response_normalizer.py:64:
@@ -3813,7 +3813,7 @@ worker_report.get("report_file") or worker_report.get("summary")
 > core\x96_master_planner_reviewer.py:133:    fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 
 0)
   core\x96_master_planner_reviewer.py:134:
-  core\x96_master_planner_reviewer.py:135:    decision = "PASS" if ok and evidence else "RETRY"
+  core\x96_master_planner_reviewer.py:135:    decision = "[REDACTED]" if ok and evidence else "RETRY"
   core\x96_master_planner_reviewer.py:136:    if needs_retry and fallback_calls_used < DEFAULT_FALLBACK_LIMIT:
   core\x96_master_planner_reviewer.py:178:    review = review_worker_report(plan["task_id"], fake_worker_report)
   core\x96_master_planner_reviewer.py:179:
@@ -3857,11 +3857,11 @@ else []
 === x87 dispatcher ===
 
 
-def _busmsg_get(message, key, default=None):
+def _busmsg_get(message, [REDACTED], default=None):
     """Safe getter for both dict payloads and BusMessage/dataclass-like objects."""
     if isinstance(message, dict):
-        return _busmsg_get(message, key, default)
-    return getattr(message, key, default)
+        return _busmsg_get(message, [REDACTED], default)
+    return getattr(message, [REDACTED], default)
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """X87B Autonomous Worker Dispatcher import fix for AI Local OS."""
@@ -3892,7 +3892,7 @@ def _resolve_aios_root() -> Path:
             if (candidate / "core" / "x86_agent_bus.py").exists():
                 return candidate
         except Exception:
-            pass
+            [REDACTED]
 
     return Path(r"D:\\openwebui")
 
@@ -3969,14 +3969,14 @@ def _x97e7_busmessage_to_dict(msg):
         if is_dataclass(msg):
             return asdict(msg)
     except Exception:
-        pass
+        [REDACTED]
     data = {}
-    for key in ("id", "ts", "from_role", "to_role", "task", "payload", "status"):
+    for [REDACTED] in ("id", "ts", "from_role", "to_role", "task", "payload", "status"):
         try:
-            if hasattr(msg, key):
-                data[key] = getattr(msg, key)
+            if hasattr(msg, [REDACTED]):
+                data[[REDACTED]] = getattr(msg, [REDACTED])
         except Exception:
-            pass
+            [REDACTED]
     if data:
         data.setdefault("_x97e7_normalized_from", type(msg).__name__)
         return data
@@ -4008,8 +4008,8 @@ class WorkerDispatcher:
         """Accept role fields used by planner variants."""
         if not isinstance(step, dict):
             return None
-        for key in ("role", "to_role", "worker_role", "agent_role", "name"):
-            val = _busmsg_get(step, key)
+        for [REDACTED] in ("role", "to_role", "worker_role", "agent_role", "name"):
+            val = _busmsg_get(step, [REDACTED])
             if isinstance(val, str) and val.strip():
                 return val.strip().upper()
         return None
@@ -4055,7 +4055,7 @@ class WorkerDispatcher:
                 if isinstance(task_obj, dict):
                     task_obj.setdefault("x97b2_dispatch_error", str(exc))
             except Exception:
-                pass
+                [REDACTED]
             return fallback
 
     def __init__(self) -> None:
@@ -4139,7 +4139,7 @@ class WorkerDispatcher:
             try:
                 result.setdefault("x97e_plan_propagation_error", str(exc))
             except Exception:
-                pass
+                [REDACTED]
         x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if x97e_plan_context else task
         next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, result)
         if result["ok"] and next_role:
@@ -4409,7 +4409,7 @@ class AgentBus:
 
     def list_messages(self, status: Optional[str] = None) -> List[Dict[str, Any]]:
         rows = []
-        for path in sorted(MESSAGES_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime):
+        for path in sorted(MESSAGES_DIR.glob("*.json"), [REDACTED]=lambda p: p.stat().st_mtime):
             item = load_json(path, {})
             if status and item.get("status") != status:
                 continue
@@ -4437,7 +4437,7 @@ class AgentBus:
         sent.append(asdict(self.send("SCOUT", "DEBUG", task, {"finding": "project/context collected"})))
         sent.append(asdict(self.send("DEBUG", "PATCHER", task, {"root_cause": "confirmed by real log", "evidence": "runtime/temp/*.txt"})))
         sent.append(asdict(self.send("PATCHER", "VERIFY", task, {"artifact": r"D:\openwebui\_patch_inbox\x86_agent_bus"})))
-        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "pass"})))
+        sent.append(asdict(self.send("VERIFY", "REPORT", task, {"verify": "[REDACTED]"})))
         report = {
             "ok": True,
             "release": "X86_AGENT_BUS",
@@ -4509,27 +4509,4 @@ def cli() -> int:
 
     if args.cmd == "consume":
         rows = bus.consume(args.role, args.limit)
-        print(json.dumps({"ok": True, "role": args.role.upper(), "count": len(rows), "messages": rows}, ensure_ascii=False, indent=2))
-        return 0
-
-    if args.cmd == "list":
-        rows = bus.list_messages(args.status)
-        print(json.dumps({"ok": True, "count": len(rows), "messages": rows}, ensure_ascii=False, indent=2))
-        return 0
-
-    if args.cmd == "demo-chain":
-        report = bus.demo_chain(args.task)
-        print(json.dumps(report, ensure_ascii=False, indent=2))
-        return 0
-
-    if args.cmd == "status":
-        print(json.dumps(bus.status(), ensure_ascii=False, indent=2))
-        return 0
-
-    parser.print_help()
-    return 2
-
-
-if __name__ == "__main__":
-    raise SystemExit(cli())
-
+        print(json.dumps({"ok": True, "role": args.role.upper(), "count": len(rows), "messages": rows}, ensure_ascii=False, inden

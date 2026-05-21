@@ -4,7 +4,7 @@
     "flow":  [
                  "WebUI/add_task",
                  "X15D adapter",
-                 "agent_con --ta[REDACTED]file",
+                 "agent_con --task-file",
                  "ollama",
                  "report"
              ],

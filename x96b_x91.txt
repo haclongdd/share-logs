@@ -60,7 +60,7 @@ def candidate_files() -> List[Path]:
         lowered = text.lower()
         if "add_task" in lowered or "/add_task" in lowered or "add-task" in lowered:
             found.append(path)
-    return sorted(set(found), key=lambda p: str(p).lower())
+    return sorted(set(found), [REDACTED]=lambda p: str(p).lower())
 
 
 def inspect_file(path: Path) -> Dict[str, Any]:
@@ -208,5 +208,4 @@ def cli() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(cli())
-
+    raise SystemExit(cli
