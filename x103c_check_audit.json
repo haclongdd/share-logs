@@ -1,0 +1,14 @@
+﻿{
+    "release":  "X103C_IMPORT_ORDER_REPAIR_CHECK",
+    "dispatcher":  "D:\\openwebui\\core\\x87_worker_dispatcher.py",
+    "starts_with_utf8_bom":  false,
+    "has_nul_byte":  false,
+    "future_import_count":  1,
+    "future_import_is_first_code":  true,
+    "x103_hook_still_present":  true,
+    "compile_ok":  true,
+    "compile_output":  "D:\\openwebui\\runtime\\temp\\x103c_check_compile_output.txt",
+    "source_audit_exists":  true,
+    "ok":  true
+}
+
