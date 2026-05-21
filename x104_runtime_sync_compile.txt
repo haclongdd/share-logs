@@ -1,0 +1,8 @@
+﻿docker : [Errno 2] No such file or directory: '/app/core/x91_addtask_bridge.py'
+At line:1 char:1
++ docker exec master_ai sh -lc "python -m py_compile /app/core/x90_webu ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([Errno 2] No su...task_bridge.py':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
