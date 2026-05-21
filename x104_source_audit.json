@@ -1,0 +1,43 @@
+﻿{
+  "release": "X104_CIRCULAR_SAFE_SERIALIZATION",
+  "root": "D:\\openwebui",
+  "ok": true,
+  "actions": [
+    "installed_core_x104_safe_json"
+  ],
+  "helper": {
+    "path": "D:\\openwebui\\core\\x104_safe_json.py",
+    "compile_ok": true,
+    "compile_output": "compile_ok"
+  },
+  "targets": [
+    {
+      "path": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+      "exists": true,
+      "patched": true,
+      "backup": "D:\\openwebui\\_backups\\x104_circular_safe_serialization\\x90_webui_agent_bridge.py.1779375867.bak",
+      "compile_ok": true,
+      "compile_output": "compile_ok",
+      "import_present": true,
+      "json_dumps_replaced": 4,
+      "json_dump_replaced": 0
+    },
+    {
+      "path": "D:\\openwebui\\core\\x91_master_ai_addtask_bridge.py",
+      "exists": true,
+      "patched": true,
+      "backup": "D:\\openwebui\\_backups\\x104_circular_safe_serialization\\x91_master_ai_addtask_bridge.py.1779375867.bak",
+      "compile_ok": true,
+      "compile_output": "compile_ok",
+      "import_present": true,
+      "json_dumps_replaced": 4,
+      "json_dump_replaced": 0
+    }
+  ],
+  "checks": {
+    "helper_compile_ok": true,
+    "target_compile_all_ok": true,
+    "any_target_patched_or_present": true,
+    "x90_target_exists": true
+  }
+}
