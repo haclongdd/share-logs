@@ -1,0 +1,12 @@
+﻿target=D:\openwebui\core\x87_worker_dispatcher.py
+changed=False
+has_dict_getter=True
+recursive_getter_removed=True
+corrupt_os_removed=True
+env_access_valid=True
+processed_total_self_state=True
+undefined_state_removed=True
+planner_roles_present=True
+old_patcher_required_absent=False
+context_file=D:\openwebui\runtime\temp\x97e9_source_context.txt
+
