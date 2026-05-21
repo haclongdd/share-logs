@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x82_retry_quarantine_engine",
-  "stage": "apply_check_[REDACTED]",
+  "stage": "apply_check_pass",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,25 +53,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x82_retry_quarantine_engine\\apply_x82_retry_quarantine_engine.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] X82 retry quarantine engine installed: D:\\openwebui\\core\\x82_retry_quarantine_engine.py\n",
+    "stdout": "[PASS] X82 retry quarantine engine installed: D:\\openwebui\\core\\x82_retry_quarantine_engine.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x82_retry_quarantine_engine\\x82_retry_quarantine_engine_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "{   \"ok\": true,   \"stage\": \"preflight\",   \"orchestrator\": \"X82_RETRY_QUARANTINE_ENGINE\",   \"root\": \"D:\\\\openwebui\",   \"queued\": 0,   \"done\": 1,   \"failed\": 0,   \"quarantine\": 0,   \"x80_exists\": true,   \"created_at\": \"2026-05-20T14:08:41\" }\n[[REDACTED]] X82 preflight [REDACTED]\n[INFO] Smoke:\npython D:/openwebui/core/x82_retry_quarantine_engine.py retry-failed --limit 5 --max-attempts 2 --execute\n",
+    "stdout": "{   \"ok\": true,   \"stage\": \"preflight\",   \"orchestrator\": \"X82_RETRY_QUARANTINE_ENGINE\",   \"root\": \"D:\\\\openwebui\",   \"queued\": 0,   \"done\": 1,   \"failed\": 0,   \"quarantine\": 0,   \"x80_exists\": true,   \"created_at\": \"2026-05-20T14:08:41\" }\n[PASS] X82 preflight PASS\n[INFO] Smoke:\npython D:/openwebui/core/x82_retry_quarantine_engine.py retry-failed --limit 5 --max-attempts 2 --execute\n",
     "stderr": ""
   },
-  "false_[REDACTED]_guard": true
+  "false_pass_guard": true
 }

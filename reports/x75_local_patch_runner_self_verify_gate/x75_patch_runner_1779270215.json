@@ -15,11 +15,11 @@
         ],
         "returncode": 1,
         "stdout": "",
-        "stderr": "Exception calling \"Create\" with \"1\" argument(s): \"At line:1 char:32\n+ $ErrorActionPreference = \"Stop\"\\n$Root = \"D:\\\\openwebui\"\\n$Patch = Jo ...\n+                                ~~~~~~~\nUnexpected [REDACTED] '\\n$Root' in expression or statement.\"\nAt line:1 char:36\n+ ...  = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : ParseException\n \n"
+        "stderr": "Exception calling \"Create\" with \"1\" argument(s): \"At line:1 char:32\n+ $ErrorActionPreference = \"Stop\"\\n$Root = \"D:\\\\openwebui\"\\n$Patch = Jo ...\n+                                ~~~~~~~\nUnexpected token '\\n$Root' in expression or statement.\"\nAt line:1 char:36\n+ ...  = [Console]::In.ReadToEnd(); [scriptblock]::Create($code) | Out-Null\n+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException\n    + FullyQualifiedErrorId : ParseException\n \n"
       }
     }
   ],
   "apply": null,
   "check": null,
-  "false_[REDACTED]_guard": true
+  "false_pass_guard": true
 }

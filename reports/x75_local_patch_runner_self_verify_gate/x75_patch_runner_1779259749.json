@@ -1,7 +1,7 @@
 {
   "ok": true,
   "patch": "D:\\openwebui\\_patch_inbox\\x80_queue_patch_executor",
-  "stage": "apply_check_[REDACTED]",
+  "stage": "apply_check_pass",
   "checks": [
     {
       "type": "ps_syntax",
@@ -53,25 +53,25 @@
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x80_queue_patch_executor\\apply_x80_queue_patch_executor.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] X80 queue executor installed: D:\\openwebui\\core\\x80_queue_patch_executor.py\n",
+    "stdout": "[PASS] X80 queue executor installed: D:\\openwebui\\core\\x80_queue_patch_executor.py\n",
     "stderr": ""
   },
   "check": {
     "cmd": [
       "powershell",
       "-ExecutionPolicy",
-      "By[REDACTED]",
+      "Bypass",
       "-File",
       "D:\\openwebui\\_patch_inbox\\x80_queue_patch_executor\\x80_queue_patch_executor_check.ps1"
     ],
     "returncode": 0,
-    "stdout": "[[REDACTED]] X80 status preflight [REDACTED]\n[INFO] Next smoke:\npython D:/openwebui/core/x80_queue_patch_executor.py enqueue --name x80_probe_python_component --template python_component --execute\npython D:/openwebui/core/x80_queue_patch_executor.py run-once --limit 1\n",
+    "stdout": "[PASS] X80 status preflight PASS\n[INFO] Next smoke:\npython D:/openwebui/core/x80_queue_patch_executor.py enqueue --name x80_probe_python_component --template python_component --execute\npython D:/openwebui/core/x80_queue_patch_executor.py run-once --limit 1\n",
     "stderr": ""
   },
-  "false_[REDACTED]_guard": true
+  "false_pass_guard": true
 }

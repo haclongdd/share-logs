@@ -27,8 +27,8 @@
 > core\x87_worker_dispatcher.py:121:        """Accept role fields used by planner variants."""
   core\x87_worker_dispatcher.py:122:        if not isinstance(step, dict):
   core\x87_worker_dispatcher.py:123:            return None
-> core\x87_worker_dispatcher.py:124:        for key in ("role", "to_role", "worker_role", "agent_role", "name"):
-  core\x87_worker_dispatcher.py:125:            val = step.get(key)
+> core\x87_worker_dispatcher.py:124:        for [REDACTED] in ("role", "to_role", "worker_role", "agent_role", "name"):
+  core\x87_worker_dispatcher.py:125:            val = step.get([REDACTED])
   core\x87_worker_dispatcher.py:126:            if isinstance(val, str) and val.strip():
   core\x87_worker_dispatcher.py:128:        return None
   core\x87_worker_dispatcher.py:129:
@@ -112,7 +112,7 @@ payload."
 > core\x87_worker_dispatcher.py:235:            result["summary"] = f"No worker handler for role {to_role}"
   core\x87_worker_dispatcher.py:236:            result["output_payload"] = {"source_message": msg.get("id")}
   core\x87_worker_dispatcher.py:237:
-  core\x87_worker_dispatcher.py:251:                pass
+  core\x87_worker_dispatcher.py:251:                [REDACTED]
   core\x87_worker_dispatcher.py:252:        x97e_task_for_route = {"task": task, "x96_plan": x97e_plan_context} if 
 x97e_plan_context else task
 > core\x87_worker_dispatcher.py:253:        next_role = self._x97b2_resolve_next_role(x97e_task_for_route, to_role, 
