@@ -1,0 +1,27 @@
+﻿{
+    "release":  "X104B_CIRCULAR_TRACE_DIAGNOSTIC_CHECK",
+    "required_missing":  [
+                             "x104b_apply_log.txt",
+                             "x104b_diagnostic_audit.json",
+                             "x104b_trace_commands.txt",
+                             "x104b_serialization_grep.txt",
+                             "x104b_docker_ps.txt",
+                             "x104b_container_audit.txt",
+                             "x104b_latest_reports.txt",
+                             "x104b_latest_report_snapshot.json",
+                             "x104b_add_task_response.json"
+                         ],
+    "required_zero":  [
+
+                      ],
+    "diagnostic_audit_parse_ok":  true,
+    "container_has_x104_safe_json":  false,
+    "container_has_safe_json_dumps":  false,
+    "grep_has_json_dumps":  false,
+    "grep_has_normalizer":  false,
+    "latest_has_circular_reference":  false,
+    "latest_has_master_review_result":  false,
+    "latest_has_final_decision":  false,
+    "ok":  false
+}
+
