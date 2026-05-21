@@ -7,5 +7,5 @@ removed_existing__x97e7_busmessage_to_dict
 inserted_clean_helpers_after_imports
 replaced__busmsg_get(state, "processed_total", 0)
 converted_msg_dot_get
-[PASS] X97E7D recovered compile-safe x87_worker_dispatcher.py
+[[REDACTED]] X97E7D recovered compile-safe x87_worker_dispatcher.py
 
