@@ -1,116 +1,128 @@
 ﻿{
-    "schema":  "ai-local-os-log-manifest-v1",
-    "generated_at_utc":  "2026-05-21T14:27:37.7430426Z",
-    "generated_at_local":  "2026-05-21T21:27:37.7436652+07:00",
-    "share_dir":  "D:\\openwebui\\runtime\\share_logs",
-    "latest":  "x93c_docker_ps_a.txt",
-    "recent_count":  15,
+    "updated_at":  "2026-05-21T21:27:51.6475538+07:00",
+    "tool":  "x99d_logsync_clean",
+    "latest":  "x101c_check_log.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_check_log.txt",
     "recent":  [
                    {
-                       "path":  "x93c_docker_ps_a.txt",
-                       "name":  "x93c_docker_ps_a.txt",
-                       "kind":  "log",
-                       "size_bytes":  3252,
-                       "modified_utc":  "2026-05-21T14:27:37.6544346Z"
+                       "name":  "x101c_check_log.txt",
+                       "size":  118,
+                       "modified_at":  "2026-05-21T21:20:55.5132488+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_check_log.txt"
                    },
                    {
-                       "path":  "x93c_restart_count.txt",
-                       "name":  "x93c_restart_count.txt",
-                       "kind":  "log",
-                       "size_bytes":  8,
-                       "modified_utc":  "2026-05-21T14:27:37.6532671Z"
+                       "name":  "x101c_check_source_audit.txt",
+                       "size":  108,
+                       "modified_at":  "2026-05-21T21:20:55.5019242+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_check_source_audit.txt"
                    },
                    {
-                       "path":  "x93c_docker_events.txt",
-                       "name":  "x93c_docker_events.txt",
-                       "kind":  "log",
-                       "size_bytes":  541110,
-                       "modified_utc":  "2026-05-21T14:27:37.6519890Z"
+                       "name":  "x101c_check_compile_log.txt",
+                       "size":  0,
+                       "modified_at":  "2026-05-21T21:20:55.3454290+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_check_compile_log.txt"
                    },
                    {
-                       "path":  "x93c_route_extract.txt",
-                       "name":  "x93c_route_extract.txt",
-                       "kind":  "log",
-                       "size_bytes":  25080,
-                       "modified_utc":  "2026-05-21T14:27:37.6271353Z"
+                       "name":  "x101c_apply_wrapper_log.txt",
+                       "size":  864,
+                       "modified_at":  "2026-05-21T21:20:53.9507925+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_apply_wrapper_log.txt"
                    },
                    {
-                       "path":  "x93d_apply_log.txt",
-                       "name":  "x93d_apply_log.txt",
-                       "kind":  "apply",
-                       "size_bytes":  2400,
-                       "modified_utc":  "2026-05-21T14:27:37.6248165Z"
+                       "name":  "x101c_apply_log.txt",
+                       "size":  625,
+                       "modified_at":  "2026-05-21T21:20:53.9417596+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_apply_log.txt"
                    },
                    {
-                       "path":  "x93d_live_response.txt",
-                       "name":  "x93d_live_response.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  5,
-                       "modified_utc":  "2026-05-21T14:27:37.6237093Z"
+                       "name":  "x101c_source_audit.txt",
+                       "size":  329,
+                       "modified_at":  "2026-05-21T21:20:53.9406326+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_source_audit.txt"
                    },
                    {
-                       "path":  "x93d_live_response_after_restart.txt",
-                       "name":  "x93d_live_response_after_restart.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  29907,
-                       "modified_utc":  "2026-05-21T14:27:37.6225522Z"
+                       "name":  "x101c_compile_log.txt",
+                       "size":  0,
+                       "modified_at":  "2026-05-21T21:20:53.9396356+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101c_compile_log.txt"
                    },
                    {
-                       "path":  "x93e_live_smoke.txt",
-                       "name":  "x93e_live_smoke.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  29669,
-                       "modified_utc":  "2026-05-21T14:27:37.6199074Z"
+                       "name":  "x101b_report_block_context.txt",
+                       "size":  6042,
+                       "modified_at":  "2026-05-21T21:13:44.2216731+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101b_report_block_context.txt"
                    },
                    {
-                       "path":  "x94_docker_ps.txt",
-                       "name":  "x94_docker_ps.txt",
-                       "kind":  "log",
-                       "size_bytes":  2650,
-                       "modified_utc":  "2026-05-21T14:27:37.6180750Z"
+                       "name":  "x101b_check_log.txt",
+                       "size":  89,
+                       "modified_at":  "2026-05-21T21:11:48.1324872+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101b_check_log.txt"
                    },
                    {
-                       "path":  "x94_live_smoke.txt",
-                       "name":  "x94_live_smoke.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  29767,
-                       "modified_utc":  "2026-05-21T14:27:37.6168166Z"
+                       "name":  "x101b_check_source_audit.txt",
+                       "size":  159,
+                       "modified_at":  "2026-05-21T21:11:48.0978175+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101b_check_source_audit.txt"
                    },
                    {
-                       "path":  "x96_docs_dir_log.txt",
-                       "name":  "x96_docs_dir_log.txt",
-                       "kind":  "log",
-                       "size_bytes":  409,
-                       "modified_utc":  "2026-05-21T14:27:37.6144503Z"
+                       "name":  "x101b_check_compile_log.txt",
+                       "size":  0,
+                       "modified_at":  "2026-05-21T21:11:47.9261314+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101b_check_compile_log.txt"
                    },
                    {
-                       "path":  "x96_roadmap_save_log.txt",
-                       "name":  "x96_roadmap_save_log.txt",
-                       "kind":  "log",
-                       "size_bytes":  414,
-                       "modified_utc":  "2026-05-21T14:27:37.6132143Z"
+                       "name":  "x101b_apply_log.txt",
+                       "size":  287,
+                       "modified_at":  "2026-05-21T21:11:47.2203209+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101b_apply_log.txt"
                    },
                    {
-                       "path":  "x96a_master_planner_scan.txt",
-                       "name":  "x96a_master_planner_scan.txt",
-                       "kind":  "scan",
-                       "size_bytes":  529516,
-                       "modified_utc":  "2026-05-21T14:27:37.6119909Z"
+                       "name":  "x101a_check_log.txt",
+                       "size":  90,
+                       "modified_at":  "2026-05-21T21:00:03.0116057+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101a_check_log.txt"
                    },
                    {
-                       "path":  "x96a_core_files.txt",
-                       "name":  "x96a_core_files.txt",
-                       "kind":  "log",
-                       "size_bytes":  10847,
-                       "modified_utc":  "2026-05-21T14:27:37.5872794Z"
+                       "name":  "x101a_master_review_scan.txt",
+                       "size":  26928,
+                       "modified_at":  "2026-05-21T21:00:01.5409251+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101a_master_review_scan.txt"
                    },
                    {
-                       "path":  "x96a_roadmap_confirm.txt",
-                       "name":  "x96a_roadmap_confirm.txt",
-                       "kind":  "log",
-                       "size_bytes":  2297,
-                       "modified_utc":  "2026-05-21T14:27:37.5857282Z"
+                       "name":  "x101a_apply_log.txt",
+                       "size":  77,
+                       "modified_at":  "2026-05-21T21:00:01.3357492+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x101a_apply_log.txt"
+                   },
+                   {
+                       "name":  "x99e_unified_runtime_log.txt",
+                       "size":  8052,
+                       "modified_at":  "2026-05-21T20:33:50.6957038+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x99e_unified_runtime_log.txt"
+                   },
+                   {
+                       "name":  "x99e_check_log.txt",
+                       "size":  167,
+                       "modified_at":  "2026-05-21T20:18:57.1608690+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x99e_check_log.txt"
+                   },
+                   {
+                       "name":  "x99e_check_once_dry_run.txt",
+                       "size":  600,
+                       "modified_at":  "2026-05-21T20:18:57.1305842+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x99e_check_once_dry_run.txt"
+                   },
+                   {
+                       "name":  "x99e_check_source_audit.txt",
+                       "size":  88,
+                       "modified_at":  "2026-05-21T20:18:56.0310680+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x99e_check_source_audit.txt"
+                   },
+                   {
+                       "name":  "x99e_check_compile_log.txt",
+                       "size":  0,
+                       "modified_at":  "2026-05-21T20:18:55.8729352+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x99e_check_compile_log.txt"
                    }
-               ],
-    "raw_base":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/"
+               ]
 }
