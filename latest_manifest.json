@@ -1,9 +1,21 @@
 ﻿{
-    "updated_at":  "2026-05-22T08:33:43.3047860+07:00",
+    "updated_at":  "2026-05-22T08:33:57.8991916+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x108g_check_log_export.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x108g_check_log_export.txt",
+    "latest":  "x108g2_check_log.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x108g2_check_log.txt",
     "recent":  [
+                   {
+                       "name":  "x108g2_check_log.txt",
+                       "size":  4127,
+                       "modified_at":  "2026-05-22T08:33:47.4250113+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x108g2_check_log.txt"
+                   },
+                   {
+                       "name":  "x108g2_apply_log.txt",
+                       "size":  4781,
+                       "modified_at":  "2026-05-22T08:33:46.6714964+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x108g2_apply_log.txt"
+                   },
                    {
                        "name":  "x108g_check_log_export.txt",
                        "size":  57,
@@ -111,18 +123,6 @@
                        "size":  8958,
                        "modified_at":  "2026-05-21T22:53:43.7568209+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104f_x91_adapter.txt"
-                   },
-                   {
-                       "name":  "x104e_docker_logs.txt",
-                       "size":  14838,
-                       "modified_at":  "2026-05-21T22:51:13.6094329+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104e_docker_logs.txt"
-                   },
-                   {
-                       "name":  "x104e_x15d_lines.txt",
-                       "size":  5260,
-                       "modified_at":  "2026-05-21T22:51:12.7254850+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x104e_x15d_lines.txt"
                    }
                ]
 }
