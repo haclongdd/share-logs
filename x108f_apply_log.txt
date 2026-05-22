@@ -1,0 +1,16 @@
+﻿[X108F] apply start 2026-05-22T08:27:32.9759022+07:00
+{
+    "release":  "X108F_PERSIST_X108E_RELEASE_HOTFIX",
+    "root":  "D:\\openwebui",
+    "target":  "D:\\openwebui\\core\\master_ai_bridge.py",
+    "backup":  "D:\\openwebui\\_backups\\x108f_persist_x108e_release_hotfix\\master_ai_bridge.py.20260522T012732Z.bak",
+    "changed":  true,
+    "compile":  "PASS",
+    "has_bad_release_ref":  false,
+    "has_good_release_literal":  true,
+    "has_marker":  true,
+    "container_status":  "COPIED_AND_COMPILED",
+    "ok":  true
+}
+[X108F] apply done 2026-05-22T08:27:34.1124594+07:00
+
