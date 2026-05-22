@@ -1,0 +1,7 @@
+﻿MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+MASTER AI BRIDGE Phase X1G unified runtime consolidation starting on port 5000
+ * Serving Flask app 'master_ai_bridge'
+ * Debug mode: off
+
