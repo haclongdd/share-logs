@@ -1,0 +1,28 @@
+﻿[X108F] check start 2026-05-22T08:27:34.6812653+07:00
+{
+    "release":  "X108F_PERSIST_X108E_RELEASE_HOTFIX",
+    "root":  "D:\\openwebui",
+    "target":  "D:\\openwebui\\core\\master_ai_bridge.py",
+    "host":  {
+                 "compile":  "PASS",
+                 "has_bad_release_ref":  false,
+                 "has_good_release_literal":  true,
+                 "has_marker":  true
+             },
+    "container":  {
+                      "checked":  true,
+                      "has_bad_release_ref":  [
+
+                                              ],
+                      "has_good_release_literal":  [
+                                                       "HAS_GOOD_RELEASE_LITERAL True"
+                                                   ],
+                      "has_marker":  [
+                                         "HAS_X108F_MARKER True"
+                                     ],
+                      "compile":  "PASS"
+                  },
+    "ok":  true
+}
+[X108F] check done 2026-05-22T08:27:35.7296022+07:00
+
