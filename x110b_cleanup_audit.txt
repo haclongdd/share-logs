@@ -1,0 +1,51 @@
+﻿=== TOP FOLDERS BY SIZE ===
+
+Folder                                SizeMB
+------                                ------
+D:\openwebui\ollama_data            13017.04
+D:\openwebui\data                    1032.84
+D:\openwebui\.git                     809.91
+D:\openwebui\archive                  111.25
+D:\openwebui\runtime                   65.26
+D:\openwebui\_milestone_backups        56.08
+D:\openwebui\_archive_final_cleanup     6.73
+D:\openwebui\logs                       6.67
+D:\openwebui\_backups                    2.9
+D:\openwebui\core                        2.6
+D:\openwebui\_patch_inbox               1.79
+D:\openwebui\_cleanup_archive           1.39
+D:\openwebui\_checkpoints               1.05
+D:\openwebui\release                    0.73
+D:\openwebui\Dopenwebui               0.66
+D:\openwebui\workspace                  0.49
+D:\openwebui\_archive_stabilization      0.2
+D:\openwebui\scripts                    0.08
+D:\openwebui\tools                      0.07
+D:\openwebui\project_v4_1               0.05
+D:\openwebui\backups                    0.05
+D:\openwebui\docs                       0.03
+D:\openwebui\ai_local_os_x5             0.02
+D:\openwebui\_phase2_control            0.02
+D:\openwebui\_docs                      0.01
+D:\openwebui\services                   0.01
+D:\openwebui\config                     0.01
+D:\openwebui\ai_local_os_x7             0.01
+D:\openwebui\ai_local_os_x8             0.01
+D:\openwebui\ai_local_os_x6             0.01
+D:\openwebui\__pycache__                0.01
+D:\openwebui\ai_local_os_x9             0.01
+D:\openwebui\agents                     0.01
+D:\openwebui\ai_local_os_x10               0
+D:\openwebui\ai_local_os_x11               0
+D:\openwebui\models                        0
+D:\openwebui\memory                        0
+D:\openwebui\plugins                       0
+D:\openwebui\Dopenwebui                 0
+D:\openwebui\sandbox                       0
+D:\openwebui\configs                       0
+
+
+
+=== OBVIOUS CLEANUP CANDIDATES ===
+
+
