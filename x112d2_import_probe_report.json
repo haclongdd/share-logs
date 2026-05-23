@@ -1,0 +1,31 @@
+﻿{
+  "ok": true,
+  "phase": "X112D2_CONTROLLED_IMPORT_RETRY",
+  "results": [
+    {
+      "target_file": "core/x90_webui_agent_bridge.py",
+      "target_symbol": "run_agent_flow",
+      "exists": true,
+      "import_ok": true,
+      "symbol": {
+        "found": false,
+        "callable": false,
+        "reason": "symbol_not_found"
+      },
+      "error": null
+    },
+    {
+      "target_file": "core/master_ai_bridge.py",
+      "target_symbol": "add_task",
+      "exists": true,
+      "import_ok": true,
+      "symbol": {
+        "found": true,
+        "callable": true,
+        "type": "function",
+        "signature": "()"
+      },
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+﻿X112D2 CONTROLLED IMPORT RETRY
+
+target=core/x90_webui_agent_bridge.py::run_agent_flow
+exists=True
+import_ok=True
+symbol_found=False
+callable=False
+signature=None
+
+target=core/master_ai_bridge.py::add_task
+exists=True
+import_ok=True
+symbol_found=True
+callable=True
+signature=()
+
