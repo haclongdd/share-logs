@@ -1,0 +1,46 @@
+﻿
+=== FILE ===
+D:\openwebui\runtime\reports\x103_master_review_result_1779546826966.json
+
+=== FULL CONTENT ===
+{
+  "ok": false,
+  "release": "X103_MASTER_REVIEW_RUNTIME_HANDOFF",
+  "stage": "REPORT_TO_X96_REVIEW",
+  "reviewer": "x96.review_worker_report",
+  "final_decider": "MASTER",
+  "master_is_worker_role": false,
+  "ts_ms": 1779546826966,
+  "error": "review_worker_report() missing 1 required positional argument: 'task_id'",
+  "traceback": "Traceback (most recent call last):\n  File \"/app/core/x103_master_review_handoff.py\", line 90, in review_report_from_report_stage\n    review = fn(ctx)\n             ^^^^^^^\nTypeError: review_worker_report() missing 1 required positional argument: 'worker_report'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/app/core/x103_master_review_handoff.py\", line 93, in review_report_from_report_stage\n    review = fn(report=ctx)\n             ^^^^^^^^^^^^^^\nTypeError: review_worker_report() got an unexpected keyword argument 'report'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/app/core/x103_master_review_handoff.py\", line 95, in review_report_from_report_stage\n    review = fn(worker_report=ctx)\n             ^^^^^^^^^^^^^^^^^^^^^\nTypeError: review_worker_report() missing 1 required positional argument: 'task_id'\n",
+  "report_file": "/app/runtime/reports/x103_master_review_result_1779546826966.json"
+}
+
+=== SEARCH TASK_ID REFERENCES ===
+
+>         task_id = None
+  
+          if isinstance(ctx, dict):
+>             task_id = (
+>                 ctx.get("task_id")
+>                 or ctx.get("x96_task_id")
+>                 or ctx.get("x96_plan", {}).get("task_id")
+              )
+  
+>             if task_id is None:
+                  nested = ctx.get("input_payload", {}).get("x96_plan")
+                  if isinstance(nested, dict):
+>                     task_id = nested.get("task_id")
+  
+>         if task_id is not None:
+              try:
+>                 review = fn(task_id, ctx)
+              except TypeError:
+>                 review = fn(task_id=task_id, worker_report=ctx)
+          else:
+              try:
+                  review = fn(ctx)
+
+
+
+
