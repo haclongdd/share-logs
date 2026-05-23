@@ -1,0 +1,49 @@
+﻿X112F WEBUIAGENTBRIDGE SURFACE
+target=D:\openwebui\core\x90_webui_agent_bridge.py
+class_found=True
+method_count=34
+
+LIKELY DISPATCH METHODS:
+
+process_request(self, request: 'Dict[str, Any]') -> 'Dict[str, Any]'
+run_agent_flow(self, task: 'str') -> 'Dict[str, Any]'
+run_sandbox_flow(self, task: 'str', payload: 'Dict[str, Any]') -> 'Dict[str, Any]'
+run_scheduler_flow(self, task: 'str', payload: 'Dict[str, Any]') -> 'Dict[str, Any]'
+
+ALL METHODS:
+
+__class__signature_error:ValueError:no signature found for builtin <class 'type'>
+__delattr__(self, name, /)
+__dir__(self, /)
+__eq__(self, value, /)
+__format__(self, format_spec, /)
+__ge__(self, value, /)
+__getattribute__(self, name, /)
+__getstate__(self, /)
+__gt__(self, value, /)
+__hash__(self, /)
+__init__(self) -> 'None'
+__init_subclass__()
+__le__(self, value, /)
+__lt__(self, value, /)
+__ne__(self, value, /)
+__new__(*args, **kwargs)
+__reduce__(self, /)
+__reduce_ex__(self, protocol, /)
+__repr__(self, /)
+__setattr__(self, name, value, /)
+__sizeof__(self, /)
+__str__(self, /)
+__subclasshook__(object, /)
+dependency_status(self) -> 'Dict[str, Any]'
+latest_response(self) -> 'Dict[str, Any]'
+process_request(self, request: 'Dict[str, Any]') -> 'Dict[str, Any]'
+request_path(self, request_id: 'str') -> 'Path'
+response_path(self, request_id: 'str') -> 'Path'
+run_agent_flow(self, task: 'str') -> 'Dict[str, Any]'
+run_sandbox_flow(self, task: 'str', payload: 'Dict[str, Any]') -> 'Dict[str, Any]'
+run_scheduler_flow(self, task: 'str', payload: 'Dict[str, Any]') -> 'Dict[str, Any]'
+save(self) -> 'None'
+status(self) -> 'Dict[str, Any]'
+submit(self, task: 'str', mode: 'str' = 'agent', payload: 'Optional[Dict[str, Any]]' = None) -> 'Dict[str, Any]'
+

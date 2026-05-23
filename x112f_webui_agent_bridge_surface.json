@@ -1,0 +1,278 @@
+﻿{
+  "ok": true,
+  "phase": "X112F_WEBUI_AGENT_BRIDGE_SURFACE",
+  "target": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+  "class_found": true,
+  "method_count": 34,
+  "attr_count": 6,
+  "methods": [
+    {
+      "name": "__class__",
+      "callable": true,
+      "private": true,
+      "type": "type",
+      "signature": "signature_error:ValueError:no signature found for builtin <class 'type'>"
+    },
+    {
+      "name": "__delattr__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, name, /)"
+    },
+    {
+      "name": "__dir__",
+      "callable": true,
+      "private": true,
+      "type": "method_descriptor",
+      "signature": "(self, /)"
+    },
+    {
+      "name": "__eq__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, value, /)"
+    },
+    {
+      "name": "__format__",
+      "callable": true,
+      "private": true,
+      "type": "method_descriptor",
+      "signature": "(self, format_spec, /)"
+    },
+    {
+      "name": "__ge__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, value, /)"
+    },
+    {
+      "name": "__getattribute__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, name, /)"
+    },
+    {
+      "name": "__getstate__",
+      "callable": true,
+      "private": true,
+      "type": "method_descriptor",
+      "signature": "(self, /)"
+    },
+    {
+      "name": "__gt__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, value, /)"
+    },
+    {
+      "name": "__hash__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, /)"
+    },
+    {
+      "name": "__init__",
+      "callable": true,
+      "private": true,
+      "type": "function",
+      "signature": "(self) -> 'None'"
+    },
+    {
+      "name": "__init_subclass__",
+      "callable": true,
+      "private": true,
+      "type": "builtin_function_or_method",
+      "signature": "()"
+    },
+    {
+      "name": "__le__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, value, /)"
+    },
+    {
+      "name": "__lt__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, value, /)"
+    },
+    {
+      "name": "__ne__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, value, /)"
+    },
+    {
+      "name": "__new__",
+      "callable": true,
+      "private": true,
+      "type": "builtin_function_or_method",
+      "signature": "(*args, **kwargs)"
+    },
+    {
+      "name": "__reduce__",
+      "callable": true,
+      "private": true,
+      "type": "method_descriptor",
+      "signature": "(self, /)"
+    },
+    {
+      "name": "__reduce_ex__",
+      "callable": true,
+      "private": true,
+      "type": "method_descriptor",
+      "signature": "(self, protocol, /)"
+    },
+    {
+      "name": "__repr__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, /)"
+    },
+    {
+      "name": "__setattr__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, name, value, /)"
+    },
+    {
+      "name": "__sizeof__",
+      "callable": true,
+      "private": true,
+      "type": "method_descriptor",
+      "signature": "(self, /)"
+    },
+    {
+      "name": "__str__",
+      "callable": true,
+      "private": true,
+      "type": "wrapper_descriptor",
+      "signature": "(self, /)"
+    },
+    {
+      "name": "__subclasshook__",
+      "callable": true,
+      "private": true,
+      "type": "builtin_function_or_method",
+      "signature": "(object, /)"
+    },
+    {
+      "name": "dependency_status",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self) -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "latest_response",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self) -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "process_request",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, request: 'Dict[str, Any]') -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "request_path",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, request_id: 'str') -> 'Path'"
+    },
+    {
+      "name": "response_path",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, request_id: 'str') -> 'Path'"
+    },
+    {
+      "name": "run_agent_flow",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, task: 'str') -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "run_sandbox_flow",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, task: 'str', payload: 'Dict[str, Any]') -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "run_scheduler_flow",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, task: 'str', payload: 'Dict[str, Any]') -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "save",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self) -> 'None'"
+    },
+    {
+      "name": "status",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self) -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "submit",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, task: 'str', mode: 'str' = 'agent', payload: 'Optional[Dict[str, Any]]' = None) -> 'Dict[str, Any]'"
+    }
+  ],
+  "likely_dispatch_methods": [
+    {
+      "name": "process_request",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, request: 'Dict[str, Any]') -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "run_agent_flow",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, task: 'str') -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "run_sandbox_flow",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, task: 'str', payload: 'Dict[str, Any]') -> 'Dict[str, Any]'"
+    },
+    {
+      "name": "run_scheduler_flow",
+      "callable": true,
+      "private": false,
+      "type": "function",
+      "signature": "(self, task: 'str', payload: 'Dict[str, Any]') -> 'Dict[str, Any]'"
+    }
+  ]
+}
