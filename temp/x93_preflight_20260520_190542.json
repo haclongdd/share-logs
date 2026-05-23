@@ -1,8 +1,0 @@
-﻿{
-    "patch":  "x93_webui_response_normalizer",
-    "root":  "D:\\openwebui",
-    "target_exists":  true,
-    "has_x91_marker":  true,
-    "has_jsonify":  true,
-    "already_x93":  false
-}

@@ -1,9 +1,0 @@
-﻿target=D:\openwebui\core\x87_worker_dispatcher.py
-has_patcher_role=False
-old_patcher_required_absent=True
-has_scout_cycle=True
-has_cli_default=True
-has_route_scout_debug=True
-has_route_debug_verify=True
-has_route_verify_report=True
-has_scout_branch=True
