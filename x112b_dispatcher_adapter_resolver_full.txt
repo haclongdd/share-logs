@@ -1,0 +1,11 @@
+﻿python :   File "D:\openwebui\experimental\scanners\x112b_dispatcher_adapter_resolver.py", line 26
+At line:1 char:1
++ python .\experimental\scanners\x112b_dispatcher_adapter_resolver.py * ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "D:\open...er.py", line 26:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    return f"  \
+           ^
+SyntaxError: unterminated f-string literal (detected at line 27)
+
