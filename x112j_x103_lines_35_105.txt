@@ -1,0 +1,46 @@
+﻿            return mod, p
+    raise RuntimeError("Cannot find X96 module containing review_worker_report()")
+
+
+def review_report_from_report_stage(report_context: Any, root: str | None = None) -> Dict[str, Any]:
+    root_path = Path(root or r"D:\openwebui")
+    out_dir = root_path / "runtime" / "reports"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    ts = int(time.time() * 1000)
+    result: Dict[str, Any] = {
+        "ok": False,
+        "release": RELEASE,
+        "stage": "REPORT_TO_X96_REVIEW",
+        "reviewer": "x96.review_worker_report",
+        "final_decider": "MASTER",
+        "master_is_worker_role": False,
+        "ts_ms": ts,
+    }
+    try:
+        mod, mod_path = _load_x96(root_path)
+        fn = getattr(mod, "review_worker_report")
+        ctx = _jsonable(report_context)
+        try:
+            review = fn(ctx)
+        except TypeError:
+            try:
+                review = fn(report=ctx)
+            except TypeError:
+                review = fn(worker_report=ctx)
+        result.update({
+            "ok": True,
+            "x96_module": str(mod_path),
+            "master_review_result": _jsonable(review),
+            "final_decision": (_jsonable(review).get("final_decision") if isinstance(_jsonable(review), dict) else None),
+        })
+    except Exception as exc:
+        result.update({
+            "ok": False,
+            "error": str(exc),
+            "traceback": traceback.format_exc(),
+        })
+    report_file = out_dir / f"x103_master_review_result_{ts}.json"
+    result["report_file"] = str(report_file)
+    report_file.write_text(safe_json_dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    return result
+
