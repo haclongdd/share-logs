@@ -1,0 +1,31 @@
+﻿{
+  "ok": true,
+  "target": "D:\\openwebui\\core\\x103_master_review_handoff.py",
+  "backup": "D:\\openwebui\\_backups\\x112j_master_review_handoff_contract\\x103_master_review_handoff.py.20260523T124643Z.bak",
+  "before_functions": [
+    {
+      "name": "_jsonable",
+      "line": 14,
+      "args": [
+        "obj"
+      ]
+    },
+    {
+      "name": "_load_x96",
+      "line": 26,
+      "args": [
+        "root"
+      ]
+    },
+    {
+      "name": "review_report_from_report_stage",
+      "line": 40,
+      "args": [
+        "report_context",
+        "root"
+      ]
+    }
+  ],
+  "patched": true,
+  "error": null
+}

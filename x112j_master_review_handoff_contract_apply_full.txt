@@ -1,0 +1,6 @@
+﻿X112J MASTER REVIEW HANDOFF CONTRACT PATCH
+ok=True
+target=D:\openwebui\core\x103_master_review_handoff.py
+backup=D:\openwebui\_backups\x112j_master_review_handoff_contract\x103_master_review_handoff.py.20260523T124643Z.bak
+patched=True
+
