@@ -1,20 +1,116 @@
 ﻿{
-    "updated_at":  "2026-05-23T18:47:52.8442172+07:00",
-    "tool":  "x99d_logsync_clean",
-    "latest":  "x112_dispatcher_adapter_probe.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112_dispatcher_adapter_probe.txt",
+    "schema":  "ai-local-os-log-manifest-v1",
+    "generated_at_utc":  "2026-05-23T11:48:06.0863351Z",
+    "generated_at_local":  "2026-05-23T18:48:06.0863351+07:00",
+    "share_dir":  "D:\\openwebui\\runtime\\share_logs",
+    "latest":  "x112_registry_cache_dump.txt",
+    "recent_count":  15,
     "recent":  [
                    {
-                       "name":  "x112_dispatcher_adapter_probe.txt",
-                       "size":  690,
-                       "modified_at":  "2026-05-23T18:42:12.3738009+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112_dispatcher_adapter_probe.txt"
+                       "path":  "x112_registry_cache_dump.txt",
+                       "name":  "x112_registry_cache_dump.txt",
+                       "kind":  "log",
+                       "size_bytes":  43948,
+                       "modified_utc":  "2026-05-23T11:47:52.8442172Z"
                    },
                    {
-                       "name":  "x112_registry_cache_dump.txt",
-                       "size":  87888,
-                       "modified_at":  "2026-05-23T18:41:48.4445595+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112_registry_cache_dump.txt"
+                       "path":  "x112_dispatcher_adapter_probe.txt",
+                       "name":  "x112_dispatcher_adapter_probe.txt",
+                       "kind":  "log",
+                       "size_bytes":  349,
+                       "modified_utc":  "2026-05-23T11:47:52.8442172Z"
+                   },
+                   {
+                       "path":  "x85_run_2.txt",
+                       "name":  "x85_run_2.txt",
+                       "kind":  "log",
+                       "size_bytes":  1102,
+                       "modified_utc":  "2026-05-22T01:53:51.4054028Z"
+                   },
+                   {
+                       "path":  "x93_preflight_20260520_190542.json",
+                       "name":  "x93_preflight_20260520_190542.json",
+                       "kind":  "log",
+                       "size_bytes":  203,
+                       "modified_utc":  "2026-05-22T01:53:51.4033772Z"
+                   },
+                   {
+                       "path":  "x93_preflight_20260520_190555.json",
+                       "name":  "x93_preflight_20260520_190555.json",
+                       "kind":  "log",
+                       "size_bytes":  202,
+                       "modified_utc":  "2026-05-22T01:53:51.4028244Z"
+                   },
+                   {
+                       "path":  "x93_live_response.json",
+                       "name":  "x93_live_response.json",
+                       "kind":  "runtime",
+                       "size_bytes":  14281,
+                       "modified_utc":  "2026-05-22T01:53:51.4011798Z"
+                   },
+                   {
+                       "path":  "x93_apply_log.txt",
+                       "name":  "x93_apply_log.txt",
+                       "kind":  "apply",
+                       "size_bytes":  2526,
+                       "modified_utc":  "2026-05-22T01:53:51.3995234Z"
+                   },
+                   {
+                       "path":  "x93b_generator_log.txt",
+                       "name":  "x93b_generator_log.txt",
+                       "kind":  "log",
+                       "size_bytes":  224,
+                       "modified_utc":  "2026-05-22T01:53:51.3984415Z"
+                   },
+                   {
+                       "path":  "x93b_dir_check.txt",
+                       "name":  "x93b_dir_check.txt",
+                       "kind":  "check",
+                       "size_bytes":  701,
+                       "modified_utc":  "2026-05-22T01:53:51.3961780Z"
+                   },
+                   {
+                       "path":  "x93b_apply_log.txt",
+                       "name":  "x93b_apply_log.txt",
+                       "kind":  "apply",
+                       "size_bytes":  1928,
+                       "modified_utc":  "2026-05-22T01:53:51.3949366Z"
+                   },
+                   {
+                       "path":  "x93c_generator_log.txt",
+                       "name":  "x93c_generator_log.txt",
+                       "kind":  "log",
+                       "size_bytes":  104,
+                       "modified_utc":  "2026-05-22T01:53:51.3932264Z"
+                   },
+                   {
+                       "path":  "x93c_preflight_20260520_215319.json",
+                       "name":  "x93c_preflight_20260520_215319.json",
+                       "kind":  "log",
+                       "size_bytes":  135,
+                       "modified_utc":  "2026-05-22T01:53:51.3917039Z"
+                   },
+                   {
+                       "path":  "x93c_preflight_20260520_215443.json",
+                       "name":  "x93c_preflight_20260520_215443.json",
+                       "kind":  "log",
+                       "size_bytes":  133,
+                       "modified_utc":  "2026-05-22T01:53:51.3898613Z"
+                   },
+                   {
+                       "path":  "x93c_preflight_20260520_215919.json",
+                       "name":  "x93c_preflight_20260520_215919.json",
+                       "kind":  "log",
+                       "size_bytes":  133,
+                       "modified_utc":  "2026-05-22T01:53:51.3884416Z"
+                   },
+                   {
+                       "path":  "x93c_preflight_20260520_220158.json",
+                       "name":  "x93c_preflight_20260520_220158.json",
+                       "kind":  "log",
+                       "size_bytes":  133,
+                       "modified_utc":  "2026-05-22T01:53:51.3866618Z"
                    }
-               ]
+               ],
+    "raw_base":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/"
 }
