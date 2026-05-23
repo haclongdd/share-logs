@@ -1,9 +1,21 @@
 ﻿{
-    "updated_at":  "2026-05-23T21:28:03.8814387+07:00",
+    "updated_at":  "2026-05-23T21:28:17.2307327+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x112k_x96_glob.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112k_x96_glob.txt",
+    "latest":  "x112l3_live_grep.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l3_live_grep.txt",
     "recent":  [
+                   {
+                       "name":  "x112l3_live_grep.txt",
+                       "size":  0,
+                       "modified_at":  "2026-05-23T21:28:14.7334192+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l3_live_grep.txt"
+                   },
+                   {
+                       "name":  "x112l3_live_latest_reports.txt",
+                       "size":  1772,
+                       "modified_at":  "2026-05-23T21:28:12.2265352+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l3_live_latest_reports.txt"
+                   },
                    {
                        "name":  "x112k_x96_glob.txt",
                        "size":  94,
@@ -111,18 +123,6 @@
                        "size":  484,
                        "modified_at":  "2026-05-23T19:46:43.9345037+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_apply_full.txt"
-                   },
-                   {
-                       "name":  "x112j_master_review_handoff_contract_report.json",
-                       "size":  643,
-                       "modified_at":  "2026-05-23T19:46:43.9305892+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_report.json"
-                   },
-                   {
-                       "name":  "x112j_master_review_handoff_contract_full.txt",
-                       "size":  239,
-                       "modified_at":  "2026-05-23T19:46:43.9305892+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_full.txt"
                    }
                ]
 }
