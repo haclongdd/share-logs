@@ -1,9 +1,15 @@
 ﻿{
-    "updated_at":  "2026-05-23T19:30:48.8898810+07:00",
+    "updated_at":  "2026-05-23T19:31:02.1105642+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x112_dispatcher_adapter_probe.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112_dispatcher_adapter_probe.txt",
+    "latest":  "x112b_dispatcher_adapter_resolver.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112b_dispatcher_adapter_resolver.txt",
     "recent":  [
+                   {
+                       "name":  "x112b_dispatcher_adapter_resolver.txt",
+                       "size":  0,
+                       "modified_at":  "2026-05-23T19:30:53.2690889+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112b_dispatcher_adapter_resolver.txt"
+                   },
                    {
                        "name":  "x112_dispatcher_adapter_probe.txt",
                        "size":  690,
