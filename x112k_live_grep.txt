@@ -1,0 +1,186 @@
+﻿
+runtime\temp\x112k_live_x90.txt:60:          "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:71:          "input_hint": "Report must state pass/fail, evidence, and remaining 
+risk.",
+runtime\temp\x112k_live_x90.txt:80:        "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:173:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:184:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:193:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:225:              "reviewer": "x96.review_worker_report",
+runtime\temp\x112k_live_x90.txt:229:              "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112k_live_x90.txt:230:              "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    \"final_decider\": 
+\"MASTER\",\n                    ^^^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in 
+_load_x96\n    raise RuntimeError(\"Cannot find X96 module containing review_worker_report()\")\nRuntimeError: Cannot 
+find X96 module containing review_worker_report()\n",
+runtime\temp\x112k_live_x90.txt:291:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:302:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:311:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:399:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:410:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:419:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:450:              "reviewer": "x96.review_worker_report",
+runtime\temp\x112k_live_x90.txt:454:              "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112k_live_x90.txt:455:              "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    \"final_decider\": 
+\"MASTER\",\n                    ^^^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in 
+_load_x96\n    raise RuntimeError(\"Cannot find X96 module containing review_worker_report()\")\nRuntimeError: Cannot 
+find X96 module containing review_worker_report()\n",
+runtime\temp\x112k_live_x90.txt:520:                      "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:531:                      "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:540:                    "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:619:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:630:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:639:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:729:                      "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:740:                      "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:749:                    "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:828:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:841:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:850:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:881:              "reviewer": "x96.review_worker_report",
+runtime\temp\x112k_live_x90.txt:885:              "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112k_live_x90.txt:886:              "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    \"final_decider\": 
+\"MASTER\",\n                    ^^^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in 
+_load_x96\n    raise RuntimeError(\"Cannot find X96 module containing review_worker_report()\")\nRuntimeError: Cannot 
+find X96 module containing review_worker_report()\n",
+runtime\temp\x112k_live_x90.txt:948:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:961:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:970:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:1057:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:1070:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:1081:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:1107:            "routed_to": "x96.review_worker_report",
+runtime\temp\x112k_live_x90.txt:1112:              "reviewer": "x96.review_worker_report",
+runtime\temp\x112k_live_x90.txt:1116:              "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112k_live_x90.txt:1117:              "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    \"final_decider\": 
+\"MASTER\",\n                    ^^^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in 
+_load_x96\n    raise RuntimeError(\"Cannot find X96 module containing review_worker_report()\")\nRuntimeError: Cannot 
+find X96 module containing review_worker_report()\n",
+runtime\temp\x112k_live_x90.txt:1180:                      "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112k_live_x90.txt:1193:                      "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:1204:                    "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:1234:                "decision": "PASS",
+runtime\temp\x112k_live_x90.txt:1250:              "master_decision": "PASS",
+runtime\temp\x112k_live_x90.txt:1307:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x90.txt:1320:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:1331:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:1360:              "decision": "PASS",
+runtime\temp\x112k_live_x90.txt:1424:                          "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112k_live_x90.txt:1437:                          "input_hint": "Report must state pass/fail, evidence, 
+and remaining risk.",
+runtime\temp\x112k_live_x90.txt:1448:                        "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:1473:                  "master_decision": "PASS",
+runtime\temp\x112k_live_x90.txt:1530:                        "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112k_live_x90.txt:1543:                        "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x90.txt:1554:                      "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x90.txt:1587:            "master_decision": "PASS",
+runtime\temp\x112k_live_x87_cycle.txt:65:              "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:76:              "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:85:            "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:117:        "reviewer": "x96.review_worker_report",
+runtime\temp\x112k_live_x87_cycle.txt:121:        "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112k_live_x87_cycle.txt:122:        "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    \"final_decider\": 
+\"MASTER\",\n                    ^^^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in 
+_load_x96\n    raise RuntimeError(\"Cannot find X96 module containing review_worker_report()\")\nRuntimeError: Cannot 
+find X96 module containing review_worker_report()\n",
+runtime\temp\x112k_live_x87_cycle.txt:183:              "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:194:              "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:203:            "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:291:              "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:302:              "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:311:            "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:342:        "reviewer": "x96.review_worker_report",
+runtime\temp\x112k_live_x87_cycle.txt:346:        "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112k_live_x87_cycle.txt:347:        "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    \"final_decider\": 
+\"MASTER\",\n                    ^^^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in 
+_load_x96\n    raise RuntimeError(\"Cannot find X96 module containing review_worker_report()\")\nRuntimeError: Cannot 
+find X96 module containing review_worker_report()\n",
+runtime\temp\x112k_live_x87_cycle.txt:412:                "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:423:                "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:432:              "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:511:              "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:522:              "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:531:            "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:621:                "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:632:                "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:641:              "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:720:              "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:733:              "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:742:            "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:773:        "reviewer": "x96.review_worker_report",
+runtime\temp\x112k_live_x87_cycle.txt:777:        "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112k_live_x87_cycle.txt:778:        "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    \"final_decider\": 
+\"MASTER\",\n                    ^^^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in 
+_load_x96\n    raise RuntimeError(\"Cannot find X96 module containing review_worker_report()\")\nRuntimeError: Cannot 
+find X96 module containing review_worker_report()\n",
+runtime\temp\x112k_live_x87_cycle.txt:840:              "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:853:              "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:862:            "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:949:              "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:962:              "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:973:            "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:999:      "routed_to": "x96.review_worker_report",
+runtime\temp\x112k_live_x87_cycle.txt:1004:        "reviewer": "x96.review_worker_report",
+runtime\temp\x112k_live_x87_cycle.txt:1008:        "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112k_live_x87_cycle.txt:1009:        "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    \"final_decider\": 
+\"MASTER\",\n                    ^^^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in 
+_load_x96\n    raise RuntimeError(\"Cannot find X96 module containing review_worker_report()\")\nRuntimeError: Cannot 
+find X96 module containing review_worker_report()\n",
+runtime\temp\x112k_live_x87_cycle.txt:1072:                "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:1085:                "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:1096:              "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:1126:          "decision": "PASS",
+runtime\temp\x112k_live_x87_cycle.txt:1142:        "master_decision": "PASS",
+runtime\temp\x112k_live_x87_cycle.txt:1199:              "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:1212:              "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:1223:            "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:1252:        "decision": "PASS",
+runtime\temp\x112k_live_x87_cycle.txt:1316:                    "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:1329:                    "input_hint": "Report must state pass/fail, evidence, 
+and remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:1340:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:1365:            "master_decision": "PASS",
+runtime\temp\x112k_live_x87_cycle.txt:1422:                  "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112k_live_x87_cycle.txt:1435:                  "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112k_live_x87_cycle.txt:1446:                "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112k_live_x87_cycle.txt:1479:      "master_decision": "PASS",
+
+
+
