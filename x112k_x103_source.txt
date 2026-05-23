@@ -1,0 +1,107 @@
+﻿from __future__ import annotations
+from x104_safe_json import safe_json_dumps
+
+import importlib.util
+import json
+import time
+import traceback
+from pathlib import Path
+from typing import Any, Dict
+
+RELEASE = "X103_MASTER_REVIEW_RUNTIME_HANDOFF"
+
+
+def _jsonable(obj: Any) -> Any:
+    try:
+        safe_json_dumps(obj, ensure_ascii=False)
+        return obj
+    except Exception:
+        if isinstance(obj, dict):
+            return {str(k): _jsonable(v) for k, v in obj.items()}
+        if isinstance(obj, (list, tuple, set)):
+            return [_jsonable(v) for v in obj]
+        return repr(obj)
+
+
+def _load_x96(root: Path):
+    candidates = sorted((root / "core").glob("x96*master*planner*reviewer*.py")) + sorted((root / "core").glob("x96*.py"))
+    for p in candidates:
+        txt = p.read_text(encoding="utf-8", errors="ignore")
+        if "review_worker_report" in txt:
+            spec = importlib.util.spec_from_file_location("x96_master_planner_reviewer_x103", str(p))
+            if not spec or not spec.loader:
+                continue
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)  # type: ignore[attr-defined]
+            return mod, p
+    raise RuntimeError("Cannot find X96 module containing review_worker_report()")
+
+
+def review_report_from_report_stage(report_context: Any, root: str | None = None) -> Dict[str, Any]:
+    if root is not None:
+        root_path = Path(root)
+    elif Path("/app/core").exists():
+        root_path = Path("/app")
+    else:
+        root_path = Path(r"D:\openwebui")
+    out_dir = root_path / "runtime" / "reports"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    ts = int(time.time() * 1000)
+    result: Dict[str, Any] = {
+        "ok": False,
+        "release": RELEASE,
+        "stage": "REPORT_TO_X96_REVIEW",
+        "reviewer": "x96.review_worker_report",
+        "final_decider": "MASTER",
+        "master_is_worker_role": False,
+        "ts_ms": ts,
+    }
+    try:
+        mod, mod_path = _load_x96(root_path)
+        fn = getattr(mod, "review_worker_report")
+        ctx = _jsonable(report_context)
+        task_id = None
+
+        if isinstance(ctx, dict):
+            task_id = (
+                ctx.get("task_id")
+                or ctx.get("x96_task_id")
+                or ctx.get("x96_plan", {}).get("task_id")
+            )
+
+            if task_id is None:
+                nested = ctx.get("input_payload", {}).get("x96_plan")
+                if isinstance(nested, dict):
+                    task_id = nested.get("task_id")
+
+        if task_id is not None:
+            try:
+                review = fn(task_id, ctx)
+            except TypeError:
+                review = fn(task_id=task_id, worker_report=ctx)
+        else:
+            try:
+                review = fn(ctx)
+            except TypeError:
+                try:
+                    review = fn(report=ctx)
+                except TypeError:
+                    review = fn(worker_report=ctx)
+        result.update({
+            "ok": True,
+            "x96_module": str(mod_path),
+            "master_review_result": _jsonable(review),
+            "final_decision": (_jsonable(review).get("final_decision") if isinstance(_jsonable(review), dict) else None),
+        })
+    except Exception as exc:
+        result.update({
+            "ok": False,
+            "error": str(exc),
+            "traceback": traceback.format_exc(),
+        })
+    report_file = out_dir / f"x103_master_review_result_{ts}.json"
+    result["report_file"] = str(report_file)
+    report_file.write_text(safe_json_dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    return result
+
+
