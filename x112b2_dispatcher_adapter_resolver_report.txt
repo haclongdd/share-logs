@@ -1,0 +1,16 @@
+﻿X112B2 DISPATCHER ADAPTER RESOLVER SAFE PROBE
+cache=D:\openwebui\runtime\executor_registry_cache.json
+candidate_count=167
+
+target=x90_webui_agent_bridge.py::run_agent_flow
+candidate_found=True
+match_count=1
+
+target=master_ai_bridge.py::add_task
+candidate_found=True
+match_count=1
+
+target=x91_master_ai_addtask_bridge.py::add_task
+candidate_found=False
+match_count=0
+

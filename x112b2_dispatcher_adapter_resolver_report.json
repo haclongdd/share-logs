@@ -1,0 +1,45 @@
+﻿{
+  "ok": true,
+  "phase": "X112B2_DISPATCHER_ADAPTER_RESOLVER_SAFE_PROBE",
+  "cache": "D:\\openwebui\\runtime\\executor_registry_cache.json",
+  "candidate_count": 167,
+  "results": [
+    {
+      "target_file": "x90_webui_agent_bridge.py",
+      "target_symbol": "run_agent_flow",
+      "candidate_found": true,
+      "match_count": 1,
+      "matches": [
+        {
+          "file": "x90_webui_agent_bridge.py",
+          "symbol": "run_agent_flow",
+          "kind": "FunctionDef",
+          "line": 198,
+          "score": 13
+        }
+      ]
+    },
+    {
+      "target_file": "master_ai_bridge.py",
+      "target_symbol": "add_task",
+      "candidate_found": true,
+      "match_count": 1,
+      "matches": [
+        {
+          "file": "master_ai_bridge.py",
+          "symbol": "add_task",
+          "kind": "FunctionDef",
+          "line": 246,
+          "score": 3
+        }
+      ]
+    },
+    {
+      "target_file": "x91_master_ai_addtask_bridge.py",
+      "target_symbol": "add_task",
+      "candidate_found": false,
+      "match_count": 0,
+      "matches": []
+    }
+  ]
+}
