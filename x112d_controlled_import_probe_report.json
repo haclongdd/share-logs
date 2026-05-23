@@ -1,0 +1,31 @@
+﻿{
+  "ok": true,
+  "phase": "X112D_CONTROLLED_IMPORT_PROBE",
+  "note": "Import only. No task execution. No bridge patch. No container restart.",
+  "results": [
+    {
+      "target_file": "core/x90_webui_agent_bridge.py",
+      "target_symbol": "run_agent_flow",
+      "path": "D:\\openwebui\\core\\x90_webui_agent_bridge.py",
+      "exists": true,
+      "import_ok": false,
+      "symbol": null,
+      "error": {
+        "type": "ModuleNotFoundError",
+        "message": "No module named 'x104_safe_json'"
+      }
+    },
+    {
+      "target_file": "core/master_ai_bridge.py",
+      "target_symbol": "add_task",
+      "path": "D:\\openwebui\\core\\master_ai_bridge.py",
+      "exists": true,
+      "import_ok": false,
+      "symbol": null,
+      "error": {
+        "type": "ModuleNotFoundError",
+        "message": "No module named 'x104_safe_json'"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+﻿X112D CONTROLLED IMPORT PROBE
+Import only. No task execution. No bridge patch. No container restart.
+
+target=core/x90_webui_agent_bridge.py::run_agent_flow
+exists=True
+import_ok=False
+error={'type': 'ModuleNotFoundError', 'message': "No module named 'x104_safe_json'"}
+
+target=core/master_ai_bridge.py::add_task
+exists=True
+import_ok=False
+error={'type': 'ModuleNotFoundError', 'message': "No module named 'x104_safe_json'"}
+
