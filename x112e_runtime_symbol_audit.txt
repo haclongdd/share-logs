@@ -1,0 +1,27 @@
+﻿X112E RUNTIME SYMBOL AUDIT
+target=D:\openwebui\core\x90_webui_agent_bridge.py
+public_count=33
+callable_count=20
+
+CALLABLE NAMES:
+
+Any
+Dict
+Optional
+Path
+WebUIAgentBridge
+_resolve_aios_root
+_x108d2_install_force_local_list_fastpath
+_x108d_install_webui_response_formatter
+_x108e_install_early_addtask_local_list_intercept
+cli
+import_class
+load_json
+now_ms
+parse_payload
+safe_write_json
+utc_stamp
+x104_make_json_safe
+x104_safe_dump
+x104_safe_dumps
+x108b_try_local_list_files
