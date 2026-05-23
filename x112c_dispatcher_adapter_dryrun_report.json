@@ -1,0 +1,49 @@
+﻿{
+  "ok": true,
+  "phase": "X112C_DISPATCHER_ADAPTER_DRYRUN",
+  "note": "No bridge patch. No container restart. No executor execution.",
+  "cache": "D:\\openwebui\\runtime\\executor_registry_cache.json",
+  "candidate_count": 167,
+  "task_results": [
+    {
+      "task": "local_list_files runtime",
+      "preferred_file": "x90_webui_agent_bridge.py",
+      "preferred_symbol": "run_agent_flow",
+      "resolved": {
+        "file": "x90_webui_agent_bridge.py",
+        "symbol": "run_agent_flow",
+        "found": true,
+        "match_count": 1,
+        "selected": {
+          "file": "x90_webui_agent_bridge.py",
+          "symbol": "run_agent_flow",
+          "kind": "FunctionDef",
+          "line": 198,
+          "score": 13
+        },
+        "matches": [
+          {
+            "file": "x90_webui_agent_bridge.py",
+            "symbol": "run_agent_flow",
+            "kind": "FunctionDef",
+            "line": 198,
+            "score": 13
+          }
+        ]
+      },
+      "dispatch": {
+        "ok": true,
+        "dispatchable": true,
+        "mode": "dry_run_only_no_execution",
+        "adapter_plan": {
+          "input_task": "local_list_files runtime",
+          "executor_file": "x90_webui_agent_bridge.py",
+          "executor_symbol": "run_agent_flow",
+          "executor_kind": "FunctionDef",
+          "executor_line": 198,
+          "call_strategy": "import_by_file_then_call_symbol_later"
+        }
+      }
+    }
+  ]
+}

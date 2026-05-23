@@ -1,9 +1,27 @@
 ﻿{
-    "updated_at":  "2026-05-23T19:36:21.3351271+07:00",
+    "updated_at":  "2026-05-23T19:36:34.4671580+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x112b2_dispatcher_adapter_resolver_full.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112b2_dispatcher_adapter_resolver_full.txt",
+    "latest":  "x112c_dispatcher_adapter_dryrun_full.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112c_dispatcher_adapter_dryrun_full.txt",
     "recent":  [
+                   {
+                       "name":  "x112c_dispatcher_adapter_dryrun_full.txt",
+                       "size":  668,
+                       "modified_at":  "2026-05-23T19:36:28.3707495+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112c_dispatcher_adapter_dryrun_full.txt"
+                   },
+                   {
+                       "name":  "x112c_dispatcher_adapter_dryrun_report.txt",
+                       "size":  331,
+                       "modified_at":  "2026-05-23T19:36:28.3618273+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112c_dispatcher_adapter_dryrun_report.txt"
+                   },
+                   {
+                       "name":  "x112c_dispatcher_adapter_dryrun_report.json",
+                       "size":  1492,
+                       "modified_at":  "2026-05-23T19:36:28.3612747+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112c_dispatcher_adapter_dryrun_report.json"
+                   },
                    {
                        "name":  "x112b2_dispatcher_adapter_resolver_full.txt",
                        "size":  768,

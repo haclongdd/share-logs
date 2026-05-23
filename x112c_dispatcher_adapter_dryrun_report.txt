@@ -1,0 +1,12 @@
+﻿X112C DISPATCHER ADAPTER DRY-RUN
+No bridge patch. No container restart. No executor execution.
+cache=D:\openwebui\runtime\executor_registry_cache.json
+candidate_count=167
+
+task=local_list_files runtime
+target=x90_webui_agent_bridge.py::run_agent_flow
+resolved_found=True
+match_count=1
+dispatchable=True
+dispatch_ok=True
+
