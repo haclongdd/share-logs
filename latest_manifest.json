@@ -1,9 +1,21 @@
 ﻿{
-    "updated_at":  "2026-05-23T21:31:24.0913642+07:00",
+    "updated_at":  "2026-05-23T21:31:37.4046958+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x112l4_live_latest_reports.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l4_live_latest_reports.txt",
+    "latest":  "x112l4_live_grep.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l4_live_grep.txt",
     "recent":  [
+                   {
+                       "name":  "x112l4_live_grep.txt",
+                       "size":  5577,
+                       "modified_at":  "2026-05-23T21:31:26.0994638+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l4_live_grep.txt"
+                   },
+                   {
+                       "name":  "x112l4_live_x90.txt",
+                       "size":  79625,
+                       "modified_at":  "2026-05-23T21:31:26.0138189+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l4_live_x90.txt"
+                   },
                    {
                        "name":  "x112l4_live_latest_reports.txt",
                        "size":  1767,
@@ -111,18 +123,6 @@
                        "size":  860,
                        "modified_at":  "2026-05-23T19:50:08.9781645+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_verify_after_fix_full.txt"
-                   },
-                   {
-                       "name":  "x112i_class_method_adapter_binding_full.txt",
-                       "size":  427,
-                       "modified_at":  "2026-05-23T19:50:08.9677373+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112i_class_method_adapter_binding_full.txt"
-                   },
-                   {
-                       "name":  "x112i_class_method_adapter_binding_report.json",
-                       "size":  50589,
-                       "modified_at":  "2026-05-23T19:50:08.9671292+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112i_class_method_adapter_binding_report.json"
                    }
                ]
 }

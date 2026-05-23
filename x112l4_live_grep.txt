@@ -1,0 +1,70 @@
+﻿
+runtime\temp\x112l4_live_x90.txt:60:          "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l4_live_x90.txt:71:          "input_hint": "Report must state pass/fail, evidence, and remaining 
+risk.",
+runtime\temp\x112l4_live_x90.txt:80:        "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:173:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l4_live_x90.txt:184:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:193:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:291:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l4_live_x90.txt:302:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:311:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:399:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l4_live_x90.txt:410:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:419:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:520:                      "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112l4_live_x90.txt:531:                      "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:540:                    "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:619:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l4_live_x90.txt:630:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:639:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:729:                      "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112l4_live_x90.txt:740:                      "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:749:                    "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:828:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l4_live_x90.txt:841:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:850:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:948:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l4_live_x90.txt:961:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:970:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:1057:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l4_live_x90.txt:1070:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:1081:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:1180:                      "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112l4_live_x90.txt:1193:                      "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:1204:                    "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:1234:                "decision": "PASS",
+runtime\temp\x112l4_live_x90.txt:1250:              "master_decision": "PASS",
+runtime\temp\x112l4_live_x90.txt:1307:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l4_live_x90.txt:1320:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l4_live_x90.txt:1331:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:1360:              "decision": "PASS",
+runtime\temp\x112l4_live_x90.txt:1424:                          "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112l4_live_x90.txt:1437:                          "input_hint": "Report must state pass/fail, evidence, 
+and remaining risk.",
+runtime\temp\x112l4_live_x90.txt:1448:                        "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:1473:                  "master_decision": "PASS",
+runtime\temp\x112l4_live_x90.txt:1530:                        "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112l4_live_x90.txt:1543:                        "input_hint": "Report must state pass/fail, evidence, 
+and remaining risk.",
+runtime\temp\x112l4_live_x90.txt:1554:                      "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l4_live_x90.txt:1587:            "master_decision": "PASS",
+
+
+
