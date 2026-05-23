@@ -1,0 +1,54 @@
+﻿
+=== LOCAL X103 SIGNATURE AREA ===
+
+
+=== CONTAINER X103 SIGNATURE AREA ===
+
+        if isinstance(ctx, dict):
+            task_id = (
+                ctx.get("task_id")
+                or ctx.get("x96_task_id")
+                or ctx.get("x96_plan", {}).get("task_id")
+            )
+
+            if task_id is None:
+                nested = ctx.get("input_payload", {}).get("x96_plan")
+                if isinstance(nested, dict):
+                    task_id = nested.get("task_id")
+
+        if task_id is not None:
+            try:
+                review = fn(task_id, ctx)
+            except TypeError:
+                review = fn(task_id=task_id, worker_report=ctx)
+        else:
+            try:
+                review = fn(ctx)
+            except TypeError:
+                try:
+                    review = fn(report=ctx)
+                except TypeError:
+                    review = fn(worker_report=ctx)
+        result.update({
+            "ok": True,
+            "x96_module": str(mod_path),
+            "master_review_result": _jsonable(review),
+            "final_decision": (_jsonable(review).get("final_decision") if isinstance(_jsonable(review), dict) else None),
+        })
+    except Exception as exc:
+        result.update({
+            "ok": False,
+            "error": str(exc),
+            "traceback": traceback.format_exc(),
+        })
+    report_file = out_dir / f"x103_master_review_result_{ts}.json"
+    result["report_file"] = str(report_file)
+    report_file.write_text(safe_json_dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+    return result
+
+
+
+
+
+=== CONTAINER PY COMPILE ===
+
