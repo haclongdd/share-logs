@@ -1,0 +1,8 @@
+﻿{
+  "ok": true,
+  "release": "X87B_WORKER_DISPATCHER_IMPORTFIX",
+  "processed": [],
+  "processed_count": 0,
+  "state_file": "/app/runtime/x87_worker_dispatcher/state.json"
+}
+

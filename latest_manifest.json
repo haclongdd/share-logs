@@ -1,9 +1,27 @@
 ﻿{
-    "updated_at":  "2026-05-23T21:15:44.0770223+07:00",
+    "updated_at":  "2026-05-23T21:15:57.8729562+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x112j_live_latest_reports.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_live_latest_reports.txt",
+    "latest":  "x112j_live_x87_latest.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_live_x87_latest.txt",
     "recent":  [
+                   {
+                       "name":  "x112j_live_x87_latest.txt",
+                       "size":  178,
+                       "modified_at":  "2026-05-23T21:15:46.8905586+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_live_x87_latest.txt"
+                   },
+                   {
+                       "name":  "x112j_live_x90.txt",
+                       "size":  76967,
+                       "modified_at":  "2026-05-23T21:15:46.3694258+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_live_x90.txt"
+                   },
+                   {
+                       "name":  "x112j_live_x91.txt",
+                       "size":  77918,
+                       "modified_at":  "2026-05-23T21:15:46.3025233+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_live_x91.txt"
+                   },
                    {
                        "name":  "x112j_live_latest_reports.txt",
                        "size":  1775,
@@ -41,16 +59,16 @@
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_apply_full.txt"
                    },
                    {
-                       "name":  "x112j_master_review_handoff_contract_report.json",
-                       "size":  643,
-                       "modified_at":  "2026-05-23T19:46:43.9305892+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_report.json"
-                   },
-                   {
                        "name":  "x112j_master_review_handoff_contract_full.txt",
                        "size":  239,
                        "modified_at":  "2026-05-23T19:46:43.9305892+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_full.txt"
+                   },
+                   {
+                       "name":  "x112j_master_review_handoff_contract_report.json",
+                       "size":  643,
+                       "modified_at":  "2026-05-23T19:46:43.9305892+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_report.json"
                    },
                    {
                        "name":  "x112gh_controlled_runtime_binding_full.txt",
@@ -105,24 +123,6 @@
                        "size":  590,
                        "modified_at":  "2026-05-23T19:38:26.9548461+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112d2_controlled_import_retry_full.txt"
-                   },
-                   {
-                       "name":  "x112d2_import_probe_full.txt",
-                       "size":  292,
-                       "modified_at":  "2026-05-23T19:38:26.9456685+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112d2_import_probe_full.txt"
-                   },
-                   {
-                       "name":  "x112d2_import_probe_report.json",
-                       "size":  695,
-                       "modified_at":  "2026-05-23T19:38:26.9450007+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112d2_import_probe_report.json"
-                   },
-                   {
-                       "name":  "x112d_controlled_import_probe_full.txt",
-                       "size":  880,
-                       "modified_at":  "2026-05-23T19:37:47.7991843+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112d_controlled_import_probe_full.txt"
                    }
                ]
 }
