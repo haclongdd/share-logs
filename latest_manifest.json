@@ -1,9 +1,15 @@
 ﻿{
-    "updated_at":  "2026-05-23T21:30:30.9924087+07:00",
+    "updated_at":  "2026-05-23T21:30:44.3736879+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x112l3_live_grep.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l3_live_grep.txt",
+    "latest":  "x112l4_live_latest_reports.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l4_live_latest_reports.txt",
     "recent":  [
+                   {
+                       "name":  "x112l4_live_latest_reports.txt",
+                       "size":  1767,
+                       "modified_at":  "2026-05-23T21:30:35.1015002+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l4_live_latest_reports.txt"
+                   },
                    {
                        "name":  "x112l3_live_grep.txt",
                        "size":  3646,
@@ -117,12 +123,6 @@
                        "size":  50589,
                        "modified_at":  "2026-05-23T19:50:08.9671292+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112i_class_method_adapter_binding_report.json"
-                   },
-                   {
-                       "name":  "x112j_x103_lines_35_105.txt",
-                       "size":  1724,
-                       "modified_at":  "2026-05-23T19:47:36.8240392+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_x103_lines_35_105.txt"
                    }
                ]
 }
