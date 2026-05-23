@@ -1,9 +1,15 @@
 ﻿{
-    "updated_at":  "2026-05-23T21:39:02.5472519+07:00",
+    "updated_at":  "2026-05-23T21:39:16.3066029+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x112q_latest_x103_failure_context.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112q_latest_x103_failure_context.txt",
+    "latest":  "x112s_patch_presence_verify.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112s_patch_presence_verify.txt",
     "recent":  [
+                   {
+                       "name":  "x112s_patch_presence_verify.txt",
+                       "size":  4760,
+                       "modified_at":  "2026-05-23T21:39:10.0198667+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112s_patch_presence_verify.txt"
+                   },
                    {
                        "name":  "x112q_latest_x103_failure_context.txt",
                        "size":  2309,
@@ -117,12 +123,6 @@
                        "size":  189,
                        "modified_at":  "2026-05-23T21:17:29.2769950+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112k_x96_files.txt"
-                   },
-                   {
-                       "name":  "x112k_x103_head.txt",
-                       "size":  3616,
-                       "modified_at":  "2026-05-23T21:17:13.2889647+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112k_x103_head.txt"
                    }
                ]
 }

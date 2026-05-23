@@ -1,0 +1,100 @@
+﻿=== LOCAL LINES 75-115 ===
+75	                or ctx.get("x96_plan", {}).get("task_id")
+76	            )
+77	
+78	            if task_id is None:
+79	                nested = ctx.get("input_payload", {}).get("x96_plan")
+80	                if isinstance(nested, dict):
+81	                    task_id = nested.get("task_id")
+82	
+83	        if task_id is not None:
+84	            try:
+85	                review = fn(task_id, ctx)
+86	            except TypeError:
+87	                review = fn(task_id=task_id, worker_report=ctx)
+88	        else:
+89	            try:
+90	                review = fn(ctx)
+91	            except TypeError:
+92	                try:
+93	                    review = fn(report=ctx)
+94	                except TypeError:
+95	                    review = fn(worker_report=ctx)
+96	        result.update({
+97	            "ok": True,
+98	            "x96_module": str(mod_path),
+99	            "master_review_result": _jsonable(review),
+100	            "final_decision": (_jsonable(review).get("final_decision") if isinstance(_jsonable(review), dict) else None),
+101	        })
+102	    except Exception as exc:
+103	        result.update({
+104	            "ok": False,
+105	            "error": str(exc),
+106	            "traceback": traceback.format_exc(),
+107	        })
+108	    report_file = out_dir / f"x103_master_review_result_{ts}.json"
+109	    result["report_file"] = str(report_file)
+110	    report_file.write_text(safe_json_dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+111	    return result
+112	
+113	
+114	
+115	
+
+=== CONTAINER LINES 75-115 ===
+    75	                or ctx.get("x96_plan", {}).get("task_id")
+    76	            )
+    77	
+    78	            if task_id is None:
+    79	                nested = ctx.get("input_payload", {}).get("x96_plan")
+    80	                if isinstance(nested, dict):
+    81	                    task_id = nested.get("task_id")
+    82	
+    83	        if task_id is not None:
+    84	            try:
+    85	                review = fn(task_id, ctx)
+    86	            except TypeError:
+    87	                review = fn(task_id=task_id, worker_report=ctx)
+    88	        else:
+    89	            try:
+    90	                review = fn(ctx)
+    91	            except TypeError:
+    92	                try:
+    93	                    review = fn(report=ctx)
+    94	                except TypeError:
+    95	                    review = fn(worker_report=ctx)
+    96	        result.update({
+    97	            "ok": True,
+    98	            "x96_module": str(mod_path),
+    99	            "master_review_result": _jsonable(review),
+   100	            "final_decision": (_jsonable(review).get("final_decision") if isinstance(_jsonable(review), dict) else None),
+   101	        })
+   102	    except Exception as exc:
+   103	        result.update({
+   104	            "ok": False,
+   105	            "error": str(exc),
+   106	            "traceback": traceback.format_exc(),
+   107	        })
+   108	    report_file = out_dir / f"x103_master_review_result_{ts}.json"
+   109	    result["report_file"] = str(report_file)
+   110	    report_file.write_text(safe_json_dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+   111	    return result
+   112	
+   113	
+   114	
+   115	
+
+=== LATEST X103 ===
+{
+  "ok": false,
+  "release": "X103_MASTER_REVIEW_RUNTIME_HANDOFF",
+  "stage": "REPORT_TO_X96_REVIEW",
+  "reviewer": "x96.review_worker_report",
+  "final_decider": "MASTER",
+  "master_is_worker_role": false,
+  "ts_ms": 1779547071499,
+  "error": "review_worker_report() missing 1 required positional argument: 'task_id'",
+  "traceback": "Traceback (most recent call last):\n  File \"/app/core/x103_master_review_handoff.py\", line 90, in review_report_from_report_stage\n    review = fn(ctx)\n             ^^^^^^^\nTypeError: review_worker_report() missing 1 required positional argument: 'worker_report'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/app/core/x103_master_review_handoff.py\", line 93, in review_report_from_report_stage\n    review = fn(report=ctx)\n             ^^^^^^^^^^^^^^\nTypeError: review_worker_report() got an unexpected keyword argument 'report'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/app/core/x103_master_review_handoff.py\", line 95, in review_report_from_report_stage\n    review = fn(worker_report=ctx)\n             ^^^^^^^^^^^^^^^^^^^^^\nTypeError: review_worker_report() missing 1 required positional argument: 'task_id'\n",
+  "report_file": "/app/runtime/reports/x103_master_review_result_1779547071499.json"
+}
+
