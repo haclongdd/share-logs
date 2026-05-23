@@ -1,1 +1,43 @@
 ﻿
+runtime\temp\x112l3_live_x90.txt:70:          "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l3_live_x90.txt:81:          "input_hint": "Report must state pass/fail, evidence, and remaining 
+risk.",
+runtime\temp\x112l3_live_x90.txt:90:        "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l3_live_x90.txt:193:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l3_live_x90.txt:204:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l3_live_x90.txt:213:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l3_live_x90.txt:249:              "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112l3_live_x90.txt:250:              "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    ts = int(time.time() * 
+1000)\n                        ^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in _load_x96\n  
+  spec = importlib.util.spec_from_file_location(\"x96_master_planner_reviewer_x103\", str(p))\n    
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Cannot find X96 module 
+containing review_worker_report()\n",
+runtime\temp\x112l3_live_x90.txt:321:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l3_live_x90.txt:332:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l3_live_x90.txt:341:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l3_live_x90.txt:439:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l3_live_x90.txt:450:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l3_live_x90.txt:459:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l3_live_x90.txt:494:              "error": "Cannot find X96 module containing review_worker_report()",
+runtime\temp\x112l3_live_x90.txt:495:              "traceback": "Traceback (most recent call last):\n  File 
+\"/app/core/x103_master_review_handoff.py\", line 55, in review_report_from_report_stage\n    ts = int(time.time() * 
+1000)\n                        ^^^^^^^^^\n  File \"/app/core/x103_master_review_handoff.py\", line 37, in _load_x96\n  
+  spec = importlib.util.spec_from_file_location(\"x96_master_planner_reviewer_x103\", str(p))\n    
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Cannot find X96 module 
+containing review_worker_report()\n",
+runtime\temp\x112l3_live_x90.txt:570:                      "goal": "Run focused checks and collect pass/fail 
+evidence.",
+runtime\temp\x112l3_live_x90.txt:581:                      "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l3_live_x90.txt:590:                    "pass_condition": "VERIFY ok and REPORT has evidence",
+runtime\temp\x112l3_live_x90.txt:679:                    "goal": "Run focused checks and collect pass/fail evidence.",
+runtime\temp\x112l3_live_x90.txt:690:                    "input_hint": "Report must state pass/fail, evidence, and 
+remaining risk.",
+runtime\temp\x112l3_live_x90.txt:699:                  "pass_condition": "VERIFY ok and REPORT has evidence",
+
+
+
