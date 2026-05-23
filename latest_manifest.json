@@ -1,9 +1,21 @@
 ﻿{
-    "updated_at":  "2026-05-23T19:44:47.2079871+07:00",
+    "updated_at":  "2026-05-23T19:45:00.7190656+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x112gh_controlled_runtime_binding_full.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112gh_controlled_runtime_binding_full.txt",
+    "latest":  "x112i_class_method_adapter_binding_full.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112i_class_method_adapter_binding_full.txt",
     "recent":  [
+                   {
+                       "name":  "x112i_class_method_adapter_binding_full.txt",
+                       "size":  860,
+                       "modified_at":  "2026-05-23T19:44:57.9282198+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112i_class_method_adapter_binding_full.txt"
+                   },
+                   {
+                       "name":  "x112i_class_method_adapter_binding_report.json",
+                       "size":  50589,
+                       "modified_at":  "2026-05-23T19:44:57.9180821+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112i_class_method_adapter_binding_report.json"
+                   },
                    {
                        "name":  "x112gh_controlled_runtime_binding_full.txt",
                        "size":  1794,
@@ -41,16 +53,16 @@
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112e_runtime_symbol_audit_full.txt"
                    },
                    {
-                       "name":  "x112e_runtime_symbol_audit.txt",
-                       "size":  498,
-                       "modified_at":  "2026-05-23T19:39:08.8708308+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112e_runtime_symbol_audit.txt"
-                   },
-                   {
                        "name":  "x112e_runtime_symbol_audit.json",
                        "size":  1336,
                        "modified_at":  "2026-05-23T19:39:08.8708308+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112e_runtime_symbol_audit.json"
+                   },
+                   {
+                       "name":  "x112e_runtime_symbol_audit.txt",
+                       "size":  498,
+                       "modified_at":  "2026-05-23T19:39:08.8708308+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112e_runtime_symbol_audit.txt"
                    },
                    {
                        "name":  "x112d2_controlled_import_retry_full.txt",
@@ -111,18 +123,6 @@
                        "size":  768,
                        "modified_at":  "2026-05-23T19:35:04.8779469+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112b2_dispatcher_adapter_resolver_full.txt"
-                   },
-                   {
-                       "name":  "x112b2_dispatcher_adapter_resolver_report.txt",
-                       "size":  381,
-                       "modified_at":  "2026-05-23T19:35:04.8679824+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112b2_dispatcher_adapter_resolver_report.txt"
-                   },
-                   {
-                       "name":  "x112b2_dispatcher_adapter_resolver_report.json",
-                       "size":  1125,
-                       "modified_at":  "2026-05-23T19:35:04.8669828+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112b2_dispatcher_adapter_resolver_report.json"
                    }
                ]
 }

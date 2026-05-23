@@ -1,0 +1,18 @@
+﻿X112I CLASS-METHOD AWARE ADAPTER BINDING
+Controlled invoke. No bridge patch. No docker restart.
+ok=True
+import_ok=True
+class_found=True
+instance_ok=True
+task=local_list_files runtime
+
+BINDING:
+owner=WebUIAgentBridge
+method=submit
+signature=(task: 'str', mode: 'str' = 'agent', payload: 'Optional[Dict[str, Any]]' = None) -> 'Dict[str, Any]'
+strategy=instantiate_class_then_bind_method
+
+INVOKE:
+ok=True
+type=dict
+
