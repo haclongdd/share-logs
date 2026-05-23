@@ -1,0 +1,102 @@
+﻿
+=== X96 REVIEW SIGNATURE ===
+
+> def review_worker_report(task_id: str, worker_report: Dict[str, Any]) -> Dict[str, Any]:
+      ok = bool(worker_report.get("ok"))
+      evidence = worker_report.get("evidence") or worker_report.get("report_file") or worker_report.get("summary")
+      needs_retry = not ok
+      fallback_calls_used = int(worker_report.get("fallback_calls_used", 0) or 0)
+  
+      decision = "PASS" if ok and evidence else "RETRY"
+      if needs_retry and fallback_calls_used < DEFAULT_FALLBACK_LIMIT:
+          next_action = "ALLOW_LIMITED_FALLBACK_THEN_RETRY_CHILD"
+      elif needs_retry:
+          next_action = "STOP_RETRY_LIMIT_REACHED"
+      else:
+          next_action = "FINAL_REPORT_TO_WEBUI"
+  
+      review = {
+          "ok": decision == "PASS",
+          "release": RELEASE,
+          "kind": "master_review",
+          "task_id": task_id,
+          "reviewed_at": utc_now(),
+          "decision": decision,
+
+
+
+
+=== X103 REVIEW CALL AREA ===
+
+              return {str(k): _jsonable(v) for k, v in obj.items()}
+          if isinstance(obj, (list, tuple, set)):
+              return [_jsonable(v) for v in obj]
+          return repr(obj)
+  
+  
+  def _load_x96(root: Path):
+      candidates = sorted((root / "core").glob("x96*master*planner*reviewer*.py")) + sorted((root / 
+"core").glob("x96*.py"))
+      for p in candidates:
+          txt = p.read_text(encoding="utf-8", errors="ignore")
+>         if "review_worker_report" in txt:
+              spec = importlib.util.spec_from_file_location("x96_master_planner_reviewer_x103", str(p))
+              if not spec or not spec.loader:
+                  continue
+              mod = importlib.util.module_from_spec(spec)
+              spec.loader.exec_module(mod)  # type: ignore[attr-defined]
+              return mod, p
+>     raise RuntimeError("Cannot find X96 module containing review_worker_report()")
+  
+  
+  def review_report_from_report_stage(report_context: Any, root: str | None = None) -> Dict[str, Any]:
+      if root is not None:
+          root_path = Path(root)
+      elif Path("/app/core").exists():
+          root_path = Path("/app")
+      else:
+          root_path = Path(r"D:\openwebui")
+      out_dir = root_path / "runtime" / "reports"
+      out_dir.mkdir(parents=True, exist_ok=True)
+      ts = int(time.time() * 1000)
+      result: Dict[str, Any] = {
+          "ok": False,
+          "release": RELEASE,
+          "stage": "REPORT_TO_X96_REVIEW",
+>         "reviewer": "x96.review_worker_report",
+          "final_decider": "MASTER",
+          "master_is_worker_role": False,
+          "ts_ms": ts,
+      }
+      try:
+          mod, mod_path = _load_x96(root_path)
+>         fn = getattr(mod, "review_worker_report")
+          ctx = _jsonable(report_context)
+          task_id = None
+  
+          if isinstance(ctx, dict):
+              task_id = (
+                  ctx.get("task_id")
+                  or ctx.get("x96_task_id")
+                  or ctx.get("x96_plan", {}).get("task_id")
+              )
+  
+              if task_id is None:
+                  nested = ctx.get("input_payload", {}).get("x96_plan")
+                  if isinstance(nested, dict):
+                      task_id = nested.get("task_id")
+  
+          if task_id is not None:
+              try:
+                  review = fn(task_id, ctx)
+              except TypeError:
+                  review = fn(task_id=task_id, worker_report=ctx)
+          else:
+              try:
+                  review = fn(ctx)
+              except TypeError:
+                  try:
+
+
+
+
