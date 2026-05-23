@@ -1,0 +1,31 @@
+﻿=== DOCKER PS ===
+NAMES                               STATUS                  IMAGE
+ollama                              Up 3 hours              ollama/ollama:latest
+testnet2                            Up 11 hours             pinetwork/pi-node-docker:community-v1.1-p23.0.1
+openwebui-ai-local-os-memory-1      Up 3 hours              python:3.11-slim
+openwebui-ai-local-os-dashboard-1   Up 3 hours              python:3.11-slim
+master_ai                           Up 3 minutes            openwebui-master-ai
+agent_con                           Up 3 hours              openwebui-agent-con
+open-webui                          Up 3 hours (healthy)    ghcr.io/open-webui/open-webui:main
+optimai_crawl4ai_0_7_8              Up 40 hours (healthy)   unclecode/crawl4ai:0.7.8
+
+=== LATEST REPORTS ===
+
+Name                                             LastWriteTime        Length
+----                                             -------------        ------
+x91_addtask_bridge_response_1779546626900.json   5/23/2026 9:30:26 PM  80597
+x90_webui_bridge_response_1779546626840.json     5/23/2026 9:30:26 PM  79620
+x87b_worker_dispatcher_report_1779546626826.json 5/23/2026 9:30:26 PM    173
+x87b_worker_dispatcher_report_1779546615818.json 5/23/2026 9:30:15 PM    173
+x87b_worker_dispatcher_report_1779546605709.json 5/23/2026 9:30:05 PM    173
+x87b_worker_dispatcher_report_1779546595654.json 5/23/2026 9:29:55 PM  65656
+x103_master_review_result_1779546595588.json     5/23/2026 9:29:55 PM   1400
+x103_master_review_result_1779546592859.json     5/23/2026 9:29:52 PM   1400
+x103_master_review_result_1779546589759.json     5/23/2026 9:29:49 PM   1400
+x103_master_review_result_1779546586756.json     5/23/2026 9:29:46 PM   1400
+
+
+
+
+=== LIVE ADD_TASK ===
+
