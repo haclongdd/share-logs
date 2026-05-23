@@ -1,9 +1,21 @@
 ﻿{
-    "updated_at":  "2026-05-23T19:42:47.0450315+07:00",
+    "updated_at":  "2026-05-23T19:43:00.3473597+07:00",
     "tool":  "x99d_logsync_clean",
-    "latest":  "x112f_webui_agent_bridge_surface_full.txt",
-    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112f_webui_agent_bridge_surface_full.txt",
+    "latest":  "x112gh_controlled_runtime_binding_full.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112gh_controlled_runtime_binding_full.txt",
     "recent":  [
+                   {
+                       "name":  "x112gh_controlled_runtime_binding_full.txt",
+                       "size":  1794,
+                       "modified_at":  "2026-05-23T19:42:56.9374355+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112gh_controlled_runtime_binding_full.txt"
+                   },
+                   {
+                       "name":  "x112gh_controlled_runtime_binding_report.json",
+                       "size":  183614,
+                       "modified_at":  "2026-05-23T19:42:56.9191269+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112gh_controlled_runtime_binding_report.json"
+                   },
                    {
                        "name":  "x112f_webui_agent_bridge_surface_full.txt",
                        "size":  3494,
@@ -111,18 +123,6 @@
                        "size":  1125,
                        "modified_at":  "2026-05-23T19:35:04.8669828+07:00",
                        "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112b2_dispatcher_adapter_resolver_report.json"
-                   },
-                   {
-                       "name":  "x112b_dispatcher_adapter_resolver_full.txt",
-                       "size":  1056,
-                       "modified_at":  "2026-05-23T19:34:01.7873671+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112b_dispatcher_adapter_resolver_full.txt"
-                   },
-                   {
-                       "name":  "x112b_dispatcher_adapter_resolver.txt",
-                       "size":  0,
-                       "modified_at":  "2026-05-23T19:30:53.2690889+07:00",
-                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112b_dispatcher_adapter_resolver.txt"
                    }
                ]
 }

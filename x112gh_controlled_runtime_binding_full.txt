@@ -1,0 +1,20 @@
+﻿X112G-H CONTROLLED RUNTIME BINDING
+Instantiate + inspect only. No task submit. No bridge patch. No docker restart.
+ok=True
+import_ok=True
+class_found=True
+instance_ok=True
+
+ENTRYPOINTS:
+submit: found=True callable=True signature=(task: 'str', mode: 'str' = 'agent', payload: 'Optional[Dict[str, Any]]' = None) -> 'Dict[str, Any]'
+process_request: found=True callable=True signature=(request: 'Dict[str, Any]') -> 'Dict[str, Any]'
+run_agent_flow: found=True callable=True signature=(task: 'str') -> 'Dict[str, Any]'
+status: found=True callable=True signature=() -> 'Dict[str, Any]'
+dependency_status: found=True callable=True signature=() -> 'Dict[str, Any]'
+latest_response: found=True callable=True signature=() -> 'Dict[str, Any]'
+
+SAFE CALLS:
+status: ok=True type=dict error=None
+dependency_status: ok=True type=dict error=None
+latest_response: ok=True type=dict error=None
+
