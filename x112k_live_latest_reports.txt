@@ -1,0 +1,45 @@
+﻿
+
+Name          : x91_addtask_bridge_response_1779546060803.json
+FullName      : D:\openwebui\runtime\reports\x91_addtask_bridge_response_1779546060803.json
+Length        : 77993
+LastWriteTime : 5/23/2026 9:21:00 PM
+
+Name          : x90_webui_bridge_response_1779546060736.json
+FullName      : D:\openwebui\runtime\reports\x90_webui_bridge_response_1779546060736.json
+Length        : 77036
+LastWriteTime : 5/23/2026 9:21:00 PM
+
+Name          : x87b_worker_dispatcher_report_1779546060724.json
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779546060724.json
+Length        : 173
+LastWriteTime : 5/23/2026 9:21:00 PM
+
+Name          : x87b_worker_dispatcher_report_1779546050790.json
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779546050790.json
+Length        : 173
+LastWriteTime : 5/23/2026 9:20:50 PM
+
+Name          : x87b_worker_dispatcher_report_1779546041159.json
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779546041159.json
+Length        : 173
+LastWriteTime : 5/23/2026 9:20:41 PM
+
+Name          : x87b_worker_dispatcher_report_1779546031404.json
+FullName      : D:\openwebui\runtime\reports\x87b_worker_dispatcher_report_1779546031404.json
+Length        : 63132
+LastWriteTime : 5/23/2026 9:20:31 PM
+
+Name          : x91_addtask_bridge_response_1779540796791.json
+FullName      : D:\openwebui\runtime\reports\x91_addtask_bridge_response_1779540796791.json
+Length        : 77913
+LastWriteTime : 5/23/2026 7:53:16 PM
+
+Name          : x90_webui_bridge_response_1779540796726.json
+FullName      : D:\openwebui\runtime\reports\x90_webui_bridge_response_1779540796726.json
+Length        : 76962
+LastWriteTime : 5/23/2026 7:53:16 PM
+
+
+
+
