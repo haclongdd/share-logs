@@ -1,116 +1,128 @@
 ﻿{
-    "schema":  "ai-local-os-log-manifest-v1",
-    "generated_at_utc":  "2026-05-23T13:21:43.1200186Z",
-    "generated_at_local":  "2026-05-23T20:21:43.1200186+07:00",
-    "share_dir":  "D:\\openwebui\\runtime\\share_logs",
-    "latest":  "x112e_runtime_symbol_audit_full.txt",
-    "recent_count":  15,
+    "updated_at":  "2026-05-23T20:21:56.0464244+07:00",
+    "tool":  "x99d_logsync_clean",
+    "latest":  "x112j_live_latest_reports.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_live_latest_reports.txt",
     "recent":  [
                    {
-                       "path":  "x112e_runtime_symbol_audit_full.txt",
-                       "name":  "x112e_runtime_symbol_audit_full.txt",
-                       "kind":  "scan",
-                       "size_bytes":  505,
-                       "modified_utc":  "2026-05-23T13:21:43.0475652Z"
-                   },
-                   {
-                       "path":  "x112f_webui_agent_bridge_surface.json",
-                       "name":  "x112f_webui_agent_bridge_surface.json",
-                       "kind":  "log",
-                       "size_bytes":  7055,
-                       "modified_utc":  "2026-05-23T13:21:43.0453354Z"
-                   },
-                   {
-                       "path":  "x112f_webui_agent_bridge_surface.txt",
-                       "name":  "x112f_webui_agent_bridge_surface.txt",
-                       "kind":  "log",
-                       "size_bytes":  1749,
-                       "modified_utc":  "2026-05-23T13:21:43.0436026Z"
-                   },
-                   {
-                       "path":  "x112f_webui_agent_bridge_surface_full.txt",
-                       "name":  "x112f_webui_agent_bridge_surface_full.txt",
-                       "kind":  "log",
-                       "size_bytes":  1751,
-                       "modified_utc":  "2026-05-23T13:21:43.0419297Z"
-                   },
-                   {
-                       "path":  "x112gh_controlled_runtime_binding_report.json",
-                       "name":  "x112gh_controlled_runtime_binding_report.json",
-                       "kind":  "runtime",
-                       "size_bytes":  183619,
-                       "modified_utc":  "2026-05-23T13:21:43.0400008Z"
-                   },
-                   {
-                       "path":  "x112gh_controlled_runtime_binding_full.txt",
-                       "name":  "x112gh_controlled_runtime_binding_full.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  901,
-                       "modified_utc":  "2026-05-23T13:21:43.0322435Z"
-                   },
-                   {
-                       "path":  "x112j_master_review_handoff_contract_full.txt",
-                       "name":  "x112j_master_review_handoff_contract_full.txt",
-                       "kind":  "log",
-                       "size_bytes":  244,
-                       "modified_utc":  "2026-05-23T13:21:43.0312846Z"
-                   },
-                   {
-                       "path":  "x112j_master_review_handoff_contract_report.json",
-                       "name":  "x112j_master_review_handoff_contract_report.json",
-                       "kind":  "log",
-                       "size_bytes":  648,
-                       "modified_utc":  "2026-05-23T13:21:43.0302470Z"
-                   },
-                   {
-                       "path":  "x112j_master_review_handoff_contract_apply_full.txt",
-                       "name":  "x112j_master_review_handoff_contract_apply_full.txt",
-                       "kind":  "apply",
-                       "size_bytes":  246,
-                       "modified_utc":  "2026-05-23T13:21:43.0282325Z"
-                   },
-                   {
-                       "path":  "x112j_x103_lines_35_105.txt",
-                       "name":  "x112j_x103_lines_35_105.txt",
-                       "kind":  "log",
-                       "size_bytes":  1729,
-                       "modified_utc":  "2026-05-23T13:21:43.0273104Z"
-                   },
-                   {
-                       "path":  "x112i_class_method_adapter_binding_report.json",
-                       "name":  "x112i_class_method_adapter_binding_report.json",
-                       "kind":  "log",
-                       "size_bytes":  50594,
-                       "modified_utc":  "2026-05-23T13:21:43.0261039Z"
-                   },
-                   {
-                       "path":  "x112i_class_method_adapter_binding_full.txt",
-                       "name":  "x112i_class_method_adapter_binding_full.txt",
-                       "kind":  "log",
-                       "size_bytes":  432,
-                       "modified_utc":  "2026-05-23T13:21:43.0219059Z"
-                   },
-                   {
-                       "path":  "x112j_verify_after_fix_full.txt",
-                       "name":  "x112j_verify_after_fix_full.txt",
-                       "kind":  "log",
-                       "size_bytes":  434,
-                       "modified_utc":  "2026-05-23T13:21:43.0207667Z"
-                   },
-                   {
-                       "path":  "x112j_live_latest_reports.txt",
                        "name":  "x112j_live_latest_reports.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  1777,
-                       "modified_utc":  "2026-05-23T13:21:43.0195911Z"
+                       "size":  1775,
+                       "modified_at":  "2026-05-23T19:53:17.0391230+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_live_latest_reports.txt"
                    },
                    {
-                       "path":  "x112_registry_cache_dump.txt",
-                       "name":  "x112_registry_cache_dump.txt",
-                       "kind":  "log",
-                       "size_bytes":  43948,
-                       "modified_utc":  "2026-05-23T13:21:29.9436047Z"
+                       "name":  "x112j_verify_after_fix_full.txt",
+                       "size":  860,
+                       "modified_at":  "2026-05-23T19:50:08.9781645+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_verify_after_fix_full.txt"
+                   },
+                   {
+                       "name":  "x112i_class_method_adapter_binding_full.txt",
+                       "size":  427,
+                       "modified_at":  "2026-05-23T19:50:08.9677373+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112i_class_method_adapter_binding_full.txt"
+                   },
+                   {
+                       "name":  "x112i_class_method_adapter_binding_report.json",
+                       "size":  50589,
+                       "modified_at":  "2026-05-23T19:50:08.9671292+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112i_class_method_adapter_binding_report.json"
+                   },
+                   {
+                       "name":  "x112j_x103_lines_35_105.txt",
+                       "size":  1724,
+                       "modified_at":  "2026-05-23T19:47:36.8240392+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_x103_lines_35_105.txt"
+                   },
+                   {
+                       "name":  "x112j_master_review_handoff_contract_apply_full.txt",
+                       "size":  484,
+                       "modified_at":  "2026-05-23T19:46:43.9345037+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_apply_full.txt"
+                   },
+                   {
+                       "name":  "x112j_master_review_handoff_contract_report.json",
+                       "size":  643,
+                       "modified_at":  "2026-05-23T19:46:43.9305892+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_report.json"
+                   },
+                   {
+                       "name":  "x112j_master_review_handoff_contract_full.txt",
+                       "size":  239,
+                       "modified_at":  "2026-05-23T19:46:43.9305892+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112j_master_review_handoff_contract_full.txt"
+                   },
+                   {
+                       "name":  "x112gh_controlled_runtime_binding_full.txt",
+                       "size":  1794,
+                       "modified_at":  "2026-05-23T19:42:56.9374355+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112gh_controlled_runtime_binding_full.txt"
+                   },
+                   {
+                       "name":  "x112gh_controlled_runtime_binding_report.json",
+                       "size":  183614,
+                       "modified_at":  "2026-05-23T19:42:56.9191269+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112gh_controlled_runtime_binding_report.json"
+                   },
+                   {
+                       "name":  "x112f_webui_agent_bridge_surface_full.txt",
+                       "size":  3494,
+                       "modified_at":  "2026-05-23T19:40:22.6089444+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112f_webui_agent_bridge_surface_full.txt"
+                   },
+                   {
+                       "name":  "x112f_webui_agent_bridge_surface.txt",
+                       "size":  1744,
+                       "modified_at":  "2026-05-23T19:40:22.5820285+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112f_webui_agent_bridge_surface.txt"
+                   },
+                   {
+                       "name":  "x112f_webui_agent_bridge_surface.json",
+                       "size":  7050,
+                       "modified_at":  "2026-05-23T19:40:22.5810063+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112f_webui_agent_bridge_surface.json"
+                   },
+                   {
+                       "name":  "x112e_runtime_symbol_audit_full.txt",
+                       "size":  1002,
+                       "modified_at":  "2026-05-23T19:39:08.8885067+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112e_runtime_symbol_audit_full.txt"
+                   },
+                   {
+                       "name":  "x112e_runtime_symbol_audit.json",
+                       "size":  1336,
+                       "modified_at":  "2026-05-23T19:39:08.8708308+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112e_runtime_symbol_audit.json"
+                   },
+                   {
+                       "name":  "x112e_runtime_symbol_audit.txt",
+                       "size":  498,
+                       "modified_at":  "2026-05-23T19:39:08.8708308+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112e_runtime_symbol_audit.txt"
+                   },
+                   {
+                       "name":  "x112d2_controlled_import_retry_full.txt",
+                       "size":  590,
+                       "modified_at":  "2026-05-23T19:38:26.9548461+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112d2_controlled_import_retry_full.txt"
+                   },
+                   {
+                       "name":  "x112d2_import_probe_full.txt",
+                       "size":  292,
+                       "modified_at":  "2026-05-23T19:38:26.9456685+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112d2_import_probe_full.txt"
+                   },
+                   {
+                       "name":  "x112d2_import_probe_report.json",
+                       "size":  695,
+                       "modified_at":  "2026-05-23T19:38:26.9450007+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112d2_import_probe_report.json"
+                   },
+                   {
+                       "name":  "x112d_controlled_import_probe_full.txt",
+                       "size":  880,
+                       "modified_at":  "2026-05-23T19:37:47.7991843+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112d_controlled_import_probe_full.txt"
                    }
-               ],
-    "raw_base":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/"
+               ]
 }
