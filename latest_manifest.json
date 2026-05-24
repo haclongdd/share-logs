@@ -1,116 +1,128 @@
 ﻿{
-    "schema":  "ai-local-os-log-manifest-v1",
-    "generated_at_utc":  "2026-05-24T00:13:14.8040110Z",
-    "generated_at_local":  "2026-05-24T07:13:14.8040110+07:00",
-    "share_dir":  "D:\\openwebui\\runtime\\share_logs",
-    "latest":  "x112k_live_x90.txt",
-    "recent_count":  15,
+    "updated_at":  "2026-05-24T07:13:28.2560510+07:00",
+    "tool":  "x99d_logsync_clean",
+    "latest":  "x112u_runtime_ctx_probe.txt",
+    "latest_raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112u_runtime_ctx_probe.txt",
     "recent":  [
                    {
-                       "path":  "x112k_live_x90.txt",
-                       "name":  "x112k_live_x90.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  77043,
-                       "modified_utc":  "2026-05-24T00:13:14.7273800Z"
+                       "name":  "x112u_runtime_ctx_probe.txt",
+                       "size":  128789,
+                       "modified_at":  "2026-05-23T21:57:32.6806266+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112u_runtime_ctx_probe.txt"
                    },
                    {
-                       "path":  "x112k_live_x87_cycle.txt",
-                       "name":  "x112k_live_x87_cycle.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  63139,
-                       "modified_utc":  "2026-05-24T00:13:14.7230776Z"
+                       "name":  "x112t_auto_patch_x103_taskid_log.txt",
+                       "size":  973033,
+                       "modified_at":  "2026-05-23T21:48:36.7454867+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112t_auto_patch_x103_taskid_log.txt"
                    },
                    {
-                       "path":  "x112k_live_grep.txt",
-                       "name":  "x112k_live_grep.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  16671,
-                       "modified_utc":  "2026-05-24T00:13:14.7193328Z"
+                       "name":  "x112s_patch_presence_verify.txt",
+                       "size":  4760,
+                       "modified_at":  "2026-05-23T21:39:10.0198667+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112s_patch_presence_verify.txt"
                    },
                    {
-                       "path":  "x112k_x103_source.txt",
-                       "name":  "x112k_x103_source.txt",
-                       "kind":  "log",
-                       "size_bytes":  3757,
-                       "modified_utc":  "2026-05-24T00:13:14.7163932Z"
+                       "name":  "x112q_latest_x103_failure_context.txt",
+                       "size":  2309,
+                       "modified_at":  "2026-05-23T21:36:13.7412497+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112q_latest_x103_failure_context.txt"
                    },
                    {
-                       "path":  "x112k_x96_glob.txt",
-                       "name":  "x112k_x96_glob.txt",
-                       "kind":  "log",
-                       "size_bytes":  51,
-                       "modified_utc":  "2026-05-24T00:13:14.7143885Z"
-                   },
-                   {
-                       "path":  "x112l3_live_latest_reports.txt",
-                       "name":  "x112l3_live_latest_reports.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  1774,
-                       "modified_utc":  "2026-05-24T00:13:14.7127592Z"
-                   },
-                   {
-                       "path":  "x112l3_live_x90.txt",
-                       "name":  "x112l3_live_x90.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  35529,
-                       "modified_utc":  "2026-05-24T00:13:14.7110809Z"
-                   },
-                   {
-                       "path":  "x112l3_live_grep.txt",
-                       "name":  "x112l3_live_grep.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  3648,
-                       "modified_utc":  "2026-05-24T00:13:14.7089494Z"
-                   },
-                   {
-                       "path":  "x112l4_live_latest_reports.txt",
-                       "name":  "x112l4_live_latest_reports.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  1769,
-                       "modified_utc":  "2026-05-24T00:13:14.7079260Z"
-                   },
-                   {
-                       "path":  "x112l4_live_x90.txt",
-                       "name":  "x112l4_live_x90.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  79627,
-                       "modified_utc":  "2026-05-24T00:13:14.7059234Z"
-                   },
-                   {
-                       "path":  "x112l4_live_grep.txt",
-                       "name":  "x112l4_live_grep.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  5579,
-                       "modified_utc":  "2026-05-24T00:13:14.6957139Z"
-                   },
-                   {
-                       "path":  "x112m_live_runtime_verify.txt",
-                       "name":  "x112m_live_runtime_verify.txt",
-                       "kind":  "runtime",
-                       "size_bytes":  162220,
-                       "modified_utc":  "2026-05-24T00:13:14.6947094Z"
-                   },
-                   {
-                       "path":  "x112n_dispatcher_report_inspect.txt",
-                       "name":  "x112n_dispatcher_report_inspect.txt",
-                       "kind":  "log",
-                       "size_bytes":  129710,
-                       "modified_utc":  "2026-05-24T00:13:14.6890050Z"
-                   },
-                   {
-                       "path":  "x112o_x96_review_signature.txt",
-                       "name":  "x112o_x96_review_signature.txt",
-                       "kind":  "log",
-                       "size_bytes":  3643,
-                       "modified_utc":  "2026-05-24T00:13:14.6850211Z"
-                   },
-                   {
-                       "path":  "x112p_container_x103_verify.txt",
                        "name":  "x112p_container_x103_verify.txt",
-                       "kind":  "log",
-                       "size_bytes":  1678,
-                       "modified_utc":  "2026-05-24T00:13:14.6830508Z"
+                       "size":  1676,
+                       "modified_at":  "2026-05-23T21:35:42.2394808+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112p_container_x103_verify.txt"
+                   },
+                   {
+                       "name":  "x112o_x96_review_signature.txt",
+                       "size":  3641,
+                       "modified_at":  "2026-05-23T21:35:10.9109666+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112o_x96_review_signature.txt"
+                   },
+                   {
+                       "name":  "x112n_dispatcher_report_inspect.txt",
+                       "size":  129708,
+                       "modified_at":  "2026-05-23T21:34:23.6604544+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112n_dispatcher_report_inspect.txt"
+                   },
+                   {
+                       "name":  "x112m_live_runtime_verify.txt",
+                       "size":  162218,
+                       "modified_at":  "2026-05-23T21:34:15.0653641+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112m_live_runtime_verify.txt"
+                   },
+                   {
+                       "name":  "x112l4_live_grep.txt",
+                       "size":  5577,
+                       "modified_at":  "2026-05-23T21:31:26.0994638+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l4_live_grep.txt"
+                   },
+                   {
+                       "name":  "x112l4_live_x90.txt",
+                       "size":  79625,
+                       "modified_at":  "2026-05-23T21:31:26.0138189+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l4_live_x90.txt"
+                   },
+                   {
+                       "name":  "x112l4_live_latest_reports.txt",
+                       "size":  1767,
+                       "modified_at":  "2026-05-23T21:30:35.1015002+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l4_live_latest_reports.txt"
+                   },
+                   {
+                       "name":  "x112l3_live_grep.txt",
+                       "size":  3646,
+                       "modified_at":  "2026-05-23T21:29:02.5508771+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l3_live_grep.txt"
+                   },
+                   {
+                       "name":  "x112l3_live_x90.txt",
+                       "size":  35527,
+                       "modified_at":  "2026-05-23T21:29:02.4962664+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l3_live_x90.txt"
+                   },
+                   {
+                       "name":  "x112l3_live_latest_reports.txt",
+                       "size":  1772,
+                       "modified_at":  "2026-05-23T21:28:12.2265352+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112l3_live_latest_reports.txt"
+                   },
+                   {
+                       "name":  "x112k_x96_glob.txt",
+                       "size":  94,
+                       "modified_at":  "2026-05-23T21:22:29.5053483+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112k_x96_glob.txt"
+                   },
+                   {
+                       "name":  "x112k_x103_source.txt",
+                       "size":  7506,
+                       "modified_at":  "2026-05-23T21:22:27.8260618+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112k_x103_source.txt"
+                   },
+                   {
+                       "name":  "x112k_live_grep.txt",
+                       "size":  16669,
+                       "modified_at":  "2026-05-23T21:21:40.6345137+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112k_live_grep.txt"
+                   },
+                   {
+                       "name":  "x112k_live_x87_cycle.txt",
+                       "size":  63137,
+                       "modified_at":  "2026-05-23T21:21:40.4744950+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112k_live_x87_cycle.txt"
+                   },
+                   {
+                       "name":  "x112k_live_x90.txt",
+                       "size":  77041,
+                       "modified_at":  "2026-05-23T21:21:40.4241063+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112k_live_x90.txt"
+                   },
+                   {
+                       "name":  "x112k_live_latest_reports.txt",
+                       "size":  1773,
+                       "modified_at":  "2026-05-23T21:21:00.9353898+07:00",
+                       "raw_url":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/x112k_live_latest_reports.txt"
                    }
-               ],
-    "raw_base":  "https://raw.githubusercontent.com/haclongdd/share-logs/main/"
+               ]
 }
